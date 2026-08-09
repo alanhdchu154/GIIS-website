@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
 import { AdminHeader, AdminPage } from './AdminChrome';
 import { getAdminSession } from '../../../api/authStorage';
+import TransferEvaluationEditor from './TransferEvaluationEditor';
 
 const API = getApiBase();
 
@@ -69,6 +70,22 @@ const APPLICATION_NOTE_LABELS = {
     motivation: 'Will my child stay on track?',
     'not provided': 'Not provided',
   },
+};
+
+const RECORDS_STATUS_LABELS = {
+  not_requested: 'Not requested',
+  requested: 'Requested',
+  partial: 'Partial records',
+  received: 'Records received',
+  verified: 'Verified',
+};
+
+const READINESS_COLORS = {
+  unconfirmed: { bg: '#f3f4f6', fg: '#4b5563' },
+  records_pending: { bg: '#fef3c7', fg: '#92400e' },
+  ready_for_academic_review: { bg: '#e0f2fe', fg: '#075985' },
+  ready_for_principal_review: { bg: '#ede9fe', fg: '#5b21b6' },
+  approval_ready: { bg: '#dcfce7', fg: '#166534' },
 };
 
 const MANUAL_PAYMENT_PLANS = {
@@ -160,13 +177,32 @@ function parseApplicationReviewNotes(notes = '') {
   };
 }
 
-function ApplicantReviewPanel({ notes }) {
-  const review = parseApplicationReviewNotes(notes);
+function applicationReviewFor(app) {
+  if (app?.applicantType === 'new' || app?.applicantType === 'transfer') {
+    const isTransfer = app.applicantType === 'transfer';
+    const noteFallback = parseApplicationReviewNotes(app.notes);
+    return {
+      applicantType: app.applicantType,
+      previousCredits: isTransfer ? (app.previousCredits || 'not provided') : 'not applicable',
+      graduationTiming: isTransfer ? (app.graduationTiming || 'not provided') : 'standard path',
+      transcriptAvailable: isTransfer ? (app.transcriptAvailable || 'not provided') : 'not applicable',
+      concern: app.mainConcern || 'not provided',
+      requiredRecords: isTransfer
+        ? 'Official transcript or school report for completed high-school terms; course descriptions if credits need review.'
+        : 'Proof of age; current or most recent school information; recent report card or placement record if available.',
+      familyNotes: noteFallback?.familyNotes || '',
+    };
+  }
+  return parseApplicationReviewNotes(app?.notes);
+}
+
+function ApplicantReviewPanel({ app }) {
+  const review = applicationReviewFor(app);
   if (!review) {
-    if (!notes) return null;
+    if (!app?.notes) return null;
     return (
       <div style={{ background: '#f8f9fc', borderRadius: 8, padding: '10px 14px', fontSize: 13, color: '#1a1d24', marginBottom: 14 }}>
-        <strong>Applicant notes:</strong> {notes}
+        <strong>Applicant notes:</strong> {app.notes}
       </div>
     );
   }
@@ -202,6 +238,26 @@ function ApplicantReviewPanel({ notes }) {
           </div>
         ))}
       </div>
+      {(app.motivation || app.intendedStartTiming) && (
+        <div style={{ marginTop: 10, display: 'grid', gridTemplateColumns: 'minmax(160px, 0.4fr) minmax(240px, 1fr)', gap: 10 }}>
+          <div style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
+            <p style={{ fontSize: 9.5, fontWeight: 800, color: '#888', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 3px' }}>Intended Start</p>
+            <p style={{ fontSize: 12.5, color: '#1a1d24', margin: 0 }}>{app.intendedStartTiming || 'Not provided'}</p>
+          </div>
+          <div style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
+            <p style={{ fontSize: 9.5, fontWeight: 800, color: '#888', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 3px' }}>Family Motivation</p>
+            <p style={{ fontSize: 12.5, color: '#1a1d24', margin: 0, whiteSpace: 'pre-wrap' }}>{app.motivation || 'Not provided'}</p>
+          </div>
+        </div>
+      )}
+      {isTransfer && (app.transferCourseSummary || app.transcriptPlanDetails || app.transcriptExpectedTiming) && (
+        <div style={{ marginTop: 10, background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
+          <p style={{ fontSize: 9.5, fontWeight: 800, color: '#888', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 5px' }}>Transfer Intake Plan</p>
+          <p style={{ fontSize: 12.5, color: '#1a1d24', margin: '0 0 5px', whiteSpace: 'pre-wrap' }}><strong>Courses:</strong> {app.transferCourseSummary || 'Not provided'}</p>
+          <p style={{ fontSize: 12.5, color: '#1a1d24', margin: '0 0 5px', whiteSpace: 'pre-wrap' }}><strong>Records plan:</strong> {app.transcriptPlanDetails || 'Not provided'}</p>
+          <p style={{ fontSize: 12.5, color: '#1a1d24', margin: 0 }}><strong>Expected:</strong> {app.transcriptExpectedTiming || 'Not provided'}</p>
+        </div>
+      )}
       {review.requiredRecords && (
         <div style={{ marginTop: 10, background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
           <p style={{ fontSize: 9.5, fontWeight: 800, color: '#888', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 3px' }}>Records Needed</p>
@@ -254,12 +310,28 @@ function timeAgo(iso) {
   return `${Math.floor(h / 24)}d ago`;
 }
 
+function responseSla(app) {
+  if (app.firstResponseAt) return { code: 'responded', label: 'First response recorded' };
+  if (!app.responseDueAt) return { code: 'untracked', label: 'Response due not set' };
+  const due = new Date(app.responseDueAt);
+  if (Number.isNaN(due.getTime())) return { code: 'untracked', label: 'Response due not set' };
+  if (due.getTime() < Date.now()) return { code: 'overdue', label: `Response overdue · ${due.toLocaleString()}` };
+  return { code: 'due', label: `Response due · ${due.toLocaleString()}` };
+}
+
+function hasConfirmedInterest(app) {
+  if (app?.readiness?.code) return app.readiness.code !== 'unconfirmed';
+  return !!app?.interestConfirmedAt || !app?.interestConfirmationExpiresAt;
+}
+
 export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   const lang = language === 'zh' ? 'zh' : 'en';
   const isEn = lang === 'en';
   const T = (en, zh) => (isEn ? en : zh);
   const navigate = useNavigate();
   const [filter, setFilter] = useState('pending');
+  const [typeFilter, setTypeFilter] = useState('');
+  const [confirmationFilter, setConfirmationFilter] = useState('confirmed');
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState(null);
@@ -277,9 +349,35 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   });
   const [rejectReason, setRejectReason] = useState('grade_mismatch');
   const [notesDraft, setNotesDraft] = useState({}); // { [appId]: string }
+  const [caseDrafts, setCaseDrafts] = useState({});
+  const [workflowMode, setWorkflowMode] = useState('loading');
 
   const session = getAdminSession();
   useEffect(() => { if (!session) navigate('/admin/login', { replace: true }); }, [session, navigate]);
+
+  useEffect(() => {
+    let active = true;
+    async function checkWorkflow() {
+      try {
+        const response = await fetch(`${API}/api/applications/capabilities`);
+        if (!active) return;
+        if (response.status === 404 || response.status === 405) {
+          setWorkflowMode('legacy');
+          return;
+        }
+        if (!response.ok) {
+          setWorkflowMode('unavailable');
+          return;
+        }
+        const capabilities = await response.json().catch(() => ({}));
+        setWorkflowMode(capabilities.adminWorkflowVersion === 'admissions-v2' ? 'serious' : 'legacy');
+      } catch {
+        if (active) setWorkflowMode('unavailable');
+      }
+    }
+    checkWorkflow();
+    return () => { active = false; };
+  }, []);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -291,8 +389,17 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
       setItems(data);
       // seed notes drafts from server
       const drafts = {};
+      const trackingDrafts = {};
       data.forEach(a => { drafts[a.id] = a.adminNotes || ''; });
+      data.forEach(a => {
+        trackingDrafts[a.id] = {
+          recordsStatus: a.recordsStatus || 'not_requested',
+          assignedTo: a.assignedTo || '',
+          nextAction: a.nextAction || 'Review application',
+        };
+      });
       setNotesDraft(prev => ({ ...drafts, ...prev }));
+      setCaseDrafts(prev => ({ ...trackingDrafts, ...prev }));
     } finally { setLoading(false); }
   }, [filter, navigate]);
 
@@ -329,6 +436,40 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
       if (!res.ok) { showToast('Error updating status'); return; }
       showToast(`Marked as ${status}`);
       setExpanded(null);
+      load();
+    } finally { setSaving(''); }
+  }
+
+  async function saveCaseTracking(id) {
+    const draft = caseDrafts[id];
+    if (!draft) return;
+    setSaving(id + 'tracking');
+    try {
+      const res = await fetch(`${API}/api/applications/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(draft),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) { showToast(data.error || 'Could not save case tracking'); return; }
+      showToast('Case tracking saved');
+      load();
+    } finally { setSaving(''); }
+  }
+
+  async function markFamilyContacted(id) {
+    setSaving(id + 'contacted');
+    try {
+      const res = await fetch(`${API}/api/applications/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ markContacted: true }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) { showToast(data.error || 'Could not record family contact'); return; }
+      showToast('Family contact recorded');
       load();
     } finally { setSaving(''); }
   }
@@ -438,7 +579,15 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
     setRejectModal(null);
   }
 
+  const visibleItems = items.filter((app) => {
+    if (typeFilter && applicationReviewFor(app)?.applicantType !== typeFilter) return false;
+    if (confirmationFilter === 'confirmed' && !hasConfirmedInterest(app)) return false;
+    if (confirmationFilter === 'unconfirmed' && hasConfirmedInterest(app)) return false;
+    return true;
+  });
+
   if (!session) return null;
+  const workflowEnabled = workflowMode === 'serious';
 
   return (
     <>
@@ -456,41 +605,83 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
             )}
           />
 
+          {!workflowEnabled && (
+            <div style={{ marginBottom: 16, padding: '10px 12px', border: '1px solid #f3d27b', background: '#fff8e6', color: '#5c4a12', borderRadius: 8, fontSize: 12.5, lineHeight: 1.55 }}>
+              {workflowMode === 'loading'
+                ? T('Checking admissions workflow compatibility…', '正在检查招生流程版本…')
+                : T('The admissions backend update is not live yet. Existing cases remain visible, but the new review, approval, payment, and activation controls are paused.', '招生后端更新尚未上线。现有案件仍可查看，但新版审核、批准、付款与帐号启用操作已暂停。')}
+            </div>
+          )}
+
           {/* Filter tabs */}
-          <div className="giis-admin-filter-tabs" style={{ display: 'flex', gap: 8, marginBottom: 20 }}>
-            {[
-              ['pending', T('Pending', '待审核')],
-              ['approved', T('Approved', '已通过')],
-              ['rejected', T('Rejected', '未通过')],
-              ['', T('All', '全部')],
-            ].map(([v, label]) => (
-              <button key={v} onClick={() => setFilter(v)} style={{
-                padding: '7px 16px', borderRadius: 999, fontSize: 13, fontWeight: 700,
-                background: filter === v ? '#2b3d6d' : '#fff',
-                color: filter === v ? '#fff' : '#5c6578',
-                border: filter === v ? 'none' : '1.5px solid #d4d8e0',
-                cursor: 'pointer',
-              }}>
-                {label}
-              </button>
-            ))}
+          <div className="giis-admin-filter-tabs" style={{ display: 'flex', gap: 10, marginBottom: 20, alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              {[
+                ['pending', T('Pending', '待审核')],
+                ['approved', T('Approved', '已通过')],
+                ['rejected', T('Rejected', '未通过')],
+                ['', T('All', '全部')],
+              ].map(([v, label]) => (
+                <button key={v} onClick={() => setFilter(v)} style={{
+                  padding: '7px 16px', borderRadius: 999, fontSize: 13, fontWeight: 700,
+                  background: filter === v ? '#2b3d6d' : '#fff',
+                  color: filter === v ? '#fff' : '#5c6578',
+                  border: filter === v ? 'none' : '1.5px solid #d4d8e0',
+                  cursor: 'pointer',
+                }}>
+                  {label}
+                </button>
+              ))}
+            </div>
+            <select
+              aria-label={T('Applicant type filter', '申请类型筛选')}
+              value={typeFilter}
+              onChange={(event) => setTypeFilter(event.target.value)}
+              style={{ padding: '7px 10px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: '#fff', color: '#2b3d6d', fontSize: 13, fontWeight: 700 }}
+            >
+              <option value="">{T('All applicant types', '全部申请类型')}</option>
+              <option value="transfer">{T('Transfer students', '转学生')}</option>
+              <option value="new">{T('New students', '一般新生')}</option>
+            </select>
+            <select
+              aria-label={T('Parent confirmation filter', '家长确认筛选')}
+              value={confirmationFilter}
+              onChange={(event) => setConfirmationFilter(event.target.value)}
+              style={{ padding: '7px 10px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: '#fff', color: '#2b3d6d', fontSize: 13, fontWeight: 700 }}
+            >
+              <option value="confirmed">{T('Interest confirmed', '已确认继续申请')}</option>
+              <option value="unconfirmed">{T('Awaiting parent confirmation', '等待家长确认')}</option>
+              <option value="">{T('All confirmation states', '全部确认状态')}</option>
+            </select>
             <span style={{ fontSize: 13, color: '#9aa0ad', alignSelf: 'center', marginLeft: 4 }}>
-              {loading ? '…' : T(`${items.length} item${items.length !== 1 ? 's' : ''}`, `${items.length} 笔`)}
+              {loading ? '…' : T(`${visibleItems.length} item${visibleItems.length !== 1 ? 's' : ''}`, `${visibleItems.length} 笔`)}
             </span>
           </div>
 
           {/* Application cards */}
           {loading
             ? <p style={{ color: '#9aa0ad', fontSize: 14 }}>{T('Loading…', '载入中…')}</p>
-            : items.length === 0
+            : visibleItems.length === 0
               ? <div style={{ background: '#fff', borderRadius: 12, padding: '40px 24px', textAlign: 'center', color: '#9aa0ad', fontSize: 14 }}>{T('No applications found.', '没有找到申请。')}</div>
-              : items.map(app => {
+              : visibleItems.map(app => {
                 const sc = STATUS_COLORS[app.status] || STATUS_COLORS.pending;
-	                const es = app.enrollmentState || {};
-	                const ec = ENROLLMENT_STATE_COLORS[es.code] || { bg: '#f1f5f9', fg: '#475569' };
-	                const appReview = parseApplicationReviewNotes(app.notes);
-	                const transferNeedsRecordReview = appReview?.applicantType === 'transfer';
-	                const hasPaidRecord = !!(es.paid || es.paidUnlinked);
+		                const es = app.enrollmentState || {};
+		                const ec = ENROLLMENT_STATE_COLORS[es.code] || { bg: '#f1f5f9', fg: '#475569' };
+		                const appReview = applicationReviewFor(app);
+		                const transferNeedsRecordReview = appReview?.applicantType === 'transfer';
+		                const interestConfirmed = hasConfirmedInterest(app);
+		                const readiness = app.readiness || {};
+		                const readinessColor = READINESS_COLORS[readiness.code] || READINESS_COLORS.unconfirmed;
+			                const applicationApprovalReady = workflowEnabled && (readiness.code
+			                  ? readiness.code === 'approval_ready'
+			                  : interestConfirmed && (!transferNeedsRecordReview || (app.recordsStatus === 'verified' && app.transferEvaluation?.principalApprovedAt)));
+		                const hasPaidRecord = !!(es.paid || es.paidUnlinked);
+		                const sla = responseSla(app);
+		                const slaColors = sla.code === 'overdue'
+		                  ? { bg: '#fee2e2', fg: '#991b1b' }
+		                  : sla.code === 'responded'
+		                    ? { bg: '#dcfce7', fg: '#166534' }
+		                    : { bg: '#fef3c7', fg: '#92400e' };
 	                return (
                   <div key={app.id} style={{ background: '#fff', borderRadius: 12, border: '1px solid #e8ecf5', marginBottom: 12, overflow: 'hidden' }}>
 
@@ -501,6 +692,11 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                           <span style={{ fontSize: 14, fontWeight: 700, color: '#1a1d24' }}>{app.studentName}</span>
                           <span style={{ fontSize: 11, background: '#f0f4ff', color: '#2b3d6d', fontWeight: 700, borderRadius: 4, padding: '2px 7px' }}>{app.gradeLevel}</span>
                           <span style={{ fontSize: 11, background: sc.bg, color: sc.fg, fontWeight: 700, borderRadius: 4, padding: '2px 7px' }}>{sc.label}</span>
+                          {appReview?.applicantType && <span style={{ fontSize: 11, background: transferNeedsRecordReview ? '#e0f2fe' : '#f3f4f6', color: transferNeedsRecordReview ? '#075985' : '#374151', fontWeight: 800, borderRadius: 4, padding: '2px 7px' }}>{labelApplicationValue('applicantType', appReview.applicantType)}</span>}
+                          <span style={{ fontSize: 11, background: interestConfirmed ? '#dcfce7' : '#f3f4f6', color: interestConfirmed ? '#166534' : '#4b5563', fontWeight: 800, borderRadius: 4, padding: '2px 7px' }}>{interestConfirmed ? T('Interest confirmed', '家长已确认') : T('Unconfirmed', '尚未确认')}</span>
+                          {readiness.label && <span style={{ fontSize: 11, background: readinessColor.bg, color: readinessColor.fg, fontWeight: 800, borderRadius: 4, padding: '2px 7px' }}>{readiness.label}</span>}
+                          {(app.submissionCount || 1) > 1 && <span style={{ fontSize: 11, background: '#fee2e2', color: '#991b1b', fontWeight: 800, borderRadius: 4, padding: '2px 7px' }}>{app.submissionCount} submissions</span>}
+                          <span style={{ fontSize: 11, background: slaColors.bg, color: slaColors.fg, fontWeight: 800, borderRadius: 4, padding: '2px 7px' }}>{sla.code === 'overdue' ? T('Response overdue', '回复逾期') : sla.code === 'responded' ? T('Responded', '已回复') : T('Response due', '待回复')}</span>
                           {es.label && <span style={{ fontSize: 11, background: ec.bg, color: ec.fg, fontWeight: 800, borderRadius: 4, padding: '2px 7px' }}>{es.label}</span>}
                           {app.accountsCreated && <span style={{ fontSize: 11, background: '#e8f5e9', color: '#2e7d32', fontWeight: 700, borderRadius: 4, padding: '2px 7px' }}>Accounts ✓</span>}
                         </div>
@@ -532,6 +728,13 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                             ['Parent Name', app.parentName],
                             ['Parent Email', app.parentEmail],
                             ['Phone', app.phone || '—'],
+                            ['Parent Confirmation', app.interestConfirmedAt ? new Date(app.interestConfirmedAt).toLocaleString() : (app.interestConfirmationSentAt ? 'Awaiting confirmation' : 'Legacy case')],
+                            ['Application Readiness', readiness.label || '—'],
+                            ['Readiness Action', readiness.action || '—'],
+                            ['Records Status', RECORDS_STATUS_LABELS[app.recordsStatus] || app.recordsStatus || 'Not requested'],
+                            ['Assigned Owner', app.assignedTo || 'Unassigned'],
+                            ['Admissions Next Action', app.nextAction || 'Review application'],
+                            ['Last Contacted', app.lastContactedAt ? new Date(app.lastContactedAt).toLocaleString() : 'Not contacted'],
                             ['Enrollment State', es.label || '—'],
                             ['Next Action', es.action || '—'],
                             ['Student Login', es.studentEmail || '—'],
@@ -545,7 +748,92 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                           ))}
                         </div>
 
-                        <ApplicantReviewPanel notes={app.notes} />
+                        <ApplicantReviewPanel app={app} />
+
+                        {transferNeedsRecordReview && workflowEnabled && (
+                          <TransferEvaluationEditor
+                            application={app}
+                            language={language}
+                            notify={showToast}
+                            onChanged={load}
+                          />
+                        )}
+                        {transferNeedsRecordReview && !workflowEnabled && (
+                          <p style={{ margin: '0 0 16px', padding: '10px 12px', background: '#f8f9fc', border: '1px solid #e0e6f0', color: '#5c6578', fontSize: 12.5 }}>
+                            {T('Transfer evaluation will unlock after the admissions backend update is deployed.', '招生后端更新部署后，转学分审核步骤才会开放。')}
+                          </p>
+                        )}
+
+                        {workflowEnabled && <div style={{ background: '#f8f9fc', border: '1px solid #e0e6f0', borderRadius: 8, padding: '13px 14px', marginBottom: 16 }}>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 10 }}>
+                            <div>
+                              <p style={{ fontSize: 10, fontWeight: 800, color: '#2b3d6d', letterSpacing: 1, textTransform: 'uppercase', margin: '0 0 3px' }}>{T('Case Tracking', '案件追踪')}</p>
+                              <p style={{ fontSize: 11.5, color: slaColors.fg, margin: 0 }}>{sla.label}</p>
+                            </div>
+                            <button
+                              onClick={() => markFamilyContacted(app.id)}
+                              disabled={saving === app.id + 'contacted' || !interestConfirmed}
+                              style={{ padding: '7px 12px', borderRadius: 8, border: '1.5px solid #1b6b3a', background: '#fff', color: '#1b6b3a', fontSize: 12, fontWeight: 800, cursor: 'pointer' }}
+                            >
+                              {!interestConfirmed
+                                ? T('Wait for parent confirmation', '等待家长确认')
+                                : app.firstResponseAt
+                                  ? T('Record another contact', '记录再次联络')
+                                  : T('Mark first response sent', '标记已发送首次回复')}
+                            </button>
+                          </div>
+                          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 10 }}>
+                            <label style={{ fontSize: 10, fontWeight: 800, color: '#687083', textTransform: 'uppercase' }}>
+                              {T('Records', '资料状态')}
+                              <select
+                                value={caseDrafts[app.id]?.recordsStatus || 'not_requested'}
+                                onChange={(event) => setCaseDrafts(prev => ({ ...prev, [app.id]: { ...prev[app.id], recordsStatus: event.target.value } }))}
+                                style={{ width: '100%', marginTop: 5, padding: '8px 9px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: '#fff', fontSize: 12.5 }}
+                              >
+                                {Object.entries(RECORDS_STATUS_LABELS).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+                              </select>
+                            </label>
+                            <label style={{ fontSize: 10, fontWeight: 800, color: '#687083', textTransform: 'uppercase' }}>
+                              {T('Owner', '负责人')}
+                              <input
+                                value={caseDrafts[app.id]?.assignedTo || ''}
+                                onChange={(event) => setCaseDrafts(prev => ({ ...prev, [app.id]: { ...prev[app.id], assignedTo: event.target.value } }))}
+                                placeholder="Admissions owner"
+                                style={{ width: '100%', boxSizing: 'border-box', marginTop: 5, padding: '8px 9px', borderRadius: 8, border: '1.5px solid #d4d8e0', fontSize: 12.5 }}
+                              />
+                            </label>
+                            <label style={{ fontSize: 10, fontWeight: 800, color: '#687083', textTransform: 'uppercase' }}>
+                              {T('Next Action', '下一步')}
+                              <input
+                                value={caseDrafts[app.id]?.nextAction || ''}
+                                onChange={(event) => setCaseDrafts(prev => ({ ...prev, [app.id]: { ...prev[app.id], nextAction: event.target.value } }))}
+                                placeholder="Request records, schedule consultation, or review path"
+                                style={{ width: '100%', boxSizing: 'border-box', marginTop: 5, padding: '8px 9px', borderRadius: 8, border: '1.5px solid #d4d8e0', fontSize: 12.5 }}
+                              />
+                            </label>
+                          </div>
+                          <button
+                            onClick={() => saveCaseTracking(app.id)}
+                            disabled={saving === app.id + 'tracking'}
+                            style={{ marginTop: 10, padding: '8px 14px', borderRadius: 8, background: '#2b3d6d', color: '#fff', border: 'none', fontSize: 12, fontWeight: 800, cursor: 'pointer' }}
+                          >
+                            {saving === app.id + 'tracking' ? T('Saving…', '保存中…') : T('Save case tracking', '保存案件追踪')}
+                          </button>
+                        </div>}
+
+                        {app.events?.length > 0 && (
+                          <div style={{ borderTop: '1px solid #e0e6f0', borderBottom: '1px solid #e0e6f0', padding: '12px 0', marginBottom: 16 }}>
+                            <p style={{ fontSize: 10, fontWeight: 800, color: '#2b3d6d', letterSpacing: 1, textTransform: 'uppercase', margin: '0 0 8px' }}>{T('Recent Case Activity', '近期案件活动')}</p>
+                            <div style={{ display: 'grid', gap: 7 }}>
+                              {app.events.slice(0, 10).map((event) => (
+                                <div key={event.id} style={{ display: 'grid', gridTemplateColumns: 'minmax(125px, auto) 1fr', gap: 10, fontSize: 11.5, lineHeight: 1.45 }}>
+                                  <span style={{ color: '#7a8394' }}>{new Date(event.createdAt).toLocaleString()}</span>
+                                  <span style={{ color: '#26324f' }}><strong>{event.actorEmail}</strong> · {event.summary}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
 
                         {/* Rejection reason (if rejected) */}
                         {app.status === 'rejected' && app.rejectionReason && (
@@ -576,9 +864,13 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                         {/* Action buttons */}
                         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                           {app.status === 'pending' && (<>
-                            <button onClick={() => approveApplication(app, appReview)} disabled={!!saving}
+                            <button onClick={() => approveApplication(app, appReview)} disabled={!!saving || !applicationApprovalReady}
                               style={{ padding: '8px 18px', borderRadius: 8, background: '#2e7d32', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
-                              {transferNeedsRecordReview ? '✓ Approve after admin record review' : '✓ Approve'}
+                              {applicationApprovalReady
+                                ? T('Approve application', '批准申请')
+                                : interestConfirmed
+                                  ? T('Not approval-ready', '尚未达到批准条件')
+                                  : T('Awaiting confirmation', '等待家长确认')}
                             </button>
                             <button onClick={() => openRejectModal(app)} disabled={!!saving}
                               style={{ padding: '8px 18px', borderRadius: 8, background: '#c62828', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
@@ -586,26 +878,29 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                             </button>
                           </>)}
 
-	                          {app.status === 'approved' && !hasPaidRecord && (
+		                          {workflowEnabled && app.status === 'approved' && !hasPaidRecord && applicationApprovalReady && (
 	                            <button onClick={() => openManualPayment(app)} disabled={!!saving}
 	                              style={{ padding: '8px 18px', borderRadius: 8, background: '#7c3aed', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
 	                              Record Manual Payment
 	                            </button>
 	                          )}
+		                          {workflowEnabled && app.status === 'approved' && !hasPaidRecord && !applicationApprovalReady && (
+	                            <span style={{ fontSize: 12, color: '#92400e', fontWeight: 700, padding: '8px 0' }}>{readiness.action || 'Complete readiness steps before payment'}</span>
+	                          )}
 
-	                          {app.status === 'approved' && !app.accountsCreated && hasPaidRecord && (
+		                          {workflowEnabled && app.status === 'approved' && !app.accountsCreated && hasPaidRecord && (
 	                            <button onClick={() => activateApplication(app.id)} disabled={saving === app.id + 'activate'}
 	                              style={{ padding: '8px 20px', borderRadius: 8, background: '#1a73e8', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
 	                              {saving === app.id + 'activate' ? 'Creating…' : '🔑 Create Accounts'}
 	                            </button>
 	                          )}
-	                          {app.status === 'approved' && !app.accountsCreated && !hasPaidRecord && (
+		                          {workflowEnabled && app.status === 'approved' && !app.accountsCreated && !hasPaidRecord && (
 	                            <span style={{ fontSize: 12, color: '#92400e', fontWeight: 700, padding: '8px 0' }}>Record payment before account activation</span>
 	                          )}
-	                          {app.status === 'approved' && app.accountsCreated && (
+		                          {workflowEnabled && app.status === 'approved' && app.accountsCreated && (
 	                            <span style={{ fontSize: 12, color: '#2e7d32', fontWeight: 700, padding: '8px 0' }}>✓ Accounts created</span>
 	                          )}
-	                          {app.status === 'approved' && app.accountsCreated && !hasPaidRecord && (
+		                          {workflowEnabled && app.status === 'approved' && app.accountsCreated && !hasPaidRecord && (
 	                            <button onClick={() => openManualPayment(app)} disabled={!!saving}
 	                              style={{ padding: '8px 18px', borderRadius: 8, background: '#7c3aed', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
 	                              Record Manual Payment

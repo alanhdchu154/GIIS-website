@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
 import AdmissionsHandoffReceipt from '../../main/AdmissionsHandoffReceipt';
-import EnrollmentRoadmap from '../../main/EnrollmentRoadmap';
 
 const API = getApiBase();
 
@@ -37,6 +36,12 @@ const TRANSCRIPT_OPTIONS = [
   { value: 'yes', en: 'Yes, we can provide a transcript', zh: '可以提供成绩单' },
   { value: 'partial', en: 'Partial records only', zh: '只有部分记录' },
   { value: 'not-yet', en: 'Not yet', zh: '暂时还没有' },
+];
+const START_TIMINGS = [
+  { value: 'within-30-days', en: 'Within 30 days', zh: '希望 30 天内开始' },
+  { value: 'next-semester', en: 'Next semester', zh: '下个学期开始' },
+  { value: 'next-school-year', en: 'Next school year', zh: '下个学年开始' },
+  { value: 'exploring', en: 'Still exploring', zh: '仍在了解和比较' },
 ];
 const CONCERNS = [
   { value: 'grade9-path', en: 'Which starting path fits my child?', zh: '孩子适合从哪条路径开始' },
@@ -84,14 +89,57 @@ export default function ApplyForm({ language }) {
     graduationTiming: '',
     transcriptAvailable: '',
     mainConcern: '',
+    motivation: '',
+    intendedStartTiming: '',
+    transferCourseSummary: '',
+    transcriptPlanDetails: '',
+    transcriptExpectedTiming: '',
+    tuitionAware: false,
+    noGuaranteeAcknowledged: false,
+    responseCommitmentAcknowledged: false,
     notes: '',
   });
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [duplicateSubmission, setDuplicateSubmission] = useState(false);
+  const [confirmationRequired, setConfirmationRequired] = useState(false);
   const [serverError, setServerError] = useState('');
+  const [currentStep, setCurrentStep] = useState(0);
+  const [capabilityCheck, setCapabilityCheck] = useState(0);
+  const [intakeMode, setIntakeMode] = useState('loading');
+
+  useEffect(() => {
+    let active = true;
+    async function checkCapabilities() {
+      setIntakeMode('loading');
+      try {
+        const response = await fetch(`${API}/api/applications/capabilities`);
+        if (!active) return;
+        if (response.status === 404 || response.status === 405) {
+          setIntakeMode('legacy');
+          return;
+        }
+        if (!response.ok) {
+          setIntakeMode('unavailable');
+          return;
+        }
+        const capabilities = await response.json().catch(() => ({}));
+        setIntakeMode(
+          capabilities.applicationIntakeVersion === 'serious-v1' && capabilities.interestConfirmation
+            ? 'serious'
+            : 'legacy',
+        );
+      } catch {
+        if (active) setIntakeMode('unavailable');
+      }
+    }
+    checkCapabilities();
+    return () => { active = false; };
+  }, [capabilityCheck]);
 
   function set(field) { return e => setForm(f => ({ ...f, [field]: e.target.value })); }
+  function toggle(field) { return e => setForm(f => ({ ...f, [field]: e.target.checked })); }
 
   function applicantNotes() {
     const isTransfer = form.applicantType === 'transfer';
@@ -115,15 +163,52 @@ export default function ApplyForm({ language }) {
     if (!form.dob.trim()) e.dob = isEn ? 'Required' : '必填';
     if (!form.gradeLevel) e.gradeLevel = isEn ? 'Required' : '必填';
     if (!form.applicantType) e.applicantType = isEn ? 'Choose one path' : '请选择申请类型';
+    if (form.motivation.trim().length < 80) e.motivation = isEn ? 'Please write at least 80 characters' : '请至少填写 80 个字符';
+    if (!form.intendedStartTiming) e.intendedStartTiming = isEn ? 'Required' : '必填';
     if (form.applicantType === 'transfer') {
       if (!form.previousCredits) e.previousCredits = isEn ? 'Required for transfer review' : '转学审核必填';
       if (!form.transcriptAvailable) e.transcriptAvailable = isEn ? 'Required for transfer review' : '转学审核必填';
       if (!form.graduationTiming) e.graduationTiming = isEn ? 'Required for transfer review' : '转学审核必填';
+      if (form.transferCourseSummary.trim().length < 20) e.transferCourseSummary = isEn ? 'Please summarize completed courses' : '请简要说明已修课程';
+      if (form.transcriptPlanDetails.trim().length < 10) e.transcriptPlanDetails = isEn ? 'Please explain the records plan' : '请说明取得成绩单的计划';
+      if (!form.transcriptExpectedTiming.trim()) e.transcriptExpectedTiming = isEn ? 'Required' : '必填';
     }
     if (!form.parentName.trim()) e.parentName = isEn ? 'Required' : '必填';
     if (!form.parentEmail.trim()) e.parentEmail = isEn ? 'Required' : '必填';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.parentEmail)) e.parentEmail = isEn ? 'Invalid email' : '邮箱格式错误';
+    if (!form.tuitionAware) e.tuitionAware = isEn ? 'Required' : '请确认';
+    if (!form.noGuaranteeAcknowledged) e.noGuaranteeAcknowledged = isEn ? 'Required' : '请确认';
+    if (!form.responseCommitmentAcknowledged) e.responseCommitmentAcknowledged = isEn ? 'Required' : '请确认';
     return e;
+  }
+
+  const stepFields = [
+    ['studentName', 'dob', 'gradeLevel', 'intendedStartTiming', 'motivation'],
+    ['applicantType', 'previousCredits', 'transcriptAvailable', 'graduationTiming', 'transferCourseSummary', 'transcriptPlanDetails', 'transcriptExpectedTiming'],
+    ['parentName', 'parentEmail'],
+    ['tuitionAware', 'noGuaranteeAcknowledged', 'responseCommitmentAcknowledged'],
+  ];
+
+  function goToNextStep() {
+    const allErrors = validate();
+    const stepErrors = Object.fromEntries(
+      Object.entries(allErrors).filter(([field]) => stepFields[currentStep].includes(field)),
+    );
+    if (Object.keys(stepErrors).length) {
+      setErrors(stepErrors);
+      return;
+    }
+    setErrors({});
+    setServerError('');
+    setCurrentStep((step) => Math.min(step + 1, stepFields.length - 1));
+    document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function goToPreviousStep() {
+    setErrors({});
+    setServerError('');
+    setCurrentStep((step) => Math.max(step - 1, 0));
+    document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   async function handleSubmit(e) {
@@ -135,15 +220,29 @@ export default function ApplyForm({ language }) {
     setServerError('');
     try {
       const payload = {
+        intakeVersion: intakeMode === 'serious' ? 'serious-v1' : '',
         studentName: form.studentName,
         dob: form.dob,
         gradeLevel: form.gradeLevel,
         currentSchool: form.currentSchool,
         targetUniversities: form.targetUniversities,
         preferredLanguage: form.preferredLanguage,
+        applicantType: form.applicantType,
         parentName: form.parentName,
         parentEmail: form.parentEmail,
         phone: form.phone,
+        previousCredits: isTransferApplicant ? form.previousCredits : '',
+        graduationTiming: isTransferApplicant ? form.graduationTiming : '',
+        transcriptAvailable: isTransferApplicant ? form.transcriptAvailable : '',
+        mainConcern: form.mainConcern,
+        motivation: form.motivation,
+        intendedStartTiming: form.intendedStartTiming,
+        transferCourseSummary: isTransferApplicant ? form.transferCourseSummary : '',
+        transcriptPlanDetails: isTransferApplicant ? form.transcriptPlanDetails : '',
+        transcriptExpectedTiming: isTransferApplicant ? form.transcriptExpectedTiming : '',
+        tuitionAware: form.tuitionAware,
+        noGuaranteeAcknowledged: form.noGuaranteeAcknowledged,
+        responseCommitmentAcknowledged: form.responseCommitmentAcknowledged,
         notes: applicantNotes(),
       };
       const res = await fetch(`${API}/api/applications`, {
@@ -153,6 +252,8 @@ export default function ApplyForm({ language }) {
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) { setServerError(data.error || (isEn ? 'Submission failed. Please try again.' : '提交失败，请重试。')); return; }
+      setDuplicateSubmission(data.duplicate === true);
+      setConfirmationRequired(data.confirmationRequired === true);
       setSubmitted(true);
     } catch {
       setServerError(isEn ? 'Network error. Please try again.' : '网络错误，请重试。');
@@ -168,6 +269,29 @@ export default function ApplyForm({ language }) {
     return (
       <>
         <Helmet><title>{T('Apply', '申请入学')} | GIIS</title></Helmet>
+        {duplicateSubmission && (
+          <div style={{ maxWidth: 980, margin: '24px auto -26px', padding: '0 20px', fontFamily: 'Inter, sans-serif' }}>
+            <div style={{ background: '#fff8e6', border: '1px solid #f3d27b', borderRadius: 8, padding: '12px 14px', color: '#5c4a12', fontSize: 13, lineHeight: 1.6 }}>
+              {T(
+                'We already have a pending application for this student. We kept the original case and recorded that you returned; no duplicate case was created.',
+                '我们已经收到这名学生的待审核申请。系统保留原案件并记录您再次提交，没有建立重复案件。'
+              )}
+            </div>
+          </div>
+        )}
+        <div style={{ maxWidth: 980, margin: '24px auto -26px', padding: '0 20px', fontFamily: 'Inter, sans-serif' }}>
+          <div style={{ background: '#f0f4ff', border: '1px solid #cfe0f8', borderRadius: 8, padding: '12px 14px', color: '#2b3d6d', fontSize: 13, lineHeight: 1.6 }}>
+            {confirmationRequired
+              ? T(
+                `Please open the confirmation email sent to ${form.parentEmail}. Admissions will begin review after the parent confirms interest.`,
+                `请打开已发送至 ${form.parentEmail} 的确认邮件。家长确认继续申请后，招生团队才会开始审核。`,
+              )
+              : T(
+                'Your application is recorded. Admissions will continue with the existing case and contact your family with the next step.',
+                '您的申请已记录。招生团队会继续处理现有案件，并联系家庭说明下一步。',
+              )}
+          </div>
+        </div>
         <AdmissionsHandoffReceipt
           language={language}
           kind={isTransferApplicant ? 'transfer' : 'new'}
@@ -203,8 +327,6 @@ export default function ApplyForm({ language }) {
         </div>
       </div>
 
-      <EnrollmentRoadmap language={language} variant="compact" />
-
       <div style={{ background: '#f4f6fa', padding: '48px 24px 80px', fontFamily: 'Inter, sans-serif' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 14, marginBottom: 18 }}>
@@ -235,7 +357,9 @@ export default function ApplyForm({ language }) {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} style={{ background: '#fff', borderRadius: 16, padding: '36px 32px', boxShadow: '0 8px 32px rgba(0,0,0,0.06)', border: '1px solid #e8ecf5' }}>
+          <form id="application-form" onSubmit={handleSubmit} style={{ background: '#fff', borderRadius: 8, padding: '32px', boxShadow: '0 8px 32px rgba(0,0,0,0.06)', border: '1px solid #e8ecf5', scrollMarginTop: 24 }}>
+
+            <ApplicationStepper currentStep={currentStep} language={language} />
 
             {serverError && (
               <div style={{ background: '#fff3f3', border: '1px solid #fca5a5', borderRadius: 8, padding: '10px 14px', marginBottom: 20, fontSize: 13, color: '#b91c1c' }}>
@@ -243,12 +367,39 @@ export default function ApplyForm({ language }) {
               </div>
             )}
 
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 18px' }}>
-              {T('Student Information', '学生信息')}
-            </p>
+            {currentStep === 0 && <>
+              <StepHeading
+                title={T('Student Information', '学生信息')}
+                body={T('Start with the student’s current situation and goals.', '先填写学生目前的情况与学习目标。')}
+              />
 
             <Field label={T('Student Full Name', '学生姓名')} err={errors.studentName}>
               <input type="text" value={form.studentName} onChange={set('studentName')} placeholder={T('e.g. Yunfan Yang', '例：杨芸帆')} style={inputStyle(errors.studentName)} />
+            </Field>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
+              <Field label={T('When would the student like to start?', '学生希望何时开始？')} err={errors.intendedStartTiming}>
+                <select value={form.intendedStartTiming} onChange={set('intendedStartTiming')} style={inputStyle(errors.intendedStartTiming)}>
+                  <option value="">{T('Select…', '请选择…')}</option>
+                  {START_TIMINGS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
+                </select>
+              </Field>
+            </div>
+
+            <Field
+              label={T('Why is your family considering GIIS?', '您的家庭为什么考虑 GIIS？')}
+              err={errors.motivation}
+              hint={T('80–1,000 characters', '80–1,000 个字符')}
+            >
+              <textarea
+                value={form.motivation}
+                onChange={set('motivation')}
+                rows={4}
+                minLength={80}
+                maxLength={1000}
+                placeholder={T('Describe the student’s needs, goals, and what a successful school experience would look like.', '请说明学生的需要、目标，以及您期望怎样的学习结果。')}
+                style={{ ...inputStyle(errors.motivation), resize: 'vertical' }}
+              />
             </Field>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
@@ -281,7 +432,13 @@ export default function ApplyForm({ language }) {
                 ))}
               </div>
             </Field>
+            </>}
 
+            {currentStep === 1 && <>
+            <StepHeading
+              title={T('Application Path', '申请路径')}
+              body={T('Choose the correct path and tell us what records are available.', '选择适合的申请路径，并说明目前可提供的资料。')}
+            />
             <Field label={T('Applicant Type', '申请类型')} err={errors.applicantType}>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12, marginTop: 8 }}>
                 {APPLICANT_TYPES.map((type) => {
@@ -342,6 +499,45 @@ export default function ApplyForm({ language }) {
                   </select>
                 </Field>
 
+                <Field
+                  label={T('Completed high-school course summary', '已完成的高中课程摘要')}
+                  err={errors.transferCourseSummary}
+                  hint={T('Course names and approximate grades are enough for intake', '申请阶段填写课程名称和大致成绩即可')}
+                >
+                  <textarea
+                    value={form.transferCourseSummary}
+                    onChange={set('transferCourseSummary')}
+                    rows={4}
+                    minLength={20}
+                    maxLength={1200}
+                    placeholder={T('Example: English II (A), Algebra II (B), Biology (A), World History (B).', '例：English II（A）、Algebra II（B）、Biology（A）、World History（B）。')}
+                    style={{ ...inputStyle(errors.transferCourseSummary), resize: 'vertical' }}
+                  />
+                </Field>
+
+                <Field label={T('How will you obtain the transcript or school records?', '您准备如何取得成绩单或学校记录？')} err={errors.transcriptPlanDetails}>
+                  <textarea
+                    value={form.transcriptPlanDetails}
+                    onChange={set('transcriptPlanDetails')}
+                    rows={3}
+                    minLength={10}
+                    maxLength={600}
+                    placeholder={T('It is okay if records are not available yet. Explain who will request them and any known obstacle.', '暂时没有成绩单也可以申请。请说明由谁申请，以及目前是否有困难。')}
+                    style={{ ...inputStyle(errors.transcriptPlanDetails), resize: 'vertical' }}
+                  />
+                </Field>
+
+                <Field label={T('When do you expect records to be available?', '预计何时可以提供记录？')} err={errors.transcriptExpectedTiming}>
+                  <input
+                    type="text"
+                    value={form.transcriptExpectedTiming}
+                    onChange={set('transcriptExpectedTiming')}
+                    maxLength={120}
+                    placeholder={T('Example: within 10 business days', '例：10 个工作日内')}
+                    style={inputStyle(errors.transcriptExpectedTiming)}
+                  />
+                </Field>
+
                 <div style={{ margin: '-4px 0 18px', padding: '11px 12px', borderRadius: 8, background: '#fff8e6', border: '1px solid #f3d27b', fontSize: 12.5, color: '#5c4a12', lineHeight: 1.6 }}>
                   {T(
                     'Partial records can start an initial path estimate, but transferable credits are finalized only after official transcripts or verifiable school records are received and reviewed.',
@@ -364,10 +560,13 @@ export default function ApplyForm({ language }) {
                 {CONCERNS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
               </select>
             </Field>
+            </>}
 
-            <p style={{ fontSize: 12, fontWeight: 700, color: '#2b3d6d', letterSpacing: '2px', textTransform: 'uppercase', margin: '8px 0 18px' }}>
-              {T('Parent / Guardian Information', '家长 / 监护人信息')}
-            </p>
+            {currentStep === 2 && <>
+            <StepHeading
+              title={T('Parent / Guardian', '家长 / 监护人')}
+              body={T('Use the email that should receive application updates.', '请填写用于接收申请进度的邮箱。')}
+            />
 
             <Field label={T('Parent Full Name', '家长姓名')} err={errors.parentName}>
               <input type="text" value={form.parentName} onChange={set('parentName')} placeholder={T('e.g. Yali Yang', '例：杨亚利')} style={inputStyle(errors.parentName)} />
@@ -384,15 +583,59 @@ export default function ApplyForm({ language }) {
             <Field label={T('Anything else we should know? (optional)', '其他补充说明（选填）')} err={errors.notes}>
               <textarea value={form.notes} onChange={set('notes')} rows={3} placeholder={T('Learning goals, documents available, special circumstances…', '学习目标、可提供文件、特殊情况等…')} style={{ ...inputStyle(false), resize: 'vertical' }} />
             </Field>
+            </>}
 
-            <button type="submit" disabled={submitting} style={{
-              width: '100%', padding: '14px 0', borderRadius: 10, marginTop: 4,
-              background: submitting ? '#9baac8' : '#2b3d6d',
-              color: '#fff', fontWeight: 700, fontSize: 15,
-              border: 'none', cursor: submitting ? 'not-allowed' : 'pointer',
-            }}>
-              {submitting ? T('Submitting…', '提交中…') : T('Request Application Review →', '申请入学路径评估 →')}
-            </button>
+            {currentStep === 3 && <>
+            <StepHeading
+              title={T('Review and Confirm', '确认并提交')}
+              body={T('Review the summary, confirm the boundaries, then submit.', '核对摘要、确认重要说明后再提交。')}
+            />
+            <div style={{ display: 'grid', gap: 8, marginBottom: 18, padding: '14px 0', borderTop: '1px solid #e0e6f0', borderBottom: '1px solid #e0e6f0' }}>
+              <ReviewRow label={T('Student', '学生')} value={`${form.studentName} · ${form.gradeLevel}`} />
+              <ReviewRow label={T('Path', '路径')} value={form.applicantType === 'transfer' ? T('Transfer student', '转学生') : T('New student', '一般新生')} />
+              <ReviewRow label={T('Start timing', '开始时间')} value={START_TIMINGS.find((option) => option.value === form.intendedStartTiming)?.[isEn ? 'en' : 'zh'] || '—'} />
+              <ReviewRow label={T('Parent email', '家长邮箱')} value={form.parentEmail} />
+            </div>
+            <div style={{ display: 'grid', gap: 10, margin: '2px 0 20px', padding: '14px 15px', border: '1px solid #dbe4f0', borderRadius: 8, background: '#f8f9fc' }}>
+              {[
+                ['tuitionAware', T('I reviewed the current tuition and support levels and understand the final plan is recommended after review.', '我已查看目前的学费与支持层级，并了解学校会在审核后建议最终方案。')],
+                ['noGuaranteeAcknowledged', T('I understand this application does not guarantee admission, transfer credit, grade placement, or a graduation date.', '我了解提交申请不代表保证录取、转学分、年级安排或毕业日期。')],
+                ['responseCommitmentAcknowledged', T('If GIIS contacts us, our family will reply within 72 hours or tell admissions that we need more time.', '如果 GIIS 联系我们，家庭会在 72 小时内回复，或告知招生团队需要更多时间。')],
+              ].map(([field, label]) => (
+                <label key={field} style={{ display: 'flex', alignItems: 'flex-start', gap: 9, color: '#394255', fontSize: 12.5, lineHeight: 1.55, cursor: 'pointer' }}>
+                  <input type="checkbox" checked={form[field]} onChange={toggle(field)} style={{ marginTop: 3, accentColor: '#2b3d6d' }} />
+                  <span>{label}{errors[field] ? <strong style={{ color: '#b91c1c' }}> · {errors[field]}</strong> : null}</span>
+                </label>
+              ))}
+            </div>
+            </>}
+
+            {intakeMode === 'unavailable' && currentStep === 3 && (
+              <div style={{ background: '#fff8e6', border: '1px solid #f3d27b', borderRadius: 8, padding: '10px 12px', marginBottom: 12, color: '#5c4a12', fontSize: 12.5, lineHeight: 1.55 }}>
+                {T('The application service could not be verified. Please retry before submitting.', '目前无法确认申请服务状态，请重试后再提交。')}
+                {' '}
+                <button type="button" onClick={() => setCapabilityCheck((value) => value + 1)} style={{ border: 0, padding: 0, background: 'none', color: '#2b3d6d', fontWeight: 800, cursor: 'pointer', textDecoration: 'underline' }}>
+                  {T('Retry', '重试')}
+                </button>
+              </div>
+            )}
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10, marginTop: 4 }}>
+              {currentStep > 0
+                ? <button type="button" onClick={goToPreviousStep} disabled={submitting} style={secondaryButton}>{T('Back', '上一步')}</button>
+                : <span />}
+              {currentStep < stepFields.length - 1 ? (
+                <button type="button" onClick={goToNextStep} style={primaryButton}>{T('Continue', '下一步')}</button>
+              ) : (
+                <button type="submit" disabled={submitting || intakeMode === 'loading' || intakeMode === 'unavailable'} style={{
+                  ...primaryButton,
+                  background: submitting || intakeMode === 'loading' || intakeMode === 'unavailable' ? '#9baac8' : '#2b3d6d',
+                  cursor: submitting || intakeMode === 'loading' || intakeMode === 'unavailable' ? 'not-allowed' : 'pointer',
+                }}>
+                  {submitting ? T('Submitting…', '提交中…') : intakeMode === 'loading' ? T('Checking service…', '正在确认服务…') : T('Submit application', '提交申请')}
+                </button>
+              )}
+            </div>
 
             <p style={{ textAlign: 'center', marginTop: 16, fontSize: 12, color: '#7b8496', lineHeight: 1.6 }}>
               {T(
@@ -409,3 +652,49 @@ export default function ApplyForm({ language }) {
     </>
   );
 }
+
+function ApplicationStepper({ currentStep, language }) {
+  const isEn = language !== 'zh';
+  const steps = isEn
+    ? ['Student', 'Path', 'Parent', 'Confirm']
+    : ['学生', '路径', '家长', '确认'];
+  return (
+    <nav aria-label={isEn ? 'Application progress' : '申请进度'} style={{ marginBottom: 28 }}>
+      <ol style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 8, margin: 0, padding: 0, listStyle: 'none' }}>
+        {steps.map((label, index) => {
+          const active = index === currentStep;
+          const complete = index < currentStep;
+          return (
+            <li key={label} aria-current={active ? 'step' : undefined} style={{ minWidth: 0 }}>
+              <div style={{ height: 4, borderRadius: 2, background: active || complete ? '#2b3d6d' : '#dfe4ec', marginBottom: 7 }} />
+              <span style={{ display: 'block', color: active ? '#1a2d5a' : complete ? '#4f5868' : '#8a92a1', fontSize: 11, fontWeight: active ? 900 : 700, overflowWrap: 'anywhere' }}>
+                {index + 1}. {label}
+              </span>
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
+  );
+}
+
+function StepHeading({ title, body }) {
+  return (
+    <header style={{ marginBottom: 20 }}>
+      <p style={{ margin: '0 0 5px', color: '#1a2d5a', fontSize: 18, fontWeight: 800 }}>{title}</p>
+      <p style={{ margin: 0, color: '#687083', fontSize: 13, lineHeight: 1.55 }}>{body}</p>
+    </header>
+  );
+}
+
+function ReviewRow({ label, value }) {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(100px, 0.35fr) minmax(0, 1fr)', gap: 12, fontSize: 13, lineHeight: 1.5 }}>
+      <strong style={{ color: '#687083' }}>{label}</strong>
+      <span style={{ color: '#1a1d24', overflowWrap: 'anywhere' }}>{value || '—'}</span>
+    </div>
+  );
+}
+
+const primaryButton = { minHeight: 44, padding: '11px 18px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontWeight: 800, fontSize: 14, border: 'none', cursor: 'pointer' };
+const secondaryButton = { ...primaryButton, background: '#fff', color: '#2b3d6d', border: '1.5px solid #cbd3df' };

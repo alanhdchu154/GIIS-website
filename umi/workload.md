@@ -1,10 +1,166 @@
 # Umi Workload
 
-Last updated: 2026-07-22 12:25 CDT
+Last updated: 2026-08-08 CT
 
 This file holds one active Codex / cc worker handoff at a time. Use
 `ROADMAP.md` for durable project direction and archived reports/git history for
 old slot evidence.
+
+## Active: Admissions Frontend Release, Backend Activation Pending
+
+Time anchor: 2026-08-08 CT.
+
+Execution mode: Umi fallback implementation and release verification. Alan
+authorized commit/push; GitHub push deploys the Netlify frontend. No Lightsail
+deploy, production database write, or real email was performed.
+
+Delegation result: the bounded Opus code-mode attempt made no edits because
+Claude Code returned `401 OAuth access token has expired`. Codex/Umi completed
+and verified the scoped fallback while preserving the mixed worktree.
+
+Goal: reduce ghost applicants without S3, file uploads, accounts, fees, OCR, AI
+scoring, or a new external service.
+
+Accepted local result:
+
+- `serious-v1` intake requires bounded motivation, intended start timing,
+  tuition awareness, no-guarantee acceptance, and a 72-hour response
+  acknowledgment.
+- Transfer applicants provide a course summary and transcript plan/status;
+  missing transcripts do not block application, but existing approval/payment/
+  activation gates still require verified records and reviewed decisions.
+- Parent confirmation uses a random capability token stored only as a hash with
+  72-hour expiry. The public confirmation endpoint is generic and idempotent;
+  only confirmed cases trigger the admin alert and enter the default queue.
+- Admin states separate unconfirmed, academic-review-ready,
+  principal-review-ready, and approval-ready cases without circular approval.
+- Legacy applications remain reviewable during the backend-first rollout.
+- Public application intake is now a four-step workflow: student, path,
+  parent, and confirmation. The long duplicate enrollment roadmap was removed
+  from `/apply` so the actual form appears quickly on mobile.
+- Transfer evaluation is now a four-step admin workflow: source records,
+  course mapping, family summary/save, and principal approval.
+- A public capability endpoint and frontend compatibility mode prevent the
+  Netlify release from claiming email confirmation or exposing new high-risk
+  admin controls while the old Lightsail backend remains live.
+- Confirmation delivery is awaited. A provider failure returns a retryable
+  error, keeps the saved case unconfirmed, and records an operations event.
+
+Verification accepted before push:
+
+- Full server Jest: 10 suites / 73 tests passed.
+- Prisma validation: passed.
+- `node --check` and `git diff --check`: passed.
+- Frontend production build: passed; existing Browserslist warning only.
+- Parent/admin Playwright browser smoke: 30/30 passed across desktop/mobile.
+- Desktop/mobile application screenshots and desktop admin transfer-stepper
+  screenshot were visually inspected; no overlap or horizontal overflow found.
+
+Next action: use `docs/admissions-intake-deploy-runbook.md` for an explicitly
+approved Lightsail/database window, then verify one labeled test confirmation
+email and remove the test case through the approved cleanup path. Until then,
+the Netlify frontend remains safely compatible with the old backend.
+
+## Previous: Admin UX Google Doc Review Implemented Locally
+
+Completed and shipped in commits `da9cba18` and `bf34436d`; build, admin browser
+smoke, GitHub Actions, and production frontend freshness passed. The detailed
+working list is preserved in git history and Central handoff.
+
+## Previous: Lesson-Video Quality Polish Replacement Complete
+
+Alan approved replacing old videos after a better quality-polish version passes
+the full gates. Codex completed controlled switch/delete for the existing Social
+Psychology M8 replacement and produced/uploaded one more replacement for Health
+& Wellness M7.
+
+Completed 2026-07-26 08:48 CT:
+
+- Social Psychology M8 `Group Dynamics`: prior replacement folder
+  `teaching-videos/social-psychology-module-8-group-dynamics-quality-polish-20260725`.
+  `sync_channel.py` dry-run showed the replacement `p383mr9olCo` as canonical
+  and exactly one stale duplicate, then `--apply` deleted old video
+  `nVbAdhL-4m4` and rewrote the public manifest.
+- Health & Wellness M7 `Social Health & Relationships`: new replacement folder
+  `teaching-videos/health-wellness-module-7-social-health-relationships-quality-polish-20260726`.
+  Density repair trimmed 7/14 sections, manual slide fixes removed the pause
+  prompt overlap and recap/path slide problems, MP4 rendered cleanly, and
+  runtime improved from 484.2s to 458.3s.
+- Health M7 final gates passed: parent-trust `TRUST_READY`, Opus independent
+  review `pass`, Opus source-alignment `pass`, audit `pass` score 100, and
+  release gate ready. Uploaded through `yt_queue.py upload --gate-ready` with
+  1 uploaded / 0 failed: `https://youtu.be/5egefxl0OhI`.
+- Controlled delete/switch completed after upload: dry-run showed Health M7
+  canonical as `5egefxl0OhI` and exactly one stale duplicate; `sync_channel.py
+  --apply` deleted old video `WDKww4KRNWk` and rewrote
+  `public/data/lessons-manifest.json`.
+- Final verification: `npm run audit:lesson-manifest` returned 0 warnings
+  across 820 lessons; `yt_queue.py status` is 837 uploaded / 0 pending /
+  0 no-MP4; pending release gate is 0/0/0; `sync_channel.py` dry-run reports
+  no duplicates.
+
+Follow-up caveat: current `sync_channel.py` chooses the first local folder for
+`(course, module)` when writing `lesson_dir`, so Health M7's manifest row points
+to the original folder while the public video ID points to the improved video.
+Playback is correct, but a small sync-tool improvement should prefer the folder
+whose `script.json` already has the canonical replacement video ID.
+
+Recommended next quality lane: either patch the `lesson_dir` preference in
+`sync_channel.py`, or review the next 1-2 candidates from the quality report.
+Promote only candidates with visible visual/density improvement and full gate
+passes.
+
+## Previous: Lesson-Video Quality Review
+
+Alan asked for a broader quality review from parent, teacher, professor, and
+student perspectives. Codex ran a read-only review of the current foundation
+pipeline, source-of-truth state, queue/gate evidence, artifact samples, contact
+sheets, full MP4 durations, script density, and learning-check counts. No
+uploaded folders, MP4 renders, YouTube uploads, public manifest, or Learn Portal
+data were changed.
+
+Report: `umi/reports/lesson-video-quality-review-20260722/report.md`.
+
+Current verdict: production volume is complete and operational gates are strong;
+the next useful lane is not more generation, but Quality Gate v2. Start with
+3 showcase rewrites/rerenders in sandbox only: one humanities/social-science
+lesson, one math/science lesson, and one health/business/elective lesson. The
+quality target should score parent trust, teacher usability, academic rigor,
+and student watchability, with stronger limits on slide density, duration,
+learning checks, and final path-slide clarity.
+
+Initial high-priority polish candidates: Health & Wellness M7, Social
+Psychology M8, Social Psychology M6, Health & Wellness M8, Global Economics &
+Politics M4, Social Psychology M3-M4, Pre-Calculus M2/M7, and Personal
+Finance / Applied Economics M9.
+
+## Previous: Lesson-Video Quality Polish Pilot
+
+Alan approved trying a quality-polish lane after the 835-upload producer target
+finished. Codex did not edit uploaded lesson folders, render MP4, upload, or
+change the public manifest. Instead, it created a sandbox-only pilot at
+`umi/reports/quality-polish-pilot-20260722-1812/`.
+
+Pilot target: Social Psychology M8 `Group Dynamics`, selected because it is
+already gate-clean but density-heavy compared with newer lessons.
+
+Sandbox result:
+
+- Whole-script count improved from 1047 words / 87.3 avg / max 102 to
+  1016 words / 84.7 avg / max 100.
+- The density worker's internal count improved from 1020 words / 85.0 avg /
+  max 100 to 989 words / 82.4 avg / max 100.
+- Only `05_misconception` and `06_worked_example` were trimmed; section IDs,
+  Challenger frame, Expert Lens spine, and review structure were preserved.
+
+Report: `umi/reports/quality-polish-pilot-20260722-1812/report.md`.
+
+Recommendation: Quality Polish v1 should start as a 20-30 lesson candidate
+queue, not a mass rerender. Prioritize lessons above ~82 average words/section,
+lessons with >13 sections, and lessons whose contact sheets show checklist-like
+path slides or weak visible source labels. Promote only the best few from
+sandbox script polish into full visual polish and local rerender; no replacement
+upload without independent review and explicit approval.
 
 ## Codex Acceptance Review: Billing CI Fix Shipped
 

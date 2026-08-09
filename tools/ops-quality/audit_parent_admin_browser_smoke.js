@@ -93,8 +93,8 @@ const ROUTES = [
       'Know the right path before you pay.',
       'Before You Submit',
       'After You Submit',
-      'New student',
-      'Transfer student',
+      'Student Information',
+      'Why is your family considering GIIS?',
       'No payment is collected here',
     ],
   },
@@ -107,23 +107,34 @@ const ROUTES = [
       'jordan@example.com',
       'Open Trust Center',
     ],
-    endpointCaps: { '/api/applications': 1 },
+    endpointCaps: { '/api/applications': 1, '/api/applications/capabilities': 1 },
     afterLoad: async (page) => {
       await page.getByLabel('Student Full Name').fill('Alex Rivera');
+      await page.getByLabel('When would the student like to start?').selectOption('next-semester');
+      await page.getByLabel('Why is your family considering GIIS?').fill('We need a structured transfer review, a realistic graduation plan, and clear communication about the records required before enrollment.');
       await page.getByLabel('Date of Birth').fill('2010-09-01');
       await page.getByLabel('Grade Level').selectOption('Grade 10');
       await page.getByLabel('Current or Most Recent School').fill('Current Online School');
       await page.getByLabel('Target Universities').fill('UC Davis');
+      await page.getByRole('button', { name: /^Continue$/ }).click();
       await page.locator('input[name="applicantType"][value="transfer"]').check();
       await page.getByLabel('Previous credits estimate').selectOption('12-17');
       await page.getByLabel('Transcript available?').selectOption('partial');
       await page.getByLabel('Desired graduation timing').selectOption('1-year');
+      await page.getByLabel('Completed high-school course summary').fill('English I (A), Algebra I (B), Biology (A), and World History (B).');
+      await page.getByLabel('How will you obtain the transcript or school records?').fill('The parent will request the official transcript from the current school this week.');
+      await page.getByLabel('When do you expect records to be available?').fill('Within 10 business days');
       await page.getByLabel('Main family concern').selectOption('credits');
+      await page.getByRole('button', { name: /^Continue$/ }).click();
       await page.getByLabel('Parent Full Name').fill('Jordan Rivera');
       await page.getByLabel('Parent Email').fill('jordan@example.com');
       await page.getByLabel('Phone').fill('555-0100');
       await page.getByLabel('Anything else we should know?').fill('Interested in transfer-credit review.');
-      await page.getByRole('button', { name: /Request Application Review/ }).click();
+      await page.getByRole('button', { name: /^Continue$/ }).click();
+      await page.getByText('I reviewed the current tuition and support levels').click();
+      await page.getByText('I understand this application does not guarantee admission').click();
+      await page.getByText('If GIIS contacts us, our family will reply within 72 hours').click();
+      await page.getByRole('button', { name: /^Submit application$/ }).click();
       await page.getByText('Transfer Path Review received').waitFor({ state: 'visible', timeout: 5000 });
     },
   },
@@ -207,6 +218,9 @@ const ROUTES = [
       'Applications',
       'Alex Rivera',
       'Application Path Review',
+      'Transfer Credit Decision',
+      'Principal approved',
+      'Recent Case Activity',
       'Within 1 school year',
       'Admin Record Review Required',
       'Record Manual Payment',
@@ -215,7 +229,7 @@ const ROUTES = [
       'GIIS payment receipt',
       'Refund policy: https://genesisideas.school/refund-policy',
     ],
-    endpointCaps: { '/api/applications': 3 },
+    endpointCaps: { '/api/applications': 3, '/api/applications/capabilities': 1 },
     afterLoad: async (page) => {
       await page.getByRole('button', { name: /^View$/ }).first().click();
       await page.getByText('Application Path Review').waitFor({ state: 'visible', timeout: 5000 });
@@ -414,11 +428,57 @@ function applicationsPayload() {
     parentName: 'Jordan Rivera',
     parentEmail: 'jordan@example.com',
     phone: '555-0100',
+    applicantType: 'transfer',
+    previousCredits: '12-17',
+    transcriptAvailable: 'partial',
+    graduationTiming: '1-year',
+    mainConcern: 'credits',
+    recordsStatus: 'verified',
+    assignedTo: 'Admissions',
+    nextAction: 'Send reviewed path summary',
+    responseDueAt: '2026-06-02T15:00:00.000Z',
+    firstResponseAt: '2026-06-02T14:00:00.000Z',
+    lastContactedAt: '2026-06-03T15:00:00.000Z',
+    submissionCount: 1,
     notes: 'Transfer Path Review: credits=12-17; graduationTiming=1-year; transcriptAvailable=partial; concern=credits; Family Notes: Interested in transfer-credit review.',
     adminNotes: 'Needs transcript follow-up.',
     status: 'approved',
     accountsCreated: false,
     createdAt: '2026-06-01T15:00:00.000Z',
+    transferEvaluation: {
+      id: 'evaluation-1',
+      reviewer: 'Academic Reviewer',
+      priorSchool: 'Current Online School',
+      recordType: 'official_transcript',
+      evidenceLevel: 'A',
+      recommendedGradeLevel: 'Grade 10',
+      familySummary: '12.0 credits accepted. Complete remaining GIIS requirements before graduation.',
+      validationPlan: '',
+      principalApprover: 'Shiyu Zhang, Ph.D.',
+      principalApprovedAt: '2026-06-05T15:00:00.000Z',
+      courses: [{
+        id: 'transfer-course-1',
+        originalCourseTitle: 'English I',
+        originalTerm: '2025-2026',
+        originalCredits: '1.0',
+        originalGrade: 'A',
+        gradingScaleReceived: true,
+        mappedArea: 'english',
+        acceptedCredits: '1.00',
+        decision: 'credit_and_gpa',
+        gpaIncluded: true,
+        weightedTreatment: 'none',
+        validationRequired: 'none',
+        rationale: 'Official high-school record reviewed.',
+      }],
+    },
+    events: [{
+      id: 'application-event-1',
+      action: 'principal_transfer_approval_recorded',
+      actorEmail: 'admin@genesisideas.school',
+      summary: 'Principal approval recorded for Shiyu Zhang, Ph.D.',
+      createdAt: '2026-06-05T15:00:00.000Z',
+    }],
     enrollmentState: {
       code: 'approved_unactivated',
       label: 'Approved, accounts not created',
@@ -543,6 +603,17 @@ async function installMocks(page, endpointCounts) {
           action: 'Create accounts or link payment',
         },
       }, 201));
+    }
+    if (endpoint === '/api/applications/capabilities') {
+      return route.fulfill(json({
+        applicationIntakeVersion: 'serious-v1',
+        interestConfirmation: true,
+        adminWorkflowVersion: 'admissions-v2',
+        transferEvaluation: true,
+      }));
+    }
+    if (endpoint === '/api/applications' && route.request().method() === 'POST') {
+      return route.fulfill(json({ ok: true, id: 'app-new', duplicate: false, confirmationRequired: true }, 201));
     }
     if (endpoint === '/api/applications') return route.fulfill(json(applicationsPayload()));
     if (endpoint === '/api/admin/assignments') return route.fulfill(json(assignmentsPayload()));

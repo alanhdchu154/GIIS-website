@@ -64,6 +64,7 @@ const ApplicationsQueue = lazy(() => import('./components/pages/Admin/Applicatio
 const AdminSubscriptionsPage = lazy(() => import('./components/pages/Admin/AdminSubscriptionsPage'));
 const AdminWeeklyReportPage = lazy(() => import('./components/pages/Admin/AdminWeeklyReportPage'));
 const ApplyForm = lazy(() => import('./components/pages/Apply/ApplyForm'));
+const InterestConfirmationPage = lazy(() => import('./components/pages/Apply/InterestConfirmationPage'));
 const VerifyPage = lazy(() => import('./components/pages/Verify/VerifyPage'));
 const WelcomePage = lazy(() => import('./components/pages/Welcome/WelcomePage'));
 const TransferStudentsPage = lazy(() => import('./components/pages/TransferStudents/TransferStudentsPage'));
@@ -197,6 +198,7 @@ function App() {
          <Route path="/admin/subscriptions" element={<AdminSubscriptionsPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/admin/weekly-report" element={<AdminWeeklyReportPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/apply" element={<ApplyForm language={language} />} />
+         <Route path="/application/confirm" element={<InterestConfirmationPage language={language} />} />
          <Route path="/welcome" element={<WelcomePage language={language} />} />
          <Route path="/verify/:code" element={<VerifyPage />} />
          <Route path="/privacy" element={<PrivacyPolicy language={language} />} />
