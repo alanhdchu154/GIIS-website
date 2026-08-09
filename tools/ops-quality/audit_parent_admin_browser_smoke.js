@@ -107,7 +107,7 @@ const ROUTES = [
       'jordan@example.com',
       'Open Trust Center',
     ],
-    endpointCaps: { '/api/applications': 1, '/api/applications/capabilities': 1 },
+    endpointCaps: { '/api/applications': 1, '/api/checkout/tiers': 1 },
     afterLoad: async (page) => {
       await page.getByLabel('Student Full Name').fill('Alex Rivera');
       await page.getByLabel('When would the student like to start?').selectOption('next-semester');
@@ -229,7 +229,7 @@ const ROUTES = [
       'GIIS payment receipt',
       'Refund policy: https://genesisideas.school/refund-policy',
     ],
-    endpointCaps: { '/api/applications': 3, '/api/applications/capabilities': 1 },
+    endpointCaps: { '/api/applications': 3, '/api/checkout/tiers': 1 },
     afterLoad: async (page) => {
       await page.getByRole('button', { name: /^View$/ }).first().click();
       await page.getByText('Application Path Review').waitFor({ state: 'visible', timeout: 5000 });
@@ -604,13 +604,11 @@ async function installMocks(page, endpointCounts) {
         },
       }, 201));
     }
-    if (endpoint === '/api/applications/capabilities') {
-      return route.fulfill(json({
-        applicationIntakeVersion: 'serious-v1',
-        interestConfirmation: true,
-        adminWorkflowVersion: 'admissions-v2',
-        transferEvaluation: true,
-      }));
+    if (endpoint === '/api/checkout/tiers') {
+      return route.fulfill({
+        ...json({}),
+        headers: { 'X-GIIS-Admissions-Workflow': 'admissions-v2' },
+      });
     }
     if (endpoint === '/api/applications' && route.request().method() === 'POST') {
       return route.fulfill(json({ ok: true, id: 'app-new', duplicate: false, confirmationRequired: true }, 201));

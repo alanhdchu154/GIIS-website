@@ -172,6 +172,7 @@ router.get('/session/:id', async (req, res) => {
  * (never the Stripe price ID, never anything sensitive).
  */
 router.get('/tiers', (_req, res) => {
+  res.set('X-GIIS-Admissions-Workflow', 'admissions-v2');
   const out = {};
   for (const [key, tier] of Object.entries(PRICE_TIERS)) {
     out[key] = {

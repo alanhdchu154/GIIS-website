@@ -25,10 +25,12 @@ backend/database window is completed.
   records are still required before approval.
 - The legacy notes envelope remains readable during a backend-first rollout,
   and pre-confirmation-era cases remain reviewable.
-- The frontend checks `/api/applications/capabilities`. When an older backend
-  is still live, public submissions use the legacy direct-review response and
-  the admin page pauses new review/approval/payment/activation controls. It
-  must never claim that a confirmation email was sent without backend support.
+- The frontend sends a `HEAD` request to the existing `/api/checkout/tiers`
+  endpoint and checks the `X-GIIS-Admissions-Workflow` response header. When an
+  older backend is still live, public submissions use the legacy direct-review
+  response and the admin page pauses new review/approval/payment/activation
+  controls. It must never claim that a confirmation email was sent without
+  backend support.
 
 ## Commit Split
 

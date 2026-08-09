@@ -63,6 +63,7 @@ app.use(
       ? true
       : corsOrigin.split(',').map((s) => s.trim()),
     credentials: true,
+    exposedHeaders: ['X-GIIS-Admissions-Workflow'],
   })
 );
 app.use(cookieParser());

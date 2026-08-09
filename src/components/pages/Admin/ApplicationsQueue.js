@@ -359,18 +359,13 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
     let active = true;
     async function checkWorkflow() {
       try {
-        const response = await fetch(`${API}/api/applications/capabilities`);
+        const response = await fetch(`${API}/api/checkout/tiers`, { method: 'HEAD' });
         if (!active) return;
-        if (response.status === 404 || response.status === 405) {
-          setWorkflowMode('legacy');
-          return;
-        }
         if (!response.ok) {
           setWorkflowMode('unavailable');
           return;
         }
-        const capabilities = await response.json().catch(() => ({}));
-        setWorkflowMode(capabilities.adminWorkflowVersion === 'admissions-v2' ? 'serious' : 'legacy');
+        setWorkflowMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v2' ? 'serious' : 'legacy');
       } catch {
         if (active) setWorkflowMode('unavailable');
       }

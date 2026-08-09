@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T04:29:27.470Z",
+  "generatedAt": "2026-08-09T04:41:14.474Z",
   "baseUrl": "http://localhost:3000",
   "summary": {
     "total": 30,
@@ -46,7 +46,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications/capabilities": 1
+        "/api/checkout/tiers": 1
       }
     },
     {
@@ -56,7 +56,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications/capabilities": 1,
+        "/api/checkout/tiers": 1,
         "/api/applications": 1
       }
     },
@@ -126,7 +126,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications/capabilities": 1,
+        "/api/checkout/tiers": 1,
         "/api/applications": 2,
         "/api/applications/app-1/manual-payment": 1
       }
@@ -190,7 +190,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications/capabilities": 1
+        "/api/checkout/tiers": 1
       }
     },
     {
@@ -200,7 +200,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications/capabilities": 1,
+        "/api/checkout/tiers": 1,
         "/api/applications": 1
       }
     },
@@ -270,7 +270,7 @@
       "status": "pass",
       "issues": [],
       "endpointCounts": {
-        "/api/applications/capabilities": 1,
+        "/api/checkout/tiers": 1,
         "/api/applications": 2,
         "/api/applications/app-1/manual-payment": 1
       }

@@ -114,22 +114,13 @@ export default function ApplyForm({ language }) {
     async function checkCapabilities() {
       setIntakeMode('loading');
       try {
-        const response = await fetch(`${API}/api/applications/capabilities`);
+        const response = await fetch(`${API}/api/checkout/tiers`, { method: 'HEAD' });
         if (!active) return;
-        if (response.status === 404 || response.status === 405) {
-          setIntakeMode('legacy');
-          return;
-        }
         if (!response.ok) {
           setIntakeMode('unavailable');
           return;
         }
-        const capabilities = await response.json().catch(() => ({}));
-        setIntakeMode(
-          capabilities.applicationIntakeVersion === 'serious-v1' && capabilities.interestConfirmation
-            ? 'serious'
-            : 'legacy',
-        );
+        setIntakeMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v2' ? 'serious' : 'legacy');
       } catch {
         if (active) setIntakeMode('unavailable');
       }

@@ -40,9 +40,11 @@ Accepted local result:
   from `/apply` so the actual form appears quickly on mobile.
 - Transfer evaluation is now a four-step admin workflow: source records,
   course mapping, family summary/save, and principal approval.
-- A public capability endpoint and frontend compatibility mode prevent the
-  Netlify release from claiming email confirmation or exposing new high-risk
-  admin controls while the old Lightsail backend remains live.
+- A version-header probe on the existing public checkout-tiers endpoint and
+  frontend compatibility mode prevent the Netlify release from claiming email
+  confirmation or exposing new high-risk admin controls while the old
+  Lightsail backend remains live. The probe returns 200 on both backend
+  generations, so compatibility mode does not create a browser-console 404.
 - Confirmation delivery is awaited. A provider failure returns a retryable
   error, keeps the saved case unconfirmed, and records an operations event.
 
