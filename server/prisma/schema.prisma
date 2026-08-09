@@ -361,24 +361,111 @@ model PasswordResetToken {
 
 /// Prospective student application submitted via /apply.
 model Application {
-  id                 String    @id @default(cuid())
-  studentName        String
-  dob                String
-  gradeLevel         String
-  currentSchool      String    @default("")
-  targetUniversities String    @default("")
-  preferredLanguage  String    @default("en") // "en" | "zh"
-  parentName         String
-  parentEmail        String
-  phone              String    @default("")
-  notes              String    @default("")
-  status             String    @default("pending") // pending | approved | rejected
-  rejectionReason    String    @default("")
-  adminNotes         String    @default("")
-  accountsCreated    Boolean   @default(false)
-  createdAt          DateTime  @default(now())
-  reviewedAt         DateTime?
-  reviewedById       String?
+  id                             String                    @id @default(cuid())
+  studentName                    String
+  dob                            String
+  gradeLevel                     String
+  currentSchool                  String                    @default("")
+  targetUniversities             String                    @default("")
+  preferredLanguage              String                    @default("en") // "en" | "zh"
+  parentName                     String
+  parentEmail                    String
+  phone                          String                    @default("")
+  notes                          String                    @default("")
+  applicantType                  String                    @default("unknown") // new | transfer | unknown (legacy)
+  previousCredits                String                    @default("")
+  transcriptAvailable            String                    @default("") // yes | partial | not-yet
+  graduationTiming               String                    @default("")
+  mainConcern                    String                    @default("")
+  motivation                     String                    @default("")
+  intendedStartTiming            String                    @default("") // within-30-days | next-semester | next-school-year | exploring
+  transferCourseSummary          String                    @default("")
+  transcriptPlanDetails          String                    @default("")
+  transcriptExpectedTiming       String                    @default("")
+  tuitionAware                   Boolean                   @default(false)
+  noGuaranteeAcknowledged        Boolean                   @default(false)
+  responseCommitmentAcknowledged Boolean                   @default(false)
+  interestConfirmationTokenHash  String?                   @unique
+  interestConfirmationExpiresAt  DateTime?
+  interestConfirmationSentAt     DateTime?
+  interestConfirmedAt            DateTime?
+  recordsStatus                  String                    @default("not_requested") // not_requested | requested | partial | received | verified
+  assignedTo                     String                    @default("")
+  nextAction                     String                    @default("Review application")
+  responseDueAt                  DateTime?
+  firstResponseAt                DateTime?
+  lastContactedAt                DateTime?
+  submissionCount                Int                       @default(1)
+  lastSubmittedAt                DateTime                  @default(now())
+  status                         String                    @default("pending") // pending | approved | rejected
+  rejectionReason                String                    @default("")
+  adminNotes                     String                    @default("")
+  accountsCreated                Boolean                   @default(false)
+  createdAt                      DateTime                  @default(now())
+  reviewedAt                     DateTime?
+  reviewedById                   String?
+  transferEvaluation             TransferCreditEvaluation?
+  events                         ApplicationEvent[]
+
+  @@index([status, applicantType])
+  @@index([parentEmail, status, createdAt])
+  @@index([interestConfirmedAt, status, createdAt])
+}
+
+model ApplicationEvent {
+  id            String      @id @default(cuid())
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  action        String
+  actorEmail    String
+  summary       String
+  metadata      Json?
+  createdAt     DateTime    @default(now())
+
+  @@index([applicationId, createdAt])
+}
+
+/// Pre-enrollment, course-by-course transfer-credit decision. Final transcript
+/// rows are entered only after enrollment using the approved decision here.
+model TransferCreditEvaluation {
+  id                    String                 @id @default(cuid())
+  applicationId         String                 @unique
+  application           Application            @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  reviewer              String                 @default("")
+  priorSchool           String                 @default("")
+  recordType            String                 @default("") // official_transcript | report_card | homeschool | international | other
+  evidenceLevel         String                 @default("") // A | B | C | D
+  recommendedGradeLevel String                 @default("")
+  familySummary         String                 @default("")
+  validationPlan        String                 @default("")
+  principalApprover     String                 @default("")
+  principalApprovedAt   DateTime?
+  courses               TransferCreditCourse[]
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  @@index([principalApprovedAt])
+}
+
+model TransferCreditCourse {
+  id                   String                   @id @default(cuid())
+  evaluationId         String
+  evaluation           TransferCreditEvaluation @relation(fields: [evaluationId], references: [id], onDelete: Cascade)
+  sortOrder            Int                      @default(0)
+  originalCourseTitle  String
+  originalTerm         String                   @default("")
+  originalCredits      String                   @default("")
+  originalGrade        String                   @default("")
+  gradingScaleReceived Boolean                  @default(false)
+  mappedArea           String                   @default("")
+  acceptedCredits      Decimal                  @default(0) @db.Decimal(5, 2)
+  decision             String // credit_and_gpa | credit_only | conditional | rejected | deferred
+  gpaIncluded          Boolean                  @default(false)
+  weightedTreatment    String                   @default("none")
+  validationRequired   String                   @default("none")
+  rationale            String                   @default("")
+
+  @@index([evaluationId, sortOrder])
 }
 
 /// Stripe purchase record. One row per Checkout completion.

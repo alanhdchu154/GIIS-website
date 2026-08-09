@@ -22,7 +22,7 @@ const ADMISSIONS_EMAIL = 'admissions@genesisideas.school';
 const FALLBACK_PARENT_EMAIL = 'admin@genesisideas.school';
 const SITE = process.env.CORS_ORIGIN?.split(',')[0]?.trim() || 'https://genesisideas.school';
 
-async function send({ to, cc, subject, html, text, attachments }) {
+async function send({ to, cc, replyTo, subject, html, text, attachments }) {
   if (!resend) {
     console.warn(`[mailer] RESEND_EMAIL_API_KEY / RESEND_API_KEY not set — skipping email to ${to}: ${subject}`);
     return { ok: false, skipped: true, reason: 'resend_api_key_missing' };
@@ -30,6 +30,7 @@ async function send({ to, cc, subject, html, text, attachments }) {
   try {
     const payload = { from: FROM, to, subject, html, text };
     if (cc) payload.cc = cc;
+    if (replyTo) payload.replyTo = replyTo;
     if (attachments) payload.attachments = attachments;
     const result = await resend.emails.send(payload);
     if (result?.error) {
@@ -48,29 +49,144 @@ async function send({ to, cc, subject, html, text, attachments }) {
   }
 }
 
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 // ── Templates ──────────────────────────────────────────────────────────────
+
+function buildApplicationInterestConfirmation({
+  parentName,
+  studentName,
+  preferredLanguage,
+  confirmationUrl,
+  expiresHours = 72,
+}) {
+  const isZh = preferredLanguage === 'zh';
+  const safeParentName = escapeHtml(parentName);
+  const safeStudentName = escapeHtml(studentName);
+  const safeUrl = escapeHtml(confirmationUrl);
+  const subject = isZh
+    ? '请确认继续 GIIS 入学申请'
+    : 'Confirm your GIIS application interest';
+  const greeting = isZh ? `${safeParentName} 家长，您好：` : `Dear ${safeParentName},`;
+  const intro = isZh
+    ? `我们已收到 <strong>${safeStudentName}</strong> 的入学申请。请确认您希望 GIIS 招生团队继续审核。`
+    : `We received the application for <strong>${safeStudentName}</strong>. Please confirm that you would like the GIIS admissions team to continue the review.`;
+  const boundary = isZh
+    ? '确认申请不会产生费用，也不代表学分、年级安排、毕业日期或录取结果已经获得批准。'
+    : 'Confirmation does not create a fee or guarantee admission, transfer credit, grade placement, or a graduation date.';
+  const button = isZh ? '确认继续申请' : 'Confirm and continue application';
+  const expiry = isZh
+    ? `此链接将在 ${expiresHours} 小时后失效。若您没有提交申请，可以忽略此邮件。`
+    : `This link expires in ${expiresHours} hours. If you did not submit an application, you can ignore this email.`;
+
+  return {
+    subject,
+    html: `
+<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1d24">
+  <div style="background:#1a1a2e;padding:28px 32px;border-radius:12px 12px 0 0">
+    <p style="color:#d5a836;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 8px">Genesis of Ideas International School</p>
+    <h1 style="color:#fff;font-size:24px;font-weight:800;margin:0">${button}</h1>
+  </div>
+  <div style="background:#fff;border:1px solid #e8ecf5;border-top:none;padding:28px 32px;border-radius:0 0 12px 12px">
+    <p>${greeting}</p>
+    <p>${intro}</p>
+    <p style="margin:24px 0"><a href="${safeUrl}" style="background:#2b3d6d;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:800;display:inline-block">${button}</a></p>
+    <p style="font-size:13px;color:#5c6578">${boundary}</p>
+    <p style="font-size:13px;color:#5c6578">${expiry}</p>
+    <p style="font-size:12px;color:#9aa0ad;margin-top:24px">${isZh ? '如果按钮无法打开，请复制此链接：' : 'If the button does not work, open this link:'}<br><a href="${safeUrl}" style="color:#2b3d6d">${safeUrl}</a></p>
+  </div>
+</div>
+    `.trim(),
+    text: isZh
+      ? `${parentName} 家长，您好：\n\n我们已收到 ${studentName} 的入学申请。请确认继续申请：\n${confirmationUrl}\n\n确认不代表录取、转学分、年级安排或毕业日期已经获得批准。链接将在 ${expiresHours} 小时后失效。`
+      : `Dear ${parentName},\n\nWe received the application for ${studentName}. Confirm that you would like GIIS to continue the review:\n${confirmationUrl}\n\nConfirmation does not guarantee admission, transfer credit, grade placement, or a graduation date. This link expires in ${expiresHours} hours.`,
+  };
+}
+
+async function sendApplicationInterestConfirmation(details) {
+  const content = buildApplicationInterestConfirmation(details);
+  return send({
+    to: details.parentEmail,
+    replyTo: ADMISSIONS_EMAIL,
+    ...content,
+  });
+}
 
 /**
  * Notify Alan when a new application arrives.
  */
-async function sendNewApplicationAlert({ studentName, gradeLevel, parentName, parentEmail, currentSchool, targetUniversities, preferredLanguage, appId }) {
+function buildNewApplicationAlert({
+  studentName,
+  gradeLevel,
+  parentName,
+  parentEmail,
+  currentSchool,
+  targetUniversities,
+  preferredLanguage,
+  applicantType,
+  previousCredits,
+  transcriptAvailable,
+  graduationTiming,
+  mainConcern,
+}) {
   const subject = `New GIIS Application — ${studentName} (${gradeLevel})`;
   const adminUrl = `${SITE}/admin/applications`;
-  await send({
-    to: ADMIN_EMAIL,
+  const isTransfer = applicantType === 'transfer';
+  const typeLabel = isTransfer ? 'Transfer student' : 'New student';
+  const rows = [
+    ['Student', `<strong>${escapeHtml(studentName)}</strong> · ${escapeHtml(gradeLevel)}`],
+    ['Applicant type', `<strong>${escapeHtml(typeLabel)}</strong>`],
+    ['Parent', `${escapeHtml(parentName)} · <a href="mailto:${escapeHtml(parentEmail)}">${escapeHtml(parentEmail)}</a>`],
+    ...(currentSchool ? [['Current school', escapeHtml(currentSchool)]] : []),
+    ...(targetUniversities ? [['Target unis', escapeHtml(targetUniversities)]] : []),
+    ['Language', preferredLanguage === 'zh' ? 'Chinese' : 'English'],
+    ...(isTransfer ? [
+      ['Previous credits', escapeHtml(previousCredits || 'Not provided')],
+      ['Transcript', escapeHtml(transcriptAvailable || 'Not provided')],
+      ['Graduation timing', escapeHtml(graduationTiming || 'Not provided')],
+    ] : []),
+    ['Main concern', escapeHtml(mainConcern || 'Not provided')],
+  ];
+  const textRows = [
+    `New application: ${studentName} (${gradeLevel})`,
+    `Applicant type: ${typeLabel}`,
+    `Parent: ${parentName} <${parentEmail}>`,
+    currentSchool ? `Current school: ${currentSchool}` : '',
+    targetUniversities ? `Target universities: ${targetUniversities}` : '',
+    `Language: ${preferredLanguage === 'zh' ? 'Chinese' : 'English'}`,
+    isTransfer ? `Previous credits: ${previousCredits || 'Not provided'}` : '',
+    isTransfer ? `Transcript: ${transcriptAvailable || 'Not provided'}` : '',
+    isTransfer ? `Graduation timing: ${graduationTiming || 'Not provided'}` : '',
+    `Main concern: ${mainConcern || 'Not provided'}`,
+    `Review: ${adminUrl}`,
+  ].filter(Boolean);
+
+  return {
     subject,
+    replyTo: parentEmail,
     html: `
 <p>A new application has been submitted.</p>
 <table style="border-collapse:collapse;font-family:sans-serif;font-size:14px">
-  <tr><td style="padding:6px 16px 6px 0;color:#888;white-space:nowrap">Student</td><td style="padding:6px 0"><strong>${studentName}</strong> · ${gradeLevel}</td></tr>
-  <tr><td style="padding:6px 16px 6px 0;color:#888">Parent</td><td style="padding:6px 0">${parentName} · <a href="mailto:${parentEmail}">${parentEmail}</a></td></tr>
-  ${currentSchool ? `<tr><td style="padding:6px 16px 6px 0;color:#888">Current school</td><td style="padding:6px 0">${currentSchool}</td></tr>` : ''}
-  ${targetUniversities ? `<tr><td style="padding:6px 16px 6px 0;color:#888">Target unis</td><td style="padding:6px 0">${targetUniversities}</td></tr>` : ''}
-  <tr><td style="padding:6px 16px 6px 0;color:#888">Language</td><td style="padding:6px 0">${preferredLanguage === 'zh' ? 'Chinese' : 'English'}</td></tr>
+  ${rows.map(([label, value]) => `<tr><td style="padding:6px 16px 6px 0;color:#888;white-space:nowrap">${label}</td><td style="padding:6px 0">${value}</td></tr>`).join('\n  ')}
 </table>
 <p style="margin-top:20px"><a href="${adminUrl}" style="background:#2b3d6d;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:700">Review in Admin →</a></p>
     `.trim(),
-    text: `New application: ${studentName} (${gradeLevel}) · ${parentName} <${parentEmail}>\nReview: ${adminUrl}`,
+    text: textRows.join('\n'),
+  };
+}
+
+async function sendNewApplicationAlert(details) {
+  const content = buildNewApplicationAlert(details);
+  return send({
+    to: ADMIN_EMAIL,
+    ...content,
   });
 }
 
@@ -518,7 +634,10 @@ module.exports = {
   ADMIN_EMAIL,
   ADMISSIONS_EMAIL,
   FALLBACK_PARENT_EMAIL,
+  buildNewApplicationAlert,
+  buildApplicationInterestConfirmation,
   sendNewApplicationAlert,
+  sendApplicationInterestConfirmation,
   sendWelcomeEmail,
   sendRejectionEmail,
   sendWeeklyProgressEmail,
