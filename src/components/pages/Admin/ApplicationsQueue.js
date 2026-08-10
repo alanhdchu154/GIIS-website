@@ -54,6 +54,9 @@ const APPLICATION_NOTE_LABELS = {
     'not-sure': 'Not sure yet',
     'standard path': 'Standard new-student path',
     'not provided': 'Not provided',
+    'normal-pace': 'Normal grade-level pace',
+    accelerated: 'Accelerated path requested',
+    'target-date': 'Family provided a target date',
   },
   transcriptAvailable: {
     yes: 'Family says transcript can be provided',
@@ -70,6 +73,43 @@ const APPLICATION_NOTE_LABELS = {
     motivation: 'Will my child stay on track?',
     'not provided': 'Not provided',
   },
+};
+
+const TRANSFER_INTAKE_LABELS = {
+  currentEnrollmentStatus: {
+    'preparing-to-enroll': 'Preparing to enroll',
+    'currently-enrolled': 'Currently enrolled elsewhere',
+    'left-prior-school': 'Left prior school',
+    other: 'Other situation',
+  },
+  recordsSituation: {
+    'official-transcript': 'Official transcript available',
+    'partial-records': 'Partial records available',
+    'no-official-transcript': 'No official transcript yet',
+    'homeschool-no-traditional': 'Homeschool / no traditional transcript',
+    'not-sure': 'Family is unsure what records qualify',
+  },
+  recordsHelpNeeded: {
+    'records-in-hand': 'Records in hand',
+    'already-requested': 'Requested and waiting',
+    'can-request': 'Family can request records',
+    'need-giis-help': 'Family needs GIIS guidance',
+    'not-sure-how': 'Family is unsure how to request records',
+  },
+  transcriptExpectedTiming: {
+    'available-now': 'Available now',
+    '3-business-days': 'About 3 business days',
+    '7-business-days': 'About 7 business days',
+    '14-business-days': 'About 14 business days',
+    uncertain: 'Timing uncertain',
+  },
+  parentRelationship: {
+    parent: 'Parent',
+    'legal-guardian': 'Legal guardian',
+    self: 'Student applying independently',
+    other: 'Other',
+  },
+  contactPreference: { email: 'Email', phone: 'Phone' },
 };
 
 const RECORDS_STATUS_LABELS = {
@@ -145,6 +185,42 @@ function labelApplicationValue(field, value) {
   return APPLICATION_NOTE_LABELS[field]?.[clean] || clean || 'Not provided';
 }
 
+function labelTransferIntakeValue(field, value) {
+  const clean = String(value || '').trim();
+  return TRANSFER_INTAKE_LABELS[field]?.[clean] || clean || 'Not provided';
+}
+
+function priorSchoolsFor(app) {
+  try {
+    const rows = JSON.parse(app?.priorSchoolsJson || '[]');
+    if (!Array.isArray(rows)) return [];
+    return rows.filter((row) => row && row.schoolName).slice(0, 5);
+  } catch {
+    return [];
+  }
+}
+
+function recordsRequestDraft(app) {
+  const schools = priorSchoolsFor(app);
+  const schoolLine = schools.length
+    ? schools.map((school) => `${school.schoolName}${school.attendancePeriod ? ` (${school.attendancePeriod})` : ''}`).join('; ')
+    : app.currentSchool || 'the student\'s prior high school';
+  return `Subject: GIIS transfer records request - ${app.studentName}
+
+Dear ${app.parentName},
+
+To continue ${app.studentName}'s transfer-credit review, please request an official transcript or other verifiable school records from ${schoolLine}. Please include completed high-school terms, final course grades and credits, and the school's grading scale when available.
+
+You may reply to this message with the school-approved delivery instructions, or ask the prior school to contact admissions@genesisideas.school. Please do not send records through a public link.
+
+Your application estimated the records timing as: ${labelTransferIntakeValue('transcriptExpectedTiming', app.transcriptExpectedTiming)}.
+
+GIIS can begin preliminary planning with partial information, but final transfer credit, grade placement, and any graduation path require record verification and academic review.
+
+Best,
+GIIS Admissions`;
+}
+
 function parseApplicationReviewNotes(notes = '') {
   const text = String(notes);
   const current = text.match(
@@ -208,6 +284,7 @@ function ApplicantReviewPanel({ app }) {
   }
 
   const isTransfer = review.applicantType === 'transfer';
+  const priorSchools = priorSchoolsFor(app);
   const transferNeedsRecordReview = isTransfer;
   const fields = isTransfer
     ? [
@@ -253,9 +330,12 @@ function ApplicantReviewPanel({ app }) {
       {isTransfer && (app.transferCourseSummary || app.transcriptPlanDetails || app.transcriptExpectedTiming) && (
         <div style={{ marginTop: 10, background: '#fff', border: '1px solid #e0e6f0', borderRadius: 8, padding: '9px 10px' }}>
           <p style={{ fontSize: 9.5, fontWeight: 800, color: '#888', letterSpacing: '0.8px', textTransform: 'uppercase', margin: '0 0 5px' }}>Transfer Intake Plan</p>
+          {priorSchools.length > 0 && <p style={{ fontSize: 12.5, color: '#1a1d24', margin: '0 0 5px' }}><strong>Schools:</strong> {priorSchools.map((school) => `${school.schoolName} (${school.attendancePeriod})`).join(' · ')}</p>}
+          {app.currentEnrollmentStatus && <p style={{ fontSize: 12.5, color: '#1a1d24', margin: '0 0 5px' }}><strong>Current status:</strong> {labelTransferIntakeValue('currentEnrollmentStatus', app.currentEnrollmentStatus)}</p>}
+          {app.recordsSituation && <p style={{ fontSize: 12.5, color: '#1a1d24', margin: '0 0 5px' }}><strong>Records:</strong> {labelTransferIntakeValue('recordsSituation', app.recordsSituation)} · {labelTransferIntakeValue('recordsHelpNeeded', app.recordsHelpNeeded)}</p>}
           <p style={{ fontSize: 12.5, color: '#1a1d24', margin: '0 0 5px', whiteSpace: 'pre-wrap' }}><strong>Courses:</strong> {app.transferCourseSummary || 'Not provided'}</p>
-          <p style={{ fontSize: 12.5, color: '#1a1d24', margin: '0 0 5px', whiteSpace: 'pre-wrap' }}><strong>Records plan:</strong> {app.transcriptPlanDetails || 'Not provided'}</p>
-          <p style={{ fontSize: 12.5, color: '#1a1d24', margin: 0 }}><strong>Expected:</strong> {app.transcriptExpectedTiming || 'Not provided'}</p>
+          {app.transcriptPlanDetails && <p style={{ fontSize: 12.5, color: '#1a1d24', margin: '0 0 5px', whiteSpace: 'pre-wrap' }}><strong>Legacy records plan:</strong> {app.transcriptPlanDetails}</p>}
+          <p style={{ fontSize: 12.5, color: '#1a1d24', margin: 0 }}><strong>Expected:</strong> {labelTransferIntakeValue('transcriptExpectedTiming', app.transcriptExpectedTiming)}{app.graduationTargetDate ? ` · Family graduation target ${app.graduationTargetDate}` : ''}</p>
         </div>
       )}
       {review.requiredRecords && (
@@ -372,7 +452,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
           setWorkflowMode('unavailable');
           return;
         }
-        setWorkflowMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v2' ? 'serious' : 'legacy');
+        setWorkflowMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v3' ? 'serious' : 'legacy');
       } catch {
         if (active) setWorkflowMode('unavailable');
       }
@@ -472,6 +552,24 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
       const data = await res.json().catch(() => ({}));
       if (!res.ok) { showToast(data.error || 'Could not record family contact'); return; }
       showToast('Family contact recorded');
+      load();
+    } finally { setSaving(''); }
+  }
+
+  async function confirmRecordsRequestSent(app) {
+    const confirmed = window.confirm(
+      `Confirm only after the records-request message for ${app.studentName} has actually been sent. Copying the draft is not enough. Continue?`
+    );
+    if (!confirmed) return;
+    setSaving(app.id + 'records-requested');
+    try {
+      const res = await fetch(`${API}/api/applications/${app.id}/records-requested`, {
+        method: 'POST',
+        credentials: 'include',
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) { showToast(data.error || 'Could not record the records request'); return; }
+      showToast(data.alreadyRequested ? 'Records request was already recorded' : 'Records request recorded');
       load();
     } finally { setSaving(''); }
   }
@@ -776,6 +874,10 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                           {app.phone && ` · ${app.phone}`}
                         </p>
                         <p style={{ fontSize: 12, color: '#9aa0ad', margin: 0 }}>Submitted {timeAgo(app.createdAt)}{app.currentSchool && ` · ${app.currentSchool}`}</p>
+                        <div style={{ marginTop: 9, display: 'flex', alignItems: 'flex-start', gap: 8, padding: '8px 10px', borderLeft: `3px solid ${readinessColor.fg}`, background: readinessColor.bg, maxWidth: 650 }}>
+                          <span style={{ flexShrink: 0, fontSize: 10, fontWeight: 900, color: readinessColor.fg, textTransform: 'uppercase', paddingTop: 2 }}>{T('Next', '下一步')}</span>
+                          <span style={{ fontSize: 12.5, fontWeight: 750, color: '#26324f', lineHeight: 1.4 }}>{app.nextAction || readiness.action || 'Review application'}</span>
+                        </div>
                       </div>
                       <button onClick={() => setExpanded(expanded === app.id ? null : app.id)}
                         style={{ padding: '7px 14px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: 'none', fontSize: 13, fontWeight: 600, color: '#2b3d6d', cursor: 'pointer' }}>
@@ -799,6 +901,8 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                             ['Parent Name', app.parentName],
                             ['Parent Email', app.parentEmail],
                             ['Phone', app.phone || '—'],
+                            ['Relationship', labelTransferIntakeValue('parentRelationship', app.parentRelationship)],
+                            ['Contact Preference', labelTransferIntakeValue('contactPreference', app.contactPreference)],
                             ['Parent Confirmation', app.interestConfirmedAt ? new Date(app.interestConfirmedAt).toLocaleString() : (app.interestConfirmationSentAt ? 'Awaiting confirmation' : 'Legacy case')],
                             ['Application Readiness', readiness.label || '—'],
                             ['Readiness Action', readiness.action || '—'],
@@ -820,6 +924,39 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                         </div>
 
                         <ApplicantReviewPanel app={app} />
+
+                        {transferNeedsRecordReview && workflowEnabled && interestConfirmed && (
+                          <div style={{ marginBottom: 16, padding: '13px 14px', border: '1px solid #cfe0f8', borderRadius: 8, background: '#f8fbff' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, flexWrap: 'wrap' }}>
+                              <div style={{ flex: '1 1 300px' }}>
+                                <p style={{ margin: '0 0 4px', fontSize: 10, fontWeight: 900, color: '#2b3d6d', letterSpacing: 1, textTransform: 'uppercase' }}>{T('Official Records Request', '正式记录申请')}</p>
+                                <p style={{ margin: 0, color: '#5c6578', fontSize: 12.5, lineHeight: 1.55 }}>
+                                  {T(
+                                    'Copy the prepared message, review it, and send it yourself. Record the request only after it was actually sent.',
+                                    '复制预填内容、人工检查并自行发送。只有确实发送后，才记录为已申请。',
+                                  )}
+                                </p>
+                              </div>
+                              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                                <button type="button" onClick={() => copyToClipboard(recordsRequestDraft(app))} style={{ padding: '7px 11px', borderRadius: 8, border: '1.5px solid #2b3d6d', background: '#fff', color: '#2b3d6d', fontSize: 12, fontWeight: 800, cursor: 'pointer' }}>
+                                  {T('Copy request draft', '复制申请草稿')}
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => confirmRecordsRequestSent(app)}
+                                  disabled={saving === app.id + 'records-requested' || ['requested', 'partial', 'received', 'verified'].includes(app.recordsStatus)}
+                                  style={{ padding: '7px 11px', borderRadius: 8, border: 0, background: ['requested', 'partial', 'received', 'verified'].includes(app.recordsStatus) ? '#aab2c2' : '#2b3d6d', color: '#fff', fontSize: 12, fontWeight: 800, cursor: ['requested', 'partial', 'received', 'verified'].includes(app.recordsStatus) ? 'not-allowed' : 'pointer' }}
+                                >
+                                  {app.recordsStatus === 'requested'
+                                    ? T('Request recorded', '已记录申请')
+                                    : saving === app.id + 'records-requested'
+                                      ? T('Recording…', '记录中…')
+                                      : T('Confirm request sent', '确认已发送')}
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        )}
 
                         {transferNeedsRecordReview && workflowEnabled && (
                           <TransferEvaluationEditor
@@ -861,7 +998,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                                 onChange={(event) => setCaseDrafts(prev => ({ ...prev, [app.id]: { ...prev[app.id], recordsStatus: event.target.value } }))}
                                 style={{ width: '100%', marginTop: 5, padding: '8px 9px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: '#fff', fontSize: 12.5 }}
                               >
-                                {Object.entries(RECORDS_STATUS_LABELS).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+                                {Object.entries(RECORDS_STATUS_LABELS).map(([value, label]) => <option key={value} value={value} disabled={value === 'requested' && app.recordsStatus !== 'requested'}>{label}</option>)}
                               </select>
                             </label>
                             <label style={{ fontSize: 10, fontWeight: 800, color: '#687083', textTransform: 'uppercase' }}>

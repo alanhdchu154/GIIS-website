@@ -114,26 +114,31 @@ const ROUTES = [
       await page.getByLabel('Why is your family considering GIIS?').fill('We need a structured transfer review, a realistic graduation plan, and clear communication about the records required before enrollment.');
       await page.getByLabel('Date of Birth').fill('2010-09-01');
       await page.getByLabel('Grade Level').selectOption('Grade 10');
-      await page.getByLabel('Current or Most Recent School').fill('Current Online School');
       await page.getByLabel('Target Universities').fill('UC Davis');
       await page.getByRole('button', { name: /^Continue$/ }).click();
       await page.locator('input[name="applicantType"][value="transfer"]').check();
+      await page.getByLabel('Current enrollment status').selectOption('currently-enrolled');
+      await page.getByLabel('School name').fill('Current Online School');
+      await page.getByLabel('Attendance period').fill('August 2024 - present');
       await page.getByLabel('Previous credits estimate').selectOption('12-17');
-      await page.getByLabel('Transcript available?').selectOption('partial');
-      await page.getByLabel('Desired graduation timing').selectOption('1-year');
+      await page.getByLabel('What records are available?').selectOption('no-official-transcript');
+      await page.getByLabel('Records request situation').selectOption('already-requested');
+      await page.getByLabel('Expected records timing').selectOption('14-business-days');
+      await page.getByLabel('Graduation planning preference').selectOption('normal-pace');
       await page.getByLabel('Completed high-school course summary').fill('English I (A), Algebra I (B), Biology (A), and World History (B).');
-      await page.getByLabel('How will you obtain the transcript or school records?').fill('The parent will request the official transcript from the current school this week.');
-      await page.getByLabel('When do you expect records to be available?').fill('Within 10 business days');
       await page.getByLabel('Main family concern').selectOption('credits');
       await page.getByRole('button', { name: /^Continue$/ }).click();
       await page.getByLabel('Parent Full Name').fill('Jordan Rivera');
       await page.getByLabel('Parent Email').fill('jordan@example.com');
-      await page.getByLabel('Phone').fill('555-0100');
+      await page.getByLabel('Relationship to student').selectOption('parent');
+      await page.getByLabel('Preferred contact method').selectOption('email');
+      await page.getByRole('textbox', { name: 'Phone (optional)' }).fill('555-0100');
       await page.getByLabel('Anything else we should know?').fill('Interested in transfer-credit review.');
       await page.getByRole('button', { name: /^Continue$/ }).click();
       await page.getByText('I reviewed the current tuition and support levels').click();
       await page.getByText('I understand this application does not guarantee admission').click();
       await page.getByText('If GIIS contacts us, our family will reply within 72 hours').click();
+      await page.getByText('I understand final transfer credit requires official').click();
       await page.getByRole('button', { name: /^Submit application$/ }).click();
       await page.getByText('Transfer Path Review received').waitFor({ state: 'visible', timeout: 5000 });
     },
@@ -225,6 +230,7 @@ const ROUTES = [
       'Recent Case Activity',
       'Within 1 school year',
       'Admin Record Review Required',
+      'Official Records Request',
       'Record Manual Payment',
       'Record payment before account activation',
       'Copy family payment receipt',
@@ -436,7 +442,20 @@ function applicationsPayload() {
     previousCredits: '12-17',
     transcriptAvailable: 'partial',
     graduationTiming: '1-year',
+    currentEnrollmentStatus: 'currently-enrolled',
+    priorSchoolsJson: JSON.stringify([{ schoolName: 'Current Online School', attendancePeriod: 'August 2024 - present' }]),
+    recordsSituation: 'partial-records',
+    recordsHelpNeeded: 'records-in-hand',
+    transcriptExpectedTiming: 'available-now',
+    parentRelationship: 'parent',
+    contactPreference: 'email',
+    transferRecordsAcknowledged: true,
     mainConcern: 'credits',
+    readiness: {
+      code: 'approval_ready',
+      label: 'Approval-ready',
+      action: 'Approve application when admissions review is complete',
+    },
     recordsStatus: 'verified',
     assignedTo: 'Admissions',
     nextAction: 'Send reviewed path summary',
@@ -611,7 +630,7 @@ async function installMocks(page, endpointCounts) {
     if (endpoint === '/api/checkout/tiers') {
       return route.fulfill({
         ...json({}),
-        headers: { 'X-GIIS-Admissions-Workflow': 'admissions-v2' },
+        headers: { 'X-GIIS-Admissions-Workflow': 'admissions-v3' },
       });
     }
     if (endpoint === '/api/applications' && route.request().method() === 'POST') {

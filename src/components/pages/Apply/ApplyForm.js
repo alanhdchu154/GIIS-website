@@ -27,15 +27,47 @@ const APPLICANT_TYPES = [
 ];
 const CREDIT_ESTIMATES = ['0-5', '6-11', '12-17', '18-23', '24+'];
 const GRADUATION_TIMING = [
-  { value: 'asap', en: 'As soon as realistically possible', zh: '希望尽快完成可行毕业路径' },
-  { value: '1-year', en: 'Within 1 school year', zh: '希望 1 个学年内完成' },
-  { value: '2-years', en: 'Within 2 school years', zh: '希望 2 个学年内完成' },
+  { value: 'normal-pace', en: 'Follow the normal grade-level pace', zh: '按照正常年级进度完成' },
+  { value: 'accelerated', en: 'Explore an accelerated path', zh: '希望评估加速完成路径' },
+  { value: 'target-date', en: 'We have a specific target date', zh: '家庭有特定目标日期' },
   { value: 'not-sure', en: 'Not sure yet', zh: '还不确定，需要学校评估' },
 ];
-const TRANSCRIPT_OPTIONS = [
-  { value: 'yes', en: 'Yes, we can provide a transcript', zh: '可以提供成绩单' },
-  { value: 'partial', en: 'Partial records only', zh: '只有部分记录' },
-  { value: 'not-yet', en: 'Not yet', zh: '暂时还没有' },
+const CURRENT_ENROLLMENT_STATUSES = [
+  { value: 'preparing-to-enroll', en: 'Preparing to enroll', zh: '准备办理入学' },
+  { value: 'currently-enrolled', en: 'Currently enrolled at another high school', zh: '目前仍在其他高中就读' },
+  { value: 'left-prior-school', en: 'No longer attending the prior school', zh: '已经离开原学校' },
+  { value: 'other', en: 'Other situation', zh: '其他情况' },
+];
+const RECORDS_SITUATIONS = [
+  { value: 'official-transcript', en: 'Official transcript is available', zh: '已有正式成绩单' },
+  { value: 'partial-records', en: 'Only partial school records are available', zh: '目前只有部分学校记录' },
+  { value: 'no-official-transcript', en: 'No official transcript yet', zh: '暂时没有正式成绩单' },
+  { value: 'homeschool-no-traditional', en: 'Homeschool / no traditional transcript', zh: 'Homeschool／没有传统成绩单' },
+  { value: 'not-sure', en: 'Not sure what records qualify', zh: '不确定哪些记录符合要求' },
+];
+const RECORDS_HELP_OPTIONS = [
+  { value: 'records-in-hand', en: 'We already have the records', zh: '记录已经在我们手上' },
+  { value: 'already-requested', en: 'Requested and waiting', zh: '已经申请，正在等待' },
+  { value: 'can-request', en: 'We can request them ourselves', zh: '我们可以自行申请' },
+  { value: 'need-giis-help', en: 'We need GIIS guidance', zh: '需要 GIIS 协助说明流程' },
+  { value: 'not-sure-how', en: 'We are not sure how to request them', zh: '不确定该如何申请' },
+];
+const RECORDS_ETA_OPTIONS = [
+  { value: 'available-now', en: 'Available now', zh: '现在可以提供' },
+  { value: '3-business-days', en: 'About 3 business days', zh: '约 3 个工作日' },
+  { value: '7-business-days', en: 'About 7 business days', zh: '约 7 个工作日' },
+  { value: '14-business-days', en: 'About 14 business days', zh: '约 14 个工作日' },
+  { value: 'uncertain', en: 'Timing is uncertain', zh: '时间暂不确定' },
+];
+const PARENT_RELATIONSHIPS = [
+  { value: 'parent', en: 'Parent', zh: '父母' },
+  { value: 'legal-guardian', en: 'Legal guardian', zh: '法定监护人' },
+  { value: 'self', en: 'Student applying independently', zh: '学生本人申请' },
+  { value: 'other', en: 'Other', zh: '其他' },
+];
+const CONTACT_PREFERENCES = [
+  { value: 'email', en: 'Email', zh: '电子邮件' },
+  { value: 'phone', en: 'Phone', zh: '电话' },
 ];
 const START_TIMINGS = [
   { value: 'within-30-days', en: 'Within 30 days', zh: '希望 30 天内开始' },
@@ -94,6 +126,14 @@ export default function ApplyForm({ language }) {
     transferCourseSummary: '',
     transcriptPlanDetails: '',
     transcriptExpectedTiming: '',
+    currentEnrollmentStatus: '',
+    priorSchools: [{ schoolName: '', attendancePeriod: '' }],
+    recordsSituation: '',
+    recordsHelpNeeded: '',
+    graduationTargetDate: '',
+    parentRelationship: '',
+    contactPreference: '',
+    transferRecordsAcknowledged: false,
     tuitionAware: false,
     noGuaranteeAcknowledged: false,
     responseCommitmentAcknowledged: false,
@@ -120,7 +160,7 @@ export default function ApplyForm({ language }) {
           setIntakeMode('unavailable');
           return;
         }
-        setIntakeMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v2' ? 'serious' : 'legacy');
+        setIntakeMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v3' ? 'serious' : 'upgrade-required');
       } catch {
         if (active) setIntakeMode('unavailable');
       }
@@ -131,6 +171,27 @@ export default function ApplyForm({ language }) {
 
   function set(field) { return e => setForm(f => ({ ...f, [field]: e.target.value })); }
   function toggle(field) { return e => setForm(f => ({ ...f, [field]: e.target.checked })); }
+  function setPriorSchool(index, field) {
+    return (event) => setForm((current) => ({
+      ...current,
+      priorSchools: current.priorSchools.map((school, schoolIndex) => (
+        schoolIndex === index ? { ...school, [field]: event.target.value } : school
+      )),
+    }));
+  }
+  function addPriorSchool() {
+    setForm((current) => current.priorSchools.length >= 5
+      ? current
+      : { ...current, priorSchools: [...current.priorSchools, { schoolName: '', attendancePeriod: '' }] });
+  }
+  function removePriorSchool(index) {
+    setForm((current) => ({
+      ...current,
+      priorSchools: current.priorSchools.length === 1
+        ? [{ schoolName: '', attendancePeriod: '' }]
+        : current.priorSchools.filter((_, schoolIndex) => schoolIndex !== index),
+    }));
+  }
 
   function applicantNotes() {
     const isTransfer = form.applicantType === 'transfer';
@@ -141,7 +202,7 @@ export default function ApplyForm({ language }) {
       `Applicant Review: type=${form.applicantType || 'not provided'}`,
       `previousCredits=${isTransfer ? (form.previousCredits || 'not provided') : 'not applicable'}`,
       `graduationTiming=${isTransfer ? (form.graduationTiming || 'not provided') : 'standard path'}`,
-      `transcriptAvailable=${isTransfer ? (form.transcriptAvailable || 'not provided') : 'not applicable'}`,
+      `transcriptAvailable=${isTransfer ? (form.recordsSituation || 'not provided') : 'not applicable'}`,
       `concern=${form.mainConcern || 'not provided'}`,
       `Required Records: ${requiredRecords}`,
       `Family Notes: ${(form.notes || '').trim() || 'none'}`,
@@ -157,12 +218,18 @@ export default function ApplyForm({ language }) {
     if (form.motivation.trim().length < 80) e.motivation = isEn ? 'Please write at least 80 characters' : '请至少填写 80 个字符';
     if (!form.intendedStartTiming) e.intendedStartTiming = isEn ? 'Required' : '必填';
     if (form.applicantType === 'transfer') {
-      if (!form.previousCredits) e.previousCredits = isEn ? 'Required for transfer review' : '转学审核必填';
-      if (!form.transcriptAvailable) e.transcriptAvailable = isEn ? 'Required for transfer review' : '转学审核必填';
+      if (!form.currentEnrollmentStatus) e.currentEnrollmentStatus = isEn ? 'Required for transfer review' : '转学审核必填';
+      if (form.priorSchools.some((school) => !school.schoolName.trim() || !school.attendancePeriod.trim())) e.priorSchools = isEn ? 'Complete each school and attendance period' : '请填写每所学校及就读期间';
+      if (!form.recordsSituation) e.recordsSituation = isEn ? 'Required for transfer review' : '转学审核必填';
+      if (!form.recordsHelpNeeded) e.recordsHelpNeeded = isEn ? 'Required for transfer review' : '转学审核必填';
       if (!form.graduationTiming) e.graduationTiming = isEn ? 'Required for transfer review' : '转学审核必填';
-      if (form.transferCourseSummary.trim().length < 20) e.transferCourseSummary = isEn ? 'Please summarize completed courses' : '请简要说明已修课程';
-      if (form.transcriptPlanDetails.trim().length < 10) e.transcriptPlanDetails = isEn ? 'Please explain the records plan' : '请说明取得成绩单的计划';
-      if (!form.transcriptExpectedTiming.trim()) e.transcriptExpectedTiming = isEn ? 'Required' : '必填';
+      if (form.graduationTiming === 'target-date' && !form.graduationTargetDate) e.graduationTargetDate = isEn ? 'Choose the family target date' : '请选择家庭目标日期';
+      if (!['official-transcript', 'partial-records'].includes(form.recordsSituation) && form.transferCourseSummary.trim().length < 20) e.transferCourseSummary = isEn ? 'Please summarize completed courses while records are unavailable' : '在记录尚不可用时，请简要说明已修课程';
+      if (!form.transcriptExpectedTiming) e.transcriptExpectedTiming = isEn ? 'Required' : '必填';
+      if (!form.parentRelationship) e.parentRelationship = isEn ? 'Required' : '必填';
+      if (!form.contactPreference) e.contactPreference = isEn ? 'Required' : '必填';
+      if (form.contactPreference === 'phone' && !form.phone.trim()) e.phone = isEn ? 'Required when phone is preferred' : '选择电话联络时必填';
+      if (!form.transferRecordsAcknowledged) e.transferRecordsAcknowledged = isEn ? 'Required' : '请确认';
     }
     if (!form.parentName.trim()) e.parentName = isEn ? 'Required' : '必填';
     if (!form.parentEmail.trim()) e.parentEmail = isEn ? 'Required' : '必填';
@@ -175,9 +242,9 @@ export default function ApplyForm({ language }) {
 
   const stepFields = [
     ['studentName', 'dob', 'gradeLevel', 'intendedStartTiming', 'motivation'],
-    ['applicantType', 'previousCredits', 'transcriptAvailable', 'graduationTiming', 'transferCourseSummary', 'transcriptPlanDetails', 'transcriptExpectedTiming'],
-    ['parentName', 'parentEmail'],
-    ['tuitionAware', 'noGuaranteeAcknowledged', 'responseCommitmentAcknowledged'],
+    ['applicantType', 'currentSchool', 'currentEnrollmentStatus', 'priorSchools', 'previousCredits', 'recordsSituation', 'recordsHelpNeeded', 'graduationTiming', 'graduationTargetDate', 'transferCourseSummary', 'transcriptExpectedTiming'],
+    ['parentName', 'parentEmail', 'phone', 'parentRelationship', 'contactPreference'],
+    ['tuitionAware', 'noGuaranteeAcknowledged', 'responseCommitmentAcknowledged', 'transferRecordsAcknowledged'],
   ];
 
   function goToNextStep() {
@@ -212,10 +279,11 @@ export default function ApplyForm({ language }) {
     try {
       const payload = {
         intakeVersion: intakeMode === 'serious' ? 'serious-v1' : '',
+        transferIntakeVersion: isTransferApplicant ? 'transfer-v2' : '',
         studentName: form.studentName,
         dob: form.dob,
         gradeLevel: form.gradeLevel,
-        currentSchool: form.currentSchool,
+        currentSchool: isTransferApplicant ? '' : form.currentSchool,
         targetUniversities: form.targetUniversities,
         preferredLanguage: form.preferredLanguage,
         applicantType: form.applicantType,
@@ -231,6 +299,14 @@ export default function ApplyForm({ language }) {
         transferCourseSummary: isTransferApplicant ? form.transferCourseSummary : '',
         transcriptPlanDetails: isTransferApplicant ? form.transcriptPlanDetails : '',
         transcriptExpectedTiming: isTransferApplicant ? form.transcriptExpectedTiming : '',
+        currentEnrollmentStatus: isTransferApplicant ? form.currentEnrollmentStatus : '',
+        priorSchools: isTransferApplicant ? form.priorSchools : [],
+        recordsSituation: isTransferApplicant ? form.recordsSituation : '',
+        recordsHelpNeeded: isTransferApplicant ? form.recordsHelpNeeded : '',
+        graduationTargetDate: isTransferApplicant ? form.graduationTargetDate : '',
+        parentRelationship: isTransferApplicant ? form.parentRelationship : '',
+        contactPreference: isTransferApplicant ? form.contactPreference : '',
+        transferRecordsAcknowledged: isTransferApplicant ? form.transferRecordsAcknowledged : false,
         tuitionAware: form.tuitionAware,
         noGuaranteeAcknowledged: form.noGuaranteeAcknowledged,
         responseCommitmentAcknowledged: form.responseCommitmentAcknowledged,
@@ -405,10 +481,6 @@ export default function ApplyForm({ language }) {
               </Field>
             </div>
 
-            <Field label={T('Current or Most Recent School (optional)', '目前或最近就读学校（选填）')} err={errors.currentSchool}>
-              <input type="text" value={form.currentSchool} onChange={set('currentSchool')} placeholder={T('e.g. current middle school, homeschool, or most recent school', '例：目前初中、homeschool、或最近就读学校')} style={inputStyle(false)} />
-            </Field>
-
             <Field label={T('Target Universities (optional)', '目标大学（选填）')} err={errors.targetUniversities}>
               <input type="text" value={form.targetUniversities} onChange={set('targetUniversities')} placeholder={T('e.g. UC Berkeley, NYU, Boston University', '例：UC Berkeley、纽约大学、波士顿大学')} style={inputStyle(false)} />
             </Field>
@@ -468,66 +540,104 @@ export default function ApplyForm({ language }) {
 
             {isTransferApplicant ? (
               <>
+                <Field label={T('Current enrollment status', '目前就读状态')} err={errors.currentEnrollmentStatus}>
+                  <select value={form.currentEnrollmentStatus} onChange={set('currentEnrollmentStatus')} style={inputStyle(errors.currentEnrollmentStatus)}>
+                    <option value="">{T('Select…', '请选择…')}</option>
+                    {CURRENT_ENROLLMENT_STATUSES.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
+                  </select>
+                </Field>
+
+                <div style={{ marginBottom: 18 }}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 8 }}>
+                    <div>
+                      <p style={{ margin: 0, fontSize: 12, fontWeight: 700, color: '#5c6578', textTransform: 'uppercase' }}>{T('Prior high schools', '曾就读的高中')}</p>
+                      <p style={{ margin: '3px 0 0', fontSize: 11.5, color: '#7b8496' }}>{T('List every school whose courses may need review.', '请列出所有可能需要审核课程的学校。')}</p>
+                    </div>
+                    {form.priorSchools.length < 5 && (
+                      <button type="button" onClick={addPriorSchool} style={{ border: '1.5px solid #2b3d6d', background: '#fff', color: '#2b3d6d', borderRadius: 8, padding: '6px 10px', fontSize: 12, fontWeight: 800, cursor: 'pointer' }}>
+                        {T('+ Add school', '+ 添加学校')}
+                      </button>
+                    )}
+                  </div>
+                  <div style={{ display: 'grid', gap: 10 }}>
+                    {form.priorSchools.map((school, index) => (
+                      <div key={index} style={{ display: 'grid', gridTemplateColumns: 'minmax(180px, 1fr) minmax(160px, 0.8fr) auto', gap: 8, alignItems: 'end', padding: 10, border: '1px solid #e0e6f0', borderRadius: 8, background: '#f8f9fc' }}>
+                        <label style={{ fontSize: 11, fontWeight: 700, color: '#5c6578' }}>
+                          {T('School name', '学校名称')}
+                          <input value={school.schoolName} onChange={setPriorSchool(index, 'schoolName')} maxLength={160} placeholder={T('Prior school name', '原学校名称')} style={inputStyle(errors.priorSchools)} />
+                        </label>
+                        <label style={{ fontSize: 11, fontWeight: 700, color: '#5c6578' }}>
+                          {T('Attendance period', '就读期间')}
+                          <input value={school.attendancePeriod} onChange={setPriorSchool(index, 'attendancePeriod')} maxLength={120} placeholder={T('e.g. Aug 2024 - May 2026', '例：2024 年 8 月至 2026 年 5 月')} style={inputStyle(errors.priorSchools)} />
+                        </label>
+                        <button type="button" onClick={() => removePriorSchool(index)} aria-label={T(`Remove school ${index + 1}`, `删除第 ${index + 1} 所学校`)} title={T('Remove school', '删除学校')} style={{ width: 36, height: 38, border: '1.5px solid #d4d8e0', borderRadius: 8, background: '#fff', color: '#8b1e2d', fontSize: 20, lineHeight: 1, cursor: 'pointer' }}>×</button>
+                      </div>
+                    ))}
+                  </div>
+                  {errors.priorSchools && <span style={{ display: 'block', fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{errors.priorSchools}</span>}
+                </div>
+
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
-                  <Field label={T('Previous credits estimate', '已修学分估计')} err={errors.previousCredits}>
+                  <Field label={T('Previous credits estimate (optional)', '已修学分估计（选填）')} err={errors.previousCredits} hint={T('Planning only', '仅供初步规划')}>
                     <select value={form.previousCredits} onChange={set('previousCredits')} style={inputStyle(errors.previousCredits)}>
-                      <option value="">{T('Select…', '请选择…')}</option>
+                      <option value="">{T('Not sure / skip', '不确定／暂不填写')}</option>
                       {CREDIT_ESTIMATES.map((value) => <option key={value} value={value}>{value}</option>)}
                     </select>
                   </Field>
-                  <Field label={T('Transcript available?', '是否有成绩单？')} err={errors.transcriptAvailable}>
-                    <select value={form.transcriptAvailable} onChange={set('transcriptAvailable')} style={inputStyle(errors.transcriptAvailable)}>
+                  <Field label={T('What records are available?', '目前有哪些学校记录？')} err={errors.recordsSituation}>
+                    <select value={form.recordsSituation} onChange={set('recordsSituation')} style={inputStyle(errors.recordsSituation)}>
                       <option value="">{T('Select…', '请选择…')}</option>
-                      {TRANSCRIPT_OPTIONS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
+                      {RECORDS_SITUATIONS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
                     </select>
                   </Field>
                 </div>
 
-                <Field label={T('Desired graduation timing', '期望毕业时间')} err={errors.graduationTiming}>
-                  <select value={form.graduationTiming} onChange={set('graduationTiming')} style={inputStyle(errors.graduationTiming)}>
-                    <option value="">{T('Select…', '请选择…')}</option>
-                    {GRADUATION_TIMING.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
-                  </select>
-                </Field>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
+                  <Field label={T('Records request situation', '取得记录的情况')} err={errors.recordsHelpNeeded}>
+                    <select value={form.recordsHelpNeeded} onChange={set('recordsHelpNeeded')} style={inputStyle(errors.recordsHelpNeeded)}>
+                      <option value="">{T('Select…', '请选择…')}</option>
+                      {RECORDS_HELP_OPTIONS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
+                    </select>
+                  </Field>
+                  <Field label={T('Expected records timing', '预计取得记录时间')} err={errors.transcriptExpectedTiming}>
+                    <select value={form.transcriptExpectedTiming} onChange={set('transcriptExpectedTiming')} style={inputStyle(errors.transcriptExpectedTiming)}>
+                      <option value="">{T('Select…', '请选择…')}</option>
+                      {RECORDS_ETA_OPTIONS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
+                    </select>
+                  </Field>
+                </div>
 
-                <Field
-                  label={T('Completed high-school course summary', '已完成的高中课程摘要')}
-                  err={errors.transferCourseSummary}
-                  hint={T('Course names and approximate grades are enough for intake', '申请阶段填写课程名称和大致成绩即可')}
-                >
-                  <textarea
-                    value={form.transferCourseSummary}
-                    onChange={set('transferCourseSummary')}
-                    rows={4}
-                    minLength={20}
-                    maxLength={1200}
-                    placeholder={T('Example: English II (A), Algebra II (B), Biology (A), World History (B).', '例：English II（A）、Algebra II（B）、Biology（A）、World History（B）。')}
-                    style={{ ...inputStyle(errors.transferCourseSummary), resize: 'vertical' }}
-                  />
-                </Field>
+                <div style={{ display: 'grid', gridTemplateColumns: form.graduationTiming === 'target-date' ? 'minmax(220px, 1fr) minmax(180px, 0.7fr)' : '1fr', gap: 16 }}>
+                  <Field label={T('Graduation planning preference', '毕业规划偏好')} err={errors.graduationTiming}>
+                    <select value={form.graduationTiming} onChange={set('graduationTiming')} style={inputStyle(errors.graduationTiming)}>
+                      <option value="">{T('Select…', '请选择…')}</option>
+                      {GRADUATION_TIMING.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
+                    </select>
+                  </Field>
+                  {form.graduationTiming === 'target-date' && (
+                    <Field label={T('Family target date', '家庭目标日期')} err={errors.graduationTargetDate} hint={T('Not a school guarantee', '不代表学校保证')}>
+                      <input type="date" value={form.graduationTargetDate} onChange={set('graduationTargetDate')} style={inputStyle(errors.graduationTargetDate)} />
+                    </Field>
+                  )}
+                </div>
 
-                <Field label={T('How will you obtain the transcript or school records?', '您准备如何取得成绩单或学校记录？')} err={errors.transcriptPlanDetails}>
-                  <textarea
-                    value={form.transcriptPlanDetails}
-                    onChange={set('transcriptPlanDetails')}
-                    rows={3}
-                    minLength={10}
-                    maxLength={600}
-                    placeholder={T('It is okay if records are not available yet. Explain who will request them and any known obstacle.', '暂时没有成绩单也可以申请。请说明由谁申请，以及目前是否有困难。')}
-                    style={{ ...inputStyle(errors.transcriptPlanDetails), resize: 'vertical' }}
-                  />
-                </Field>
-
-                <Field label={T('When do you expect records to be available?', '预计何时可以提供记录？')} err={errors.transcriptExpectedTiming}>
-                  <input
-                    type="text"
-                    value={form.transcriptExpectedTiming}
-                    onChange={set('transcriptExpectedTiming')}
-                    maxLength={120}
-                    placeholder={T('Example: within 10 business days', '例：10 个工作日内')}
-                    style={inputStyle(errors.transcriptExpectedTiming)}
-                  />
-                </Field>
+                {!['official-transcript', 'partial-records'].includes(form.recordsSituation) && (
+                  <Field
+                    label={T('Completed high-school course summary', '已完成的高中课程摘要')}
+                    err={errors.transferCourseSummary}
+                    hint={T('Required only while usable records are unavailable', '仅在目前没有可用记录时必填')}
+                  >
+                    <textarea
+                      value={form.transferCourseSummary}
+                      onChange={set('transferCourseSummary')}
+                      rows={4}
+                      minLength={20}
+                      maxLength={1200}
+                      placeholder={T('Example: English II (A), Algebra II (B), Biology (A), World History (B).', '例：English II（A）、Algebra II（B）、Biology（A）、World History（B）。')}
+                      style={{ ...inputStyle(errors.transferCourseSummary), resize: 'vertical' }}
+                    />
+                  </Field>
+                )}
 
                 <div style={{ margin: '-4px 0 18px', padding: '11px 12px', borderRadius: 8, background: '#fff8e6', border: '1px solid #f3d27b', fontSize: 12.5, color: '#5c4a12', lineHeight: 1.6 }}>
                   {T(
@@ -537,12 +647,17 @@ export default function ApplyForm({ language }) {
                 </div>
               </>
             ) : (
-              <div style={{ margin: '0 0 18px', padding: '12px 14px', borderRadius: 8, background: '#f8fbff', border: '1px solid #cfe0f8', fontSize: 12.5, color: '#2b3d6d', lineHeight: 1.65 }}>
-                {T(
-                  'For a new student path, families usually prepare proof of age, current or most recent school information, and any recent report card or placement record if available. No transfer transcript is required unless prior high-school credits should be reviewed.',
-                  '一般新生通常准备出生日期/年龄证明、目前或最近就读学校信息，以及可提供的近期成绩或分班记录。若没有要转入的高中学分，不需要转学成绩单。'
-                )}
-              </div>
+              <>
+                <Field label={T('Current or most recent school (optional)', '目前或最近就读学校（选填）')} err={errors.currentSchool}>
+                  <input type="text" value={form.currentSchool} onChange={set('currentSchool')} placeholder={T('Current middle school, homeschool, or most recent school', '目前初中、homeschool、或最近就读学校')} style={inputStyle(false)} />
+                </Field>
+                <div style={{ margin: '0 0 18px', padding: '12px 14px', borderRadius: 8, background: '#f8fbff', border: '1px solid #cfe0f8', fontSize: 12.5, color: '#2b3d6d', lineHeight: 1.65 }}>
+                  {T(
+                    'For a new student path, families usually prepare proof of age, current or most recent school information, and any recent report card or placement record if available. No transfer transcript is required unless prior high-school credits should be reviewed.',
+                    '一般新生通常准备出生日期/年龄证明、目前或最近就读学校信息，以及可提供的近期成绩或分班记录。若没有要转入的高中学分，不需要转学成绩单。'
+                  )}
+                </div>
+              </>
             )}
 
             <Field label={T('Main family concern', '家庭最担心的问题')} err={errors.mainConcern}>
@@ -567,6 +682,23 @@ export default function ApplyForm({ language }) {
               <input type="email" value={form.parentEmail} onChange={set('parentEmail')} placeholder="parent@example.com" style={inputStyle(errors.parentEmail)} />
             </Field>
 
+            {isTransferApplicant && (
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
+                <Field label={T('Relationship to student', '与学生的关系')} err={errors.parentRelationship}>
+                  <select value={form.parentRelationship} onChange={set('parentRelationship')} style={inputStyle(errors.parentRelationship)}>
+                    <option value="">{T('Select…', '请选择…')}</option>
+                    {PARENT_RELATIONSHIPS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
+                  </select>
+                </Field>
+                <Field label={T('Preferred contact method', '偏好联络方式')} err={errors.contactPreference}>
+                  <select value={form.contactPreference} onChange={set('contactPreference')} style={inputStyle(errors.contactPreference)}>
+                    <option value="">{T('Select…', '请选择…')}</option>
+                    {CONTACT_PREFERENCES.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
+                  </select>
+                </Field>
+              </div>
+            )}
+
             <Field label={T('Phone (optional)', '电话（选填）')} err={errors.phone}>
               <input type="tel" value={form.phone} onChange={set('phone')} placeholder={T('+1 (555) 000-0000', '+86 138 0000 0000')} style={inputStyle(false)} />
             </Field>
@@ -585,6 +717,10 @@ export default function ApplyForm({ language }) {
               <ReviewRow label={T('Student', '学生')} value={`${form.studentName} · ${form.gradeLevel}`} />
               <ReviewRow label={T('Path', '路径')} value={form.applicantType === 'transfer' ? T('Transfer student', '转学生') : T('New student', '一般新生')} />
               <ReviewRow label={T('Start timing', '开始时间')} value={START_TIMINGS.find((option) => option.value === form.intendedStartTiming)?.[isEn ? 'en' : 'zh'] || '—'} />
+              {isTransferApplicant && <ReviewRow label={T('Prior schools', '曾就读学校')} value={form.priorSchools.map((school) => `${school.schoolName} (${school.attendancePeriod})`).join(' · ')} />}
+              {isTransferApplicant && <ReviewRow label={T('Records', '学校记录')} value={RECORDS_SITUATIONS.find((option) => option.value === form.recordsSituation)?.[isEn ? 'en' : 'zh'] || '—'} />}
+              {isTransferApplicant && <ReviewRow label={T('Expected timing', '预计取得时间')} value={RECORDS_ETA_OPTIONS.find((option) => option.value === form.transcriptExpectedTiming)?.[isEn ? 'en' : 'zh'] || '—'} />}
+              {isTransferApplicant && <ReviewRow label={T('Graduation planning', '毕业规划')} value={`${GRADUATION_TIMING.find((option) => option.value === form.graduationTiming)?.[isEn ? 'en' : 'zh'] || '—'}${form.graduationTargetDate ? ` · ${form.graduationTargetDate}` : ''}`} />}
               <ReviewRow label={T('Parent email', '家长邮箱')} value={form.parentEmail} />
             </div>
             <div style={{ display: 'grid', gap: 10, margin: '2px 0 20px', padding: '14px 15px', border: '1px solid #dbe4f0', borderRadius: 8, background: '#f8f9fc' }}>
@@ -592,6 +728,13 @@ export default function ApplyForm({ language }) {
                 ['tuitionAware', T('I reviewed the current tuition and support levels and understand the final plan is recommended after review.', '我已查看目前的学费与支持层级，并了解学校会在审核后建议最终方案。')],
                 ['noGuaranteeAcknowledged', T('I understand this application does not guarantee admission, transfer credit, grade placement, or a graduation date.', '我了解提交申请不代表保证录取、转学分、年级安排或毕业日期。')],
                 ['responseCommitmentAcknowledged', T('If GIIS contacts us, our family will reply within 72 hours or tell admissions that we need more time.', '如果 GIIS 联系我们，家庭会在 72 小时内回复，或告知招生团队需要更多时间。')],
+                ...(isTransferApplicant ? [[
+                  'transferRecordsAcknowledged',
+                  T(
+                    'I understand final transfer credit requires official or otherwise verifiable records and GIIS academic review; family estimates and target dates are planning information only.',
+                    '我了解最终转学分必须依据正式或其他可核验记录及 GIIS 学术审核；家庭提供的学分估计与目标日期仅供规划。',
+                  ),
+                ]] : []),
               ].map(([field, label]) => (
                 <label key={field} style={{ display: 'flex', alignItems: 'flex-start', gap: 9, color: '#394255', fontSize: 12.5, lineHeight: 1.55, cursor: 'pointer' }}>
                   <input type="checkbox" checked={form[field]} onChange={toggle(field)} style={{ marginTop: 3, accentColor: '#2b3d6d' }} />
@@ -601,9 +744,11 @@ export default function ApplyForm({ language }) {
             </div>
             </>}
 
-            {intakeMode === 'unavailable' && currentStep === 3 && (
+            {['unavailable', 'upgrade-required'].includes(intakeMode) && currentStep === 3 && (
               <div style={{ background: '#fff8e6', border: '1px solid #f3d27b', borderRadius: 8, padding: '10px 12px', marginBottom: 12, color: '#5c4a12', fontSize: 12.5, lineHeight: 1.55 }}>
-                {T('The application service could not be verified. Please retry before submitting.', '目前无法确认申请服务状态，请重试后再提交。')}
+                {intakeMode === 'upgrade-required'
+                  ? T('The transfer intake service is being updated. Please retry shortly before submitting.', '转学生申请服务正在更新，请稍后重试再提交。')
+                  : T('The application service could not be verified. Please retry before submitting.', '目前无法确认申请服务状态，请重试后再提交。')}
                 {' '}
                 <button type="button" onClick={() => setCapabilityCheck((value) => value + 1)} style={{ border: 0, padding: 0, background: 'none', color: '#2b3d6d', fontWeight: 800, cursor: 'pointer', textDecoration: 'underline' }}>
                   {T('Retry', '重试')}
@@ -618,12 +763,12 @@ export default function ApplyForm({ language }) {
               {currentStep < stepFields.length - 1 ? (
                 <button type="button" onClick={goToNextStep} style={primaryButton}>{T('Continue', '下一步')}</button>
               ) : (
-                <button type="submit" disabled={submitting || intakeMode === 'loading' || intakeMode === 'unavailable'} style={{
+                <button type="submit" disabled={submitting || intakeMode !== 'serious'} style={{
                   ...primaryButton,
-                  background: submitting || intakeMode === 'loading' || intakeMode === 'unavailable' ? '#9baac8' : '#2b3d6d',
-                  cursor: submitting || intakeMode === 'loading' || intakeMode === 'unavailable' ? 'not-allowed' : 'pointer',
+                  background: submitting || intakeMode !== 'serious' ? '#9baac8' : '#2b3d6d',
+                  cursor: submitting || intakeMode !== 'serious' ? 'not-allowed' : 'pointer',
                 }}>
-                  {submitting ? T('Submitting…', '提交中…') : intakeMode === 'loading' ? T('Checking service…', '正在确认服务…') : T('Submit application', '提交申请')}
+                  {submitting ? T('Submitting…', '提交中…') : intakeMode === 'loading' ? T('Checking service…', '正在确认服务…') : intakeMode === 'serious' ? T('Submit application', '提交申请') : T('Application temporarily unavailable', '申请暂时不可用')}
                 </button>
               )}
             </div>
