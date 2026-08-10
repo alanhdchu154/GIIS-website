@@ -20,7 +20,21 @@ const FROM = process.env.RESEND_FROM_EMAIL || 'GIIS Admissions <admissions@updat
 const ADMIN_EMAIL = 'alanhdchu@genesisideas.school';
 const ADMISSIONS_EMAIL = 'admissions@genesisideas.school';
 const FALLBACK_PARENT_EMAIL = 'admin@genesisideas.school';
+const DEFAULT_PRINCIPAL_EMAIL = 'shiyu.zhang@genesisideas.school';
 const SITE = process.env.CORS_ORIGIN?.split(',')[0]?.trim() || 'https://genesisideas.school';
+
+// Confirmed-application alerts always land in ADMIN_EMAIL and CC the President
+// & Principal so transfer/credit judgment reaches academic leadership at the
+// start of review. PRINCIPAL_EMAIL is read at call time so operators can swap
+// recipients via env without a code deploy; an empty/duplicate value quietly
+// falls back to admin-only to prevent double-sending.
+function applicationAlertRecipients() {
+  const principal = String(process.env.PRINCIPAL_EMAIL ?? DEFAULT_PRINCIPAL_EMAIL).trim();
+  if (!principal || principal.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
+    return { to: ADMIN_EMAIL };
+  }
+  return { to: ADMIN_EMAIL, cc: principal };
+}
 
 async function send({ to, cc, replyTo, subject, html, text, attachments }) {
   if (!resend) {
@@ -136,9 +150,11 @@ function buildNewApplicationAlert({
   graduationTiming,
   mainConcern,
 }) {
-  const subject = `New GIIS Application — ${studentName} (${gradeLevel})`;
-  const adminUrl = `${SITE}/admin/applications`;
   const isTransfer = applicantType === 'transfer';
+  const subject = isTransfer
+    ? `[Transfer] New GIIS Application — ${studentName} (${gradeLevel})`
+    : `New GIIS Application — ${studentName} (${gradeLevel})`;
+  const adminUrl = `${SITE}/admin/applications`;
   const typeLabel = isTransfer ? 'Transfer student' : 'New student';
   const rows = [
     ['Student', `<strong>${escapeHtml(studentName)}</strong> · ${escapeHtml(gradeLevel)}`],
@@ -185,7 +201,7 @@ function buildNewApplicationAlert({
 async function sendNewApplicationAlert(details) {
   const content = buildNewApplicationAlert(details);
   return send({
-    to: ADMIN_EMAIL,
+    ...applicationAlertRecipients(),
     ...content,
   });
 }
@@ -634,6 +650,8 @@ module.exports = {
   ADMIN_EMAIL,
   ADMISSIONS_EMAIL,
   FALLBACK_PARENT_EMAIL,
+  DEFAULT_PRINCIPAL_EMAIL,
+  applicationAlertRecipients,
   buildNewApplicationAlert,
   buildApplicationInterestConfirmation,
   sendNewApplicationAlert,
