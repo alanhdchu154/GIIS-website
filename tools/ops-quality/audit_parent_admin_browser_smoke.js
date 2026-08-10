@@ -144,6 +144,27 @@ const ROUTES = [
     },
   },
   {
+    name: 'apply new-student required fields',
+    path: '/apply',
+    expected: [
+      'Current or most recent school is required',
+      'Main family concern',
+      'Required',
+    ],
+    endpointCaps: { '/api/checkout/tiers': 1 },
+    afterLoad: async (page) => {
+      await page.getByLabel('Student Full Name').fill('Taylor Rivera');
+      await page.getByLabel('When would the student like to start?').selectOption('next-school-year');
+      await page.getByLabel('Why is your family considering GIIS?').fill('We are looking for a structured Grade 9 start with clear communication, steady pacing, and a school relationship that supports long-term academic planning.');
+      await page.getByLabel('Date of Birth').fill('2012-03-14');
+      await page.getByLabel('Grade Level').selectOption('Grade 9');
+      await page.getByRole('button', { name: /^Continue$/ }).click();
+      await page.locator('input[name="applicantType"][value="new"]').check();
+      await page.getByRole('button', { name: /^Continue$/ }).click();
+      await page.getByText('Current or most recent school is required').waitFor({ state: 'visible', timeout: 5000 });
+    },
+  },
+  {
     name: 'student learn portal login',
     path: '/learn',
     expected: [
@@ -241,6 +262,22 @@ const ROUTES = [
     afterLoad: async (page) => {
       await page.getByRole('button', { name: /^Transfer worklist$/ }).click();
       await page.getByLabel('Transfer stage filter').waitFor({ state: 'visible', timeout: 5000 });
+      await page.getByRole('button', { name: /^Start first outreach$/ }).click();
+      await page.getByRole('heading', { name: 'Complete first outreach' }).waitFor({ state: 'visible', timeout: 5000 });
+      await page.getByLabel('Phone').check();
+      await page.getByRole('button', { name: /^Review message$/ }).click();
+      await page.getByLabel('Outreach message preview').waitFor({ state: 'visible', timeout: 5000 });
+      await page.evaluate(() => {
+        Object.defineProperty(navigator, 'clipboard', {
+          configurable: true,
+          value: { writeText: async () => {} },
+        });
+      });
+      await page.getByRole('button', { name: /^Copy message$/ }).click();
+      await page.getByRole('button', { name: /^Confirm contact completed$/ }).waitFor({ state: 'visible', timeout: 5000 });
+      page.once('dialog', async (dialog) => dialog.accept());
+      await page.getByRole('button', { name: /^Confirm contact completed$/ }).click();
+      await page.getByRole('heading', { name: 'Complete first outreach' }).waitFor({ state: 'detached', timeout: 5000 });
       await page.getByRole('button', { name: /^View$/ }).first().click();
       await page.getByText('Application Path Review').waitFor({ state: 'visible', timeout: 5000 });
       await page.getByRole('button', { name: /^Record Manual Payment$/ }).click();
@@ -460,8 +497,8 @@ function applicationsPayload() {
     assignedTo: 'Admissions',
     nextAction: 'Send reviewed path summary',
     responseDueAt: '2026-06-02T15:00:00.000Z',
-    firstResponseAt: '2026-06-02T14:00:00.000Z',
-    lastContactedAt: '2026-06-03T15:00:00.000Z',
+    firstResponseAt: null,
+    lastContactedAt: null,
     submissionCount: 1,
     notes: 'Transfer Path Review: credits=12-17; graduationTiming=1-year; transcriptAvailable=partial; concern=credits; Family Notes: Interested in transfer-credit review.',
     adminNotes: 'Needs transcript follow-up.',
@@ -627,10 +664,13 @@ async function installMocks(page, endpointCounts) {
         },
       }, 201));
     }
+    if (endpoint === '/api/applications/app-1' && route.request().method() === 'PATCH') {
+      return route.fulfill(json({ ok: true, id: 'app-1', status: 'approved' }));
+    }
     if (endpoint === '/api/checkout/tiers') {
       return route.fulfill({
         ...json({}),
-        headers: { 'X-GIIS-Admissions-Workflow': 'admissions-v3' },
+        headers: { 'X-GIIS-Admissions-Workflow': 'admissions-v4' },
       });
     }
     if (endpoint === '/api/applications' && route.request().method() === 'POST') {

@@ -86,10 +86,12 @@ const CONCERNS = [
 // Hoisted to module scope: defining these inside ApplyForm made `Field` a new
 // component reference on every render, remounting every input and dropping focus
 // after a single keystroke (the only enrollment path was effectively unusable).
-function Field({ label, children, err, hint }) {
+function Field({ label, children, err, hint, required = false }) {
   return (
     <label style={{ display: 'block', marginBottom: 18 }}>
-      <span style={{ fontSize: 12, fontWeight: 700, color: '#5c6578', letterSpacing: '0.5px', textTransform: 'uppercase' }}>{label}</span>
+      <span style={{ fontSize: 12, fontWeight: 700, color: '#5c6578', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+        {label}{required && <span aria-hidden="true" style={{ color: '#b91c1c' }}> *</span>}
+      </span>
       {hint && <span style={{ fontSize: 11, color: '#9aa0ad', marginLeft: 6 }}>{hint}</span>}
       {children}
       {err && <span style={{ display: 'block', fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{err}</span>}
@@ -160,7 +162,7 @@ export default function ApplyForm({ language }) {
           setIntakeMode('unavailable');
           return;
         }
-        setIntakeMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v3' ? 'serious' : 'upgrade-required');
+        setIntakeMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v4' ? 'serious' : 'upgrade-required');
       } catch {
         if (active) setIntakeMode('unavailable');
       }
@@ -215,6 +217,7 @@ export default function ApplyForm({ language }) {
     if (!form.dob.trim()) e.dob = isEn ? 'Required' : '必填';
     if (!form.gradeLevel) e.gradeLevel = isEn ? 'Required' : '必填';
     if (!form.applicantType) e.applicantType = isEn ? 'Choose one path' : '请选择申请类型';
+    if (!form.mainConcern) e.mainConcern = isEn ? 'Required' : '必填';
     if (form.motivation.trim().length < 80) e.motivation = isEn ? 'Please write at least 80 characters' : '请至少填写 80 个字符';
     if (!form.intendedStartTiming) e.intendedStartTiming = isEn ? 'Required' : '必填';
     if (form.applicantType === 'transfer') {
@@ -230,6 +233,8 @@ export default function ApplyForm({ language }) {
       if (!form.contactPreference) e.contactPreference = isEn ? 'Required' : '必填';
       if (form.contactPreference === 'phone' && !form.phone.trim()) e.phone = isEn ? 'Required when phone is preferred' : '选择电话联络时必填';
       if (!form.transferRecordsAcknowledged) e.transferRecordsAcknowledged = isEn ? 'Required' : '请确认';
+    } else if (form.applicantType === 'new' && !form.currentSchool.trim()) {
+      e.currentSchool = isEn ? 'Current or most recent school is required' : '请填写目前或最近就读学校';
     }
     if (!form.parentName.trim()) e.parentName = isEn ? 'Required' : '必填';
     if (!form.parentEmail.trim()) e.parentEmail = isEn ? 'Required' : '必填';
@@ -242,7 +247,7 @@ export default function ApplyForm({ language }) {
 
   const stepFields = [
     ['studentName', 'dob', 'gradeLevel', 'intendedStartTiming', 'motivation'],
-    ['applicantType', 'currentSchool', 'currentEnrollmentStatus', 'priorSchools', 'previousCredits', 'recordsSituation', 'recordsHelpNeeded', 'graduationTiming', 'graduationTargetDate', 'transferCourseSummary', 'transcriptExpectedTiming'],
+    ['applicantType', 'currentSchool', 'currentEnrollmentStatus', 'priorSchools', 'previousCredits', 'recordsSituation', 'recordsHelpNeeded', 'graduationTiming', 'graduationTargetDate', 'transferCourseSummary', 'transcriptExpectedTiming', 'mainConcern'],
     ['parentName', 'parentEmail', 'phone', 'parentRelationship', 'contactPreference'],
     ['tuitionAware', 'noGuaranteeAcknowledged', 'responseCommitmentAcknowledged', 'transferRecordsAcknowledged'],
   ];
@@ -427,6 +432,9 @@ export default function ApplyForm({ language }) {
           <form id="application-form" onSubmit={handleSubmit} style={{ background: '#fff', borderRadius: 8, padding: '32px', boxShadow: '0 8px 32px rgba(0,0,0,0.06)', border: '1px solid #e8ecf5', scrollMarginTop: 24 }}>
 
             <ApplicationStepper currentStep={currentStep} language={language} />
+            <p style={{ margin: '-14px 0 20px', color: '#7b8496', fontSize: 11.5 }}>
+              <span aria-hidden="true" style={{ color: '#b91c1c', fontWeight: 900 }}>*</span> {T('Required for application review', '申请审核必填')}
+            </p>
 
             {serverError && (
               <div style={{ background: '#fff3f3', border: '1px solid #fca5a5', borderRadius: 8, padding: '10px 14px', marginBottom: 20, fontSize: 13, color: '#b91c1c' }}>
@@ -440,13 +448,13 @@ export default function ApplyForm({ language }) {
                 body={T('Start with the student’s current situation and goals.', '先填写学生目前的情况与学习目标。')}
               />
 
-            <Field label={T('Student Full Name', '学生姓名')} err={errors.studentName}>
-              <input type="text" value={form.studentName} onChange={set('studentName')} placeholder={T('e.g. Yunfan Yang', '例：杨芸帆')} style={inputStyle(errors.studentName)} />
+            <Field label={T('Student Full Name', '学生姓名')} err={errors.studentName} required>
+              <input type="text" value={form.studentName} onChange={set('studentName')} required placeholder={T('e.g. Yunfan Yang', '例：杨芸帆')} style={inputStyle(errors.studentName)} />
             </Field>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
-              <Field label={T('When would the student like to start?', '学生希望何时开始？')} err={errors.intendedStartTiming}>
-                <select value={form.intendedStartTiming} onChange={set('intendedStartTiming')} style={inputStyle(errors.intendedStartTiming)}>
+              <Field label={T('When would the student like to start?', '学生希望何时开始？')} err={errors.intendedStartTiming} required>
+                <select value={form.intendedStartTiming} onChange={set('intendedStartTiming')} required style={inputStyle(errors.intendedStartTiming)}>
                   <option value="">{T('Select…', '请选择…')}</option>
                   {START_TIMINGS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
                 </select>
@@ -457,6 +465,7 @@ export default function ApplyForm({ language }) {
               label={T('Why is your family considering GIIS?', '您的家庭为什么考虑 GIIS？')}
               err={errors.motivation}
               hint={T('80–1,000 characters', '80–1,000 个字符')}
+              required
             >
               <textarea
                 value={form.motivation}
@@ -464,17 +473,18 @@ export default function ApplyForm({ language }) {
                 rows={4}
                 minLength={80}
                 maxLength={1000}
+                required
                 placeholder={T('Describe the student’s needs, goals, and what a successful school experience would look like.', '请说明学生的需要、目标，以及您期望怎样的学习结果。')}
                 style={{ ...inputStyle(errors.motivation), resize: 'vertical' }}
               />
             </Field>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
-              <Field label={T('Date of Birth', '出生日期')} err={errors.dob}>
-                <input type="date" value={form.dob} onChange={set('dob')} style={inputStyle(errors.dob)} />
+              <Field label={T('Date of Birth', '出生日期')} err={errors.dob} required>
+                <input type="date" value={form.dob} onChange={set('dob')} required style={inputStyle(errors.dob)} />
               </Field>
-              <Field label={T('Grade Level', '年级')} err={errors.gradeLevel}>
-                <select value={form.gradeLevel} onChange={set('gradeLevel')} style={inputStyle(errors.gradeLevel)}>
+              <Field label={T('Grade Level', '年级')} err={errors.gradeLevel} required>
+                <select value={form.gradeLevel} onChange={set('gradeLevel')} required style={inputStyle(errors.gradeLevel)}>
                   <option value="">{T('Select…', '请选择…')}</option>
                   {GRADE_LEVELS.map(g => <option key={g} value={g}>{g}</option>)}
                 </select>
@@ -502,7 +512,7 @@ export default function ApplyForm({ language }) {
               title={T('Application Path', '申请路径')}
               body={T('Choose the correct path and tell us what records are available.', '选择适合的申请路径，并说明目前可提供的资料。')}
             />
-            <Field label={T('Applicant Type', '申请类型')} err={errors.applicantType}>
+            <Field label={T('Applicant Type', '申请类型')} err={errors.applicantType} required>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12, marginTop: 8 }}>
                 {APPLICANT_TYPES.map((type) => {
                   const selected = form.applicantType === type.value;
@@ -516,7 +526,7 @@ export default function ApplyForm({ language }) {
                       cursor: 'pointer',
                     }}>
                       <span style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
-                        <input type="radio" name="applicantType" value={type.value} checked={selected} onChange={set('applicantType')} style={{ accentColor: '#2b3d6d' }} />
+                        <input type="radio" name="applicantType" value={type.value} checked={selected} onChange={set('applicantType')} required style={{ accentColor: '#2b3d6d' }} />
                         <span style={{ fontSize: 14, fontWeight: 800, color: '#1a1d24' }}>{T(type.title.en, type.title.zh)}</span>
                       </span>
                       <span style={{ display: 'block', fontSize: 12.5, color: '#5c6578', lineHeight: 1.55, paddingLeft: 26 }}>
@@ -540,8 +550,8 @@ export default function ApplyForm({ language }) {
 
             {isTransferApplicant ? (
               <>
-                <Field label={T('Current enrollment status', '目前就读状态')} err={errors.currentEnrollmentStatus}>
-                  <select value={form.currentEnrollmentStatus} onChange={set('currentEnrollmentStatus')} style={inputStyle(errors.currentEnrollmentStatus)}>
+                <Field label={T('Current enrollment status', '目前就读状态')} err={errors.currentEnrollmentStatus} required>
+                  <select value={form.currentEnrollmentStatus} onChange={set('currentEnrollmentStatus')} required style={inputStyle(errors.currentEnrollmentStatus)}>
                     <option value="">{T('Select…', '请选择…')}</option>
                     {CURRENT_ENROLLMENT_STATUSES.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
                   </select>
@@ -550,7 +560,7 @@ export default function ApplyForm({ language }) {
                 <div style={{ marginBottom: 18 }}>
                   <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 12, marginBottom: 8 }}>
                     <div>
-                      <p style={{ margin: 0, fontSize: 12, fontWeight: 700, color: '#5c6578', textTransform: 'uppercase' }}>{T('Prior high schools', '曾就读的高中')}</p>
+                      <p style={{ margin: 0, fontSize: 12, fontWeight: 700, color: '#5c6578', textTransform: 'uppercase' }}>{T('Prior high schools', '曾就读的高中')}<span aria-hidden="true" style={{ color: '#b91c1c' }}> *</span></p>
                       <p style={{ margin: '3px 0 0', fontSize: 11.5, color: '#7b8496' }}>{T('List every school whose courses may need review.', '请列出所有可能需要审核课程的学校。')}</p>
                     </div>
                     {form.priorSchools.length < 5 && (
@@ -564,11 +574,11 @@ export default function ApplyForm({ language }) {
                       <div key={index} style={{ display: 'grid', gridTemplateColumns: 'minmax(180px, 1fr) minmax(160px, 0.8fr) auto', gap: 8, alignItems: 'end', padding: 10, border: '1px solid #e0e6f0', borderRadius: 8, background: '#f8f9fc' }}>
                         <label style={{ fontSize: 11, fontWeight: 700, color: '#5c6578' }}>
                           {T('School name', '学校名称')}
-                          <input value={school.schoolName} onChange={setPriorSchool(index, 'schoolName')} maxLength={160} placeholder={T('Prior school name', '原学校名称')} style={inputStyle(errors.priorSchools)} />
+                          <input value={school.schoolName} onChange={setPriorSchool(index, 'schoolName')} maxLength={160} required placeholder={T('Prior school name', '原学校名称')} style={inputStyle(errors.priorSchools)} />
                         </label>
                         <label style={{ fontSize: 11, fontWeight: 700, color: '#5c6578' }}>
                           {T('Attendance period', '就读期间')}
-                          <input value={school.attendancePeriod} onChange={setPriorSchool(index, 'attendancePeriod')} maxLength={120} placeholder={T('e.g. Aug 2024 - May 2026', '例：2024 年 8 月至 2026 年 5 月')} style={inputStyle(errors.priorSchools)} />
+                          <input value={school.attendancePeriod} onChange={setPriorSchool(index, 'attendancePeriod')} maxLength={120} required placeholder={T('e.g. Aug 2024 - May 2026', '例：2024 年 8 月至 2026 年 5 月')} style={inputStyle(errors.priorSchools)} />
                         </label>
                         <button type="button" onClick={() => removePriorSchool(index)} aria-label={T(`Remove school ${index + 1}`, `删除第 ${index + 1} 所学校`)} title={T('Remove school', '删除学校')} style={{ width: 36, height: 38, border: '1.5px solid #d4d8e0', borderRadius: 8, background: '#fff', color: '#8b1e2d', fontSize: 20, lineHeight: 1, cursor: 'pointer' }}>×</button>
                       </div>
@@ -584,8 +594,8 @@ export default function ApplyForm({ language }) {
                       {CREDIT_ESTIMATES.map((value) => <option key={value} value={value}>{value}</option>)}
                     </select>
                   </Field>
-                  <Field label={T('What records are available?', '目前有哪些学校记录？')} err={errors.recordsSituation}>
-                    <select value={form.recordsSituation} onChange={set('recordsSituation')} style={inputStyle(errors.recordsSituation)}>
+                  <Field label={T('What records are available?', '目前有哪些学校记录？')} err={errors.recordsSituation} required>
+                    <select value={form.recordsSituation} onChange={set('recordsSituation')} required style={inputStyle(errors.recordsSituation)}>
                       <option value="">{T('Select…', '请选择…')}</option>
                       {RECORDS_SITUATIONS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
                     </select>
@@ -593,14 +603,14 @@ export default function ApplyForm({ language }) {
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
-                  <Field label={T('Records request situation', '取得记录的情况')} err={errors.recordsHelpNeeded}>
-                    <select value={form.recordsHelpNeeded} onChange={set('recordsHelpNeeded')} style={inputStyle(errors.recordsHelpNeeded)}>
+                  <Field label={T('Records request situation', '取得记录的情况')} err={errors.recordsHelpNeeded} required>
+                    <select value={form.recordsHelpNeeded} onChange={set('recordsHelpNeeded')} required style={inputStyle(errors.recordsHelpNeeded)}>
                       <option value="">{T('Select…', '请选择…')}</option>
                       {RECORDS_HELP_OPTIONS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
                     </select>
                   </Field>
-                  <Field label={T('Expected records timing', '预计取得记录时间')} err={errors.transcriptExpectedTiming}>
-                    <select value={form.transcriptExpectedTiming} onChange={set('transcriptExpectedTiming')} style={inputStyle(errors.transcriptExpectedTiming)}>
+                  <Field label={T('Expected records timing', '预计取得记录时间')} err={errors.transcriptExpectedTiming} required>
+                    <select value={form.transcriptExpectedTiming} onChange={set('transcriptExpectedTiming')} required style={inputStyle(errors.transcriptExpectedTiming)}>
                       <option value="">{T('Select…', '请选择…')}</option>
                       {RECORDS_ETA_OPTIONS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
                     </select>
@@ -608,15 +618,15 @@ export default function ApplyForm({ language }) {
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: form.graduationTiming === 'target-date' ? 'minmax(220px, 1fr) minmax(180px, 0.7fr)' : '1fr', gap: 16 }}>
-                  <Field label={T('Graduation planning preference', '毕业规划偏好')} err={errors.graduationTiming}>
-                    <select value={form.graduationTiming} onChange={set('graduationTiming')} style={inputStyle(errors.graduationTiming)}>
+                  <Field label={T('Graduation planning preference', '毕业规划偏好')} err={errors.graduationTiming} required>
+                    <select value={form.graduationTiming} onChange={set('graduationTiming')} required style={inputStyle(errors.graduationTiming)}>
                       <option value="">{T('Select…', '请选择…')}</option>
                       {GRADUATION_TIMING.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
                     </select>
                   </Field>
                   {form.graduationTiming === 'target-date' && (
-                    <Field label={T('Family target date', '家庭目标日期')} err={errors.graduationTargetDate} hint={T('Not a school guarantee', '不代表学校保证')}>
-                      <input type="date" value={form.graduationTargetDate} onChange={set('graduationTargetDate')} style={inputStyle(errors.graduationTargetDate)} />
+                    <Field label={T('Family target date', '家庭目标日期')} err={errors.graduationTargetDate} hint={T('Not a school guarantee', '不代表学校保证')} required>
+                      <input type="date" value={form.graduationTargetDate} onChange={set('graduationTargetDate')} required style={inputStyle(errors.graduationTargetDate)} />
                     </Field>
                   )}
                 </div>
@@ -626,6 +636,7 @@ export default function ApplyForm({ language }) {
                     label={T('Completed high-school course summary', '已完成的高中课程摘要')}
                     err={errors.transferCourseSummary}
                     hint={T('Required only while usable records are unavailable', '仅在目前没有可用记录时必填')}
+                    required
                   >
                     <textarea
                       value={form.transferCourseSummary}
@@ -633,6 +644,7 @@ export default function ApplyForm({ language }) {
                       rows={4}
                       minLength={20}
                       maxLength={1200}
+                      required
                       placeholder={T('Example: English II (A), Algebra II (B), Biology (A), World History (B).', '例：English II（A）、Algebra II（B）、Biology（A）、World History（B）。')}
                       style={{ ...inputStyle(errors.transferCourseSummary), resize: 'vertical' }}
                     />
@@ -648,8 +660,8 @@ export default function ApplyForm({ language }) {
               </>
             ) : (
               <>
-                <Field label={T('Current or most recent school (optional)', '目前或最近就读学校（选填）')} err={errors.currentSchool}>
-                  <input type="text" value={form.currentSchool} onChange={set('currentSchool')} placeholder={T('Current middle school, homeschool, or most recent school', '目前初中、homeschool、或最近就读学校')} style={inputStyle(false)} />
+                <Field label={T('Current or most recent school', '目前或最近就读学校')} err={errors.currentSchool} required>
+                  <input type="text" value={form.currentSchool} onChange={set('currentSchool')} required placeholder={T('Current middle school, homeschool, or most recent school', '目前初中、homeschool、或最近就读学校')} style={inputStyle(errors.currentSchool)} />
                 </Field>
                 <div style={{ margin: '0 0 18px', padding: '12px 14px', borderRadius: 8, background: '#f8fbff', border: '1px solid #cfe0f8', fontSize: 12.5, color: '#2b3d6d', lineHeight: 1.65 }}>
                   {T(
@@ -660,8 +672,8 @@ export default function ApplyForm({ language }) {
               </>
             )}
 
-            <Field label={T('Main family concern', '家庭最担心的问题')} err={errors.mainConcern}>
-              <select value={form.mainConcern} onChange={set('mainConcern')} style={inputStyle(false)}>
+            <Field label={T('Main family concern', '家庭最担心的问题')} err={errors.mainConcern} required>
+              <select value={form.mainConcern} onChange={set('mainConcern')} required style={inputStyle(errors.mainConcern)}>
                 <option value="">{T('Select…', '请选择…')}</option>
                 {CONCERNS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
               </select>
@@ -674,24 +686,24 @@ export default function ApplyForm({ language }) {
               body={T('Use the email that should receive application updates.', '请填写用于接收申请进度的邮箱。')}
             />
 
-            <Field label={T('Parent Full Name', '家长姓名')} err={errors.parentName}>
-              <input type="text" value={form.parentName} onChange={set('parentName')} placeholder={T('e.g. Yali Yang', '例：杨亚利')} style={inputStyle(errors.parentName)} />
+            <Field label={T('Parent Full Name', '家长姓名')} err={errors.parentName} required>
+              <input type="text" value={form.parentName} onChange={set('parentName')} required placeholder={T('e.g. Yali Yang', '例：杨亚利')} style={inputStyle(errors.parentName)} />
             </Field>
 
-            <Field label={T('Parent Email', '家长邮箱')} err={errors.parentEmail} hint={T('We\'ll send updates here', '我们将通过此邮箱联系你')}>
-              <input type="email" value={form.parentEmail} onChange={set('parentEmail')} placeholder="parent@example.com" style={inputStyle(errors.parentEmail)} />
+            <Field label={T('Parent Email', '家长邮箱')} err={errors.parentEmail} hint={T('We\'ll send updates here', '我们将通过此邮箱联系你')} required>
+              <input type="email" value={form.parentEmail} onChange={set('parentEmail')} required placeholder="parent@example.com" style={inputStyle(errors.parentEmail)} />
             </Field>
 
             {isTransferApplicant && (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
-                <Field label={T('Relationship to student', '与学生的关系')} err={errors.parentRelationship}>
-                  <select value={form.parentRelationship} onChange={set('parentRelationship')} style={inputStyle(errors.parentRelationship)}>
+                <Field label={T('Relationship to student', '与学生的关系')} err={errors.parentRelationship} required>
+                  <select value={form.parentRelationship} onChange={set('parentRelationship')} required style={inputStyle(errors.parentRelationship)}>
                     <option value="">{T('Select…', '请选择…')}</option>
                     {PARENT_RELATIONSHIPS.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
                   </select>
                 </Field>
-                <Field label={T('Preferred contact method', '偏好联络方式')} err={errors.contactPreference}>
-                  <select value={form.contactPreference} onChange={set('contactPreference')} style={inputStyle(errors.contactPreference)}>
+                <Field label={T('Preferred contact method', '偏好联络方式')} err={errors.contactPreference} required>
+                  <select value={form.contactPreference} onChange={set('contactPreference')} required style={inputStyle(errors.contactPreference)}>
                     <option value="">{T('Select…', '请选择…')}</option>
                     {CONTACT_PREFERENCES.map((option) => <option key={option.value} value={option.value}>{T(option.en, option.zh)}</option>)}
                   </select>
@@ -699,8 +711,8 @@ export default function ApplyForm({ language }) {
               </div>
             )}
 
-            <Field label={T('Phone (optional)', '电话（选填）')} err={errors.phone}>
-              <input type="tel" value={form.phone} onChange={set('phone')} placeholder={T('+1 (555) 000-0000', '+86 138 0000 0000')} style={inputStyle(false)} />
+            <Field label={form.contactPreference === 'phone' ? T('Phone', '电话') : T('Phone (optional)', '电话（选填）')} err={errors.phone} required={form.contactPreference === 'phone'}>
+              <input type="tel" value={form.phone} onChange={set('phone')} required={form.contactPreference === 'phone'} placeholder={T('+1 (555) 000-0000', '+86 138 0000 0000')} style={inputStyle(errors.phone)} />
             </Field>
 
             <Field label={T('Anything else we should know? (optional)', '其他补充说明（选填）')} err={errors.notes}>
@@ -737,7 +749,7 @@ export default function ApplyForm({ language }) {
                 ]] : []),
               ].map(([field, label]) => (
                 <label key={field} style={{ display: 'flex', alignItems: 'flex-start', gap: 9, color: '#394255', fontSize: 12.5, lineHeight: 1.55, cursor: 'pointer' }}>
-                  <input type="checkbox" checked={form[field]} onChange={toggle(field)} style={{ marginTop: 3, accentColor: '#2b3d6d' }} />
+                  <input type="checkbox" checked={form[field]} onChange={toggle(field)} required style={{ marginTop: 3, accentColor: '#2b3d6d' }} />
                   <span>{label}{errors[field] ? <strong style={{ color: '#b91c1c' }}> · {errors[field]}</strong> : null}</span>
                 </label>
               ))}

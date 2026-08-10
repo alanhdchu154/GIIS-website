@@ -221,6 +221,55 @@ Best,
 GIIS Admissions`;
 }
 
+function outreachChannelsFor(app) {
+  const channels = [];
+  if (app?.parentEmail) channels.push({ value: 'email', label: 'Email', contact: app.parentEmail });
+  if (app?.phone) channels.push({ value: 'phone', label: 'Phone', contact: app.phone });
+  const weChat = app?.parentWeChat || app?.wechatId || app?.wechat || '';
+  if (weChat) channels.push({ value: 'wechat', label: 'WeChat', contact: weChat });
+  return channels;
+}
+
+function firstOutreachDraft(app, messageLanguage = 'en') {
+  const isTransfer = applicationTypeForDraft(app) === 'transfer';
+  if (messageLanguage === 'zh') {
+    return {
+      subject: `GIIS 申请下一步 - ${app.studentName}`,
+      body: `${app.parentName} 您好：
+
+感谢您确认 ${app.studentName} 的 GIIS 申请。我们已经收到家庭提供的基本资料，下一步希望和您完成一次简短的入学路径沟通。
+
+${isTransfer
+  ? '转学生审核需要确认原学校记录的取得时间，并在收到可核验资料后进行逐科评估。家庭提供的学分估计与目标日期仅供初步规划。'
+  : '我们会先确认适合的年级、开始时间与学习支持方式，再建议后续入学步骤。'}
+
+请回复两个方便沟通的时间，并告诉我们您最希望先解决的问题。此阶段不会收取费用，也不代表已经录取或确认转入学分。
+
+GIIS 招生团队
+admissions@genesisideas.school`,
+    };
+  }
+  return {
+    subject: `Next step for ${app.studentName}'s GIIS application`,
+    body: `Dear ${app.parentName},
+
+Thank you for confirming ${app.studentName}'s GIIS application. We received the family's initial information and would like to complete a short admissions path conversation as the next step.
+
+${isTransfer
+  ? 'For a transfer review, we will confirm when prior-school records can be obtained and complete a course-by-course review after verifiable records arrive. Family credit estimates and target dates are planning information only.'
+  : 'We will first confirm grade fit, intended start timing, and the appropriate level of learning support before recommending the next enrollment step.'}
+
+Please reply with two convenient times to talk and the question you would most like us to address first. No payment is collected at this stage, and this message does not confirm admission or transfer credit.
+
+GIIS Admissions
+admissions@genesisideas.school`,
+  };
+}
+
+function applicationTypeForDraft(app) {
+  return applicationReviewFor(app)?.applicantType || app?.applicantType || 'new';
+}
+
 function parseApplicationReviewNotes(notes = '') {
   const text = String(notes);
   const current = text.match(
@@ -438,6 +487,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   const [workflowMode, setWorkflowMode] = useState('loading');
   const [worklistMode, setWorklistMode] = useState('all');
   const [readinessFilter, setReadinessFilter] = useState('');
+  const [outreachFlow, setOutreachFlow] = useState(null);
 
   const session = getAdminSession();
   useEffect(() => { if (!session) navigate('/admin/login', { replace: true }); }, [session, navigate]);
@@ -452,7 +502,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
           setWorkflowMode('unavailable');
           return;
         }
-        setWorkflowMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v3' ? 'serious' : 'legacy');
+        setWorkflowMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v4' ? 'serious' : 'legacy');
       } catch {
         if (active) setWorkflowMode('unavailable');
       }
@@ -550,10 +600,54 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
         body: JSON.stringify({ markContacted: true }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) { showToast(data.error || 'Could not record family contact'); return; }
+      if (!res.ok) { showToast(data.error || 'Could not record family contact'); return false; }
       showToast('Family contact recorded');
-      load();
+      await load();
+      return true;
     } finally { setSaving(''); }
+  }
+
+  function openOutreachFlow(app) {
+    const channels = outreachChannelsFor(app);
+    const preferred = channels.some((channel) => channel.value === app.contactPreference)
+      ? app.contactPreference
+      : channels[0]?.value || '';
+    setOutreachFlow({
+      app,
+      step: 1,
+      channel: preferred,
+      messageLanguage: app.preferredLanguage === 'zh' ? 'zh' : 'en',
+      actionTaken: false,
+    });
+  }
+
+  function moveOutreachFlow(changes) {
+    setOutreachFlow((current) => current ? { ...current, ...changes } : current);
+  }
+
+  async function copyOutreachMessage(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast('Outreach message copied');
+      moveOutreachFlow({ step: 3, actionTaken: true });
+    } catch {
+      showToast('Copy failed — select the preview manually');
+    }
+  }
+
+  function openOutreachEmail(app, draft) {
+    window.location.href = `mailto:${encodeURIComponent(app.parentEmail)}?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
+    moveOutreachFlow({ step: 3, actionTaken: true });
+  }
+
+  async function confirmOutreachSent() {
+    if (!outreachFlow?.actionTaken) return;
+    const confirmed = window.confirm(
+      `Confirm only after you actually contacted ${outreachFlow.app.parentName}. Opening or copying the draft is not enough. Continue?`
+    );
+    if (!confirmed) return;
+    const recorded = await markFamilyContacted(outreachFlow.app.id);
+    if (recorded) setOutreachFlow(null);
   }
 
   async function confirmRecordsRequestSent(app) {
@@ -705,6 +799,9 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
 
   if (!session) return null;
   const workflowEnabled = workflowMode === 'serious';
+  const outreachChannels = outreachFlow ? outreachChannelsFor(outreachFlow.app) : [];
+  const outreachDraft = outreachFlow ? firstOutreachDraft(outreachFlow.app, outreachFlow.messageLanguage) : null;
+  const selectedOutreachChannel = outreachChannels.find((channel) => channel.value === outreachFlow?.channel);
 
   return (
     <>
@@ -879,10 +976,23 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                           <span style={{ fontSize: 12.5, fontWeight: 750, color: '#26324f', lineHeight: 1.4 }}>{app.nextAction || readiness.action || 'Review application'}</span>
                         </div>
                       </div>
-                      <button onClick={() => setExpanded(expanded === app.id ? null : app.id)}
-                        style={{ padding: '7px 14px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: 'none', fontSize: 13, fontWeight: 600, color: '#2b3d6d', cursor: 'pointer' }}>
-                        {expanded === app.id ? T('Close', '收起') : T('View', '查看')}
-                      </button>
+                      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                        {workflowEnabled && (
+                          <button
+                            type="button"
+                            onClick={() => openOutreachFlow(app)}
+                            disabled={!interestConfirmed || outreachChannelsFor(app).length === 0}
+                            title={!interestConfirmed ? T('Wait for parent email confirmation', '请先等待家长完成邮箱确认') : undefined}
+                            style={{ padding: '7px 12px', borderRadius: 8, border: 0, background: interestConfirmed ? '#2b3d6d' : '#aab2c2', fontSize: 12, fontWeight: 800, color: '#fff', cursor: interestConfirmed ? 'pointer' : 'not-allowed' }}
+                          >
+                            {app.firstResponseAt ? T('Contact family', '联络家庭') : T('Start first outreach', '开始首次联络')}
+                          </button>
+                        )}
+                        <button onClick={() => setExpanded(expanded === app.id ? null : app.id)}
+                          style={{ padding: '7px 14px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: 'none', fontSize: 13, fontWeight: 600, color: '#2b3d6d', cursor: 'pointer' }}>
+                          {expanded === app.id ? T('Close', '收起') : T('View', '查看')}
+                        </button>
+                      </div>
                     </div>
 
                     {/* Expanded detail */}
@@ -978,17 +1088,9 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                               <p style={{ fontSize: 10, fontWeight: 800, color: '#2b3d6d', letterSpacing: 1, textTransform: 'uppercase', margin: '0 0 3px' }}>{T('Case Tracking', '案件追踪')}</p>
                               <p style={{ fontSize: 11.5, color: slaColors.fg, margin: 0 }}>{sla.label}</p>
                             </div>
-                            <button
-                              onClick={() => markFamilyContacted(app.id)}
-                              disabled={saving === app.id + 'contacted' || !interestConfirmed}
-                              style={{ padding: '7px 12px', borderRadius: 8, border: '1.5px solid #1b6b3a', background: '#fff', color: '#1b6b3a', fontSize: 12, fontWeight: 800, cursor: 'pointer' }}
-                            >
-                              {!interestConfirmed
-                                ? T('Wait for parent confirmation', '等待家长确认')
-                                : app.firstResponseAt
-                                  ? T('Record another contact', '记录再次联络')
-                                  : T('Mark first response sent', '标记已发送首次回复')}
-                            </button>
+                            <span style={{ fontSize: 11.5, color: '#5c6578' }}>
+                              {T('Use the guided outreach button above to prepare and record contact.', '请使用上方的联络引导来准备内容并记录联络。')}
+                            </span>
                           </div>
                           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 10 }}>
                             <label style={{ fontSize: 10, fontWeight: 800, color: '#687083', textTransform: 'uppercase' }}>
@@ -1136,6 +1238,91 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
           }
         </div>
       </AdminPage>
+
+      {outreachFlow && outreachDraft && (
+        <div role="dialog" aria-modal="true" aria-labelledby="outreach-title" style={{ position: 'fixed', inset: 0, background: 'rgba(15,16,32,0.58)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10000, fontFamily: 'Inter, sans-serif', padding: 16 }}>
+          <div style={{ background: '#fff', borderRadius: 8, padding: '24px', maxWidth: 640, width: '100%', maxHeight: '92vh', overflowY: 'auto', boxShadow: '0 24px 64px rgba(0,0,0,0.24)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16, alignItems: 'flex-start', marginBottom: 18 }}>
+              <div>
+                <p style={{ margin: '0 0 5px', color: '#2b3d6d', fontSize: 10, fontWeight: 900, letterSpacing: 1, textTransform: 'uppercase' }}>{T('Guided family contact', '家庭联络引导')}</p>
+                <h2 id="outreach-title" style={{ margin: '0 0 5px', fontSize: 20, color: '#1a1d24' }}>
+                  {outreachFlow.app.firstResponseAt ? T('Prepare family follow-up', '准备家庭后续联络') : T('Complete first outreach', '完成首次联络')}
+                </h2>
+                <p style={{ margin: 0, color: '#5c6578', fontSize: 12.5 }}>{outreachFlow.app.studentName} · {outreachFlow.app.parentName}</p>
+              </div>
+              <button type="button" onClick={() => setOutreachFlow(null)} aria-label={T('Close outreach guide', '关闭联络引导')} title={T('Close', '关闭')} style={{ width: 34, height: 34, borderRadius: 8, border: '1.5px solid #d4d8e0', background: '#fff', color: '#5c6578', fontSize: 20, lineHeight: 1, cursor: 'pointer' }}>×</button>
+            </div>
+
+            <ol aria-label={T('Outreach progress', '联络进度')} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 8, listStyle: 'none', margin: '0 0 20px', padding: 0 }}>
+              {[T('Channel', '方式'), T('Message', '内容'), T('Confirm', '确认')].map((label, index) => {
+                const step = index + 1;
+                return (
+                  <li key={label} aria-current={outreachFlow.step === step ? 'step' : undefined} style={{ minWidth: 0 }}>
+                    <div style={{ height: 4, borderRadius: 2, background: outreachFlow.step >= step ? '#2b3d6d' : '#dfe4ec', marginBottom: 6 }} />
+                    <span style={{ display: 'block', fontSize: 11, fontWeight: outreachFlow.step === step ? 900 : 700, color: outreachFlow.step >= step ? '#2b3d6d' : '#8a92a1', overflowWrap: 'anywhere' }}>{step}. {label}</span>
+                  </li>
+                );
+              })}
+            </ol>
+
+            {outreachFlow.step === 1 && (
+              <div>
+                <p style={{ margin: '0 0 10px', color: '#1a1d24', fontSize: 13.5, fontWeight: 800 }}>{T('How will you contact the family?', '您将如何联络家庭？')}</p>
+                <div role="radiogroup" aria-label={T('Contact channel', '联络方式')} style={{ display: 'grid', gap: 8, marginBottom: 18 }}>
+                  {outreachChannels.map((channel) => (
+                    <label key={channel.value} style={{ display: 'flex', alignItems: 'center', gap: 10, border: `1.5px solid ${outreachFlow.channel === channel.value ? '#2b3d6d' : '#d4d8e0'}`, background: outreachFlow.channel === channel.value ? '#f0f4ff' : '#fff', borderRadius: 8, padding: '11px 12px', cursor: 'pointer' }}>
+                      <input type="radio" name="outreach-channel" value={channel.value} checked={outreachFlow.channel === channel.value} onChange={() => moveOutreachFlow({ channel: channel.value })} style={{ accentColor: '#2b3d6d' }} />
+                      <span style={{ minWidth: 0 }}>
+                        <strong style={{ display: 'block', color: '#1a1d24', fontSize: 13 }}>{channel.label}</strong>
+                        <span style={{ display: 'block', color: '#5c6578', fontSize: 12, overflowWrap: 'anywhere' }}>{channel.contact}</span>
+                      </span>
+                    </label>
+                  ))}
+                </div>
+                <div role="group" aria-label={T('Message language', '讯息语言')} style={{ display: 'flex', border: '1.5px solid #d4d8e0', borderRadius: 8, overflow: 'hidden', width: 'fit-content', maxWidth: '100%', marginBottom: 18 }}>
+                  {[['en', 'English'], ['zh', '中文']].map(([value, label]) => (
+                    <button key={value} type="button" aria-pressed={outreachFlow.messageLanguage === value} onClick={() => moveOutreachFlow({ messageLanguage: value })} style={{ border: 0, borderRight: value === 'en' ? '1px solid #d4d8e0' : 0, padding: '8px 14px', background: outreachFlow.messageLanguage === value ? '#2b3d6d' : '#fff', color: outreachFlow.messageLanguage === value ? '#fff' : '#2b3d6d', fontWeight: 800, cursor: 'pointer' }}>{label}</button>
+                  ))}
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                  <button type="button" onClick={() => moveOutreachFlow({ step: 2 })} disabled={!selectedOutreachChannel} style={{ padding: '10px 16px', borderRadius: 8, border: 0, background: selectedOutreachChannel ? '#2b3d6d' : '#aab2c2', color: '#fff', fontWeight: 800, cursor: selectedOutreachChannel ? 'pointer' : 'not-allowed' }}>{T('Review message', '检查讯息')}</button>
+                </div>
+              </div>
+            )}
+
+            {outreachFlow.step === 2 && (
+              <div>
+                <p style={{ margin: '0 0 5px', color: '#1a1d24', fontSize: 13.5, fontWeight: 800 }}>{T('Review before using', '使用前请检查')}</p>
+                <p style={{ margin: '0 0 12px', color: '#5c6578', fontSize: 12.5, lineHeight: 1.55 }}>{T('Opening or copying this draft does not mark the family as contacted.', '打开或复制草稿不会将家庭标记为已联络。')}</p>
+                {outreachFlow.channel === 'email' && <p style={{ margin: '0 0 8px', color: '#26324f', fontSize: 12.5 }}><strong>{T('Subject', '主题')}:</strong> {outreachDraft.subject}</p>}
+                <textarea aria-label={T('Outreach message preview', '联络讯息预览')} readOnly value={outreachDraft.body} rows={12} style={{ width: '100%', boxSizing: 'border-box', border: '1.5px solid #d4d8e0', borderRadius: 8, padding: '11px 12px', fontFamily: 'Inter, sans-serif', fontSize: 12.5, lineHeight: 1.6, resize: 'vertical', color: '#1a1d24' }} />
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap', marginTop: 14 }}>
+                  <button type="button" onClick={() => moveOutreachFlow({ step: 1, actionTaken: false })} style={{ padding: '9px 14px', borderRadius: 8, background: '#fff', border: '1.5px solid #d4d8e0', color: '#2b3d6d', fontWeight: 800, cursor: 'pointer' }}>{T('Back', '上一步')}</button>
+                  <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                    <button type="button" onClick={() => copyOutreachMessage(`${outreachFlow.channel === 'email' ? `Subject: ${outreachDraft.subject}\n\n` : ''}${outreachDraft.body}`)} style={{ padding: '9px 14px', borderRadius: 8, background: '#fff', border: '1.5px solid #2b3d6d', color: '#2b3d6d', fontWeight: 800, cursor: 'pointer' }}>{T('Copy message', '复制讯息')}</button>
+                    {outreachFlow.channel === 'email' && (
+                      <button type="button" onClick={() => openOutreachEmail(outreachFlow.app, outreachDraft)} style={{ padding: '9px 14px', borderRadius: 8, background: '#2b3d6d', border: 0, color: '#fff', fontWeight: 800, cursor: 'pointer' }}>{T('Open email draft', '打开邮件草稿')}</button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {outreachFlow.step === 3 && (
+              <div>
+                <div style={{ border: '1px solid #f3d27b', background: '#fff8e6', borderRadius: 8, padding: '12px 13px', marginBottom: 16, color: '#5c4a12', fontSize: 12.5, lineHeight: 1.6 }}>
+                  {T('Return here only after the email, call, or message was actually completed. The final button records the contact time; it does not send anything.', '只有在邮件、电话或讯息确实完成后才回到这里。最后按钮只会记录联络时间，不会自动发送任何内容。')}
+                </div>
+                <p style={{ margin: '0 0 18px', color: '#1a1d24', fontSize: 13.5 }}><strong>{selectedOutreachChannel?.label || T('Selected channel', '已选方式')}:</strong> {selectedOutreachChannel?.contact || '—'}</p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }}>
+                  <button type="button" onClick={() => moveOutreachFlow({ step: 2, actionTaken: false })} style={{ padding: '9px 14px', borderRadius: 8, background: '#fff', border: '1.5px solid #d4d8e0', color: '#2b3d6d', fontWeight: 800, cursor: 'pointer' }}>{T('Review again', '再次检查')}</button>
+                  <button type="button" onClick={confirmOutreachSent} disabled={saving === outreachFlow.app.id + 'contacted'} style={{ padding: '10px 16px', borderRadius: 8, background: '#1b6b3a', border: 0, color: '#fff', fontWeight: 800, cursor: 'pointer' }}>{saving === outreachFlow.app.id + 'contacted' ? T('Recording…', '记录中…') : T('Confirm contact completed', '确认已完成联络')}</button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Toast */}
       {toast && (
