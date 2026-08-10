@@ -41,8 +41,13 @@ backend/database window is completed.
   endpoint and checks the `X-GIIS-Admissions-Workflow` response header. When an
   older backend is still live, the new form pauses submission and the admin
   page pauses new review/approval/payment/activation controls until
-  `admissions-v3` is live. It must never silently discard v2 intake fields or
+  `admissions-v4` is live. It must never silently discard v2 intake fields or
   claim that a confirmation email was sent without backend support.
+- The `admissions-v4` public form requires the main family concern for every
+  serious applicant and a current or most recent school for new students. The
+  admin first-outreach guide prepares an email, phone, or available WeChat
+  message, but opening or copying a draft never records contact; the operator
+  must separately confirm that the contact actually happened.
 
 ## Commit Split
 
@@ -54,7 +59,7 @@ Prepare and review two scoped commits:
    and browser-audit fixture/report updates.
 
 Push both reviewed commits only after the local gates pass. Netlify may release
-the frontend before Lightsail is updated; the `admissions-v3` capability gate
+the frontend before Lightsail is updated; the `admissions-v4` capability gate
 temporarily pauses submission in that window rather than dropping structured
 intake data. The preferred activation order remains backend/database first,
 then production verification of the already-pushed frontend.

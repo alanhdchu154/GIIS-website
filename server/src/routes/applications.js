@@ -343,7 +343,12 @@ function parseApplicationSubmission(body = {}) {
     'applicantType',
     'parentName',
     'parentEmail',
-    ...(seriousGate ? ['motivation', 'intendedStartTiming'] : []),
+    ...(seriousGate ? [
+      'motivation',
+      'intendedStartTiming',
+      'mainConcern',
+      ...(data.applicantType === 'new' ? ['currentSchool'] : []),
+    ] : []),
   ];
   const missing = required.filter((field) => !data[field]);
   if (missing.length) {
@@ -1184,7 +1189,7 @@ router.get('/capabilities', (_req, res) => {
     applicationIntakeVersion: 'serious-v1',
     transferIntakeVersion: 'transfer-v2',
     interestConfirmation: true,
-    adminWorkflowVersion: 'admissions-v3',
+    adminWorkflowVersion: 'admissions-v4',
     transferEvaluation: true,
   });
 });

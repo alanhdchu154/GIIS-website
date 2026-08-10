@@ -128,6 +128,22 @@ describe('application submission parsing', () => {
     });
   });
 
+  test('requires the main family concern and a current school for serious new-student intake', () => {
+    expect(parseApplicationSubmission(validBody({ mainConcern: '' }))).toEqual({
+      ok: false,
+      status: 400,
+      error: 'Missing fields: mainConcern',
+    });
+    expect(parseApplicationSubmission(validBody({
+      applicantType: 'new',
+      currentSchool: '',
+    }))).toEqual({
+      ok: false,
+      status: 400,
+      error: 'Missing fields: currentSchool',
+    });
+  });
+
   test('accepts transfer families without a transcript when they provide a concrete plan', () => {
     const parsed = parseApplicationSubmission(validBody({
       transcriptAvailable: 'not-yet',
