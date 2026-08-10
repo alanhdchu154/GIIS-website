@@ -1,6 +1,6 @@
 # Admissions Intake and Transfer Review Deploy Runbook
 
-Last updated: 2026-08-08
+Last updated: 2026-08-10
 
 Use this runbook to release the structured application queue and the
 course-by-course transfer-credit decision workflow. This release changes both
@@ -21,16 +21,28 @@ backend/database window is completed.
 - Account activation also requires verified payment evidence.
 - No transcript files are uploaded or stored by this release.
 - Transfer families without a transcript may apply by providing a course
-  summary, records plan, explanation, and expected availability; official
+  summary, records-request situation, and expected availability; official
   records are still required before approval.
+- The additive `transfer-v2` intake collects current enrollment status,
+  repeatable prior-school history, operational records status/help/ETA,
+  optional estimated credits, graduation planning preference, and parent
+  relationship/contact preference. A course summary is required only while
+  usable records are unavailable. Family credit estimates and target dates are
+  planning inputs, not school decisions or graduation promises.
+- The admin records-request action is deliberately two-part: copying the
+  prepared draft changes no state; an operator must send the reviewed message
+  and separately confirm it. Only that confirmation writes
+  `recordsStatus=requested`, the `official_records_requested` event, and the
+  next action. Received or uploaded material is never marked verified
+  automatically.
 - The legacy notes envelope remains readable during a backend-first rollout,
   and pre-confirmation-era cases remain reviewable.
 - The frontend sends a `HEAD` request to the existing `/api/checkout/tiers`
   endpoint and checks the `X-GIIS-Admissions-Workflow` response header. When an
-  older backend is still live, public submissions use the legacy direct-review
-  response and the admin page pauses new review/approval/payment/activation
-  controls. It must never claim that a confirmation email was sent without
-  backend support.
+  older backend is still live, the new form pauses submission and the admin
+  page pauses new review/approval/payment/activation controls until
+  `admissions-v3` is live. It must never silently discard v2 intake fields or
+  claim that a confirmation email was sent without backend support.
 
 ## Commit Split
 
@@ -42,10 +54,10 @@ Prepare and review two scoped commits:
    and browser-audit fixture/report updates.
 
 Push both reviewed commits only after the local gates pass. Netlify may release
-the frontend before Lightsail is updated; the capability fallback makes that
-state safe but does not make the new workflow live. The preferred activation
-order remains backend/database first, then production verification of the
-already-pushed frontend.
+the frontend before Lightsail is updated; the `admissions-v3` capability gate
+temporarily pauses submission in that window rather than dropping structured
+intake data. The preferred activation order remains backend/database first,
+then production verification of the already-pushed frontend.
 
 ## Backend Window
 
@@ -103,8 +115,8 @@ already-pushed frontend.
    process on the same port.
 
    ```bash
-   pm2 restart giis-transcript-api
-   pm2 logs giis-transcript-api --lines 80
+   pm2 restart giis-api
+   pm2 logs giis-api --lines 80
    ```
 
 8. Confirm health and one authenticated admin read before ending the freeze.
@@ -114,8 +126,9 @@ already-pushed frontend.
    ```
 
    In `/admin/applications`, confirm legacy cases load, the type filter works,
-   and transfer cases show the evaluation editor. Do not change a real family's
-   status merely for smoke testing.
+   and transfer cases show the school history, records-request controls, and
+   evaluation editor. Do not change a real family's status merely for smoke
+   testing.
 
 9. Inspect API logs and the admin `Awaiting parent confirmation` filter after
    the smoke submission. `interestConfirmationSentAt` is written only after
@@ -154,3 +167,12 @@ cleanup procedure.
   place unless a reviewed database plan says otherwise. Old code ignores them.
 - Do not restore a database dump unless production data was damaged and the
   restore has been explicitly approved.
+
+## Deferred Secure Upload
+
+This release does not add a public transcript file input. Before document
+upload can ship, define private storage, encryption, role-based access,
+retention/deletion, audit logging, MIME and size limits, malware scanning,
+secure download behavior, backups, and incident handling. A successful upload
+may set a human-review queue state only; it must never prove that a record is
+official or verified.

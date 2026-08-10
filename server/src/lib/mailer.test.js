@@ -20,6 +20,13 @@ describe('new application alert', () => {
       previousCredits: '6-11',
       transcriptAvailable: 'not-yet',
       graduationTiming: 'asap',
+      currentEnrollmentStatus: 'currently-enrolled',
+      priorSchoolsJson: JSON.stringify([{ schoolName: 'Prior High School', attendancePeriod: '2024-2026' }]),
+      recordsSituation: 'no-official-transcript',
+      recordsHelpNeeded: 'already-requested',
+      transcriptExpectedTiming: '14-business-days',
+      parentRelationship: 'parent',
+      contactPreference: 'email',
       mainConcern: 'records',
     });
 
@@ -28,6 +35,8 @@ describe('new application alert', () => {
     expect(content.text).toContain('Applicant type: Transfer student');
     expect(content.text).toContain('Previous credits: 6-11');
     expect(content.text).toContain('Transcript: not-yet');
+    expect(content.text).toContain('School history: Prior High School (2024-2026)');
+    expect(content.text).toContain('Records help: already-requested');
     expect(content.html).toContain('Review in Admin');
   });
 

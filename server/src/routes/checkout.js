@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const ADMISSIONS_WORKFLOW_VERSION = 'admissions-v3';
 const Stripe = require('stripe');
 const jwt = require('jsonwebtoken');
 
@@ -172,7 +173,7 @@ router.get('/session/:id', async (req, res) => {
  * (never the Stripe price ID, never anything sensitive).
  */
 router.get('/tiers', (_req, res) => {
-  res.set('X-GIIS-Admissions-Workflow', 'admissions-v2');
+  res.set('X-GIIS-Admissions-Workflow', ADMISSIONS_WORKFLOW_VERSION);
   const out = {};
   for (const [key, tier] of Object.entries(PRICE_TIERS)) {
     out[key] = {
@@ -189,3 +190,4 @@ router.get('/tiers', (_req, res) => {
 module.exports = router;
 module.exports.PRICE_TIERS = PRICE_TIERS;  // exposed for webhook handler to read tier config
 module.exports.checkoutSessionSummary = checkoutSessionSummary;
+module.exports.ADMISSIONS_WORKFLOW_VERSION = ADMISSIONS_WORKFLOW_VERSION;

@@ -148,6 +148,14 @@ function buildNewApplicationAlert({
   previousCredits,
   transcriptAvailable,
   graduationTiming,
+  currentEnrollmentStatus,
+  priorSchoolsJson,
+  recordsSituation,
+  recordsHelpNeeded,
+  transcriptExpectedTiming,
+  graduationTargetDate,
+  parentRelationship,
+  contactPreference,
   mainConcern,
 }) {
   const isTransfer = applicantType === 'transfer';
@@ -156,6 +164,14 @@ function buildNewApplicationAlert({
     : `New GIIS Application — ${studentName} (${gradeLevel})`;
   const adminUrl = `${SITE}/admin/applications`;
   const typeLabel = isTransfer ? 'Transfer student' : 'New student';
+  let priorSchools = [];
+  try {
+    const parsed = JSON.parse(priorSchoolsJson || '[]');
+    if (Array.isArray(parsed)) priorSchools = parsed.filter((row) => row?.schoolName).slice(0, 5);
+  } catch {}
+  const schoolHistory = priorSchools
+    .map((row) => `${row.schoolName}${row.attendancePeriod ? ` (${row.attendancePeriod})` : ''}`)
+    .join('; ');
   const rows = [
     ['Student', `<strong>${escapeHtml(studentName)}</strong> · ${escapeHtml(gradeLevel)}`],
     ['Applicant type', `<strong>${escapeHtml(typeLabel)}</strong>`],
@@ -164,9 +180,16 @@ function buildNewApplicationAlert({
     ...(targetUniversities ? [['Target unis', escapeHtml(targetUniversities)]] : []),
     ['Language', preferredLanguage === 'zh' ? 'Chinese' : 'English'],
     ...(isTransfer ? [
+      ['Current status', escapeHtml(currentEnrollmentStatus || 'Not provided')],
+      ['School history', escapeHtml(schoolHistory || currentSchool || 'Not provided')],
       ['Previous credits', escapeHtml(previousCredits || 'Not provided')],
       ['Transcript', escapeHtml(transcriptAvailable || 'Not provided')],
+      ['Records situation', escapeHtml(recordsSituation || 'Not provided')],
+      ['Records help', escapeHtml(recordsHelpNeeded || 'Not provided')],
+      ['Records ETA', escapeHtml(transcriptExpectedTiming || 'Not provided')],
       ['Graduation timing', escapeHtml(graduationTiming || 'Not provided')],
+      ...(graduationTargetDate ? [['Family target date', escapeHtml(graduationTargetDate)]] : []),
+      ['Contact', escapeHtml(`${parentRelationship || 'Not provided'} · ${contactPreference || 'Not provided'}`)],
     ] : []),
     ['Main concern', escapeHtml(mainConcern || 'Not provided')],
   ];
@@ -178,8 +201,15 @@ function buildNewApplicationAlert({
     targetUniversities ? `Target universities: ${targetUniversities}` : '',
     `Language: ${preferredLanguage === 'zh' ? 'Chinese' : 'English'}`,
     isTransfer ? `Previous credits: ${previousCredits || 'Not provided'}` : '',
+    isTransfer ? `Current status: ${currentEnrollmentStatus || 'Not provided'}` : '',
+    isTransfer ? `School history: ${schoolHistory || currentSchool || 'Not provided'}` : '',
     isTransfer ? `Transcript: ${transcriptAvailable || 'Not provided'}` : '',
+    isTransfer ? `Records situation: ${recordsSituation || 'Not provided'}` : '',
+    isTransfer ? `Records help: ${recordsHelpNeeded || 'Not provided'}` : '',
+    isTransfer ? `Records ETA: ${transcriptExpectedTiming || 'Not provided'}` : '',
     isTransfer ? `Graduation timing: ${graduationTiming || 'Not provided'}` : '',
+    isTransfer && graduationTargetDate ? `Family target date: ${graduationTargetDate}` : '',
+    isTransfer ? `Contact: ${parentRelationship || 'Not provided'} · ${contactPreference || 'Not provided'}` : '',
     `Main concern: ${mainConcern || 'Not provided'}`,
     `Review: ${adminUrl}`,
   ].filter(Boolean);

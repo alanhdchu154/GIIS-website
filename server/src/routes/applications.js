@@ -19,6 +19,13 @@ const APPLICANT_TYPES = new Set(['new', 'transfer']);
 const PREVIOUS_CREDIT_RANGES = new Set(['0-5', '6-11', '12-17', '18-23', '24+']);
 const TRANSCRIPT_OPTIONS = new Set(['yes', 'partial', 'not-yet']);
 const GRADUATION_TIMINGS = new Set(['asap', '1-year', '2-years', 'not-sure']);
+const TRANSFER_GRADUATION_TIMINGS = new Set(['normal-pace', 'accelerated', 'target-date', 'not-sure']);
+const CURRENT_ENROLLMENT_STATUSES = new Set(['preparing-to-enroll', 'currently-enrolled', 'left-prior-school', 'other']);
+const RECORDS_SITUATIONS = new Set(['official-transcript', 'partial-records', 'no-official-transcript', 'homeschool-no-traditional', 'not-sure']);
+const RECORDS_HELP_OPTIONS = new Set(['records-in-hand', 'already-requested', 'can-request', 'need-giis-help', 'not-sure-how']);
+const RECORDS_ETA_OPTIONS = new Set(['available-now', '3-business-days', '7-business-days', '14-business-days', 'uncertain']);
+const PARENT_RELATIONSHIPS = new Set(['parent', 'legal-guardian', 'self', 'other']);
+const CONTACT_PREFERENCES = new Set(['email', 'phone']);
 const MAIN_CONCERNS = new Set(['grade9-path', 'credits', 'graduation', 'records', 'motivation']);
 const INTENDED_START_TIMINGS = new Set(['within-30-days', 'next-semester', 'next-school-year', 'exploring']);
 const RECORDS_STATUSES = new Set(['not_requested', 'requested', 'partial', 'received', 'verified']);
@@ -133,6 +140,42 @@ function cleanString(value) {
 
 function boundedText(value, maxLength) {
   return String(value || '').trim().replace(/\r\n/g, '\n').slice(0, maxLength);
+}
+
+function normalizePriorSchools(value) {
+  let rows = value;
+  if (typeof value === 'string') {
+    try {
+      rows = JSON.parse(value);
+    } catch {
+      return { ok: false, error: 'priorSchools must be a valid array' };
+    }
+  }
+  if (!Array.isArray(rows) || rows.length > 5) {
+    return { ok: false, error: 'priorSchools must contain between 1 and 5 schools' };
+  }
+  const schools = [];
+  for (const row of rows) {
+    if (!row || typeof row !== 'object' || Array.isArray(row)) {
+      return { ok: false, error: 'Each prior school must include a school name and attendance period' };
+    }
+    const schoolName = cleanString(row.schoolName).slice(0, 160);
+    const attendancePeriod = cleanString(row.attendancePeriod).slice(0, 120);
+    if (!schoolName || !attendancePeriod) {
+      return { ok: false, error: 'Each prior school must include a school name and attendance period' };
+    }
+    schools.push({ schoolName, attendancePeriod });
+  }
+  return { ok: true, schools, json: JSON.stringify(schools) };
+}
+
+function isIsoDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const [year, month, day] = value.split('-').map(Number);
+  const parsed = new Date(Date.UTC(year, month - 1, day));
+  return parsed.getUTCFullYear() === year
+    && parsed.getUTCMonth() === month - 1
+    && parsed.getUTCDate() === day;
 }
 
 function interestTokenHash(token) {
@@ -257,6 +300,8 @@ function transferEvaluationEditError(app, enrollmentState = {}) {
 function parseApplicationSubmission(body = {}) {
   const legacy = legacyReviewFields(body.notes);
   const seriousGate = body.intakeVersion === 'serious-v1';
+  const transferV2 = seriousGate && body.transferIntakeVersion === 'transfer-v2';
+  const priorSchools = normalizePriorSchools(body.priorSchools || body.priorSchoolsJson || []);
   const data = {
     studentName: cleanString(body.studentName),
     dob: cleanString(body.dob),
@@ -277,6 +322,14 @@ function parseApplicationSubmission(body = {}) {
     transferCourseSummary: boundedText(body.transferCourseSummary, 1200),
     transcriptPlanDetails: boundedText(body.transcriptPlanDetails, 600),
     transcriptExpectedTiming: cleanString(body.transcriptExpectedTiming).slice(0, 120),
+    currentEnrollmentStatus: cleanString(body.currentEnrollmentStatus),
+    priorSchoolsJson: priorSchools.ok ? priorSchools.json : '[]',
+    recordsSituation: cleanString(body.recordsSituation),
+    recordsHelpNeeded: cleanString(body.recordsHelpNeeded),
+    graduationTargetDate: cleanString(body.graduationTargetDate).slice(0, 10),
+    parentRelationship: cleanString(body.parentRelationship),
+    contactPreference: cleanString(body.contactPreference),
+    transferRecordsAcknowledged: body.transferRecordsAcknowledged === true,
     tuitionAware: body.tuitionAware === true,
     noGuaranteeAcknowledged: body.noGuaranteeAcknowledged === true,
     responseCommitmentAcknowledged: body.responseCommitmentAcknowledged === true,
@@ -322,30 +375,83 @@ function parseApplicationSubmission(body = {}) {
   }
 
   if (data.applicantType === 'transfer') {
-    const transferMissing = [
-      'previousCredits',
-      'transcriptAvailable',
-      'graduationTiming',
-      ...(seriousGate ? ['transferCourseSummary', 'transcriptPlanDetails', 'transcriptExpectedTiming'] : []),
-    ]
-      .filter((field) => !data[field]);
-    if (transferMissing.length) {
-      return { ok: false, status: 400, error: `Missing transfer fields: ${transferMissing.join(', ')}` };
+    if (transferV2 && !priorSchools.ok) {
+      return { ok: false, status: 400, error: priorSchools.error };
     }
-    if (!PREVIOUS_CREDIT_RANGES.has(data.previousCredits)) {
+    const transferMissing = transferV2
+      ? [
+          'currentEnrollmentStatus',
+          ...(priorSchools.schools?.length ? [] : ['priorSchools']),
+          'recordsSituation',
+          'recordsHelpNeeded',
+          'transcriptExpectedTiming',
+          'graduationTiming',
+          'parentRelationship',
+          'contactPreference',
+        ]
+      : [
+          'previousCredits',
+          'transcriptAvailable',
+          'graduationTiming',
+          ...(seriousGate ? ['transferCourseSummary', 'transcriptPlanDetails', 'transcriptExpectedTiming'] : []),
+        ];
+    const missingTransferFields = transferMissing
+      .filter((field) => !data[field]);
+    if (missingTransferFields.length) {
+      return { ok: false, status: 400, error: `Missing transfer fields: ${missingTransferFields.join(', ')}` };
+    }
+    if (data.previousCredits && !PREVIOUS_CREDIT_RANGES.has(data.previousCredits)) {
       return { ok: false, status: 400, error: 'Invalid previousCredits' };
     }
-    if (!TRANSCRIPT_OPTIONS.has(data.transcriptAvailable)) {
+    if (data.transcriptAvailable && !TRANSCRIPT_OPTIONS.has(data.transcriptAvailable)) {
       return { ok: false, status: 400, error: 'Invalid transcriptAvailable' };
     }
-    if (!GRADUATION_TIMINGS.has(data.graduationTiming)) {
+    if (transferV2 && !CURRENT_ENROLLMENT_STATUSES.has(data.currentEnrollmentStatus)) {
+      return { ok: false, status: 400, error: 'Invalid currentEnrollmentStatus' };
+    }
+    if (transferV2 && !RECORDS_SITUATIONS.has(data.recordsSituation)) {
+      return { ok: false, status: 400, error: 'Invalid recordsSituation' };
+    }
+    if (transferV2 && !RECORDS_HELP_OPTIONS.has(data.recordsHelpNeeded)) {
+      return { ok: false, status: 400, error: 'Invalid recordsHelpNeeded' };
+    }
+    if (transferV2 && !RECORDS_ETA_OPTIONS.has(data.transcriptExpectedTiming)) {
+      return { ok: false, status: 400, error: 'Invalid transcriptExpectedTiming' };
+    }
+    if (transferV2 && !TRANSFER_GRADUATION_TIMINGS.has(data.graduationTiming)) {
       return { ok: false, status: 400, error: 'Invalid graduationTiming' };
     }
-    if (seriousGate && data.transferCourseSummary.length < 20) {
+    if (!transferV2 && !GRADUATION_TIMINGS.has(data.graduationTiming)) {
+      return { ok: false, status: 400, error: 'Invalid graduationTiming' };
+    }
+    if (transferV2 && !PARENT_RELATIONSHIPS.has(data.parentRelationship)) {
+      return { ok: false, status: 400, error: 'Invalid parentRelationship' };
+    }
+    if (transferV2 && !CONTACT_PREFERENCES.has(data.contactPreference)) {
+      return { ok: false, status: 400, error: 'Invalid contactPreference' };
+    }
+    if (transferV2 && data.contactPreference === 'phone' && !data.phone) {
+      return { ok: false, status: 400, error: 'Phone is required when contactPreference is phone' };
+    }
+    if (transferV2 && data.graduationTiming === 'target-date' && !isIsoDate(data.graduationTargetDate)) {
+      return { ok: false, status: 400, error: 'A valid graduationTargetDate is required for target-date planning' };
+    }
+    if (transferV2 && !data.transferRecordsAcknowledged) {
+      return { ok: false, status: 400, error: 'Missing acknowledgments: transferRecordsAcknowledged' };
+    }
+    const usableRecordsReported = ['official-transcript', 'partial-records'].includes(data.recordsSituation);
+    if (seriousGate && (!transferV2 || !usableRecordsReported) && data.transferCourseSummary.length < 20) {
       return { ok: false, status: 400, error: 'transferCourseSummary must be at least 20 characters' };
     }
-    if (seriousGate && data.transcriptPlanDetails.length < 10) {
+    if (!transferV2 && seriousGate && data.transcriptPlanDetails.length < 10) {
       return { ok: false, status: 400, error: 'transcriptPlanDetails must be at least 10 characters' };
+    }
+    if (transferV2) {
+      data.currentSchool = data.currentSchool || priorSchools.schools[0].schoolName;
+      data.transcriptAvailable = data.recordsSituation === 'official-transcript'
+        ? 'yes'
+        : data.recordsSituation === 'partial-records' ? 'partial' : 'not-yet';
+      if (data.graduationTiming !== 'target-date') data.graduationTargetDate = '';
     }
   } else {
     data.previousCredits = '';
@@ -354,6 +460,14 @@ function parseApplicationSubmission(body = {}) {
     data.transferCourseSummary = '';
     data.transcriptPlanDetails = '';
     data.transcriptExpectedTiming = '';
+    data.currentEnrollmentStatus = '';
+    data.priorSchoolsJson = '[]';
+    data.recordsSituation = '';
+    data.recordsHelpNeeded = '';
+    data.graduationTargetDate = '';
+    data.parentRelationship = '';
+    data.contactPreference = '';
+    data.transferRecordsAcknowledged = false;
   }
 
   return { ok: true, data };
@@ -448,9 +562,54 @@ function applicationAlertDetails(app) {
     previousCredits: app.previousCredits,
     transcriptAvailable: app.transcriptAvailable,
     graduationTiming: app.graduationTiming,
+    currentEnrollmentStatus: app.currentEnrollmentStatus,
+    priorSchoolsJson: app.priorSchoolsJson,
+    recordsSituation: app.recordsSituation,
+    recordsHelpNeeded: app.recordsHelpNeeded,
+    transcriptExpectedTiming: app.transcriptExpectedTiming,
+    graduationTargetDate: app.graduationTargetDate,
+    parentRelationship: app.parentRelationship,
+    contactPreference: app.contactPreference,
     mainConcern: app.mainConcern,
     appId: app.id,
   };
+}
+
+async function confirmOfficialRecordsRequested(applicationId, {
+  prismaClient = prisma,
+  actorEmail = 'admin',
+} = {}) {
+  const app = await prismaClient.application.findUnique({ where: { id: applicationId } });
+  if (!app) return { ok: false, status: 404, error: 'Application not found.' };
+  if (applicationTypeFor(app) !== 'transfer') {
+    return { ok: false, status: 400, error: 'Official records requests are only available for transfer applications.' };
+  }
+  if (!hasConfirmedInterest(app)) {
+    return { ok: false, status: 400, error: 'Wait for parent email confirmation before requesting records.' };
+  }
+  if (app.recordsStatus === 'requested') {
+    return { ok: true, status: 200, alreadyRequested: true };
+  }
+  if (['partial', 'received', 'verified'].includes(app.recordsStatus)) {
+    return { ok: false, status: 409, error: 'Current records status is later than requested; it will not be downgraded.' };
+  }
+  await withTransaction(prismaClient, async (tx) => {
+    await tx.application.update({
+      where: { id: applicationId },
+      data: { recordsStatus: 'requested', nextAction: 'Wait for official records' },
+    });
+    if (tx.applicationEvent) {
+      await tx.applicationEvent.create({
+        data: applicationEventData(
+          applicationId,
+          'official_records_requested',
+          actorEmail,
+          'Operator confirmed that the official records request was sent.',
+        ),
+      });
+    }
+  });
+  return { ok: true, status: 200, alreadyRequested: false };
 }
 
 async function submitPublicApplication(body, {
@@ -1023,8 +1182,9 @@ router.post('/confirm-interest', async (req, res) => {
 router.get('/capabilities', (_req, res) => {
   res.json({
     applicationIntakeVersion: 'serious-v1',
+    transferIntakeVersion: 'transfer-v2',
     interestConfirmation: true,
-    adminWorkflowVersion: 'admissions-v2',
+    adminWorkflowVersion: 'admissions-v3',
     transferEvaluation: true,
   });
 });
@@ -1049,6 +1209,16 @@ router.get('/', authenticate, requireAdmin, async (req, res) => {
     };
   }));
   res.json(enriched);
+});
+
+// POST /api/applications/:id/records-requested — admin confirmation only.
+// Preparing or copying a draft must never call this endpoint.
+router.post('/:id/records-requested', authenticate, requireAdmin, async (req, res) => {
+  const result = await confirmOfficialRecordsRequested(req.params.id, {
+    actorEmail: req.auth?.email || 'admin',
+  });
+  if (!result.ok) return res.status(result.status).json({ error: result.error });
+  return res.status(result.status).json({ ok: true, alreadyRequested: result.alreadyRequested });
 });
 
 // PATCH /api/applications/:id  — update status, rejectionReason, or adminNotes
@@ -1091,6 +1261,13 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
   if (recordsStatus !== undefined) {
     if (!RECORDS_STATUSES.has(recordsStatus)) {
       return res.status(400).json({ error: 'Invalid recordsStatus' });
+    }
+    if (recordsStatus === 'requested') {
+      const current = await loadCurrentApplication();
+      if (!current) return res.status(404).json({ error: 'Application not found.' });
+      if (current.recordsStatus !== 'requested') {
+        return res.status(400).json({ error: 'Use the confirmed records-request action after the message is sent.' });
+      }
     }
     data.recordsStatus = recordsStatus;
   }
@@ -1286,3 +1463,5 @@ module.exports.applicationReadiness = applicationReadiness;
 module.exports.activationReadinessError = activationReadinessError;
 module.exports.transferEvaluationEditError = transferEvaluationEditError;
 module.exports.interestTokenHash = interestTokenHash;
+module.exports.normalizePriorSchools = normalizePriorSchools;
+module.exports.confirmOfficialRecordsRequested = confirmOfficialRecordsRequested;

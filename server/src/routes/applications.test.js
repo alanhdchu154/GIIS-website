@@ -11,6 +11,8 @@ const {
   activationReadinessError,
   transferEvaluationEditError,
   interestTokenHash,
+  normalizePriorSchools,
+  confirmOfficialRecordsRequested,
 } = require('./applications');
 
 function validBody(overrides = {}) {
@@ -41,6 +43,26 @@ function validBody(overrides = {}) {
     notes: 'Family note',
     ...overrides,
   };
+}
+
+function validTransferV2Body(overrides = {}) {
+  return validBody({
+    transferIntakeVersion: 'transfer-v2',
+    currentEnrollmentStatus: 'currently-enrolled',
+    priorSchools: [
+      { schoolName: 'Prior High School', attendancePeriod: 'August 2024 - May 2026' },
+    ],
+    recordsSituation: 'no-official-transcript',
+    recordsHelpNeeded: 'already-requested',
+    transcriptExpectedTiming: '14-business-days',
+    previousCredits: '',
+    graduationTiming: 'normal-pace',
+    parentRelationship: 'parent',
+    contactPreference: 'email',
+    transferRecordsAcknowledged: true,
+    transcriptPlanDetails: '',
+    ...overrides,
+  });
 }
 
 describe('application submission parsing', () => {
@@ -118,6 +140,148 @@ describe('application submission parsing', () => {
       transcriptAvailable: 'not-yet',
       transcriptExpectedTiming: 'Approximately three weeks',
     });
+  });
+
+  test('accepts transfer-v2 intake and normalizes repeatable school history', () => {
+    const parsed = parseApplicationSubmission(validTransferV2Body());
+
+    expect(parsed.ok).toBe(true);
+    expect(parsed.data).toMatchObject({
+      currentSchool: 'Prior High School',
+      previousCredits: '',
+      transcriptAvailable: 'not-yet',
+      recordsSituation: 'no-official-transcript',
+      parentRelationship: 'parent',
+      contactPreference: 'email',
+      transferRecordsAcknowledged: true,
+    });
+    expect(JSON.parse(parsed.data.priorSchoolsJson)).toEqual([
+      { schoolName: 'Prior High School', attendancePeriod: 'August 2024 - May 2026' },
+    ]);
+  });
+
+  test('requires a course summary only when usable records are unavailable', () => {
+    expect(parseApplicationSubmission(validTransferV2Body({ transferCourseSummary: '' }))).toEqual({
+      ok: false,
+      status: 400,
+      error: 'transferCourseSummary must be at least 20 characters',
+    });
+
+    const withOfficialRecords = parseApplicationSubmission(validTransferV2Body({
+      recordsSituation: 'official-transcript',
+      recordsHelpNeeded: 'records-in-hand',
+      transcriptExpectedTiming: 'available-now',
+      transferCourseSummary: '',
+    }));
+    expect(withOfficialRecords.ok).toBe(true);
+    expect(withOfficialRecords.data.transcriptAvailable).toBe('yes');
+  });
+
+  test('rejects malformed school history and unacknowledged transfer records policy', () => {
+    expect(normalizePriorSchools([{ schoolName: 'School', attendancePeriod: '' }])).toEqual({
+      ok: false,
+      error: 'Each prior school must include a school name and attendance period',
+    });
+    expect(parseApplicationSubmission(validTransferV2Body({ transferRecordsAcknowledged: false }))).toEqual({
+      ok: false,
+      status: 400,
+      error: 'Missing acknowledgments: transferRecordsAcknowledged',
+    });
+  });
+
+  test('requires and bounds a family target date only for target-date planning', () => {
+    expect(parseApplicationSubmission(validTransferV2Body({ graduationTiming: 'target-date' }))).toEqual({
+      ok: false,
+      status: 400,
+      error: 'A valid graduationTargetDate is required for target-date planning',
+    });
+    const parsed = parseApplicationSubmission(validTransferV2Body({
+      graduationTiming: 'target-date',
+      graduationTargetDate: '2027-05-30',
+    }));
+    expect(parsed.ok).toBe(true);
+    expect(parsed.data.graduationTargetDate).toBe('2027-05-30');
+    expect(parseApplicationSubmission(validTransferV2Body({
+      graduationTiming: 'target-date',
+      graduationTargetDate: '2027-02-31',
+    }))).toEqual({
+      ok: false,
+      status: 400,
+      error: 'A valid graduationTargetDate is required for target-date planning',
+    });
+  });
+
+  test('requires a phone number when the family prefers phone contact', () => {
+    expect(parseApplicationSubmission(validTransferV2Body({ contactPreference: 'phone', phone: '' }))).toEqual({
+      ok: false,
+      status: 400,
+      error: 'Phone is required when contactPreference is phone',
+    });
+  });
+});
+
+describe('official records request confirmation', () => {
+  function requestPrisma(app) {
+    const prismaClient = {
+      application: {
+        findUnique: jest.fn().mockResolvedValue(app),
+        update: jest.fn().mockResolvedValue({ ...app, recordsStatus: 'requested' }),
+      },
+      applicationEvent: { create: jest.fn().mockResolvedValue({ id: 'event-requested' }) },
+    };
+    prismaClient.$transaction = jest.fn((callback) => callback(prismaClient));
+    return prismaClient;
+  }
+
+  test('changes state only after the operator explicitly confirms the request was sent', async () => {
+    const prismaClient = requestPrisma({
+      id: 'app-transfer',
+      applicantType: 'transfer',
+      recordsStatus: 'not_requested',
+      interestConfirmedAt: new Date(),
+    });
+
+    await expect(confirmOfficialRecordsRequested('app-transfer', {
+      prismaClient,
+      actorEmail: 'admissions@example.com',
+    })).resolves.toEqual({ ok: true, status: 200, alreadyRequested: false });
+    expect(prismaClient.application.update).toHaveBeenCalledWith({
+      where: { id: 'app-transfer' },
+      data: { recordsStatus: 'requested', nextAction: 'Wait for official records' },
+    });
+    expect(prismaClient.applicationEvent.create).toHaveBeenCalledWith({
+      data: expect.objectContaining({
+        applicationId: 'app-transfer',
+        action: 'official_records_requested',
+        actorEmail: 'admissions@example.com',
+      }),
+    });
+  });
+
+  test('is idempotent and never downgrades received or verified records', async () => {
+    const requested = requestPrisma({
+      id: 'app-transfer',
+      applicantType: 'transfer',
+      recordsStatus: 'requested',
+      interestConfirmedAt: new Date(),
+    });
+    await expect(confirmOfficialRecordsRequested('app-transfer', { prismaClient: requested }))
+      .resolves.toEqual({ ok: true, status: 200, alreadyRequested: true });
+    expect(requested.application.update).not.toHaveBeenCalled();
+
+    const verified = requestPrisma({
+      id: 'app-transfer',
+      applicantType: 'transfer',
+      recordsStatus: 'verified',
+      interestConfirmedAt: new Date(),
+    });
+    await expect(confirmOfficialRecordsRequested('app-transfer', { prismaClient: verified }))
+      .resolves.toEqual({
+        ok: false,
+        status: 409,
+        error: 'Current records status is later than requested; it will not be downgraded.',
+      });
+    expect(verified.application.update).not.toHaveBeenCalled();
   });
 });
 
