@@ -324,6 +324,11 @@ function hasConfirmedInterest(app) {
   return !!app?.interestConfirmedAt || !app?.interestConfirmationExpiresAt;
 }
 
+function sortableTime(value) {
+  const timestamp = value ? new Date(value).getTime() : NaN;
+  return Number.isFinite(timestamp) ? timestamp : Infinity;
+}
+
 export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   const lang = language === 'zh' ? 'zh' : 'en';
   const isEn = lang === 'en';
@@ -351,6 +356,8 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   const [notesDraft, setNotesDraft] = useState({}); // { [appId]: string }
   const [caseDrafts, setCaseDrafts] = useState({});
   const [workflowMode, setWorkflowMode] = useState('loading');
+  const [worklistMode, setWorklistMode] = useState('all');
+  const [readinessFilter, setReadinessFilter] = useState('');
 
   const session = getAdminSession();
   useEffect(() => { if (!session) navigate('/admin/login', { replace: true }); }, [session, navigate]);
@@ -574,12 +581,29 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
     setRejectModal(null);
   }
 
-  const visibleItems = items.filter((app) => {
-    if (typeFilter && applicationReviewFor(app)?.applicantType !== typeFilter) return false;
-    if (confirmationFilter === 'confirmed' && !hasConfirmedInterest(app)) return false;
-    if (confirmationFilter === 'unconfirmed' && hasConfirmedInterest(app)) return false;
-    return true;
-  });
+  const visibleItems = (() => {
+    const filtered = items.filter((app) => {
+      if (typeFilter && applicationReviewFor(app)?.applicantType !== typeFilter) return false;
+      if (confirmationFilter === 'confirmed' && !hasConfirmedInterest(app)) return false;
+      if (confirmationFilter === 'unconfirmed' && hasConfirmedInterest(app)) return false;
+      if (typeFilter === 'transfer' && readinessFilter && (app.readiness?.code || '') !== readinessFilter) return false;
+      return true;
+    });
+    if (worklistMode === 'transfer') {
+      return [...filtered].sort((a, b) => {
+        const aOver = responseSla(a).code === 'overdue' ? 0 : 1;
+        const bOver = responseSla(b).code === 'overdue' ? 0 : 1;
+        if (aOver !== bOver) return aOver - bOver;
+        const aDue = sortableTime(a.responseDueAt);
+        const bDue = sortableTime(b.responseDueAt);
+        if (aDue !== bDue) return aDue - bDue;
+        const aCreated = sortableTime(a.createdAt);
+        const bCreated = sortableTime(b.createdAt);
+        return aCreated === bCreated ? 0 : aCreated - bCreated;
+      });
+    }
+    return filtered;
+  })();
 
   if (!session) return null;
   const workflowEnabled = workflowMode === 'serious';
@@ -608,6 +632,39 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
             </div>
           )}
 
+          {/* Worklist segmented control */}
+          <div role="group" aria-label={T('Application worklist preset', '申请待办预设')} style={{ display: 'flex', marginBottom: 14, borderRadius: 8, overflow: 'hidden', border: '1.5px solid #d4d8e0', alignSelf: 'flex-start', width: 'fit-content' }}>
+            {[
+              ['all', T('All pending', '全部待审核')],
+              ['transfer', T('Transfer worklist', '转学待办')],
+            ].map(([mode, label], idx, arr) => (
+              <button
+                key={mode}
+                type="button"
+                aria-pressed={worklistMode === mode}
+                onClick={() => {
+                  if (worklistMode === mode) return;
+                  if (mode === 'all') {
+                    setFilter('pending'); setTypeFilter(''); setConfirmationFilter('confirmed');
+                    setReadinessFilter(''); setWorklistMode('all');
+                  } else {
+                    setFilter('pending'); setTypeFilter('transfer'); setConfirmationFilter('confirmed');
+                    setReadinessFilter(''); setWorklistMode('transfer');
+                  }
+                }}
+                style={{
+                  padding: '6px 14px', fontSize: 12.5, fontWeight: 700,
+                  background: worklistMode === mode ? '#2b3d6d' : '#fff',
+                  color: worklistMode === mode ? '#fff' : '#5c6578',
+                  border: 'none', cursor: 'pointer',
+                  borderRight: idx < arr.length - 1 ? '1.5px solid #d4d8e0' : 'none',
+                }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+
           {/* Filter tabs */}
           <div className="giis-admin-filter-tabs" style={{ display: 'flex', gap: 10, marginBottom: 20, alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
@@ -617,7 +674,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                 ['rejected', T('Rejected', '未通过')],
                 ['', T('All', '全部')],
               ].map(([v, label]) => (
-                <button key={v} onClick={() => setFilter(v)} style={{
+                <button key={v} type="button" onClick={() => { setFilter(v); setWorklistMode('custom'); }} style={{
                   padding: '7px 16px', borderRadius: 999, fontSize: 13, fontWeight: 700,
                   background: filter === v ? '#2b3d6d' : '#fff',
                   color: filter === v ? '#fff' : '#5c6578',
@@ -631,7 +688,12 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
             <select
               aria-label={T('Applicant type filter', '申请类型筛选')}
               value={typeFilter}
-              onChange={(event) => setTypeFilter(event.target.value)}
+              onChange={(event) => {
+                const val = event.target.value;
+                setTypeFilter(val);
+                setWorklistMode('custom');
+                if (val !== 'transfer') setReadinessFilter('');
+              }}
               style={{ padding: '7px 10px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: '#fff', color: '#2b3d6d', fontSize: 13, fontWeight: 700 }}
             >
               <option value="">{T('All applicant types', '全部申请类型')}</option>
@@ -641,13 +703,27 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
             <select
               aria-label={T('Parent confirmation filter', '家长确认筛选')}
               value={confirmationFilter}
-              onChange={(event) => setConfirmationFilter(event.target.value)}
+              onChange={(event) => { setConfirmationFilter(event.target.value); setWorklistMode('custom'); }}
               style={{ padding: '7px 10px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: '#fff', color: '#2b3d6d', fontSize: 13, fontWeight: 700 }}
             >
               <option value="confirmed">{T('Interest confirmed', '已确认继续申请')}</option>
               <option value="unconfirmed">{T('Awaiting parent confirmation', '等待家长确认')}</option>
               <option value="">{T('All confirmation states', '全部确认状态')}</option>
             </select>
+            {typeFilter === 'transfer' && (
+              <select
+                aria-label={T('Transfer stage filter', '转学阶段筛选')}
+                value={readinessFilter}
+                onChange={(event) => setReadinessFilter(event.target.value)}
+                style={{ padding: '7px 10px', borderRadius: 8, border: '1.5px solid #d4d8e0', background: '#fff', color: '#2b3d6d', fontSize: 13, fontWeight: 700 }}
+              >
+                <option value="">{T('All stages', '全部阶段')}</option>
+                <option value="records_pending">{T('Records pending', '待收资料')}</option>
+                <option value="ready_for_academic_review">{T('Academic review', '学术审核')}</option>
+                <option value="ready_for_principal_review">{T('Principal review', '校长审核')}</option>
+                <option value="approval_ready">{T('Approval ready', '可批准')}</option>
+              </select>
+            )}
             <span style={{ fontSize: 13, color: '#9aa0ad', alignSelf: 'center', marginLeft: 4 }}>
               {loading ? '…' : T(`${visibleItems.length} item${visibleItems.length !== 1 ? 's' : ''}`, `${visibleItems.length} 笔`)}
             </span>

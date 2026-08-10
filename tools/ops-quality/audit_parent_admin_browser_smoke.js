@@ -216,6 +216,8 @@ const ROUTES = [
     path: '/admin/applications',
     expected: [
       'Applications',
+      'Transfer worklist',
+      'All stages',
       'Alex Rivera',
       'Application Path Review',
       'Transfer Credit Decision',
@@ -231,6 +233,8 @@ const ROUTES = [
     ],
     endpointCaps: { '/api/applications': 3, '/api/checkout/tiers': 1 },
     afterLoad: async (page) => {
+      await page.getByRole('button', { name: /^Transfer worklist$/ }).click();
+      await page.getByLabel('Transfer stage filter').waitFor({ state: 'visible', timeout: 5000 });
       await page.getByRole('button', { name: /^View$/ }).first().click();
       await page.getByText('Application Path Review').waitFor({ state: 'visible', timeout: 5000 });
       await page.getByRole('button', { name: /^Record Manual Payment$/ }).click();
