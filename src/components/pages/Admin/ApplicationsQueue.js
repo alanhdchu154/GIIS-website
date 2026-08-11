@@ -153,9 +153,9 @@ function todayReceiptDate() {
 function manualPaymentReceiptText(receipt) {
   if (!receipt) return '';
   const { app, draft, subscription } = receipt;
-  return `Subject: GIIS payment receipt - ${app.studentName}
+  const english = `Subject: GIIS payment receipt - ${app.studentName}
 
-Genesis Innovation International School
+Genesis of Ideas International School
 Florida-registered private school
 Payment receipt
 
@@ -177,6 +177,32 @@ If anything in this receipt looks incorrect, please reply to admissions@genesisi
 
 Best,
 GIIS Admissions`;
+  const chinese = `主题：GIIS 付款收据 - ${app.studentName}
+
+Genesis of Ideas International School
+佛罗里达州注册私立学校
+付款收据
+
+记录日期：${todayReceiptDate()}
+学生：${app.studentName}
+家长／监护人：${app.parentName}
+家长邮箱：${app.parentEmail}
+方案：${draft.planLabel}
+记录金额：${money(draft.amountCents)}
+付款方式：${draft.paymentMethodLabel}
+Stripe 参考编号：${draft.paymentReference}
+GIIS 订阅记录：${subscription?.id || '已记录于学校后台'}
+
+本笔付款是在 GIIS 完成招生与学习路径审核后记录。学生与家长入口仅会在入学资格及付款状态均确认后启用。
+
+退款政策：https://genesisideas.school/refund-policy
+
+如收据内容有误，请回复 admissions@genesisideas.school。
+
+GIIS 招生团队`;
+  const language = communicationLanguageFor(app);
+  if (language === 'bilingual') return `${english}\n\n--- 中文 ---\n\n${chinese}`;
+  return language === 'zh' ? chinese : english;
 }
 
 function labelApplicationValue(field, value) {
@@ -200,11 +226,40 @@ function priorSchoolsFor(app) {
   }
 }
 
-function recordsRequestDraft(app) {
+function communicationLanguageFor(app) {
+  if (['en', 'zh', 'bilingual'].includes(app?.communicationLanguage)) return app.communicationLanguage;
+  return app?.preferredLanguage === 'zh' ? 'zh' : 'en';
+}
+
+function communicationLanguageLabel(app) {
+  const language = communicationLanguageFor(app);
+  if (language === 'bilingual') return 'Bilingual (English / Chinese)';
+  return language === 'zh' ? 'Chinese' : 'English';
+}
+
+function recordsRequestDraft(app, messageLanguage = communicationLanguageFor(app)) {
+  if (messageLanguage === 'bilingual') {
+    return `${recordsRequestDraft(app, 'en')}\n\n--- 中文 ---\n\n${recordsRequestDraft(app, 'zh')}`;
+  }
   const schools = priorSchoolsFor(app);
   const schoolLine = schools.length
     ? schools.map((school) => `${school.schoolName}${school.attendancePeriod ? ` (${school.attendancePeriod})` : ''}`).join('; ')
     : app.currentSchool || 'the student\'s prior high school';
+  if (messageLanguage === 'zh') {
+    return `主题：GIIS 转学记录申请 - ${app.studentName}
+
+${app.parentName} 您好：
+
+为了继续审核 ${app.studentName} 的转学分，请向以下原学校申请正式成绩单或其他可核验的学校记录：${schoolLine}。记录应尽量包含已完成的高中学期、最终课程成绩与学分，以及学校评分标准。
+
+您可以回复此邮件确认学校认可的递交方式，或请原学校联系 admissions@genesisideas.school。请勿通过公开链接传送学生记录。
+
+申请表所填的预计取得时间为：${labelTransferIntakeValue('transcriptExpectedTiming', app.transcriptExpectedTiming)}。
+
+GIIS 可以根据部分资料进行初步规划，但最终转学分、年级安排与毕业路径必须在学校收到并审核可核验记录后决定。
+
+GIIS 招生团队`;
+  }
   return `Subject: GIIS transfer records request - ${app.studentName}
 
 Dear ${app.parentName},
@@ -232,6 +287,14 @@ function outreachChannelsFor(app) {
 
 function firstOutreachDraft(app, messageLanguage = 'en') {
   const isTransfer = applicationTypeForDraft(app) === 'transfer';
+  if (messageLanguage === 'bilingual') {
+    const english = firstOutreachDraft(app, 'en');
+    const chinese = firstOutreachDraft(app, 'zh');
+    return {
+      subject: `${english.subject} / GIIS 申请下一步`,
+      body: `${english.body}\n\n--- 中文 ---\n\n${chinese.body}`,
+    };
+  }
   if (messageLanguage === 'zh') {
     return {
       subject: `GIIS 申请下一步 - ${app.studentName}`,
@@ -502,7 +565,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
           setWorkflowMode('unavailable');
           return;
         }
-        setWorkflowMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v4' ? 'serious' : 'legacy');
+        setWorkflowMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v5' ? 'serious' : 'legacy');
       } catch {
         if (active) setWorkflowMode('unavailable');
       }
@@ -616,7 +679,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
       app,
       step: 1,
       channel: preferred,
-      messageLanguage: app.preferredLanguage === 'zh' ? 'zh' : 'en',
+      messageLanguage: communicationLanguageFor(app),
       actionTaken: false,
     });
   }
@@ -1007,7 +1070,8 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                             ['Grade Level', app.gradeLevel],
                             ['Current School', app.currentSchool || '—'],
                             ['Target Universities', app.targetUniversities || '—'],
-                            ['Language Pref.', app.preferredLanguage === 'zh' ? 'Chinese' : 'English'],
+                            ['Instruction Language', app.preferredLanguage === 'zh' ? 'Chinese' : 'English'],
+                            ['Family Communication', communicationLanguageLabel(app)],
                             ['Parent Name', app.parentName],
                             ['Parent Email', app.parentEmail],
                             ['Phone', app.phone || '—'],
@@ -1280,8 +1344,8 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                   ))}
                 </div>
                 <div role="group" aria-label={T('Message language', '讯息语言')} style={{ display: 'flex', border: '1.5px solid #d4d8e0', borderRadius: 8, overflow: 'hidden', width: 'fit-content', maxWidth: '100%', marginBottom: 18 }}>
-                  {[['en', 'English'], ['zh', '中文']].map(([value, label]) => (
-                    <button key={value} type="button" aria-pressed={outreachFlow.messageLanguage === value} onClick={() => moveOutreachFlow({ messageLanguage: value })} style={{ border: 0, borderRight: value === 'en' ? '1px solid #d4d8e0' : 0, padding: '8px 14px', background: outreachFlow.messageLanguage === value ? '#2b3d6d' : '#fff', color: outreachFlow.messageLanguage === value ? '#fff' : '#2b3d6d', fontWeight: 800, cursor: 'pointer' }}>{label}</button>
+                  {[['en', 'English'], ['zh', '中文'], ['bilingual', '双语']].map(([value, label], index, values) => (
+                    <button key={value} type="button" aria-pressed={outreachFlow.messageLanguage === value} onClick={() => moveOutreachFlow({ messageLanguage: value })} style={{ border: 0, borderRight: index < values.length - 1 ? '1px solid #d4d8e0' : 0, padding: '8px 14px', background: outreachFlow.messageLanguage === value ? '#2b3d6d' : '#fff', color: outreachFlow.messageLanguage === value ? '#fff' : '#2b3d6d', fontWeight: 800, cursor: 'pointer' }}>{label}</button>
                   ))}
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'flex-end' }}>

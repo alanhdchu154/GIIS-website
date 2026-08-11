@@ -24,6 +24,7 @@ function validBody(overrides = {}) {
     currentSchool: 'Prior High School',
     targetUniversities: '',
     preferredLanguage: 'en',
+    communicationLanguage: 'en',
     applicantType: 'transfer',
     parentName: 'Diana Parent',
     parentEmail: 'Parent@Example.com',
@@ -91,6 +92,31 @@ describe('application submission parsing', () => {
       previousCredits: '',
       transcriptAvailable: '',
       graduationTiming: '',
+    });
+  });
+
+  test('stores family communication language separately and falls back for legacy clients', () => {
+    const bilingual = parseApplicationSubmission(validTransferV2Body({
+      preferredLanguage: 'zh',
+      communicationLanguage: 'bilingual',
+    }));
+    expect(bilingual.ok).toBe(true);
+    expect(bilingual.data).toMatchObject({
+      preferredLanguage: 'zh',
+      communicationLanguage: 'bilingual',
+    });
+
+    const legacy = parseApplicationSubmission(validTransferV2Body({
+      preferredLanguage: 'zh',
+      communicationLanguage: '',
+    }));
+    expect(legacy.ok).toBe(true);
+    expect(legacy.data.communicationLanguage).toBe('zh');
+
+    expect(parseApplicationSubmission(validTransferV2Body({ communicationLanguage: 'fr' }))).toEqual({
+      ok: false,
+      status: 400,
+      error: 'communicationLanguage must be en | zh | bilingual',
     });
   });
 
@@ -481,6 +507,7 @@ describe('public application submission', () => {
           parentName: 'Diana Parent',
           studentName: 'Cecilia Student',
           preferredLanguage: 'en',
+          communicationLanguage: null,
           interestConfirmedAt: null,
         }),
         update: jest.fn().mockResolvedValue({ id: 'existing-app' }),
@@ -509,6 +536,7 @@ describe('public application submission', () => {
     expect(sendConfirmation).toHaveBeenCalledWith(expect.objectContaining({
       confirmationUrl: `https://example.test/application/confirm?token=${'a'.repeat(43)}`,
       parentEmail: 'parent@example.com',
+      communicationLanguage: 'en',
     }));
     expect(prismaClient.application.findFirst).toHaveBeenCalledWith(expect.objectContaining({
       where: expect.objectContaining({

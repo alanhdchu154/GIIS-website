@@ -368,6 +368,7 @@ model Application {
   currentSchool                  String                    @default("")
   targetUniversities             String                    @default("")
   preferredLanguage              String                    @default("en") // "en" | "zh"
+  communicationLanguage          String?                   // "en" | "zh" | "bilingual"; null legacy rows fall back to preferredLanguage
   parentName                     String
   parentEmail                    String
   phone                          String                    @default("")

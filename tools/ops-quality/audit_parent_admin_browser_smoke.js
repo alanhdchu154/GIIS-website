@@ -130,6 +130,7 @@ const ROUTES = [
       await page.getByRole('button', { name: /^Continue$/ }).click();
       await page.getByLabel('Parent Full Name').fill('Jordan Rivera');
       await page.getByLabel('Parent Email').fill('jordan@example.com');
+      await page.getByRole('radio', { name: 'Bilingual (English / Chinese)' }).check();
       await page.getByLabel('Relationship to student').selectOption('parent');
       await page.getByLabel('Preferred contact method').selectOption('email');
       await page.getByRole('textbox', { name: 'Phone (optional)' }).fill('555-0100');
@@ -246,6 +247,8 @@ const ROUTES = [
       'All stages',
       'Alex Rivera',
       'Application Path Review',
+      'Instruction Language',
+      'Family Communication',
       'Transfer Credit Decision',
       'Principal approved',
       'Recent Case Activity',
@@ -256,6 +259,7 @@ const ROUTES = [
       'Record payment before account activation',
       'Copy family payment receipt',
       'GIIS payment receipt',
+      '付款收据',
       'Refund policy: https://genesisideas.school/refund-policy',
     ],
     endpointCaps: { '/api/applications': 3, '/api/checkout/tiers': 1 },
@@ -265,8 +269,11 @@ const ROUTES = [
       await page.getByRole('button', { name: /^Start first outreach$/ }).click();
       await page.getByRole('heading', { name: 'Complete first outreach' }).waitFor({ state: 'visible', timeout: 5000 });
       await page.getByLabel('Phone').check();
+      await page.getByRole('button', { name: '双语' }).click();
       await page.getByRole('button', { name: /^Review message$/ }).click();
       await page.getByLabel('Outreach message preview').waitFor({ state: 'visible', timeout: 5000 });
+      const outreachPreview = await page.getByLabel('Outreach message preview').inputValue();
+      if (!outreachPreview.includes('--- 中文 ---')) throw new Error('bilingual outreach preview is missing the Chinese section');
       await page.evaluate(() => {
         Object.defineProperty(navigator, 'clipboard', {
           configurable: true,
@@ -472,6 +479,7 @@ function applicationsPayload() {
     currentSchool: 'Current Online School',
     targetUniversities: 'UC Davis',
     preferredLanguage: 'en',
+    communicationLanguage: 'bilingual',
     parentName: 'Jordan Rivera',
     parentEmail: 'jordan@example.com',
     phone: '555-0100',
@@ -670,7 +678,7 @@ async function installMocks(page, endpointCounts) {
     if (endpoint === '/api/checkout/tiers') {
       return route.fulfill({
         ...json({}),
-        headers: { 'X-GIIS-Admissions-Workflow': 'admissions-v4' },
+        headers: { 'X-GIIS-Admissions-Workflow': 'admissions-v5' },
       });
     }
     if (endpoint === '/api/applications' && route.request().method() === 'POST') {

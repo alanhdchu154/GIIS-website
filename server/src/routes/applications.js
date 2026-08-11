@@ -16,6 +16,7 @@ const prisma = require('../lib/prisma');
 const router = express.Router();
 
 const APPLICANT_TYPES = new Set(['new', 'transfer']);
+const COMMUNICATION_LANGUAGES = new Set(['en', 'zh', 'bilingual']);
 const PREVIOUS_CREDIT_RANGES = new Set(['0-5', '6-11', '12-17', '18-23', '24+']);
 const TRANSCRIPT_OPTIONS = new Set(['yes', 'partial', 'not-yet']);
 const GRADUATION_TIMINGS = new Set(['asap', '1-year', '2-years', 'not-sure']);
@@ -302,13 +303,16 @@ function parseApplicationSubmission(body = {}) {
   const seriousGate = body.intakeVersion === 'serious-v1';
   const transferV2 = seriousGate && body.transferIntakeVersion === 'transfer-v2';
   const priorSchools = normalizePriorSchools(body.priorSchools || body.priorSchoolsJson || []);
+  const preferredLanguage = body.preferredLanguage === 'zh' ? 'zh' : 'en';
+  const submittedCommunicationLanguage = cleanString(body.communicationLanguage);
   const data = {
     studentName: cleanString(body.studentName),
     dob: cleanString(body.dob),
     gradeLevel: cleanString(body.gradeLevel),
     currentSchool: cleanString(body.currentSchool),
     targetUniversities: cleanString(body.targetUniversities),
-    preferredLanguage: body.preferredLanguage === 'zh' ? 'zh' : 'en',
+    preferredLanguage,
+    communicationLanguage: submittedCommunicationLanguage || preferredLanguage,
     applicantType: cleanString(body.applicantType || legacy?.applicantType),
     parentName: cleanString(body.parentName),
     parentEmail: cleanString(body.parentEmail).toLowerCase(),
@@ -360,6 +364,9 @@ function parseApplicationSubmission(body = {}) {
   }
   if (!APPLICANT_TYPES.has(data.applicantType)) {
     return { ok: false, status: 400, error: 'applicantType must be new | transfer' };
+  }
+  if (!COMMUNICATION_LANGUAGES.has(data.communicationLanguage)) {
+    return { ok: false, status: 400, error: 'communicationLanguage must be en | zh | bilingual' };
   }
   if (data.mainConcern && !MAIN_CONCERNS.has(data.mainConcern)) {
     return { ok: false, status: 400, error: 'Invalid mainConcern' };
@@ -563,6 +570,7 @@ function applicationAlertDetails(app) {
     currentSchool: app.currentSchool,
     targetUniversities: app.targetUniversities,
     preferredLanguage: app.preferredLanguage,
+    communicationLanguage: app.communicationLanguage || app.preferredLanguage || 'en',
     applicantType: app.applicantType,
     previousCredits: app.previousCredits,
     transcriptAvailable: app.transcriptAvailable,
@@ -639,6 +647,7 @@ async function submitPublicApplication(body, {
         parentName: application.parentName,
         studentName: application.studentName,
         preferredLanguage: application.preferredLanguage,
+        communicationLanguage: application.communicationLanguage || application.preferredLanguage || 'en',
         confirmationUrl: confirmationUrlForToken(confirmationToken, publicSite),
         expiresHours: 72,
       });
@@ -686,6 +695,7 @@ async function submitPublicApplication(body, {
         data: {
           submissionCount: { increment: 1 },
           lastSubmittedAt: now,
+          communicationLanguage: data.communicationLanguage,
           ...(needsConfirmation ? {
             interestConfirmationTokenHash: tokenHash,
             interestConfirmationExpiresAt: expiresAt,
@@ -708,6 +718,7 @@ async function submitPublicApplication(body, {
           parentName: existing.parentName || data.parentName,
           studentName: existing.studentName || data.studentName,
           preferredLanguage: existing.preferredLanguage || data.preferredLanguage,
+          communicationLanguage: data.communicationLanguage || existing.communicationLanguage || existing.preferredLanguage,
         },
         confirmationToken: token,
       });
@@ -1189,7 +1200,7 @@ router.get('/capabilities', (_req, res) => {
     applicationIntakeVersion: 'serious-v1',
     transferIntakeVersion: 'transfer-v2',
     interestConfirmation: true,
-    adminWorkflowVersion: 'admissions-v4',
+    adminWorkflowVersion: 'admissions-v5',
     transferEvaluation: true,
   });
 });
@@ -1430,6 +1441,7 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
     parentPassword,
     studentLoginEmail,
     studentPassword,
+    communicationLanguage: app.communicationLanguage || app.preferredLanguage || 'en',
   });
   await recordEmailLog({
     kind: 'welcome_parent_login',

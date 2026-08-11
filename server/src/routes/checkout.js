@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ADMISSIONS_WORKFLOW_VERSION = 'admissions-v4';
+const ADMISSIONS_WORKFLOW_VERSION = 'admissions-v5';
 const Stripe = require('stripe');
 const jwt = require('jsonwebtoken');
 

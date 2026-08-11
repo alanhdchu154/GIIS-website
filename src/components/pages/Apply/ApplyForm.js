@@ -69,6 +69,11 @@ const CONTACT_PREFERENCES = [
   { value: 'email', en: 'Email', zh: '电子邮件' },
   { value: 'phone', en: 'Phone', zh: '电话' },
 ];
+const COMMUNICATION_LANGUAGES = [
+  { value: 'en', en: 'English', zh: '英文' },
+  { value: 'zh', en: 'Chinese', zh: '中文' },
+  { value: 'bilingual', en: 'Bilingual (English / Chinese)', zh: '双语（英文／中文）' },
+];
 const START_TIMINGS = [
   { value: 'within-30-days', en: 'Within 30 days', zh: '希望 30 天内开始' },
   { value: 'next-semester', en: 'Next semester', zh: '下个学期开始' },
@@ -115,6 +120,7 @@ export default function ApplyForm({ language }) {
     currentSchool: '',
     targetUniversities: '',
     preferredLanguage: 'en',
+    communicationLanguage: isEn ? 'en' : 'zh',
     applicantType: '',
     parentName: '',
     parentEmail: '',
@@ -162,7 +168,7 @@ export default function ApplyForm({ language }) {
           setIntakeMode('unavailable');
           return;
         }
-        setIntakeMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v4' ? 'serious' : 'upgrade-required');
+        setIntakeMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v5' ? 'serious' : 'upgrade-required');
       } catch {
         if (active) setIntakeMode('unavailable');
       }
@@ -239,6 +245,7 @@ export default function ApplyForm({ language }) {
     if (!form.parentName.trim()) e.parentName = isEn ? 'Required' : '必填';
     if (!form.parentEmail.trim()) e.parentEmail = isEn ? 'Required' : '必填';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.parentEmail)) e.parentEmail = isEn ? 'Invalid email' : '邮箱格式错误';
+    if (!form.communicationLanguage) e.communicationLanguage = isEn ? 'Required' : '必填';
     if (!form.tuitionAware) e.tuitionAware = isEn ? 'Required' : '请确认';
     if (!form.noGuaranteeAcknowledged) e.noGuaranteeAcknowledged = isEn ? 'Required' : '请确认';
     if (!form.responseCommitmentAcknowledged) e.responseCommitmentAcknowledged = isEn ? 'Required' : '请确认';
@@ -248,7 +255,7 @@ export default function ApplyForm({ language }) {
   const stepFields = [
     ['studentName', 'dob', 'gradeLevel', 'intendedStartTiming', 'motivation'],
     ['applicantType', 'currentSchool', 'currentEnrollmentStatus', 'priorSchools', 'previousCredits', 'recordsSituation', 'recordsHelpNeeded', 'graduationTiming', 'graduationTargetDate', 'transferCourseSummary', 'transcriptExpectedTiming', 'mainConcern'],
-    ['parentName', 'parentEmail', 'phone', 'parentRelationship', 'contactPreference'],
+    ['parentName', 'parentEmail', 'communicationLanguage', 'phone', 'parentRelationship', 'contactPreference'],
     ['tuitionAware', 'noGuaranteeAcknowledged', 'responseCommitmentAcknowledged', 'transferRecordsAcknowledged'],
   ];
 
@@ -291,6 +298,7 @@ export default function ApplyForm({ language }) {
         currentSchool: isTransferApplicant ? '' : form.currentSchool,
         targetUniversities: form.targetUniversities,
         preferredLanguage: form.preferredLanguage,
+        communicationLanguage: form.communicationLanguage,
         applicantType: form.applicantType,
         parentName: form.parentName,
         parentEmail: form.parentEmail,
@@ -694,6 +702,25 @@ export default function ApplyForm({ language }) {
               <input type="email" value={form.parentEmail} onChange={set('parentEmail')} required placeholder="parent@example.com" style={inputStyle(errors.parentEmail)} />
             </Field>
 
+            <Field
+              label={T('Family communication language', '家庭联络语言')}
+              err={errors.communicationLanguage}
+              hint={T('Used for admissions and account messages', '用于招生与帐号相关讯息')}
+              required
+            >
+              <div role="radiogroup" aria-label={T('Family communication language', '家庭联络语言')} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 8, marginTop: 8 }}>
+                {COMMUNICATION_LANGUAGES.map((option) => {
+                  const selected = form.communicationLanguage === option.value;
+                  return (
+                    <label key={option.value} style={{ display: 'flex', alignItems: 'center', gap: 8, border: `1.5px solid ${selected ? '#2b3d6d' : '#d4d8e0'}`, background: selected ? '#f0f4ff' : '#fff', borderRadius: 8, padding: '10px 11px', color: selected ? '#1a2d5a' : '#5c6578', fontSize: 12.5, fontWeight: selected ? 800 : 600, cursor: 'pointer' }}>
+                      <input type="radio" name="communicationLanguage" value={option.value} checked={selected} onChange={set('communicationLanguage')} required style={{ accentColor: '#2b3d6d' }} />
+                      <span>{T(option.en, option.zh)}</span>
+                    </label>
+                  );
+                })}
+              </div>
+            </Field>
+
             {isTransferApplicant && (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
                 <Field label={T('Relationship to student', '与学生的关系')} err={errors.parentRelationship} required>
@@ -734,6 +761,7 @@ export default function ApplyForm({ language }) {
               {isTransferApplicant && <ReviewRow label={T('Expected timing', '预计取得时间')} value={RECORDS_ETA_OPTIONS.find((option) => option.value === form.transcriptExpectedTiming)?.[isEn ? 'en' : 'zh'] || '—'} />}
               {isTransferApplicant && <ReviewRow label={T('Graduation planning', '毕业规划')} value={`${GRADUATION_TIMING.find((option) => option.value === form.graduationTiming)?.[isEn ? 'en' : 'zh'] || '—'}${form.graduationTargetDate ? ` · ${form.graduationTargetDate}` : ''}`} />}
               <ReviewRow label={T('Parent email', '家长邮箱')} value={form.parentEmail} />
+              <ReviewRow label={T('Family communication', '家庭联络语言')} value={COMMUNICATION_LANGUAGES.find((option) => option.value === form.communicationLanguage)?.[isEn ? 'en' : 'zh'] || '—'} />
             </div>
             <div style={{ display: 'grid', gap: 10, margin: '2px 0 20px', padding: '14px 15px', border: '1px solid #dbe4f0', borderRadius: 8, background: '#f8f9fc' }}>
               {[

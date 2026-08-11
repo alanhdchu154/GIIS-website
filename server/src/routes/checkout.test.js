@@ -1,7 +1,7 @@
 const { ADMISSIONS_WORKFLOW_VERSION, checkoutSessionSummary } = require('./checkout');
 
 test('advertises only the transfer-v2-compatible admissions workflow', () => {
-  expect(ADMISSIONS_WORKFLOW_VERSION).toBe('admissions-v4');
+  expect(ADMISSIONS_WORKFLOW_VERSION).toBe('admissions-v5');
 });
 
 describe('checkoutSessionSummary', () => {

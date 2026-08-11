@@ -72,33 +72,56 @@ function escapeHtml(value) {
     .replace(/'/g, '&#039;');
 }
 
+function normalizeCommunicationLanguage(value, preferredLanguage = 'en') {
+  if (['en', 'zh', 'bilingual'].includes(value)) return value;
+  return preferredLanguage === 'zh' ? 'zh' : 'en';
+}
+
 // ── Templates ──────────────────────────────────────────────────────────────
 
 function buildApplicationInterestConfirmation({
   parentName,
   studentName,
   preferredLanguage,
+  communicationLanguage,
   confirmationUrl,
   expiresHours = 72,
 }) {
-  const isZh = preferredLanguage === 'zh';
+  const language = normalizeCommunicationLanguage(communicationLanguage, preferredLanguage);
   const safeParentName = escapeHtml(parentName);
   const safeStudentName = escapeHtml(studentName);
   const safeUrl = escapeHtml(confirmationUrl);
-  const subject = isZh
-    ? '请确认继续 GIIS 入学申请'
-    : 'Confirm your GIIS application interest';
-  const greeting = isZh ? `${safeParentName} 家长，您好：` : `Dear ${safeParentName},`;
-  const intro = isZh
-    ? `我们已收到 <strong>${safeStudentName}</strong> 的入学申请。请确认您希望 GIIS 招生团队继续审核。`
-    : `We received the application for <strong>${safeStudentName}</strong>. Please confirm that you would like the GIIS admissions team to continue the review.`;
-  const boundary = isZh
-    ? '确认申请不会产生费用，也不代表学分、年级安排、毕业日期或录取结果已经获得批准。'
-    : 'Confirmation does not create a fee or guarantee admission, transfer credit, grade placement, or a graduation date.';
-  const button = isZh ? '确认继续申请' : 'Confirm and continue application';
-  const expiry = isZh
-    ? `此链接将在 ${expiresHours} 小时后失效。若您没有提交申请，可以忽略此邮件。`
-    : `This link expires in ${expiresHours} hours. If you did not submit an application, you can ignore this email.`;
+  const english = {
+    heading: 'Confirm and continue application',
+    greeting: `Dear ${safeParentName},`,
+    intro: `We received the application for <strong>${safeStudentName}</strong>. Please confirm that you would like the GIIS admissions team to continue the review.`,
+    boundary: 'Confirmation does not create a fee or guarantee admission, transfer credit, grade placement, or a graduation date.',
+    expiry: `This link expires in ${expiresHours} hours. If you did not submit an application, you can ignore this email.`,
+    fallback: 'If the button does not work, open this link:',
+    text: `Dear ${parentName},\n\nWe received the application for ${studentName}. Confirm that you would like GIIS to continue the review:\n${confirmationUrl}\n\nConfirmation does not guarantee admission, transfer credit, grade placement, or a graduation date. This link expires in ${expiresHours} hours.`,
+  };
+  const chinese = {
+    heading: '确认继续申请',
+    greeting: `${safeParentName} 家长，您好：`,
+    intro: `我们已收到 <strong>${safeStudentName}</strong> 的入学申请。请确认您希望 GIIS 招生团队继续审核。`,
+    boundary: '确认申请不会产生费用，也不代表学分、年级安排、毕业日期或录取结果已经获得批准。',
+    expiry: `此链接将在 ${expiresHours} 小时后失效。若您没有提交申请，可以忽略此邮件。`,
+    fallback: '如果按钮无法打开，请复制此链接：',
+    text: `${parentName} 家长，您好：\n\n我们已收到 ${studentName} 的入学申请。请确认继续申请：\n${confirmationUrl}\n\n确认不代表录取、转学分、年级安排或毕业日期已经获得批准。链接将在 ${expiresHours} 小时后失效。`,
+  };
+  const sections = language === 'bilingual' ? [english, chinese] : [language === 'zh' ? chinese : english];
+  const subject = language === 'bilingual'
+    ? 'Confirm your GIIS application / 请确认继续 GIIS 入学申请'
+    : language === 'zh' ? '请确认继续 GIIS 入学申请' : 'Confirm your GIIS application interest';
+  const sectionHtml = sections.map((section, index) => `
+    ${index ? '<hr style="border:none;border-top:1px solid #e8ecf5;margin:28px 0">' : ''}
+    <p>${section.greeting}</p>
+    <p>${section.intro}</p>
+    <p style="margin:24px 0"><a href="${safeUrl}" style="background:#2b3d6d;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:800;display:inline-block">${section.heading}</a></p>
+    <p style="font-size:13px;color:#5c6578">${section.boundary}</p>
+    <p style="font-size:13px;color:#5c6578">${section.expiry}</p>
+    <p style="font-size:12px;color:#9aa0ad;margin-top:24px">${section.fallback}<br><a href="${safeUrl}" style="color:#2b3d6d">${safeUrl}</a></p>
+  `).join('');
 
   return {
     subject,
@@ -106,21 +129,14 @@ function buildApplicationInterestConfirmation({
 <div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1d24">
   <div style="background:#1a1a2e;padding:28px 32px;border-radius:12px 12px 0 0">
     <p style="color:#d5a836;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 8px">Genesis of Ideas International School</p>
-    <h1 style="color:#fff;font-size:24px;font-weight:800;margin:0">${button}</h1>
+    <h1 style="color:#fff;font-size:24px;font-weight:800;margin:0">${sections.map((section) => section.heading).join(' / ')}</h1>
   </div>
   <div style="background:#fff;border:1px solid #e8ecf5;border-top:none;padding:28px 32px;border-radius:0 0 12px 12px">
-    <p>${greeting}</p>
-    <p>${intro}</p>
-    <p style="margin:24px 0"><a href="${safeUrl}" style="background:#2b3d6d;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:800;display:inline-block">${button}</a></p>
-    <p style="font-size:13px;color:#5c6578">${boundary}</p>
-    <p style="font-size:13px;color:#5c6578">${expiry}</p>
-    <p style="font-size:12px;color:#9aa0ad;margin-top:24px">${isZh ? '如果按钮无法打开，请复制此链接：' : 'If the button does not work, open this link:'}<br><a href="${safeUrl}" style="color:#2b3d6d">${safeUrl}</a></p>
+    ${sectionHtml}
   </div>
 </div>
     `.trim(),
-    text: isZh
-      ? `${parentName} 家长，您好：\n\n我们已收到 ${studentName} 的入学申请。请确认继续申请：\n${confirmationUrl}\n\n确认不代表录取、转学分、年级安排或毕业日期已经获得批准。链接将在 ${expiresHours} 小时后失效。`
-      : `Dear ${parentName},\n\nWe received the application for ${studentName}. Confirm that you would like GIIS to continue the review:\n${confirmationUrl}\n\nConfirmation does not guarantee admission, transfer credit, grade placement, or a graduation date. This link expires in ${expiresHours} hours.`,
+    text: sections.map((section) => section.text).join('\n\n---\n\n'),
   };
 }
 
@@ -144,6 +160,7 @@ function buildNewApplicationAlert({
   currentSchool,
   targetUniversities,
   preferredLanguage,
+  communicationLanguage,
   applicantType,
   previousCredits,
   transcriptAvailable,
@@ -178,7 +195,10 @@ function buildNewApplicationAlert({
     ['Parent', `${escapeHtml(parentName)} · <a href="mailto:${escapeHtml(parentEmail)}">${escapeHtml(parentEmail)}</a>`],
     ...(currentSchool ? [['Current school', escapeHtml(currentSchool)]] : []),
     ...(targetUniversities ? [['Target unis', escapeHtml(targetUniversities)]] : []),
-    ['Language', preferredLanguage === 'zh' ? 'Chinese' : 'English'],
+    ['Instruction language', preferredLanguage === 'zh' ? 'Chinese' : 'English'],
+    ['Family communication', normalizeCommunicationLanguage(communicationLanguage, preferredLanguage) === 'bilingual'
+      ? 'Bilingual (English / Chinese)'
+      : normalizeCommunicationLanguage(communicationLanguage, preferredLanguage) === 'zh' ? 'Chinese' : 'English'],
     ...(isTransfer ? [
       ['Current status', escapeHtml(currentEnrollmentStatus || 'Not provided')],
       ['School history', escapeHtml(schoolHistory || currentSchool || 'Not provided')],
@@ -199,7 +219,10 @@ function buildNewApplicationAlert({
     `Parent: ${parentName} <${parentEmail}>`,
     currentSchool ? `Current school: ${currentSchool}` : '',
     targetUniversities ? `Target universities: ${targetUniversities}` : '',
-    `Language: ${preferredLanguage === 'zh' ? 'Chinese' : 'English'}`,
+    `Instruction language: ${preferredLanguage === 'zh' ? 'Chinese' : 'English'}`,
+    `Family communication: ${normalizeCommunicationLanguage(communicationLanguage, preferredLanguage) === 'bilingual'
+      ? 'Bilingual (English / Chinese)'
+      : normalizeCommunicationLanguage(communicationLanguage, preferredLanguage) === 'zh' ? 'Chinese' : 'English'}`,
     isTransfer ? `Previous credits: ${previousCredits || 'Not provided'}` : '',
     isTransfer ? `Current status: ${currentEnrollmentStatus || 'Not provided'}` : '',
     isTransfer ? `School history: ${schoolHistory || currentSchool || 'Not provided'}` : '',
@@ -240,7 +263,7 @@ async function sendNewApplicationAlert(details) {
  * Welcome email sent to parent when admin creates their accounts.
  * Replaces the manual copy-paste step.
  */
-async function sendWelcomeEmail({
+function buildWelcomeEmail({
   parentEmail,
   studentName,
   tempPassword,
@@ -250,42 +273,71 @@ async function sendWelcomeEmail({
   parentPassword,
   studentLoginEmail,
   studentPassword,
+  communicationLanguage,
 }) {
-  const subject = 'Your GIIS account is ready — complete your enrollment';
+  const language = normalizeCommunicationLanguage(communicationLanguage);
   const parentPortalEmail = parentLoginEmail || parentEmail;
   const parentPortalPassword = parentPassword || tempPassword;
-  return send({
-    to: parentEmail,
+  const bilingual = language === 'bilingual';
+  const isZh = language === 'zh';
+  const subject = bilingual
+    ? 'Your GIIS account is ready / 您的 GIIS 帐号已建立'
+    : isZh ? '您的 GIIS 帐号已建立 — 请完成入学' : 'Your GIIS account is ready — complete your enrollment';
+  const heading = bilingual ? 'Welcome to GIIS! / 欢迎加入 GIIS！' : isZh ? '欢迎加入 GIIS！' : 'Welcome to GIIS!';
+  const intro = bilingual
+    ? `<p>Your child <strong>${escapeHtml(studentName)}</strong>'s account has been created. Log in to complete enrollment and activate full course access.</p><p>您孩子 <strong>${escapeHtml(studentName)}</strong> 的帐号已经建立。请登入完成入学步骤并启用完整课程权限。</p>`
+    : isZh
+      ? `<p>您孩子 <strong>${escapeHtml(studentName)}</strong> 的帐号已经建立。请登入完成入学步骤并启用完整课程权限。</p>`
+      : `<p>Your child <strong>${escapeHtml(studentName)}</strong>'s account has been created. Log in to complete enrollment and activate full course access.</p>`;
+  const label = (en, zh) => bilingual ? `${en} / ${zh}` : isZh ? zh : en;
+  const activationNote = bilingual
+    ? `After logging in, you can complete the remaining enrollment steps for ${escapeHtml(studentName)}. Access remains subject to the reviewed enrollment and payment status.<br>登入后可完成 ${escapeHtml(studentName)} 的其余入学步骤。课程权限仍以已审核的入学与付款状态为准。`
+    : isZh
+      ? `登入后可完成 ${escapeHtml(studentName)} 的其余入学步骤。课程权限仍以已审核的入学与付款状态为准。`
+      : `After logging in, you can complete the remaining enrollment steps for ${escapeHtml(studentName)}. Access remains subject to the reviewed enrollment and payment status.`;
+  const cta = label('Log in and complete enrollment', '登入并完成入学');
+  const textIntro = bilingual
+    ? `Welcome to GIIS!\nYour account is ready.\n\n欢迎加入 GIIS！\n您的帐号已经建立。`
+    : isZh ? '欢迎加入 GIIS！\n您的帐号已经建立。' : 'Welcome to GIIS!\nYour account is ready.';
+  return {
     subject,
     html: `
 <div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1d24">
   <div style="background:#1a1a2e;padding:28px 32px;border-radius:12px 12px 0 0">
     <p style="color:#d5a836;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 8px">Genesis of Ideas International School</p>
-    <h1 style="color:#fff;font-size:24px;font-weight:800;margin:0">Welcome to GIIS!</h1>
+    <h1 style="color:#fff;font-size:24px;font-weight:800;margin:0">${heading}</h1>
   </div>
   <div style="background:#fff;border:1px solid #e8ecf5;border-top:none;padding:28px 32px;border-radius:0 0 12px 12px">
-    <p>Hi there,</p>
-    <p>Your child <strong>${studentName}</strong>'s account has been created. Log in to complete enrollment and activate full course access.</p>
+    ${intro}
 
     <div style="background:#f4f6fa;border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;line-height:2">
-      <div><strong>Login URL:</strong> <a href="${loginUrl}" style="color:#1a73e8">${loginUrl}</a></div>
-      <div><strong>Parent Portal email:</strong> ${parentPortalEmail}</div>
-      <div><strong>Parent temporary password:</strong> <code style="background:#e8ecf5;padding:2px 8px;border-radius:4px;font-weight:700">${parentPortalPassword}</code></div>
-      ${studentLoginEmail ? `<div><strong>Student Portal email:</strong> ${studentLoginEmail}</div>` : ''}
-      ${studentPassword ? `<div><strong>Student temporary password:</strong> <code style="background:#e8ecf5;padding:2px 8px;border-radius:4px;font-weight:700">${studentPassword}</code></div>` : ''}
-      <div><strong>Student code:</strong> ${studentCode}</div>
+      <div><strong>${label('Login URL', '登入链接')}:</strong> <a href="${escapeHtml(loginUrl)}" style="color:#1a73e8">${escapeHtml(loginUrl)}</a></div>
+      <div><strong>${label('Parent Portal email', '家长入口邮箱')}:</strong> ${escapeHtml(parentPortalEmail)}</div>
+      <div><strong>${label('Parent temporary password', '家长临时密码')}:</strong> <code style="background:#e8ecf5;padding:2px 8px;border-radius:4px;font-weight:700">${escapeHtml(parentPortalPassword)}</code></div>
+      ${studentLoginEmail ? `<div><strong>${label('Student Portal email', '学生入口邮箱')}:</strong> ${escapeHtml(studentLoginEmail)}</div>` : ''}
+      ${studentPassword ? `<div><strong>${label('Student temporary password', '学生临时密码')}:</strong> <code style="background:#e8ecf5;padding:2px 8px;border-radius:4px;font-weight:700">${escapeHtml(studentPassword)}</code></div>` : ''}
+      <div><strong>${label('Student code', '学生编号')}:</strong> ${escapeHtml(studentCode)}</div>
     </div>
 
-    <p style="font-size:13px;color:#5c6578">After logging in, you'll see a button to complete payment and activate full course access for ${studentName}.</p>
+    <p style="font-size:13px;color:#5c6578">${activationNote}</p>
 
-    <p style="margin-top:24px"><a href="${loginUrl}" style="background:#d5a836;color:#1a1a2e;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:800;font-size:15px">Log in and complete enrollment →</a></p>
+    <p style="margin-top:24px"><a href="${escapeHtml(loginUrl)}" style="background:#d5a836;color:#1a1a2e;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:800;font-size:15px">${cta} →</a></p>
 
     <hr style="border:none;border-top:1px solid #e8ecf5;margin:28px 0">
-    <p style="font-size:12px;color:#9aa0ad;margin:0">Questions? Reply to this email or contact us at <a href="mailto:admissions@genesisideas.school" style="color:#2b3d6d">admissions@genesisideas.school</a></p>
+    <p style="font-size:12px;color:#9aa0ad;margin:0">${label('Questions? Reply to this email or contact', '如有问题，请回复此邮件或联系')} <a href="mailto:admissions@genesisideas.school" style="color:#2b3d6d">admissions@genesisideas.school</a></p>
   </div>
 </div>
     `.trim(),
-    text: `Welcome to GIIS!\n\nLog in to complete enrollment:\n${loginUrl}\nParent Portal email: ${parentPortalEmail}\nParent temp password: ${parentPortalPassword}${studentLoginEmail ? `\nStudent Portal email: ${studentLoginEmail}` : ''}${studentPassword ? `\nStudent temp password: ${studentPassword}` : ''}\nStudent code: ${studentCode}`,
+    text: `${textIntro}\n\n${label('Login URL', '登入链接')}: ${loginUrl}\n${label('Parent Portal email', '家长入口邮箱')}: ${parentPortalEmail}\n${label('Parent temporary password', '家长临时密码')}: ${parentPortalPassword}${studentLoginEmail ? `\n${label('Student Portal email', '学生入口邮箱')}: ${studentLoginEmail}` : ''}${studentPassword ? `\n${label('Student temporary password', '学生临时密码')}: ${studentPassword}` : ''}\n${label('Student code', '学生编号')}: ${studentCode}`,
+  };
+}
+
+async function sendWelcomeEmail(details) {
+  const content = buildWelcomeEmail(details);
+  return send({
+    to: details.parentEmail,
+    replyTo: ADMISSIONS_EMAIL,
+    ...content,
   });
 }
 
@@ -684,6 +736,8 @@ module.exports = {
   applicationAlertRecipients,
   buildNewApplicationAlert,
   buildApplicationInterestConfirmation,
+  buildWelcomeEmail,
+  normalizeCommunicationLanguage,
   sendNewApplicationAlert,
   sendApplicationInterestConfirmation,
   sendWelcomeEmail,

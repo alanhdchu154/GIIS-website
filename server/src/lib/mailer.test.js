@@ -4,6 +4,7 @@ const {
   applicationAlertRecipients,
   buildApplicationInterestConfirmation,
   buildNewApplicationAlert,
+  buildWelcomeEmail,
 } = require('./mailer');
 
 describe('new application alert', () => {
@@ -16,6 +17,7 @@ describe('new application alert', () => {
       currentSchool: 'Prior High School',
       targetUniversities: 'Example University',
       preferredLanguage: 'en',
+      communicationLanguage: 'bilingual',
       applicantType: 'transfer',
       previousCredits: '6-11',
       transcriptAvailable: 'not-yet',
@@ -33,6 +35,8 @@ describe('new application alert', () => {
     expect(content.subject).toBe('[Transfer] New GIIS Application — Cecilia Student (Grade 11)');
     expect(content.replyTo).toBe('parent@example.com');
     expect(content.text).toContain('Applicant type: Transfer student');
+    expect(content.text).toContain('Instruction language: English');
+    expect(content.text).toContain('Family communication: Bilingual (English / Chinese)');
     expect(content.text).toContain('Previous credits: 6-11');
     expect(content.text).toContain('Transcript: not-yet');
     expect(content.text).toContain('School history: Prior High School (2024-2026)');
@@ -110,6 +114,7 @@ describe('application interest confirmation email', () => {
       parentName: 'Wang & Family',
       studentName: '<Student>',
       preferredLanguage: 'zh',
+      communicationLanguage: 'zh',
       confirmationUrl: 'https://example.test/application/confirm?token=secret-token',
       expiresHours: 72,
     });
@@ -120,5 +125,44 @@ describe('application interest confirmation email', () => {
     expect(content.html).toContain('&lt;Student&gt;');
     expect(content.text).toContain('不代表录取、转学分、年级安排或毕业日期');
     expect(content.text).toContain('72 小时');
+  });
+
+  test('builds both complete language sections for bilingual families', () => {
+    const content = buildApplicationInterestConfirmation({
+      parentName: 'Diana Parent',
+      studentName: 'Cecilia Student',
+      preferredLanguage: 'en',
+      communicationLanguage: 'bilingual',
+      confirmationUrl: 'https://example.test/application/confirm?token=bilingual-token',
+      expiresHours: 72,
+    });
+
+    expect(content.subject).toContain('Confirm your GIIS application');
+    expect(content.subject).toContain('请确认');
+    expect(content.text).toContain('Confirmation does not guarantee admission');
+    expect(content.text).toContain('确认不代表录取');
+    expect(content.html.match(/bilingual-token/g)).toHaveLength(6);
+  });
+});
+
+describe('welcome account email', () => {
+  test('supports bilingual credentials without changing enrollment gates', () => {
+    const content = buildWelcomeEmail({
+      parentEmail: 'parent@example.com',
+      studentName: 'Cecilia Student',
+      loginUrl: 'https://example.test/parent/login',
+      studentCode: 'GIIS-TEST-001',
+      parentLoginEmail: 'parent.portal@example.com',
+      parentPassword: 'parent-temp',
+      studentLoginEmail: 'student@example.com',
+      studentPassword: 'student-temp',
+      communicationLanguage: 'bilingual',
+    });
+
+    expect(content.subject).toContain('帐号已建立');
+    expect(content.text).toContain('Parent Portal email / 家长入口邮箱');
+    expect(content.text).toContain('parent.portal@example.com');
+    expect(content.html).toContain('Access remains subject to the reviewed enrollment and payment status');
+    expect(content.html).toContain('课程权限仍以已审核的入学与付款状态为准');
   });
 });
