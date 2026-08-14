@@ -137,7 +137,16 @@ async function inspectPath(browser, check) {
     const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
     const status = response ? response.status() : null;
     await page.waitForSelector('body', { timeout: 10000 });
-    await page.waitForTimeout(300);
+    // CRA routes are lazy-loaded. Wait for route-specific evidence instead of
+    // sampling the shared shell while its chunk is still downloading.
+    await page.waitForFunction(
+      (expected) => {
+        const bodyText = document.body.innerText.toLowerCase();
+        return expected.every((item) => bodyText.includes(item.toLowerCase()));
+      },
+      check.evidence,
+      { timeout: 10000 }
+    ).catch(() => {});
     const title = await page.title();
     const text = await page.locator('body').innerText({ timeout: 10000 });
     const missingEvidence = check.evidence.filter((expected) => !includesEvidence(text, expected));
