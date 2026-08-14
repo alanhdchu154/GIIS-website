@@ -1,0 +1,306 @@
+.enrollment-verification-workspace {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+  color: #1a1d24;
+}
+
+.enrollment-verification-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.enrollment-verification-toolbar h1 {
+  margin: 8px 0 4px;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.enrollment-verification-toolbar p {
+  margin: 0;
+  color: #5c6578;
+  font-size: 14px;
+}
+
+.enrollment-verification-toolbar a {
+  color: #2b3d6d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.enrollment-verification-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.enrollment-verification-segment {
+  display: inline-flex;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.enrollment-verification-segment button {
+  border: 0;
+  border-right: 1px solid #cbd5e1;
+  background: #fff;
+  color: #2b3d6d;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.enrollment-verification-segment button:last-child { border-right: 0; }
+.enrollment-verification-segment button.active { background: #2b3d6d; color: #fff; }
+
+.enrollment-document-stage {
+  position: relative;
+  margin: 28px auto 0;
+}
+
+.enrollment-document-scale {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 816px;
+  height: 1056px;
+  transform-origin: top left;
+}
+
+.enrollment-document {
+  position: relative;
+  width: 816px;
+  height: 1056px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 54px 62px 42px;
+  background: #fff;
+  color: #1a1d24;
+  font-family: Georgia, 'Times New Roman', serif;
+  box-shadow: 0 18px 48px rgba(15, 16, 32, 0.14);
+}
+
+.enrollment-document-frame {
+  position: absolute;
+  inset: 20px;
+  border: 3px solid #2b3d6d;
+  outline: 1px solid #d5a836;
+  outline-offset: -8px;
+  pointer-events: none;
+}
+
+.enrollment-document-header {
+  display: grid;
+  grid-template-columns: 86px 1fr 90px;
+  align-items: center;
+  gap: 18px;
+}
+
+.enrollment-document-logo { width: 82px; height: 62px; object-fit: contain; }
+
+.enrollment-document-school p {
+  margin: 0 0 4px;
+  color: #2b3d6d;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.enrollment-document-school span {
+  display: block;
+  color: #5c6578;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.enrollment-document-badge {
+  border: 1px solid #2b3d6d;
+  padding: 8px 6px;
+  color: #2b3d6d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.enrollment-document-rule {
+  height: 3px;
+  margin: 20px 0 22px;
+  background: #2b3d6d;
+  border-bottom: 1px solid #d5a836;
+}
+
+.enrollment-document-title { text-align: center; }
+
+.enrollment-document-title p {
+  margin: 0 0 5px;
+  color: #b08a26;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.enrollment-document-title h1 {
+  margin: 0;
+  color: #2b3d6d;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.enrollment-document-title h2 {
+  margin: 3px 0 0;
+  color: #5c6578;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.enrollment-document-meta {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 1px;
+  margin: 24px 0;
+  border: 1px solid #cbd5e1;
+  background: #cbd5e1;
+}
+
+.enrollment-document-meta div { min-width: 0; padding: 9px 11px; background: #f7f9fc; }
+.enrollment-document-meta span,
+.enrollment-document-meta strong { display: block; font-family: Arial, sans-serif; letter-spacing: 0; }
+.enrollment-document-meta span { margin-bottom: 3px; color: #5c6578; font-size: 8px; font-weight: 700; text-transform: uppercase; }
+.enrollment-document-meta strong { overflow-wrap: anywhere; color: #1a1d24; font-size: 10px; }
+
+.enrollment-document-body { font-size: 13px; line-height: 1.52; }
+.enrollment-document-body p { margin: 0 0 12px; }
+
+.enrollment-document-translation {
+  margin-top: -7px !important;
+  color: #5c6578;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.enrollment-document-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin: 18px 0;
+  border-top: 1px solid #cbd5e1;
+  border-left: 1px solid #cbd5e1;
+}
+
+.enrollment-document-fields div {
+  min-height: 54px;
+  padding: 9px 12px;
+  box-sizing: border-box;
+  border-right: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.enrollment-document-fields dt {
+  margin-bottom: 4px;
+  color: #5c6578;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.enrollment-document-fields dd { margin: 0; color: #2b3d6d; font-size: 14px; font-weight: 700; }
+
+.enrollment-document-boundary {
+  padding: 9px 11px;
+  border-left: 3px solid #d5a836;
+  background: #f7f9fc;
+  color: #465166;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.enrollment-document-translation-boundary {
+  margin-top: -9px !important;
+  padding: 0 11px 8px 14px;
+  border-left: 3px solid #d5a836;
+  background: #f7f9fc;
+}
+
+.enrollment-document-footer {
+  position: absolute;
+  right: 62px;
+  bottom: 72px;
+  left: 62px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.enrollment-document-signature { display: flex; align-items: flex-end; gap: 14px; }
+.enrollment-document-signature img { width: 76px; height: 76px; object-fit: contain; }
+
+.enrollment-document-signature div {
+  display: flex;
+  min-width: 260px;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.enrollment-document-signature-line { display: block; width: 240px; margin-bottom: 6px; border-top: 1px solid #2b3d6d; }
+.enrollment-document-signature strong { color: #2b3d6d; font-size: 12px; }
+.enrollment-document-signature span,
+.enrollment-document-signature small { color: #5c6578; font-size: 9px; line-height: 1.45; }
+
+.enrollment-document-verify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.enrollment-document-verify strong { margin-top: 4px; color: #2b3d6d; font-size: 9px; }
+.enrollment-document-verify span { color: #5c6578; font-size: 8px; }
+.enrollment-document-qr-placeholder { width: 80px; height: 80px; border: 1px dashed #94a3b8; background: #f7f9fc; }
+
+.enrollment-document-bottom {
+  position: absolute;
+  right: 40px;
+  bottom: 35px;
+  left: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 7px;
+  border-top: 1px solid #d5a836;
+  color: #5c6578;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+}
+
+@media (max-width: 760px) {
+  .enrollment-verification-workspace { padding-top: 20px; }
+  .enrollment-verification-toolbar { align-items: stretch; flex-direction: column; gap: 16px; }
+  .enrollment-verification-actions { align-items: stretch; flex-direction: column; }
+  .enrollment-verification-actions .btn,
+  .enrollment-verification-segment { width: 100%; }
+  .enrollment-verification-segment button { flex: 1; }
+}

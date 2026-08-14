@@ -32,6 +32,7 @@ const billingRoutes = require('./routes/billing');
 const weeklyReportRoutes = require('./routes/weekly-report');
 const adminDocumentsRoutes = require('./routes/admin-documents');
 const adminEmailLogRoutes = require('./routes/admin-email-logs');
+const enrollmentVerificationRoutes = require('./routes/enrollment-verification');
 
 if (!process.env.JWT_SECRET || process.env.JWT_SECRET.length < 16) {
   console.warn('[warn] Set a strong JWT_SECRET in .env (16+ chars) before production.');
@@ -145,6 +146,7 @@ app.use('/api/billing', billingRoutes);
 app.use('/api/admin/weekly-report', weeklyReportRoutes);
 app.use('/api/admin/documents', adminDocumentsRoutes);
 app.use('/api/admin/email-logs', adminEmailLogRoutes);
+app.use('/api/enrollment-verification', publicWriteLimiter, enrollmentVerificationRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ error: 'Not found', path: req.path });

@@ -836,9 +836,14 @@ export default function AdminTranscriptPage({ language }) {
               <div className="d-flex gap-3 flex-wrap align-items-center mb-1">
                 <Link to="/admin" className="small fw-semibold">{copy.back}</Link>
                 {studentId ? (
-                  <Link to={`/admin/students/${studentId}/audit-trail`} className="small fw-semibold">
-                    {isEn ? 'Activity audit trail →' : '学习活动审计 →'}
-                  </Link>
+                  <>
+                    <Link to={`/admin/students/${studentId}/audit-trail`} className="small fw-semibold">
+                      {isEn ? 'Activity audit trail →' : '学习活动审计 →'}
+                    </Link>
+                    <Link to={`/admin/enrollment-verification/${studentId}`} className="small fw-semibold">
+                      {isEn ? 'Enrollment verification →' : '在学证明 →'}
+                    </Link>
+                  </>
                 ) : null}
               </div>
               <h1 className="h5 mb-0">{isEn ? 'Admin Transcript Workspace' : '成绩单管理工作区'}</h1>

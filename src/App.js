@@ -66,6 +66,8 @@ const AdminWeeklyReportPage = lazy(() => import('./components/pages/Admin/AdminW
 const ApplyForm = lazy(() => import('./components/pages/Apply/ApplyForm'));
 const InterestConfirmationPage = lazy(() => import('./components/pages/Apply/InterestConfirmationPage'));
 const VerifyPage = lazy(() => import('./components/pages/Verify/VerifyPage'));
+const EnrollmentVerificationPage = lazy(() => import('./components/pages/EnrollmentVerification/EnrollmentVerificationPage'));
+const EnrollmentVerificationPublicPage = lazy(() => import('./components/pages/EnrollmentVerification/EnrollmentVerificationPublicPage'));
 const WelcomePage = lazy(() => import('./components/pages/Welcome/WelcomePage'));
 const TransferStudentsPage = lazy(() => import('./components/pages/TransferStudents/TransferStudentsPage'));
 const TrustCenterPage = lazy(() => import('./components/pages/TrustCenter/TrustCenterPage'));
@@ -121,8 +123,9 @@ function App() {
   const isAdmin = location.pathname.startsWith('/admin');
   const isLearn = location.pathname.startsWith('/learn');
   const isProfile = location.pathname === '/profile';
+  const isEnrollmentVerification = location.pathname.startsWith('/enrollment-verification') || location.pathname.startsWith('/verify/enrollment/');
   const isParent = location.pathname.startsWith('/parent');
-  const hideChrome = isTranscript || isAdmin || isLearn || isProfile || isParent;
+  const hideChrome = isTranscript || isAdmin || isLearn || isProfile || isParent || isEnrollmentVerification;
 
   return (
      <>
@@ -182,6 +185,8 @@ function App() {
          <Route path="/handbook" element={<HandbookPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/student-handbook" element={<Navigate to="/handbook" replace />} />
          <Route path="/profile" element={<ProfilePage language={language} />} />
+         <Route path="/enrollment-verification" element={<EnrollmentVerificationPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/enrollment-verification/:studentId" element={<EnrollmentVerificationPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/pricing" element={<PricingPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/transfer-students" element={<TransferStudentsPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/trust-center" element={<TrustCenterPage language={language} toggleLanguage={toggleLanguage} />} />
@@ -200,6 +205,7 @@ function App() {
          <Route path="/apply" element={<ApplyForm language={language} />} />
          <Route path="/application/confirm" element={<InterestConfirmationPage language={language} />} />
          <Route path="/welcome" element={<WelcomePage language={language} />} />
+         <Route path="/verify/enrollment/:token" element={<EnrollmentVerificationPublicPage />} />
          <Route path="/verify/:code" element={<VerifyPage />} />
          <Route path="/privacy" element={<PrivacyPolicy language={language} />} />
          <Route path="/terms" element={<TermsOfUse language={language} />} />

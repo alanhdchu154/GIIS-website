@@ -189,6 +189,9 @@ export default function ProfilePage({ language }) {
             <p style={{ margin: 0, fontSize: '14px', color: '#888' }}>{profile.email} · {isEn ? 'Student ID: ' : '学号：'}{profile.studentCode || '—'}</p>
           </div>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <Link to="/enrollment-verification" style={{ fontSize: '13px', fontWeight: 700, color: '#2b3d6d', textDecoration: 'none', padding: '9px 18px', border: '2px solid #2b3d6d', borderRadius: '8px' }}>
+              {isEn ? 'Enrollment Letter' : '在学证明'}
+            </Link>
             <Link to="/transcript" style={{ fontSize: '13px', fontWeight: 700, color: '#2b3d6d', textDecoration: 'none', padding: '9px 18px', border: '2px solid #2b3d6d', borderRadius: '8px' }}>
               📄 {isEn ? 'View Transcript' : '查看成绩单'}
             </Link>
