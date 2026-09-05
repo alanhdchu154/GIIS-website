@@ -29,6 +29,7 @@
     "repair:learn-completions": "node scripts/repair-learn-completions-from-transcripts.js --apply",
     "audit:course-question-integrity": "node scripts/audit-course-question-integrity.js",
     "repair:course-question-integrity": "node scripts/audit-course-question-integrity.js --apply",
+    "sync:selected-course-materials": "node scripts/sync-selected-course-materials.js",
     "audit:application-intake": "node scripts/repair-application-intake.js",
     "repair:application-intake": "node scripts/repair-application-intake.js --apply",
     "postinstall": "node scripts/prisma-env.cjs generate",
