@@ -12,7 +12,7 @@
       "order": 1,
       "title": "The Chemistry of Life",
       "titleZh": "生命的化学基础",
-      "objectives": "Describe how atoms, chemical bonds, water properties, and the four major macromolecules support living systems, then connect each molecule to its monomer and biological function.",
+      "objectives": "Describe how atoms, chemical bonds, water properties, and the four major biological macromolecule classes support living systems; connect each class to its building blocks or structural components and biological functions.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/3-1-synthesis-of-biological-macromolecules",
       "readingNote": "OpenStax Biology 2e — review 2.2–2.3 for water and carbon, then read 3.1–3.4 for macromolecule synthesis, carbohydrates, lipids, proteins, and nucleic acids.",
       "videoUrl": "https://genesisideas.school/learn",
@@ -21,7 +21,7 @@
       "video2Note": "Crash Course Biology #1 — That's Why Carbon Is A Tramp",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Build a concept map showing how each of the four macromolecules (carbohydrates, lipids, proteins, nucleic acids) relates to its monomer and main function. Include one food or biological example for each, label at least two chemical features or bonds, and write a 150-word explanation of why carbon-based molecules are central to living systems. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the The Chemistry of Life module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Build a concept map for carbohydrates, lipids, proteins, and nucleic acids. For carbohydrates, proteins, and nucleic acids, name the monomer and polymer or larger product. For lipids, identify the structural components of a triglyceride and note that lipids are a diverse class rather than one repeating-monomer polymer. For each class, include one food or biological example, one main function, and at least two relevant chemical features or bonds across the map. Add arrows showing dehydration synthesis and hydrolysis where they apply, then write a 150-word explanation of why carbon-based molecules are central to living systems. Evaluation: scientific accuracy, complete relationships, labeled evidence, and a clear carbon explanation.",
       "estimatedHrs": 3
     },
     {
@@ -133,7 +133,7 @@
       "video2Note": "Crash Course Biology #10 — DNA Structure & Replication",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Given a template DNA strand, write the complementary strand and show the two daughter DNA molecules after replication. Label the parent strand, new strand, and direction of synthesis, then explain why replication is called semi-conservative. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the DNA Structure & Replication module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use the template strand 3'-TAC GGA TCT AAC-5'. Write the complementary daughter strand with its 5' and 3' ends, then draw the two daughter DNA molecules after replication. Label each parental strand, each new strand, the replication direction, and the hydrogen-bonded base pairs. Explain in 100–150 words why replication is called semi-conservative and how complementary base pairing supports accuracy. Evaluation: correct sequence and direction, two complete daughter molecules, accurate labels, and a clear evidence-based explanation.",
       "estimatedHrs": 3
     },
     {
@@ -149,7 +149,7 @@
       "video2Note": "Crash Course Biology #11 — DNA, Hot Pockets & Genetics",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Given a DNA sequence, transcribe it into mRNA and translate it into an amino acid chain using a codon chart. Label codons, anticodons, start and stop signals, then explain how one point mutation could change the resulting protein. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Gene Expression: Transcription & Translation module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use the DNA template strand 3'-TAC GGA AAA ACT-5'. Transcribe it into mRNA, divide the mRNA into codons, and translate it with a codon chart. Label the start codon, stop codon, and the tRNA anticodon that pairs with the second mRNA codon. Then change the DNA template's seventh base from A to C, repeat the affected codon and amino acid, and explain how this point mutation changes or does not change the protein. Evaluation: correct direction and base pairing, accurate codons/anticodon/amino acids, and a clear mutation comparison.",
       "estimatedHrs": 3.5
     },
     {
@@ -181,7 +181,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Classify 5 organisms from a provided list using domain, kingdom, phylum, class, order, family, genus, and species. For each organism, add one sentence explaining which shared trait or evidence supports its placement. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Diversity of Life & Classification module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Classify these five organisms from domain through species: human (Homo sapiens), house cat (Felis catus), baker's yeast (Saccharomyces cerevisiae), Escherichia coli, and sunflower (Helianthus annuus). Use a reliable taxonomy source and cite it. For each organism, add one sentence explaining which shared trait or evidence supports at least one placement, then draw a simple branching diagram that groups the organisms first by domain and then by kingdom. Evaluation: complete and accurate ranks, cited evidence, correct binomial formatting, and a logical branching diagram.",
       "estimatedHrs": 3
     },
     {
@@ -488,7 +488,7 @@
       "examType": "final",
       "order": 3,
       "type": "mc",
-      "question": "During transcription, DNA is used to produce:",
+      "question": "During transcription of a protein-coding gene, DNA is used to produce which molecule that carries the code to a ribosome?",
       "options": [
         "Proteins",
         "mRNA",
@@ -496,7 +496,7 @@
         "Ribosomes"
       ],
       "answer": "mRNA",
-      "explanation": "The correct answer is: mRNA. The explanation links the answer to the underlying process or evidence expected in Biology final concepts.",
+      "explanation": "A protein-coding gene is transcribed into messenger RNA (mRNA), which carries the codon sequence to a ribosome for translation.",
       "points": 1
     },
     {
@@ -678,15 +678,15 @@
       "examType": "final",
       "order": 16,
       "type": "mc",
-      "question": "Hardy-Weinberg equilibrium requires:",
+      "question": "Which pattern of natural selection favors intermediate phenotypes and selects against both extremes?",
       "options": [
-        "Natural selection occurring",
-        "No mutation, migration, selection, or genetic drift (large random mating population)",
-        "Small population size",
-        "Environmental changes"
+        "Stabilizing selection",
+        "Directional selection",
+        "Disruptive selection",
+        "Genetic drift"
       ],
-      "answer": "No mutation, migration, selection, or genetic drift (large random mating population)",
-      "explanation": "The correct answer is: No mutation, migration, selection, or genetic drift (large random mating population).",
+      "answer": "Stabilizing selection",
+      "explanation": "Stabilizing selection favors phenotypes near the population average and selects against both extremes.",
       "points": 1
     },
     {
@@ -796,15 +796,15 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Which element forms the backbone of organic molecules?",
+      "question": "Why does ice float on liquid water?",
       "options": [
-        "Carbon",
-        "Oxygen",
-        "Hydrogen",
-        "Nitrogen"
+        "Hydrogen bonds hold water molecules in a more open, less-dense structure when frozen",
+        "Ice contains no hydrogen atoms",
+        "Covalent bonds disappear when water freezes",
+        "Frozen water becomes nonpolar"
       ],
-      "answer": "Carbon",
-      "explanation": "Carbon can form four covalent bonds, allowing it to build the diverse structures of organic molecules.",
+      "answer": "Hydrogen bonds hold water molecules in a more open, less-dense structure when frozen",
+      "explanation": "In ice, hydrogen bonds arrange water molecules in an open lattice that is less dense than liquid water, so ice floats.",
       "points": 1
     },
     {
@@ -866,15 +866,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "Where is most eukaryotic genetic material stored?",
+      "question": "Which sequence best describes the pathway of a protein that will be secreted from a eukaryotic cell?",
       "options": [
-        "Nucleus",
-        "Ribosome",
-        "Lysosome",
-        "Cell membrane"
+        "Ribosome on rough ER → Golgi apparatus → transport vesicle → cell membrane",
+        "Nucleus → lysosome → chloroplast → cell membrane",
+        "Smooth ER → nucleus → ribosome → mitochondrion",
+        "Golgi apparatus → nucleus → rough ER → cytoplasm"
       ],
-      "answer": "Nucleus",
-      "explanation": "In eukaryotic cells, most DNA is housed inside the nucleus. It connects the correct answer to Cell Structure & Function and separates it from plausible distractors.",
+      "answer": "Ribosome on rough ER → Golgi apparatus → transport vesicle → cell membrane",
+      "explanation": "Secreted proteins enter the rough ER, are modified and sorted by the Golgi, and travel in vesicles to the plasma membrane.",
       "points": 1
     },
     {
@@ -922,29 +922,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "The cell membrane's phospholipid arrangement is best described as a:",
+      "question": "What is most likely to happen to an animal cell placed in a hypertonic solution?",
       "options": [
-        "Phospholipid bilayer",
-        "Single protein sheet",
-        "Cellulose wall",
-        "Nucleic acid chain"
+        "Water leaves the cell and the cell shrinks",
+        "Water enters the cell and the cell bursts",
+        "The cell divides immediately",
+        "Solute stops moving across the membrane"
       ],
-      "answer": "Phospholipid bilayer",
-      "explanation": "Cell membranes are built mainly from two layers of phospholipids with embedded proteins.",
+      "answer": "Water leaves the cell and the cell shrinks",
+      "explanation": "A hypertonic solution has a higher solute concentration outside the cell, so water moves out by osmosis and the animal cell shrinks.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "Diffusion moves molecules in which direction?",
+      "question": "Which transport process directly requires cellular energy to move a substance against its concentration gradient?",
       "options": [
-        "From high to low concentration",
-        "Against the concentration gradient",
-        "Only into the nucleus",
-        "Only when ATP is used"
+        "Active transport",
+        "Simple diffusion",
+        "Osmosis",
+        "Facilitated diffusion"
       ],
-      "answer": "From high to low concentration",
-      "explanation": "Diffusion is passive movement down a concentration gradient. This reinforces the Cell Membrane & Transport idea behind the item instead of rewarding a surface-level guess.",
+      "answer": "Active transport",
+      "explanation": "Active transport uses cellular energy, often ATP, to move substances against their concentration gradient.",
       "points": 1
     },
     {
@@ -1006,15 +1006,15 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Where does glycolysis occur in the cell?",
+      "question": "What is oxygen's role in aerobic cellular respiration?",
       "options": [
-        "Cytoplasm",
-        "Mitochondrial matrix",
-        "Nucleus",
-        "Thylakoid membrane"
+        "It acts as the final electron acceptor in the electron transport chain",
+        "It is converted directly into glucose during glycolysis",
+        "It supplies carbon atoms for carbon dioxide",
+        "It splits ATP into ADP before the Krebs cycle"
       ],
-      "answer": "Cytoplasm",
-      "explanation": "Glycolysis takes place in the cytoplasm before later stages of respiration occur in the mitochondria.",
+      "answer": "It acts as the final electron acceptor in the electron transport chain",
+      "explanation": "Oxygen accepts electrons and hydrogen ions at the end of the electron transport chain, forming water and allowing high ATP production to continue.",
       "points": 1
     },
     {
@@ -1062,26 +1062,31 @@
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "In photosynthesis, carbon dioxide and water plus light energy are converted into:",
+      "question": "A plant receives water and carbon dioxide but is kept in complete darkness. Which process is directly limited first?",
       "options": [
-        "Glucose and oxygen",
-        "Carbon dioxide and ATP only",
-        "Water and oxygen only",
-        "Protein and nitrogen"
+        "The light-dependent reactions that produce ATP and NADPH",
+        "DNA replication in root cells",
+        "Osmosis across every cell membrane",
+        "Protein digestion in the vacuole"
       ],
-      "answer": "Glucose and oxygen",
-      "explanation": "The overall photosynthesis equation can be summarized as CO₂ + H₂O + light → glucose + O₂.",
+      "answer": "The light-dependent reactions that produce ATP and NADPH",
+      "explanation": "Without light, chlorophyll cannot drive the light-dependent reactions, so ATP and NADPH production for the Calvin cycle is limited.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 5,
-      "question": "Short response: Which gas do plants absorb for photosynthesis?",
-      "options": null,
+      "question": "Which gas supplies the carbon atoms used to build sugars during photosynthesis?",
+      "options": [
+        "Carbon dioxide",
+        "Oxygen",
+        "Nitrogen",
+        "Hydrogen"
+      ],
       "answer": "Carbon dioxide",
-      "explanation": "A correct response identifies \"Carbon dioxide\" and connects it to the module context.",
+      "explanation": "Plants take in carbon dioxide, and the Calvin cycle incorporates its carbon into sugar molecules.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 6,
@@ -1198,15 +1203,15 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Gregor Mendel conducted his classic genetics experiments using:",
+      "question": "For the cross Aa × Aa, what genotype ratio is expected?",
       "options": [
-        "Pea plants",
-        "Fruit flies",
-        "Corn plants",
-        "Bacteria"
+        "1 AA : 2 Aa : 1 aa",
+        "3 AA : 1 aa",
+        "1 Aa : 1 aa",
+        "All Aa"
       ],
-      "answer": "Pea plants",
-      "explanation": "Mendel studied inheritance patterns in pea plants, including traits such as flower color and seed shape.",
+      "answer": "1 AA : 2 Aa : 1 aa",
+      "explanation": "A Punnett square for Aa × Aa gives AA, Aa, Aa, and aa, so the genotype ratio is 1:2:1.",
       "points": 1
     },
     {
@@ -1268,15 +1273,15 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "Which DNA base-pairing rule is correct?",
+      "question": "Why is DNA replication described as semi-conservative?",
       "options": [
-        "A-T and G-C",
-        "A-G and T-C",
-        "A-C and G-T",
-        "A-U and G-C"
+        "Each daughter DNA molecule contains one parental strand and one newly synthesized strand",
+        "Only half of each chromosome is copied",
+        "Each daughter cell receives half the normal amount of DNA",
+        "DNA polymerase copies only one side of a gene"
       ],
-      "answer": "A-T and G-C",
-      "explanation": "In DNA, adenine pairs with thymine, and guanine pairs with cytosine. It names the scientific relationship being tested and distinguishes it from related vocabulary.",
+      "answer": "Each daughter DNA molecule contains one parental strand and one newly synthesized strand",
+      "explanation": "Each original strand serves as a template, so every daughter double helix conserves one parental strand and includes one new strand.",
       "points": 1
     },
     {
@@ -1324,29 +1329,29 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Which sequence best represents the central dogma of molecular biology?",
+      "question": "What is the role of a tRNA anticodon during translation?",
       "options": [
-        "DNA → RNA → Protein",
-        "Protein → RNA → DNA",
-        "RNA → DNA → Protein",
-        "DNA → Protein → RNA"
+        "It base-pairs with a complementary mRNA codon while the tRNA carries an amino acid",
+        "It copies DNA into mRNA inside the nucleus",
+        "It joins two DNA strands during replication",
+        "It breaks peptide bonds after translation"
       ],
-      "answer": "DNA → RNA → Protein",
-      "explanation": "The central dogma describes information flow from DNA to RNA to protein. It connects the correct answer to Gene Expression: Transcription & Translation and separates it from plausible distractors.",
+      "answer": "It base-pairs with a complementary mRNA codon while the tRNA carries an amino acid",
+      "explanation": "The anticodon pairs with the mRNA codon, positioning the tRNA's amino acid for addition to the growing chain.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "Where does transcription of nuclear DNA occur in a eukaryotic cell?",
+      "question": "Where does translation of an mRNA sequence occur?",
       "options": [
-        "Nucleus",
         "Ribosome",
-        "Lysosome",
-        "Cell membrane"
+        "Nucleus",
+        "Golgi apparatus",
+        "Lysosome"
       ],
-      "answer": "Nucleus",
-      "explanation": "In eukaryotic cells, transcription occurs in the nucleus before mRNA travels to ribosomes for translation.",
+      "answer": "Ribosome",
+      "explanation": "Ribosomes read mRNA codons and catalyze assembly of the amino acid chain during translation.",
       "points": 1
     },
     {
@@ -1408,15 +1413,15 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Which book introduced Darwin's theory of evolution by natural selection?",
+      "question": "A bacterial population contains heritable variation in antibiotic resistance. After antibiotic treatment, resistant bacteria leave more offspring. Which process is occurring?",
       "options": [
-        "On the Origin of Species",
-        "Principia Mathematica",
-        "The Double Helix",
-        "Silent Spring"
+        "Natural selection",
+        "Intentional adaptation by individual bacteria",
+        "Artificial selection by bacterial choice",
+        "Inheritance of acquired need"
       ],
-      "answer": "On the Origin of Species",
-      "explanation": "Darwin published his theory of evolution by natural selection in On the Origin of Species.",
+      "answer": "Natural selection",
+      "explanation": "Heritable resistant variants survive and reproduce more successfully under antibiotic pressure, so resistance becomes more common over generations.",
       "points": 1
     },
     {
@@ -1464,15 +1469,15 @@
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "From broadest to most specific, what is the correct taxonomic hierarchy?",
+      "question": "In the scientific name Homo sapiens, which word identifies the genus?",
       "options": [
-        "Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species",
-        "Species, Genus, Family, Order, Class, Phylum, Kingdom, Domain",
-        "Kingdom, Domain, Phylum, Class, Order, Family, Genus, Species",
-        "Domain, Phylum, Kingdom, Class, Order, Family, Genus, Species"
+        "Homo",
+        "sapiens",
+        "Both words together",
+        "Neither word"
       ],
-      "answer": "Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species",
-      "explanation": "Taxonomic levels move from the broad domain level down to the specific species level.",
+      "answer": "Homo",
+      "explanation": "The first word of a binomial name is the genus; the second word is the specific epithet.",
       "points": 1
     },
     {
@@ -1590,15 +1595,15 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "What is the primary function of the respiratory system?",
+      "question": "During exercise, how do the respiratory and circulatory systems work together?",
       "options": [
-        "Gas exchange: oxygen in and carbon dioxide out",
-        "Pumping blood through the body",
-        "Filtering wastes from blood",
-        "Producing digestive enzymes"
+        "The respiratory system exchanges gases and the circulatory system transports oxygen to cells and carbon dioxide back to the lungs",
+        "The respiratory system makes blood cells and the circulatory system digests food",
+        "Both systems produce insulin to lower blood glucose",
+        "The circulatory system moves air into the lungs while the respiratory system pumps blood"
       ],
-      "answer": "Gas exchange: oxygen in and carbon dioxide out",
-      "explanation": "The respiratory system brings oxygen into the body and removes carbon dioxide.",
+      "answer": "The respiratory system exchanges gases and the circulatory system transports oxygen to cells and carbon dioxide back to the lungs",
+      "explanation": "The lungs exchange oxygen and carbon dioxide, while the blood carries those gases between the lungs and active tissues.",
       "points": 1
     },
     {
@@ -1660,15 +1665,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "Which description best fits producers in an ecosystem?",
+      "question": "In a grass → rabbit → fox food chain, the rabbit population sharply declines. Which immediate change is most likely?",
       "options": [
-        "Organisms that make their own food, often through photosynthesis",
-        "Organisms that eat only herbivores",
-        "Organisms that break down all rocks",
-        "Animals that consume producers"
+        "Foxes have less prey available",
+        "Grass immediately disappears",
+        "Foxes become producers",
+        "Energy transfer to foxes increases"
       ],
-      "answer": "Organisms that make their own food, often through photosynthesis",
-      "explanation": "Producers are autotrophs that supply energy to other organisms in an ecosystem.",
+      "answer": "Foxes have less prey available",
+      "explanation": "Rabbits are the foxes' prey in this chain, so a rabbit decline immediately reduces the food available to foxes.",
       "points": 1
     }
   ],

@@ -21,7 +21,7 @@
       "video2Note": "",
       "practiceUrl": "https://www.gutenberg.org/ebooks/7256",
       "practiceNote": "Project Gutenberg — The Gift of the Magi by O. Henry; use the Read online link as the default public-domain literary passage.",
-      "assignment": "Read one short informational article from a free news, museum, library, or government education site and one short public-domain story from a source such as Project Gutenberg or a teacher-provided packet. For each: (1) write a one-paragraph summary in your own words, (2) identify the main idea and three supporting details, (3) make two inferences supported with text evidence, and (4) identify the text structure used. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: drafts, annotations, quotations, analysis, or revised writing from the Reading Comprehension Strategies module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Read the NASA Science article linked as the module reading and O. Henry's The Gift of the Magi linked as the module practice. For each text: (1) write a one-paragraph summary in your own words, (2) state the main idea and cite three supporting details, (3) make two inferences and support each with a short quotation or precise reference, and (4) identify the text structure and explain one signal that supports your choice. A teacher-approved text may replace either default. Submit both annotated texts and responses in one document. Evaluation: accurate summary, relevant details, evidence-supported inferences, justified structure, and clear source labels.",
       "estimatedHrs": 3
     },
     {
@@ -53,7 +53,7 @@
       "video2Note": "",
       "practiceUrl": "https://owl.purdue.edu/owl_exercises/grammar_exercises/index.html",
       "practiceNote": "Purdue OWL — grammar exercises; complete the GIIS Learn Portal assignment for submitted practice.",
-      "assignment": "Write 5 examples of each sentence type (simple, compound, complex, compound-complex) on topics of your choice. Then revise 10 provided fragments and run-ons into correct sentences. Explain what made each original sentence incorrect. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: drafts, annotations, quotations, analysis, or revised writing from the Sentence Structure & Syntax module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Write five original examples of each sentence type: simple, compound, complex, and compound-complex. Then revise these 10 items into complete, correctly punctuated sentences: (1) Because the storm arrived. (2) Running across the field. (3) After the final bell rang. (4) The book on the desk. (5) While we waited for the bus. (6) I finished my homework I called my friend. (7) The rain stopped we left the house. (8) Maya likes science her brother prefers history. (9) We missed the train the next one came an hour later. (10) The team practiced hard they still lost the first game. For each revision, label the original as fragment or run-on and explain the repair. Evaluation: 20 accurate original examples, 10 effective revisions, correct labels, and clear explanations.",
       "estimatedHrs": 3
     },
     {
@@ -337,7 +337,7 @@
       "examType": "midterm",
       "order": 9,
       "type": "mc",
-      "question": "In 'The Lottery' by Shirley Jackson, the lottery is revealed to be a ritualized stoning. This shocking ending is best described as which type of conflict?",
+      "question": "A town requires every family to follow a harmful annual ritual. One resident resists the custom but is overruled by the community. What is the primary external conflict?",
       "options": [
         "Person vs. person",
         "Person vs. self",
@@ -345,7 +345,7 @@
         "Person vs. nature"
       ],
       "answer": "Person vs. society",
-      "explanation": "The central conflict is between the individual and the traditions/norms of the village community — a classic person vs. society conflict.",
+      "explanation": "The resident is struggling against the community's rules and shared expectations, so the conflict is person vs. society.",
       "points": 1
     },
     {
@@ -432,7 +432,7 @@
       "examType": "final",
       "order": 1,
       "type": "mc",
-      "question": "A text lists causes of the American Revolution using signal words such as \"first,\" \"second,\" and \"additionally.\" Which text structure is being used?",
+      "question": "A paragraph explains a lab procedure: \"First, measure 100 mL of water. Next, add the salt. Finally, record the temperature.\" Which text structure is being used?",
       "options": [
         "Cause and effect",
         "Sequence or list",
@@ -440,7 +440,7 @@
         "Compare and contrast"
       ],
       "answer": "Sequence or list",
-      "explanation": "Signal words such as \"first,\" \"second,\" and \"additionally\" show that ideas are being presented in order as a sequence or list.",
+      "explanation": "The passage presents actions in the order they should occur, signaled by first, next, and finally, so it uses sequence.",
       "points": 1
     },
     {
@@ -522,7 +522,7 @@
       "examType": "final",
       "order": 7,
       "type": "mc",
-      "question": "Which organizational structure would work best for an essay explaining why school lunches should be healthier?",
+      "question": "An essay identifies health problems caused by the current lunch menu and proposes specific menu changes to address them. Which organizational structure fits best?",
       "options": [
         "Compare and contrast",
         "Cause and effect",
@@ -530,7 +530,7 @@
         "Chronological order"
       ],
       "answer": "Problem and solution",
-      "explanation": "The essay identifies a problem (unhealthy school lunches) and proposes solutions (improvements). Problem-solution structure is ideal for this type of argument.",
+      "explanation": "The essay first identifies problems and then proposes changes that address them, which is a problem-and-solution structure.",
       "points": 1
     },
     {
@@ -597,7 +597,7 @@
       "examType": "final",
       "order": 12,
       "type": "mc",
-      "question": "In 'Flowers for Algernon,' Charlie Gordon changes from having an intellectual disability to genius-level intelligence and then declines again. He is best classified as a:",
+      "question": "At the beginning of a story, Lena avoids speaking in groups. After several conflicts and choices, she presents her project and volunteers to lead the next meeting. Lena is best classified as a:",
       "options": [
         "Static character",
         "Flat character",
@@ -605,7 +605,7 @@
         "Minor character"
       ],
       "answer": "Dynamic character",
-      "explanation": "Charlie undergoes profound psychological and intellectual change throughout the story, making him a dynamic character — one who is significantly transformed by the events of the narrative.",
+      "explanation": "Lena's behavior and confidence change meaningfully because of the story's events, so she is a dynamic character.",
       "points": 1
     },
     {
@@ -751,27 +751,32 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "Which option best states the main idea of a passage?",
+      "question": "A city added protected bike lanes. During the next year, bicycle crashes fell and more residents rode to work. Which detail best supports the main idea that the lanes improved safety?",
       "options": [
-        "A specific detail that supports the author's argument",
-        "A quotation from an expert",
-        "The first sentence of the passage",
-        "The most important point the author wants to convey"
+        "Bicycle crashes fell during the next year",
+        "The city has several neighborhoods",
+        "Some residents work from home",
+        "The lanes were painted in spring"
       ],
-      "answer": "The most important point the author wants to convey",
-      "explanation": "The best answer is The most important point the author wants to convey. It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "Bicycle crashes fell during the next year",
+      "explanation": "A drop in crashes directly supports the claim that the protected lanes improved safety.",
       "points": 1,
       "type": "mc"
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Short response: Which signal word indicates a cause-and-effect text structure?",
-      "options": null,
+      "question": "Which signal word most clearly introduces an effect or result?",
+      "options": [
+        "Therefore",
+        "Similarly",
+        "Meanwhile",
+        "For example"
+      ],
       "answer": "Therefore",
-      "explanation": "A correct response identifies \"Therefore\" and connects it to the module context.",
+      "explanation": "Therefore signals that the statement that follows is a result of the preceding cause.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 2,
@@ -818,15 +823,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "In the sentence \"They quickly ran to the bright red car,\" which word is a pronoun?",
+      "question": "In the sentence \"The careful student revised slowly,\" which word is an adverb?",
       "options": [
-        "They",
-        "quickly",
-        "bright",
-        "car"
+        "careful",
+        "student",
+        "revised",
+        "slowly"
       ],
-      "answer": "They",
-      "explanation": "\"They\" is a pronoun because it takes the place of a noun or noun phrase. This reinforces the Parts of Speech & Grammar Foundations idea behind the item instead of rewarding a surface-level guess.",
+      "answer": "slowly",
+      "explanation": "Slowly modifies the verb revised by describing how the action happened, so it is an adverb.",
       "points": 1
     },
     {
@@ -958,29 +963,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "In narrative structure, the climax is:",
+      "question": "Which plot stage shows the immediate consequences of the climax and moves the story toward resolution?",
       "options": [
-        "The introduction of the setting",
-        "The moment of highest tension or the turning point",
-        "The final reflection after the conflict ends",
-        "A description of the narrator's background"
+        "Exposition",
+        "Rising action",
+        "Falling action",
+        "Climax"
       ],
-      "answer": "The moment of highest tension or the turning point",
-      "explanation": "The climax is the turning point or point of greatest tension in the plot. It points to the reading, grammar, or writing feature that makes the answer defensible.",
+      "answer": "Falling action",
+      "explanation": "Falling action follows the climax and shows its consequences as the story moves toward resolution.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Which point of view uses \"you\" and directly addresses the reader?",
+      "question": "Which point of view allows a narrator outside the story to reveal the thoughts of several characters?",
       "options": [
         "First person",
         "Second person",
         "Third-person limited",
         "Third-person omniscient"
       ],
-      "answer": "Second person",
-      "explanation": "Second-person point of view addresses the reader directly with pronouns such as \"you.\"",
+      "answer": "Third-person omniscient",
+      "explanation": "A third-person omniscient narrator can reveal the thoughts and feelings of multiple characters.",
       "points": 1
     },
     {
@@ -1070,15 +1075,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "In a short story, the setting is:",
+      "question": "Which option is a complete theme statement rather than only a topic?",
       "options": [
-        "The central message of the story",
-        "The time and place of the action",
-        "The character who opposes the protagonist",
-        "The sequence of events"
+        "Courage",
+        "The story is about friendship",
+        "Courage grows when people act despite fear",
+        "A character enters a forest"
       ],
-      "answer": "The time and place of the action",
-      "explanation": "Setting identifies when and where a story happens, and it can shape mood, conflict, and character choices.",
+      "answer": "Courage grows when people act despite fear",
+      "explanation": "A theme statement makes a complete, transferable claim about a topic; the other options are topics or plot details.",
       "points": 1
     },
     {
@@ -1182,12 +1187,17 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Short response: Complete this statement: A speech given by a character alone on stage, revealing their inner thoughts to the audience, is called a...",
-      "options": null,
+      "question": "What is a speech given by a character alone on stage to reveal inner thoughts to the audience?",
+      "options": [
+        "Soliloquy",
+        "Stage direction",
+        "Aside",
+        "Dialogue"
+      ],
       "answer": "Soliloquy",
-      "explanation": "A correct response identifies \"Soliloquy\" and connects it to the module context.",
+      "explanation": "A soliloquy is an extended speech in which a character voices private thoughts while alone or unaware of listeners on stage.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 10,
@@ -1290,15 +1300,15 @@
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "Which evidence is weakest for supporting an argument?",
+      "question": "A writer acknowledges that later school start times may complicate sports schedules. Which response is the strongest rebuttal?",
       "options": [
-        "A statistic from a peer-reviewed study",
-        "A quotation from a relevant expert",
-        "A personal opinion with no supporting data",
-        "A primary-source document connected to the topic"
+        "Some people disagree with later start times",
+        "Sports are important to many students",
+        "Districts can adjust practice times, while sleep research still supports the health benefit of later starts",
+        "The schedule has always been this way"
       ],
-      "answer": "A personal opinion with no supporting data",
-      "explanation": "Unsupported opinion is weak evidence because it does not give readers verifiable support for the claim.",
+      "answer": "Districts can adjust practice times, while sleep research still supports the health benefit of later starts",
+      "explanation": "This response directly addresses the concern and explains why the original claim still stands using a practical solution and evidence.",
       "points": 1
     },
     {
@@ -1346,26 +1356,31 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "Which organizational structure discusses all features of one subject, then all features of another subject?",
+      "question": "Which transition most clearly signals a contrast between two ideas?",
       "options": [
-        "Point-by-point method",
-        "Block method",
-        "Chronological order",
-        "Cause-and-effect order"
+        "However",
+        "Therefore",
+        "For example",
+        "Similarly"
       ],
-      "answer": "Block method",
-      "explanation": "The block method presents one subject completely before moving to the second subject.",
+      "answer": "However",
+      "explanation": "However signals that the next idea contrasts with the preceding idea.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Short response: Which organizational structure works best for an essay about why teen obesity has increased and what consequences it has?",
-      "options": null,
+      "question": "Which structure best fits an essay explaining factors that increased teen obesity and the consequences that followed?",
+      "options": [
+        "Cause and effect",
+        "Compare and contrast",
+        "Chronological narrative",
+        "Definition"
+      ],
       "answer": "Cause and effect",
-      "explanation": "A correct response identifies \"Cause and effect\" and connects it to the module context.",
+      "explanation": "The essay connects contributing factors (causes) to later consequences (effects).",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 13,
@@ -1398,15 +1413,15 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "Which source is most credible for a research paper on climate science?",
+      "question": "Which MLA in-text citation correctly identifies page 42 of a source by Rivera?",
       "options": [
-        "An anonymous social media post",
-        "A peer-reviewed journal article published in Nature",
-        "A personal blog with no citations",
-        "A product advertisement about weather equipment"
+        "(Rivera 42)",
+        "(Rivera, p. 42)",
+        "[Rivera 42]",
+        "(42 Rivera)"
       ],
-      "answer": "A peer-reviewed journal article published in Nature",
-      "explanation": "A peer-reviewed journal article from a reputable scientific publication is more credible than anonymous, promotional, or unsupported sources.",
+      "answer": "(Rivera 42)",
+      "explanation": "MLA parenthetical citations normally use the author's last name and page number without a comma or p.",
       "points": 1
     }
   ],

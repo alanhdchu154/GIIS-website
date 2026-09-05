@@ -53,7 +53,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Identify which property justifies each of 10 algebraic steps in a provided simplification chain. Then simplify 5 expressions showing properties used. Submit annotated work where every transformation is labeled with the property name, and include a short error-analysis paragraph explaining one common misuse of the distributive, associative, or commutative property. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Properties of Real Numbers module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "For the chain 3(2x + 4) + 5 − 5 = 6x + 12 + 0 = 6x + 12, label the distributive, additive inverse, and additive identity steps. Then create seven additional true equation steps that demonstrate the commutative, associative, multiplicative identity, multiplicative inverse, and zero properties, for 10 labeled steps total. Simplify these five expressions and label every property used: 4(x + 3), 2a + 7 + 3a − 2, 5(2y − 1) + y, 3(m + 4) − 2(m − 1), and 6p − (2p + 5). Submit annotated work and a short error-analysis paragraph explaining one common misuse of the distributive, associative, or commutative property. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include all transformations and one clear connection to the module objective. Evaluation: accuracy of simplification, correct property labels, complete reasoning, and useful error analysis.",
       "estimatedHrs": 3
     },
     {
@@ -117,7 +117,7 @@
       "video2Note": "Math Antics — What Are Functions? — for a visual explanation of Introduction to Functions before guided practice",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Given 5 relations, determine if each is a function. Evaluate f(x) for 10 different inputs across 3 functions. State the domain and range of each. Submit a table, mapping diagram or graph for each relation, mark the exact evidence that proves function/not function, and write one sentence explaining how domain and range describe the inputs and outputs. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Introduction to Functions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Determine whether each relation is a function and state its domain and range: (1) {(1,2),(2,4),(3,6)}, (2) {(1,2),(1,5),(3,6)}, (3) {(-2,4),(0,0),(2,4)}, (4) y = 3x − 1 for x in {-1,0,2}, and (5) x = y² for y in {-2,-1,0,1,2}. Then evaluate f(x) = 2x + 3 at x = -2, 0, 1, 4; g(x) = x² − 1 at x = -3, -1, 0; and h(x) = |x| + 2 at x = -4, 0, 3. Submit a table, mapping diagram, or graph for each relation, mark the evidence that proves function/not function, and explain how domain and range describe the inputs and outputs. Evaluation: all five classifications, all ten evaluations, accurate domain/range notation, and evidence-based reasoning.",
       "estimatedHrs": 3.5
     },
     {
@@ -165,7 +165,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Write the equation for 10 lines given various information (slope + point, two points, parallel/perpendicular conditions). Convert each to slope-intercept, point-slope, and standard form. For each line, show the source information, intermediate algebra, final equations, and one quick check using either a graph or a substituted point. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Writing Linear Equations module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Write equations for these 10 lines: slope 3 through (0,-2); slope -2 through (4,1); through (1,3) and (5,11); through (-2,4) and (2,-4); parallel to y = 4x + 1 through (2,-3); perpendicular to y = (1/2)x - 6 through (4,0); horizontal through (0,5); vertical through (-3,2); x-intercept 6 and y-intercept 3; and a taxi cost with a $4 start fee plus $2.25 per mile. Use every applicable requested form; note that a vertical line cannot be written in slope-intercept form. Show intermediate algebra and verify each line with a graph or substituted point. Evaluation: correct equations, valid form conversions, complete checks, and interpretation of slope/intercept in the taxi model.",
       "estimatedHrs": 3.5
     },
     {
@@ -305,8 +305,8 @@
         "x = −1",
         "x = 1"
       ],
-      "answer": "x = −3",
-      "explanation": "2x − 6 + 4 = 3x − 1 → 2x − 2 = 3x − 1 → −x = 1 → x = −1. Wait: 2x − 2 = 3x − 1 → −2 + 1 = 3x − 2x → x = −1.",
+      "answer": "x = −1",
+      "explanation": "Distribute and combine like terms: 2x − 6 + 4 = 3x − 1, so 2x − 2 = 3x − 1. Subtract 2x and add 1 to obtain −1 = x, or x = −1. Substitution gives −4 on both sides.",
       "points": 1
     },
     {
@@ -327,11 +327,16 @@
     {
       "examType": "final",
       "order": 7,
-      "type": "fill",
-      "question": "Solve and graph: −3x + 6 ≥ −9. Which interval represents the solution?",
-      "options": null,
-      "answer": "x ≤ 5",
-      "explanation": "The correct answer is: x ≤ 5.",
+      "type": "mc",
+      "question": "Solve −3x + 6 ≥ −9. Which interval represents the solution?",
+      "options": [
+        "(−∞, 5]",
+        "[5, ∞)",
+        "(−∞, 5)",
+        "(5, ∞)"
+      ],
+      "answer": "(−∞, 5]",
+      "explanation": "Subtract 6 to get −3x ≥ −15. Dividing by −3 reverses the inequality, so x ≤ 5, which is (−∞, 5] in interval notation.",
       "points": 1
     },
     {
@@ -401,9 +406,9 @@
       "question": "Which option best completes this statement: The solution to the system: y = 2x + 1 and y = −x + 7 is...",
       "options": [
         "(2, 5)",
-        "9",
-        "10",
-        "11"
+        "(1, 3)",
+        "(3, 4)",
+        "(0, 7)"
       ],
       "answer": "(2, 5)",
       "explanation": "The best answer is (2, 5). It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
@@ -622,7 +627,7 @@
       "options": [
         "w = P − 2l",
         "w = (P − 2l)/2",
-        "w = P/2 − l",
+        "w = (P + 2l)/2",
         "w = 2P − l"
       ],
       "answer": "w = (P − 2l)/2",
@@ -786,27 +791,32 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Which substitution correctly evaluates 3x + 5 when x = 2?",
+      "question": "A movie rental costs $4 plus $2 for each day d. Which expression gives the total cost?",
       "options": [
-        "3(2) + 5 = 11",
-        "3 + 2 + 5 = 10",
-        "3(5) + 2 = 17",
-        "3(2 + 5) = 21"
+        "4 + 2d",
+        "6d",
+        "4d + 2",
+        "2(d + 4)"
       ],
-      "answer": "3(2) + 5 = 11",
-      "explanation": "The best answer is 3(2) + 5 = 11. Substituting x = 2 means replacing x with 2 first, then multiplying before adding.",
+      "answer": "4 + 2d",
+      "explanation": "The fixed fee is 4 and the daily charge is 2 multiplied by the number of days, so the expression is 4 + 2d.",
       "points": 1,
       "type": "mc"
     },
     {
       "moduleOrder": 1,
       "order": 5,
-      "question": "Short response: Complete this statement: In the expression 5y + 3, the coefficient of y is...",
-      "options": null,
+      "question": "In the expression 5y + 3, which number is the coefficient of y?",
+      "options": [
+        "5",
+        "3",
+        "8",
+        "1"
+      ],
       "answer": "5",
-      "explanation": "A correct response identifies \"5\" and connects it to the module context.",
+      "explanation": "The coefficient is the number multiplying the variable. In 5y + 3, 5 multiplies y.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 2,
@@ -867,15 +877,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "Simplify 2 + 3 × 4 using order of operations.",
+      "question": "Evaluate 18 ÷ (3 + 3) × 2 using order of operations.",
       "options": [
-        "14",
-        "20",
-        "24",
-        "11"
+        "1.5",
+        "6",
+        "12",
+        "24"
       ],
-      "answer": "14",
-      "explanation": "Multiply before adding: 3 × 4 = 12, and 2 + 12 = 14. The choice fits the prompt because it applies the central rule or concept from Order of Operations.",
+      "answer": "6",
+      "explanation": "Evaluate the parentheses first: 3 + 3 = 6. Then work left to right: 18 ÷ 6 × 2 = 3 × 2 = 6.",
       "points": 1
     },
     {
@@ -937,15 +947,15 @@
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "After distributing 4 across x + 3, which expression is equivalent to 4(x + 3)?",
+      "question": "Which equation illustrates the additive inverse property?",
       "options": [
-        "4x + 12",
-        "4x + 3",
-        "x + 12",
-        "4x + 7"
+        "7 + (−7) = 0",
+        "7 + 0 = 7",
+        "7 × 1 = 7",
+        "7 + 3 = 3 + 7"
       ],
-      "answer": "4x + 12",
-      "explanation": "Distribute 4 to both terms: 4 · x + 4 · 3 = 4x + 12. This reinforces the Properties of Real Numbers idea behind the item instead of rewarding a surface-level guess.",
+      "answer": "7 + (−7) = 0",
+      "explanation": "A number and its additive inverse sum to zero, so 7 and −7 demonstrate the property.",
       "points": 1
     },
     {
@@ -1007,12 +1017,17 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Short response: Define or explain: Solve: x/3 + 1 = 4.",
-      "options": null,
-      "answer": "x = 9",
-      "explanation": "A correct response identifies \"x = 9\" and connects it to the module context.",
+      "question": "Which substitution verifies that x = 9 solves x/3 + 1 = 4?",
+      "options": [
+        "9/3 + 1 = 4",
+        "9 + 3 + 1 = 13",
+        "3/9 + 1 = 4",
+        "9/3 − 1 = 4"
+      ],
+      "answer": "9/3 + 1 = 4",
+      "explanation": "Substitute 9 for x in the original equation: 9/3 + 1 = 3 + 1 = 4, so the solution is verified.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 5,
@@ -1087,15 +1102,15 @@
     {
       "moduleOrder": 5,
       "order": 6,
-      "question": "In Solving Multi-Step Equations & Literal Equations, Solve 2(x + 3) = 14.",
+      "question": "The formula d = rt relates distance, rate, and time. Solve for t.",
       "options": [
-        "x = 4",
-        "x = 7",
-        "x = 2",
-        "x = 10"
+        "t = d/r",
+        "t = r/d",
+        "t = dr",
+        "t = d − r"
       ],
-      "answer": "x = 4",
-      "explanation": "Divide by 2 to get x + 3 = 7, then subtract 3 to get x = 4. Students need to recognize why x = 4 matches the evidence in the question and why nearby options do not.",
+      "answer": "t = d/r",
+      "explanation": "Divide both sides of d = rt by r (with r ≠ 0) to isolate time: t = d/r.",
       "points": 1
     },
     {
@@ -1143,26 +1158,31 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "After subtracting 4 from both sides of x + 4 > 9, which inequality remains?",
+      "question": "Which interval represents x ≥ −4?",
       "options": [
-        "x > 5",
-        "x < 5",
-        "x > 13",
-        "x ≥ 5"
+        "[−4, ∞)",
+        "(−4, ∞)",
+        "(−∞, −4]",
+        "(−∞, −4)"
       ],
-      "answer": "x > 5",
-      "explanation": "Subtracting 4 from both sides gives x > 5. Students need to recognize why x > 5 matches the evidence in the question and why nearby options do not.",
+      "answer": "[−4, ∞)",
+      "explanation": "The endpoint −4 is included, so use a bracket at −4; the interval extends without bound to the right.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Short response: Define or explain: Solve: 3x − 2 ≥ 7.",
-      "options": null,
-      "answer": "x ≥ 3",
-      "explanation": "A correct response identifies \"x ≥ 3\" and connects it to the module context.",
+      "question": "Which answer gives both the solution and interval notation for 3x − 2 ≥ 7?",
+      "options": [
+        "x ≥ 3; [3, ∞)",
+        "x > 3; (3, ∞)",
+        "x ≤ 3; (−∞, 3]",
+        "x ≥ 5; [5, ∞)"
+      ],
+      "answer": "x ≥ 3; [3, ∞)",
+      "explanation": "Add 2 to get 3x ≥ 9, then divide by positive 3: x ≥ 3. The included endpoint gives [3, ∞).",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 7,
@@ -1209,26 +1229,31 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Which relation is NOT a function?",
+      "question": "Which real-world relationship defines the output as a function of the input?",
       "options": [
-        "{(1,2),(1,3),(2,4)}",
-        "{(1,2),(2,3),(3,4)}",
-        "{(2,5),(3,5),(4,5)}",
-        "{(−1,0),(0,0),(1,0)}"
+        "A student ID number assigned to each enrolled student",
+        "All phone numbers used by each person",
+        "All books borrowed by each library patron",
+        "All courses taken by each student"
       ],
-      "answer": "{(1,2),(1,3),(2,4)}",
-      "explanation": "Input 1 is paired with two different outputs, so the relation is not a function.",
+      "answer": "A student ID number assigned to each enrolled student",
+      "explanation": "Each enrolled student is assigned one student ID number, so every input has exactly one output.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "Short response: Complete this statement: If f(x) = x² + 1, what is the range for x ∈ {−2, 0, 2}...",
-      "options": null,
-      "answer": "{5, 1, 5}",
-      "explanation": "A correct response identifies \"{5, 1, 5}\" and connects it to the module context.",
+      "question": "If f(x) = x² + 1 and the domain is {−2, 0, 2}, what is the range?",
+      "options": [
+        "{1, 5}",
+        "{5, 1, 5}",
+        "{−2, 0, 2}",
+        "{−3, 1, 3}"
+      ],
+      "answer": "{1, 5}",
+      "explanation": "The outputs are 5, 1, and 5. A range is a set of distinct output values, so the range is {1, 5}.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 8,
@@ -1346,15 +1371,15 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "What is the slope of the line through (1, 3) and (4, 9)?",
+      "question": "A temperature rises from 12°C to 18°C over 3 hours. What is the average rate of change?",
       "options": [
-        "2",
-        "6",
-        "1/2",
-        "−2"
+        "2°C per hour",
+        "3°C per hour",
+        "6°C per hour",
+        "10°C per hour"
       ],
-      "answer": "2",
-      "explanation": "Slope = (9 − 3) ÷ (4 − 1) = 6 ÷ 3 = 2. It connects the correct answer to Slope & Rate of Change and separates it from plausible distractors.",
+      "answer": "2°C per hour",
+      "explanation": "The change is 18 − 12 = 6°C over 3 hours, so 6/3 = 2°C per hour.",
       "points": 1
     },
     {
@@ -1431,12 +1456,17 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Short response: Define or explain: A line perpendicular to y = 2x + 1 has slope.",
-      "options": null,
-      "answer": "−½",
-      "explanation": "A correct response identifies \"−½\" and connects it to the module context.",
+      "question": "What is the slope of a line perpendicular to y = 2x + 1?",
+      "options": [
+        "−1/2",
+        "1/2",
+        "−2",
+        "2"
+      ],
+      "answer": "−1/2",
+      "explanation": "Perpendicular nonvertical lines have negative reciprocal slopes. The negative reciprocal of 2 is −1/2.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 11,
@@ -1511,15 +1541,15 @@
     {
       "moduleOrder": 11,
       "order": 6,
-      "question": "Which option best completes this statement: The solution to a system of equations is...",
+      "question": "How many solutions does the system y = 2x + 1 and 2y = 4x + 6 have?",
       "options": [
-        "10",
-        "11",
-        "9",
-        "The point where two lines intersect"
+        "No solutions",
+        "Exactly one solution",
+        "Exactly two solutions",
+        "Infinitely many solutions"
       ],
-      "answer": "The point where two lines intersect",
-      "explanation": "The best answer is The point where two lines intersect. It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "No solutions",
+      "explanation": "The second equation simplifies to y = 2x + 3. The lines have the same slope and different intercepts, so they are parallel and never intersect.",
       "points": 1,
       "type": "mc"
     },
@@ -1568,15 +1598,15 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "In Exponents & Polynomials, Simplify x³ × x⁴.",
+      "question": "Simplify (x + 2)(x + 3).",
       "options": [
-        "x⁷",
-        "x¹²",
-        "x",
-        "2x⁷"
+        "x² + 5x + 6",
+        "x² + 6",
+        "x² + 6x + 5",
+        "2x² + 5x + 6"
       ],
-      "answer": "x⁷",
-      "explanation": "When multiplying powers with the same base, add the exponents: 3 + 4 = 7. The reasoning points back to the procedure used in Exponents & Polynomials, which helps students check the calculation rather than guess from the options.",
+      "answer": "x² + 5x + 6",
+      "explanation": "Distribute each term: x² + 3x + 2x + 6 = x² + 5x + 6.",
       "points": 1
     },
     {
@@ -1624,27 +1654,32 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "Which option best completes this statement: The GCF of 12x³ + 8x² is...",
+      "question": "Factor x² + 10x + 25 completely.",
       "options": [
-        "11",
-        "4x²",
-        "9",
-        "10"
+        "(x + 5)²",
+        "(x − 5)²",
+        "(x + 25)(x + 1)",
+        "x(x + 10) + 25"
       ],
-      "answer": "4x²",
-      "explanation": "The best answer is 4x². It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "(x + 5)²",
+      "explanation": "This is a perfect square trinomial: x² + 2(5)x + 5² = (x + 5)².",
       "points": 1,
       "type": "mc"
     },
     {
       "moduleOrder": 13,
       "order": 5,
-      "question": "Short response: Define or explain: Factor completely: 3x² + 6x.",
-      "options": null,
+      "question": "Which expression is the complete factorization of 3x² + 6x?",
+      "options": [
+        "3x(x + 2)",
+        "3(x² + 2)",
+        "x(3x + 2)",
+        "3x(x + 6)"
+      ],
       "answer": "3x(x + 2)",
-      "explanation": "A correct response identifies \"3x(x + 2)\" and connects it to the module context.",
+      "explanation": "The greatest common factor is 3x. Dividing each term by 3x leaves x + 2.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 14,
@@ -1705,15 +1740,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "Which option best completes this statement: The standard form of a quadratic equation is...",
+      "question": "For x² − 6x + 9 = 0, what does the discriminant show?",
       "options": [
-        "9",
-        "ax² + bx + c = 0",
-        "11",
-        "10"
+        "Exactly one real solution",
+        "Two distinct real solutions",
+        "No real solutions",
+        "Infinitely many solutions"
       ],
-      "answer": "ax² + bx + c = 0",
-      "explanation": "The best answer is ax² + bx + c = 0. It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "Exactly one real solution",
+      "explanation": "The discriminant is b² − 4ac = 36 − 36 = 0, so the quadratic has one repeated real root.",
       "points": 1,
       "type": "mc"
     }
