@@ -30,6 +30,7 @@
     "audit:course-question-integrity": "node scripts/audit-course-question-integrity.js",
     "repair:course-question-integrity": "node scripts/audit-course-question-integrity.js --apply",
     "sync:selected-course-materials": "node scripts/sync-selected-course-materials.js",
+    "sync:selected-course-assessments": "node scripts/sync-selected-course-assessments.js",
     "audit:application-intake": "node scripts/repair-application-intake.js",
     "repair:application-intake": "node scripts/repair-application-intake.js --apply",
     "postinstall": "node scripts/prisma-env.cjs generate",
