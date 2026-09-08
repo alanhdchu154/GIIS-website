@@ -1418,10 +1418,15 @@
     {
       "moduleOrder": 10,
       "order": 6,
-      "question": "A trapezoid has bases 8 cm and 14 cm and height 5 cm. Find its area.",
-      "options": null,
+      "question": "A trapezoid has bases 8 cm and 14 cm and height 5 cm. What is its area?",
+      "options": [
+        "55 cm²",
+        "44 cm²",
+        "70 cm²",
+        "110 cm²"
+      ],
       "answer": "55 cm²",
-      "explanation": "A = ½(b₁ + b₂)h = ½(8 + 14)(5) = 55 cm².",
+      "explanation": "Use A = ½(b₁ + b₂)h: ½(8 + 14)(5) = 55 cm². Averaging the two bases before multiplying by height distinguishes this formula from a parallelogram’s area.",
       "points": 1,
       "type": "fill"
     },
