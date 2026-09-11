@@ -98,11 +98,30 @@ export default function AdmissionsHandoffReceipt({
   kind = 'new',
   parentEmail = '',
   embedded = false,
+  awaitingConfirmation = false,
 }) {
   const isEn = language !== 'zh';
   const safeKind = RECORDS[kind] ? kind : 'new';
   const isTransfer = safeKind === 'transfer';
   const isConsultation = safeKind === 'consultation';
+  const needsConfirmation = awaitingConfirmation && !isConsultation;
+  const flowSteps = needsConfirmation ? [
+    {
+      en: 'Confirm parent email', zh: '确认家长邮箱',
+      body: {
+        en: 'Open the confirmation email and confirm your interest before admissions review begins.',
+        zh: '请打开确认邮件并确认继续申请，之后招生团队才会开始审核。',
+      },
+    },
+    {
+      ...FLOW_STEPS[1],
+      body: {
+        en: 'After parent confirmation, admissions reviews fit, grade level, records, timing, and support needs within one business day.',
+        zh: '家长确认继续申请后，招生团队会在一个工作日内审核适配度、年级、资料、时间线与支持需求。',
+      },
+    },
+    ...FLOW_STEPS.slice(2),
+  ] : FLOW_STEPS;
 
   const title = isConsultation
     ? (isEn ? 'Consultation request received' : '咨询预约已收到')
@@ -110,7 +129,12 @@ export default function AdmissionsHandoffReceipt({
       ? (isEn ? 'Transfer Path Review received' : '转学路径评估已收到')
       : (isEn ? 'Application Path Review received' : '入学路径评估已收到');
 
-  const summary = isConsultation
+  const summary = needsConfirmation
+    ? {
+        en: 'Your application is saved and awaiting parent confirmation. Open the confirmation email to continue. The one-business-day admissions review period starts after confirmation. No payment is collected here.',
+        zh: '您的申请已保存，正在等待家长确认。请打开确认邮件继续申请；一个工作日的招生审核时间从家长确认后开始计算。此处不会收款。',
+      }
+    : isConsultation
     ? {
         en: 'Admissions will reach out within one business day to schedule a 15-20 minute conversation. No payment is collected here, and no payment is requested before review.',
         zh: '招生团队会在一个工作日内联系您，安排一次 15-20 分钟咨询。此处不收款，审核前也不会要求付款。',
@@ -157,7 +181,7 @@ export default function AdmissionsHandoffReceipt({
 
         <div style={{ padding: embedded ? '22px 24px 24px' : '30px 38px 34px' }}>
           <div className="admissions-receipt-flow" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0, 1fr))', gap: 10, marginBottom: 24 }}>
-            {FLOW_STEPS.map((step, index) => (
+            {flowSteps.map((step, index) => (
               <div key={step.en} style={{ border: '1px solid #e1e7f0', borderRadius: 8, padding: '13px 12px', background: index === 0 ? '#f4f8ff' : '#fafbfe', minHeight: 132 }}>
                 <p style={{ color: '#2b3d6d', fontSize: 11, fontWeight: 900, letterSpacing: 1, margin: '0 0 8px' }}>
                   {String(index + 1).padStart(2, '0')}

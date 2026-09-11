@@ -1,0 +1,15 @@
+#application-form button:focus-visible,
+#application-form input:focus-visible,
+#application-form select:focus-visible,
+#application-form textarea:focus-visible {
+  outline: 3px solid #d5a836 !important;
+  outline-offset: 3px;
+}
+
+@media (max-width: 540px) {
+  #application-form { padding: 22px 16px !important; }
+  #application-form .application-prior-school,
+  #application-form .application-graduation-date {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}

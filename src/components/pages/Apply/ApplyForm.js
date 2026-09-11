@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useId, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { getApiBase } from '../../../config/apiBase';
 import AdmissionsHandoffReceipt from '../../main/AdmissionsHandoffReceipt';
+import './ApplyForm.css';
 
 const API = getApiBase();
 
@@ -91,16 +92,24 @@ const CONCERNS = [
 // Hoisted to module scope: defining these inside ApplyForm made `Field` a new
 // component reference on every render, remounting every input and dropping focus
 // after a single keystroke (the only enrollment path was effectively unusable).
-function Field({ label, children, err, hint, required = false }) {
+function Field({ label, children, err, hint, required = false, group = false }) {
+  const errorId = useId();
+  const Container = group ? 'fieldset' : 'label';
+  const errorAttributes = { 'aria-invalid': Boolean(err), 'aria-describedby': err ? errorId : undefined };
+  const controls = group ? children : React.Children.map(children, child => (
+    React.isValidElement(child) && ['input', 'select', 'textarea'].includes(child.type)
+      ? React.cloneElement(child, errorAttributes) : child
+  ));
+  const Title = group ? 'legend' : 'span';
   return (
-    <label style={{ display: 'block', marginBottom: 18 }}>
-      <span style={{ fontSize: 12, fontWeight: 700, color: '#5c6578', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+    <Container {...(group ? errorAttributes : {})} style={{ display: 'block', marginBottom: 18, padding: 0, border: 0, minWidth: 0 }}>
+      <Title style={{ float: 'none', width: 'auto', margin: 0, fontSize: 12, fontWeight: 700, color: '#5c6578', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
         {label}{required && <span aria-hidden="true" style={{ color: '#b91c1c' }}> *</span>}
-      </span>
+      </Title>
       {hint && <span style={{ fontSize: 11, color: '#9aa0ad', marginLeft: 6 }}>{hint}</span>}
-      {children}
-      {err && <span style={{ display: 'block', fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{err}</span>}
-    </label>
+      {controls}
+      {err && <span id={errorId} style={{ display: 'block', fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{err}</span>}
+    </Container>
   );
 }
 
@@ -147,7 +156,13 @@ export default function ApplyForm({ language }) {
     responseCommitmentAcknowledged: false,
     notes: '',
   });
+  const submitLock = useRef(false);
+  const formRef = useRef(null);
+  const previousStep = useRef(0);
+  const successRef = useRef(null);
+  const errorRef = useRef(null);
   const [errors, setErrors] = useState({});
+  const [validationAttempt, setValidationAttempt] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [duplicateSubmission, setDuplicateSubmission] = useState(false);
@@ -159,11 +174,16 @@ export default function ApplyForm({ language }) {
 
   useEffect(() => {
     let active = true;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => {
+      if (active) setIntakeMode('unavailable');
+      controller.abort();
+    }, 10000);
     async function checkCapabilities() {
       setIntakeMode('loading');
       try {
-        const response = await fetch(`${API}/api/checkout/tiers`, { method: 'HEAD' });
-        if (!active) return;
+        const response = await fetch(`${API}/api/checkout/tiers`, { method: 'HEAD', signal: controller.signal });
+        if (!active || controller.signal.aborted) return;
         if (!response.ok) {
           setIntakeMode('unavailable');
           return;
@@ -171,28 +191,75 @@ export default function ApplyForm({ language }) {
         setIntakeMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v5' ? 'serious' : 'upgrade-required');
       } catch {
         if (active) setIntakeMode('unavailable');
+      } finally {
+        clearTimeout(timeout);
       }
     }
     checkCapabilities();
-    return () => { active = false; };
+    return () => { active = false; clearTimeout(timeout); controller.abort(); };
   }, [capabilityCheck]);
 
-  function set(field) { return e => setForm(f => ({ ...f, [field]: e.target.value })); }
-  function toggle(field) { return e => setForm(f => ({ ...f, [field]: e.target.checked })); }
+  useEffect(() => {
+    if (previousStep.current === currentStep) return;
+    previousStep.current = currentStep;
+    formRef.current?.querySelector('[data-step-heading]')?.focus({ preventScroll: true });
+  }, [currentStep]);
+
+  useEffect(() => {
+    if (submitted) successRef.current?.focus();
+  }, [submitted]);
+
+  useEffect(() => {
+    if (validationAttempt) errorRef.current?.focus();
+  }, [validationAttempt]);
+
+  function showErrors(nextErrors) {
+    setErrors(nextErrors);
+    setValidationAttempt(value => value + 1);
+  }
+
+  function clearFieldError(...fields) {
+    setErrors(current => {
+      if (!fields.some(field => current[field])) return current;
+      const remaining = { ...current };
+      fields.forEach(field => { delete remaining[field]; });
+      return remaining;
+    });
+  }
+
+  function set(field) {
+    return e => {
+      const value = e.target.value;
+      setForm(f => ({ ...f, [field]: value }));
+      const dependents = {
+        applicantType: ['currentSchool', 'currentEnrollmentStatus', 'priorSchools', 'recordsSituation', 'recordsHelpNeeded', 'graduationTiming', 'graduationTargetDate', 'transferCourseSummary', 'transcriptExpectedTiming', 'parentRelationship', 'contactPreference', 'phone', 'transferRecordsAcknowledged'],
+        graduationTiming: value !== 'target-date' ? ['graduationTargetDate'] : [],
+        recordsSituation: ['official-transcript', 'partial-records'].includes(value) ? ['transferCourseSummary'] : [],
+        contactPreference: value !== 'phone' ? ['phone'] : [],
+      };
+      clearFieldError(field, ...(dependents[field] || []));
+    };
+  }
+  function toggle(field) { return e => { setForm(f => ({ ...f, [field]: e.target.checked })); clearFieldError(field); }; }
   function setPriorSchool(index, field) {
-    return (event) => setForm((current) => ({
-      ...current,
-      priorSchools: current.priorSchools.map((school, schoolIndex) => (
-        schoolIndex === index ? { ...school, [field]: event.target.value } : school
-      )),
-    }));
+    return (event) => {
+      clearFieldError('priorSchools');
+      setForm((current) => ({
+        ...current,
+        priorSchools: current.priorSchools.map((school, schoolIndex) => (
+          schoolIndex === index ? { ...school, [field]: event.target.value } : school
+        )),
+      }));
+    };
   }
   function addPriorSchool() {
+    clearFieldError('priorSchools');
     setForm((current) => current.priorSchools.length >= 5
       ? current
       : { ...current, priorSchools: [...current.priorSchools, { schoolName: '', attendancePeriod: '' }] });
   }
   function removePriorSchool(index) {
+    clearFieldError('priorSchools');
     setForm((current) => ({
       ...current,
       priorSchools: current.priorSchools.length === 1
@@ -221,6 +288,7 @@ export default function ApplyForm({ language }) {
     const e = {};
     if (!form.studentName.trim()) e.studentName = isEn ? 'Required' : '必填';
     if (!form.dob.trim()) e.dob = isEn ? 'Required' : '必填';
+    else if (!Number.isFinite(Date.parse(form.dob)) || new Date(`${form.dob}T00:00:00`) > new Date()) e.dob = isEn ? 'Enter a valid birth date that is not in the future' : '请输入有效且不晚于今天的出生日期';
     if (!form.gradeLevel) e.gradeLevel = isEn ? 'Required' : '必填';
     if (!form.applicantType) e.applicantType = isEn ? 'Choose one path' : '请选择申请类型';
     if (!form.mainConcern) e.mainConcern = isEn ? 'Required' : '必填';
@@ -265,7 +333,7 @@ export default function ApplyForm({ language }) {
       Object.entries(allErrors).filter(([field]) => stepFields[currentStep].includes(field)),
     );
     if (Object.keys(stepErrors).length) {
-      setErrors(stepErrors);
+      showErrors(stepErrors);
       return;
     }
     setErrors({});
@@ -283,8 +351,20 @@ export default function ApplyForm({ language }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    if (submitLock.current || submitted) return;
+    if (currentStep < stepFields.length - 1) { goToNextStep(); return; }
     const errs = validate();
-    if (Object.keys(errs).length) { setErrors(errs); return; }
+    if (Object.keys(errs).length) {
+      const invalidStep = stepFields.findIndex(fields => fields.some(field => errs[field]));
+      setCurrentStep(Math.max(invalidStep, 0));
+      showErrors(errs);
+      return;
+    }
+    if (intakeMode !== 'serious') {
+      setServerError(isEn ? 'Please verify the application service before submitting.' : '请先确认申请服务状态再提交。');
+      return;
+    }
+    submitLock.current = true;
     setErrors({});
     setSubmitting(true);
     setServerError('');
@@ -316,7 +396,7 @@ export default function ApplyForm({ language }) {
         priorSchools: isTransferApplicant ? form.priorSchools : [],
         recordsSituation: isTransferApplicant ? form.recordsSituation : '',
         recordsHelpNeeded: isTransferApplicant ? form.recordsHelpNeeded : '',
-        graduationTargetDate: isTransferApplicant ? form.graduationTargetDate : '',
+        graduationTargetDate: isTransferApplicant && form.graduationTiming === 'target-date' ? form.graduationTargetDate : '',
         parentRelationship: isTransferApplicant ? form.parentRelationship : '',
         contactPreference: isTransferApplicant ? form.contactPreference : '',
         transferRecordsAcknowledged: isTransferApplicant ? form.transferRecordsAcknowledged : false,
@@ -338,6 +418,7 @@ export default function ApplyForm({ language }) {
     } catch {
       setServerError(isEn ? 'Network error. Please try again.' : '网络错误，请重试。');
     } finally {
+      submitLock.current = false;
       setSubmitting(false);
     }
   }
@@ -360,7 +441,7 @@ export default function ApplyForm({ language }) {
           </div>
         )}
         <div style={{ maxWidth: 980, margin: '24px auto -26px', padding: '0 20px', fontFamily: 'Inter, sans-serif' }}>
-          <div style={{ background: '#f0f4ff', border: '1px solid #cfe0f8', borderRadius: 8, padding: '12px 14px', color: '#2b3d6d', fontSize: 13, lineHeight: 1.6 }}>
+          <div ref={successRef} tabIndex={-1} role="status" style={{ background: '#f0f4ff', border: '1px solid #cfe0f8', borderRadius: 8, padding: '12px 14px', color: '#2b3d6d', fontSize: 13, lineHeight: 1.6 }}>
             {confirmationRequired
               ? T(
                 `Please open the confirmation email sent to ${form.parentEmail}. Admissions will begin review after the parent confirms interest.`,
@@ -376,6 +457,7 @@ export default function ApplyForm({ language }) {
           language={language}
           kind={isTransferApplicant ? 'transfer' : 'new'}
           parentEmail={form.parentEmail}
+          awaitingConfirmation={confirmationRequired}
         />
       </>
     );
@@ -427,8 +509,8 @@ export default function ApplyForm({ language }) {
               </p>
               <p style={{ margin: '0 0 9px', color: '#4f5868', fontSize: 12.5, lineHeight: 1.65 }}>
                 {T(
-                  'Admissions reviews the path within one business day, asks for missing records if needed, and recommends Self-Paced, Guided, or Premium before payment.',
-                  '招生团队会在一个工作日内审核路径，必要时要求补充资料，并在付款前建议 Self-Paced、Guided 或 Premium。'
+                  'After the parent confirms interest by email, admissions reviews the path within one business day, asks for missing records if needed, and recommends Self-Paced, Guided, or Premium before payment.',
+                  '家长通过邮件确认继续申请后，招生团队会在一个工作日内审核路径，必要时要求补充资料，并在付款前建议 Self-Paced、Guided 或 Premium。'
                 )}
               </p>
               <Link to="/consultation" style={{ color: '#2b3d6d', fontSize: 12.5, fontWeight: 800, textDecoration: 'underline', textUnderlineOffset: 3 }}>
@@ -437,15 +519,20 @@ export default function ApplyForm({ language }) {
             </div>
           </div>
 
-          <form id="application-form" onSubmit={handleSubmit} style={{ background: '#fff', borderRadius: 8, padding: '32px', boxShadow: '0 8px 32px rgba(0,0,0,0.06)', border: '1px solid #e8ecf5', scrollMarginTop: 24 }}>
+          <form id="application-form" aria-label={T('Application form', '申请表')} ref={formRef} noValidate onSubmit={handleSubmit} onKeyDown={event => {
+            if (event.key === 'Enter' && !event.nativeEvent.isComposing && currentStep < stepFields.length - 1 && event.target.tagName === 'INPUT' && !['radio', 'checkbox'].includes(event.target.type)) handleSubmit(event);
+          }} style={{ background: '#fff', borderRadius: 8, padding: '32px', boxShadow: '0 8px 32px rgba(0,0,0,0.06)', border: '1px solid #e8ecf5', scrollMarginTop: 24 }}>
 
             <ApplicationStepper currentStep={currentStep} language={language} />
             <p style={{ margin: '-14px 0 20px', color: '#7b8496', fontSize: 11.5 }}>
               <span aria-hidden="true" style={{ color: '#b91c1c', fontWeight: 900 }}>*</span> {T('Required for application review', '申请审核必填')}
             </p>
 
+            {Object.keys(errors).length > 0 && <div ref={errorRef} tabIndex={-1} role="alert" style={{ color: '#b91c1c', padding: 12, marginBottom: 16, background: '#fff3f3' }}>
+              {T('Please check the marked fields in this step before continuing.', '请先检查本步骤中标示的项目，再继续。')}
+            </div>}
             {serverError && (
-              <div style={{ background: '#fff3f3', border: '1px solid #fca5a5', borderRadius: 8, padding: '10px 14px', marginBottom: 20, fontSize: 13, color: '#b91c1c' }}>
+              <div role="alert" style={{ background: '#fff3f3', border: '1px solid #fca5a5', borderRadius: 8, padding: '10px 14px', marginBottom: 20, fontSize: 13, color: '#b91c1c' }}>
                 {serverError}
               </div>
             )}
@@ -503,7 +590,7 @@ export default function ApplyForm({ language }) {
               <input type="text" value={form.targetUniversities} onChange={set('targetUniversities')} placeholder={T('e.g. UC Berkeley, NYU, Boston University', '例：UC Berkeley、纽约大学、波士顿大学')} style={inputStyle(false)} />
             </Field>
 
-            <Field label={T('Preferred instruction language', '上课语言偏好')} err={errors.preferredLanguage}>
+            <Field group label={T('Preferred instruction language', '上课语言偏好')} err={errors.preferredLanguage}>
               <div style={{ display: 'flex', gap: 16, marginTop: 8 }}>
                 {[['en', T('English', '英文')], ['zh', T('Chinese (Mandarin)', '中文（普通话）')]].map(([val, label]) => (
                   <label key={val} style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 14, cursor: 'pointer', fontWeight: form.preferredLanguage === val ? 700 : 400, color: form.preferredLanguage === val ? '#2b3d6d' : '#5c6578' }}>
@@ -520,7 +607,7 @@ export default function ApplyForm({ language }) {
               title={T('Application Path', '申请路径')}
               body={T('Choose the correct path and tell us what records are available.', '选择适合的申请路径，并说明目前可提供的资料。')}
             />
-            <Field label={T('Applicant Type', '申请类型')} err={errors.applicantType} required>
+            <Field group label={T('Applicant Type', '申请类型')} err={errors.applicantType} required>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12, marginTop: 8 }}>
                 {APPLICANT_TYPES.map((type) => {
                   const selected = form.applicantType === type.value;
@@ -534,7 +621,7 @@ export default function ApplyForm({ language }) {
                       cursor: 'pointer',
                     }}>
                       <span style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
-                        <input type="radio" name="applicantType" value={type.value} checked={selected} onChange={set('applicantType')} required style={{ accentColor: '#2b3d6d' }} />
+                        <input type="radio" name="applicantType" aria-label={T(type.title.en, type.title.zh)} value={type.value} checked={selected} onChange={set('applicantType')} required style={{ accentColor: '#2b3d6d' }} />
                         <span style={{ fontSize: 14, fontWeight: 800, color: '#1a1d24' }}>{T(type.title.en, type.title.zh)}</span>
                       </span>
                       <span style={{ display: 'block', fontSize: 12.5, color: '#5c6578', lineHeight: 1.55, paddingLeft: 26 }}>
@@ -579,20 +666,20 @@ export default function ApplyForm({ language }) {
                   </div>
                   <div style={{ display: 'grid', gap: 10 }}>
                     {form.priorSchools.map((school, index) => (
-                      <div key={index} style={{ display: 'grid', gridTemplateColumns: 'minmax(180px, 1fr) minmax(160px, 0.8fr) auto', gap: 8, alignItems: 'end', padding: 10, border: '1px solid #e0e6f0', borderRadius: 8, background: '#f8f9fc' }}>
+                      <div key={index} className="application-prior-school" style={{ display: 'grid', gridTemplateColumns: 'minmax(180px, 1fr) minmax(160px, 0.8fr) auto', gap: 8, alignItems: 'end', padding: 10, border: '1px solid #e0e6f0', borderRadius: 8, background: '#f8f9fc' }}>
                         <label style={{ fontSize: 11, fontWeight: 700, color: '#5c6578' }}>
                           {T('School name', '学校名称')}
-                          <input value={school.schoolName} onChange={setPriorSchool(index, 'schoolName')} maxLength={160} required placeholder={T('Prior school name', '原学校名称')} style={inputStyle(errors.priorSchools)} />
+                          <input value={school.schoolName} onChange={setPriorSchool(index, 'schoolName')} aria-invalid={Boolean(errors.priorSchools)} aria-describedby={errors.priorSchools ? "prior-schools-error" : undefined} maxLength={160} required placeholder={T('Prior school name', '原学校名称')} style={inputStyle(errors.priorSchools)} />
                         </label>
                         <label style={{ fontSize: 11, fontWeight: 700, color: '#5c6578' }}>
                           {T('Attendance period', '就读期间')}
-                          <input value={school.attendancePeriod} onChange={setPriorSchool(index, 'attendancePeriod')} maxLength={120} required placeholder={T('e.g. Aug 2024 - May 2026', '例：2024 年 8 月至 2026 年 5 月')} style={inputStyle(errors.priorSchools)} />
+                          <input value={school.attendancePeriod} onChange={setPriorSchool(index, 'attendancePeriod')} aria-invalid={Boolean(errors.priorSchools)} aria-describedby={errors.priorSchools ? "prior-schools-error" : undefined} maxLength={120} required placeholder={T('e.g. Aug 2024 - May 2026', '例：2024 年 8 月至 2026 年 5 月')} style={inputStyle(errors.priorSchools)} />
                         </label>
                         <button type="button" onClick={() => removePriorSchool(index)} aria-label={T(`Remove school ${index + 1}`, `删除第 ${index + 1} 所学校`)} title={T('Remove school', '删除学校')} style={{ width: 36, height: 38, border: '1.5px solid #d4d8e0', borderRadius: 8, background: '#fff', color: '#8b1e2d', fontSize: 20, lineHeight: 1, cursor: 'pointer' }}>×</button>
                       </div>
                     ))}
                   </div>
-                  {errors.priorSchools && <span style={{ display: 'block', fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{errors.priorSchools}</span>}
+                  {errors.priorSchools && <span id="prior-schools-error" style={{ display: 'block', fontSize: 12, color: '#b91c1c', marginTop: 4 }}>{errors.priorSchools}</span>}
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 16 }}>
@@ -625,7 +712,7 @@ export default function ApplyForm({ language }) {
                   </Field>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: form.graduationTiming === 'target-date' ? 'minmax(220px, 1fr) minmax(180px, 0.7fr)' : '1fr', gap: 16 }}>
+                <div className="application-graduation-date" style={{ display: 'grid', gridTemplateColumns: form.graduationTiming === 'target-date' ? 'minmax(220px, 1fr) minmax(180px, 0.7fr)' : '1fr', gap: 16 }}>
                   <Field label={T('Graduation planning preference', '毕业规划偏好')} err={errors.graduationTiming} required>
                     <select value={form.graduationTiming} onChange={set('graduationTiming')} required style={inputStyle(errors.graduationTiming)}>
                       <option value="">{T('Select…', '请选择…')}</option>
@@ -702,7 +789,7 @@ export default function ApplyForm({ language }) {
               <input type="email" value={form.parentEmail} onChange={set('parentEmail')} required placeholder="parent@example.com" style={inputStyle(errors.parentEmail)} />
             </Field>
 
-            <Field
+            <Field group
               label={T('Family communication language', '家庭联络语言')}
               err={errors.communicationLanguage}
               hint={T('Used for admissions and account messages', '用于招生与帐号相关讯息')}
@@ -754,15 +841,27 @@ export default function ApplyForm({ language }) {
             />
             <div style={{ display: 'grid', gap: 8, marginBottom: 18, padding: '14px 0', borderTop: '1px solid #e0e6f0', borderBottom: '1px solid #e0e6f0' }}>
               <ReviewRow label={T('Student', '学生')} value={`${form.studentName} · ${form.gradeLevel}`} />
+              <ReviewRow label={T('Date of Birth', '出生日期')} value={form.dob} />
+              {!isTransferApplicant && <ReviewRow label={T('Current school', '目前学校')} value={form.currentSchool} />}
+              <ReviewRow label={T('Family goals', '家庭目标')} value={form.motivation} />
+              <ReviewRow label={T('Parent / guardian', '家长／监护人')} value={form.parentName} />
               <ReviewRow label={T('Path', '路径')} value={form.applicantType === 'transfer' ? T('Transfer student', '转学生') : T('New student', '一般新生')} />
               <ReviewRow label={T('Start timing', '开始时间')} value={START_TIMINGS.find((option) => option.value === form.intendedStartTiming)?.[isEn ? 'en' : 'zh'] || '—'} />
               {isTransferApplicant && <ReviewRow label={T('Prior schools', '曾就读学校')} value={form.priorSchools.map((school) => `${school.schoolName} (${school.attendancePeriod})`).join(' · ')} />}
               {isTransferApplicant && <ReviewRow label={T('Records', '学校记录')} value={RECORDS_SITUATIONS.find((option) => option.value === form.recordsSituation)?.[isEn ? 'en' : 'zh'] || '—'} />}
               {isTransferApplicant && <ReviewRow label={T('Expected timing', '预计取得时间')} value={RECORDS_ETA_OPTIONS.find((option) => option.value === form.transcriptExpectedTiming)?.[isEn ? 'en' : 'zh'] || '—'} />}
-              {isTransferApplicant && <ReviewRow label={T('Graduation planning', '毕业规划')} value={`${GRADUATION_TIMING.find((option) => option.value === form.graduationTiming)?.[isEn ? 'en' : 'zh'] || '—'}${form.graduationTargetDate ? ` · ${form.graduationTargetDate}` : ''}`} />}
+              {isTransferApplicant && <ReviewRow label={T('Graduation planning', '毕业规划')} value={`${GRADUATION_TIMING.find((option) => option.value === form.graduationTiming)?.[isEn ? 'en' : 'zh'] || '—'}${form.graduationTiming === 'target-date' && form.graduationTargetDate ? ` · ${form.graduationTargetDate}` : ''}`} />}
+              {isTransferApplicant && <ReviewRow label={T('Records help', '记录协助')} value={RECORDS_HELP_OPTIONS.find(option => option.value === form.recordsHelpNeeded)?.[isEn ? 'en' : 'zh']} />}
+              {isTransferApplicant && !['official-transcript', 'partial-records'].includes(form.recordsSituation) && <ReviewRow label={T('Completed courses', '已完成课程')} value={form.transferCourseSummary} />}
+              {isTransferApplicant && form.previousCredits && <ReviewRow label={T('Credit estimate (planning only)', '学分估计（仅供规划）')} value={form.previousCredits} />}
+              <ReviewRow label={T('Main concern', '主要顾虑')} value={CONCERNS.find(option => option.value === form.mainConcern)?.[isEn ? 'en' : 'zh']} />
               <ReviewRow label={T('Parent email', '家长邮箱')} value={form.parentEmail} />
+              {isTransferApplicant && <ReviewRow label={T('Contact method', '联络方式')} value={CONTACT_PREFERENCES.find(option => option.value === form.contactPreference)?.[isEn ? 'en' : 'zh']} />}
+              {form.phone && <ReviewRow label={T('Phone', '电话')} value={form.phone} />}
+              {form.notes && <ReviewRow label={T('Family notes', '家庭补充说明')} value={form.notes} />}
               <ReviewRow label={T('Family communication', '家庭联络语言')} value={COMMUNICATION_LANGUAGES.find((option) => option.value === form.communicationLanguage)?.[isEn ? 'en' : 'zh'] || '—'} />
             </div>
+            <p>{T('Use Back to correct your entries before finishing.', '如需修改资料，请点击上一步后再完成。')}</p>
             <div style={{ display: 'grid', gap: 10, margin: '2px 0 20px', padding: '14px 15px', border: '1px solid #dbe4f0', borderRadius: 8, background: '#f8f9fc' }}>
               {[
                 ['tuitionAware', T('I reviewed the current tuition and support levels and understand the final plan is recommended after review.', '我已查看目前的学费与支持层级，并了解学校会在审核后建议最终方案。')],
@@ -777,7 +876,7 @@ export default function ApplyForm({ language }) {
                 ]] : []),
               ].map(([field, label]) => (
                 <label key={field} style={{ display: 'flex', alignItems: 'flex-start', gap: 9, color: '#394255', fontSize: 12.5, lineHeight: 1.55, cursor: 'pointer' }}>
-                  <input type="checkbox" checked={form[field]} onChange={toggle(field)} required style={{ marginTop: 3, accentColor: '#2b3d6d' }} />
+                  <input type="checkbox" checked={form[field]} onChange={toggle(field)} aria-invalid={Boolean(errors[field])} required style={{ marginTop: 3, accentColor: '#2b3d6d' }} />
                   <span>{label}{errors[field] ? <strong style={{ color: '#b91c1c' }}> · {errors[field]}</strong> : null}</span>
                 </label>
               ))}
@@ -857,7 +956,7 @@ function ApplicationStepper({ currentStep, language }) {
 function StepHeading({ title, body }) {
   return (
     <header style={{ marginBottom: 20 }}>
-      <p style={{ margin: '0 0 5px', color: '#1a2d5a', fontSize: 18, fontWeight: 800 }}>{title}</p>
+      <h2 data-step-heading tabIndex={-1} style={{ margin: '0 0 5px', color: '#1a2d5a', fontSize: 18, fontWeight: 800 }}>{title}</h2>
       <p style={{ margin: 0, color: '#687083', fontSize: 13, lineHeight: 1.55 }}>{body}</p>
     </header>
   );
