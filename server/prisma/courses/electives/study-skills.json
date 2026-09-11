@@ -183,12 +183,12 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Short response: Which study strategy is considered least effective by cognitive science research?",
+      "question": "Identify one passive review strategy that is often weak when used alone, and name one evidence-based alternative.",
       "options": null,
-      "answer": "Highlighting and re-reading",
-      "explanation": "A correct response identifies \"Highlighting and re-reading\" and connects it to the module context.",
+      "answer": "A complete response should answer this prompt directly: name passive highlighting or rereading used alone and pair it with retrieval practice, spaced practice, or interleaving.",
+      "explanation": "Highlighting or rereading alone can create familiarity without reliable recall; retrieval practice, spacing, and interleaving require more active use of memory.",
       "points": 1,
-      "type": "fill"
+      "type": "short"
     },
     {
       "moduleOrder": 2,
