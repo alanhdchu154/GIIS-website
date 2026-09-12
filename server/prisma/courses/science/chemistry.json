@@ -792,11 +792,16 @@
       "moduleOrder": 1,
       "order": 5,
       "question": "How many significant figures are in 4.050 g?",
-      "options": null,
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
       "answer": "4",
       "explanation": "The interior zero and the trailing zero after the decimal point are significant, so all four digits count.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 2,
@@ -1486,11 +1491,16 @@
       "moduleOrder": 11,
       "order": 5,
       "question": "If [H⁺]=1×10⁻⁴ M at 25°C, enter the pH.",
-      "options": null,
+      "options": [
+        "4",
+        "10",
+        "−4",
+        "0.0001"
+      ],
       "answer": "4",
-      "explanation": "pH=−log₁₀(1×10⁻⁴)=4.",
+      "explanation": "Use pH=−log₁₀[H⁺]. Because [H⁺]=1×10⁻⁴ M, the negative base-10 logarithm is 4.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 12,
