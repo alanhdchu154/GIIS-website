@@ -13,15 +13,15 @@
       "title": "Review: Linear & Quadratic Functions",
       "titleZh": "复习：线性与二次函数",
       "objectives": "Graph linear and quadratic functions; convert to vertex form; calculate the discriminant; solve real-world quadratic problems. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 5.1: Quadratic Functions",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/5-1-quadratic-functions",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §5.1 — quadratic form, graphs, vertices, and applications.",
+      "videoUrl": "https://youtu.be/VCgQyFZBWL0",
+      "videoNote": "GIIS lesson video — Module 1: Review: Linear & Quadratic Functions.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Graph 5 quadratic functions in vertex form and 5 in standard form. For each, identify the vertex, axis of symmetry, direction of opening, and discriminant. Write a real-world problem modeled by a quadratic and solve it. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Review: Linear & Quadratic Functions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Complete this provided set. Graph vertex-form functions y=(x−2)²−3, y=−2(x+1)²+4, y=0.5(x−4)², y=3(x+2)²−1, and y=−(x−3)²+5; graph standard-form functions y=x²−6x+5, y=−x²−4x+5, y=2x²+8x+6, y=0.5x²−2x−2, and y=−3x²+12x−9. For each, identify vertex, axis of symmetry, opening, and discriminant. Then model a ball launched from 5 ft with h(t)=−16t²+32t+5: find its maximum height, physically meaningful domain, and landing time. Submit: one numbered PDF or clear scan with ten labeled graphs and the model solution. Include: axes, vertices, symmetry lines, discriminant work, algebra, units, domain, and a substitution check. Evaluation: correct representations, complete reasoning, accurate notation, readable graphs, and verification.",
       "estimatedHrs": 3.5
     },
     {
@@ -29,15 +29,15 @@
       "title": "Polynomial Functions",
       "titleZh": "多项式函数",
       "objectives": "Describe end behavior using leading coefficients; find zeros and their multiplicities; apply the Fundamental Theorem of Algebra; sketch polynomial graphs.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 5.3: Graphs of Polynomial Functions",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/5-3-graphs-of-polynomial-functions",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §5.3 — zeros, multiplicity, end behavior, and polynomial graphs.",
+      "videoUrl": "https://youtu.be/wHUE73x_ICY",
+      "videoNote": "GIIS lesson video — Module 2: Polynomial Functions.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "For 6 polynomial functions (degree 3–5), determine end behavior, find all real zeros with multiplicities, and sketch the graph. Verify using Desmos. State how many complex zeros each polynomial must have. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Polynomial Functions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Analyze these six polynomial functions: f(x)=(x−2)²(x+1), g(x)=−(x+3)(x−1)², h(x)=x(x−2)(x+2), p(x)=(x−1)³(x+2), q(x)=2(x+1)²(x²+1), and r(x)=−(x−2)(x+1)(x²+4). For each, state degree and leading term, determine end behavior, list all real zeros with multiplicities, state the number of remaining nonreal complex zeros, and sketch the graph. Verify with the free Desmos web graphing calculator at https://www.desmos.com/calculator or with a hand-generated value table if that site is unavailable. Submit: one numbered PDF or clear scan containing six analyses and graphs. Include: algebraic reasoning, verification method, and any mismatch you corrected. Evaluation: accurate graph features, justified multiplicities, readable graphs, and agreement.",
       "estimatedHrs": 4
     },
     {
@@ -45,15 +45,15 @@
       "title": "Dividing Polynomials",
       "titleZh": "多项式除法",
       "objectives": "Divide polynomials using long division and synthetic division; apply the Remainder Theorem and Factor Theorem to find zeros. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 5.4: Dividing Polynomials",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/5-4-dividing-polynomials",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §5.4 — polynomial division and the Remainder and Factor Theorems.",
+      "videoUrl": "https://youtu.be/7NIY5hXt7aU",
+      "videoNote": "GIIS lesson video — Module 3: Dividing Polynomials.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Divide 5 polynomials using long division and 5 using synthetic division. Use the Remainder Theorem to evaluate p(c) for 3 polynomials. Use the Factor Theorem to determine whether given binomials are factors of given polynomials. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Dividing Polynomials module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use long division for (x³−2x²+4x−8)÷(x−2), (2x⁴+3x³−5x+6)÷(x²+x−1), (x⁴−16)÷(x²−4), (3x³+5x²−2x+7)÷(x+3), and (x⁵−1)÷(x²+x+1). Use synthetic division for (x³+4x²−7x−10)÷(x−2), (2x⁴−3x³+5x−1)÷(x+1), (x⁴−5x²+4)÷(x−1), (3x³−2x²+x−6)÷(x−2), and (x⁵+2x⁴−x+3)÷(x+2). For p(x)=x³−4x+1, evaluate p(2), p(−1), and p(3) with the Remainder Theorem; use those results to test x−2, x+1, and x−3 as factors. Submit: one numbered worksheet PDF or clear scan. Include: show reasoning that supports each conclusion; each setup, quotient and remainder, substitutions, and factor conclusions. Evaluation: correct operations, complete work, accurate theorem use, and clear conclusions.",
       "estimatedHrs": 3.5
     },
     {
@@ -61,15 +61,15 @@
       "title": "Rational Expressions & Equations",
       "titleZh": "有理式与有理方程",
       "objectives": "Simplify rational expressions; multiply and divide rational expressions; solve rational equations; identify vertical and horizontal asymptotes. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 5.6: Rational Functions",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/5-6-rational-functions",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §5.6 — rational functions, domain restrictions, and asymptotes.",
+      "videoUrl": "https://youtu.be/BpN6Jdql26c",
+      "videoNote": "GIIS lesson video — Module 4: Rational Expressions & Equations.",
       "video2Url": "https://www.youtube.com/watch?v=RROSgr4oXjU",
       "video2Note": "Professor Leonard — Rational Expressions and Equations",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Simplify 6 rational expressions. Multiply and divide 4 pairs of rational expressions. Solve 6 rational equations, checking for extraneous solutions. For 3 rational functions, identify all asymptotes. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Rational Expressions & Equations module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Simplify (x²−9)/(x²−3x), (x²−4)/(x²−x−2), (x²+5x+6)/(x²−9), (4x²−16)/(2x²+4x), (x²−2x+1)/(x²−1), and (3x²−12x)/(x²−16). Multiply or divide these pairs: [(x²−4)/(x²+x−6)]·[(x−2)/(x+2)], [(x²−9)/(x²−1)]÷[(x−3)/(x−1)], [(2x)/(x²−4)]·[(x+2)/(3x)], and [(x²−1)/(x²+2x+1)]÷[(x−1)/(x+1)]. Solve 1/x+1/(x+2)=3/4, 2/(x−1)=x/(x−1), 3/x−2/(x+1)=1, 1/(x−2)+1/(x+2)=x/4, x/(x−3)=2, and 4/(x+1)=x−1. Identify vertical and horizontal asymptotes of (2x+1)/(x−3), (x²−4)/(x²+x−6), and (3x²+1)/(x²−4). Submit: one numbered solution-set document, PDF, or clear scan. Include: original excluded values, factorizations, checks, and asymptote reasoning. Evaluation: correct simplification and solutions, preserved restrictions, accurate asymptotes, and readable work.",
       "estimatedHrs": 4
     },
     {
@@ -77,15 +77,15 @@
       "title": "Radical Functions & Rational Exponents",
       "titleZh": "根式函数与有理指数",
       "objectives": "Simplify radical expressions; convert between radical and rational exponent form; solve radical equations; identify extraneous solutions. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 1.3: Radicals and Rational Exponents",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/1-3-radicals-and-rational-exponents",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §1.3 — radicals, rational exponents, and real-number restrictions.",
+      "videoUrl": "https://youtu.be/a3jAncRtqN8",
+      "videoNote": "GIIS lesson video — Module 5: Radical Functions & Rational Exponents.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Simplify 8 radical expressions. Rewrite 6 expressions converting between radical and rational exponent form. Solve 6 radical equations, checking for extraneous solutions. Graph y = √x and y = ∛x and compare domains. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Radical Functions & Rational Exponents module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Simplify √72, √(50x²), ∛54, 2√18−√8, √12·√6, √(x⁴y³), ⁴√(16a⁶), and √(9m²n) over the real numbers. Convert x^(3/2), a^(−2/3), ⁵√(b²), 1/∛(c⁴), √(d⁵), and (p/q)^(1/2) between radical and rational-exponent form. Solve √(x+5)=4, √(2x−1)=x−2, ∛(x−1)=2, √x+2=x, √(3x+4)=x, and √(x+1)+√(x−2)=3. Graph y=√x and y=∛x and compare domains and ranges. Submit: one numbered PDF or clear scan. Include: show reasoning that supports each conclusion; restrictions, absolute values where required, algebra, original-equation checks, and labeled graphs. Evaluation: correct algebra, valid real-number restrictions, complete checks, and readable graphs.",
       "estimatedHrs": 3.5
     },
     {
@@ -93,15 +93,15 @@
       "title": "Exponential Functions",
       "titleZh": "指数函数",
       "objectives": "Identify exponential growth and decay; graph exponential functions; apply to compound interest and population models. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 6.1: Exponential Functions",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-1-exponential-functions",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §6.1 — exponential functions and growth or decay behavior.",
+      "videoUrl": "https://youtu.be/HectQ9HeF3Y",
+      "videoNote": "GIIS lesson video — Module 6: Exponential Functions.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Graph 4 exponential functions (2 growth, 2 decay), identifying key features. Solve 3 compound interest problems using A = P(1 + r/n)^(nt). Solve 2 population growth problems. Determine whether each function represents growth or decay. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Exponential Functions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Graph y=2^x, y=3(1.5)^x, y=(1/2)^x, and y=4(0.75)^x; label intercepts and horizontal asymptotes and classify growth or decay. Solve: (1) $1,200 at 5% compounded quarterly for 3 years; (2) $2,500 at 4.2% compounded monthly for 5 years; (3) $900 at 6% compounded annually for 4 years. For population, use P=800(1.03)^t and P=5000(0.98)^t to find values after 10 years and interpret change. Submit: one numbered PDF or clear scan. Include: show reasoning that supports each conclusion; formulas, substitutions, units, graph features, time assumptions, and answers rounded to the nearest cent or whole organism as appropriate. Evaluation: correct model choice, algebra, units, graph features, and reasonableness checks.",
       "estimatedHrs": 3.5
     },
     {
@@ -109,15 +109,15 @@
       "title": "Logarithmic Functions",
       "titleZh": "对数函数",
       "objectives": "Define logarithms as inverses of exponential functions; apply properties of logarithms; solve logarithmic equations; work with natural log.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 6.3–6.5: Logarithmic Functions and Properties",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-3-logarithmic-functions",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §6.3 — logarithms as inverses of exponential functions.",
+      "videoUrl": "https://youtu.be/12i_zq8AdLs",
+      "videoNote": "GIIS lesson video — Module 7: Logarithmic Functions.",
       "video2Url": "https://www.youtube.com/watch?v=mQTWzLpCcW0",
       "video2Note": "Professor Leonard — Logarithmic Functions",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Convert 8 expressions between exponential and logarithmic form. Expand and condense 6 logarithmic expressions using properties. Solve 6 logarithmic equations. Evaluate 4 natural log expressions. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Logarithmic Functions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Convert 2³=8, 5⁰=1, 10²=100, 3⁻²=1/9, log₂32=5, log₁₀0.01=−2, ln(e⁴)=4, and log₄(1/16)=−2 between exponential and logarithmic form. Expand log(x²y/√z), ln(a³/b), log₂[(m−1)(m+1)], and log₅(∛p/q²); condense 2log x+log y−log z and 3ln a−2ln b. Solve log x+log(x+3)=1, log₂(x−1)=3, ln x=2, log₃x+log₃(x−2)=2, 2log x=log49, and log₅(x+4)−log₅x=1. Evaluate ln1, ln(e³), ln(e⁻²), and ln√e. Submit: one numbered PDF or clear scan. Include: property names, domains, algebra, and substitution checks. Evaluation: correct conversions and properties, valid domains, complete reasoning, and accurate notation.",
       "estimatedHrs": 4
     },
     {
@@ -125,15 +125,15 @@
       "title": "Exponential & Logarithmic Applications",
       "titleZh": "指数与对数的应用",
       "objectives": "Use exponential and logarithmic models for half-life, pH, earthquake magnitude, and continuous growth; solve applied problems. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 6.7: Exponential and Logarithmic Models",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-7-exponential-and-logarithmic-models",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §6.7 — exponential and logarithmic models with stated assumptions.",
+      "videoUrl": "https://youtu.be/YeYdkMWoVjI",
+      "videoNote": "GIIS lesson video — Module 8: Exponential & Logarithmic Applications.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve 2 half-life problems. Calculate pH for 3 substances using pH = −log[H⁺]. Compute earthquake magnitudes using the Richter scale formula. Solve 2 continuous growth problems using A = Pe^(rt). Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Exponential & Logarithmic Applications module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use the stated models. Half-life: (1) 80 mg with half-life 6 h, find amount after 18 h; (2) 250 g with half-life 12 years, find time to reach 31.25 g. pH: calculate for [H⁺]=1×10⁻³, 2.5×10⁻⁵, and 6.3×10⁻⁸ M. Earthquake: use M=log₁₀(I/I₀) to compare events with I/I₀=10⁴ and 10⁶ and state the intensity ratio. Continuous growth: (1) $2,000 at 4% for 7 years and (2) a population of 1,500 at 2.5% for 12 years using A=Pe^(rt). Submit: one numbered PDF or clear scan. Include: show reasoning that supports each conclusion; formula choice, parameter meanings, units, logarithmic steps, rounding, and a contextual interpretation. Evaluation: correct models, calculation, units, assumptions, and interpretation.",
       "estimatedHrs": 3.5
     },
     {
@@ -141,15 +141,15 @@
       "title": "Sequences & Series",
       "titleZh": "数列与级数",
       "objectives": "Identify arithmetic and geometric sequences; find general terms; use sigma notation; evaluate finite and infinite geometric series. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 9.1–9.5: Sequences and Series",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/13-1-sequences-and-their-notations",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §13.1 — sequence notation and recursive and explicit rules.",
+      "videoUrl": "https://youtu.be/Twl3Kw7XLGY",
+      "videoNote": "GIIS lesson video — Module 9: Sequences & Series.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Identify whether 5 sequences are arithmetic, geometric, or neither. Write the nth term formula for each. Use sigma notation to express and evaluate 3 series. Determine whether 3 infinite geometric series converge and find their sums. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Sequences & Series module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Classify and find an nth-term formula for 4,9,14,19,…; 3,6,12,24,…; 1,4,9,16,…; 10,7,4,1,…; and 2,−4,8,−16,…. Express and evaluate 2+5+8+…+29, 3+6+12+…+96, and 1²+2²+…+8² using sigma notation. Determine convergence and, when it converges, the sum of 12+6+3+…, 5−2.5+1.25−…, and 4+6+9+…. Submit: one numbered worksheet PDF or clear scan. Include: difference or ratio checks, substituted terms, expanded sums, and |r|<1 reasoning. Evaluation: correct classification, formulas, calculations, convergence decisions, and notation.",
       "estimatedHrs": 4
     },
     {
@@ -157,15 +157,15 @@
       "title": "Conic Sections",
       "titleZh": "圆锥曲线",
       "objectives": "Identify and graph parabolas, circles, ellipses, and hyperbolas from standard form equations; write equations given key features. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 10.1–10.4: Conic Sections",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/12-1-the-ellipse",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §12.1 — ellipse definitions, standard forms, and graph features.",
+      "videoUrl": "https://youtu.be/wISP4-TyeT4",
+      "videoNote": "GIIS lesson video — Module 10: Conic Sections.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Graph one parabola, one circle, one ellipse, and one hyperbola from given equations. For each, identify key features (vertices, foci, asymptotes where applicable). Write the standard form equation of each conic given its key features. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Conic Sections module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Graph and analyze x²=8y, (x−2)²+(y+1)²=25, x²/16+y²/9=1, and x²/9−y²/4=1. Identify the relevant vertices, foci, centers, radii or axes, and asymptotes. Then write equations for: a parabola with vertex (1,−2) and focus (1,1); a circle centered at (−3,2) with radius 4; an ellipse centered at the origin with horizontal semi-axis 5 and vertical semi-axis 2; and a hyperbola centered at the origin with vertices (±3,0) and asymptotes y=±(2/3)x. Submit: one numbered PDF or clear scan with four graphs and four equations. Include: show reasoning that supports each conclusion; standard-form conversions, features, scale, and substitution checks. Evaluation: correct conic identification, features, equations, and readable graphs.",
       "estimatedHrs": 4.5
     },
     {
@@ -173,15 +173,15 @@
       "title": "Probability",
       "titleZh": "概率",
       "objectives": "Apply the Fundamental Counting Principle; calculate permutations and combinations; compute basic probability using the addition and multiplication rules.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 11.5–11.7: Counting and Probability",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/13-5-counting-principles",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §13.5 — multiplication principle, permutations, and combinations.",
+      "videoUrl": "https://youtu.be/RRSVhmQmFGg",
+      "videoNote": "GIIS lesson video — Module 11: Probability.",
       "video2Url": "https://www.youtube.com/watch?v=OkmNXy7er84",
       "video2Note": "Professor Leonard — Permutations, Combinations, and Probability",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Apply the Counting Principle to 4 problems. Compute 5 permutations and 5 combinations using formulas. Calculate probabilities for 6 events using addition and multiplication rules. Solve 2 problems involving complementary events. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Probability module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve this provided set. Counting Principle: 4 shirts×3 pants; 2 appetizers×5 entrées×3 desserts; 3-letter codes from A–F with repetition; 4-digit PINs with no repeated digits. Permutations: 8P3, 10P4, 6!, arrange BOOK, and assign president/vice-president/treasurer from 15 students. Combinations: 8C3, 10C4, 12C2, choose 5 of 9 books, and choose a 4-person committee from 11 people. Probability: fair die {even}, {greater than 4}, and {even or greater than 4}; two coins {two heads}; a 52-card deck {heart}, {face card}, and {heart or face card}; without-replacement bag with 3 red and 2 blue {two red}. Complements: at least one head in three coin tosses and at least one six in two die rolls. Submit: one numbered PDF or clear scan. Include: sample spaces, whether order/repetition matter, formulas, simplified probabilities, and complement checks. Evaluation: correct model, computation, assumptions, and reasoning.",
       "estimatedHrs": 3.5
     },
     {
@@ -189,15 +189,15 @@
       "title": "Statistics: Data & Distributions",
       "titleZh": "统计：数据与分布",
       "objectives": "Calculate mean, median, and standard deviation; describe normal distributions; use z-scores to compare data. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 11 & Statistics Supplement: Data and Distributions",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/introductory-statistics-2e/pages/6-1-the-standard-normal-distribution",
+      "readingNote": "OpenStax Introductory Statistics 2e §6.1 — standard deviation, z-scores, and the standard normal distribution.",
+      "videoUrl": "https://youtu.be/s3VF-RP5MEc",
+      "videoNote": "GIIS lesson video — Module 12: Statistics: Data & Distributions.",
       "video2Url": "https://www.youtube.com/watch?v=MRqtXL2WX2M",
       "video2Note": "Professor Leonard — Normal Distribution and Z-Scores",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Compute mean, median, and standard deviation for 3 data sets. Draw and label a normal distribution curve. Calculate z-scores for 5 data values and interpret each. Determine what percentage of data falls within 1, 2, and 3 standard deviations. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Statistics: Data & Distributions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Treat all three datasets as populations: A={4,6,8,10,12}, B={72,85,90,68,95}, and C={10,10,12,13,15,18}. Compute mean, median, and population standard deviation for each. Draw a normal curve labeled μ=100 and σ=15. Calculate and interpret z-scores for x=70,85,100,115,130. State the empirical-rule percentages within 1σ, 2σ, and 3σ. Submit: one numbered PDF or clear scan. Include: show reasoning that supports each conclusion; formulas, arithmetic, units where applicable, curve labels, and a sentence for every z-score. Evaluation: correct statistics, transparent convention, accurate labels, and contextual interpretation.",
       "estimatedHrs": 3.5
     },
     {
@@ -205,15 +205,15 @@
       "title": "Matrices",
       "titleZh": "矩阵",
       "objectives": "Add, subtract, and multiply matrices; compute determinants of 2×2 and 3×3 matrices; solve systems of equations using matrix equations and Cramer's Rule. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 9 Supplement: Matrices and Determinants",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/11-5-matrices-and-matrix-operations",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §11.5 — matrix dimensions and operations.",
+      "videoUrl": "https://youtu.be/JFjQ_Ck0t6U",
+      "videoNote": "GIIS lesson video — Module 13: Matrices.",
       "video2Url": "https://www.youtube.com/watch?v=OI07C1HsOuc",
       "video2Note": "Professor Leonard — Matrix Operations and Determinants",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Perform addition, subtraction, and multiplication on 4 pairs of matrices. Calculate the determinant for 3 matrices of each size (2×2 and 3×3). Solve 3 systems of equations using the inverse matrix method. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Matrices module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "For A=[[1,2],[3,4]], B=[[5,−1],[2,0]], C=[[2,1,0],[−1,3,2]], and D=[[1,2],[0,−1],[4,3]], compute A+B, A−B, AB, BA, CD, DC, 2A+B, and A². Find determinants of [[2,3],[1,4]], [[5,−2],[3,1]], [[0,7],[−1,2]], [[1,2,3],[0,1,4],[5,6,0]], [[2,0,1],[3,−1,2],[1,4,0]], and [[1,1,0],[2,3,1],[0,2,4]]. Use inverse matrices to solve 2x+y=7, x−y=2; 3x+2y=12, x+4y=10; and 2x−y=1, 5x+3y=19. Submit: one numbered worksheet PDF or clear scan. Include: show reasoning that supports each conclusion; dimension checks, row-by-column work, determinants, inverse matrices, and substitution verification. Evaluation: defined operations, accurate arithmetic, complete work, and verified solutions.",
       "estimatedHrs": 4
     },
     {
@@ -221,15 +221,15 @@
       "title": "Systems of Equations & Inequalities",
       "titleZh": "方程组与不等式组",
       "objectives": "Solve linear systems in 3 variables; solve systems of linear inequalities; apply linear programming to optimization problems. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
-      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e — Ch 9 Supplement: Systems and Linear Programming",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/11-2-systems-of-linear-equations-three-variables",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §11.2 — three-variable systems and solution sets.",
+      "videoUrl": "https://youtu.be/YtIwZCvqpZ8",
+      "videoNote": "GIIS lesson video — Module 14: Systems of Equations & Inequalities.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve 4 three-variable systems by elimination. Graph and find feasible regions for 3 systems of linear inequalities. Set up and solve 2 linear programming problems, identifying the objective function, constraints, and optimal solution. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Systems of Equations & Inequalities module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve by elimination: {x+y+z=6, 2x−y+z=3, x+2y−z=2}; {x−y+2z=5, 2x+y−z=1, 3x−2y+z=6}; {2x+y−z=4, x−2y+3z=9, 3x+y+2z=7}; and {x+2y+z=4, 2x−y+3z=9, 3x+y−z=2}. Graph feasible regions for {x≥0,y≥0,x+y≤6}; {x≥1,y≥0,2x+y≤8}; and {x≥0,y≥0,x+2y≤10,3x+y≤12}. Optimize: (1) maximize P=3x+5y under the first region; (2) minimize C=4x+2y subject to x≥0,y≥0,x+y≥5,2x+y≥8. Submit: one numbered PDF or clear scan. Include: show reasoning that supports each conclusion; elimination, boundaries/shading, vertices, objective values at each feasible vertex, and contextual conclusions. Evaluation: correct systems and constraints, accurate graphs, complete vertex checks, and interpreted optima.",
       "estimatedHrs": 4
     }
   ],
@@ -298,22 +298,22 @@
       "examType": "midterm",
       "order": 5,
       "type": "mc",
-      "question": "Simplify the rational expression: (x² − 4) / (x² − x − 2).",
+      "question": "Simplify the rational expression: (x² − 4) / (x² − x − 2). State the simplified expression on its original domain.",
       "options": [
-        "(x + 2)/(x + 1)",
-        "(x − 2)/(x − 1)",
-        "(x + 2)/(x − 1)",
-        "(x − 2)/(x + 1)"
+        "(x + 2)/(x + 1); x ≠ 2, −1",
+        "(x − 2)/(x − 1); x ≠ 2, −1",
+        "(x + 2)/(x − 1); x ≠ 2, −1",
+        "(x − 2)/(x + 1); x ≠ 2, −1"
       ],
-      "answer": "(x + 2)/(x + 1)",
-      "explanation": "Factor numerator: (x+2)(x−2). Factor denominator: (x−2)(x+1). Cancel (x−2). Result: (x+2)/(x+1).",
+      "answer": "(x + 2)/(x + 1); x ≠ 2, −1",
+      "explanation": "Factor numerator: (x+2)(x−2). Factor denominator: (x−2)(x+1). Cancel (x−2). Result: (x+2)/(x+1). The original denominator is zero at x=2 and x=−1, so both exclusions remain.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 6,
       "type": "mc",
-      "question": "In Algebra II midterm concepts, Simplify: ∛(x⁶y³).",
+      "question": "For real variables x and y, simplify ∛(x⁶y³).",
       "options": [
         "x²y",
         "x³y",
@@ -321,7 +321,7 @@
         "xy²"
       ],
       "answer": "x²y",
-      "explanation": "∛(x⁶y³) = x^(6/3) · y^(3/3) = x²y. It highlights the operation, property, or model that makes the answer work in Algebra II midterm concepts.",
+      "explanation": "∛(x⁶y³) = x^(6/3) · y^(3/3) = x²y. Dividing each exponent by 3 works because both radicand exponents are multiples of the cube-root index.",
       "points": 1
     },
     {
@@ -343,7 +343,7 @@
       "examType": "midterm",
       "order": 8,
       "type": "mc",
-      "question": "In Algebra II midterm concepts, Evaluate log₂(64).",
+      "question": "Using the definition of a logarithm, evaluate log₂(64).",
       "options": [
         "4",
         "5",
@@ -351,7 +351,7 @@
         "8"
       ],
       "answer": "6",
-      "explanation": "Since 2⁶ = 64, log₂(64) = 6. Students need to recognize why 6 matches the evidence in the question and why nearby options do not.",
+      "explanation": "Since 2⁶ = 64, log₂(64) = 6. This is the exponent to which the base 2 must be raised, so the value is 6 rather than the base or the result.",
       "points": 1
     },
     {
@@ -366,14 +366,14 @@
         "Change of Base"
       ],
       "answer": "Product Rule",
-      "explanation": "The Product Rule states log(ab) = log(a) + log(b). The choice fits the prompt because it applies the central rule or concept from Algebra II midterm concepts.",
+      "explanation": "The Product Rule states log(ab) = log(a) + log(b). It converts a logarithm of a product into a sum of logarithms; the Quotient and Power Rules have different forms.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 10,
       "type": "mc",
-      "question": "In Algebra II midterm concepts, Solve for x: log₃(x) = 4.",
+      "question": "Rewrite the equation in exponential form and solve log₃(x) = 4.",
       "options": [
         "x = 12",
         "x = 64",
@@ -381,14 +381,14 @@
         "x = 34"
       ],
       "answer": "x = 81",
-      "explanation": "log₃(x) = 4 means 3⁴ = x. 3⁴ = 81. The choice fits the prompt because it applies the central rule or concept from Algebra II midterm concepts.",
+      "explanation": "log₃(x) = 4 means 3⁴ = x. 3⁴ = 81. The exponential form also confirms x is positive, which is required for the logarithm’s argument.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 11,
       "type": "mc",
-      "question": "In Algebra II midterm concepts, Solve: (x + 2)/(x − 1) = 3.",
+      "question": "Solve (x + 2)/(x − 1) = 3 and respect the original domain restriction.",
       "options": [
         "x = 5/2",
         "x = −5/2",
@@ -396,7 +396,7 @@
         "x = 5"
       ],
       "answer": "x = 5/2",
-      "explanation": "Cross multiply: x + 2 = 3(x − 1) = 3x − 3. So −2x = −5; x = 5/2. It connects the correct answer to Algebra II midterm concepts and separates it from plausible distractors.",
+      "explanation": "Cross multiply: x + 2 = 3(x − 1) = 3x − 3. So −2x = −5; x = 5/2. The result is allowed because 5/2 does not make the original denominator x−1 equal zero.",
       "points": 1
     },
     {
@@ -418,7 +418,7 @@
       "examType": "midterm",
       "order": 13,
       "type": "mc",
-      "question": "In Algebra II midterm concepts, Solve: √(2x + 3) = 5.",
+      "question": "Solve √(2x + 3) = 5 and check the result in the original equation.",
       "options": [
         "x = 11",
         "x = 16",
@@ -435,7 +435,7 @@
       "type": "short",
       "question": "Explain the relationship between exponential functions and logarithmic functions. Give one example of each and show they are inverses of each other.",
       "options": null,
-      "answer": "Logarithmic functions are the inverses of exponential functions. For example, f(x) = 2^x and g(x) = log₂(x) are inverses because f(g(x)) = 2^(log₂x) = x and g(f(x)) = log₂(2^x) = x.",
+      "answer": "A complete response should answer this prompt directly: Logarithmic functions are the inverses of exponential functions. For example, f(x) = 2^x and g(x) = log₂(x) are inverses because f(g(x)) = 2^(log₂x) = x and g(f(x)) = log₂(2^x) = x.",
       "explanation": "The inverse relationship means their graphs are reflections across y = x, and composing them returns the original input.",
       "points": 2
     },
@@ -445,23 +445,23 @@
       "type": "short",
       "question": "$1,200 is invested at an annual interest rate of 5%, compounded quarterly. Write the formula and compute the value after 3 years (round to the nearest cent).",
       "options": null,
-      "answer": "A = 1200(1 + 0.05/4)^(4×3) = 1200(1.0125)^12 ≈ $1,392.65. A strong response should use Algebra II midterm concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
-      "explanation": "Using A = P(1 + r/n)^(nt): P = 1200, r = 0.05, n = 4, t = 3. (1.0125)^12 ≈ 1.16075, so A ≈ $1,392.90 (accept reasonable rounding).",
+      "answer": "A complete response should answer this prompt directly: A = 1200(1 + 0.05/4)^(12) ≈ $1,392.91.",
+      "explanation": "Substitute P = 1200, r = 0.05, n = 4, and t = 3 into A = P(1 + r/n)^(nt), then round only the final value to the nearest cent.",
       "points": 2
     },
     {
       "examType": "final",
       "order": 1,
       "type": "mc",
-      "question": "Which option best completes this statement: The discriminant of 3x² − 4x + 2 = 0, and how many real solutions does it have is...",
+      "question": "For 3x² − 4x + 2 = 0, what is the discriminant and what does it show about real solutions?",
       "options": [
-        "Discriminant = −8; no real solutions",
-        "Discriminant = 8; two real solutions",
-        "x = 3",
-        "x = −3"
+        "−8; no real solutions",
+        "8; two real solutions",
+        "−8; one repeated real solution",
+        "40; two real solutions"
       ],
-      "answer": "Discriminant = −8; no real solutions",
-      "explanation": "The best answer is Discriminant = −8; no real solutions. It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "−8; no real solutions",
+      "explanation": "Using b² − 4ac gives (−4)² − 4(3)(2) = 16 − 24 = −8. A negative discriminant means there are no real roots.",
       "points": 1
     },
     {
@@ -506,14 +506,14 @@
         "(x − 3)²/(x + 3)"
       ],
       "answer": "(x − 3)/(x + 3)",
-      "explanation": "Numerator: (x+3)(x−3). Denominator: (x+3)². Cancel one (x+3): (x−3)/(x+3). Students need to recognize why (x − 3)/(x + 3) matches the evidence in the question and why nearby options do not.",
+      "explanation": "Numerator: (x+3)(x−3). Denominator: (x+3)². Cancel one (x+3): (x−3)/(x+3). The original expression still excludes x=−3, even though the common factor cancels during simplification.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 5,
       "type": "mc",
-      "question": "In Algebra II final concepts, Solve √(x − 1) = x − 3.",
+      "question": "Solve √(x − 1) = x − 3 and reject any extraneous solution.",
       "options": [
         "x = 2 only",
         "x = 5 only",
@@ -531,7 +531,7 @@
       "question": "Convert 16^(3/4) to simplest radical form.",
       "options": null,
       "answer": "8",
-      "explanation": "The correct answer is: 8.",
+      "explanation": "Because 16=2⁴, 16^(3/4)=(2⁴)^(3/4)=2³=8. Equivalently, take the fourth root first and then cube the result.",
       "points": 1
     },
     {
@@ -553,7 +553,7 @@
       "examType": "final",
       "order": 8,
       "type": "mc",
-      "question": "Condense: 2log(x) + log(y) − log(z).",
+      "question": "Condense: 2log(x) + log(y) − log(z). Assume x>0, y>0, and z>0.",
       "options": [
         "log(x²y/z)",
         "log(2xy/z)",
@@ -561,14 +561,14 @@
         "log(2x + y − z)"
       ],
       "answer": "log(x²y/z)",
-      "explanation": "Power rule: 2log(x) = log(x²). Product rule: log(x²) + log(y) = log(x²y). Quotient rule: log(x²y) − log(z) = log(x²y/z).",
+      "explanation": "Power rule: 2log(x) = log(x²). Product rule: log(x²) + log(y) = log(x²y). Quotient rule: log(x²y) − log(z) = log(x²y/z). The positivity assumptions keep all real logarithms defined.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 9,
       "type": "mc",
-      "question": "In Algebra II final concepts, Solve 5^(2x) = 125.",
+      "question": "Express both sides with the same base and solve 5^(2x) = 125.",
       "options": [
         "x = 1",
         "x = 3/2",
@@ -576,7 +576,7 @@
         "x = 3"
       ],
       "answer": "x = 3/2",
-      "explanation": "Because 125 = 5³, the exponents must match: 2x = 3, so x = 3/2. The choice fits the prompt because it applies the central rule or concept from Algebra II final concepts.",
+      "explanation": "Because 125 = 5³, the exponents must match: 2x = 3, so x = 3/2. Substitution checks the result: 5^(2·3/2)=5³=125.",
       "points": 1
     },
     {
@@ -591,7 +591,7 @@
         "29"
       ],
       "answer": "31",
-      "explanation": "a₁ = 3, d = 4. aₙ = 3 + (n−1)·4. a₈ = 3 + 7·4 = 3 + 28 = 31. The reasoning points back to the procedure used in Algebra II final concepts, which helps students check the calculation rather than guess from the options.",
+      "explanation": "a₁ = 3, d = 4. aₙ = 3 + (n−1)·4. a₈ = 3 + 7·4 = 3 + 28 = 31. Each term increases by 4, so the explicit rule and the listed pattern agree.",
       "points": 1
     },
     {
@@ -631,7 +631,7 @@
       "question": "A class of 15 students must elect a president, vice-president, and treasurer (no person can hold two offices). How many ways can this be done?",
       "options": null,
       "answer": "2730",
-      "explanation": "The correct answer is: 2730.",
+      "explanation": "The three offices are distinct, so order matters: 15 choices for president, 14 for vice-president, and 13 for treasurer give 15×14×13=2730.",
       "points": 1
     },
     {
@@ -646,14 +646,14 @@
         "z = 12"
       ],
       "answer": "z = 2.4",
-      "explanation": "z = (x − μ)/σ = (82 − 70)/5 = 12/5 = 2.4. This reinforces the Algebra II final concepts idea behind the item instead of rewarding a surface-level guess.",
+      "explanation": "z = (x − μ)/σ = (82 − 70)/5 = 12/5 = 2.4. The positive sign places 82 above the mean, and 2.4 is the distance measured in standard deviations.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 15,
       "type": "mc",
-      "question": "Multiply the matrices: [2  1] × [3  0]. (First row of each; treat as 1×2 × 2×1 for the (1,1) entry.)\n                     [1  4]   [−1 2]",
+      "question": "For A=[[2,1],[1,4]] and B=[[3,0],[−1,2]], what is the (1,1) entry of AB?",
       "options": [
         "5",
         "7",
@@ -661,7 +661,7 @@
         "−1"
       ],
       "answer": "5",
-      "explanation": "The (1,1) entry of the product is 2·3 + 1·(−1) = 6 − 1 = 5. The reasoning points back to the procedure used in Algebra II final concepts, which helps students check the calculation rather than guess from the options.",
+      "explanation": "Use the first row of A and the first column of B: 2·3+1·(−1)=5. This row-by-column rule determines each entry of a matrix product and preserves the required order of factors.",
       "points": 1
     },
     {
@@ -700,7 +700,7 @@
       "type": "short",
       "question": "A substance has a pH of 3.5. Given pH = −log[H⁺], find the hydrogen ion concentration [H⁺] in scientific notation. What does this pH value indicate about the substance?",
       "options": null,
-      "answer": "[H⁺] = 10^(−3.5) ≈ 3.16 × 10⁻⁴ mol/L. The substance is acidic (pH < 7). A strong response should use Algebra II final concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
+      "answer": "A complete response should answer this prompt directly: [H⁺] = 10^(−3.5) ≈ 3.16 × 10⁻⁴ mol/L. The substance is acidic (pH < 7). A strong response should use Algebra II final concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
       "explanation": "pH = −log[H⁺] → log[H⁺] = −3.5 → [H⁺] = 10^(−3.5) ≈ 3.16 × 10⁻⁴. pH < 7 indicates an acid.",
       "points": 2
     },
@@ -710,7 +710,7 @@
       "type": "short",
       "question": "A ball is launched upward from a cliff 80 ft high with initial velocity 64 ft/s. Its height is h(t) = −16t² + 64t + 80. Find the maximum height and the time at which it is reached.",
       "options": null,
-      "answer": "Maximum height is 144 ft at t = 2 seconds. A strong response should use Algebra II final concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
+      "answer": "A complete response should answer this prompt directly: Maximum height is 144 ft at t = 2 seconds. A strong response should use Algebra II final concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
       "explanation": "t_vertex = −b/(2a) = −64/(2·(−16)) = 2. h(2) = −16(4) + 64(2) + 80 = −64 + 128 + 80 = 144 ft.",
       "points": 2
     },
@@ -718,10 +718,10 @@
       "examType": "final",
       "order": 20,
       "type": "short",
-      "question": "A student earns scores of 72, 85, 90, 68, and 95 on five tests. Calculate the mean and standard deviation. Would a score of 60 be considered unusual? Explain using z-scores.",
+      "question": "A student earns scores of 72, 85, 90, 68, and 95 on five tests. Calculate the mean and population standard deviation. Would a score of 60 be considered unusual? Explain using z-scores.",
       "options": null,
-      "answer": "Mean = (72+85+90+68+95)/5 = 82. σ ≈ √[(100+9+64+196+169)/5] = √[538/5] ≈ √107.6 ≈ 10.37. z for 60 = (60−82)/10.37 ≈ −2.12. Since |z| > 2, a score of 60 is considered unusual.",
-      "explanation": "A z-score beyond ±2 is generally considered unusual in a normal distribution.",
+      "answer": "A complete response should answer this prompt directly: Mean = (72+85+90+68+95)/5 = 82. Population σ ≈ √[(100+9+64+196+169)/5] = √[538/5] ≈ √107.6 ≈ 10.37. z for 60 = (60−82)/10.37 ≈ −2.12. Since |z| > 2, a score of 60 is considered unusual.",
+      "explanation": "Using the five scores as the full population, a z-score beyond ±2 is generally considered unusual under the stated classroom convention.",
       "points": 2
     }
   ],
@@ -737,7 +737,7 @@
         "x = −6"
       ],
       "answer": "x = 3",
-      "explanation": "Axis of symmetry: x = −b/(2a) = −(−6)/(2·1) = 3. It highlights the operation, property, or model that makes the answer work in Review: Linear & Quadratic Functions.",
+      "explanation": "Axis of symmetry: x = −b/(2a) = −(−6)/(2·1) = 3. This vertical line passes through the vertex and splits the parabola into mirror-image halves.",
       "points": 1
     },
     {
@@ -751,7 +751,7 @@
         "b < 0"
       ],
       "answer": "a < 0",
-      "explanation": "When the leading coefficient a is negative, the parabola opens downward. It connects the correct answer to Review: Linear & Quadratic Functions and separates it from plausible distractors.",
+      "explanation": "When the leading coefficient a is negative, the parabola opens downward. The sign of b shifts the graph but does not determine whether its arms point upward or downward.",
       "points": 1
     },
     {
@@ -765,33 +765,38 @@
         "8"
       ],
       "answer": "0",
-      "explanation": "b² − 4ac = 16 − 4(1)(4) = 16 − 16 = 0. One repeated real root. The reasoning points back to the procedure used in Review: Linear & Quadratic Functions, which helps students check the calculation rather than guess from the options.",
+      "explanation": "b² − 4ac = 16 − 4(1)(4) = 16 − 16 = 0. One repeated real root. A zero discriminant means the quadratic has one real solution counted twice.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Which option best completes this statement: The axis of symmetry of f(x) = x² − 6x + 8 is...",
+      "question": "For f(x)=−2(x+1)²+7, which statement is true?",
       "options": [
-        "x = 6",
-        "x = −3",
-        "x = 3",
-        "x = −6"
+        "The vertex is (−1, 7) and the graph opens downward",
+        "The vertex is (1, 7) and the graph opens upward",
+        "The axis is x=7 and the graph opens downward",
+        "The vertex is (−1, −7) and the graph opens upward"
       ],
-      "answer": "x = 3",
-      "explanation": "The best answer is x = 3. It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "The vertex is (−1, 7) and the graph opens downward",
+      "explanation": "Vertex form a(x−h)²+k gives h=−1 and k=7; because a=−2, the parabola opens downward.",
       "points": 1,
       "type": "mc"
     },
     {
       "moduleOrder": 1,
       "order": 5,
-      "question": "Short response: Complete this statement: A ball is thrown upward from 5 ft high with height h(t) = −16t² + 32t + 5. what is the initial height...",
-      "options": null,
+      "question": "For h(t)=−16t²+32t+5, what is the initial height h(0)?",
+      "options": [
+        "0 ft",
+        "5 ft",
+        "16 ft",
+        "32 ft"
+      ],
       "answer": "5 ft",
-      "explanation": "A correct response identifies \"5 ft\" and connects it to the module context.",
+      "explanation": "Substituting t=0 gives h(0)=5, so the object starts 5 feet above the reference level.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 2,
@@ -832,7 +837,7 @@
         "Is undefined there"
       ],
       "answer": "Touches and bounces at the x-axis",
-      "explanation": "Even multiplicity → the graph touches the x-axis but does not cross it. It highlights the operation, property, or model that makes the answer work in Polynomial Functions.",
+      "explanation": "Even multiplicity → the graph touches the x-axis but does not cross it. The sign of the factor stays the same on both sides of an even-multiplicity zero, producing the bounce.",
       "points": 1
     },
     {
@@ -846,22 +851,23 @@
         "x = −1 and x = −3"
       ],
       "answer": "x = 1 and x = −3",
-      "explanation": "Set each factor to zero: x − 1 = 0 → x = 1; x + 3 = 0 → x = −3. It connects the correct answer to Polynomial Functions and separates it from plausible distractors.",
+      "explanation": "Set each factor to zero: x − 1 = 0 → x = 1; x + 3 = 0 → x = −3. The exponent 2 gives x=1 multiplicity two, while x=−3 has multiplicity one.",
       "points": 1
     },
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "What is the end behavior of f(x) = 4x⁵ − x?",
+      "question": "Which polynomial has odd degree and a negative leading coefficient?",
       "options": [
-        "Falls left, rises right",
-        "Rises left, falls right",
-        "Rises left, rises right",
-        "Falls left, falls right"
+        "−3x⁵+x²−1",
+        "4x⁴−x",
+        "−2x⁶+7",
+        "5x²−3x"
       ],
-      "answer": "Falls left, rises right",
-      "explanation": "The leading term is 4x⁵, which has odd degree and a positive leading coefficient.",
-      "points": 1
+      "answer": "−3x⁵+x²−1",
+      "explanation": "The leading term −3x⁵ has odd degree and a negative coefficient, so the graph rises left and falls right.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 3,
@@ -874,7 +880,7 @@
         "c"
       ],
       "answer": "p(c)",
-      "explanation": "The Remainder Theorem: dividing p(x) by (x − c) gives remainder p(c). It highlights the operation, property, or model that makes the answer work in Dividing Polynomials.",
+      "explanation": "The Remainder Theorem: dividing p(x) by (x − c) gives remainder p(c). Evaluating p at the divisor’s zero therefore finds the remainder without performing the full division.",
       "points": 1
     },
     {
@@ -902,36 +908,38 @@
         "c = 0"
       ],
       "answer": "p(c) = 0",
-      "explanation": "By the Factor Theorem, (x − c) is a factor exactly when p(c) = 0. It connects the correct answer to Dividing Polynomials and separates it from plausible distractors.",
+      "explanation": "By the Factor Theorem, (x − c) is a factor exactly when p(c) = 0. A zero remainder is exactly what allows p(x) to be written as (x−c) times another polynomial.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "According to the Remainder Theorem, if p(x) is divided by (x − c), what does the remainder equal?",
+      "question": "If p(2)=−5, what is the remainder when p(x) is divided by x−2?",
       "options": [
-        "p(c)",
-        "p(−c)",
-        "c",
-        "x − c"
+        "−5",
+        "2",
+        "5",
+        "0"
       ],
-      "answer": "p(c)",
-      "explanation": "The Remainder Theorem says the remainder from division by x − c is the value p(c).",
-      "points": 1
+      "answer": "−5",
+      "explanation": "The Remainder Theorem says division by x−2 leaves the remainder p(2), which is −5.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "Perform synthetic division of x³ + 3x² − x − 3 by (x − 1). What is the quotient?",
+      "question": "Divide x³−4x²+x+6 by x−2. What is the quotient?",
       "options": [
-        "x² + 4x + 3",
-        "x² + 4x − 3",
-        "x² + 2x − 3",
-        "x² − 4x + 3"
+        "x²−2x−3",
+        "x²+2x−3",
+        "x²−6x+3",
+        "x²−2x+3"
       ],
-      "answer": "x² + 4x + 3",
-      "explanation": "Using root 1, the quotient coefficients are 1, 4, and 3, so the quotient is x² + 4x + 3.",
-      "points": 1
+      "answer": "x²−2x−3",
+      "explanation": "Synthetic division with 2 gives coefficients 1, −2, −3 and remainder 0, so the quotient is x²−2x−3.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 4,
@@ -955,10 +963,10 @@
         "2(x + 2)",
         "2(x − 2)",
         "x + 2",
-        "2x + 4"
+        "2x + 2"
       ],
       "answer": "2(x + 2)",
-      "explanation": "2x² − 8 = 2(x² − 4) = 2(x+2)(x−2). Divide by (x−2): 2(x+2). This reinforces the Rational Expressions & Equations idea behind the item instead of rewarding a surface-level guess.",
+      "explanation": "2x² − 8 = 2(x² − 4) = 2(x+2)(x−2). Divide by (x−2): 2(x+2). The cancellation is valid only when x≠2, the value excluded by the original denominator.",
       "points": 1
     },
     {
@@ -978,7 +986,7 @@
     {
       "moduleOrder": 4,
       "order": 4,
-      "question": "In Rational Expressions & Equations, Solve: 1/x + 1/3 = 5/6.",
+      "question": "Solve 1/x + 1/3 = 5/6, noting any excluded value of x.",
       "options": [
         "x = 2",
         "x = 6",
@@ -986,42 +994,53 @@
         "x = 3"
       ],
       "answer": "x = 2",
-      "explanation": "Multiply through by 6x: 6 + 2x = 5x → 6 = 3x → x = 2. This reinforces the Rational Expressions & Equations idea behind the item instead of rewarding a surface-level guess.",
+      "explanation": "Multiply through by 6x: 6 + 2x = 5x → 6 = 3x → x = 2. The solution is valid because x=2 is not excluded from either original denominator.",
       "points": 1
     },
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Short response: Complete this statement: The horizontal asymptote of f(x) = (3x² + 1)/(x² − 4) is...",
-      "options": null,
-      "answer": "y = 3",
-      "explanation": "A correct response identifies \"y = 3\" and connects it to the module context.",
+      "question": "What is the horizontal asymptote of f(x)=(3x²+1)/(x²−4)?",
+      "options": [
+        "x=3",
+        "y=3",
+        "y=−4",
+        "No horizontal asymptote"
+      ],
+      "answer": "y=3",
+      "explanation": "Equal degrees give the ratio of leading coefficients, 3/1=3. Comparing leading terms also shows why lower-degree terms do not change this end-behavior ratio.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 4,
       "order": 6,
-      "question": "Short response: Define or explain: Solve: 1/x + 1/3 = 5/6.",
-      "options": null,
-      "answer": "x = 2",
-      "explanation": "A correct response identifies \"x = 2\" and connects it to the module context.",
+      "question": "Which values must be excluded from the domain of (x+2)/(x²−9)?",
+      "options": [
+        "x=−2 only",
+        "x=3 only",
+        "x=−3 only",
+        "x=3 and x=−3"
+      ],
+      "answer": "x=3 and x=−3",
+      "explanation": "The denominator factors as (x−3)(x+3), so both values make the original expression undefined.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 5,
       "order": 1,
-      "question": "In Radical Functions & Rational Exponents, Simplify: √(50x²).",
+      "question": "Simplify √(72a⁴) for real a.",
       "options": [
-        "5x√2",
-        "10x",
-        "5√(2x²)",
-        "25x"
+        "6a²√2",
+        "6|a|√2",
+        "36a²√2",
+        "12a²"
       ],
-      "answer": "5x√2",
-      "explanation": "√50 = 5√2; √(x²) = |x| = x (assuming x ≥ 0). Result: 5x√2. It highlights the operation, property, or model that makes the answer work in Radical Functions & Rational Exponents.",
-      "points": 1
+      "answer": "6a²√2",
+      "explanation": "Because a² is nonnegative, √(72a⁴)=√(36·2)·√((a²)²)=6a²√2. No absolute value is needed on a² because a² is nonnegative for every real a.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 5,
@@ -1034,13 +1053,13 @@
         "³√x"
       ],
       "answer": "³√x²",
-      "explanation": "x^(m/n) = ⁿ√(xᵐ). So x^(2/3) = ³√(x²). The choice fits the prompt because it applies the central rule or concept from Radical Functions & Rational Exponents.",
+      "explanation": "x^(m/n) = ⁿ√(xᵐ). So x^(2/3) = ³√(x²). The denominator 3 becomes the root index, and the numerator 2 remains the exponent inside the radical.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "In Radical Functions & Rational Exponents, Solve: √(x + 5) = 3.",
+      "question": "Solve √(x + 5) = 3 and verify the solution in the original equation.",
       "options": [
         "x = 4",
         "x = 14",
@@ -1048,7 +1067,7 @@
         "x = 9"
       ],
       "answer": "x = 4",
-      "explanation": "Square both sides: x + 5 = 9 → x = 4. Check: √(4+5) = √9 = 3 ✓. It connects the correct answer to Radical Functions & Rational Exponents and separates it from plausible distractors.",
+      "explanation": "Square both sides: x + 5 = 9 → x = 4. Check: √(4+5) = √9 = 3 ✓. Checking in the original radical equation confirms that squaring did not introduce an extraneous solution.",
       "points": 1
     },
     {
@@ -1062,7 +1081,7 @@
         "All real numbers"
       ],
       "answer": "x ≥ 4",
-      "explanation": "The expression under a square root must be ≥ 0: x − 4 ≥ 0 → x ≥ 4. The choice fits the prompt because it applies the central rule or concept from Radical Functions & Rational Exponents.",
+      "explanation": "The expression under a square root must be ≥ 0: x − 4 ≥ 0 → x ≥ 4. The endpoint x=4 is included because it makes the radicand zero, which has a real square root.",
       "points": 1
     },
     {
@@ -1090,7 +1109,7 @@
         "10|x|"
       ],
       "answer": "5|x|√2",
-      "explanation": "√(50x²) = √(25 · 2 · x²) = 5|x|√2 for real x. It connects the correct answer to Radical Functions & Rational Exponents and separates it from plausible distractors.",
+      "explanation": "√(50x²) = √(25 · 2 · x²) = 5|x|√2 for real x. The absolute value is required because √(x²)=|x| for real x.",
       "points": 1
     },
     {
@@ -1104,7 +1123,7 @@
         "Quadratic growth"
       ],
       "answer": "Exponential growth",
-      "explanation": "A base greater than 1 gives exponential growth. The choice fits the prompt because it applies the central rule or concept from Exponential Functions.",
+      "explanation": "A base greater than 1 gives exponential growth. For an exponential function b^x, bases above 1 increase as x increases; bases between 0 and 1 decay.",
       "points": 1
     },
     {
@@ -1118,7 +1137,7 @@
         "(0, 1)"
       ],
       "answer": "(0, 5)",
-      "explanation": "f(0) = 5 · 2⁰ = 5 · 1 = 5. y-intercept is (0, 5). The choice fits the prompt because it applies the central rule or concept from Exponential Functions.",
+      "explanation": "f(0) = 5 · 2⁰ = 5 · 1 = 5. y-intercept is (0, 5). The coefficient 5 is the initial value because the exponential factor equals 1 at x=0.",
       "points": 1
     },
     {
@@ -1132,47 +1151,58 @@
         "$530.00"
       ],
       "answer": "$561.80",
-      "explanation": "A = 500(1 + 0.06)² = 500(1.06)² = 500(1.1236) = $561.80. The reasoning points back to the procedure used in Exponential Functions, which helps students check the calculation rather than guess from the options.",
+      "explanation": "A = 500(1 + 0.06)² = 500(1.06)² = 500(1.1236) = $561.80. The annual compounding uses two growth factors of 1.06, not simple interest added twice.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "What type of behavior does f(x) = 3^x represent?",
+      "question": "Which function represents exponential decay with an initial value of 12?",
       "options": [
-        "Exponential growth",
-        "Exponential decay",
-        "Linear growth",
-        "Quadratic growth"
+        "f(x)=12(0.8)^x",
+        "f(x)=0.8(12)^x",
+        "f(x)=12(1.08)^x",
+        "f(x)=12−0.8x"
       ],
-      "answer": "Exponential growth",
-      "explanation": "Since the base 3 is greater than 1, the exponential function increases as x increases.",
-      "points": 1
+      "answer": "f(x)=12(0.8)^x",
+      "explanation": "The coefficient 12 is the initial value and the base 0.8 lies between 0 and 1, so the model decays exponentially.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Short response: Complete this statement: The horizontal asymptote of f(x) = 2^x + 3 is...",
-      "options": null,
-      "answer": "y = 3",
-      "explanation": "A correct response identifies \"y = 3\" and connects it to the module context.",
+      "question": "What is the horizontal asymptote of f(x)=2^x+3?",
+      "options": [
+        "x=0",
+        "y=0",
+        "x=3",
+        "y=3"
+      ],
+      "answer": "y=3",
+      "explanation": "The graph of 2^x has asymptote y=0; shifting it up 3 units gives y=3. The added constant changes every output by 3, so the graph approaches 3 as x decreases without reaching it.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 6,
       "order": 6,
-      "question": "Short response: Which function represents exponential decay?",
-      "options": null,
-      "answer": "f(x) = (1/4)^x",
-      "explanation": "A correct response identifies \"f(x) = (1/4)^x\" and connects it to the module context.",
+      "question": "Which function is exponential decay and has initial value 1?",
+      "options": [
+        "f(x)=4^x",
+        "f(x)=(1/4)^x",
+        "f(x)=4(1/2)^x",
+        "f(x)=1+(1/4)^x"
+      ],
+      "answer": "f(x)=(1/4)^x",
+      "explanation": "Its base lies between 0 and 1, so it decays, and f(0)=1. The other choices either grow or have an initial value different from 1, so they fail one of the two stated conditions.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 7,
       "order": 1,
-      "question": "In Logarithmic Functions, log₅(125) = ?",
+      "question": "Use the corresponding exponential equation to evaluate log₅(125).",
       "options": [
         "3",
         "25",
@@ -1180,7 +1210,7 @@
         "15"
       ],
       "answer": "3",
-      "explanation": "5³ = 125, so log₅(125) = 3. This reinforces the Logarithmic Functions idea behind the item instead of rewarding a surface-level guess.",
+      "explanation": "5³ = 125, so log₅(125) = 3. The logarithm asks for the exponent on 5 that produces 125.",
       "points": 1
     },
     {
@@ -1194,13 +1224,13 @@
         "Change of Base"
       ],
       "answer": "Power Rule",
-      "explanation": "The Power Rule of logarithms: log(xⁿ) = n · log(x). It connects the correct answer to Logarithmic Functions and separates it from plausible distractors.",
+      "explanation": "The Power Rule of logarithms: log(xⁿ) = n · log(x). The exponent moves in front as a multiplier; it does not create a product or quotient inside the logarithm.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "In Logarithmic Functions, Expand: log₂(8x).",
+      "question": "For x>0, use a logarithm property to expand log₂(8x).",
       "options": [
         "log₂(8) + log₂(x)",
         "log₂(8) · log₂(x)",
@@ -1208,32 +1238,38 @@
         "3x"
       ],
       "answer": "log₂(8) + log₂(x)",
-      "explanation": "Product rule: log₂(8x) = log₂(8) + log₂(x) = 3 + log₂(x). The choice fits the prompt because it applies the central rule or concept from Logarithmic Functions.",
+      "explanation": "Product rule: log₂(8x) = log₂(8) + log₂(x) = 3 + log₂(x). Since log₂(8)=3, the expansion can also be written 3+log₂(x), with x>0.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "In Logarithmic Functions, Evaluate log₅(125).",
+      "question": "A student rewrites log₂(x−1)=3 in exponential form. Which value of x satisfies the equation and its domain?",
       "options": [
-        "2",
-        "3",
-        "4",
-        "5"
+        "x=9",
+        "x=8",
+        "x=7",
+        "x=4"
       ],
-      "answer": "3",
-      "explanation": "Because 5³ = 125, log₅(125) = 3. The reasoning points back to the procedure used in Logarithmic Functions, which helps students check the calculation rather than guess from the options.",
-      "points": 1
+      "answer": "x=9",
+      "explanation": "Rewrite as x−1=2³=8, giving x=9, which satisfies the domain condition x>1. The domain check rules out any value at or below 1 before accepting the algebraic result.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 7,
       "order": 5,
-      "question": "Short response: Define or explain: Solve: log(x) + log(x + 3) = 1.",
-      "options": null,
-      "answer": "x = 2",
-      "explanation": "A correct response identifies \"x = 2\" and connects it to the module context.",
+      "question": "Solve log(x)+log(x+3)=1, where log means base 10.",
+      "options": [
+        "x=−5",
+        "x=−2",
+        "x=2",
+        "x=5"
+      ],
+      "answer": "x=2",
+      "explanation": "Combining logs gives x(x+3)=10. The roots are 2 and −5, but only 2 satisfies both log domains.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 8,
@@ -1260,7 +1296,7 @@
         "4"
       ],
       "answer": "3",
-      "explanation": "pH = −log(0.001) = −log(10⁻³) = 3. This reinforces the Exponential & Logarithmic Applications idea behind the item instead of rewarding a surface-level guess.",
+      "explanation": "pH = −log(0.001) = −log(10⁻³) = 3. Because 0.001=10⁻³, taking the negative base-10 logarithm changes −3 to 3.",
       "points": 1
     },
     {
@@ -1288,22 +1324,23 @@
         "P = 1000 + 0.04t"
       ],
       "answer": "P = 1000·e^(0.04t)",
-      "explanation": "Continuous growth uses A = Pe^(rt) where r = 0.04. Students need to recognize why P = 1000·e^(0.04t) matches the evidence in the question and why nearby options do not.",
+      "explanation": "Continuous growth uses A = Pe^(rt) where r = 0.04. The coefficient 1000 is the initial population and the positive exponent gives continuous growth.",
       "points": 1
     },
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "Carbon-14 has a half-life of 5,730 years. After 11,460 years, what fraction of the original amount remains?",
+      "question": "If a quantity follows A(t)=600e^(−0.2t), which statement describes its continuous rate?",
       "options": [
-        "1/2",
-        "1/4",
-        "1/8",
-        "1/16"
+        "It decays continuously at 20% per time unit",
+        "It grows continuously at 20% per time unit",
+        "It decays by exactly 20 units per time unit",
+        "Its initial value is 0.2"
       ],
-      "answer": "1/4",
-      "explanation": "11,460 years is two half-lives, so the remaining fraction is (1/2)² = 1/4. The choice fits the prompt because it applies the central rule or concept from Exponential & Logarithmic Applications.",
-      "points": 1
+      "answer": "It decays continuously at 20% per time unit",
+      "explanation": "In A=A₀e^(rt), r=−0.2. The negative exponent gives continuous decay and A₀=600 is the initial amount.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 9,
@@ -1316,7 +1353,7 @@
         "9"
       ],
       "answer": "4",
-      "explanation": "d = 9 − 5 = 4. Verify: 13 − 9 = 4. ✓. The reasoning points back to the procedure used in Sequences & Series, which helps students check the calculation rather than guess from the options.",
+      "explanation": "d = 9 − 5 = 4. Verify: 13 − 9 = 4. ✓. A constant difference between every pair of consecutive terms identifies an arithmetic sequence.",
       "points": 1
     },
     {
@@ -1330,7 +1367,7 @@
         "6"
       ],
       "answer": "3",
-      "explanation": "r = 6/2 = 3. Verify: 18/6 = 3. ✓. It connects the correct answer to Sequences & Series and separates it from plausible distractors.",
+      "explanation": "r = 6/2 = 3. Verify: 18/6 = 3. ✓. A constant quotient between consecutive nonzero terms identifies a geometric sequence.",
       "points": 1
     },
     {
@@ -1344,36 +1381,38 @@
         "36"
       ],
       "answer": "30",
-      "explanation": "3(1) + 3(2) + 3(3) + 3(4) = 3 + 6 + 9 + 12 = 30. It connects the correct answer to Sequences & Series and separates it from plausible distractors.",
+      "explanation": "3(1) + 3(2) + 3(3) + 3(4) = 3 + 6 + 9 + 12 = 30. The sigma notation includes four terms, so each integer from 1 through 4 must be substituted.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Find the common difference of the arithmetic sequence 5, 9, 13, 17, ...",
+      "question": "What is the explicit formula for the arithmetic sequence 5, 9, 13, 17, …?",
       "options": [
-        "3",
-        "4",
-        "5",
-        "9"
+        "aₙ=5+4(n−1)",
+        "aₙ=5·4^(n−1)",
+        "aₙ=9+5(n−1)",
+        "aₙ=4+5n"
       ],
-      "answer": "4",
-      "explanation": "Each term increases by 4, so the common difference is 4. The choice fits the prompt because it applies the central rule or concept from Sequences & Series.",
-      "points": 1
+      "answer": "aₙ=5+4(n−1)",
+      "explanation": "An arithmetic sequence uses aₙ=a₁+d(n−1); here a₁=5 and d=4. Substituting n=1 returns 5, and increasing n by 1 adds the common difference 4.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "Find the common ratio of the geometric sequence 2, 6, 18, 54, ...",
+      "question": "Which infinite geometric series converges?",
       "options": [
-        "2",
-        "3",
-        "6",
-        "9"
+        "12+6+3+…",
+        "3+6+12+…",
+        "5−10+20−…",
+        "1+1+1+…"
       ],
-      "answer": "3",
-      "explanation": "Each term is multiplied by 3 to get the next term, so the common ratio is 3.",
-      "points": 1
+      "answer": "12+6+3+…",
+      "explanation": "An infinite geometric series converges only when |r|<1. The first series has r=1/2; the others have |r|≥1.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 10,
@@ -1406,7 +1445,7 @@
     {
       "moduleOrder": 10,
       "order": 3,
-      "question": "In Conic Sections, The parabola y² = 8x opens:",
+      "question": "Which direction does the parabola y² = 8x open?",
       "options": [
         "Upward",
         "Downward",
@@ -1434,12 +1473,17 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Fill in the blank: ___ is the asymptotes of the hyperbola x²/9 − y²/16 = 1.",
-      "options": null,
-      "answer": "y = ±(4/3)x",
-      "explanation": "The correct answer is: y = ±(4/3)x.",
+      "question": "For (x−2)²+(y+3)²=16, what are the center and radius?",
+      "options": [
+        "center (−2,3), radius 4",
+        "center (2,−3), radius 4",
+        "center (2,3), radius 16",
+        "center (−2,−3), radius 16"
+      ],
+      "answer": "center (2,−3), radius 4",
+      "explanation": "The form (x−h)²+(y−k)²=r² gives h=2, k=−3, and r=4. The signs inside each square reverse the coordinate signs, while the right side gives r²=16.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 11,
@@ -1452,7 +1496,7 @@
         "25"
       ],
       "answer": "30",
-      "explanation": "Fundamental Counting Principle: 3 × 5 × 2 = 30. This reinforces the Probability idea behind the item instead of rewarding a surface-level guess.",
+      "explanation": "Fundamental Counting Principle: 3 × 5 × 2 = 30. The choices are independent, so multiplying the three counts includes every appetizer–entrée–dessert combination once.",
       "points": 1
     },
     {
@@ -1466,7 +1510,7 @@
         "10000"
       ],
       "answer": "5040",
-      "explanation": "P(10, 4) = 10!/(10−4)! = 10 × 9 × 8 × 7 = 5040. It highlights the operation, property, or model that makes the answer work in Probability.",
+      "explanation": "P(10, 4) = 10!/(10−4)! = 10 × 9 × 8 × 7 = 5040. Order matters in a line, so this is a permutation rather than a combination.",
       "points": 1
     },
     {
@@ -1480,7 +1524,7 @@
         "512"
       ],
       "answer": "56",
-      "explanation": "C(8, 3) = 8!/(3! · 5!) = (8 × 7 × 6)/(3 × 2 × 1) = 336/6 = 56. It connects the correct answer to Probability and separates it from plausible distractors.",
+      "explanation": "C(8, 3) = 8!/(3! · 5!) = (8 × 7 × 6)/(3 × 2 × 1) = 336/6 = 56. Order does not matter for committee membership, so the combination formula divides out the 3! arrangements.",
       "points": 1
     },
     {
@@ -1494,7 +1538,7 @@
         "1/4"
       ],
       "answer": "4/10",
-      "explanation": "P(red) = 4/(4+6) = 4/10 = 2/5. Students need to recognize why 4/10 matches the evidence in the question and why nearby options do not.",
+      "explanation": "P(red) = 4/(4+6) = 4/10 = 2/5. There are ten equally likely marbles in total, four of which satisfy the event.",
       "points": 1
     },
     {
@@ -1514,16 +1558,17 @@
     {
       "moduleOrder": 11,
       "order": 6,
-      "question": "A restaurant offers 3 appetizers, 5 entrees, and 2 desserts. How many different meals with one of each are possible?",
+      "question": "A card is drawn from a standard 52-card deck. Given that it is a face card, what is the probability it is a queen?",
       "options": [
-        "10",
-        "15",
-        "25",
-        "30"
+        "1/3",
+        "1/4",
+        "3/13",
+        "4/13"
       ],
-      "answer": "30",
-      "explanation": "By the Fundamental Counting Principle, there are 3 × 5 × 2 = 30 possible meals.",
-      "points": 1
+      "answer": "1/3",
+      "explanation": "There are 12 face cards and 4 queens, so P(queen | face card)=4/12=1/3. Conditioning restricts the sample space to the 12 face cards before counting the four queens.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 12,
@@ -1564,32 +1609,38 @@
         "z = −3.5"
       ],
       "answer": "z = −1.5",
-      "explanation": "z = (35 − 50)/10 = −15/10 = −1.5. Students need to recognize why z = −1.5 matches the evidence in the question and why nearby options do not.",
+      "explanation": "z = (35 − 50)/10 = −15/10 = −1.5. The negative sign shows 35 is below the mean, while 1.5 gives the distance in standard deviations.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "Which measure of center is most affected by outliers?",
+      "question": "A value has z=−1.8. How should it be interpreted?",
       "options": [
-        "Mean",
-        "Median",
-        "Mode",
-        "Range"
+        "It is 1.8 standard deviations below the mean",
+        "It is 1.8 units below zero",
+        "It is 1.8 standard deviations above the mean",
+        "It must be an outlier"
       ],
-      "answer": "Mean",
-      "explanation": "The mean uses every data value, so very large or very small outliers can pull it away from the center.",
-      "points": 1
+      "answer": "It is 1.8 standard deviations below the mean",
+      "explanation": "A negative z-score places the value below the mean, and its magnitude gives the distance in standard deviations.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Short response: Define or explain: In a normal distribution with mean 100 and standard deviation 15, approximately what percent of values fall between 70 and 130.",
-      "options": null,
+      "question": "For a normal distribution with mean 100 and standard deviation 15, about what percent lies from 70 to 130?",
+      "options": [
+        "68%",
+        "90%",
+        "95%",
+        "99.7%"
+      ],
       "answer": "95%",
-      "explanation": "A correct response identifies \"95%\" and connects it to the module context.",
+      "explanation": "The interval is μ±2σ, so the empirical rule gives about 95%. Here 70 and 130 are exactly two standard deviations below and above the mean: 100±2(15).",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 13,
@@ -1602,7 +1653,7 @@
         "3×4"
       ],
       "answer": "2×4",
-      "explanation": "Matrix product of m×n and n×p gives an m×p matrix. 2×3 · 3×4 = 2×4. The choice fits the prompt because it applies the central rule or concept from Matrices.",
+      "explanation": "Matrix product of m×n and n×p gives an m×p matrix. 2×3 · 3×4 = 2×4. The matching inner dimensions 3 confirm multiplication is defined, and the outer dimensions give the product size.",
       "points": 1
     },
     {
@@ -1616,7 +1667,7 @@
         "8"
       ],
       "answer": "10",
-      "explanation": "det = 3·4 − 1·2 = 12 − 2 = 10. It connects the correct answer to Matrices and separates it from plausible distractors.",
+      "explanation": "det = 3·4 − 1·2 = 12 − 2 = 10. For a 2×2 matrix [[a,b],[c,d]], the determinant is ad−bc.",
       "points": 1
     },
     {
@@ -1630,38 +1681,43 @@
         "Are both invertible"
       ],
       "answer": "Have the same size (same rows and columns)",
-      "explanation": "Matrix addition is defined only for matrices with identical dimensions. This reinforces the Matrices idea behind the item instead of rewarding a surface-level guess.",
+      "explanation": "Matrix addition is defined only for matrices with identical dimensions. Matching determinants or being square does not make entry-by-entry addition valid when dimensions differ.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "Which option best completes this statement: The size of the product of a 2×3 matrix and a 3×4 matrix is...",
+      "question": "If A=[[1,2],[3,4]] and B=[[2],[5]], what is the first entry of AB?",
       "options": [
-        "x = 6",
-        "2×4",
-        "x = 3",
-        "x = −3"
+        "12",
+        "7",
+        "10",
+        "23"
       ],
-      "answer": "2×4",
-      "explanation": "The best answer is 2×4. It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "12",
+      "explanation": "The first entry is the dot product of A’s first row and B’s column: 1·2+2·5=12.",
       "points": 1,
       "type": "mc"
     },
     {
       "moduleOrder": 13,
       "order": 5,
-      "question": "Short response: Define or explain: To solve the system ax = b using matrices, we compute.",
-      "options": null,
-      "answer": "X = A⁻¹B",
-      "explanation": "A correct response identifies \"X = A⁻¹B\" and connects it to the module context.",
+      "question": "If AX=B and A is invertible, which expression equals X?",
+      "options": [
+        "AB",
+        "BA⁻¹",
+        "A⁻¹B",
+        "B⁻¹A"
+      ],
+      "answer": "A⁻¹B",
+      "explanation": "Left-multiply by A⁻¹ to obtain X=A⁻¹B. Matrix order matters: multiplying on the left preserves A⁻¹A=I and leaves X on the left side.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 14,
       "order": 1,
-      "question": "The solution to a system of 3 equations in 3 variables is:",
+      "question": "When a three-equation system in x, y, and z has a unique solution, that solution is represented by:",
       "options": [
         "A line",
         "A plane",
@@ -1669,22 +1725,23 @@
         "A slope"
       ],
       "answer": "An ordered triple (x, y, z)",
-      "explanation": "A system of 3 equations in 3 unknowns has a solution that is an ordered triple.",
+      "explanation": "A unique solution assigns one value to each variable, forming an ordered triple. Other systems may have no solution or infinitely many solutions.",
       "points": 1
     },
     {
       "moduleOrder": 14,
       "order": 2,
-      "question": "In linear programming, the optimal value always occurs at:",
+      "question": "If a bounded feasible region has a maximum value for a linear objective, where can at least one maximum be found?",
       "options": [
-        "The center of the feasible region",
-        "A corner (vertex) of the feasible region",
-        "The x-axis intercept",
-        "The midpoint of a boundary edge"
+        "At a vertex of the feasible region",
+        "Only at the geometric center",
+        "Only on the x-axis",
+        "Outside the feasible region"
       ],
-      "answer": "A corner (vertex) of the feasible region",
-      "explanation": "The Extreme Value Theorem for linear programming: optimal solutions occur at vertices of the feasible region.",
-      "points": 1
+      "answer": "At a vertex of the feasible region",
+      "explanation": "A linear objective over a bounded polygon attains a maximum at one or more vertices, though an entire edge can tie when the objective is parallel to that edge.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 14,
@@ -1717,16 +1774,17 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "What form does the solution to a system of three equations in three variables usually take?",
+      "question": "For the feasible vertices (0,0), (0,4), and (2,4), where is P=3x+2y largest?",
       "options": [
-        "An ordered triple (x, y, z)",
-        "A single number x",
-        "An ordered pair (x, y)",
-        "A ratio only"
+        "At (2,4), where P=14",
+        "At (0,4), where P=8",
+        "At (0,0), where P=0",
+        "At every vertex"
       ],
-      "answer": "An ordered triple (x, y, z)",
-      "explanation": "A solution to a three-variable system gives values for x, y, and z, so it is written as an ordered triple.",
-      "points": 1
+      "answer": "At (2,4), where P=14",
+      "explanation": "Evaluate the linear objective at each vertex: 0, 8, and 14. The greatest value is 14 at (2,4).",
+      "points": 1,
+      "type": "mc"
     }
   ],
   "gradeLevel": 10
