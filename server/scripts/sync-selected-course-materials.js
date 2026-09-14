@@ -19,6 +19,7 @@ const COURSE_DIR = path.join(REPO_ROOT, 'server', 'prisma', 'courses');
 const MAX_TARGETS = 20;
 const ALLOWED_FIELDS = new Set([
   'title',
+  'titleZh',
   'readingUrl',
   'readingNote',
   'videoUrl',
