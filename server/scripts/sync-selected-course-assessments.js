@@ -186,8 +186,8 @@ function validateChoiceContract(kind, item, label) {
     fail(`${label} exam.type is unsupported: ${item.type}`);
   }
   if (kind === 'quiz' && item.options === null) {
-    if (item.type !== 'short') {
-      fail(`${label} quiz with null options must declare type short.`);
+    if (!new Set(['fill', 'short']).has(item.type)) {
+      fail(`${label} quiz with null options must declare type fill or short.`);
     }
     return;
   }
