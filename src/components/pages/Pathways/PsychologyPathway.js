@@ -11,7 +11,7 @@ const META = {
   courseEmoji: '🧠',
   heroDescription: 'A structured 4-year pathway for students interested in psychology, counseling, social work, neuroscience, or behavioral economics. Each course builds directly on the last — by graduation, you will have a college-level foundation and an original research paper.',
   targets: ['Psychology / Clinical Psychology', 'Counseling & Social Work', 'Neuroscience & Cognitive Science', 'Behavioral Economics', 'Education & Child Development'],
-  collegeNote: 'Completing this pathway gives advisors evidence of sustained academic commitment to an intended field. Psychology exam preparation, a capstone research paper, research methods, and the breadth of the 4-year sequence support planning conversations without promising admissions outcomes.',
+  collegeNote: 'Completing this pathway gives advisors evidence of sustained academic commitment to an intended field. A capstone research paper, research methods, and the breadth of the 4-year sequence support planning conversations without promising admissions outcomes.',
 };
 
 const SCHEDULE = [
@@ -52,7 +52,6 @@ const SCHEDULE = [
     { name: 'Statistics',                   type: 'supporting', credits: 1.0, dept: 'Mathematics', note: 'Essential for research methods' },
     { name: 'Biology — Advanced',           type: 'core',      credits: 1.0, dept: 'Science' },
     { name: 'Economics',                    type: 'core',      credits: 1.0, dept: 'Social Studies' },
-    { name: 'AP Psychology exam preparation',                type: 'pathway',   credits: 1.0, courseId: 'ap-psychology' },
   ]},
   { grade: 11, term: 'Spring', courses: [
     { name: 'English III — Literature',     type: 'core',      credits: 1.0, dept: 'English Language Arts' },
@@ -224,44 +223,6 @@ const COURSES = [
       { q: 'In-group bias is the tendency to:', opts: ['Distrust your own group', 'Favor your own group over out-groups', "Blame your group for others' failures", 'Conform to out-group norms'], ans: 1, exp: "Even random group membership leads to in-group favoritism — the core of Tajfel's Social Identity Theory." },
       { q: 'Deindividuation in groups involves:', opts: ['Loss of identity leading to impulsive behavior', 'Forming strong individual opinions', 'Taking personal responsibility', 'Maintaining cultural identity'], ans: 0, exp: 'Reduced self-awareness in crowds increases likelihood of impulsive or antisocial behavior.' },
       { q: 'Social facilitation (Zajonc): audiences impair performance when:', opts: ['Task is simple and well-learned', 'Task is novel or complex', 'Audience is supportive', 'Audience is familiar'], ans: 1, exp: 'Audience arousal enhances dominant responses. For new tasks, the dominant response is wrong → worse performance.' },
-    ],
-  },
-  {
-    id: 'ap-psychology', grade: 11, term: 'Fall', credits: 1.0,
-    name: 'AP Psychology exam preparation',
-    description: 'College-level psychology covering all major domains — biological bases, learning, memory, cognition, development, personality, abnormal behavior, treatment, and social psychology. Prepares students for the College Board AP exam.',
-    syllabus: {
-      objectives: ['Master all AP Psychology exam preparation content areas (College Board)', 'Analyze and evaluate psychological research', 'Apply concepts in AP free-response format', 'Demonstrate understanding of research ethics'],
-      units: [
-        { week: '1–2', topic: 'History, Approaches & Research Methods', desc: 'Schools of thought, research designs, statistical concepts, APA ethics.' },
-        { week: '3–4', topic: 'Biological Bases of Behavior', desc: 'Neurons, neurotransmitters, endocrine system, brain structures, genetics.' },
-        { week: '5–6', topic: 'Sensation, Perception & Consciousness', desc: 'Sensory systems, Gestalt, sleep stages, psychoactive drugs.' },
-        { week: '7–8', topic: 'Learning & Conditioning', desc: 'Classical (Pavlov), operant (Skinner), observational (Bandura), biological constraints.' },
-        { week: '9–10', topic: 'Memory & Cognition', desc: 'Encoding/storage/retrieval, misinformation effect (Loftus), intelligence models.' },
-        { week: '11–12', topic: 'Motivation, Emotion & Stress', desc: 'Maslow, drive theories, emotion theories, stress-health connection.' },
-        { week: '13–14', topic: 'Developmental Psychology', desc: 'Piaget, Vygotsky, Kohlberg, Erikson, Ainsworth — full review.' },
-        { week: '15–16', topic: 'Personality, Testing & Individual Differences', desc: 'Freud, Big Five, Bandura; assessment; intelligence testing; cultural bias.' },
-        { week: 17, topic: 'Abnormal Behavior & Treatment', desc: 'DSM-5 categories, major disorders, psychological and biomedical treatments.' },
-        { week: 18, topic: 'Social Psychology + AP Exam Prep', desc: 'Conformity, obedience, prejudice. Full practice exams and FRQ strategy.' },
-      ],
-    },
-    resources: [
-      { title: 'Crash Course Psychology — Full 40-Episode Playlist', channel: 'CrashCourse', url: 'https://www.youtube.com/results?search_query=crash+course+psychology+complete+playlist', note: 'Cover the full playlist — maps almost perfectly to AP content.' },
-      { title: 'AP Psychology exam preparation — Full Course', channel: 'Khan Academy', url: 'https://www.khanacademy.org/science/ap-psychology', note: 'Free AP prep with progress tracking.' },
-      { title: 'AP FRQ Strategy', channel: 'Marco Learning', url: 'https://www.youtube.com/results?search_query=AP+psychology+free+response+tips+marco+learning', note: 'Critical for exam day — how to answer FRQs correctly.' },
-      { title: 'AP Psychology exam overview', channel: 'College Board', url: 'https://apstudents.collegeboard.org/courses/ap-psychology', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
-    ],
-    quiz: [
-      { q: 'Studying the hippocampus in memory formation reflects which perspective?', opts: ['Psychodynamic', 'Humanistic', 'Behavioral', 'Biological'], ans: 3, exp: 'The biological perspective examines how brain structures, genes, and neurochemistry influence behavior.' },
-      { q: 'The JND (difference threshold) is governed by:', opts: ['Signal detection theory', "Weber's Law", 'Law of Effect', 'Yerkes-Dodson Law'], ans: 1, exp: "Weber's Law: JND is a constant proportion of the stimulus." },
-      { q: "Garcia & Koelling's taste-aversion showed conditioning is:", opts: ['Unlimited — any stimulus can pair with any response', 'Constrained by biological predispositions', 'Only effective with immediate reinforcement', 'Impossible in a single trial'], ans: 1, exp: 'Animals learn associations more readily aligned with evolutionary survival — challenges the equipotentiality assumption.' },
-      { q: 'The misinformation effect (Loftus) shows memory is:', opts: ['Permanently stored accurately', 'Reconstructive and susceptible to post-event information', 'More accurate under stress', 'Stored primarily in the cerebellum'], ans: 1, exp: 'Misleading post-event questions can alter memories — memory is reconstructed, not replayed.' },
-      { q: 'Growth mindset (Dweck) means:', opts: ['Intelligence is fixed', 'Effort and learning can develop ability', 'Success requires natural talent', 'Failure signals low intelligence'], ans: 1, exp: 'Growth mindset → embrace challenges, learn from failure, see effort as path to mastery.' },
-      { q: 'MDD criteria require symptoms lasting:', opts: ['1 week', '2 weeks', '1 month', '6 months'], ans: 1, exp: 'At least 5 symptoms for 2 consecutive weeks (DSM-5).' },
-      { q: 'CBT is based on:', opts: ['Psychoanalytic theory', 'Humanistic principles', "Beck's cognitive model + behavioral learning", 'Biological psychiatry'], ans: 2, exp: "Beck: distorted thinking drives emotional disorders — changing thoughts changes feelings." },
-      { q: 'REM sleep features:', opts: ['Deepest sleep', 'Most brain inactivity', 'Vivid dreaming and high brain activity', 'Very slow heart rate'], ans: 2, exp: 'REM brain activity resembles wakefulness; vivid dreams; muscle atonia.' },
-      { q: 'In double-blind studies, neither participants nor researchers know:', opts: ['The hypothesis', 'Who is in experimental vs. control group', 'The statistical method', 'The sample size'], ans: 1, exp: 'Eliminates both participant and experimenter expectation bias.' },
-      { q: 'Social facilitation: audiences impair performance when:', opts: ['Task is simple and well-learned', 'Task is novel or complex', 'Audience is supportive', 'Audience is familiar'], ans: 1, exp: 'Arousal enhances dominant response. For unfamiliar tasks, dominant response is wrong → worse performance.' },
     ],
   },
   {

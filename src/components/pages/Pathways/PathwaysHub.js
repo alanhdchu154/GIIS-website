@@ -14,12 +14,11 @@ const CATEGORIES = [
       {
         title: 'CS & Engineering',
         titleZh: '计算机科学',
-        desc: 'Programming, algorithms, software engineering, optional CS A exam preparation, and a machine learning capstone.',
-        descZh: '编程、算法、软件工程、可选 CS A 考试准备与机器学习毕业项目。',
+        desc: 'Programming, algorithms, software engineering, and a machine learning capstone.',
+        descZh: '编程、算法、软件工程与机器学习毕业项目。',
         emoji: '💻', color: '#1565C0', to: '/pathways/cs',
         targets: ['Computer Science', 'Software Engineering', 'Data Science', 'AI & ML'],
         targetsZh: ['计算机科学', '软件工程', '数据科学', '人工智能'],
-        ap: 1,
       },
       {
         title: 'Engineering Science',
@@ -82,12 +81,11 @@ const CATEGORIES = [
       {
         title: 'Psychology & Behavioral Science',
         titleZh: '心理学与行为科学',
-        desc: 'Behavior, cognition, social psychology, optional Psychology exam preparation, and an original research capstone.',
-        descZh: '行为、认知、社会心理学、可选心理学考试准备与原创研究专题。',
+        desc: 'Behavior, cognition, social psychology, and an original research capstone.',
+        descZh: '行为、认知、社会心理学与原创研究专题。',
         emoji: '🧠', color: '#5b2c6f', to: '/pathways/psychology',
         targets: ['Psychology', 'Neuroscience', 'Social Work', 'Education'],
         targetsZh: ['心理学', '神经科学', '社会工作', '教育学'],
-        ap: 1,
       },
       {
         title: 'Communications & Media',
@@ -140,9 +138,11 @@ function PathwayCard({ p, isEn }) {
       >
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '10px' }}>
           <span style={{ fontSize: '32px', lineHeight: 1 }}>{p.emoji}</span>
-          <span style={{ fontSize: '10px', fontWeight: 700, padding: '3px 8px', borderRadius: '20px', background: `${p.color}15`, color: p.color }}>
-            {p.ap} {isEn ? `Exam Prep Option${p.ap > 1 ? 's' : ''}` : `个考试准备选项`}
-          </span>
+          {p.ap > 0 && (
+            <span style={{ fontSize: '10px', fontWeight: 700, padding: '3px 8px', borderRadius: '20px', background: `${p.color}15`, color: p.color }}>
+              {p.ap} {isEn ? `Exam Prep Option${p.ap > 1 ? 's' : ''}` : `个考试准备选项`}
+            </span>
+          )}
         </div>
         <h3 style={{ fontSize: '16px', fontWeight: 800, color: p.color, margin: '0 0 8px', lineHeight: 1.2 }}>
           {isEn ? p.title : p.titleZh}
@@ -228,8 +228,6 @@ export default function PathwaysHub({ language, toggleLanguage }) {
         <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
           {[
             { v: '8', l: isEn ? 'Pathways' : '条路径' },
-            { v: '8', l: isEn ? 'Courses Each' : '门课程/路径' },
-            { v: '14+', l: isEn ? 'Exam Prep Options' : '个考试准备选项' },
             { v: '4', l: isEn ? 'Years of Guidance' : '年学业规划' },
           ].map(s => (
             <div key={s.l} style={{ textAlign: 'center', padding: '12px 18px', background: 'rgba(255,255,255,0.08)', borderRadius: 10, backdropFilter: 'blur(4px)' }}>

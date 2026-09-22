@@ -9,10 +9,9 @@ const META = {
   subtitle: 'Build the systems that run the world.',
   emoji: '💻',
   courseEmoji: '💻',
-  heroDescription: 'A rigorous 4-year pathway for students building evidence toward CS and engineering programs. From Python fundamentals to machine learning, students develop a reviewable software portfolio, optional CS A exam preparation, and a disciplined problem-solving record for college advising.',
+  heroDescription: 'A rigorous 4-year pathway for students building evidence toward CS and engineering programs. From Python fundamentals to machine learning, students develop a reviewable software portfolio and a disciplined problem-solving record for college advising.',
   targets: ['Computer Science / Software Engineering', 'Data Science & AI / Machine Learning', 'Computer Engineering & Systems', 'Cybersecurity', 'Game Development', 'Robotics & Embedded Systems'],
-  collegeNote: 'Optional Computer Science A exam preparation, a completed software project portfolio, and a full 4-year progression from algorithms through machine learning give advisors concrete evidence to discuss with families. This pathway supports CS, CE, or Data Science planning without promising admission outcomes.',
-  stats: [{ label: 'Exam Prep Options', value: 1 }],
+  collegeNote: 'A completed software project portfolio and a full 4-year progression from algorithms through machine learning give advisors concrete evidence to discuss with families. This pathway supports CS, CE, or Data Science planning without promising admission outcomes.',
 };
 
 const SCHEDULE = [
@@ -51,7 +50,6 @@ const SCHEDULE = [
     { name: 'English III',               type: 'core',      credits: 1.0, dept: 'English Language Arts' },
     { name: 'Statistics',                type: 'core',      credits: 1.0, dept: 'Mathematics' },
     { name: 'Biology — Advanced',        type: 'core',      credits: 1.0, dept: 'Science' },
-    { name: 'AP Computer Science A exam preparation',     type: 'pathway',   credits: 1.0, courseId: 'cs-apcs' },
   ]},
   { grade: 11, term: 'Spring', courses: [
     { name: 'English III — Literature',  type: 'core',      credits: 1.0, dept: 'English Language Arts' },
@@ -224,44 +222,6 @@ const COURSES = [
       { q: 'Which layer of the OSI model handles IP addressing and routing?', opts: ['Physical Layer', 'Data Link Layer', 'Network Layer', 'Transport Layer'], ans: 2, exp: 'The Network Layer (Layer 3) handles logical addressing (IP) and routing — determining the best path for data packets.' },
       { q: 'What is the key difference between symmetric and asymmetric encryption?', opts: ['Symmetric is slower', 'Symmetric uses one key for both encrypt and decrypt; asymmetric uses a public/private key pair', 'Asymmetric can only encrypt, not decrypt', 'Symmetric requires the internet to work'], ans: 1, exp: 'Symmetric encryption uses the same secret key to encrypt and decrypt. Asymmetric uses a public key to encrypt and a private key to decrypt — enabling secure communication without sharing secrets.' },
       { q: 'In the context of operating systems, what is a process?', opts: ['A file stored on disk', 'A running instance of a program in memory', 'A type of CPU instruction', 'A network connection'], ans: 1, exp: 'A process is a program that is currently loaded into memory and being executed by the CPU, along with its resources (memory, file handles, etc.).' },
-    ],
-  },
-  {
-    id: 'cs-apcs',
-    name: 'AP Computer Science A exam preparation',
-    grade: 11, term: 'Fall', credits: 1.0,
-    description: 'College-level Java programming and object-oriented design for students preparing for the College Board AP Computer Science A exam. You will learn OOP principles (classes, inheritance, polymorphism), work with arrays and ArrayLists, and develop problem-solving skills tested on the May exam.',
-    syllabus: {
-      objectives: [
-        'Write and debug Java programs using correct syntax and OOP principles',
-        'Design class hierarchies using inheritance and interfaces',
-        'Work with arrays, ArrayLists, and 2D arrays',
-        'Trace recursive algorithms and write recursive solutions',
-        'Practice Java topics and free-response formats commonly tested on the AP CS A exam',
-      ],
-      units: [
-        { week: '1–3',   topic: 'Java Fundamentals',         desc: 'Primitive types, variables, operators, control flow — parallel to Python but with static typing.' },
-        { week: '4–5',   topic: 'Classes & Objects',         desc: 'Writing classes, constructors, instance variables, methods, encapsulation.' },
-        { week: '6–7',   topic: 'Inheritance',               desc: 'extends, super, method overriding, polymorphism, abstract classes.' },
-        { week: '8–9',   topic: 'Arrays',                    desc: '1D and 2D arrays, for-each loops, passing arrays to methods.' },
-        { week: '10',    topic: 'ArrayLists',                desc: 'Dynamic arrays, add/remove/get, iterating, comparing to arrays.' },
-        { week: '11–12', topic: 'Searching & Sorting',       desc: 'Sequential search, binary search, selection sort, insertion sort, merge sort in Java.' },
-        { week: '13',    topic: 'Recursion',                 desc: 'Recursive methods, tracing call stacks, classic recursive problems.' },
-        { week: '14–16', topic: 'AP Exam Prep',              desc: 'Practice FRQs, multiple-choice review, timed exam simulations.' },
-      ],
-    },
-    resources: [
-      { url: 'https://apstudents.collegeboard.org/courses/ap-computer-science-a', title: 'AP Computer Science A exam overview', channel: 'College Board', note: 'Public overview of exam topics and format. Restricted College Board practice tools may require separate student access and are not required GIIS public resources.' },
-      { url: 'https://www.youtube.com/watch?v=A74TOX803D0', title: 'AP Computer Science A exam preparation — Full Course', channel: 'Replit / APCS Academy', note: 'Complete AP CS A course covering every exam topic with practice problems.' },
-      { url: 'https://codehs.com/course/apjava', title: 'CodeHS AP Computer Science A exam preparation', channel: 'CodeHS', note: 'Interactive Java programming environment with built-in AP CS A curriculum.' },
-      { url: 'https://www.youtube.com/watch?v=2Xa3Y4xz8_s', title: 'Java Inheritance and Polymorphism', channel: 'Coding with John', note: 'Clear explanation of OOP concepts — watch before the Inheritance unit.' },
-    ],
-    quiz: [
-      { q: 'What keyword is used to create a subclass in Java?', opts: ['implements', 'extends', 'inherits', 'super'], ans: 1, exp: 'extends creates a subclass. For example: class Dog extends Animal { } means Dog inherits from Animal.' },
-      { q: 'What is the index of the last element in a Java array of length 5?', opts: ['5', '4', '0', '6'], ans: 1, exp: 'Arrays are zero-indexed. A length-5 array has elements at indices 0, 1, 2, 3, 4. The last index is always length − 1 = 4.' },
-      { q: 'Which of the following correctly creates an ArrayList of Strings in Java?', opts: ['ArrayList list = new ArrayList<String>();', 'ArrayList<String> list = new ArrayList<String>();', 'String[] list = new ArrayList<>();', 'List list = new String ArrayList();'], ans: 1, exp: 'ArrayList<String> list = new ArrayList<String>(); is the correct declaration. The type parameter <String> specifies what type of objects the list holds.' },
-      { q: 'What does method overriding allow a subclass to do?', opts: ['Add new instance variables to the superclass', 'Provide its own implementation of a method defined in the superclass', 'Call private methods in the superclass', 'Create multiple versions of a method in the same class'], ans: 1, exp: 'Method overriding allows a subclass to provide its own implementation of a method inherited from the superclass. The @Override annotation marks overridden methods.' },
-      { q: 'What is the base case in a recursive method?', opts: ['The first call to the method', 'The condition that stops the recursion', 'The return type of the method', 'The deepest level of recursion'], ans: 1, exp: 'The base case is the condition under which the recursive method stops calling itself and returns a value directly. Without it, the method would recurse infinitely and cause a stack overflow.' },
     ],
   },
   {
