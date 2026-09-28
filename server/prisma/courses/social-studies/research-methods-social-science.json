@@ -110,13 +110,13 @@
       "titleZh": "调查与问卷",
       "objectives": "Explain the types of survey questions (open-ended, closed-ended, Likert scale, ranking); identify principles of good questionnaire design (clarity, neutrality, order effects); describe sampling strategies (random, stratified, convenience, snowball) and their implications for representativeness.",
       "readingUrl": "https://saylordotorg.github.io/text_principles-of-sociological-inquiry-qualitative-and-quantitative-methods/s11-04-designing-effective-questions-.html",
-      "readingNote": "Saylor §§7.2–7.3 and 8.3–8.4 — Sampling and Questionnaire Design",
+      "readingNote": "Saylor §§8.3–8.4 — questionnaire wording, response options, and item ordering; use the Statistics Canada practice resource below for probability-sampling definitions.",
       "videoUrl": "https://youtu.be/Y63A2DyP5OY",
-      "videoNote": "GIIS lesson video — Surveys & Questionnaires; use with the exact Saylor section and the supplied fictional evidence.",
+      "videoNote": "GIIS lesson video — Surveys & Questionnaires. Its equal-selection-chance example describes simple random sampling only; do not generalize it to every probability design. For probability and systematic sampling, use the corrected Statistics Canada definitions below.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://saylordotorg.github.io/text_principles-of-sociological-inquiry-qualitative-and-quantitative-methods/s11-04-designing-effective-questions-.html",
-      "practiceNote": "Saylor worked reading — use the named section to complete the supplied Surveys & Questionnaires evidence task; no outside participants or data collection are required.",
+      "practiceUrl": "https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch13/prob/5214899-eng.htm",
+      "practiceNote": "Statistics Canada — probability sampling uses a known, non-zero selection chance that need not be equal; systematic sampling uses a random start and a fixed interval. Apply these definitions to the supplied questionnaire task; no outside participants or data collection are required.",
       "assignment": "Build a 10-item questionnaire for the fictional question “How is after-school work associated with Grade 11 study time?” Use these supplied constraints: no names, ranges for weekly work hours, a seven-day recall period for study time, and one attention-check item. Include two Likert items, two categorical items, two numeric items, and four additional neutral items. Identify sampling frame, choose a probability sampling method, and diagnose two possible response biases. Do not administer the survey. Submit: one PDF or document with clearly labeled sections and source links where used. Include: ten numbered items meeting the type counts, neutral wording, one attention check, sampling frame and method, and two bias diagnoses with mitigation. Evaluation: 100% total — Survey Design concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 2.5
     },
@@ -192,7 +192,7 @@
       "readingUrl": "https://openstax.org/books/introductory-statistics-2e/pages/2-7-measures-of-the-spread-of-the-data",
       "readingNote": "OpenStax Introductory Statistics 2e §2.7 — variance and sample/population standard deviation; for even n, median is the average of the two middle ordered values.",
       "videoUrl": "https://youtu.be/hyihDnas9tk",
-      "videoNote": "GIIS lesson video — Analyzing Quantitative Data; use with the exact Saylor section and the supplied fictional evidence.",
+      "videoNote": "GIIS lesson video — Analyzing Quantitative Data; use with the assigned OpenStax sections and the supplied fictional evidence.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://openstax.org/books/introductory-statistics-2e/pages/9-4-rare-events-the-sample-decision-and-conclusion",
@@ -263,12 +263,16 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Which social science discipline primarily studies individual behavior and mental processes? Name it and give one example research question from that discipline.",
-      "options": null,
-      "answer": "Psychology; for example, “How is sleep duration associated with working-memory performance among high school students?” Other accurate psychology questions earn full credit.",
-      "explanation": "Psychology studies behavior and mental processes. A complete answer identifies psychology and gives a specific empirical question rather than only a topic label.",
-      "points": 1,
-      "type": "short"
+      "question": "Which discipline primarily studies individual behavior and mental processes?",
+      "options": [
+        "Psychology",
+        "Economics",
+        "Political science",
+        "Anthropology"
+      ],
+      "answer": "Psychology",
+      "explanation": "Psychology studies behavior and mental processes using empirical questions such as how sleep duration is associated with working-memory performance.",
+      "points": 1
     },
     {
       "moduleOrder": 2,
@@ -371,12 +375,16 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Short response: Define or explain: Research 'confidentiality' means that.",
-      "options": null,
-      "answer": "Protecting participant identities and data so private information is not disclosed to unauthorized people.",
-      "explanation": "Confidentiality means data can be collected but must be stored and reported in ways that protect participants.",
-      "points": 1,
-      "type": "short"
+      "question": "What does confidentiality require in human-participant research?",
+      "options": [
+        "Publish participant names for transparency",
+        "Protect identities and private data from unauthorized disclosure",
+        "Promise that no risk can ever occur",
+        "Allow any researcher to access raw records"
+      ],
+      "answer": "Protect identities and private data from unauthorized disclosure",
+      "explanation": "Confidentiality limits access and disclosure of identifiable information through data minimization, secure handling, and approved reporting practices.",
+      "points": 1
     },
     {
       "moduleOrder": 4,
@@ -549,12 +557,16 @@
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Short response: Define or explain: 'external validity' in social research refers to.",
-      "options": null,
-      "answer": "The extent to which findings can generalize beyond the specific sample, setting, and study conditions.",
-      "explanation": "External validity asks whether results apply to other people, places, times, or situations.",
-      "points": 1,
-      "type": "short"
+      "question": "Which statement best describes external validity in a social science study?",
+      "options": [
+        "Whether findings can generalize beyond the studied sample, setting, and conditions",
+        "Whether a scale has consistent item wording",
+        "Whether the researcher prefers the result",
+        "Whether the p-value is exactly zero"
+      ],
+      "answer": "Whether findings can generalize beyond the studied sample, setting, and conditions",
+      "explanation": "External validity addresses the populations, settings, times, and conditions to which a result may reasonably generalize; it is distinct from internal validity and reliability.",
+      "points": 1
     },
     {
       "moduleOrder": 7,
@@ -601,12 +613,16 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "Short response: Define or explain: Survey 'response bias' occurs when.",
-      "options": null,
-      "answer": "Participants answer inaccurately or systematically distort responses because of wording, social desirability, memory, or survey context.",
-      "explanation": "Response bias affects the accuracy of survey data even when the sample was selected well.",
-      "points": 1,
-      "type": "short"
+      "question": "Survey response bias occurs when:",
+      "options": [
+        "Answers are systematically distorted by wording, recall, social desirability, or survey context",
+        "Every selected person responds accurately",
+        "The sample size is written in the report",
+        "Researchers calculate a median"
+      ],
+      "answer": "Answers are systematically distorted by wording, recall, social desirability, or survey context",
+      "explanation": "Response bias changes reported answers in a systematic way and can remain even when the sampling method itself is appropriate.",
+      "points": 1
     },
     {
       "moduleOrder": 8,
@@ -709,12 +725,16 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Short response: Define or explain: A case study research design in social science involves.",
-      "options": null,
-      "answer": "An in-depth investigation of one person, group, event, organization, or setting using multiple sources of evidence.",
-      "explanation": "Case studies trade broad generalization for deep contextual understanding.",
-      "points": 1,
-      "type": "short"
+      "question": "A case study design is best described as:",
+      "options": [
+        "An in-depth investigation of a bounded person, group, event, organization, or setting using multiple evidence sources",
+        "A national probability survey only",
+        "A laboratory experiment with random assignment only",
+        "A calculation of one correlation coefficient"
+      ],
+      "answer": "An in-depth investigation of a bounded person, group, event, organization, or setting using multiple evidence sources",
+      "explanation": "Case studies examine a bounded case in context and often integrate interviews, documents, observations, or other evidence rather than relying on one method by definition.",
+      "points": 1
     },
     {
       "moduleOrder": 10,
@@ -943,12 +963,16 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "Short response: Define or explain: Researcher 'reflexivity' in qualitative research requires the researcher to.",
-      "options": null,
-      "answer": "Examine how the researcher's identity, assumptions, role, and choices may influence data collection and interpretation.",
-      "explanation": "Reflexivity is especially important in qualitative research because the researcher is part of the interpretive process.",
-      "points": 1,
-      "type": "short"
+      "question": "Researcher reflexivity requires the researcher to:",
+      "options": [
+        "Examine how their identity, assumptions, role, and choices may shape data collection and interpretation",
+        "Claim complete neutrality without reflection",
+        "Delete evidence that challenges the first theme",
+        "Replace participant evidence with personal opinion"
+      ],
+      "answer": "Examine how their identity, assumptions, role, and choices may shape data collection and interpretation",
+      "explanation": "Reflexivity makes the researcher’s influence visible and open to evaluation; it does not eliminate the need for evidence or justify discarding contrary cases.",
+      "points": 1
     }
   ],
   "questions": [
@@ -1061,30 +1085,30 @@
       "examType": "midterm",
       "order": 8,
       "type": "mc",
-      "question": "Random assignment in an experiment serves which key purpose?",
+      "question": "A school survey asks minors to report identifiable information about sensitive behavior. Which step best reflects respect for persons and beneficence before data collection?",
       "options": [
-        "Ensuring all participants complete the study without dropping out",
-        "Guaranteeing that the hypothesis will be supported",
-        "Making treatment and control groups comparable before the treatment",
-        "Replacing the need for ethical review"
+        "Collect names so every response can be verified publicly",
+        "Obtain appropriate consent or assent, minimize identifiable data, and arrange ethics review before recruitment",
+        "Skip review because the project uses a questionnaire",
+        "Promise that every participant will benefit directly from the results"
       ],
-      "answer": "Making treatment and control groups comparable before the treatment",
-      "explanation": "The correct answer is: Making treatment and control groups comparable before the treatment.",
+      "answer": "Obtain appropriate consent or assent, minimize identifiable data, and arrange ethics review before recruitment",
+      "explanation": "Research with minors and sensitive identifiable data requires added safeguards. Appropriate consent or assent, data minimization, and prior ethics review protect autonomy and reduce foreseeable harm.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 9,
       "type": "mc",
-      "question": "For an in-depth study of meaning and lived experience, qualitative research is most appropriate when the goal is to:",
+      "question": "A researcher selects every 20th student from an alphabetized roster after choosing a random starting position from 1 through 20. Which sampling method is this?",
       "options": [
-        "Test a specific hypothesis with measurable variables",
-        "Estimate the percentage of people who hold a particular opinion",
-        "Establish a causal relationship between two variables",
-        "Understand the subjective meanings and experiences of participants in depth"
+        "Convenience sampling",
+        "Snowball sampling",
+        "Systematic random sampling",
+        "Purposive sampling"
       ],
-      "answer": "Understand the subjective meanings and experiences of participants in depth",
-      "explanation": "Qualitative research excels at exploratory, in-depth understanding of complex social phenomena, meanings, and processes — where statistical measurement and generalization are less important than contextual richness.",
+      "answer": "Systematic random sampling",
+      "explanation": "Systematic random sampling begins with a random start and then selects units at a fixed interval from a sampling frame.",
       "points": 1
     },
     {
@@ -1150,11 +1174,16 @@
     {
       "examType": "midterm",
       "order": 14,
-      "type": "short",
-      "question": "A 'double-barreled' survey question is problematic because it:",
-      "options": null,
-      "answer": "Asks about two issues at once, making it impossible to know which part the respondent is answering.",
-      "explanation": "Double-barreled questions create ambiguous data because agreement with one part may not mean agreement with the other.",
+      "type": "mc",
+      "question": "Why is a double-barreled survey question problematic?",
+      "options": [
+        "It asks about two issues in one item, so one response cannot show which issue the respondent means",
+        "It always contains too few words",
+        "It uses a seven-day recall period",
+        "It offers mutually exclusive response choices"
+      ],
+      "answer": "It asks about two issues in one item, so one response cannot show which issue the respondent means",
+      "explanation": "For example, one satisfaction rating for both teacher feedback and course pace cannot reveal which component drove the answer.",
       "points": 1
     },
     {
@@ -1250,11 +1279,16 @@
     {
       "examType": "final",
       "order": 6,
-      "type": "short",
-      "question": "A quasi-experimental study lacks which key element of a true experiment, and why does that difference weaken causal inference?",
-      "options": null,
-      "answer": "It lacks random assignment to treatment and control conditions; without random assignment, pre-existing group differences can remain plausible alternative explanations.",
-      "explanation": "A complete answer identifies random assignment and connects its absence to selection differences or confounding rather than merely naming the design.",
+      "type": "mc",
+      "question": "Why does a quasi-experiment usually support weaker causal inference than a true randomized experiment?",
+      "options": [
+        "It lacks random assignment, so pre-existing group differences can remain plausible alternative explanations",
+        "It always has no comparison group",
+        "It cannot measure an outcome",
+        "It must use only qualitative data"
+      ],
+      "answer": "It lacks random assignment, so pre-existing group differences can remain plausible alternative explanations",
+      "explanation": "Without random assignment, selection differences may confound the treatment comparison even when researchers use matching, baseline measures, or statistical adjustment.",
       "points": 1
     },
     {
@@ -1455,11 +1489,16 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "short",
-      "question": "Before collecting identifiable interview data in a human-participant study for which consent is required, what approvals and participant protection are needed?",
-      "options": null,
-      "answer": "Appropriate institutional ethics review or approval and informed consent (plus assent/parental permission where applicable) are required before collection. Any consent waiver must be authorized by the responsible review body, not declared by the student researcher.",
-      "explanation": "Researchers must obtain required oversight and protect voluntary participation, risk disclosure, confidentiality, and withdrawal rights. Authorized exceptions are determined through institutional review.",
+      "type": "mc",
+      "question": "Before collecting identifiable interviews in a human-participant study for which consent is required, what is needed?",
+      "options": [
+        "Appropriate ethics review or approval and informed consent, with assent or parental permission where applicable; any waiver must be authorized by the review body",
+        "The student researcher may declare a consent waiver alone",
+        "Public posting of participant names",
+        "Collection first and ethics review after publication"
+      ],
+      "answer": "Appropriate ethics review or approval and informed consent, with assent or parental permission where applicable; any waiver must be authorized by the review body",
+      "explanation": "Required oversight and consent protections must be in place before collection. Authorized exceptions come from the responsible review body, not the student researcher.",
       "points": 1
     }
   ],

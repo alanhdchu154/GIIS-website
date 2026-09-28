@@ -5,7 +5,7 @@
   "credits": 0.5,
   "department": "Electives",
   "type": "Elective",
-  "description": "A systematic study of marketing principles — strategic planning, consumer insights, segmentation and positioning, brand and product management, pricing, channels, and integrated marketing communications.",
+  "description": "A systematic study of marketing principles — strategic marketing planning, consumer insights, brand management, integrated marketing communications, pricing strategy, and global marketing.",
   "isPublished": false,
   "modules": [
     {
@@ -109,14 +109,14 @@
       "title": "Distribution & Channel Strategy",
       "titleZh": "分销与渠道战略",
       "objectives": "Design a distribution channel; compare direct vs. indirect channels; evaluate omnichannel and multichannel strategies; explain logistics and supply chain roles in delivering customer value.",
-      "readingUrl": "https://openstax.org/books/principles-marketing/pages/17-1-the-use-and-value-of-marketing-channels",
-      "readingNote": "OpenStax Principles of Marketing — channel value, types, and logistics decisions",
-      "videoUrl": "https://openstax.org/books/principles-marketing/pages/17-1-the-use-and-value-of-marketing-channels",
-      "videoNote": "Module-specific visual lesson or worked example; use it to check terminology and decision logic against the OpenStax reading.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/17-3-factors-influencing-channel-choice",
+      "readingNote": "OpenStax Principles of Marketing §17.3 — channel-choice factors and intensive, selective, and exclusive distribution",
+      "videoUrl": "https://openstax.org/books/principles-marketing/pages/17-2-types-of-marketing-channels",
+      "videoNote": "OpenStax Principles of Marketing §17.2 — direct and indirect channels and the difference between multichannel and integrated omnichannel distribution.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/17-2-types-of-marketing-channels",
-      "practiceNote": "OpenStax worked lesson — apply the section framework to the supplied module scenario before completing the assignment.",
+      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/17-4-managing-the-distribution-channel",
+      "practiceNote": "OpenStax Principles of Marketing §17.4 — channel management, conflict, cooperation, and disintermediation; apply the concepts to the supplied module scenario.",
       "assignment": "Compare three StudySip channel plans using this supplied data: direct website—$8 contribution/unit, 2-day shipping to 70% of buyers, full customer data; campus bookstore—$4 contribution/unit, same-day access at 12 campuses, no individual customer data; marketplace—$5 contribution/unit, broad reach, 3–5 day shipping, partial data. Recommend a single, multichannel, or omnichannel design for the first semester. Map product, information, payment, and return flows and propose one inventory and one returns rule. Submit: one PDF or document with clearly labeled sections and source links where used. Include: a channel comparison table, accurate multichannel/omnichannel distinction, four labeled flows, two operating rules, and a decision tied to reach, margin, speed, and data. Evaluation: 100% total — Distribution and Channels concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3
     },
@@ -124,7 +124,7 @@
       "order": 8,
       "title": "Integrated Marketing Communications (IMC)",
       "titleZh": "整合营销传播（IMC）",
-      "objectives": "Define IMC and explain why consistent messaging matters; coordinate advertising, PR, digital, and events into a unified campaign; create a basic IMC brief; measure communication effectiveness.",
+      "objectives": "Define IMC and explain why consistent messaging matters; coordinate advertising, PR, digital, and events into a unified campaign; create a basic IMC brief; measure communication effectiveness; adapt a core campaign for a supplied international-market scenario without losing message consistency.",
       "readingUrl": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements",
       "readingNote": "OpenStax Principles of Marketing — promotion mix and communication process",
       "videoUrl": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements",
@@ -133,7 +133,7 @@
       "video2Note": "",
       "practiceUrl": "https://openstax.org/books/principles-marketing/pages/13-2-the-communication-process",
       "practiceNote": "OpenStax worked lesson — apply the section framework to the supplied module scenario before completing the assignment.",
-      "assignment": "Plan a six-week $10,000 IMC launch for StudySip using these supplied channels: campus newsletter CPM $18, search ads CPC $1.80, creator package $2,500 with estimated 70,000 views, and club sampling $3 per unit. Use these fictional planning assumptions and treat each purchase as one new customer: newsletter—calculate impressions from CPM, use CTR 1.5%, then 3% click-to-purchase conversion; search—calculate clicks from CPC, then 4% click-to-purchase conversion (impressions and CTR are not applicable); creator—70,000 views count as impressions, link CTR is 0.8%, then 3% click-to-purchase conversion; club sampling—calculate samples from $3 per unit, then 12% sample-to-purchase conversion (impressions, clicks, and CTR are not applicable). Calculate channel CAC as allocated spend divided by that channel’s forecast new customers, and total campaign CAC as $10,000 divided by total forecast new customers. Set one awareness and one conversion objective, allocate the full budget, calculate each channel’s applicable impressions, clicks, samples, purchases, new customers, CTR, conversion rate, and CAC; mark the explicitly unavailable metrics “not applicable” using CPM = cost per 1,000 impressions and CPC = cost per click, write a consistent message adapted to each channel, and define and calculate with these supplied formulas: CTR = clicks/impressions, conversion rate = purchases/clicks, CAC = spend/new customers, plus one brand-lift measure with numeric targets. Submit: one PDF or document with clearly labeled sections and source links where used. Include: two SMART objectives, a budget totaling exactly $10,000, visible calculations using the supplied fictional forecast assumptions, channel-adapted messages with one core promise, metric formulas, targets, and an optimization rule. Evaluation: 100% total — Integrated Marketing Communications concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
+      "assignment": "Plan a six-week $10,000 IMC launch for StudySip using these supplied channels: campus newsletter CPM $18, search ads CPC $1.80, creator package $2,500 with estimated 70,000 views, and club sampling $3 per unit. Use these fictional planning assumptions and treat each purchase as one new customer: newsletter—calculate impressions from CPM, use CTR 1.5%, then 3% click-to-purchase conversion; search—calculate clicks from CPC, then 4% click-to-purchase conversion (impressions and CTR are not applicable); creator—70,000 views count as impressions, link CTR is 0.8%, then 3% click-to-purchase conversion; club sampling—calculate samples from $3 per unit, then 12% sample-to-purchase conversion (impressions, clicks, and CTR are not applicable). Calculate channel CAC as allocated spend divided by that channel’s forecast new customers, and total campaign CAC as $10,000 divided by total forecast new customers. Set one awareness and one conversion objective, allocate the full budget, calculate each channel’s applicable impressions, clicks, samples, purchases, new customers, CTR, conversion rate, and CAC; mark the explicitly unavailable metrics “not applicable” using CPM = cost per 1,000 impressions and CPC = cost per click, write a consistent message adapted to each channel, Choose one supplied international-market scenario for a localized extension: Market A uses Spanish as the primary campaign language, requires metric units and local-language packaging, and relies mainly on mobile search; Market B uses Japanese as the primary campaign language, requires local-language packaging, and relies mainly on campus retail and messaging apps. Adapt the core promise, one channel execution, and one packaging disclosure for the selected market, and identify one assumption that would require local validation. and define and calculate with these supplied formulas: CTR = clicks/impressions, conversion rate = purchases/clicks, CAC = spend/new customers, plus one brand-lift measure with numeric targets. Submit: one PDF or document with clearly labeled sections and source links where used. Include: two SMART objectives, a budget totaling exactly $10,000, visible calculations using the supplied fictional forecast assumptions, channel-adapted messages with one core promise, a clearly labeled Market A or B localization, metric formulas, targets, and an optimization rule. Evaluation: 100% total — Integrated Marketing Communications concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3.5
     }
   ],
@@ -231,11 +231,16 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
-      "question": "The BCG matrix classifies products into four categories. Which category has HIGH market share but LOW growth?",
-      "options": null,
-      "answer": "Cash Cow",
-      "explanation": "The correct answer is: Cash Cow.",
+      "type": "mc",
+      "question": "In the BCG matrix, which category has high relative market share in a low-growth market?",
+      "options": [
+        "Star",
+        "Cash cow",
+        "Question mark",
+        "Dog"
+      ],
+      "answer": "Cash cow",
+      "explanation": "A cash cow combines high relative market share with low market growth and may generate resources for other portfolio priorities.",
       "points": 1
     },
     {
@@ -316,11 +321,16 @@
     {
       "examType": "midterm",
       "order": 13,
-      "type": "short",
-      "question": "Explain the difference between market segmentation and market targeting, and give one example of each for a fitness apparel brand.",
-      "options": null,
-      "answer": "Segmentation divides the total market into distinct groups (e.g., amateur runners, professional athletes, yoga practitioners). Targeting selects which segment(s) to pursue (e.g., the brand decides to focus on amateur runners aged 18–35 as its primary target).",
-      "explanation": "Segmentation identifies 'who exists in the market'; targeting decides 'who we will serve.'",
+      "type": "mc",
+      "question": "Which statement correctly distinguishes segmentation from targeting?",
+      "options": [
+        "Segmentation groups customers by shared characteristics; targeting selects which segment or segments the firm will serve",
+        "Segmentation chooses a price; targeting calculates cost",
+        "Segmentation designs advertisements; targeting measures inventory",
+        "They are two names for the same decision"
+      ],
+      "answer": "Segmentation groups customers by shared characteristics; targeting selects which segment or segments the firm will serve",
+      "explanation": "For a fitness brand, runners and yoga practitioners could be segments; choosing one of them as the primary audience is targeting.",
       "points": 2
     },
     {
@@ -341,11 +351,16 @@
     {
       "examType": "midterm",
       "order": 15,
-      "type": "short",
-      "question": "A coffee brand sells its premium beans at $30/lb. Identify one cost-based and one value-based pricing argument for this price, and state which approach you think is more appropriate for a premium brand and why.",
-      "options": null,
-      "answer": "Cost-based: if production, sourcing, and overhead cost $15/lb, a 100% markup yields $30. Value-based: customers who associate the brand with exclusive single-origin beans are willing to pay $30 for the experience and status. A premium brand should favor value-based pricing because it aligns price with perceived quality and maintains brand equity.",
-      "explanation": "Premium brands risk undermining their positioning if they price purely on cost, ignoring the value perception they have built.",
+      "type": "mc",
+      "question": "A premium coffee brand has $15 per pound in total unit cost and evidence that its target customers value traceable single-origin beans at about $30. Which pricing rationale best uses both cost and customer value?",
+      "options": [
+        "Charge $15 because price must equal cost",
+        "Charge $30 only because a competitor does",
+        "Use $15 as an economic floor, then evaluate a $30 value-based price against willingness-to-pay evidence and brand positioning",
+        "Ignore cost because premium brands cannot lose money"
+      ],
+      "answer": "Use $15 as an economic floor, then evaluate a $30 value-based price against willingness-to-pay evidence and brand positioning",
+      "explanation": "Cost evidence tests viability, while value evidence supports what the target customer may be willing to pay. A justified premium price considers both rather than applying an automatic markup.",
       "points": 2
     },
     {
@@ -621,11 +636,16 @@
     {
       "examType": "final",
       "order": 19,
-      "type": "short",
-      "question": "A local gym chain is launching a new premium yoga class. Describe how you would apply the STP framework (Segmentation, Targeting, Positioning) to market this class. Include one specific example for each step.",
-      "options": null,
-      "answer": "Segmentation: divide the market by demographics and lifestyle — e.g., working professionals aged 25–45 with disposable income, beginners vs. experienced practitioners. Targeting: select experienced practitioners aged 28–40 who value stress relief and premium experiences. Positioning: position the class as 'the city's most restorative yoga experience' — premium instructors, small class sizes, high-end studio environment — differentiating from budget gyms.",
-      "explanation": "STP moves from 'who is in the market' → 'who we serve' → 'how we want to be perceived' by that chosen audience.",
+      "type": "mc",
+      "question": "Which plan correctly applies segmentation, targeting, and positioning for a premium yoga class?",
+      "options": [
+        "Segment by lifestyle and experience; target working professionals seeking stress relief; position the class as a small-group premium restorative experience",
+        "Choose a slogan; lower every price; then copy competitors",
+        "Target everyone; avoid segments; use no distinct benefit",
+        "Position first without a target; then remove all customer research"
+      ],
+      "answer": "Segment by lifestyle and experience; target working professionals seeking stress relief; position the class as a small-group premium restorative experience",
+      "explanation": "The plan first identifies meaningful groups, selects a specific audience, and then defines a distinctive benefit for that audience, matching the STP sequence.",
       "points": 2
     },
     {
@@ -956,12 +976,16 @@
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Short response: Complete this statement: A new tech company sets a very low launch price to quickly gain market share and discourage competitors. this is called...",
-      "options": null,
+      "question": "A new company sets a deliberately low introductory price to gain market share quickly. Which strategy is this?",
+      "options": [
+        "Price skimming",
+        "Penetration pricing",
+        "Bundle pricing",
+        "Prestige pricing"
+      ],
       "answer": "Penetration pricing",
-      "explanation": "A correct response identifies \"Penetration pricing\" and connects it to the module context.",
-      "points": 1,
-      "type": "fill"
+      "explanation": "Penetration pricing uses a low launch price to accelerate adoption and market-share growth; the firm must still assess whether the economics and later price path are sustainable.",
+      "points": 1
     },
     {
       "moduleOrder": 7,
