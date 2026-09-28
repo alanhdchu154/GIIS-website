@@ -5,7 +5,7 @@
   "credits": 0.5,
   "department": "Electives",
   "type": "Elective",
-  "description": "A systematic study of marketing principles — strategic marketing planning, consumer insights, brand management, integrated marketing communications, pricing strategy, and global marketing.",
+  "description": "A systematic study of marketing principles — strategic planning, consumer insights, segmentation and positioning, brand and product management, pricing, channels, and integrated marketing communications.",
   "isPublished": false,
   "modules": [
     {
@@ -13,31 +13,31 @@
       "title": "Marketing Strategy & Planning",
       "titleZh": "市场营销战略与规划",
       "objectives": "Define marketing strategy; articulate a company mission; conduct a SWOT analysis; establish SMART marketing objectives and KPIs; map the strategic planning process. Students will evaluate realistic scenarios, apply concepts to decisions, and justify recommendations with evidence in the module assignment.",
-      "readingUrl": "https://academy.hubspot.com/courses/marketing-hub-overview",
-      "readingNote": "HubSpot Academy — Marketing Hub Overview (strategy fundamentals)",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/2-2-the-role-of-marketing-in-the-strategic-planning-process",
+      "readingNote": "OpenStax Principles of Marketing — strategic planning and the marketing plan",
+      "videoUrl": "https://digitalmarketinginstitute.com/resources/lessons/developing-a-digital-strategy-with-strategic-thinking_crafting-strategy-objectives_Ho1Y",
+      "videoNote": "Module-specific visual lesson or worked example; use it to check terminology and decision logic against the OpenStax reading.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://academy.hubspot.com/courses/marketing-strategy",
-      "practiceNote": "HubSpot Academy — Marketing Strategy Course",
-      "assignment": "Draft a one-page marketing plan for a hypothetical product: write a mission statement, complete a SWOT table, set three SMART marketing objectives, and identify two KPIs for each objective. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Marketing Strategy & Planning module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/2-3-purpose-and-structure-of-the-marketing-plan",
+      "practiceNote": "OpenStax worked lesson — apply the section framework to the supplied module scenario before completing the assignment.",
+      "assignment": "Create a one-page marketing plan for “StudySip,” a reusable bottle with a removable study-timer cap, priced at $24. Use this supplied context: a small team, a $12,000 launch budget, direct-to-consumer website, strong prototype reviews, no retail distribution, growing campus sustainability clubs, two established bottle brands, and copycat risk. Write a mission, classify each supplied fact in a SWOT, set three SMART objectives for the first 90 days, and assign two calculable KPIs to each objective. Submit: one PDF or document with clearly labeled sections and source links where used. Include: the supplied scenario, a correctly classified SWOT, three time-bound measurable objectives, six KPI formulas or definitions, and a short strategy rationale. Evaluation: 100% total — Marketing Strategy and Planning concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3
     },
     {
       "order": 2,
       "title": "Consumer Insights & Research",
       "titleZh": "消费者洞察与市场调研",
-      "objectives": "Distinguish qualitative and quantitative research methods; design a basic consumer survey; conduct and analyze a focus group scenario; interpret market research data to generate actionable insights.",
-      "readingUrl": "https://academy.hubspot.com/courses/understanding-buyer-personas",
-      "readingNote": "HubSpot Academy — Understanding Buyer Personas",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "video2Url": "https://www.youtube.com/watch?v=zFMgpxG-chM",
-      "video2Note": "Crash Course Business: Marketing #2 — Market Research",
-      "practiceUrl": "https://academy.hubspot.com/courses/inbound-marketing",
-      "practiceNote": "HubSpot Academy — Inbound Marketing (consumer journey section)",
-      "assignment": "Design a 10-question consumer survey for a product of your choice. Write three open-ended questions suitable for a focus group and explain what insight each question is intended to reveal. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Consumer Insights & Research module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "objectives": "Distinguish qualitative and quantitative research methods; design a basic consumer survey; analyze supplied survey and interview evidence; identify sampling limitations; interpret market research data to generate actionable insights.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/6-1-marketing-research-and-big-data",
+      "readingNote": "OpenStax Principles of Marketing — research methods and research-plan steps",
+      "videoUrl": "https://openstax.org/books/principles-marketing/pages/6-3-steps-in-a-successful-marketing-research-plan",
+      "videoNote": "Module-specific visual lesson or worked example; use it to check terminology and decision logic against the OpenStax reading.",
+      "video2Url": "",
+      "video2Note": "",
+      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/6-3-steps-in-a-successful-marketing-research-plan",
+      "practiceNote": "OpenStax worked lesson — apply the section framework to the supplied module scenario before completing the assignment.",
+      "assignment": "Use this fictional StudySip research packet: survey n=120 (72% want leak resistance, 55% want timer reminders, 40% would pay $20–$29, 18% would pay $30+); interview excerpts: “I forget to drink while studying,” “another app notification would annoy me,” “I need it to fit a backpack,” “I would pay more if parts were replaceable.” Identify two quantitative and two qualitative findings, note one sampling limitation, write three neutral survey questions, and recommend one product and one messaging decision. Submit: one PDF or document with clearly labeled sections and source links where used. Include: a table separating quantitative from qualitative evidence, three neutral non-double-barreled questions, the sampling limitation, and two decisions explicitly tied to quoted or numeric evidence. Evaluation: 100% total — Consumer Research concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3
     },
     {
@@ -45,15 +45,15 @@
       "title": "Segmentation, Targeting & Positioning (STP)",
       "titleZh": "市场细分、目标选择与定位（STP）",
       "objectives": "Apply demographic, psychographic, behavioral, and geographic segmentation; evaluate targeting strategies; construct detailed buyer personas; draw and interpret perceptual maps; recommend repositioning strategies.",
-      "readingUrl": "https://academy.hubspot.com/courses/understanding-buyer-personas",
-      "readingNote": "HubSpot Academy — Buyer Personas & Segmentation",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
+      "readingNote": "OpenStax Principles of Marketing — segmentation, target-market selection, and positioning",
+      "videoUrl": "https://www.jove.com/science-education/v/15933/segmentation-targeting-positioning",
+      "videoNote": "Module-specific visual lesson or worked example; use it to check terminology and decision logic against the OpenStax reading.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://academy.hubspot.com/courses/marketing-strategy",
-      "practiceNote": "HubSpot Academy — STP Framework Activities",
-      "assignment": "Choose a brand and identify three distinct market segments it could target. Create a detailed buyer persona for each segment and draw a perceptual map placing the brand against four competitors on two attributes you select. Submit your work as a labeled business artifact that includes: (1) at least three specific examples, data points, or scenario details, (2) a table, memo, or decision matrix where appropriate, (3) a short justification for your recommendation, and (4) a 100-word reflection connecting the concept to a real company, market, workplace, or consumer decision. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Segmentation, Targeting & Positioning (STP) module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning",
+      "practiceNote": "OpenStax worked lesson — apply the section framework to the supplied module scenario before completing the assignment.",
+      "assignment": "StudySip is choosing among three segments: A campus commuters (8,000 people; high need for leak resistance; medium willingness to pay; high campus reach; medium competition), B fitness-club members (3,000; medium product fit; high willingness to pay; medium reach; high competition), C online graduate students (12,000; high need for reminder function; medium willingness to pay; low local reach; low competition). Use a 1–5 scoring scale, state how you convert each supplied label to a score, and label any remaining assumption rather than inventing data. Select one primary target using size, fit, reach, and competition. Build a persona. Then plot these supplied brands on a 1–5 map with axes “study support” and “price”: BasicBottle (1,2), EcoFlask (2,4), SmartHydrate (4,5), StudySip proposed (5,3). Write and justify a positioning statement. Submit: one PDF or document with clearly labeled sections and source links where used. Include: a scored target-selection table, persona tied to the selected segment, labeled perceptual map using all coordinates, positioning statement, and evidence-based justification. Evaluation: 100% total — Segmentation, Targeting, and Positioning concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3.5
     },
     {
@@ -61,15 +61,15 @@
       "title": "Brand Management",
       "titleZh": "品牌管理",
       "objectives": "Define brand equity and its components; analyze brand architecture models; evaluate the risks and benefits of brand extensions; develop strategies for managing a brand across its lifecycle.",
-      "readingUrl": "https://academy.hubspot.com/courses/brand-storytelling",
-      "readingNote": "HubSpot Academy — Brand Storytelling",
-      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
-      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: Brand Management.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/9-5-branding-and-brand-development",
+      "readingNote": "OpenStax Principles of Marketing — brand development, extensions, loyalty, and metrics",
+      "videoUrl": "https://www.youtube.com/watch?v=8W5ycYuhrK8",
+      "videoNote": "Module-specific visual lesson or worked example; use it to check terminology and decision logic against the OpenStax reading.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://academy.hubspot.com/courses/marketing-strategy",
-      "practiceNote": "HubSpot Academy — Brand Strategy Module",
-      "assignment": "Select a global brand and assess its brand equity using Keller's Customer-Based Brand Equity (CBBE) model. Propose one brand extension and justify it with market reasoning. Identify one past brand extension that failed and explain why. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Brand Management module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/9-6-forms-of-brand-development-brand-loyalty-and-brand-metrics",
+      "practiceNote": "OpenStax worked lesson — apply the section framework to the supplied module scenario before completing the assignment.",
+      "assignment": "Analyze a fictional parent brand, “Northstar Learning,” with three offers: Northstar Academy, Northstar Tutoring, and the proposed standalone “Spark Notes Lab.” Use this supplied guide: a branded house uses one master brand across offers; an endorsed brand gives a distinct offer its own identity while visibly linking it to the parent; a house of brands operates distinct consumer brands with little visible parent identity. Compare all three architectures. Recommend one architecture, assess two brand-extension benefits and two dilution/confusion risks, and give one metric for awareness, association, perceived quality, and loyalty at launch and six months. Submit: one PDF or document with clearly labeled sections and source links where used. Include: a three-model comparison, architecture recommendation, four risks/benefits, four defined brand-equity metrics, and a six-month measurement plan. Evaluation: 100% total — Brand Management concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3.5
     },
     {
@@ -77,31 +77,31 @@
       "title": "Product Strategy",
       "titleZh": "产品战略",
       "objectives": "Outline the new product development process; classify products within a portfolio using the BCG matrix; apply innovation frameworks; manage products through life cycle stages; evaluate product-line decisions.",
-      "readingUrl": "https://academy.hubspot.com/courses/marketing-strategy",
-      "readingNote": "HubSpot Academy — Product Marketing Strategy",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/9-3-the-product-life-cycle",
+      "readingNote": "OpenStax Principles of Marketing — product life cycle and stage-specific strategy",
+      "videoUrl": "https://openstax.org/books/principles-marketing/pages/9-3-the-product-life-cycle",
+      "videoNote": "Module-specific visual lesson or worked example; use it to check terminology and decision logic against the OpenStax reading.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://academy.hubspot.com/courses/product-marketing",
-      "practiceNote": "HubSpot Academy — Product Marketing Fundamentals",
-      "assignment": "Plot four real products from a single company on a BCG matrix, justifying each placement with market share and growth data. Then outline the NPD process stages for one hypothetical new product the company could launch. Submit your work as a labeled business artifact that includes: (1) at least three specific examples, data points, or scenario details, (2) a table, memo, or decision matrix where appropriate, (3) a short justification for your recommendation, and (4) a 100-word reflection connecting the concept to a real company, market, workplace, or consumer decision. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Product Strategy module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/10-2-stages-of-the-new-product-development-process",
+      "practiceNote": "OpenStax Principles of Marketing §10.2 — learn the stages of new-product development, including test marketing immediately before commercialization; pair it with the lifecycle reading.",
+      "assignment": "Use this supplied portfolio data: Core Bottle (relative market share 1.8, market growth 4%), Timer Cap (0.7, 18%), Filter Lid (0.4, 3%), Campus Bundle (1.3, 16%). For this exercise, define high relative market share as at least 1.0 and high market growth as at least 10%; values exactly on a cutoff count as high. Plot a BCG matrix and classify each item. For the Timer Cap, identify its product-life-cycle stage from this evidence: sales grew 45% this year, three competitors entered, awareness is rising, and margins remain positive. Recommend one resource-allocation decision and one stage-appropriate marketing action. Submit: one PDF or document with clearly labeled sections and source links where used. Include: a labeled BCG matrix with the supplied numerical cutoffs stated, four classifications, lifecycle diagnosis using the evidence, and two justified decisions. Evaluation: 100% total — Product Strategy concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3
     },
     {
       "order": 6,
       "title": "Pricing Strategy (Advanced)",
       "titleZh": "高级定价策略",
-      "objectives": "Contrast cost-based, competition-based, and value-based pricing; apply dynamic pricing and price discrimination models; explain psychological pricing tactics; calculate price elasticity of demand.",
-      "readingUrl": "https://academy.hubspot.com/courses/marketing-strategy",
-      "readingNote": "HubSpot Academy — Pricing Strategy Section",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "objectives": "Contrast cost-based, competition-based, and value-based pricing; explain psychological pricing tactics cautiously; calculate contribution margin and midpoint price elasticity of demand; recommend a price for a stated objective using supplied evidence.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/12-3-the-five-step-procedure-for-establishing-pricing-policy",
+      "readingNote": "OpenStax Principles of Marketing §12.3 — pricing policy and elasticity. Correction for this course: inelastic demand means 0 < |PED| < 1; perfectly inelastic demand means PED = 0. Use the midpoint formula supplied in the assignment.",
+      "videoUrl": "https://openstax.org/books/principles-marketing/pages/12-5-pricing-strategies-and-tactics-for-existing-products",
+      "videoNote": "OpenStax visual lesson §12.5 — psychological pricing and pricing tactics for existing products; apply claims cautiously rather than assuming every buyer responds the same way.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Research the pricing strategy of one subscription-based company (e.g., Netflix, Spotify). Identify which pricing model(s) they use. Calculate a hypothetical price elasticity scenario and recommend whether they should raise or lower prices based on your calculation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Pricing Strategy (Advanced) module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/12-4-pricing-strategies-for-new-products",
+      "practiceNote": "OpenStax worked lesson — apply the section framework to the supplied module scenario before completing the assignment.",
+      "assignment": "StudySip has unit variable cost $9, allocated fixed cost $6, current price $24, and 2,000 expected units. A survey estimates quantity demanded at 2,600 units at $21 and 1,700 at $27. Calculate contribution margin per unit and total contribution at $21, $24, and $27 using the supplied quantities (assume 2,000 units at $24). Use midpoint elasticity: [(Q2−Q1)/((Q1+Q2)/2)] ÷ [(P2−P1)/((P1+P2)/2)]. Calculate midpoint price elasticity between $21 and $27 and report its absolute value for classification while preserving the signed result. Recommend a price if the objective is total contribution, and identify one non-price concern. Submit: one PDF or document with clearly labeled sections and source links where used. Include: all formulas, substituted values, signed and absolute elasticity, a three-price contribution table, stated objective, and recommendation supported by the calculations. Evaluation: 100% total — Pricing Strategy concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3.5
     },
     {
@@ -109,15 +109,15 @@
       "title": "Distribution & Channel Strategy",
       "titleZh": "分销与渠道战略",
       "objectives": "Design a distribution channel; compare direct vs. indirect channels; evaluate omnichannel and multichannel strategies; explain logistics and supply chain roles in delivering customer value.",
-      "readingUrl": "https://academy.hubspot.com/courses/marketing-strategy",
-      "readingNote": "HubSpot Academy — Distribution & Sales Channel Strategy",
-      "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/17-1-the-use-and-value-of-marketing-channels",
+      "readingNote": "OpenStax Principles of Marketing — channel value, types, and logistics decisions",
+      "videoUrl": "https://openstax.org/books/principles-marketing/pages/17-1-the-use-and-value-of-marketing-channels",
+      "videoNote": "Module-specific visual lesson or worked example; use it to check terminology and decision logic against the OpenStax reading.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://academy.hubspot.com/courses/sales-enablement",
-      "practiceNote": "HubSpot Academy — Sales & Channel Enablement",
-      "assignment": "Map the distribution channel for two contrasting products: one luxury good and one FMCG item. Diagram each channel (manufacturer → intermediaries → consumer). Evaluate whether an omnichannel strategy would benefit each product and justify your recommendation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Distribution & Channel Strategy module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/17-2-types-of-marketing-channels",
+      "practiceNote": "OpenStax worked lesson — apply the section framework to the supplied module scenario before completing the assignment.",
+      "assignment": "Compare three StudySip channel plans using this supplied data: direct website—$8 contribution/unit, 2-day shipping to 70% of buyers, full customer data; campus bookstore—$4 contribution/unit, same-day access at 12 campuses, no individual customer data; marketplace—$5 contribution/unit, broad reach, 3–5 day shipping, partial data. Recommend a single, multichannel, or omnichannel design for the first semester. Map product, information, payment, and return flows and propose one inventory and one returns rule. Submit: one PDF or document with clearly labeled sections and source links where used. Include: a channel comparison table, accurate multichannel/omnichannel distinction, four labeled flows, two operating rules, and a decision tied to reach, margin, speed, and data. Evaluation: 100% total — Distribution and Channels concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3
     },
     {
@@ -125,15 +125,15 @@
       "title": "Integrated Marketing Communications (IMC)",
       "titleZh": "整合营销传播（IMC）",
       "objectives": "Define IMC and explain why consistent messaging matters; coordinate advertising, PR, digital, and events into a unified campaign; create a basic IMC brief; measure communication effectiveness.",
-      "readingUrl": "https://academy.hubspot.com/courses/digital-marketing",
-      "readingNote": "HubSpot Academy — Digital Marketing Certification (IMC section)",
-      "videoUrl": "https://academy.hubspot.com/courses/marketing-strategy",
-      "videoNote": "HubSpot Academy — Marketing Strategy course videos for this topic: Integrated Marketing Communications (IMC).",
+      "readingUrl": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements",
+      "readingNote": "OpenStax Principles of Marketing — promotion mix and communication process",
+      "videoUrl": "https://openstax.org/books/principles-marketing/pages/13-1-the-promotion-mix-and-its-elements",
+      "videoNote": "Module-specific visual lesson or worked example; use it to check terminology and decision logic against the OpenStax reading.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://academy.hubspot.com/courses/marketing-strategy",
-      "practiceNote": "HubSpot Academy — Campaign Planning Module",
-      "assignment": "Develop a one-page IMC brief for a product launch. Specify the target audience, core message, and how you will coordinate at least four channels (e.g., TV ad, social media, PR event, email) to deliver a consistent message. Explain how you will measure success for each channel. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Integrated Marketing Communications (IMC) module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceUrl": "https://openstax.org/books/principles-marketing/pages/13-2-the-communication-process",
+      "practiceNote": "OpenStax worked lesson — apply the section framework to the supplied module scenario before completing the assignment.",
+      "assignment": "Plan a six-week $10,000 IMC launch for StudySip using these supplied channels: campus newsletter CPM $18, search ads CPC $1.80, creator package $2,500 with estimated 70,000 views, and club sampling $3 per unit. Use these fictional planning assumptions and treat each purchase as one new customer: newsletter—calculate impressions from CPM, use CTR 1.5%, then 3% click-to-purchase conversion; search—calculate clicks from CPC, then 4% click-to-purchase conversion (impressions and CTR are not applicable); creator—70,000 views count as impressions, link CTR is 0.8%, then 3% click-to-purchase conversion; club sampling—calculate samples from $3 per unit, then 12% sample-to-purchase conversion (impressions, clicks, and CTR are not applicable). Calculate channel CAC as allocated spend divided by that channel’s forecast new customers, and total campaign CAC as $10,000 divided by total forecast new customers. Set one awareness and one conversion objective, allocate the full budget, calculate each channel’s applicable impressions, clicks, samples, purchases, new customers, CTR, conversion rate, and CAC; mark the explicitly unavailable metrics “not applicable” using CPM = cost per 1,000 impressions and CPC = cost per click, write a consistent message adapted to each channel, and define and calculate with these supplied formulas: CTR = clicks/impressions, conversion rate = purchases/clicks, CAC = spend/new customers, plus one brand-lift measure with numeric targets. Submit: one PDF or document with clearly labeled sections and source links where used. Include: two SMART objectives, a budget totaling exactly $10,000, visible calculations using the supplied fictional forecast assumptions, channel-adapted messages with one core promise, metric formulas, targets, and an optimization rule. Evaluation: 100% total — Integrated Marketing Communications concept accuracy and correct reasoning (40%); complete evidence, data, calculations, or examples (30%); justified decisions tied to the supplied scenario (20%); clear organization and source attribution (10%).",
       "estimatedHrs": 3.5
     }
   ],
@@ -160,8 +160,8 @@
       "question": "A SMART marketing objective must be:",
       "options": [
         "Simple, Measurable, Actionable, Relevant, Timely",
-        "Specific, Measurable, Achievable, Relevant, Time-bound",
         "Strategic, Marketing-focused, Attainable, Reviewed, Tested",
+        "Specific, Measurable, Achievable, Relevant, Time-bound",
         "Scalable, Manageable, Affordable, Realistic, Tactical"
       ],
       "answer": "Specific, Measurable, Achievable, Relevant, Time-bound",
@@ -176,8 +176,8 @@
       "options": [
         "Quantitative survey",
         "Regression analysis",
-        "Qualitative research",
-        "A/B testing"
+        "A/B testing",
+        "Qualitative research"
       ],
       "answer": "Qualitative research",
       "explanation": "Qualitative research (e.g., focus groups, in-depth interviews) gathers descriptive, non-numerical data to explore motivations and opinions.",
@@ -205,8 +205,8 @@
       "question": "Psychographic segmentation divides markets based on:",
       "options": [
         "Age, gender, and income",
-        "Geographic location",
         "Lifestyle, values, and personality",
+        "Geographic location",
         "Purchase frequency and brand loyalty"
       ],
       "answer": "Lifestyle, values, and personality",
@@ -220,8 +220,8 @@
       "question": "In Principles of Marketing midterm concepts, Brand equity refers to:",
       "options": [
         "The total dollar value of a company's inventory",
-        "The additional value a brand name adds to a product beyond its functional attributes",
         "The number of SKUs in a product line",
+        "The additional value a brand name adds to a product beyond its functional attributes",
         "The cost to register a trademark"
       ],
       "answer": "The additional value a brand name adds to a product beyond its functional attributes",
@@ -244,10 +244,10 @@
       "type": "mc",
       "question": "Choose the best answer: Value-based pricing sets price based on:",
       "options": [
-        "Customers' perceived value of the product or service",
         "Total production cost plus a fixed markup",
         "Charging all customers the same price regardless of location",
-        "The additional value a brand name adds to a product beyond its functional attributes"
+        "The additional value a brand name adds to a product beyond its functional attributes",
+        "Customers' perceived value of the product or service"
       ],
       "answer": "Customers' perceived value of the product or service",
       "explanation": "The best answer is Customers' perceived value of the product or service. The choice fits the prompt because it applies the central rule or concept from Principles of Marketing midterm concepts.",
@@ -257,15 +257,15 @@
       "examType": "midterm",
       "order": 9,
       "type": "mc",
-      "question": "Price discrimination involves:",
+      "question": "Which statement best distinguishes cost-based from value-based pricing?",
       "options": [
-        "Charging all customers the same price regardless of location",
-        "Charging different prices to different customer segments for the same product",
-        "Lowering prices uniformly to increase market share",
-        "Matching the lowest competitor price"
+        "Cost-based pricing starts from costs; value-based pricing starts from customers’ perceived value",
+        "Cost-based pricing ignores costs; value-based pricing uses only competitor prices",
+        "Both methods always produce the same price",
+        "Value-based pricing is illegal for premium brands"
       ],
-      "answer": "Charging different prices to different customer segments for the same product",
-      "explanation": "Price discrimination captures more consumer surplus by charging each segment closer to its maximum willingness to pay.",
+      "answer": "Cost-based pricing starts from costs; value-based pricing starts from customers’ perceived value",
+      "explanation": "Cost-based pricing adds a markup to cost, while value-based pricing estimates what benefits are worth to the target customer and checks whether the economics are viable.",
       "points": 1
     },
     {
@@ -302,15 +302,15 @@
       "examType": "midterm",
       "order": 12,
       "type": "mc",
-      "question": "Choose the best answer: Which targeting strategy focuses on one segment with a single marketing mix?",
+      "question": "A company needs numerical estimates of purchase intent from 1,000 target customers. Which method best fits that purpose?",
       "options": [
-        "Concentrated (niche) marketing",
-        "Targets only one narrow niche segment",
-        "Targets the entire market with one offering",
-        "Cause marketing focuses on B2B transactions only"
+        "A five-person unstructured focus group",
+        "One executive interview",
+        "An analysis of two social-media comments",
+        "A structured survey using a probability sample"
       ],
-      "answer": "Concentrated (niche) marketing",
-      "explanation": "The best answer is Concentrated (niche) marketing. Students need to recognize why Concentrated (niche) marketing matches the evidence in the question and why nearby options do not.",
+      "answer": "A structured survey using a probability sample",
+      "explanation": "A structured probability-sample survey can produce numerical estimates with a defensible sampling basis.",
       "points": 1
     },
     {
@@ -327,15 +327,15 @@
       "examType": "midterm",
       "order": 14,
       "type": "mc",
-      "question": "Psychological pricing (e.g., $9.99 instead of $10.00) works primarily because:",
+      "question": "Why can a price of $9.99 sometimes be perceived as lower than $10.00?",
       "options": [
+        "Consumers may anchor on the leftmost digit, making the price feel lower",
         "It reduces company tax liability",
-        "Consumers perceive prices ending in .99 as significantly lower",
-        "It signals higher product quality",
-        "It is required by retail pricing regulations"
+        "It guarantees higher product quality",
+        "It is required by retail regulation"
       ],
-      "answer": "Consumers perceive prices ending in .99 as significantly lower",
-      "explanation": "The left-digit effect causes consumers to anchor on the first digit, making $9.99 feel much cheaper than $10 despite a $0.01 difference.",
+      "answer": "Consumers may anchor on the leftmost digit, making the price feel lower",
+      "explanation": "Left-digit effects can influence price perception in some contexts, but they do not guarantee a large response from every consumer.",
       "points": 1
     },
     {
@@ -352,15 +352,15 @@
       "examType": "final",
       "order": 1,
       "type": "mc",
-      "question": "Choose the best answer: Which step comes FIRST in the strategic marketing planning process?",
+      "question": "After a company has established its mission, which step should come before setting detailed marketing objectives?",
       "options": [
-        "Conducting a situation analysis",
         "Set marketing objectives",
+        "Conducting a situation analysis",
         "It eliminates the need for a marketing budget",
         "The total budget allocated to a marketing campaign"
       ],
       "answer": "Conducting a situation analysis",
-      "explanation": "The best answer is Conducting a situation analysis. The choice fits the prompt because it applies the central rule or concept from Principles of Marketing final concepts.",
+      "explanation": "With mission already established, a situation analysis examines internal and external conditions before the firm sets detailed marketing objectives and tactics.",
       "points": 1
     },
     {
@@ -370,8 +370,8 @@
       "question": "A KPI (Key Performance Indicator) is best described as:",
       "options": [
         "A qualitative statement of company values",
-        "A measurable metric used to evaluate progress toward a specific objective",
         "The total budget allocated to a marketing campaign",
+        "A measurable metric used to evaluate progress toward a specific objective",
         "A list of competitor weaknesses"
       ],
       "answer": "A measurable metric used to evaluate progress toward a specific objective",
@@ -385,9 +385,9 @@
       "question": "A focus group is MOST useful for:",
       "options": [
         "Measuring the statistical significance of consumer preferences",
-        "Exploring consumer attitudes and motivations in depth",
         "Calculating market size for a new product category",
-        "Projecting annual sales revenue"
+        "Projecting annual sales revenue",
+        "Exploring consumer attitudes and motivations in depth"
       ],
       "answer": "Exploring consumer attitudes and motivations in depth",
       "explanation": "Focus groups are qualitative tools — they surface rich verbal and emotional data, not statistically representative conclusions.",
@@ -399,8 +399,8 @@
       "type": "mc",
       "question": "Repositioning a brand means:",
       "options": [
-        "Changing the physical location of company headquarters",
         "Shifting how the target market perceives the brand relative to competitors",
+        "Changing the physical location of company headquarters",
         "Replacing the entire product line with new SKUs",
         "Reducing the price to capture a lower-income segment"
       ],
@@ -414,8 +414,8 @@
       "type": "mc",
       "question": "Choose the best answer: Which Keller CBBE model layer represents the functional benefits a brand delivers?",
       "options": [
-        "Brand Meaning (Performance & Imagery)",
         "Google, which uses the Google brand for all services",
+        "Brand Meaning (Performance & Imagery)",
         "The additional value a brand name adds to a product beyond its functional attributes",
         "The font and color palette used in brand identity"
       ],
@@ -445,9 +445,9 @@
       "question": "Price elasticity of demand (PED) greater than 1 (|PED| > 1) indicates:",
       "options": [
         "Demand is inelastic — price changes have little effect on quantity demanded",
-        "Demand is elastic — consumers are highly sensitive to price changes",
         "The product is a luxury good with exclusive demand",
-        "Supply increases faster than demand"
+        "Supply increases faster than demand",
+        "Demand is elastic — consumers are highly sensitive to price changes"
       ],
       "answer": "Demand is elastic — consumers are highly sensitive to price changes",
       "explanation": "When |PED| > 1, a 1% price increase causes more than a 1% drop in quantity demanded — consumers are price-sensitive.",
@@ -459,8 +459,8 @@
       "type": "mc",
       "question": "An indirect distribution channel includes:",
       "options": [
-        "A manufacturer selling directly to consumers via its own website",
         "A producer using wholesalers and retailers to reach end consumers",
+        "A manufacturer selling directly to consumers via its own website",
         "A company delivering products through its own fleet",
         "A subscription box shipped factory-direct"
       ],
@@ -474,8 +474,8 @@
       "type": "mc",
       "question": "Choose the best answer: The primary goal of Integrated Marketing Communications (IMC) is to:",
       "options": [
-        "Coordinate messages across channels so the brand communicates consistently",
         "Maximize spending across all media channels equally",
+        "Coordinate messages across channels so the brand communicates consistently",
         "It eliminates the need for a marketing budget",
         "The font and color palette used in brand identity"
       ],
@@ -490,8 +490,8 @@
       "question": "In advertising, 'reach' refers to:",
       "options": [
         "The number of times an average person sees an ad",
-        "The total number of unique individuals exposed to an ad",
         "The geographic territory covered by a campaign",
+        "The total number of unique individuals exposed to an ad",
         "The creative length of a video advertisement"
       ],
       "answer": "The total number of unique individuals exposed to an ad",
@@ -504,10 +504,10 @@
       "type": "mc",
       "question": "A/B testing in digital marketing involves:",
       "options": [
-        "Comparing two versions of a campaign element to determine which performs better",
         "Testing a product in two countries before global launch",
         "Running ads on two platforms simultaneously with the same creative",
-        "Comparing two fiscal quarters of marketing spend"
+        "Comparing two fiscal quarters of marketing spend",
+        "Comparing two versions of a campaign element to determine which performs better"
       ],
       "answer": "Comparing two versions of a campaign element to determine which performs better",
       "explanation": "A/B testing isolates one variable (e.g., email subject line, ad image) and measures which version drives better results.",
@@ -517,60 +517,60 @@
       "examType": "final",
       "order": 12,
       "type": "mc",
-      "question": "Customer Lifetime Value (CLV) is calculated as:",
+      "question": "Which expression gives contribution margin per unit?",
       "options": [
-        "Total revenue in the first year of a customer relationship",
-        "Average purchase value × purchase frequency × average customer lifespan × profit margin",
-        "Number of customers × average order value",
-        "Annual revenue divided by total customer count"
+        "Price − variable cost",
+        "Price − fixed cost",
+        "Revenue ÷ impressions",
+        "Fixed cost ÷ units"
       ],
-      "answer": "Average purchase value × purchase frequency × average customer lifespan × profit margin",
-      "explanation": "CLV estimates the net profit attributed to the entire future relationship with a customer, guiding acquisition cost decisions.",
+      "answer": "Price − variable cost",
+      "explanation": "Contribution margin per unit is selling price minus variable cost. This choice uses the module definition and connects the decision to measurable evidence rather than an unsupported preference.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 13,
       "type": "mc",
-      "question": "Choose the best answer: The standardization strategy in global marketing means:",
+      "question": "A retailer sells through its website and campus stores but inventory and returns are managed separately. This is best described as:",
       "options": [
-        "Using the same product, branding, and marketing mix worldwide",
-        "Charging different prices to different customer segments for the same product",
-        "The number of SKUs in a product line",
-        "It eliminates the need for a marketing budget"
+        "Single-channel",
+        "Multichannel",
+        "Omnichannel",
+        "Direct-only"
       ],
-      "answer": "Using the same product, branding, and marketing mix worldwide",
-      "explanation": "The best answer is Using the same product, branding, and marketing mix worldwide.",
+      "answer": "Multichannel",
+      "explanation": "The firm uses multiple channels, but the experience is not integrated enough to be omnichannel.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 14,
       "type": "mc",
-      "question": "Greenwashing occurs when a company:",
+      "question": "Which metric measures clicks as a percentage of ad impressions?",
       "options": [
-        "Accurately communicates verified environmental benefits of its products",
-        "Misleads consumers by making false or exaggerated environmental claims",
-        "Donates a portion of profits to environmental charities",
-        "Reduces carbon emissions in its supply chain"
+        "Reach",
+        "Customer lifetime value",
+        "Click-through rate",
+        "Market share"
       ],
-      "answer": "Misleads consumers by making false or exaggerated environmental claims",
-      "explanation": "Greenwashing damages consumer trust and violates ethical marketing principles by overstating environmental credentials.",
+      "answer": "Click-through rate",
+      "explanation": "CTR = clicks divided by impressions, usually expressed as a percentage. The denominator is impressions, not unique viewers, because one person may receive multiple impressions.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 15,
       "type": "mc",
-      "question": "Cause marketing differs from corporate philanthropy because:",
+      "question": "A positioning statement should primarily explain:",
       "options": [
-        "Cause marketing only benefits non-profit organizations",
-        "Cause marketing links a company's commercial activity directly to a social cause for mutual benefit",
-        "Corporate philanthropy is illegal in some markets",
-        "Cause marketing focuses on B2B transactions only"
+        "Only the production cost",
+        "Every feature a product has",
+        "The legal structure of the company",
+        "The target customer, frame of reference, distinctive benefit, and reason to believe"
       ],
-      "answer": "Cause marketing links a company's commercial activity directly to a social cause for mutual benefit",
-      "explanation": "In cause marketing both the brand and the cause gain — e.g., 'we donate $1 for every product sold' — unlike pure philanthropy with no commercial link.",
+      "answer": "The target customer, frame of reference, distinctive benefit, and reason to believe",
+      "explanation": "A useful positioning statement identifies whom the offer serves and why it is meaningfully different.",
       "points": 1
     },
     {
@@ -579,9 +579,9 @@
       "type": "mc",
       "question": "In the new product development process, which stage immediately precedes commercialization?",
       "options": [
+        "Test marketing",
         "Idea generation",
         "Concept testing",
-        "Test marketing",
         "Business analysis"
       ],
       "answer": "Test marketing",
@@ -592,30 +592,30 @@
       "examType": "final",
       "order": 17,
       "type": "mc",
-      "question": "Choose the best answer: Dynamic pricing adjusts prices based on:",
+      "question": "A product price is $40 and variable cost is $16. What is its contribution margin per unit?",
       "options": [
-        "Current demand, supply, competition, timing, and customer data",
-        "The cost of raw materials at the time of production",
-        "Dynamic pricing",
-        "Supply increases faster than demand"
+        "$16",
+        "$24",
+        "$40",
+        "$56"
       ],
-      "answer": "Current demand, supply, competition, timing, and customer data",
-      "explanation": "The best answer is Current demand, supply, competition, timing, and customer data.",
+      "answer": "$24",
+      "explanation": "Contribution margin per unit = price − variable cost = $40 − $16 = $24. This calculation uses the course definition and separates per-unit contribution from total revenue, fixed cost, or selling price.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 18,
       "type": "mc",
-      "question": "A joint venture as a global market entry mode means:",
+      "question": "When comparing two channel options, which set of evidence is most relevant?",
       "options": [
-        "A company acquires 100% ownership of a foreign firm",
-        "A domestic company licenses its brand to a foreign partner",
-        "Two companies share ownership and control of a new entity in the foreign market",
-        "A company sells its products through a foreign agent without equity investment"
+        "Logo color only",
+        "The CEO’s favorite store",
+        "Reach, margin, delivery speed, control, and customer data",
+        "The number of product features"
       ],
-      "answer": "Two companies share ownership and control of a new entity in the foreign market",
-      "explanation": "A joint venture combines resources and local knowledge while sharing risk — a common entry mode in markets with regulatory barriers.",
+      "answer": "Reach, margin, delivery speed, control, and customer data",
+      "explanation": "Channel design requires economic and customer-experience evidence. This choice uses the module definition and connects the decision to measurable evidence rather than an unsupported preference.",
       "points": 1
     },
     {
@@ -631,12 +631,17 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "short",
-      "question": "A tech startup is accused of greenwashing after claiming its packaging is '100% eco-friendly.' What questions would you ask to investigate this claim, and what would an ethical, credible alternative campaign look like?",
-      "options": null,
-      "answer": "Investigation questions: Is the claim verified by a third-party certification (e.g., FSC, B Corp)? What percentage of the packaging is actually recyclable or compostable? Are supply chain emissions considered? What is the lifecycle impact vs. conventional packaging? Ethical alternative: obtain third-party certification, share specific data (e.g., '80% recycled content, certified by XYZ'), acknowledge limitations honestly, and invite consumers to participate in take-back programs — building credibility through transparency rather than vague claims.",
-      "explanation": "Ethical marketing requires truthfulness and substantiation; vague 'green' language without evidence is a hallmark of greenwashing.",
-      "points": 2
+      "type": "mc",
+      "question": "A campaign spends $6,000 and acquires 300 new customers. What is customer acquisition cost?",
+      "options": [
+        "$5",
+        "$300",
+        "$1,800",
+        "$20"
+      ],
+      "answer": "$20",
+      "explanation": "CAC = campaign cost/new customers = $6,000/300 = $20. This choice uses the module definition and connects the decision to measurable evidence rather than an unsupported preference.",
+      "points": 1
     }
   ],
   "quizQuestions": [
@@ -645,8 +650,8 @@
       "order": 1,
       "question": "Which of the following is an example of an external opportunity in a SWOT analysis?",
       "options": [
-        "A skilled internal marketing team",
         "A competitor exiting the market",
+        "A skilled internal marketing team",
         "High employee turnover",
         "An outdated company website"
       ],
@@ -671,15 +676,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "Choose the best answer: Which of the following is an example of an external opportunity in a SWOT analysis?",
+      "question": "Which objective is SMART for StudySip’s first 90 days?",
       "options": [
-        "A skilled internal marketing team",
-        "A competitor exiting the market",
-        "High employee turnover",
-        "An outdated company website"
+        "Increase awareness",
+        "Become the best bottle brand",
+        "Raise aided awareness among surveyed campus commuters from 10% to 25% by day 90",
+        "Post more often on social media"
       ],
-      "answer": "A competitor exiting the market",
-      "explanation": "Opportunities are external factors the company can exploit - a competitor leaving the market opens up market share.",
+      "answer": "Raise aided awareness among surveyed campus commuters from 10% to 25% by day 90",
+      "explanation": "It is specific, measurable, relevant, and time-bound. This choice uses the module definition and connects the decision to measurable evidence rather than an unsupported preference.",
       "points": 1
     },
     {
@@ -689,8 +694,8 @@
       "options": [
         "In-depth interviews",
         "Ethnographic observation",
-        "Online survey with Likert-scale questions",
-        "Focus group discussion"
+        "Focus group discussion",
+        "Online survey with Likert-scale questions"
       ],
       "answer": "Online survey with Likert-scale questions",
       "explanation": "Quantitative research collects numerical data that can be statistically analyzed — surveys with rating scales are a primary example.",
@@ -701,8 +706,8 @@
       "order": 2,
       "question": "A focus group typically consists of:",
       "options": [
-        "100–200 randomly selected consumers completing a written survey",
         "6–10 participants discussing a topic guided by a moderator",
+        "100–200 randomly selected consumers completing a written survey",
         "One researcher conducting deep one-on-one interviews",
         "A team of executives brainstorming product ideas"
       ],
@@ -727,15 +732,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "Choose the best answer: Which of the following is a quantitative research method?",
+      "question": "A survey link is posted only to a brand’s most active fan group. What is the main research risk?",
       "options": [
-        "In-depth interviews",
-        "Ethnographic observation",
-        "Online survey with Likert-scale questions",
-        "Focus group discussion"
+        "Random assignment",
+        "Selection bias from an unrepresentative convenience sample",
+        "Perfect external validity",
+        "Experimental control"
       ],
-      "answer": "Online survey with Likert-scale questions",
-      "explanation": "Quantitative research collects numerical data that can be statistically analyzed - surveys with rating scales are a primary example.",
+      "answer": "Selection bias from an unrepresentative convenience sample",
+      "explanation": "Highly engaged fans may differ systematically from the target market, so their responses may not represent all potential customers. This affects how far the survey result can be generalized.",
       "points": 1
     },
     {
@@ -745,8 +750,8 @@
       "options": [
         "Consumers' physical location",
         "Consumers' age and gender",
-        "Usage rate, loyalty, and purchase occasion",
-        "Consumers' values and lifestyle preferences"
+        "Consumers' values and lifestyle preferences",
+        "Usage rate, loyalty, and purchase occasion"
       ],
       "answer": "Usage rate, loyalty, and purchase occasion",
       "explanation": "Behavioral segmentation groups consumers by how they interact with a product — heavy/light users, brand loyalists, occasion-based buyers.",
@@ -757,8 +762,8 @@
       "order": 2,
       "question": "In Segmentation, Targeting & Positioning (STP), A buyer persona is:",
       "options": [
-        "A legal document representing a consumer complaint",
         "A semi-fictional profile representing a typical target customer",
+        "A legal document representing a consumer complaint",
         "A database of all current customers' contact information",
         "A demographic breakdown of an entire country"
       ],
@@ -786,8 +791,8 @@
       "question": "Brand architecture refers to:",
       "options": [
         "The physical design of a company's office buildings",
-        "The structure that organizes a company's portfolio of brands and products",
         "The font and color palette used in brand identity",
+        "The structure that organizes a company's portfolio of brands and products",
         "The number of employees in the marketing department"
       ],
       "answer": "The structure that organizes a company's portfolio of brands and products",
@@ -801,8 +806,8 @@
       "options": [
         "The new product category is closely related to the parent brand's core",
         "The extension leverages existing brand equity with the same consumers",
-        "The new category is far removed from the parent brand's identity and competency",
-        "The parent brand has strong awareness and loyalty"
+        "The parent brand has strong awareness and loyalty",
+        "The new category is far removed from the parent brand's identity and competency"
       ],
       "answer": "The new category is far removed from the parent brand's identity and competency",
       "explanation": "Distant extensions can dilute brand equity and confuse consumers — e.g., a luxury fashion brand launching fast food.",
@@ -813,8 +818,8 @@
       "order": 3,
       "question": "Brand equity can be built through:",
       "options": [
-        "Frequent price discounting to attract new customers",
         "Consistent messaging, quality, and positive consumer experiences over time",
+        "Frequent price discounting to attract new customers",
         "Changing the brand name and logo every year to stay fresh",
         "Copying competitor brand strategies"
       ],
@@ -828,8 +833,8 @@
       "question": "Which of the following is an example of a 'house of brands' architecture?",
       "options": [
         "Apple, which brands all products under the Apple name",
-        "Google, which uses the Google brand for all services",
         "Procter & Gamble, which markets Tide, Pampers, and Gillette as separate brands",
+        "Google, which uses the Google brand for all services",
         "Virgin, which names all ventures with the Virgin prefix"
       ],
       "answer": "Procter & Gamble, which markets Tide, Pampers, and Gillette as separate brands",
@@ -856,9 +861,9 @@
       "question": "The product life cycle stage with the fastest sales growth and increasing competition is:",
       "options": [
         "Introduction",
-        "Growth",
         "Maturity",
-        "Decline"
+        "Decline",
+        "Growth"
       ],
       "answer": "Growth",
       "explanation": "In the growth stage, early adopters spread the word, sales accelerate, and competitors enter — requiring investment in differentiation.",
@@ -867,29 +872,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "Choose the best answer: In the BCG matrix, a 'Star' product is characterized by:",
+      "question": "A product with low relative market share in a high-growth market is classified in the BCG matrix as a:",
       "options": [
-        "Low market share and high market growth",
-        "High market share and low market growth",
-        "High market share and high market growth",
-        "Low market share and low market growth"
+        "Question mark",
+        "Star",
+        "Cash cow",
+        "Dog"
       ],
-      "answer": "High market share and high market growth",
-      "explanation": "Stars lead in fast-growing markets - they require investment to sustain growth but have the potential to become Cash Cows.",
+      "answer": "Question mark",
+      "explanation": "Question marks operate in high-growth markets but have low relative share. This choice uses the module definition and connects the decision to measurable evidence rather than an unsupported preference.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Choose the best answer: The product life cycle stage with the fastest sales growth and increasing competition is:",
+      "question": "During the growth stage of the product life cycle, a common strategic priority is to:",
       "options": [
-        "Introduction",
-        "Growth",
-        "Maturity",
-        "Decline"
+        "Eliminate all promotion",
+        "Build preference and expand distribution as competitors enter",
+        "Harvest immediately regardless of demand",
+        "Stop improving the product"
       ],
-      "answer": "Growth",
-      "explanation": "In the growth stage, early adopters spread the word, sales accelerate, and competitors enter - requiring investment in differentiation.",
+      "answer": "Build preference and expand distribution as competitors enter",
+      "explanation": "Growth brings rising sales and competition, making differentiation and availability important.",
       "points": 1
     },
     {
@@ -898,8 +903,8 @@
       "question": "Cost-plus pricing sets the selling price by:",
       "options": [
         "Surveying what customers are willing to pay",
-        "Adding a fixed markup percentage to the cost of production",
         "Matching the leading competitor's price",
+        "Adding a fixed markup percentage to the cost of production",
         "Using demand forecasts to maximize revenue"
       ],
       "answer": "Adding a fixed markup percentage to the cost of production",
@@ -911,10 +916,10 @@
       "order": 2,
       "question": "Price elasticity of demand (PED) = −2 means:",
       "options": [
-        "A 1% price increase leads to a 2% decrease in quantity demanded",
         "A 1% price increase leads to a 0.5% decrease in quantity demanded",
         "Price has no effect on demand",
-        "Demand increases as price increases"
+        "Demand increases as price increases",
+        "A 1% price increase leads to a 2% decrease in quantity demanded"
       ],
       "answer": "A 1% price increase leads to a 2% decrease in quantity demanded",
       "explanation": "PED = % change in quantity demanded ÷ % change in price. PED = −2 means demand is elastic — very sensitive to price.",
@@ -923,29 +928,29 @@
     {
       "moduleOrder": 6,
       "order": 3,
-      "question": "A strategy where airlines charge more for last-minute bookings than for early purchases is an example of:",
+      "question": "A product sells for $25 and has a variable cost of $10 per unit. What is its contribution margin per unit?",
       "options": [
-        "Cost-plus pricing",
-        "Penetration pricing",
-        "Dynamic pricing",
-        "Bundle pricing"
+        "$10",
+        "$15",
+        "$25",
+        "$35"
       ],
-      "answer": "Dynamic pricing",
-      "explanation": "Dynamic pricing adjusts prices in real time based on demand signals — airlines, hotels, and ride-shares use this routinely.",
+      "answer": "$15",
+      "explanation": "Contribution margin per unit equals price minus variable cost: $25 − $10 = $15. It is the amount available to cover fixed costs and profit.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Choose the best answer: Cost-plus pricing sets the selling price by:",
+      "question": "Using the midpoint method, demand is called elastic when the absolute value of price elasticity is:",
       "options": [
-        "Surveying what customers are willing to pay",
-        "Adding a fixed markup percentage to the cost of production",
-        "Matching the leading competitor's price",
-        "Using demand forecasts to maximize revenue"
+        "less than 0",
+        "greater than 1",
+        "less than 1",
+        "equal to 0"
       ],
-      "answer": "Adding a fixed markup percentage to the cost of production",
-      "explanation": "Cost-plus pricing: Price = Cost + (Cost × Markup%). Simple to apply but ignores market demand and perceived value.",
+      "answer": "greater than 1",
+      "explanation": "Demand is elastic when the percentage quantity response exceeds the percentage price change, so |PED| > 1.",
       "points": 1
     },
     {
@@ -978,26 +983,26 @@
       "question": "Disintermediation in a distribution channel means:",
       "options": [
         "Adding more intermediaries to increase market coverage",
-        "Removing intermediaries so producers sell directly to consumers",
         "Switching from online to physical retail",
-        "Outsourcing logistics to a third-party provider"
+        "Outsourcing logistics to a third-party provider",
+        "Removing intermediaries so producers sell directly to consumers"
       ],
       "answer": "Removing intermediaries so producers sell directly to consumers",
-      "explanation": "Disintermediation (e.g., brand selling via its own website) reduces costs and increases margin but requires new capabilities.",
+      "explanation": "Disintermediation can reduce intermediary fees and may increase producer margin, but only if the producer can replace fulfillment, acquisition, inventory, and service functions at an acceptable total cost.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "Choose the best answer: Which distribution intensity strategy uses ONLY ONE retailer per geographic area?",
+      "question": "Which statement best distinguishes omnichannel from multichannel distribution?",
       "options": [
-        "Intensive distribution",
-        "Selective distribution",
-        "Exclusive distribution",
-        "Direct distribution"
+        "Omnichannel coordinates channels into a connected customer experience",
+        "Omnichannel uses only stores",
+        "Multichannel always shares inventory data",
+        "They mean exactly the same thing"
       ],
-      "answer": "Exclusive distribution",
-      "explanation": "Exclusive distribution gives a single retailer or dealer exclusive rights in a territory - common for luxury and specialty brands.",
+      "answer": "Omnichannel coordinates channels into a connected customer experience",
+      "explanation": "Multichannel uses more than one channel; omnichannel integrates them across the customer journey.",
       "points": 1
     },
     {
@@ -1020,8 +1025,8 @@
       "question": "Message consistency across all IMC channels is critical because:",
       "options": [
         "It reduces the number of employees needed in marketing",
-        "Inconsistent messages confuse consumers and erode brand trust",
         "Regulations require identical messages on all platforms",
+        "Inconsistent messages confuse consumers and erode brand trust",
         "It eliminates the need for a marketing budget"
       ],
       "answer": "Inconsistent messages confuse consumers and erode brand trust",
@@ -1034,9 +1039,9 @@
       "question": "Public Relations (PR) in an IMC campaign is most valuable for:",
       "options": [
         "Directly selling products through a sales force",
-        "Building credibility and managing brand reputation through earned media",
         "Running paid display ads on social media platforms",
-        "Setting the product's retail price"
+        "Setting the product's retail price",
+        "Building credibility and managing brand reputation through earned media"
       ],
       "answer": "Building credibility and managing brand reputation through earned media",
       "explanation": "PR earns media coverage through newsworthy stories — third-party editorial endorsement carries more credibility than paid advertising.",
@@ -1045,15 +1050,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "Choose the best answer: The 'promotional mix' in IMC typically includes which of the following elements?",
+      "question": "A campaign receives 2,000 clicks and 80 purchases. What is the click-to-purchase conversion rate?",
       "options": [
-        "Product, Price, Place, Promotion",
-        "Advertising, Public Relations, Personal Selling, Sales Promotion, Direct Marketing",
-        "Reach, Frequency, Impressions, Conversions",
-        "Mission, Vision, Values, Strategy"
+        "4%",
+        "0.4%",
+        "25%",
+        "40%"
       ],
-      "answer": "Advertising, Public Relations, Personal Selling, Sales Promotion, Direct Marketing",
-      "explanation": "The promotional mix (part of the 4Ps' Promotion) combines these tools to communicate the brand message to the target audience.",
+      "answer": "4%",
+      "explanation": "Conversion rate = 80/2,000 × 100% = 4%. This choice uses the module definition and connects the decision to measurable evidence rather than an unsupported preference.",
       "points": 1
     }
   ],
