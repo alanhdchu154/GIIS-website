@@ -5,7 +5,7 @@
   "credits": 1,
   "department": "Science",
   "type": "AP",
-  "description": "AP Biology exam preparation following the College Board Course and Exam Description. Students study chemistry of life, cellular processes, genetics, evolution, ecology, and scientific reasoning while preparing for the College Board AP Biology exam.",
+  "description": "Advanced secondary-school biology covering selected topics in chemistry of life, cells, genetics, biotechnology, evolution, and ecology. This course bank is incomplete against the full AP Biology framework. These materials do not establish College Board course authorization or complete AP exam preparation.",
   "isPublished": false,
   "modules": [
     {
@@ -14,14 +14,14 @@
       "titleZh": "生命的化学基础",
       "objectives": "Analyze the chemical composition of living organisms, explain how water properties support life, compare major biological macromolecules, and connect molecular structure to biological function.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/2-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapter 2: The Chemical Foundation of Life — focus on sections 2.1-2.4 covering atomic structure, chemical bonds, water properties, and carbon chemistry.",
+      "readingNote": "OpenStax Biology 2e — Sections 2.1-2.3 and Chapter 3: atoms, water, carbon, and biological macromolecules.",
       "videoUrl": "https://www.youtube.com/watch?v=H8WJ2KENlK0",
-      "videoNote": "CrashCourse Biology #1: Carbon — explains why carbon is the backbone of biological molecules and introduces organic chemistry concepts.",
+      "videoNote": "Crash Course Biology #3 — Biological Molecules: You Are What You Eat.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Create a concept map linking the four macromolecules (carbohydrates, lipids, proteins, nucleic acids) with their monomers, functions, and examples found in the human body. Submit as a digital or hand-drawn diagram. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Chemistry of Life module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Create a concept map for carbohydrates, lipids, proteins, and nucleic acids. For carbohydrate, protein, and nucleic-acid polymers, identify their monomers and bond types. For lipids, identify common components such as glycerol and fatty acids and state that most lipids are not repeating-monomer polymers. Give one human-body example and biological function for each category. Submit: paste a text description and a teacher-accessible link to the diagram. Include: molecular components, bonds, functions, examples, and labeled connections supported by the assigned reading. Evaluation: chemical accuracy 40%; structure-function reasoning 35%; complete labeled examples 25%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     },
     {
@@ -30,14 +30,14 @@
       "titleZh": "细胞结构与功能",
       "objectives": "Compare and contrast prokaryotic and eukaryotic cells. Identify and describe the function of major cell organelles including the nucleus, mitochondria, endoplasmic reticulum, Golgi apparatus, chloroplasts, and cytoskeleton.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/4-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapter 4: Cell Structure — read sections 4.1-4.4 on microscopy, prokaryotic cells, eukaryotic cells, and organelle functions.",
+      "readingNote": "OpenStax Biology 2e — Sections 4.1-4.5: cells, organelles, membranes, and cytoskeleton.",
       "videoUrl": "https://www.youtube.com/watch?v=URUJD5NEXC8",
-      "videoNote": "CrashCourse Biology #4: Eukaryopolis — an entertaining tour through eukaryotic cell organelles and their functions.",
+      "videoNote": "Nucleus Medical Media — Biology: Cell Structure.",
       "video2Url": "https://www.youtube.com/watch?v=cj8dDTHGJBY",
-      "video2Note": "Amoeba Sisters: Prokaryotic vs. Eukaryotic Cells — clear comparison of the two cell types with diagrams.",
+      "video2Note": "Crash Course Biology #4 — Eukaryopolis; use the reading for explicit prokaryote comparison.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Draw and label a detailed diagram of an animal cell and a plant cell. For each of 8 organelles, write a 1-sentence analogy comparing the organelle to a part of a city or school. Explain why plant cells have chloroplasts and cell walls while animal cells do not. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Cell Structure and Function module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Draw and label a detailed diagram of an animal cell and a plant cell. For each of 8 organelles, write a 1-sentence analogy comparing the organelle to a part of a city or school. Explain why plant cells have chloroplasts and cell walls while animal cells do not. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; data, diagrams, observations, calculations, or scientific explanations from the Cell Structure and Function module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3
     },
     {
@@ -48,12 +48,12 @@
       "readingUrl": "https://openstax.org/books/biology-2e/pages/5-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 5: Structure and Function of Plasma Membranes — sections 5.1-5.4 covering membrane structure, passive transport, active transport, and bulk transport.",
       "videoUrl": "https://www.youtube.com/watch?v=dPKvHrD1eS4",
-      "videoNote": "CrashCourse Biology #5: In Da Club — Membranes and Transport — covers the phospholipid bilayer, membrane proteins, and all forms of membrane transport.",
+      "videoNote": "Cell Transport — membrane transport overview.",
       "video2Url": "https://www.youtube.com/watch?v=Ptmlvtei8hw",
-      "video2Note": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "video2Note": "Cell Transport — supplemental overview of diffusion, osmosis, and membrane transport; use the OpenStax reading for the formal definitions and conditions.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Design an experiment to test osmosis in potato cells. Include hypothesis, materials, procedure, expected results for hypotonic/isotonic/hypertonic solutions, and explain what would happen at the cellular level in each solution type. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Membrane Transport module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Design an experiment to test osmosis in potato cells. Include hypothesis, materials, procedure, expected results for hypotonic/isotonic/hypertonic solutions, and explain what would happen at the cellular level in each solution type. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; data, diagrams, observations, calculations, or scientific explanations from the Membrane Transport module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3
     },
     {
@@ -68,8 +68,8 @@
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Choose one real-world example of cell signaling (e.g., insulin signaling or the fight-or-flight response). Write a 300-word explanation tracing the signal from receptor binding through transduction to cellular response, using correct biological terminology. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Cell Communication module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Choose one real-world example of cell signaling (e.g., insulin signaling or the fight-or-flight response). Write a 300-word explanation tracing the signal from receptor binding through transduction to cellular response, using correct biological terminology. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; data, diagrams, observations, calculations, or scientific explanations from the Cell Communication module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3
     },
     {
@@ -78,14 +78,14 @@
       "titleZh": "细胞周期与分裂",
       "objectives": "Describe the stages of the cell cycle including interphase (G1, S, G2) and mitosis (prophase, metaphase, anaphase, telophase). Explain how checkpoints regulate the cell cycle and how dysregulation leads to cancer.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/10-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapter 10: Cell Reproduction — read sections 10.1-10.3 on the cell cycle, mitosis, and cancer as a failure of cell cycle control.",
+      "readingNote": "OpenStax Biology 2e — Sections 10.1-10.4: cell division, checkpoints, and cancer.",
       "videoUrl": "https://www.youtube.com/watch?v=f-ldPgEfAHI",
-      "videoNote": "CrashCourse Biology #10: Mitosis — explains cell division with clear animations covering all phases of mitosis and cytokinesis.",
+      "videoNote": "Amoeba Sisters — Mitosis: The Amazing Cell Process that Uses Division to Multiply!",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Using a microscope slide image set of onion root tip cells, identify and count cells in each phase of mitosis. Calculate the percentage of time spent in each phase and explain what this tells us about the relative duration of each phase. Relate abnormal cell division to cancer development. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Cell Cycle and Division module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Use simulated counts from 200 cells: interphase 160, prophase 20, metaphase 10, anaphase 4, telophase 6. Create a frequency table, calculate each percentage and the mitotic index, and explain the sampling assumptions behind estimating phase duration. Connect one checkpoint failure to cancer. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; percentages, mitotic index, assumptions, limitations, and checkpoint-cancer mechanism. Evaluation: calculations 40%; assumptions/limitations 30%; checkpoint explanation 30%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     },
     {
@@ -100,8 +100,8 @@
       "video2Url": "https://www.youtube.com/watch?v=NWqgZUnJdAY",
       "video2Note": "Bozeman Science: Mendelian Genetics — AP Biology-focused review of Punnett squares, genotype vs. phenotype, and complex inheritance patterns.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve a genetics problem set: (1) monohybrid cross with incomplete dominance, (2) dihybrid cross with independent assortment, (3) chi-square analysis to test if observed offspring ratios match expected ratios. Show all work and explain your reasoning. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Mendelian Genetics module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Solve RW x RW with RR red, RW pink, WW white; solve AaBb x AaBb with complete dominance and unlinked loci; then analyze observed dihybrid counts 90,35,30,5 out of 160 using chi-square, where chi-square=sum((observed-expected)^2/expected), df=3, alpha=.05, and the critical value is 7.815. Reject the expected model only if the calculated statistic exceeds 7.815. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; gametes, genotype/phenotype ratios, expected counts 90/30/30/10, chi-square work, decision, and interpretation. Evaluation: crosses 40%; chi-square work 40%; interpretation 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3.5
     },
     {
@@ -112,12 +112,12 @@
       "readingUrl": "https://openstax.org/books/biology-2e/pages/14-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 14: DNA Structure and Replication — read sections 14.1-14.5 covering the history of DNA discovery, double helix structure, and semi-conservative replication.",
       "videoUrl": "https://www.youtube.com/watch?v=8kK2zwjRV0M",
-      "videoNote": "CrashCourse Biology: DNA Structure and Replication — clear explanation of the Watson-Crick model and the replication process.",
+      "videoNote": "DNA replication — 3D; provider credit remains omitted until verified.",
       "video2Url": "https://www.youtube.com/watch?v=TNKWgcFPHqw",
-      "video2Note": "HHMI BioInteractive: DNA Replication animation showing the replication fork and enzyme activities in real time.",
+      "video2Note": "DNA replication — 3D: supplemental animation of the replication fork and enzyme actions; provider credit is omitted until independently verified.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Draw a detailed diagram of the replication fork showing all major enzymes (helicase, primase, DNA polymerase III, DNA polymerase I, ligase) and label: leading strand, lagging strand, Okazaki fragments, RNA primer. Write a paragraph explaining why DNA replication is semi-conservative and why this matters for genetic fidelity. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the DNA Structure and Replication module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Draw a detailed diagram of the replication fork showing all major enzymes (helicase, primase, DNA polymerase III, DNA polymerase I, ligase) and label: leading strand, lagging strand, Okazaki fragments, RNA primer. Write a paragraph explaining why DNA replication is semi-conservative and why this matters for genetic fidelity. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; data, diagrams, observations, calculations, or scientific explanations from the DNA Structure and Replication module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3
     },
     {
@@ -128,12 +128,12 @@
       "readingUrl": "https://openstax.org/books/biology-2e/pages/15-introduction",
       "readingNote": "OpenStax Biology 2e, Chapter 15: Genes and Proteins — read sections 15.1-15.5 on the genetic code, transcription, RNA processing, and translation.",
       "videoUrl": "https://www.youtube.com/watch?v=itsb2SqR-R0",
-      "videoNote": "CrashCourse Biology #11: DNA, Hot Pockets, and The Longest Word Ever — covers transcription, translation, and the genetic code.",
+      "videoNote": "Protein Synthesis; provider credit remains omitted until verified.",
       "video2Url": "https://www.youtube.com/watch?v=2zAGAmTkZNY",
-      "video2Note": "HHMI BioInteractive: From DNA to Protein — high-quality animation of transcription and translation with molecular detail.",
+      "video2Note": "Protein Synthesis: supplemental animation of transcription and translation; provider credit is omitted until independently verified.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Given the DNA template strand 3'-TACGGGCTTACCCGT-5', write the corresponding mRNA sequence, identify the codons, use a codon table to determine the amino acid sequence, and explain the effect of a point mutation at the 5th nucleotide (missense, nonsense, or silent?). Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Gene Expression: Transcription and Translation module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "For template DNA 3'-TAC GGG CTT ACC CGT-5', replace the fifth nucleotide G with A. Use AUG-Met, CCC-Pro, CUC-Leu, GAA-Glu, UGG-Trp, GCA-Ala to transcribe and translate original and mutant sequences. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; strand directions, codons, peptides, changed amino acid, and mutation classification. Evaluation: transcription 40%; translation 40%; classification/reasoning 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3.5
     },
     {
@@ -148,8 +148,8 @@
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Design a biotechnology experiment using PCR and gel electrophoresis to determine if a person carries a specific genetic variant. Write a step-by-step protocol, draw expected gel results for homozygous dominant, heterozygous, and homozygous recessive individuals, and discuss the ethical implications of genetic testing. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Biotechnology module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Design a paper PCR/gel assay for a fictional insertion polymorphism: allele A yields 300 bp and allele B 500 bp; primers flank the insertion. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; AA, AB, BB lanes, ladder, no-template control, migration direction, predicted bands, and consent/privacy discussion. Evaluation: assay logic 30%; predicted bands 30%; controls 20%; ethics 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     },
     {
@@ -158,14 +158,14 @@
       "titleZh": "自然选择与进化",
       "objectives": "Explain Darwin's theory of evolution by natural selection including variation, heritability, differential reproduction, and adaptation. Describe Hardy-Weinberg equilibrium and the factors that cause allele frequency changes.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/18-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapters 18 and 19: Evolution and the Evolution of Populations — read sections on natural selection, evidence for evolution, and population genetics.",
+      "readingNote": "OpenStax Biology 2e — Chapters 18-19, including population genetics and Hardy-Weinberg calculations.",
       "videoUrl": "https://www.youtube.com/watch?v=P3GagfbA2vo",
-      "videoNote": "CrashCourse Biology #14: Natural Selection — explains the four conditions for natural selection with classic examples like the peppered moth.",
+      "videoNote": "Crash Course Biology — Evolution: It's a Thing.",
       "video2Url": "https://www.youtube.com/watch?v=DuArVnT1i-E",
       "video2Note": "Bozeman Science: Hardy-Weinberg Equilibrium — AP Biology review showing how to calculate allele and genotype frequencies and apply the H-W equation.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Using the Hardy-Weinberg equation, analyze a population where 9% of individuals show a recessive phenotype. Calculate allele frequencies (p and q), genotype frequencies, and determine if the population is in H-W equilibrium given new data. Identify which evolutionary force might be acting and justify your answer. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Natural Selection and Evolution module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Assume complete dominance and initial Hardy-Weinberg equilibrium when 9% show the recessive phenotype. Calculate initial p,q and genotype frequencies. Later counts are AA=36,Aa=48,aa=16,N=100; calculate allele frequencies and distinguish one-time genotype fit from allele-frequency stability across time. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; initial and later calculations, two possible mechanisms, and evidence needed to distinguish them. Evaluation: calculations 50%; conceptual distinction 30%; causal limits 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3.5
     },
     {
@@ -174,14 +174,14 @@
       "titleZh": "物种形成与系统发育",
       "objectives": "Distinguish between allopatric, sympatric, and parapatric speciation. Explain reproductive isolating mechanisms. Interpret phylogenetic trees (cladograms) and understand how they represent evolutionary relationships.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/18-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapters 18 and 20: Phylogenies and the History of Life — read sections on speciation mechanisms, reproductive isolation, and cladistics.",
+      "readingNote": "OpenStax Biology 2e — Chapters 18 and 20: speciation, phylogenies, and the history of life.",
       "videoUrl": "https://www.youtube.com/watch?v=SA02un37GFQ",
       "videoNote": "Bozeman Science: Phylogenetics — how to read and construct phylogenetic trees, parsimony, and the use of molecular data in systematics.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Analyze a provided phylogenetic tree of 6 species and answer: (1) which two species share the most recent common ancestor, (2) identify a synapomorphy for a given clade, (3) propose whether allopatric or sympatric speciation is more likely for two species pairs. Justify all answers. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Speciation and Phylogeny module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Use rooted topology ((((A,B),C),D),(E,F)). Trait X originated once in the A-B ancestor with no losses. A/B were separated by a river; E/F diverged while co-occurring without a geographic barrier. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; sister taxon to A, clade supported by X, speciation model for each history, common ancestors, and limits of historical evidence. Evaluation: tree interpretation 40%; character inference 20%; speciation reasoning 40%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     },
     {
@@ -190,14 +190,14 @@
       "titleZh": "生态学：种群",
       "objectives": "Define population ecology and key parameters: population size, density, dispersion, birth rate, death rate, and growth rate. Compare exponential and logistic population growth. Explain carrying capacity and limiting factors.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/45-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapter 45: Population and Community Ecology — read sections 45.1-45.3 on population demographics, population growth, and regulation.",
+      "readingNote": "OpenStax Biology 2e — Sections 45.1-45.4: populations, growth, limits, and regulation.",
       "videoUrl": "https://www.youtube.com/watch?v=RBOsqmBQBQk",
       "videoNote": "CrashCourse Ecology #3: Population Ecology — covers exponential vs. logistic growth, carrying capacity, and r vs. K selection strategies.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Analyze population data for a fictional deer population over 20 years. Plot the data, identify whether the population shows exponential or logistic growth, estimate the carrying capacity, identify two limiting factors, and predict what would happen if a new predator were introduced. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Ecology: Populations module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Graph the simulated annual deer counts for years 1-20: 20,30,44,63,86,112,139,162,180,191,198,201,199,202,200,198,201,200,199,201. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; labeled graph, evidence for logistic-like growth, approximate K near 200, two plausible limiting factors, and a conditional predator prediction. Evaluation: graph 30%; evidence/K 30%; mechanisms 20%; uncertainty 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     },
     {
@@ -206,14 +206,14 @@
       "titleZh": "群落生态学",
       "objectives": "Describe interspecific interactions including competition, predation, mutualism, commensalism, and parasitism. Explain community succession (primary and secondary). Describe species diversity and its importance for ecosystem stability.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/45-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapter 45: Population and Community Ecology — read sections 45.6-45.8 on species interactions, ecological succession, and biodiversity.",
+      "readingNote": "OpenStax Biology 2e — Section 45.6: community ecology, succession, and species interactions.",
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Create an interaction web for a local ecosystem (forest, grassland, or marine) with at least 8 species, label each interaction type (competition, predation, mutualism, etc.), identify keystone species, and write a 250-word essay predicting how the removal of the keystone species would affect community structure. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Community Ecology module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Create an interaction web for a local ecosystem (forest, grassland, or marine) with at least 8 species, label each interaction type (competition, predation, mutualism, etc.), identify keystone species, and write a 250-word essay predicting how the removal of the keystone species would affect community structure. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; data, diagrams, observations, calculations, or scientific explanations from the Community Ecology module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3
     },
     {
@@ -222,14 +222,14 @@
       "titleZh": "生态系统与能量流动",
       "objectives": "Explain energy flow through ecosystems using trophic levels, food webs, and ecological pyramids. Describe the carbon and nitrogen biogeochemical cycles. Discuss how human activities disrupt ecosystem processes and contribute to climate change.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption.",
+      "readingNote": "OpenStax Biology 2e — Sections 46.1-46.3: ecosystem ecology, energy flow, and biogeochemical cycles.",
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Using the 10% rule of energy transfer, calculate how much plant matter is needed to support a 150-pound human eating only beef (tertiary consumer) vs. chicken (secondary consumer) vs. plants (primary consumer). Discuss the environmental implications of diet choices and relate them to carbon cycle disruption. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Ecosystems and Energy Flow module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "Use a simplified 10%-transfer model to compare plants->human, plants->cattle->human, and plants->grain-fed chicken->human. Calculate producer energy needed to supply 1,000 kJ to the human. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; labeled food chains, trophic positions, every calculation with units, results 10,000/100,000/100,000 kJ, and two model limitations. Evaluation: calculations/units 40%; trophic positions 30%; limitations 30%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3.5
     },
     {
@@ -238,14 +238,14 @@
       "titleZh": "生态系统与能量流动 — Advanced Applications",
       "objectives": "Analyze ecosystem case studies using energy-flow models, trophic efficiency, population interactions, and disturbance data, then connect evidence to AP-style ecological reasoning. Students will use vocabulary, models, and evidence to interpret examples, support scientific explanations, and connect the concept to the module assignment.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption. (Advanced)",
+      "readingNote": "OpenStax Biology 2e — Sections 46.1-46.3: ecosystem ecology, energy flow, and disturbance.",
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Choose one ecosystem case study involving disturbance, invasive species, or energy-flow disruption. Create a one-page model showing producers, consumers, decomposers, and energy transfer, then answer two AP-style free-response prompts using evidence from the model. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Ecosystems and Energy Flow — Advanced Applications module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "In a fictional algae -> zooplankton -> planktivorous fish food chain, where each arrow shows energy flow from food to consumer, fish decline, zooplankton rise from 20 to 60 individuals/L, and chlorophyll-a falls from 30 to 10 micrograms/L. Explain the pattern and design a controlled test of the fish effect. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; both numerical changes, mechanism, independent/dependent variables, control, replication, and one alternative explanation. Evaluation: model 20%; evidence/mechanism 40%; experimental design 40%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 4
     },
     {
@@ -254,14 +254,14 @@
       "titleZh": "生态系统与能量流动 — Synthesis & Review",
       "objectives": "Synthesize ecology, evolution, genetics, and cellular processes into AP-style explanations, identify remaining misconception areas, and practice timed free-response planning. Students will use vocabulary, models, and evidence to interpret examples, support scientific explanations, and connect the concept to the module assignment.",
       "readingUrl": "https://openstax.org/books/biology-2e/pages/46-introduction",
-      "readingNote": "OpenStax Biology 2e, Chapter 46: Ecosystems — read sections 46.1-46.4 on ecosystem energy dynamics, food webs, biogeochemical cycles, and ecosystem disruption. (Advanced)",
-      "videoUrl": "https://owl.purdue.edu/owl/",
-      "videoNote": "Purdue OWL — Open writing lesson resource for this topic: Ecosystems and Energy Flow — Synthesis & Review.",
+      "readingNote": "OpenStax Biology 2e — Sections 46.1-46.3 plus assigned review notes for genetics, evolution, and cellular processes.",
+      "videoUrl": "https://genesisideas.school/learn",
+      "videoNote": "GIIS Learn Portal — open AP Biology, Module 16: Ecosystems and Energy Flow — Synthesis & Review; use the lesson only as an internal synthesis aid, not as proof of College Board authorization or complete AP coverage.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Complete a timed AP-style ecology/evolution free-response set, then write an error analysis identifying two content gaps and one test-taking strategy to improve before the exam. Revise one response using the scoring guidelines. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: data, diagrams, observations, calculations, or scientific explanations from the Ecosystems and Energy Flow — Synthesis & Review module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the self-contained practice tasks in this module assignment before the single-attempt quiz; no external practice platform is required.",
+      "assignment": "In 20 minutes, answer two GIIS-authored prompts: (1) producers supply 20,000 kJ and transfers are 15% then 10%; calculate energy reaching secondary consumers and explain losses; (2) inherited dark beetles average four surviving offspring versus one for light beetles in a stated environment; give a conditional multigeneration prediction. Self-assess and revise one answer. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; calculations, mechanism, assumptions, two identified gaps, rubric self-assessment, and revision rationale. Evaluation: energy calculation/explanation 40%; heredity/reproductive-success prediction 40%; evidence-based revision 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 4
     }
   ],
@@ -325,15 +325,15 @@
     {
       "moduleOrder": 2,
       "order": 1,
-      "question": "Which organelle is responsible for synthesizing proteins?",
+      "question": "Which molecular complex directly assembles amino acids into a polypeptide?",
       "options": [
+        "Ribosome",
         "Golgi apparatus",
-        "Mitochondria",
-        "Ribosomes",
-        "Lysosomes"
+        "Lysosome",
+        "Centrosome"
       ],
-      "answer": "Ribosomes",
-      "explanation": "Ribosomes are the site of protein synthesis (translation). They can be found free in the cytoplasm or attached to the rough endoplasmic reticulum.",
+      "answer": "Ribosome",
+      "explanation": "A ribosome reads an mRNA template and catalyzes peptide-bond formation, directly assembling amino acids into a polypeptide. The other structures do not perform translation.",
       "points": 1
     },
     {
@@ -381,15 +381,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "Which cellular structure is the site of translation during protein synthesis?",
+      "question": "Which route is typical for a protein secreted from a eukaryotic cell?",
       "options": [
-        "Ribosome",
-        "Golgi apparatus",
-        "Mitochondrion",
-        "Lysosome"
+        "Rough ER -> Golgi apparatus -> secretory vesicle",
+        "Golgi apparatus -> nucleus -> lysosome",
+        "Mitochondrion -> chloroplast -> plasma membrane",
+        "Lysosome -> nucleus -> Golgi apparatus"
       ],
-      "answer": "Ribosome",
-      "explanation": "Ribosomes read mRNA and assemble amino acids into polypeptide chains during translation.",
+      "answer": "Rough ER -> Golgi apparatus -> secretory vesicle",
+      "explanation": "A secreted protein enters the rough ER, is modified and sorted in the Golgi apparatus, and leaves in a vesicle that fuses with the plasma membrane.",
       "points": 1
     },
     {
@@ -409,15 +409,15 @@
     {
       "moduleOrder": 3,
       "order": 2,
-      "question": "Which type of transport requires ATP?",
+      "question": "Which process directly hydrolyzes ATP to move ions against their electrochemical gradients?",
       "options": [
-        "Simple diffusion",
-        "Facilitated diffusion",
-        "Osmosis",
-        "Active transport"
+        "Primary active transport by the sodium-potassium pump",
+        "Facilitated diffusion through a channel",
+        "Osmosis through aquaporins",
+        "Secondary cotransport driven by an existing ion gradient"
       ],
-      "answer": "Active transport",
-      "explanation": "Active transport requires energy (ATP) to move substances against their concentration gradient (from low to high concentration). The sodium-potassium pump is a classic example of active transport.",
+      "answer": "Primary active transport by the sodium-potassium pump",
+      "explanation": "The sodium-potassium pump directly hydrolyzes ATP to move ions against their electrochemical gradients. Secondary active transport instead uses energy stored in a gradient created elsewhere.",
       "points": 1
     },
     {
@@ -451,15 +451,15 @@
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "Which transport process directly requires ATP to move substances across a membrane?",
+      "question": "A cell releases a protein when a vesicle fuses with its plasma membrane. Which process occurs?",
       "options": [
-        "Simple diffusion",
+        "Exocytosis",
         "Osmosis",
-        "Facilitated diffusion through a channel",
-        "Active transport"
+        "Simple diffusion",
+        "Phagocytosis"
       ],
-      "answer": "Active transport",
-      "explanation": "Active transport uses cellular energy, often ATP, to move substances against their concentration gradients.",
+      "answer": "Exocytosis",
+      "explanation": "Exocytosis occurs when a vesicle membrane fuses with the plasma membrane and releases soluble cargo outside the cell. The other processes do not describe this export mechanism.",
       "points": 1
     },
     {
@@ -591,17 +591,22 @@
     {
       "moduleOrder": 5,
       "order": 5,
-      "question": "Short response: How many chromosomes does a human somatic cell have after completing mitosis?",
-      "options": null,
+      "question": "A typical human diploid cell with 46 chromosomes completes mitosis and cytokinesis without error. How many chromosomes are in each daughter cell?",
+      "options": [
+        "23",
+        "46",
+        "92",
+        "184"
+      ],
       "answer": "46",
-      "explanation": "A correct response identifies \"46\" and connects it to the module context.",
+      "explanation": "Sister chromatids separate during mitosis, so each daughter cell retains 46 chromosomes. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 6,
       "order": 1,
-      "question": "In a monohybrid cross between two heterozygous individuals (Aa x Aa), what is the expected phenotype ratio?",
+      "question": "Assuming complete dominance of A and equal offspring viability, what phenotype ratio is expected from Aa x Aa?",
       "options": [
         "1:1",
         "1:2:1",
@@ -609,7 +614,7 @@
         "9:3:3:1"
       ],
       "answer": "3:1",
-      "explanation": "A cross of Aa x Aa produces offspring in genotype ratio 1 AA : 2 Aa : 1 aa. If A is dominant, 3/4 show the dominant phenotype and 1/4 show the recessive phenotype, giving a 3:1 phenotype ratio.",
+      "explanation": "The genotype ratio is 1 AA:2 Aa:1 aa. With complete dominance and equal viability, AA and Aa share the dominant phenotype, producing a 3:1 phenotype ratio.",
       "points": 1
     },
     {
@@ -923,16 +928,17 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Which statement is NOT required for natural selection to occur?",
+      "question": "Which condition is required for natural selection to change an inherited trait's frequency across generations?",
       "options": [
-        "Individuals vary in heritable traits",
-        "Some variants affect survival or reproduction",
-        "Organisms consciously choose traits they need",
-        "More offspring are produced than can survive"
+        "Individuals with different inherited trait values leave different numbers of surviving offspring",
+        "Every individual acquires the same trait during life",
+        "All genotypes have identical reproductive success",
+        "The trait has no heritable component"
       ],
-      "answer": "Organisms consciously choose traits they need",
-      "explanation": "Natural selection acts on heritable variation; organisms do not consciously choose adaptive traits.",
-      "points": 1
+      "answer": "Individuals with different inherited trait values leave different numbers of surviving offspring",
+      "explanation": "Natural selection requires heritable variation associated with differences in reproductive success. Overproduction may intensify competition, but it is not logically required for selection.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 11,
@@ -1010,12 +1016,12 @@
       "question": "Exponential population growth is characterized by:",
       "options": [
         "Growth that slows as the population approaches carrying capacity",
-        "A constant growth rate regardless of population size",
+        "A constant per-capita growth rate, so total population growth increases with population size",
         "Growth that accelerates as resources become limiting",
         "Population size oscillating around the carrying capacity"
       ],
-      "answer": "A constant growth rate regardless of population size",
-      "explanation": "Exponential growth occurs when resources are unlimited and each individual reproduces at a constant rate (r). The population grows at an ever-increasing rate producing a J-shaped curve.",
+      "answer": "A constant per-capita growth rate, so total population growth increases with population size",
+      "explanation": "In the ideal exponential model, dN/dt=rN. Constant r gives increasing absolute growth as population size increases. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
@@ -1365,26 +1371,31 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
-      "question": "Which nitrogenous base is found in DNA but NOT in RNA?",
-      "options": null,
+      "type": "mc",
+      "question": "Which base is one of the four standard bases of DNA but is replaced by uracil in standard RNA sequences?",
+      "options": [
+        "Adenine",
+        "Cytosine",
+        "Thymine",
+        "Guanine"
+      ],
       "answer": "Thymine",
-      "explanation": "The correct answer is: Thymine.",
+      "explanation": "Standard DNA uses A,C,G,T; standard RNA uses A,C,G,U. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 8,
       "type": "mc",
-      "question": "What is the ribosome's role in gene expression?",
+      "question": "Which molecular complex directly assembles amino acids into a polypeptide?",
       "options": [
-        "It transcribes DNA into mRNA",
-        "It translates mRNA into a polypeptide",
-        "It replicates DNA before cell division",
-        "It splices introns from pre-mRNA"
+        "Ribosome",
+        "Golgi apparatus",
+        "Lysosome",
+        "Centrosome"
       ],
-      "answer": "It translates mRNA into a polypeptide",
-      "explanation": "Ribosomes carry out translation by matching mRNA codons with tRNA anticodons and forming peptide bonds.",
+      "answer": "Ribosome",
+      "explanation": "Ribosomes translate an mRNA template by catalyzing peptide-bond formation. The other structures have trafficking, digestion, or spindle-organizing roles rather than directly assembling polypeptides.",
       "points": 1
     },
     {
@@ -1406,15 +1417,15 @@
       "examType": "midterm",
       "order": 10,
       "type": "mc",
-      "question": "PCR requires a heat-stable DNA polymerase because:",
+      "question": "DNA polymerase extends a new DNA strand by adding nucleotides to which end?",
       "options": [
-        "Heat-stable polymerases are more accurate",
-        "The denaturation step requires temperatures (~95 C) that would destroy regular DNA polymerase",
-        "Heat-stable polymerases work faster",
-        "Regular polymerases cannot recognize primers"
+        "The 3' end",
+        "The 5' end",
+        "Either end equally",
+        "The middle of the strand"
       ],
-      "answer": "The denaturation step requires temperatures (~95 C) that would destroy regular DNA polymerase",
-      "explanation": "The denaturation step in PCR requires heating to ~95 C to separate DNA strands. Taq polymerase (from Thermus aquaticus, a thermophilic bacterium) is heat-stable and remains functional at these temperatures.",
+      "answer": "The 3' end",
+      "explanation": "DNA polymerase adds nucleotides to a free 3' hydroxyl, so new DNA is synthesized 5' to 3'. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
@@ -1451,40 +1462,45 @@
       "examType": "midterm",
       "order": 13,
       "type": "mc",
-      "question": "In mRNA, the start codon is:",
+      "question": "Why is the lagging strand synthesized in fragments?",
       "options": [
-        "UAA",
-        "UAG",
-        "AUG",
-        "UGA"
+        "DNA polymerase synthesizes only 5' to 3' on antiparallel templates",
+        "Helicase works only on the leading strand",
+        "Ligase prevents continuous DNA synthesis",
+        "The lagging-strand template contains no bases"
       ],
-      "answer": "AUG",
-      "explanation": "AUG (methionine codon) is the universal start codon in mRNA. It signals where translation begins and encodes the first amino acid (methionine) in all proteins. UAA, UAG, and UGA are stop codons.",
+      "answer": "DNA polymerase synthesizes only 5' to 3' on antiparallel templates",
+      "explanation": "As the fork opens, lagging-strand synthesis restarts from successive primers and ligase later joins the fragments. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 14,
-      "type": "fill",
-      "question": "Which of the following is a membrane-bound organelle found only in plant cells?",
-      "options": null,
+      "type": "mc",
+      "question": "Which organelle occurs in a typical photosynthetic leaf cell but not in a typical animal cell?",
+      "options": [
+        "Chloroplast",
+        "Mitochondrion",
+        "Nucleus",
+        "Golgi apparatus"
+      ],
       "answer": "Chloroplast",
-      "explanation": "The correct answer is: Chloroplast.",
+      "explanation": "Chloroplasts carry out photosynthesis in leaf cells and many algae; typical animal cells lack them. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 15,
       "type": "mc",
-      "question": "The lac operon in E. coli is an example of:",
+      "question": "A DNA-damage checkpoint prevents a cell from entering S phase. What does this help prevent?",
       "options": [
-        "Eukaryotic gene regulation by transcription factors",
-        "Prokaryotic gene regulation where genes are expressed only when lactose is present and glucose is absent",
-        "Post-translational regulation of enzyme activity",
-        "Gene regulation by RNA interference"
+        "Replication of damaged DNA",
+        "Attachment of ribosomes to mRNA",
+        "Diffusion of oxygen through the membrane",
+        "Secretion of proteins by exocytosis"
       ],
-      "answer": "Prokaryotic gene regulation where genes are expressed only when lactose is present and glucose is absent",
-      "explanation": "The lac operon's genes for lactose metabolism are expressed when lactose is present (repressor inactive) and glucose is absent (CAP activator active). Both conditions must be met for full expression.",
+      "answer": "Replication of damaged DNA",
+      "explanation": "Delaying S phase gives the cell an opportunity to repair damage before copying its DNA. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
@@ -1581,30 +1597,30 @@
       "examType": "final",
       "order": 7,
       "type": "mc",
-      "question": "CRISPR-Cas9 differs from traditional restriction enzymes in that CRISPR-Cas9:",
+      "question": "What primarily determines the targeting specificity of standard CRISPR-Cas9?",
       "options": [
-        "Can only cut RNA, not DNA",
-        "Uses a guide RNA to precisely target any specific DNA sequence",
-        "Makes blunt-end cuts only",
-        "Only works in bacterial cells"
+        "A complementary guide RNA and a compatible adjacent PAM",
+        "Recognition of every DNA sequence without restrictions",
+        "A protein that translates the target DNA",
+        "Random selection of DNA by Cas9"
       ],
-      "answer": "Uses a guide RNA to precisely target any specific DNA sequence",
-      "explanation": "CRISPR-Cas9 is programmable -- by changing the guide RNA sequence, researchers can target any DNA sequence in any organism. Restriction enzymes recognize fixed palindromic sequences and cannot be reprogrammed.",
+      "answer": "A complementary guide RNA and a compatible adjacent PAM",
+      "explanation": "Guide-RNA complementarity and PAM requirements constrain targeting; off-target cutting can occur. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 8,
       "type": "mc",
-      "question": "During translation, the A site of the ribosome:",
+      "question": "During elongation, which ribosomal site normally receives the incoming aminoacyl-tRNA?",
       "options": [
-        "Holds the growing polypeptide chain on a tRNA",
-        "Is the site where the new aminoacyl-tRNA enters",
-        "Is where the peptide bond is formed between amino acids",
-        "Is where the uncharged tRNA exits the ribosome"
+        "A site",
+        "P site",
+        "E site",
+        "mRNA exit channel"
       ],
-      "answer": "Is the site where the new aminoacyl-tRNA enters",
-      "explanation": "The ribosome has three tRNA binding sites: A (aminoacyl) site where new aminoacyl-tRNAs enter, P (peptidyl) site where the growing polypeptide is held, and E (exit) site where uncharged tRNAs leave.",
+      "answer": "A site",
+      "explanation": "The aminoacyl-tRNA normally enters the A site during elongation. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {

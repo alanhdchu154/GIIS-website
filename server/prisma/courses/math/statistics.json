@@ -14,14 +14,14 @@
       "titleZh": "数据入门",
       "objectives": "Distinguish between categorical and quantitative data; compare observational studies and experiments; identify sampling methods (simple random, stratified, cluster, systematic); recognize sources of bias.",
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-introduction",
-      "readingNote": "OpenStax Introductory Statistics — Ch 1.1–1.3: Definitions, Data, Sampling",
+      "readingNote": "OpenStax Introductory Statistics — Sections 1.1-1.4: definitions, data, sampling, experiments, and observational studies.",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 1: Introduction to Data, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Find a real news article that references a study. Identify the type of study, sampling method used, and any potential sources of bias. Write a one-page analysis. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Introduction to Data module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 1: Introduction to Data; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "Use this GIIS-authored study vignette: A school randomly chooses 4 of its 20 homerooms and surveys every student in those rooms about weekly sleep; 146 of 160 selected students respond. The survey finds an association between reported sleep and reported concentration. Classify the population, sample, variables, sampling method, nonresponse risk, study type, and the strongest justified conclusion. Submit: paste your numbered response into the assignment field. Include: explain why each classification fits the evidence, quote the relevant vignette fact, identify two limits, and rewrite an unjustified causal headline. Evaluation: classifications 40%; evidence and reasoning 35%; limitations and claim wording 25%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     },
     {
@@ -30,14 +30,14 @@
       "titleZh": "数据图示",
       "objectives": "Construct and interpret bar graphs, histograms, box plots, stem-and-leaf plots, and dot plots; choose the most appropriate display for a given data set.",
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/2-introduction",
-      "readingNote": "OpenStax Introductory Statistics — Ch 2.1–2.5: Graphical Displays",
+      "readingNote": "OpenStax Introductory Statistics — Sections 2.1-2.4: frequency tables, histograms, frequency polygons, and box plots.",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 2: Displaying Data, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=HMkllhBI91Y",
-      "video2Note": "Crash Course Statistics #5 — Visualizing Data",
+      "video2Note": "Crash Course Statistics #6 — Data Visualization Part 2.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Collect a data set of at least 20 values (e.g. daily step counts for a month). Create a histogram, box plot, and dot plot. Describe the shape, center, and spread from each display. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Displaying Data module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 2: Displaying Data; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "Use the synthetic commute-time dataset in minutes: 12,15,18,18,20,22,24,25,27,30,31,35,38,42,45,50,55,60,70,95. Create a frequency table with bins 0-19,20-39,40-59,60-79,80-99; draw a histogram, dot plot, and modified box plot; then compare what each display reveals about shape, center, spread, and possible outliers. Submit: paste your numbered response or a teacher-accessible link. Include: labeled axes and units, bin choices, five-number summary, stated quartile convention, 1.5-IQR fences, and evidence for every interpretation. Evaluation: displays 40%; calculations 30%; evidence-based comparison 30%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     },
     {
@@ -46,14 +46,14 @@
       "titleZh": "描述统计：集中与离散",
       "objectives": "Calculate mean, median, and mode; compute range, IQR, variance, and standard deviation; identify outliers using the 1.5×IQR rule. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/2-introduction",
-      "readingNote": "OpenStax Introductory Statistics — Ch 2.6–2.8: Measures of Center and Spread",
+      "readingNote": "OpenStax Introductory Statistics — Sections 2.3-2.7: box plots, center, skewness, and measures of spread.",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 3: Descriptive Statistics: Center & Spread, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=SzZ6GpcfoQY",
-      "video2Note": "Crash Course Statistics #3 — Measures of Spread",
+      "video2Note": "StatQuest — Calculating the Mean, Variance and Standard Deviation.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Given a data set of 15 exam scores, compute the mean, median, mode, range, IQR, and standard deviation by hand (show all work). Identify any outliers and explain how removing them changes the measures. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Descriptive Statistics: Center & Spread module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 3: Descriptive Statistics: Center & Spread; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "Use the synthetic scores 40, 68, 70, 72, 74, 75, 76, 78, 80, 82, 84, 86, 88, 90, 92. Compute the mean, median, sample variance and sample standard deviation. Find Q1 and Q3 by excluding the overall median, calculate 1.5-IQR fences, identify flagged values, then recompute summaries without each flagged value and explain whether removal is justified. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; all calculations, the n-1 convention, quartiles, fences, before/after summaries, and an evidence-based decision about any flagged value. Evaluation: numerical accuracy 50%; method and notation 30%; interpretation of outliers 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3.5
     },
     {
@@ -64,12 +64,12 @@
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/6-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 6.1–6.2: Normal Distributions",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 4: Normal Distribution, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=rzFX5NWojp0",
       "video2Note": "StatQuest — Normal Distribution, Clearly Explained",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Heights of students in a school are normally distributed with mean 165 cm and SD 8 cm. Answer 8 questions: compute z-scores, find percentages within ranges using the empirical rule and the z-table, and find the height at a given percentile. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Normal Distribution module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 4: Normal Distribution; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "For X~N(165,8^2), answer: z at 173; z at 149; empirical-rule P(157<=X<=173); empirical-rule P(149<=X<=181); P(X>181); P(X<169); P(161<X<177); and the 90th-percentile height. Use a normal table or calculator and round probabilities to four decimals. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; eight numbered answers, formulas or calculator inputs, shaded tail/interval sketches, and units. Evaluation: correct standardization and tail choice 50%; calculations 30%; labeled interpretation 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3.5
     },
     {
@@ -80,12 +80,12 @@
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/3-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 3.1–3.4: Probability Basics",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 5: Probability Fundamentals, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=uzkc-qNVoOk",
-      "video2Note": "Crash Course Statistics #13 — Probability",
+      "video2Note": "Khan Academy — Probability explained: independent and dependent events.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Roll two fair dice. List the complete sample space, then calculate probabilities for 10 events (e.g., sum > 8, at least one 4, both odd). Verify that all complement probabilities are consistent. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Probability Fundamentals module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 5: Probability Fundamentals; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "For two independent fair dice, use all 36 ordered outcomes to analyze: sum>8; at least one 4; both odd; sum=7; doubles; sum<=4; exactly one 6; no 6; first die>second; sum even. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; an outcome count, probability, and complement probability for each event, plus one check using complements. Evaluation: correct sample-space counts 50%; probability rules 30%; clear checks 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     },
     {
@@ -94,14 +94,14 @@
       "titleZh": "条件概率与独立性",
       "objectives": "Compute conditional probabilities; apply Bayes' theorem; use tree diagrams and contingency tables; test for independence of events. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/3-introduction",
-      "readingNote": "OpenStax Introductory Statistics — Ch 3.4–3.6: Conditional Probability & Independence",
+      "readingNote": "OpenStax Introductory Statistics — Sections 3.2-3.3 plus the assigned Bayes worked example: independence, conditional probability, and Bayes reasoning.",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 6: Conditional Probability & Independence, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=HZGCoVF3YvM",
-      "video2Note": "StatQuest — Bayes' Theorem, Clearly Explained",
+      "video2Note": "3Blue1Brown — Bayes theorem and the geometry of changing beliefs.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "A medical test is 95% accurate. Given that 2% of the population has a disease, use Bayes' theorem to find the probability that a positive test is a true positive. Draw a tree diagram for the full solution. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Conditional Probability & Independence module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 6: Conditional Probability & Independence; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "A screening test has sensitivity P(+|disease)=0.95, specificity P(-|no disease)=0.95, and prevalence P(disease)=0.02. Draw a four-leaf probability tree and calculate P(disease|+). Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; branch and joint probabilities, a denominator containing all positive tests, Bayes calculation, and a contextual interpretation. Evaluation: probability tree 30%; posterior calculation 50%; interpretation and limitations 20%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3.5
     },
     {
@@ -112,12 +112,12 @@
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/4-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 4.1–4.3: Discrete Distributions & Binomial",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 7: Discrete Probability Distributions, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=8idr1WZ1A7Q",
-      "video2Note": "Crash Course Statistics #15 — Binomial Distribution",
+      "video2Note": "Binomial distributions — probabilities of probabilities, part 1.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "A fair coin is flipped 10 times. Construct the full probability distribution table for X = number of heads. Compute the expected value, variance, and the probability of getting exactly 6 heads. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Discrete Probability Distributions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 7: Discrete Probability Distributions; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "A fair coin is flipped 10 times. Construct the full probability distribution table for X = number of heads. Compute the expected value, variance, and the probability of getting exactly 6 heads. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; calculations, diagrams, equations, or graphs from the Discrete Probability Distributions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3.5
     },
     {
@@ -126,14 +126,14 @@
       "titleZh": "抽样分布",
       "objectives": "State the Central Limit Theorem; describe sampling distributions of the sample mean and sample proportion; apply CLT to calculate probabilities for sample means.",
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/7-introduction",
-      "readingNote": "OpenStax Introductory Statistics — Ch 7.1–7.3: Central Limit Theorem",
+      "readingNote": "OpenStax Introductory Statistics — Chapter 7 sampling distributions plus Section 8.3 for sample-proportion conditions.",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 8: Sampling Distributions, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=YAlJCEDH2uY",
       "video2Note": "StatQuest — Central Limit Theorem, Clearly Explained",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "A population has mean 50 and SD 10. For samples of n = 25 and n = 100, compute the standard error, describe the shape of the sampling distribution, and find the probability that the sample mean exceeds 52. Submit your work as a document, image, or link showing the steps, evidence, and final response. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Sampling Distributions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 8: Sampling Distributions; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "Assume independent random observations from a normal population with mean 50 and SD 10. For n=25 and n=100, compute the standard error and P(sample mean>52). Explain why the mean and SD alone would not determine exact probabilities without a distributional or large-sample assumption. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; both standard errors, standardized values, probabilities, assumptions, and the comparison. Evaluation: calculations 50%; conditions 25%; interpretation 25%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3.5
     },
     {
@@ -144,12 +144,12 @@
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/8-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 8.1–8.2: Confidence Intervals for Means",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 9: Confidence Intervals: Means, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=TqOeMYtOc1w",
       "video2Note": "StatQuest — Confidence Intervals, Clearly Explained",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "A sample of 20 students has a mean test score of 78 with sample SD 9. Construct a 95% confidence interval for the population mean using the t-distribution. State the critical value, margin of error, and interpret the interval in one complete sentence. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Confidence Intervals: Means module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 9: Confidence Intervals: Means; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "An independent random sample of 20 scores from an approximately normal population with no extreme outliers has mean 78 and sample SD 9. Construct a 95% t interval for the population mean using df=19 and t*=2.093. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; conditions, df, standard error, margin of error, endpoints, and a population-mean interpretation. Evaluation: inference setup 30%; calculations 45%; contextual interpretation 25%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3.5
     },
     {
@@ -160,12 +160,12 @@
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/8-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 8.3: Confidence Interval for a Proportion",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "video2Url": "https://www.youtube.com/watch?v=SeQeYVJZ2gE",
-      "video2Note": "Crash Course Statistics #26 — Confidence Intervals for Proportions",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 10: Confidence Intervals: Proportions, and complete the listed lesson before the single-attempt quiz.",
+      "video2Url": "",
+      "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "In a survey of 400 voters, 220 support a ballot measure. Construct a 99% confidence interval for the true proportion. Compute the margin of error. Then determine how large a sample is needed to achieve a margin of error of ±3% at 95% confidence. Submit your work as a document, image, or link showing the steps, evidence, and final response. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Confidence Intervals: Proportions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 10: Confidence Intervals: Proportions; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "An independent random sample of 400 voters has 220 supporters. Construct a 99% z interval using z*=2.576. Then use conservative p=0.50 and z*=1.96 to find the minimum sample size for margin of error at most 0.03, rounding upward. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; success/failure condition, point estimate, interval, margin, planning formula, n=1068, and interpretations. Evaluation: conditions 25%; interval work 35%; sample-size planning 25%; interpretation 15%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     },
     {
@@ -174,14 +174,14 @@
       "titleZh": "均值假设检验",
       "objectives": "State null and alternative hypotheses; determine p-value and compare to significance level; identify Type I and Type II errors; conduct a one-sample t-test.",
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/9-introduction",
-      "readingNote": "OpenStax Introductory Statistics — Ch 9.1–9.4: Hypothesis Testing for Means",
+      "readingNote": "OpenStax Introductory Statistics — Sections 9.1-9.5: hypothesis-test logic and full worked tests.",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "video2Url": "https://www.youtube.com/watch?v=0zZYBALbZgg",
-      "video2Note": "StatQuest — Hypothesis Testing and p-Values, Clearly Explained",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 11: Hypothesis Testing: Means, and complete the listed lesson before the single-attempt quiz.",
+      "video2Url": "",
+      "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "A manufacturer claims its batteries last 500 hours on average. A sample of 25 batteries has a mean of 487 hours and SD of 30 hours. At α = 0.05, conduct a full one-sample t-test: state hypotheses, compute t-statistic and p-value, make a decision, and state a conclusion in context. Submit your work as a document, image, or link showing the steps, evidence, and final response. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Hypothesis Testing: Means module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 11: Hypothesis Testing: Means; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "An independent random sample from an approximately normal lifetime population has n=25, mean 487 hours, and s=30 hours. Test H0:mu=500 against Ha:mu!=500 at alpha=0.05. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; hypotheses, conditions, t=-13/6, df=24, two-sided p-value, comparison with alpha, and a contextual conclusion. Evaluation: setup 25%; calculations 40%; decision and wording 35%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 4
     },
     {
@@ -190,14 +190,14 @@
       "titleZh": "比例检验与卡方检验",
       "objectives": "Conduct a one-proportion z-test; perform chi-square goodness-of-fit test; perform chi-square test of independence; interpret results in context. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/11-introduction",
-      "readingNote": "OpenStax Introductory Statistics — Ch 11.1–11.4: Chi-Square Tests",
+      "readingNote": "OpenStax Introductory Statistics — Chapter 9 proportion tests and Chapter 11 chi-square procedures.",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 12: Hypothesis Testing: Proportions & Chi-Square, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=7_cs1YlZoug",
-      "video2Note": "StatQuest — Chi-Square Tests, Clearly Explained",
+      "video2Note": "Crash Course Statistics #29 — Chi-Square Tests.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "A die is rolled 120 times. Expected count for each face is 20. Observed counts are: 1→18, 2→22, 3→17, 4→25, 5→19, 6→19. Conduct a full chi-square goodness-of-fit test at α = 0.05. Submit your work as a document, image, or link showing the steps, evidence, and final response. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Hypothesis Testing: Proportions & Chi-Square module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 12: Hypothesis Testing: Proportions & Chi-Square; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "A die is rolled 120 times. Expected count for each face is 20. Observed counts are: 1→18, 2→22, 3→17, 4→25, 5→19, 6→19. Conduct a full chi-square goodness-of-fit test at α = 0.05. Submit your work as a document, image, or link showing the steps, evidence, and final response. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; calculations, diagrams, equations, or graphs from the Hypothesis Testing: Proportions & Chi-Square module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 4
     },
     {
@@ -208,12 +208,12 @@
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/12-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 12.1–12.5: Linear Regression & Correlation",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 13: Linear Regression, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=PaFPbb66DxQ",
-      "video2Note": "StatQuest — Linear Regression, Clearly Explained",
+      "video2Note": "StatQuest — The Main Ideas of Fitting a Line to Data.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Using a dataset of 10 (x, y) pairs provided by your instructor, calculate r, the regression equation (slope and intercept), and r². Draw the scatterplot, plot the regression line, and compute residuals for each point. Identify any influential points. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Linear Regression module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 13: Linear Regression; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "Use synthetic pairs (study hours, score): (1,52),(2,55),(3,61),(4,62),(5,67),(6,69),(7,74),(8,76),(9,80),(20,50). Fit a least-squares line, compute r and r^2, create a residual table, then refit without (20,50) to assess influence without assuming deletion is justified. Submit: paste your numbered response into the assignment field, or provide a teacher-accessible link to a legible document or diagram. Include: explain why each selected method fits the problem and cite calculation or scientific evidence for each conclusion; dataset, scatterplot, both fits, residuals, r and r^2, and an evidence-based comparison. Evaluation: computations 45%; graphs/residuals 30%; influence interpretation 25%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 4
     },
     {
@@ -224,12 +224,12 @@
       "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-introduction",
       "readingNote": "OpenStax Introductory Statistics — Ch 1.4: Experimental Design and Ethics",
       "videoUrl": "https://genesisideas.school/learn",
-      "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
+      "videoNote": "GIIS Learn Portal — open Statistics, Module 14: Statistical Ethics & Real-World Applications, and complete the listed lesson before the single-attempt quiz.",
       "video2Url": "https://www.youtube.com/watch?v=sxYrzzy3cq8",
-      "video2Note": "Crash Course Statistics #41 — How to Spot a Misleading Graph",
+      "video2Note": "TED-Ed — How statistics can be misleading, by Mark Liddell.",
       "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Find two statistical claims in news media this week. For each: (1) identify the statistic used, (2) evaluate whether the claim is well-supported, (3) identify any misleading framing or omitted context. Then design a simple 2-variable study on a topic of your choice, including sampling method, controls, and ethical considerations. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Statistical Ethics & Real-World Applications module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceNote": "Complete the ungraded practice embedded in Statistics, Module 14: Statistical Ethics & Real-World Applications; use the assignment above for the required teacher-reviewed work.",
+      "assignment": "Analyze these two GIIS-authored cases. Case A: a website says a disease risk 'doubled' from 1 in 10,000 to 2 in 10,000 but omits the absolute difference. Case B: students who voluntarily joined tutoring averaged 8 points higher than nonparticipants; no baseline scores or random assignment were reported. For each case, identify the denominator, absolute and relative change or group difference, missing context, and an honest rewrite. Then design a privacy-aware randomized or observational follow-up study without collecting real data. Submit: paste your numbered response. Include: calculations, explanatory/response variables, sampling or assignment plan, confounders, consent/privacy plan, and limits on causal claims. Evaluation: claim critique 40%; calculations 20%; study design 25%; ethics and uncertainty 15%. Submission alone does not demonstrate mastery.",
       "estimatedHrs": 3
     }
   ],
@@ -327,11 +327,16 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
+      "type": "mc",
       "question": "A bag contains 4 red and 6 blue marbles. If one marble is drawn at random, what is the probability it is red?",
-      "options": null,
+      "options": [
+        "2/5",
+        "3/5",
+        "2/3",
+        "1/4"
+      ],
       "answer": "2/5",
-      "explanation": "The correct answer is: 2/5.",
+      "explanation": "Four of ten equally likely marbles are red, so 4/10 = 2/5. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
@@ -398,50 +403,60 @@
       "examType": "midterm",
       "order": 12,
       "type": "mc",
-      "question": "According to the Central Limit Theorem, what shape does the sampling distribution of the sample mean approach as sample size increases?",
+      "question": "Four independent fair coin flips are made. What is the probability of exactly three heads?",
       "options": [
-        "A uniform distribution",
-        "A normal distribution",
-        "A bimodal distribution",
-        "The original population distribution exactly"
+        "1/16",
+        "1/4",
+        "3/8",
+        "3/4"
       ],
-      "answer": "A normal distribution",
-      "explanation": "The Central Limit Theorem says the sampling distribution of the sample mean approaches a normal distribution as sample size grows.",
+      "answer": "1/4",
+      "explanation": "There are C(4,3)=4 such outcomes, each with probability (1/2)^4, so the probability is 4/16 = 1/4. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 13,
       "type": "mc",
-      "question": "A population has standard deviation σ = 20. For samples of size n = 100, the standard error of the mean is:",
+      "question": "X has a binomial distribution with n = 10 and p = 0.20. What is Var(X)?",
       "options": [
-        "20",
-        "2",
-        "0.2",
-        "200"
+        "0.4",
+        "1.6",
+        "2.0",
+        "4.0"
       ],
-      "answer": "2",
-      "explanation": "Standard error = σ / √n = 20 / √100 = 20 / 10 = 2. It connects the correct answer to Statistics midterm concepts and separates it from plausible distractors.",
+      "answer": "1.6",
+      "explanation": "Var(X)=np(1-p)=10(0.20)(0.80)=1.6. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 14,
-      "type": "short",
-      "question": "A spinner is divided into 5 equal sections numbered 1 through 5. Define the sample space. Then calculate P(spinning an odd number) and P(spinning a number greater than 3).",
-      "options": null,
-      "answer": "Sample space: {1, 2, 3, 4, 5}; P(odd) = 3/5; P(greater than 3) = 2/5. A strong response should use Statistics midterm concepts vocabulary, answer the full prompt, and include reasoning or evidence rather than a one-word reply.",
-      "explanation": "Odd numbers: 1, 3, 5 → 3 out of 5 equally likely outcomes. Greater than 3: 4, 5 → 2 out of 5.",
+      "type": "mc",
+      "question": "A fair spinner has five equal sections numbered 1-5. Which gives its sample space, P(odd), and P(number > 3)?",
+      "options": [
+        "{1,2,3,4,5}; 3/5; 2/5",
+        "{1,2,3,4,5}; 2/5; 3/5",
+        "{1,3,5}; 3/5; 2/5",
+        "{1,2,3,4,5}; 3/5; 3/5"
+      ],
+      "answer": "{1,2,3,4,5}; 3/5; 2/5",
+      "explanation": "Odd outcomes are 1, 3, and 5; outcomes greater than 3 are 4 and 5. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 2
     },
     {
       "examType": "midterm",
       "order": 15,
-      "type": "short",
-      "question": "The ages of 7 employees are: 24, 28, 31, 35, 35, 40, 52. Compute the mean and median. Then explain which measure better represents the center of this data set and why.",
-      "options": null,
-      "answer": "Mean = 245/7 ≈ 35.0; Median = 35; The median is a better measure because the value 52 is a potential outlier that pulls the mean slightly upward.",
-      "explanation": "Mean: (24+28+31+35+35+40+52)/7 = 245/7 ≈ 35.0. Median (middle of sorted list) = 35. Both coincide here, but the outlier at 52 makes the median more robust.",
+      "type": "mc",
+      "question": "For ages 24, 28, 31, 35, 35, 40, and 52, what are the mean and median?",
+      "options": [
+        "Mean 35; median 35",
+        "Mean 35; median 31",
+        "Mean 40; median 35",
+        "Mean 34; median 35"
+      ],
+      "answer": "Mean 35; median 35",
+      "explanation": "The sum is 245, so the mean is 245/7=35; the fourth ordered value is 35. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 2
     },
     {
@@ -522,11 +537,16 @@
     {
       "examType": "final",
       "order": 6,
-      "type": "fill",
+      "type": "mc",
       "question": "If P(A) = 0.6 and A and B are independent with P(B) = 0.3, what is P(A and B)?",
-      "options": null,
+      "options": [
+        "0.18",
+        "0.90",
+        "0.30",
+        "0.20"
+      ],
       "answer": "0.18",
-      "explanation": "The correct answer is: 0.18.",
+      "explanation": "Independence gives P(A and B)=P(A)P(B)=0.6(0.3)=0.18. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1
     },
     {
@@ -727,11 +747,16 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "short",
-      "question": "A study finds a strong positive correlation (r = 0.91) between ice cream sales and drowning rates across months. A headline reads 'Ice cream causes drowning.' Explain what is wrong with this conclusion and identify what statistical concept is being ignored.",
-      "options": null,
-      "answer": "Correlation does not imply causation; a lurking variable (hot weather) explains both increases.",
-      "explanation": "Both ice cream sales and drowning rates increase in summer due to hot weather — a confounding/lurking variable. Correlation measures association, not causation.",
+      "type": "mc",
+      "question": "A study finds r=0.91 between monthly ice cream sales and drowning rates. Which conclusion is justified?",
+      "options": [
+        "The association alone does not establish causation; season could affect both variables",
+        "The correlation proves ice cream causes drowning",
+        "A correlation of 0.91 means 91% of drownings are caused by ice cream",
+        "Positive correlation rules out lurking variables"
+      ],
+      "answer": "The association alone does not establish causation; season could affect both variables",
+      "explanation": "Correlation alone cannot establish causation. Season is a plausible lurking variable, but this association does not demonstrate the cause. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 2
     }
   ],
@@ -767,16 +792,17 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "A sample where every member of the population has an equal chance of being selected is called a:",
+      "question": "Which sampling method gives every possible sample of n distinct population members the same probability of selection?",
       "options": [
-        "Convenience sample",
-        "Voluntary response sample",
         "Simple random sample",
-        "Cluster sample"
+        "Stratified random sample",
+        "Cluster sample",
+        "Convenience sample"
       ],
       "answer": "Simple random sample",
-      "explanation": "Simple random sampling gives every individual and every group of that size an equal chance of selection.",
-      "points": 1
+      "explanation": "A simple random sample gives every possible sample of the stated size an equal chance. Equal individual inclusion probabilities alone would not uniquely identify this design.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 1,
@@ -991,12 +1017,17 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Short response: Define or explain: Using the standard normal table, p(z < 1.96) ≈.",
-      "options": null,
+      "question": "For a standard normal variable Z, approximately what is P(Z < 1.96)?",
+      "options": [
+        "0.025",
+        "0.475",
+        "0.950",
+        "0.975"
+      ],
       "answer": "0.975",
-      "explanation": "A correct response identifies \"0.975\" and connects it to the module context.",
+      "explanation": "Approximately 95% lies between -1.96 and 1.96, leaving 2.5% above 1.96. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 5,
@@ -1141,12 +1172,17 @@
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Short response: Complete this statement: In a contingency table, if p(b|a) = p(b), the events a and b are...",
-      "options": null,
-      "answer": "Independent",
-      "explanation": "A correct response identifies \"Independent\" and connects it to the module context.",
+      "question": "Of 100 students, 40 take art, 30 take music, and 12 take both. What is P(art | music)?",
+      "options": [
+        "0.12",
+        "0.30",
+        "0.40",
+        "0.70"
+      ],
+      "answer": "0.40",
+      "explanation": "Restrict the denominator to the 30 music students: 12/30=0.40. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 7,
@@ -1207,16 +1243,17 @@
     {
       "moduleOrder": 8,
       "order": 1,
-      "question": "The Central Limit Theorem applies when:",
+      "question": "For independent, identically distributed observations from a population with finite mean and finite positive variance, what does the Central Limit Theorem imply as n becomes large?",
       "options": [
-        "The population is normally distributed",
-        "n ≥ 30 (or the population is normal)",
-        "The sample is biased",
-        "The data is categorical"
+        "The standardized sample mean approaches a standard normal distribution",
+        "The population itself becomes normal",
+        "Every sample becomes symmetric",
+        "n=30 guarantees exact normality"
       ],
-      "answer": "n ≥ 30 (or the population is normal)",
-      "explanation": "The CLT guarantees an approximately normal sampling distribution when n ≥ 30, regardless of population shape.",
-      "points": 1
+      "answer": "The standardized sample mean approaches a standard normal distribution",
+      "explanation": "The theorem concerns the standardized sample mean. A finite-sample approximation depends on population shape, so 30 is not a universal guarantee.",
+      "points": 1,
+      "type": "mc"
     },
     {
       "moduleOrder": 8,
@@ -1403,22 +1440,32 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Short response: Complete this statement: A 95% confidence interval for a proportion is (0.42, 0.58). the point estimate is...",
-      "options": null,
+      "question": "A symmetric one-proportion z-interval is (0.42, 0.58). What is its point estimate?",
+      "options": [
+        "0.08",
+        "0.16",
+        "0.42",
+        "0.50"
+      ],
       "answer": "0.50",
-      "explanation": "A correct response identifies \"0.50\" and connects it to the module context.",
+      "explanation": "The point estimate is the interval midpoint: (0.42+0.58)/2=0.50. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 10,
       "order": 6,
-      "question": "Short response: When no prior estimate of p is available, which value is used to conservatively calculate required sample size?",
-      "options": null,
-      "answer": "p̂ = 0.50",
-      "explanation": "A correct response identifies \"p̂ = 0.50\" and connects it to the module context.",
+      "question": "Using p=0.50 and z*=1.96, what minimum sample size gives a planned margin of error no greater than 0.05?",
+      "options": [
+        "196",
+        "384",
+        "385",
+        "400"
+      ],
+      "answer": "385",
+      "explanation": "n must be at least 1.96^2(0.5)(0.5)/0.05^2=384.16, so round upward to 385. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 11,
@@ -1563,12 +1610,17 @@
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Short response: Define or explain: For a one-proportion z-test with p₀ = 0.5, n = 100, and p̂ = 0.58, the z-statistic is.",
-      "options": null,
-      "answer": "1.6",
-      "explanation": "A correct response identifies \"1.6\" and connects it to the module context.",
+      "question": "For a one-proportion z-test with p0=0.50, n=100, and p-hat=0.58, what is z?",
+      "options": [
+        "0.16",
+        "0.80",
+        "1.60",
+        "8.00"
+      ],
+      "answer": "1.60",
+      "explanation": "z=(0.58-0.50)/sqrt(0.50(0.50)/100)=1.60. This calculation or biological mechanism directly supports the keyed option and rules out the alternatives under the conditions stated in the question.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 13,
@@ -1651,7 +1703,7 @@
         "We should ban ice cream"
       ],
       "answer": "A lurking variable (e.g., hot weather) may explain both",
-      "explanation": "Correlation does not imply causation. A third variable (hot summer weather) drives both variables.",
+      "explanation": "Season or hot weather could influence both variables, so it is a plausible lurking variable. The reported association alone does not identify the cause or establish a causal effect.",
       "points": 1
     },
     {
