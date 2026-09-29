@@ -123,22 +123,12 @@ function Footer({ language }) {
         ))}
       </div>
 
-      <section className={styles.partner} id="education-partner" aria-labelledby="education-partner-title">
-        <div className={styles.partnerCopy}>
-          <p className={styles.partnerLabel}>{en ? 'Education advisory partnership' : '教育顾问合作'}</p>
-          <h2 id="education-partner-title">{en ? 'Genius Academy' : '杰尼教育 Genius Academy'}</h2>
-          <p>{en
-            ? 'GIIS works with Genius Academy to connect families worldwide with study-abroad planning and university application advisory, including undergraduate, master’s and transfer pathways.'
-            : 'GIIS 与杰尼教育合作，为全球家庭提供留学规划与大学申请顾问服务入口，涵盖本科、硕士及大学转学规划。'}</p>
-          <p className={styles.partnerNote}>{en
-            ? 'Confirm any additional advisory scope and fees separately before engaging the service; these are not automatically included in GIIS tuition. Admissions decisions remain with each institution.'
-            : '额外顾问服务的范围与费用须在合作前另行确认，不自动包含在 GIIS 学费内。录取决定由各院校独立作出。'}</p>
-        </div>
+      <div className={styles.partnerEntry}>
+        <span>{en ? 'Education advisory partner' : '升学规划合作伙伴'}</span>
         <a className={styles.partnerLink} href={en ? 'https://genius.genesisideas.school/en' : 'https://genius.genesisideas.school/'}>
-          {en ? 'Explore Genius Academy' : '了解杰尼教育服务'}
-          <span>{en ? 'Visit our advisory partner’s website' : '前往合作顾问网站'}</span>
+          {en ? 'Genius Academy' : '杰尼教育 Genius Academy'} <span aria-hidden="true">↗</span>
         </a>
-      </section>
+      </div>
 
       {/* Bottom bar */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', padding: '20px 10%' }}>

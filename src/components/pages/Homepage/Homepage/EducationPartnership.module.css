@@ -1,0 +1,36 @@
+.section { background: #fff; color: #1a1d24; padding: 80px 0; font-family: var(--giis-font-sans, sans-serif); scroll-margin-top: 88px; }
+.inner { max-width: 1100px; padding: 0 32px; margin: 0 auto; box-sizing: border-box; }
+.eyebrow { font-size: .8125rem; font-weight: 700; color: #6d5721; letter-spacing: .08em; margin: 0 0 28px; }
+.brands { display: flex; align-items: center; gap: 32px; padding-bottom: 36px; border-bottom: 1px solid #dfe3eb; }
+.brands img { display: block; height: auto; object-fit: contain; max-width: 100%; }
+.schoolLogo { width: 480px; min-width: 0; }
+.geniusLogo { width: 185px; min-width: 0; }
+.times { color: #697386; font-size: 1.5rem; }
+.layout { display: grid; grid-template-columns: 1.3fr 1fr; gap: 72px; margin-top: 40px; }
+.intro, .roles { min-width: 0; }
+.intro h2 { font-size: clamp(1.875rem, 3.2vw, 2.75rem); color: #2b3d6d; line-height: 1.3; font-weight: 700; margin: 0 0 22px; text-wrap: balance; }
+.lead { font-size: 1.0625rem; line-height: 1.85; color: #4c566b; margin: 0; }
+.pathways { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 0; margin: 24px 0 28px; list-style: none; color: #2b3d6d; font-size: .9375rem; }
+.pathways li { border-bottom: 1px solid #c9b57e; padding-bottom: 5px; }
+.cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; background: #2b3d6d; color: #fff; border: 2px solid #2b3d6d; border-radius: 8px; padding: 14px 20px; font-size: 1rem; line-height: 1.5; text-decoration: none; min-height: 48px; box-sizing: border-box; max-width: 100%; }
+.cta:hover { background: #1a1a2e; border-color: #1a1a2e; color: #fff; }
+.cta:focus-visible { outline: 3px solid #9a761e; outline-offset: 4px; }
+.destination { color: #5c6578; font-size: .8125rem; margin: 10px 0 0; line-height: 1.6; }
+.roles { border-left: 1px solid #dfe3eb; padding-left: 36px; }
+.roles > div + div { border-top: 1px solid #dfe3eb; padding-top: 24px; margin-top: 24px; }
+.roles h3 { margin: 6px 0 10px; color: #2b3d6d; font-size: 1.25rem; }
+.roles p { color: #4c566b; font-size: .9375rem; line-height: 1.8; margin: 0; }
+.roles .roleLabel { font-size: .8125rem; color: #6d5721; font-weight: 600; }
+.note { border-top: 1px solid #dfe3eb; padding-top: 24px; margin: 40px 0 0; color: #5c6578; font-size: .8125rem; line-height: 1.8; }
+@media (max-width: 768px) {
+  .section { padding: 48px 0; }
+  .inner { padding: 0 24px; }
+  .brands { flex-wrap: wrap; gap: 20px; padding-bottom: 28px; }
+  .schoolLogo { width: 100%; max-width: 480px !important; }
+  .geniusLogo { width: 170px; }
+  .layout { grid-template-columns: 1fr; gap: 32px; margin-top: 32px; }
+  .roles { border-left: 0; padding-left: 0; border-top: 1px solid #dfe3eb; padding-top: 28px; }
+}
+@media (max-width: 480px) {
+  .cta { display: flex; width: 100%; gap: 12px; }
+}

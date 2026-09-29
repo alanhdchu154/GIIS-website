@@ -1,30 +1,21 @@
 /* Footer styles handled inline; only responsive overrides here */
 
-.partner {
+.partnerEntry {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 32px 10% 40px;
+  padding: 20px 10%;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 24px 40px;
+  gap: 8px 20px;
   font-family: var(--giis-font-sans, sans-serif);
+  font-size: 0.875rem;
+  color: #c0c7d6;
 }
-.partnerCopy { flex: 1 1 400px; min-width: 0; }
-.partnerLabel { color: #d5a836; font-size: 0.875rem; margin: 0 0 10px; }
-.partner h2 { color: #fff; font-size: 1.5rem; line-height: 1.35; margin: 0 0 12px; }
-.partnerCopy > p:not(.partnerLabel) { font-size: 1rem; line-height: 1.7; color: #e0e3ed; margin: 0 0 12px; }
-.partnerCopy > p.partnerNote { font-size: 0.875rem; color: #c0c7d6; margin-bottom: 0; }
-.partnerLink { color: #fff; border: 1px solid #aebbd5; border-radius: 8px; padding: 16px 20px; font-size: 1rem; line-height: 1.5; text-decoration: underline; text-underline-offset: 4px; max-width: 100%; overflow-wrap: anywhere; }
-.partnerLink span { display: block; font-size: 0.875rem; color: #c0c7d6; margin-top: 6px; }
-.partnerLink:hover { color: #fff; background: #2b3d6d; }
+.partnerLink { color: #fff; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; line-height: 1.5; text-underline-offset: 4px; }
+.partnerLink:hover { color: #d5a836; }
 .partnerLink:focus-visible { outline: 3px solid #d5a836; outline-offset: 4px; }
-
-@media (max-width: 480px) {
-  .partner { padding: 28px 8%; }
-  .partnerLink { width: 100%; box-sizing: border-box; }
-}
 
 @media (max-width: 768px) {
   footer > div:first-child {

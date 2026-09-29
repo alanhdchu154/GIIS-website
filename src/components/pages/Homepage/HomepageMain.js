@@ -13,6 +13,7 @@ import StudentExperiencePreview from '../../main/StudentExperiencePreview';
 import FacultyGraduates from './Homepage/FacultyGraduates.js';
 import ContactForm from './Homepage/ContactForm';
 import SuccessStories from './Homepage/SuccessStories';
+import EducationPartnership from './Homepage/EducationPartnership';
 
 const PATHWAY_HIGHLIGHTS = [
   { emoji: '💻', en: 'CS & Engineering',      zh: '计算机科学',        color: '#1565C0', to: '/pathways/cs' },
@@ -347,6 +348,9 @@ function HomepageMain({ language, toggleLanguage }) {
 
       {/* 8 Pathways showcase */}
       <HomepagePathways language={language} />
+
+      {/* School learning and global application advisory: distinct, complementary roles. */}
+      <EducationPartnership language={language} />
 
       {/* Student success stories */}
       <SuccessStories language={language} />
