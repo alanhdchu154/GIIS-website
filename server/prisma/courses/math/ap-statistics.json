@@ -21,7 +21,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Classify 20 variables as categorical or quantitative. Create a frequency table and bar chart for a provided dataset. Write a 3-sentence description of the distribution. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Exploring Data: Categorical & Quantitative Variables module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Classify these 20 variables as categorical or quantitative: favorite color, height, number of siblings, ZIP code, test score, eye color, time to finish a quiz, shoe size, school ID, temperature in C, pet type, age, jersey number, distance traveled, letter grade, monthly rainfall, phone area code, number of books read, music genre, and weight. Then use this favorite-color dataset—Blue, Red, Blue, Green, Red, Blue, Yellow, Green, Blue, Red—to make a frequency table and bar chart. Write three sentences describing the displayed categorical distribution. Submit: one labeled document, worksheet, slide, or image showing classifications, table, graph, and sentences. Include: all requested data, calculations, visualizations, interpretations, and supporting work. Evaluation: all 20 classifications are present; the table and bar chart use the supplied 10 responses accurately; and the description identifies a supported comparison using the graph.",
       "estimatedHrs": 3
     },
     {
@@ -37,7 +37,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "For a given dataset: compute mean, median, Q1, Q3, IQR, and standard deviation. Construct a boxplot and histogram. Identify any outliers using the 1.5*IQR rule. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Describing Distributions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use the ordered dataset 4, 5, 5, 6, 7, 7, 8, 9, 10, 10, 12, 14, 18. Calculate the mean, median, Q1, Q3, IQR, and sample standard deviation; show each calculation or calculator input/output. Make a boxplot and histogram, then use the 1.5 × IQR fences to identify any outlier. Submit: one labeled document, worksheet, slide, or image. Include: all requested data, calculations, visualizations, interpretations, and supporting work. Evaluation: all requested statistics and both graphs are included; quartiles and fences are shown; and the outlier conclusion follows from the displayed fences.",
       "estimatedHrs": 3.5
     },
     {
@@ -53,7 +53,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Compare two datasets using parallel boxplots. Calculate z-scores for 6 values across two different distributions. Write a 2-paragraph comparison in context. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Comparing Distributions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Compare quiz scores for Class A (62, 68, 70, 74, 76, 81, 84, 90) and Class B (55, 60, 66, 72, 79, 83, 88, 96). Create parallel boxplots using the same scale. Use the sample summaries calculated from these data—Class A mean 75.625 and SD 9.133; Class B mean 74.875 and SD 14.167—to find z-scores for 62, 76, and 90 in Class A and 60, 79, and 96 in Class B. Write two paragraphs comparing center, spread, shape or unusual features, and relative performance in context. Submit: one labeled document, worksheet, slide, or image. Include: all requested data, calculations, visualizations, interpretations, and supporting work. Evaluation: both boxplots and all six z-score calculations are shown; the comparison uses numerical evidence; and relative performance is based on z-scores rather than raw scores alone.",
       "estimatedHrs": 3
     },
     {
@@ -66,10 +66,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=GhrxgbQnEEU",
-      "video2Note": "Professor Leonard — Correlation and Linear Regression",
+      "video2Note": "Eugene O’Loughlin — How To Perform Simple Linear Regression by Hand",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "For a bivariate dataset: create a scatterplot, calculate r, find the LSRL, interpret slope and intercept in context, and compute r^2. Identify any influential points. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Bivariate Data & Linear Regression module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "For study-hours x and quiz-score y pairs (1,58), (2,63), (3,67), (4,72), (5,77), (6,82), (7,87), (8,92), (9,97), and (10,40), make a scatterplot, calculate r, find the least-squares regression line, and calculate r². Interpret the slope and intercept in context, identify the likely influential point, and explain how it affects the model. Submit: one labeled document, worksheet, slide, or image with calculation evidence. Include: all requested data, calculations, visualizations, interpretations, and supporting work. Evaluation: the plot, r, regression equation, and r² are present; both coefficient interpretations use the variables and units; and the influential-point claim is supported by the plotted data or residual evidence.",
       "estimatedHrs": 4
     },
     {
@@ -77,15 +77,15 @@
       "title": "Designing Studies",
       "titleZh": "研究设计",
       "objectives": "Distinguish observational studies from experiments; identify sampling methods (SRS, stratified, cluster, systematic); recognize sources of bias; understand principles of experimental design (randomization, control, replication, blinding).",
-      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-introduction",
-      "readingNote": "OpenStax Introductory Statistics — Ch 1.2-1.3: Sampling and Study Design",
+      "readingUrl": "https://openstax.org/books/introductory-statistics/pages/1-4-experimental-design-and-ethics",
+      "readingNote": "OpenStax Introductory Statistics — Section 1.4: Experimental Design and Ethics",
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Design a study to investigate a question of your choice. Specify the sampling method, control group, treatment, and how to address potential confounding variables. Write a 1-page study proposal. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Designing Studies module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Design a randomized experiment to test whether a 10-minute retrieval-practice routine improves a vocabulary quiz score. Write a one-page proposal that names the population, sampling method, experimental units, treatment and control conditions, random-assignment method, response variable, replication plan, and one plausible confounder with a mitigation. Do not collect personal data; this is a design exercise. Submit: one labeled document, worksheet, or slide. Include: all requested data, calculations, visualizations, interpretations, and supporting work. Evaluation: the proposal distinguishes sampling from random assignment; includes a feasible control and treatment; addresses replication and a confounder; and states a conclusion that the proposed experiment could support without claiming results.",
       "estimatedHrs": 3.5
     },
     {
@@ -101,7 +101,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve 10 probability problems using addition, multiplication, and complement rules. Construct a two-way table and use it to calculate 4 conditional probabilities. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Probability module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use this two-way table of 120 students: 42 play a school sport and study at least 3 hours weekly, 18 play a sport and study under 3 hours, 30 do not play a sport and study at least 3 hours, and 30 do not play a sport and study under 3 hours. Recreate the table with totals and calculate P(sport or at least 3 hours), P(sport and at least 3 hours), P(at least 3 hours | sport), and P(sport | at least 3 hours). Then solve: a fair die is rolled twice; find P(at least one 6) by a complement, and state whether the two rolls are independent. Submit: one labeled document, worksheet, slide, or image showing formulas and substitutions. Include: all requested data, calculations, visualizations, interpretations, and supporting work. Evaluation: totals and four conditional or joint probabilities are correct; the complement method is shown; and each result is identified as joint, conditional, union, or complement as appropriate.",
       "estimatedHrs": 4
     },
     {
@@ -117,7 +117,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Construct a probability distribution table for a given scenario. Calculate the mean and standard deviation. Apply linear transformation and combination rules for 4 problems. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Random Variables module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "A game pays X dollars with values 0, 5, and 20 at probabilities 0.50, 0.35, and 0.15. Make a probability distribution table and calculate E(X) and SD(X). Then find E(Y) and SD(Y) for Y = 2X − 3. Finally, if independent random variable Z has E(Z)=4 and Var(Z)=9, find E(X+Z) and Var(X+Z). Submit: one labeled document, worksheet, slide, or image with formulas and substitutions. Include: all requested data, calculations, visualizations, interpretations, and supporting work. Evaluation: probabilities are checked to total 1; the mean and standard deviation work is shown; transformation rules use the absolute multiplier for SD; and combination rules state the independence assumption where needed.",
       "estimatedHrs": 3.5
     },
     {
@@ -130,10 +130,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=qIzC1-9PwQo",
-      "video2Note": "Professor Leonard — Binomial Probability Distribution",
+      "video2Note": "Jeremy Balka / jbstatistics — An Introduction to the Binomial Distribution",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Verify BINS for 4 scenarios. Calculate P(X=k), P(X<=k), and P(X>k) for 3 binomial settings. Solve 2 geometric distribution problems. Submit your work as a labeled solution set that includes: (1) each major calculation or transformation step, (2) a short explanation of why the method fits the problem, (3) one checked or corrected answer with the error explained, and (4) a 100-word reflection connecting the skill to a real academic, career, or life situation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Binomial & Geometric Distributions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "For each scenario, decide whether BINS holds and justify every letter: (A) 12 randomly selected students independently answer a true/false item with success probability 0.70; (B) 12 cards are drawn without replacement from a 52-card deck and success means a heart; (C) a student rolls a fair die until the first 6. For X ~ Binomial(12, 0.30), calculate P(X=4), P(X≤4), and P(X>4) using technology or a displayed formula. For a geometric variable with p=0.25, find P(first success on trial 3) and P(first success by trial 3). Submit: one labeled solution set with calculation evidence and a 100-word reflection on choosing a distribution. Include: all requested data, calculations, visualizations, interpretations, and supporting work. Evaluation: each BINS decision is justified; all five probability expressions use the correct model; calculations are labeled; and the reflection explains one model-selection decision.",
       "estimatedHrs": 4
     },
     {
@@ -146,10 +146,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=FXZ2O1Lv-KE",
-      "video2Note": "Professor Leonard — The Central Limit Theorem",
+      "video2Note": "Khan Academy — Sampling Distribution of the Sample Mean",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Calculate the mean and standard error of sampling distributions for 4 scenarios. Use the CLT to find probabilities for sample means. Explain the effect of sample size on variability. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Sampling Distributions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "A population has mean 70 and SD 12. For random samples of n=9, n=36, and n=144, calculate the mean and standard error of x̄. Assuming the population is normal, find P(x̄ > 74) for n=36. For a population proportion p=0.40 and n=100, calculate the mean and standard deviation of p̂ and check the large-count condition. Write two sentences explaining how increasing n changes variability but not the sampling-distribution mean. Submit: one labeled document, worksheet, slide, or image with formulas or calculator output. Include: all requested data, calculations, visualizations, interpretations, and supporting work. Evaluation: all requested centers and standard errors are shown; the probability setup includes the correct standardization; the proportion condition is checked; and the explanation distinguishes center from spread.",
       "estimatedHrs": 4
     },
     {
@@ -165,7 +165,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Construct 95% and 99% confidence intervals for 3 datasets (means and proportions). Interpret each interval in context. Determine the required sample size for a desired margin of error. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Confidence Intervals module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use these independent random-sample settings, with each population at least 10 times its sample size: (1) 25 battery lifetimes from an approximately Normal production process have x̄=72 hours and s=10 hours; construct a 95% t-interval for the population mean using t*=2.064. (2) In a poll of 100 eligible voters, 68 support a proposal; construct a 99% z-interval for the population proportion using z*=2.576. (3) In a survey of 75 households, 45 use solar power; construct a 95% z-interval for the population proportion using z*=1.96. For each, state the parameter, verify the supplied conditions, calculate the standard error and interval, and interpret the population parameter in context. Then find the conservative sample size for a 95% proportion estimate with margin of error 0.04 when no prior p̂ is available. Submit: one labeled document, worksheet, slide, or image. Include: all requested data, calculations, condition checks, interpretations, and supporting work. Evaluation: parameter, conditions, standard error, critical value, and endpoints are shown for each interval; interpretations concern the population parameter; and the sample-size answer is rounded up.",
       "estimatedHrs": 4
     },
     {
@@ -178,10 +178,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=-FtlH4svqx4",
-      "video2Note": "Professor Leonard — Hypothesis Testing",
+      "video2Note": "Khan Academy — Hypothesis Testing and p-values",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Conduct full hypothesis tests (4-step process) for 4 scenarios involving means and proportions. Identify and describe Type I and Type II errors in each context. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Significance Tests module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Complete four hypothesis-test outlines at alpha=0.05. Assume each population is at least 10 times its random sample size. (1) A random sample of 40 batteries has x̄=9.6 hours and s=1.8 hours; test H0: μ=10 versus Ha: μ<10 using a one-sample t test with p=0.084. (2) In a random sample of 100 customers, 62 renew; test H0: p=0.50 versus Ha: p>0.50 using a one-proportion z test with p=0.008. (3) State a Type I error for test 2. (4) State a Type II error for test 1. For tests 1 and 2, write hypotheses, check the stated sampling and large-count or sample-size conditions, report the p-value, make a decision, and write a conclusion in context. Submit: one labeled document, worksheet, slide, or image. Include: all requested hypotheses, condition checks, decisions, interpretations, reasoning evidence, and supporting work. Evaluation: hypotheses use parameters; decisions compare p to alpha without claiming proof; contextual conclusions match the decision; and both error statements identify the incorrect decision and real-world state.",
       "estimatedHrs": 4.5
     },
     {
@@ -193,11 +193,11 @@
       "readingNote": "OpenStax Introductory Statistics — Ch 10: Hypothesis Testing with Two Samples",
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "video2Url": "https://www.youtube.com/watch?v=hpWdDmgsIRE",
-      "video2Note": "Professor Leonard — Two-Sample t-Tests and Confidence Intervals",
+      "video2Url": "",
+      "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Conduct two-sample hypothesis tests for 3 scenarios (means and proportions). Construct and interpret 95% confidence intervals for each. Write conclusions in full sentences in context. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Comparing Two Populations module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Two independent random samples compare final-exam scores after teaching methods A and B; the school populations are at least 300 students each. Both score distributions are approximately symmetric with no outliers. Group A has n=30, x̄=78, s=8, and Group B has n=28, x̄=73, s=9. Construct an approximate 95% confidence interval for μA−μB using t*=2.00 and SE=sqrt(8²/30 + 9²/28). In separate independent random samples, Product A has 54 renewals among 90 customers and Product B has 42 among 100; each customer population is at least 1,000. Test H0: pA−pB=0 versus Ha: pA−pB>0 at alpha=0.05 using a pooled proportion. Finally, explain why before-and-after scores from the same students require a paired procedure. Submit: one labeled document, worksheet, slide, or image. Include: all requested parameter statements, condition checks, calculations, interpretations, and supporting work. Evaluation: the interval and test show parameter, formula, and numeric work; the pooled proportion is used only for the test; conclusions match the contexts; and the paired-data explanation identifies within-person differences.",
       "estimatedHrs": 4
     },
     {
@@ -210,10 +210,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=WXPBoFDqNVk",
-      "video2Note": "Professor Leonard — Chi-Square Tests",
+      "video2Note": "Bozeman Science — Chi-squared Test",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Perform a goodness-of-fit test and a test of independence using provided data tables. Calculate expected counts, the chi-square statistic, degrees of freedom, and p-value. Write a full conclusion. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Chi-Square Tests module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "At alpha=0.05, complete two chi-square tests. For a goodness-of-fit test, a random sample of 100 students reports pet preferences Dog=36, Cat=28, Fish=20, Other=16; test the population distribution 0.40, 0.30, 0.20, 0.10. For a test of homogeneity, independent random samples of 50 ninth-graders and 50 tenth-graders give this table: 24 ninth-graders and 36 tenth-graders prefer online homework; 26 ninth-graders and 14 tenth-graders prefer paper homework. Assume each sampled population is at least 10 times its sample. For each test, state hypotheses, calculate expected counts, show every (O−E)²/E contribution, total chi-square statistic, degrees of freedom, p-value, decision, and conclusion in context. Submit: one labeled document, worksheet, slide, or image. Include: all requested tables, calculations, condition checks, decisions, and supporting work. Evaluation: expected counts and df match the selected goodness-of-fit or homogeneity test; contribution work is visible; conditions are checked; and conclusions distinguish lack of evidence from proof of no relationship or difference.",
       "estimatedHrs": 4
     },
     {
@@ -229,7 +229,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Interpret a regression computer output table. Test the hypothesis that the slope is zero at alpha=0.05. Construct a 95% CI for the slope and interpret it in context. Verify all conditions. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Inference for Linear Regression module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "For an independent random sample of 18 students, a regression of quiz score y on weekly study hours x reports ŷ=61.2+3.40x, SE(b1)=0.95, df=16, t=3.58, p=0.003. The residual plot shows random scatter around zero with roughly constant spread, and a Normal probability plot of residuals is approximately linear. Assume the student population is at least 180. At alpha=0.05, test H0: β=0 versus Ha: β≠0. Using t*=2.120, construct a 95% CI for β and interpret the slope and interval in context. Match each LINE condition to supplied evidence and identify one limitation of this observational study. Submit: one labeled document, worksheet, slide, or image. Include: all requested hypotheses, condition evidence, calculations, interpretations, and supporting work. Evaluation: the test decision and CI arithmetic are correct; interpretations concern mean quiz score; condition evidence is tied to the supplied output; and the limitation avoids a causal claim.",
       "estimatedHrs": 4
     },
     {
@@ -245,7 +245,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Use a real two-variable dataset to fit a least-squares regression model. Create a scatterplot and residual plot, check inference conditions, compute or interpret a confidence interval for slope, and write one AP-style conclusion in context. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Inference for Linear Regression — Advanced Applications module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Treat this as a conditional regression-inference exercise. An independent random sample of eight students from a population of at least 80 gives practice hours x and score y: (1,61), (2,65), (3,68), (4,72), (5,73), (6,79), (7,82), (8,85). Assume the population errors are Normal with constant variance. Make a scatterplot and residual plot, fit a least-squares line, and report slope, intercept, r, and r². Use SE(b1)=0.135, df=6, and t*=2.447 to construct a conditional 95% CI for the population slope; your fitted slope should be about 3.417 and intercept about 57.75. Match the stated assumptions to the inference conditions, assess the plots—including the relatively large negative residual at x=5—and explain that the small sample limits diagnostic strength. Write one population conclusion about association without claiming causation. Submit: one labeled document, worksheet, slide, or image. Include: all requested data, calculations, plots, condition checks, limitations, interpretations, and supporting work. Evaluation: regression output agrees with the supplied pairs within rounding; CI arithmetic uses the reported SE and df; the condition discussion distinguishes assumptions from plot evidence; and the conclusion identifies the population slope without making a causal claim.",
       "estimatedHrs": 4
     },
     {
@@ -261,7 +261,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Complete one mixed AP-style free-response set under timed conditions. For each problem, label the method used, conditions checked, and conclusion. Score the set with a rubric and revise the lowest-scoring response. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Inference for Linear Regression — Synthesis & Review module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Complete this 45-minute mixed free-response set at alpha=0.05. (1) A simple random sample of 80 students from a school of 1,200 includes 52 who prefer a later start time; construct a 95% interval for the population proportion using z*=1.96 and check the large-count and 10% conditions. (2) In a randomized study, 18 of 30 treatment students and 12 of 30 control students improve. For pT−pC, test H0: pT−pC=0 versus Ha: pT−pC≠0 using the supplied two-sided p-value 0.121, then state a conclusion about the treatment. (3) In an observational random sample of 25 students from a population of at least 250, x is weekly study hours and y is exam score. Test H0: β=0 versus Ha: β≠0 at alpha=0.05. The fitted line is ŷ=50+2.8x, residuals show random scatter with roughly constant spread, a Normal probability plot is approximately linear, and the slope test has p=0.003. State the parameter and conditions, then write a conclusion about association without claiming causation. Label the method, parameter, conditions, calculation or supplied evidence, decision, and conclusion for each problem. Score each response 0–4 using: 1 point method/parameter, 1 point conditions, 1 point calculation/evidence, and 1 point decision/contextual conclusion; revise the lowest-scoring response. Submit: one labeled document, worksheet, slide, or image. Include: all three responses, self-scores, revision, calculations, interpretations, and supporting work. Evaluation: methods and conditions match each design; the two tests use the supplied p-values correctly; the revision is identifiable; and causal language appears only for the randomized treatment study.",
       "estimatedHrs": 4
     }
   ],
@@ -311,39 +311,39 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Which variable is categorical rather than quantitative?",
+      "question": "Which variable is quantitative discrete rather than categorical?",
       "options": [
-        "Height in centimeters",
         "Favorite color",
         "Number of siblings",
-        "Time to finish a test"
+        "Eye color",
+        "ZIP code"
       ],
-      "answer": "Favorite color",
-      "explanation": "Favorite color places individuals into named groups and has no numerical measurement scale.",
+      "answer": "Number of siblings",
+      "explanation": "Number of siblings is a count, so it is a quantitative discrete variable. ZIP codes are labels, not numerical measurements.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 5,
-      "question": "Short response: Which graph is best for displaying a single quantitative variable for a small dataset?",
+      "question": "Which display stacks repeated values while showing every exact observation in a small quantitative dataset?",
       "options": null,
       "answer": "Dotplot",
-      "explanation": "A correct response identifies \"Dotplot\" and connects it to the module context.",
+      "explanation": "A dotplot places one dot for each exact observation and stacks dots at repeated values, so it satisfies both features named in the prompt.",
       "points": 1,
       "type": "fill"
     },
     {
       "moduleOrder": 2,
       "order": 1,
-      "question": "Which measure of center is most resistant to outliers?",
+      "question": "Between the mean and median, which measure of center is more resistant to an extreme outlier?",
       "options": [
         "Mean",
-        "Mode",
+        "Weighted mean",
         "Median",
-        "Range"
+        "Standard deviation"
       ],
       "answer": "Median",
-      "explanation": "The median is resistant to outliers because it depends only on the middle value(s), not extreme values.",
+      "explanation": "The median depends on the ordered middle position, so one extreme value usually changes it little; the mean uses every value and can shift substantially.",
       "points": 1
     },
     {
@@ -391,15 +391,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "Which measure of center is most resistant to extreme outliers?",
+      "question": "Which measure of spread is most resistant to extreme outliers?",
       "options": [
-        "Mean",
-        "Median",
         "Range",
-        "Standard deviation"
+        "Interquartile range",
+        "Standard deviation",
+        "Variance"
       ],
-      "answer": "Median",
-      "explanation": "The median depends on the middle position, so a few extreme values do not move it as much as they move the mean.",
+      "answer": "Interquartile range",
+      "explanation": "The IQR uses the middle 50% of the data, so extreme values have much less effect on it than on range, variance, or standard deviation.",
       "points": 1
     },
     {
@@ -461,15 +461,15 @@
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "Which display is best for directly comparing five-number summaries of two distributions?",
+      "question": "A score of 82 has z = 1.4 in Class A, while a score of 88 has z = 0.9 in Class B. Which score is relatively higher within its class?",
       "options": [
-        "Parallel boxplots",
-        "Pie charts",
-        "A single histogram",
-        "A bar graph of counts"
+        "The score of 82 in Class A",
+        "The score of 88 in Class B",
+        "They are equally high relative to their classes",
+        "It cannot be determined from z-scores"
       ],
-      "answer": "Parallel boxplots",
-      "explanation": "Parallel boxplots show medians, quartiles, ranges, and possible outliers side by side for comparison.",
+      "answer": "The score of 82 in Class A",
+      "explanation": "A larger z-score indicates a value farther above its distribution mean. Because 1.4 is greater than 0.9, 82 is relatively higher.",
       "points": 1
     },
     {
@@ -541,15 +541,15 @@
     {
       "moduleOrder": 5,
       "order": 1,
-      "question": "A simple random sample (SRS) ensures:",
+      "question": "A simple random sample of size n is selected when:",
       "options": [
-        "Every individual has an equal chance of selection",
-        "Every group has equal representation",
-        "The sample is perfectly representative",
+        "Every possible sample of size n has an equal chance of selection",
+        "Every individual receives the same treatment",
+        "Each subgroup contributes the same number of people",
         "Only volunteers are selected"
       ],
-      "answer": "Every individual has an equal chance of selection",
-      "explanation": "In an SRS, every individual in the population has an equal probability of being chosen.",
+      "answer": "Every possible sample of size n has an equal chance of selection",
+      "explanation": "An SRS gives every possible sample of the stated size the same chance of being selected; equal individual chance alone is not the full definition.",
       "points": 1
     },
     {
@@ -583,15 +583,15 @@
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Stratified sampling vs. cluster sampling: the key difference is:",
+      "question": "Which statement correctly distinguishes stratified sampling from one-stage cluster sampling?",
       "options": [
-        "Stratified samples from each group; cluster selects entire groups",
-        "Stratified divides into groups and samples all; cluster divides and samples some",
-        "They are the same method",
-        "Cluster is random; stratified is not"
+        "Stratified sampling randomly samples within every stratum; one-stage cluster sampling randomly selects clusters and surveys everyone in them",
+        "Stratified sampling surveys everyone in selected strata; cluster sampling samples within every cluster",
+        "Both methods require surveying every member of every group",
+        "Only cluster sampling can use random selection"
       ],
-      "answer": "Stratified samples from each group; cluster selects entire groups",
-      "explanation": "Stratified: divide into homogeneous strata, then sample from each. Cluster: divide into heterogeneous clusters, then randomly select entire clusters.",
+      "answer": "Stratified sampling randomly samples within every stratum; one-stage cluster sampling randomly selects clusters and surveys everyone in them",
+      "explanation": "Stratified sampling represents every stratum by sampling within each one. One-stage cluster sampling selects some clusters and includes every individual in the selected clusters.",
       "points": 1
     },
     {
@@ -611,15 +611,15 @@
     {
       "moduleOrder": 5,
       "order": 6,
-      "question": "What is a defining feature of a simple random sample?",
+      "question": "Which procedure describes systematic sampling rather than a simple random sample?",
       "options": [
-        "Every individual receives the same treatment",
-        "Every individual has an equal chance of selection",
-        "Only volunteers are included",
-        "The population is divided into clusters first"
+        "Choose every 10th name after a random start",
+        "Use a random-number generator to choose 10 names from 100",
+        "List every possible sample of 10 and give each equal chance",
+        "Draw 10 names without replacement from a thoroughly mixed list"
       ],
-      "answer": "Every individual has an equal chance of selection",
-      "explanation": "In the basic description of an SRS, individuals are selected by chance so each individual has an equal chance to be chosen.",
+      "answer": "Choose every 10th name after a random start",
+      "explanation": "Selecting every kth member after a random start is systematic sampling. The other choices can produce a simple random sample when implemented fairly.",
       "points": 1
     },
     {
@@ -667,24 +667,24 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Which condition shows that events A and B are independent?",
+      "question": "If P(A)=0.30, what is P(not A)?",
       "options": [
-        "P(A|B) = P(A)",
-        "P(A and B) = 0",
-        "P(A or B) = 1",
-        "P(A) = P(B)"
+        "0.30",
+        "0.70",
+        "1.30",
+        "Cannot be determined"
       ],
-      "answer": "P(A|B) = P(A)",
-      "explanation": "If knowing that B occurred does not change the probability of A, then A and B are independent.",
+      "answer": "0.70",
+      "explanation": "An event and its complement have probabilities that sum to 1. Therefore P(not A) = 1 − P(A) = 1 − 0.30 = 0.70, making 0.70 the unique correct option.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
-      "question": "Fill in the blank: ___ is the probability of rolling a sum of 7 on two fair dice.",
+      "question": "Fill in the blank in simplest form: ___ is the probability of rolling a sum of 7 on two fair dice.",
       "options": null,
-      "answer": "6/36",
-      "explanation": "The correct answer is: 6/36.",
+      "answer": "1/6",
+      "explanation": "There are 6 outcomes with sum 7 among 36 equally likely ordered outcomes, so 6/36 simplifies to 1/6.",
       "points": 1,
       "type": "fill"
     },
@@ -828,7 +828,7 @@
     {
       "moduleOrder": 9,
       "order": 1,
-      "question": "The Central Limit Theorem states that for large n, the sampling distribution of x-bar is approximately:",
+      "question": "When observations are independent and n is sufficiently large for the population shape, the sampling distribution of x-bar is approximately:",
       "options": [
         "Uniform",
         "Exponential",
@@ -836,7 +836,7 @@
         "Binomial"
       ],
       "answer": "Normal",
-      "explanation": "The CLT states that for large n, the sampling distribution of x-bar is approximately Normal regardless of the population shape.",
+      "explanation": "Under the usual independence and sample-size conditions, the Central Limit Theorem makes the sampling distribution of x-bar approximately Normal.",
       "points": 1
     },
     {
@@ -870,63 +870,63 @@
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "According to the Central Limit Theorem, for large n the sampling distribution of x-bar is approximately:",
+      "question": "If the population distribution is Normal, the sampling distribution of x-bar is Normal for:",
       "options": [
-        "Uniform",
-        "Normal",
-        "Bimodal",
-        "Always skewed right"
+        "Only n greater than 30",
+        "Any positive sample size n",
+        "Only n greater than 100",
+        "Only when the sample SD is zero"
       ],
-      "answer": "Normal",
-      "explanation": "For sufficiently large samples, the sampling distribution of the sample mean is approximately normal under the usual conditions.",
+      "answer": "Any positive sample size n",
+      "explanation": "If the population is Normal, then the sampling distribution of the sample mean is Normal for every positive sample size.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "What is the standard error of x-bar when the population standard deviation is sigma and the sample size is n?",
+      "question": "What is the standard deviation of p-hat when the population proportion is p and the sample size is n?",
       "options": [
-        "sigma / n",
-        "sigma / sqrt(n)",
-        "sqrt(n) / sigma",
-        "n / sigma"
+        "sqrt(p(1-p)/n)",
+        "p/n",
+        "p/sqrt(n)",
+        "sqrt(n/p)"
       ],
-      "answer": "sigma / sqrt(n)",
-      "explanation": "The standard error of the sample mean is sigma divided by the square root of the sample size.",
+      "answer": "sqrt(p(1-p)/n)",
+      "explanation": "For a sample proportion, the standard deviation of p-hat is sqrt[p(1-p)/n] when the sampling conditions are met.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 1,
-      "question": "A 95% confidence interval means:",
+      "question": "Which statement gives the repeated-sampling meaning of a 95% confidence procedure?",
       "options": [
-        "95% of the data falls in the interval",
-        "We are 95% sure the true parameter is in THIS interval",
-        "In repeated sampling, 95% of such intervals will contain the true parameter",
-        "The sample mean is within 5% of the true mean"
+        "95% of observed data values fall inside each interval",
+        "There is a 95% probability that the fixed parameter is in this one computed interval",
+        "Over many repeated samples, about 95% of intervals made by this method contain the true parameter",
+        "The sample estimate is always within 5% of the parameter"
       ],
-      "answer": "In repeated sampling, 95% of such intervals will contain the true parameter",
-      "explanation": "A 95% CI means that if we repeated the procedure many times, 95% of the constructed intervals would contain the true parameter.",
+      "answer": "Over many repeated samples, about 95% of intervals made by this method contain the true parameter",
+      "explanation": "The confidence level describes long-run coverage: over many repeated samples, about 95% of intervals constructed by the procedure contain the fixed population parameter.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 2,
-      "question": "The margin of error in a confidence interval equals:",
+      "question": "For a standard confidence interval, the margin of error equals:",
       "options": [
-        "z* + SE",
-        "z* - SE",
-        "z* * SE",
-        "SE / z*"
+        "appropriate critical value + SE",
+        "appropriate critical value - SE",
+        "appropriate critical value * SE",
+        "SE / appropriate critical value"
       ],
-      "answer": "z* * SE",
-      "explanation": "Margin of error = z* * SE (critical value times standard error). It highlights the operation, property, or model that makes the answer work in Confidence Intervals.",
+      "answer": "appropriate critical value * SE",
+      "explanation": "Margin of error equals the procedure’s appropriate critical value multiplied by the standard error, whether that critical value comes from a z or t distribution.",
       "points": 1
     },
     {
       "moduleOrder": 10,
       "order": 3,
-      "question": "To cut the margin of error in half, you must multiply the sample size by:",
+      "question": "When the critical value and variability estimate are held fixed, multiplying the sample size by what factor cuts the margin of error in half?",
       "options": [
         "2",
         "4",
@@ -934,7 +934,7 @@
         "1/4"
       ],
       "answer": "4",
-      "explanation": "Since ME = z*/sqrt(n), to halve ME you need sqrt(n) to double, so n must quadruple.",
+      "explanation": "For common confidence intervals, margin of error is proportional to 1/sqrt(n) when confidence level and variability are held fixed. Halving the margin requires doubling sqrt(n), so n must be multiplied by 4.",
       "points": 1
     },
     {
@@ -954,10 +954,10 @@
     {
       "moduleOrder": 10,
       "order": 5,
-      "question": "Fill in the blank: ___ is the z* critical value for a 90% confidence interval.",
+      "question": "Fill in the blank: ___ is the z* critical value for a 99% confidence interval.",
       "options": null,
-      "answer": "1.645",
-      "explanation": "The correct answer is: 1.645.",
+      "answer": "2.576",
+      "explanation": "For a 99% confidence interval, the standard Normal critical value is approximately 2.576.",
       "points": 1,
       "type": "fill"
     },
@@ -1034,15 +1034,15 @@
     {
       "moduleOrder": 11,
       "order": 6,
-      "question": "What does the null hypothesis usually state in a significance test?",
+      "question": "Which change generally increases the power of a significance test when the true effect and alpha stay fixed?",
       "options": [
-        "There is no effect or no difference",
-        "The alternative hypothesis is definitely true",
-        "The sample statistic equals the p-value",
-        "The confidence level is 100 percent"
+        "Using a larger sample size",
+        "Using a smaller sample size",
+        "Replacing random sampling with a convenience sample",
+        "Treating a p-value as the probability that H0 is true"
       ],
-      "answer": "There is no effect or no difference",
-      "explanation": "The null hypothesis is the baseline claim, often stating no effect, no difference, or no association.",
+      "answer": "Using a larger sample size",
+      "explanation": "For the same effect size and significance level, a larger sample generally reduces sampling variability and increases the chance of detecting a real effect.",
       "points": 1
     },
     {
@@ -1090,15 +1090,15 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "For a two-sample t-test comparing independent means, what is the usual null hypothesis?",
+      "question": "For a two-sample test of proportions, which condition helps justify a Normal approximation for each group?",
       "options": [
-        "mu1 - mu2 = 0",
-        "p1 - p2 = 0",
-        "mu1 + mu2 = 1",
-        "sigma1 = sigma2 = 0"
+        "Each group has at least 10 expected successes and 10 expected failures under the null",
+        "Both sample means must be equal",
+        "Both populations must have the same standard deviation",
+        "Every observation must be paired"
       ],
-      "answer": "mu1 - mu2 = 0",
-      "explanation": "The usual null hypothesis for two independent means states that the population mean difference is zero.",
+      "answer": "Each group has at least 10 expected successes and 10 expected failures under the null",
+      "explanation": "For a two-proportion z procedure, the large-count condition is checked with the null or pooled proportion so each group has enough expected successes and failures.",
       "points": 1
     },
     {
@@ -1156,15 +1156,15 @@
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "What is the purpose of a chi-square goodness-of-fit test?",
+      "question": "For a chi-square test of independence in a 3 by 4 table, what are the degrees of freedom?",
       "options": [
-        "Test whether observed categorical counts fit a hypothesized distribution",
-        "Compare two population means",
-        "Estimate a regression slope",
-        "Measure the strength of a linear relationship"
+        "6",
+        "7",
+        "12",
+        "3"
       ],
-      "answer": "Test whether observed categorical counts fit a hypothesized distribution",
-      "explanation": "A goodness-of-fit test compares observed counts across categories with expected counts from a stated distribution.",
+      "answer": "6",
+      "explanation": "For a chi-square test of independence, df = (rows − 1)(columns − 1) = (3 − 1)(4 − 1) = 6.",
       "points": 1
     },
     {
@@ -1226,15 +1226,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "In regression inference, what is the usual null hypothesis for the population slope?",
+      "question": "A 95% confidence interval for a population regression slope is (1.2, 3.8). Which interpretation is supported?",
       "options": [
-        "beta = 0",
-        "beta = 1",
-        "r = 1",
-        "x-bar = y-bar"
+        "The population slope is plausibly between 1.2 and 3.8 response units per explanatory-variable unit",
+        "Every individual response will increase by 1.2 to 3.8 units",
+        "The correlation must equal 1.2",
+        "The intercept is between 1.2 and 3.8"
       ],
-      "answer": "beta = 0",
-      "explanation": "The usual null hypothesis says the population slope is zero, meaning no linear relationship in the population.",
+      "answer": "The population slope is plausibly between 1.2 and 3.8 response units per explanatory-variable unit",
+      "explanation": "A slope confidence interval estimates the population mean change in the response for a one-unit increase in the explanatory variable; it does not predict every individual response.",
       "points": 1
     },
     {
@@ -1427,30 +1427,30 @@
       "examType": "midterm",
       "order": 8,
       "type": "mc",
-      "question": "Fifteen independent Bernoulli trials each have success probability 0.4. Which distribution models the number of successes?",
+      "question": "A fair die is rolled once. Given that the result is greater than 3, what is the probability that the result is even?",
       "options": [
-        "Binomial(n=15, p=0.4)",
-        "Geometric(p=0.4)",
-        "Normal(mu=15, sigma=0.4)",
-        "Chi-square(df=15)"
+        "1/3",
+        "1/2",
+        "2/3",
+        "5/6"
       ],
-      "answer": "Binomial(n=15, p=0.4)",
-      "explanation": "A fixed number of independent Bernoulli trials with the same success probability is modeled by a binomial distribution.",
+      "answer": "2/3",
+      "explanation": "Given a result greater than 3, the equally likely outcomes are 4, 5, and 6. Two of these three outcomes are even.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 9,
       "type": "mc",
-      "question": "Population mean=100, SD=20, n=25. What is the standard error of x-bar?",
+      "question": "If E(X)=4 and Var(X)=9, and Y=2X+1, what is SD(Y)?",
       "options": [
-        "4",
-        "5",
-        "20",
-        "0.8"
+        "3",
+        "6",
+        "9",
+        "18"
       ],
-      "answer": "4",
-      "explanation": "SE = sigma/sqrt(n) = 20/sqrt(25) = 20/5 = 4. It highlights the operation, property, or model that makes the answer work in AP Statistics midterm concepts.",
+      "answer": "6",
+      "explanation": "A linear transformation multiplies standard deviation by the absolute value of its scale factor. Since Var(X) = 9 gives SD(X) = 3, SD(Y) = |2|(3) = 6; adding 1 does not change spread.",
       "points": 1
     },
     {
@@ -1472,7 +1472,7 @@
       "examType": "midterm",
       "order": 11,
       "type": "mc",
-      "question": "1,000 randomly selected adults are polled. This is an example of:",
+      "question": "From a population of 50,000 adults, every possible sample of 1,000 adults has an equal chance of selection. This is:",
       "options": [
         "Census",
         "Convenience sample",
@@ -1480,7 +1480,7 @@
         "Stratified sample"
       ],
       "answer": "Simple random sample",
-      "explanation": "Randomly selecting individuals from the population without regard to subgroups describes an SRS.",
+      "explanation": "Equal selection probability for every possible sample of the stated size is the defining property of a simple random sample.",
       "points": 1
     },
     {
@@ -1525,7 +1525,7 @@
         "Leave both unchanged"
       ],
       "answer": "Triple both the mean and standard deviation",
-      "explanation": "Multiplying by k multiplies all measures of center and spread by k. The reasoning points back to the procedure used in AP Statistics midterm concepts, which helps students check the calculation rather than guess from the options.",
+      "explanation": "Multiplying every value by 3 multiplies the mean by 3 and the standard deviation by |3|. Variance would be multiplied by 9, so the keyed option is specific to mean and standard deviation.",
       "points": 1
     },
     {
@@ -1607,7 +1607,7 @@
       "examType": "final",
       "order": 5,
       "type": "mc",
-      "question": "In a medical test for a disease, which situation is a Type I error?",
+      "question": "For a disease test with H0: the patient does not have the disease, which situation is a Type I error?",
       "options": [
         "Diagnosing a healthy person as sick",
         "Diagnosing a sick person as healthy",
@@ -1615,7 +1615,7 @@
         "Correctly diagnosing a healthy person"
       ],
       "answer": "Diagnosing a healthy person as sick",
-      "explanation": "A Type I error rejects a true null hypothesis; in this context, it is a false positive diagnosis.",
+      "explanation": "A Type I error rejects a true null hypothesis. Here that means declaring disease when H0 is true, so a healthy person is incorrectly diagnosed as sick.",
       "points": 1
     },
     {

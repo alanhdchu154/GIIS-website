@@ -21,7 +21,7 @@
       "video2Note": "Professor Leonard — Introduction to Limits",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Submit a write-up showing a limit estimated three ways for the same function: (1) from a graph, (2) from a numerical table approaching the value from both sides, (3) by direct substitution where valid. Write 2–3 sentences on why the three answers agree (or what kind of discontinuity makes them disagree). Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Limits & Continuity module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Create one annotated solution set for g(x) = (x^2 - 4)/(x - 2) when x ≠ 2 and g(2) = 7. Include: (1) a table for x = 1.9, 1.99, 2.01, and 2.1, (2) a labeled sketch near x = 2, (3) the algebraic simplification and limit as x approaches 2, and (4) a 2–3 sentence explanation of whether g is continuous at 2 and why. Submit: paste the completed work into the course form or provide an accessible link to a document, worksheet, slide, or image with the table, graph, equations, and explanation. Include: every requested table, graph, equation, explanation, reasoning evidence, and supporting step. Evaluation: correct limit and continuity conclusion (40%); complete table, graph, and algebraic evidence (40%); clear use of limit and continuity vocabulary (20%).",
       "estimatedHrs": 4
     },
     {
@@ -37,7 +37,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Evaluate eight given limits showing all algebraic steps. At least two must use the Squeeze Theorem and at least two must address an indeterminate 0/0 form by factoring or rationalization. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Limit Laws & the Squeeze Theorem module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Create an annotated solution set for these eight limits: (1) lim x→2 (x^2 - 4)/(x - 2); (2) lim x→3 (x^2 - 9)/(x - 3); (3) lim x→0 (sqrt(x + 4) - 2)/x; (4) lim x→0 sin(x)/x; (5) lim x→0 x^2 sin(1/x); (6) lim x→1 (x^3 - 1)/(x - 1); (7) lim x→4 (x - 4)/(sqrt(x) - 2); (8) lim x→-1 (x^2 + 3x + 2)/(x + 1). Show factoring or rationalization for items 1–3 and 6–8; justify items 4–5 with the Squeeze Theorem. Submit: paste the completed work into the course form or provide an accessible link to a document, worksheet, slide, or image showing each limit and its steps. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct values (40%); valid algebraic or squeeze-theorem reasoning (40%); complete notation and labeled work for all eight items (20%).",
       "estimatedHrs": 4
     },
     {
@@ -53,7 +53,7 @@
       "video2Note": "3Blue1Brown — Essence of Calculus, Chapter 2 (visual intuition)",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "For three given functions, compute f'(x) using the limit definition (no shortcuts). Then compute f'(2) and write the equation of the tangent line at x = 2. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Definition of the Derivative module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Using only the limit definition, find the derivative functions for f(x) = x^2 + 3x, g(x) = x^3 - 2x, and h(x) = 1/x. Then find f'(2) and write the tangent-line equation to y = f(x) at x = 2. Submit: paste the completed work into the course form or provide an accessible link to one document, worksheet, slide, or image that shows each difference quotient, simplification, limit, derivative, and the tangent-line calculation. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct derivative and tangent-line results (40%); valid limit-definition steps without differentiation shortcuts (40%); complete and readable notation (20%).",
       "estimatedHrs": 4
     },
     {
@@ -69,7 +69,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Differentiate ten functions using the power, product, and quotient rules. Show one product-rule problem worked two ways (product rule vs. expanding first) and explain why both give the same answer. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Basic Differentiation Rules module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Differentiate these ten functions: (1) 4x^5 - 3x^2 + 7; (2) sqrt(x); (3) 5/x^2; (4) (x^2 + 1)(x - 3); (5) x^3(x^2 - 4); (6) (x^2 + 1)/(x - 1); (7) (3x - 2)/(x^2); (8) x^4 - 6x; (9) (x + 2)(x + 5); (10) (x^2 - 1)/(x + 1). Work item 4 both with the product rule and by expanding first, then explain in 2–3 sentences why the derivatives agree. Submit: paste the completed work into the course form or provide an accessible link to a labeled solution set with rule names and steps. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct derivatives (40%); appropriate use of power, product, and quotient rules (40%); complete comparison and explanation for item 4 (20%).",
       "estimatedHrs": 3.5
     },
     {
@@ -82,10 +82,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=YG15m2VwSjA",
-      "video2Note": "Professor Leonard — Implicit Differentiation",
+      "video2Note": "3Blue1Brown — Visualizing the Chain Rule and Product Rule",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve six chain-rule problems and four implicit-differentiation problems. For one implicit problem, find the equation of the tangent line at a given point on the curve. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Chain Rule & Implicit Differentiation module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use d/dx[e^u] = e^u·u' and d/dx[ln(u)] = u'/u where needed. Differentiate these six composite functions: (1) (3x - 1)^5; (2) sqrt(x^2 + 4); (3) sin(x^2); (4) e^(4x); (5) ln(2x + 1); (6) (x^3 - x)^4. Use implicit differentiation to find dy/dx for: (7) x^2 + y^2 = 25; (8) x^3 + y^3 = 6xy; (9) x y^2 + y = 4; (10) sin(y) = x^2. For item 7, write the tangent-line equation at (3,4). Submit: paste the completed work into the course form or provide an accessible link to one labeled solution set showing inner-function derivatives and every dy/dx step. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct derivatives and tangent line (40%); valid chain-rule and implicit-differentiation setup (40%); complete labeled work for all ten items (20%).",
       "estimatedHrs": 4
     },
     {
@@ -101,7 +101,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Differentiate twelve mixed expressions involving trig, exponential, and logarithmic functions. Include at least three that require the chain rule and at least one that combines all three families (e.g., e^(sin(ln x))). Submit your work as a labeled solution set that includes: (1) each major calculation or transformation step, (2) a short explanation of why the method fits the problem, (3) one checked or corrected answer with the error explained, and (4) a 100-word reflection connecting the skill to a real academic, career, or life situation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Derivatives of Trig, Exponential, & Logarithmic Functions module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Differentiate these twelve expressions: (1) sin(x); (2) cos(x); (3) tan(x); (4) e^x; (5) ln(x); (6) sin(3x); (7) cos(x^2); (8) e^(2x); (9) ln(x^2 + 1); (10) e^(sin x); (11) sin(ln x); (12) e^(sin(ln x)). For item 12, label the nested inner functions. Check one of your answers by differentiating backward when appropriate or by explaining a likely chain-rule error. Submit: paste the completed work into the course form or provide an accessible link to a labeled solution set with derivative steps and the check. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct derivatives (40%); correct trig, exponential, logarithmic, and chain-rule use (40%); complete labels and error check (20%).",
       "estimatedHrs": 3.5
     },
     {
@@ -117,7 +117,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve four related-rates problems with full setup: define variables, write the relating equation, differentiate, substitute, and report final units. At least one ladder/triangle problem and one cone/cylinder problem. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Related Rates module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve these four related-rates problems. (1) A 10-ft ladder leans against a wall; its base moves away at 2 ft/s. Find the rate the top moves when the base is 6 ft from the wall. (2) A sphere has radius 5 cm and dr/dt = 0.4 cm/min; find dV/dt. (3) Water fills a cone with r = h/3; when h = 6 cm and dh/dt = 0.2 cm/s, find dV/dt. (4) A cylinder has r = 3 cm, h = 10 cm, dr/dt = 0.1 cm/s, and dh/dt = -0.2 cm/s; find dV/dt. Define variables, write the related equation, differentiate before substituting, and report units. Submit: paste the completed work into the course form or provide an accessible link to an annotated solution set with a diagram for items 1 and 3. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct rates and units (40%); valid equations and differentiation-before-substitution steps (40%); complete variables, diagrams, and interpretation (20%).",
       "estimatedHrs": 4
     },
     {
@@ -126,14 +126,14 @@
       "titleZh": "中值定理与曲线分析",
       "objectives": "State and apply the Mean Value Theorem; use f' to identify intervals of increase/decrease and local extrema (first derivative test); use f'' for concavity and inflection points (second derivative test); sketch f(x) from sign charts of f' and f''.",
       "readingUrl": "https://openstax.org/books/calculus-volume-1",
-      "readingNote": "OpenStax Calculus Vol. 1 — §4.3 MVT, §4.5 Derivatives and Curve Shape",
+      "readingNote": "OpenStax Calculus Vol. 1 — §4.4 The Mean Value Theorem and §4.5 Derivatives and the Shape of a Graph",
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "For two given functions: (1) find all critical points, (2) build a sign chart for f' and f'', (3) identify each local max/min and inflection point, (4) sketch the curve. Verify MVT applies on a specified interval and find the c value. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Mean Value Theorem & Curve Sketching module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "For f(x) = x^3 - 3x on [-2,2], find critical points; make sign charts for f' and f''; identify local extrema and inflection points; and sketch a labeled curve. For g(x) = x^2 + 1 on [0,2], verify the Mean Value Theorem hypotheses and find every c in (0,2) for which g'(c) equals the average rate of change. Submit: paste the completed work into the course form or provide an accessible link to one document, worksheet, slide, or image with derivative work, sign charts, sketch, and MVT equation. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct critical-point, concavity, and MVT results (40%); valid sign-chart and MVT reasoning (40%); complete labeled sketch and evidence (20%).",
       "estimatedHrs": 4
     },
     {
@@ -149,7 +149,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve three optimization problems: a box with maximum volume given fixed surface area, a fence enclosing maximum area given fixed perimeter on three sides, and a point on a curve closest to a given point. Show domain, derivative work, and sentence answer with units. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Optimization Problems module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve these optimization problems. (1) Cut equal squares of side x from the corners of a 24-in by 24-in sheet and fold an open box; maximize its volume. (2) Use 120 m of fencing for three sides of a rectangle against a straight wall; maximize the enclosed area. (3) Find all points on y = x^2 closest to (0,3). For each, define the domain, write the one-variable objective function, differentiate, test the relevant critical point(s) and endpoints when applicable, and state the answer with units where applicable. Submit: paste the completed work into the course form or provide an accessible link to a labeled solution set with one sketch per problem. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct optimum and interpretation (40%); valid objective, domain, and derivative analysis (40%); complete sketches and units (20%).",
       "estimatedHrs": 4
     },
     {
@@ -165,7 +165,7 @@
       "video2Note": "3Blue1Brown — Essence of Calculus, Chapter 8 (integrals visual)",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "For f(x) = x² on [0, 4] with n = 4 subintervals: compute the left, right, midpoint, and trapezoidal Riemann sums. Find the exact value using an antiderivative and explain which approximation came closest. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Antiderivatives & Riemann Sums module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "For f(x) = x^2 on [0,4] with n = 4 equal subintervals, compute the left, right, midpoint, and trapezoidal Riemann sums. Find the exact definite integral using an antiderivative, compare the four approximation errors, and state which approximation is closest. Submit: paste the completed work into the course form or provide an accessible link to a document, worksheet, slide, or image showing the partition width, sample points, each sum, the antiderivative evaluation, and comparison. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct sums and exact value (40%); valid setup and antiderivative work (40%); complete error comparison and notation (20%).",
       "estimatedHrs": 4
     },
     {
@@ -181,7 +181,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Evaluate six definite integrals using FTC Part 2. For an accumulation function F(x) = ∫₀ˣ f(t)dt (with f given as a piecewise graph), find F(2), F'(3), and identify where F is increasing. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Fundamental Theorem of Calculus module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Evaluate these six definite integrals using FTC Part 2: (1) integral from 0 to 2 of (3x^2 - 4x + 1) dx; (2) integral from 1 to 3 of 2x dx; (3) integral from 0 to pi of sin(x) dx; (4) integral from 1 to e of 1/x dx; (5) integral from 0 to 1 of e^x dx; (6) integral from -1 to 1 of (x^3 + 2x) dx. Then let F(x) = integral from 0 to x of f(t) dt, where f(t) = t + 1 for 0 ≤ t ≤ 2 and f(t) = 5 - t for 2 < t ≤ 4. Find F(2), F'(3), and the interval(s) on which F is increasing. Submit: paste the completed work into the course form or provide an accessible link to a labeled solution set with antiderivatives and FTC reasoning. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct integral and accumulation-function results (40%); valid FTC and chain-rule reasoning (40%); complete notation and interval justification (20%).",
       "estimatedHrs": 4
     },
     {
@@ -197,7 +197,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve eight integrals using u-substitution. At least four must be definite integrals (transform the bounds — don't reverse-substitute). At least one must be a slightly hidden case where the constant has to be adjusted. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Techniques of Integration: u-Substitution module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use u-substitution to evaluate: (1) integral of 2x(x^2 + 1)^5 dx; (2) integral of 6x/(3x^2 + 2) dx; (3) integral of x e^(x^2) dx; (4) integral of cos(3x) dx; (5) integral from 0 to 1 of 2x cos(x^2) dx; (6) integral from 0 to 2 of x sqrt(x^2 + 1) dx; (7) integral from 1 to e of ln(x)/x dx; (8) integral from 0 to 1 of 3x^2/(x^3 + 4) dx. For items 5–8, change bounds to u-bounds and do not reverse-substitute. Identify the constant adjustment in item 3 and verify that answer by differentiation. Submit: paste the completed work into the course form or provide an accessible link to a labeled solution set showing u, du, transformed integrals, bounds, and verification. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct values (40%); valid substitutions and transformed bounds (40%); complete labels and verification (20%).",
       "estimatedHrs": 3.5
     },
     {
@@ -206,14 +206,14 @@
       "titleZh": "微分方程与斜率场",
       "objectives": "Recognize a differential equation; verify a proposed solution by substitution; sketch slope fields by hand for simple dy/dx = f(x,y); solve separable differential equations and apply initial conditions to find the particular solution.",
       "readingUrl": "https://openstax.org/books/calculus-volume-2/pages/4-1-basics-of-differential-equations",
-      "readingNote": "OpenStax Calculus Vol. 2 — §4.1 Basics of Differential Equations, §4.3 Separable",
+      "readingNote": "OpenStax Calculus Vol. 2 — §4.1 Basics of Differential Equations, §4.2 Direction Fields and Numerical Methods, and §4.3 Separable Equations",
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Sketch the slope field for dy/dx = x − y at lattice points (–2,–2) to (2,2). Solve dy/dx = xy with y(0) = 2 by separation, then verify your particular solution by differentiation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Differential Equations & Slope Fields module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Sketch the slope field for dy/dx = x - y at every integer lattice point from (-2,-2) through (2,2). Then solve dy/dx = xy with y(0) = 2 by separation and verify the particular solution by differentiation and substitution into the initial condition. Submit: paste the completed work into the course form or provide an accessible link to a document, worksheet, slide, or image with the labeled slope field, separation steps, general solution, particular solution, and verification. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct slope directions and solution (40%); valid separation and initial-condition work (40%); complete graph and verification evidence (20%).",
       "estimatedHrs": 4
     },
     {
@@ -229,7 +229,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve three problems: (1) area between y = x² and y = x on [0,1]; (2) volume of revolution of y = √x on [0,4] about the x-axis using the disk method; (3) volume of a solid whose base is the region under y = x² on [0,2] with square cross-sections perpendicular to the x-axis. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Areas, Volumes & Cross-Sections module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve these three problems: (1) find the area between y = x^2 and y = x on [0,1]; (2) find the volume formed by revolving y = sqrt(x) on [0,4] about the x-axis using disks; (3) find the volume of the solid with base under y = x^2 on [0,2] and square cross-sections perpendicular to the x-axis. Submit: paste the completed work into the course form or provide an accessible link to a document, worksheet, slide, or image with a labeled sketch and integral setup for each problem, followed by evaluation and units. Include: every requested calculation, diagram, graph, explanation, reasoning evidence, and supporting step. Evaluation: correct area and volumes (40%); valid top-minus-bottom, disk, and cross-section setups (40%); complete sketches, notation, and units (20%).",
       "estimatedHrs": 4.5
     }
   ],
@@ -255,8 +255,8 @@
       "options": [
         "the left and right limits are different",
         "the function is a polynomial",
-        "the derivative is positive",
-        "the graph is always smooth"
+        "the graph is always smooth",
+        "the derivative is positive"
       ],
       "answer": "the left and right limits are different",
       "explanation": "A jump occurs when the one-sided limits do not match. It connects the correct answer to Limits & Continuity and separates it from plausible distractors.",
@@ -267,10 +267,10 @@
       "order": 3,
       "question": "If a limit from the left and right are unequal, the two-sided limit:",
       "options": [
-        "does not exist",
-        "equals their average",
+        "equals f(a)",
         "equals zero",
-        "equals f(a)"
+        "does not exist",
+        "equals their average"
       ],
       "answer": "does not exist",
       "explanation": "A two-sided limit exists only when both one-sided limits agree. The choice fits the prompt because it applies the central rule or concept from Limits & Continuity.",
@@ -295,10 +295,10 @@
       "order": 2,
       "question": "The Squeeze Theorem applies when:",
       "options": [
-        "a target function is trapped between two functions with the same limit",
-        "a function is always linear",
+        "a derivative is negative",
         "a denominator is zero",
-        "a derivative is negative"
+        "a function is always linear",
+        "a target function is trapped between two functions with the same limit"
       ],
       "answer": "a target function is trapped between two functions with the same limit",
       "explanation": "If lower and upper bounds converge to L, the squeezed function also converges to L.",
@@ -309,10 +309,10 @@
       "order": 3,
       "question": "What is an indeterminate form?",
       "options": [
-        "A form like 0/0 that needs more analysis",
         "A final answer of zero",
         "A function with no variables",
-        "A theorem about area"
+        "A theorem about area",
+        "A form like 0/0 that needs more analysis"
       ],
       "answer": "A form like 0/0 that needs more analysis",
       "explanation": "0/0 does not determine a limit by itself. It highlights the operation, property, or model that makes the answer work in Limit Laws & the Squeeze Theorem.",
@@ -323,10 +323,10 @@
       "order": 1,
       "question": "The derivative at a point represents:",
       "options": [
-        "instantaneous rate of change",
+        "the y-intercept",
         "average value only",
         "total area under a curve",
-        "the y-intercept"
+        "instantaneous rate of change"
       ],
       "answer": "instantaneous rate of change",
       "explanation": "The derivative is the limit of average rates over shrinking intervals. It connects the correct answer to Definition of the Derivative and separates it from plausible distractors.",
@@ -337,10 +337,10 @@
       "order": 2,
       "question": "The difference quotient is used to define:",
       "options": [
-        "the derivative",
         "the integral",
-        "the domain",
-        "a horizontal asymptote"
+        "the derivative",
+        "a horizontal asymptote",
+        "the domain"
       ],
       "answer": "the derivative",
       "explanation": "The derivative is the limit of the difference quotient as h approaches 0. The reasoning points back to the procedure used in Definition of the Derivative, which helps students check the calculation rather than guess from the options.",
@@ -351,10 +351,10 @@
       "order": 3,
       "question": "A tangent line slope at x = a is:",
       "options": [
-        "f'(a)",
-        "f(a)",
         "a only",
-        "the area from 0 to a"
+        "the area from 0 to a",
+        "f'(a)",
+        "f(a)"
       ],
       "answer": "f'(a)",
       "explanation": "The derivative value gives the tangent slope. This reinforces the Definition of the Derivative idea behind the item instead of rewarding a surface-level guess.",
@@ -365,9 +365,9 @@
       "order": 1,
       "question": "In Basic Differentiation Rules, what is d/dx of x^5?",
       "options": [
-        "5x^4",
-        "x^4",
         "5x^5",
+        "x^4",
+        "5x^4",
         "x^6/6"
       ],
       "answer": "5x^4",
@@ -379,9 +379,9 @@
       "order": 2,
       "question": "Which rule differentiates a product f(x)g(x)?",
       "options": [
-        "product rule",
         "quotient rule",
         "squeeze theorem",
+        "product rule",
         "FTC"
       ],
       "answer": "product rule",
@@ -393,10 +393,10 @@
       "order": 3,
       "question": "What is the derivative of a constant?",
       "options": [
-        "0",
+        "undefined always",
         "1",
-        "the constant",
-        "undefined always"
+        "0",
+        "the constant"
       ],
       "answer": "0",
       "explanation": "A constant has no rate of change. This reinforces the Basic Differentiation Rules idea behind the item instead of rewarding a surface-level guess.",
@@ -407,10 +407,10 @@
       "order": 1,
       "question": "The chain rule is mainly for:",
       "options": [
-        "composite functions",
-        "linear functions only",
         "areas only",
-        "tables only"
+        "linear functions only",
+        "tables only",
+        "composite functions"
       ],
       "answer": "composite functions",
       "explanation": "Differentiate the outside function and multiply by the derivative of the inside.",
@@ -421,10 +421,10 @@
       "order": 2,
       "question": "Implicit differentiation is useful when:",
       "options": [
-        "y is not isolated as a function of x",
-        "there are no variables",
+        "all terms are constants",
         "the graph is a bar chart",
-        "all terms are constants"
+        "there are no variables",
+        "y is not isolated as a function of x"
       ],
       "answer": "y is not isolated as a function of x",
       "explanation": "Differentiate both sides with respect to x, treating y as a function of x. Students need to recognize why y is not isolated as a function of x matches the evidence in the question and why nearby options do not.",
@@ -435,10 +435,10 @@
       "order": 3,
       "question": "When differentiating y^2 with respect to x implicitly, the result is:",
       "options": [
+        "dy/dx only",
         "2y dy/dx",
-        "2y",
         "y^3/3",
-        "dy/dx only"
+        "2y"
       ],
       "answer": "2y dy/dx",
       "explanation": "By the chain rule, derivative of y^2 is 2y times dy/dx. The reasoning points back to the procedure used in Chain Rule & Implicit Differentiation, which helps students check the calculation rather than guess from the options.",
@@ -449,10 +449,10 @@
       "order": 1,
       "question": "In Derivatives of Trig, Exponential, & Logarithmic Functions, what is d/dx of sin x?",
       "options": [
-        "cos x",
+        "tan x",
         "-sin x",
-        "-cos x",
-        "tan x"
+        "cos x",
+        "-cos x"
       ],
       "answer": "cos x",
       "explanation": "The derivative of sin x is cos x. This reinforces the Derivatives of Trig, Exponential, & Logarithmic Functions idea behind the item instead of rewarding a surface-level guess.",
@@ -464,9 +464,9 @@
       "question": "In Derivatives of Trig, Exponential, & Logarithmic Functions, what is d/dx of ln x?",
       "options": [
         "1/x",
-        "x",
         "ln x",
-        "e^x"
+        "e^x",
+        "x"
       ],
       "answer": "1/x",
       "explanation": "The natural log derivative is 1/x for x > 0. The choice fits the prompt because it applies the central rule or concept from Derivatives of Trig, Exponential, & Logarithmic Functions.",
@@ -477,10 +477,10 @@
       "order": 3,
       "question": "In Derivatives of Trig, Exponential, & Logarithmic Functions, what is d/dx of e^(3x)?",
       "options": [
-        "3e^(3x)",
-        "e^(3x)",
         "3x e^(3x)",
-        "e^3"
+        "3e^(3x)",
+        "e^3",
+        "e^(3x)"
       ],
       "answer": "3e^(3x)",
       "explanation": "Use the chain rule: derivative of 3x is 3. Students need to recognize why 3e^(3x) matches the evidence in the question and why nearby options do not.",
@@ -491,10 +491,10 @@
       "order": 1,
       "question": "In related rates, when should known numerical values usually be substituted?",
       "options": [
-        "After differentiating",
-        "Before differentiating always",
         "Only after graphing",
-        "Never"
+        "After differentiating",
+        "Never",
+        "Before differentiating always"
       ],
       "answer": "After differentiating",
       "explanation": "Substituting too early can erase changing quantities. It highlights the operation, property, or model that makes the answer work in Related Rates.",
@@ -506,9 +506,9 @@
       "question": "Related rates problems require differentiating with respect to:",
       "options": [
         "time",
+        "a constant",
         "area only",
-        "the final answer",
-        "a constant"
+        "the final answer"
       ],
       "answer": "time",
       "explanation": "Rates such as dx/dt or dV/dt describe change over time. The choice fits the prompt because it applies the central rule or concept from Related Rates.",
@@ -519,9 +519,9 @@
       "order": 3,
       "question": "Why are units important in related rates?",
       "options": [
-        "They identify what rate the answer represents",
-        "They make derivatives unnecessary",
         "They replace equations",
+        "They make derivatives unnecessary",
+        "They identify what rate the answer represents",
         "They always equal zero"
       ],
       "answer": "They identify what rate the answer represents",
@@ -533,10 +533,10 @@
       "order": 1,
       "question": "The Mean Value Theorem requires a function to be:",
       "options": [
-        "continuous on [a,b] and differentiable on (a,b)",
+        "a polynomial only",
         "differentiable only at endpoints",
-        "always positive",
-        "a polynomial only"
+        "continuous on [a,b] and differentiable on (a,b)",
+        "always positive"
       ],
       "answer": "continuous on [a,b] and differentiable on (a,b)",
       "explanation": "These are the standard hypotheses of MVT. Students need to recognize why continuous on [a,b] and differentiable on (a,b) matches the evidence in the question and why nearby options do not.",
@@ -545,15 +545,15 @@
     {
       "moduleOrder": 8,
       "order": 2,
-      "question": "If f prime changes from positive to negative at c, f has a:",
+      "question": "Suppose f is continuous at c and f' changes from positive to negative across c. Then f has a:",
       "options": [
+        "vertical asymptote",
         "local maximum",
         "local minimum",
-        "vertical asymptote",
         "jump discontinuity"
       ],
       "answer": "local maximum",
-      "explanation": "Increasing then decreasing indicates a local max. The reasoning points back to the procedure used in Mean Value Theorem & Curve Sketching, which helps students check the calculation rather than guess from the options.",
+      "explanation": "Continuity at c plus a change from increasing to decreasing satisfies the first derivative test for a local maximum; the stated continuity rules out the discontinuity distractors.",
       "points": 1
     },
     {
@@ -575,8 +575,8 @@
       "order": 1,
       "question": "Optimization problems usually start by defining:",
       "options": [
-        "an objective function and constraints",
         "only a final answer",
+        "an objective function and constraints",
         "only a tangent line",
         "a random table"
       ],
@@ -589,10 +589,10 @@
       "order": 2,
       "question": "An absolute maximum on a closed interval can occur:",
       "options": [
+        "only at an inflection point",
         "at a critical point or endpoint",
-        "only where f is undefined",
         "only at x=0",
-        "only at an inflection point"
+        "only where f is undefined"
       ],
       "answer": "at a critical point or endpoint",
       "explanation": "Closed interval optimization checks critical points and endpoints. The choice fits the prompt because it applies the central rule or concept from Optimization Problems.",
@@ -603,10 +603,10 @@
       "order": 3,
       "question": "Why check the domain in optimization?",
       "options": [
-        "It restricts possible meaningful answers",
-        "It removes all derivatives",
+        "It replaces constraints",
         "It makes every answer positive",
-        "It replaces constraints"
+        "It removes all derivatives",
+        "It restricts possible meaningful answers"
       ],
       "answer": "It restricts possible meaningful answers",
       "explanation": "Real-world quantities often have boundaries such as positive length. The choice fits the prompt because it applies the central rule or concept from Optimization Problems.",
@@ -617,10 +617,10 @@
       "order": 1,
       "question": "In Antiderivatives & Riemann Sums, A left Riemann sum uses:",
       "options": [
-        "left endpoints of subintervals",
-        "right endpoints only",
         "derivatives only",
-        "zeros only"
+        "right endpoints only",
+        "zeros only",
+        "left endpoints of subintervals"
       ],
       "answer": "left endpoints of subintervals",
       "explanation": "The sample point in each subinterval is its left endpoint. It connects the correct answer to Antiderivatives & Riemann Sums and separates it from plausible distractors.",
@@ -631,10 +631,10 @@
       "order": 2,
       "question": "A definite integral can represent:",
       "options": [
-        "accumulated change or signed area",
-        "only a slope at one point",
+        "only an exponent",
         "only a discontinuity",
-        "only an exponent"
+        "only a slope at one point",
+        "accumulated change or signed area"
       ],
       "answer": "accumulated change or signed area",
       "explanation": "Integrals accumulate quantities over an interval. This reinforces the Antiderivatives & Riemann Sums idea behind the item instead of rewarding a surface-level guess.",
@@ -645,10 +645,10 @@
       "order": 3,
       "question": "The trapezoidal rule approximates area using:",
       "options": [
-        "trapezoids",
-        "circles",
         "only tangent lines",
-        "recursive calls"
+        "trapezoids",
+        "recursive calls",
+        "circles"
       ],
       "answer": "trapezoids",
       "explanation": "It averages left and right heights over each subinterval. Students need to recognize why trapezoids matches the evidence in the question and why nearby options do not.",
@@ -659,10 +659,10 @@
       "order": 1,
       "question": "FTC Part 2 evaluates definite integrals using:",
       "options": [
-        "antiderivatives",
         "only graphs",
         "only limits at infinity",
-        "only implicit differentiation"
+        "only implicit differentiation",
+        "antiderivatives"
       ],
       "answer": "antiderivatives",
       "explanation": "If F is an antiderivative of f, integral from a to b is F(b)-F(a). Students need to recognize why antiderivatives matches the evidence in the question and why nearby options do not.",
@@ -671,15 +671,15 @@
     {
       "moduleOrder": 11,
       "order": 2,
-      "question": "If F(x) = integral from 1 to x of f(t) dt, then F prime(x) is:",
+      "question": "If f is continuous and F(x) = integral from 1 to x of f(t) dt, then F prime(x) is:",
       "options": [
-        "f(x)",
         "f(1)",
+        "f(x)",
         "0",
         "x f(x)"
       ],
       "answer": "f(x)",
-      "explanation": "FTC Part 1 says accumulation functions differentiate back to the integrand.",
+      "explanation": "By FTC Part 1, when f is continuous, differentiating the accumulation function returns the integrand value f(x).",
       "points": 1
     },
     {
@@ -688,9 +688,9 @@
       "question": "What is an accumulation function?",
       "options": [
         "A function defined by an integral with a variable limit",
+        "A discontinuity",
         "A list of constants",
-        "A derivative table",
-        "A discontinuity"
+        "A derivative table"
       ],
       "answer": "A function defined by an integral with a variable limit",
       "explanation": "It tracks accumulated area/change as the endpoint varies. This reinforces the Fundamental Theorem of Calculus idea behind the item instead of rewarding a surface-level guess.",
@@ -701,10 +701,10 @@
       "order": 1,
       "question": "In u-substitution, u is chosen to simplify:",
       "options": [
+        "the graph color",
         "a composite expression and its derivative",
         "only the final answer",
-        "a table heading",
-        "the graph color"
+        "a table heading"
       ],
       "answer": "a composite expression and its derivative",
       "explanation": "A good u makes du match another part of the integrand. This reinforces the Techniques of Integration: u-Substitution idea behind the item instead of rewarding a surface-level guess.",
@@ -717,8 +717,8 @@
       "options": [
         "changing the bounds",
         "ignoring dx",
-        "making the answer negative",
-        "using product rule"
+        "using product rule",
+        "making the answer negative"
       ],
       "answer": "changing the bounds",
       "explanation": "Bounds in x should be converted to bounds in u if staying in u-space. The reasoning points back to the procedure used in Techniques of Integration: u-Substitution, which helps students check the calculation rather than guess from the options.",
@@ -729,10 +729,10 @@
       "order": 3,
       "question": "u-substitution is the integration counterpart of:",
       "options": [
-        "the chain rule",
-        "the product rule",
         "MVT",
-        "linear search"
+        "linear search",
+        "the product rule",
+        "the chain rule"
       ],
       "answer": "the chain rule",
       "explanation": "Substitution reverses the chain rule. The choice fits the prompt because it applies the central rule or concept from Techniques of Integration: u-Substitution.",
@@ -743,10 +743,10 @@
       "order": 1,
       "question": "In Differential Equations & Slope Fields, A slope field shows:",
       "options": [
-        "short line segments representing dy/dx at points",
         "only exact solution formulas",
-        "areas under curves",
-        "Riemann rectangles"
+        "short line segments representing dy/dx at points",
+        "Riemann rectangles",
+        "areas under curves"
       ],
       "answer": "short line segments representing dy/dx at points",
       "explanation": "Each segment shows the local slope of a differential equation. Students need to recognize why short line segments representing dy/dx at points matches the evidence in the question and why nearby options do not.",
@@ -772,9 +772,9 @@
       "question": "An initial condition is used to:",
       "options": [
         "find the particular solution constant",
-        "remove all variables",
+        "choose a sorting algorithm",
         "estimate a limit graphically",
-        "choose a sorting algorithm"
+        "remove all variables"
       ],
       "answer": "find the particular solution constant",
       "explanation": "After solving generally, plug in the initial point to determine C. The choice fits the prompt because it applies the central rule or concept from Differential Equations & Slope Fields.",
@@ -785,10 +785,10 @@
       "order": 1,
       "question": "Area between two curves is often computed by integrating:",
       "options": [
-        "top minus bottom",
+        "zero over the interval",
         "bottom minus top always",
-        "derivative only",
-        "zero over the interval"
+        "top minus bottom",
+        "derivative only"
       ],
       "answer": "top minus bottom",
       "explanation": "Vertical slices use upper function minus lower function. It highlights the operation, property, or model that makes the answer work in Areas, Volumes & Cross-Sections.",
@@ -801,8 +801,8 @@
       "options": [
         "a volume of revolution has a hole",
         "a function is discontinuous",
-        "a graph has no area",
-        "a derivative is constant"
+        "a derivative is constant",
+        "a graph has no area"
       ],
       "answer": "a volume of revolution has a hole",
       "explanation": "Washers subtract inner radius area from outer radius area. It highlights the operation, property, or model that makes the answer work in Areas, Volumes & Cross-Sections.",
@@ -813,9 +813,9 @@
       "order": 3,
       "question": "For known cross-sections, volume is:",
       "options": [
-        "integral of cross-sectional area",
         "derivative of perimeter",
         "limit of a String",
+        "integral of cross-sectional area",
         "always pi r squared"
       ],
       "answer": "integral of cross-sectional area",
@@ -831,9 +831,9 @@
       "type": "mc",
       "options": [
         "Continuity at x=2",
+        "No limit exists",
         "A vertical asymptote",
-        "A jump discontinuity",
-        "No limit exists"
+        "A jump discontinuity"
       ],
       "answer": "Continuity at x=2",
       "explanation": "The limit exists and equals the function value. This reinforces the AP Calculus AB midterm concepts idea behind the item instead of rewarding a surface-level guess.",
@@ -845,10 +845,10 @@
       "question": "Which form usually requires algebraic simplification before evaluating a limit?",
       "type": "mc",
       "options": [
+        "infinity as a final finite value",
         "0/0",
-        "3/2",
         "5",
-        "infinity as a final finite value"
+        "3/2"
       ],
       "answer": "0/0",
       "explanation": "0/0 is indeterminate. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB midterm concepts.",
@@ -860,10 +860,10 @@
       "question": "The derivative definition uses the limit as h approaches:",
       "type": "mc",
       "options": [
+        "-1 only",
         "0",
-        "1",
         "infinity",
-        "-1 only"
+        "1"
       ],
       "answer": "0",
       "explanation": "The interval width shrinks to zero. This reinforces the AP Calculus AB midterm concepts idea behind the item instead of rewarding a surface-level guess.",
@@ -875,10 +875,10 @@
       "question": "In AP Calculus AB midterm concepts, what is d/dx of 4x^3 - 2x?",
       "type": "mc",
       "options": [
+        "x^4 - x^2",
         "12x^2 - 2",
         "4x^2 - 2",
-        "12x^3 - 2",
-        "x^4 - x^2"
+        "12x^3 - 2"
       ],
       "answer": "12x^2 - 2",
       "explanation": "Apply the power rule term by term. This reinforces the AP Calculus AB midterm concepts idea behind the item instead of rewarding a surface-level guess.",
@@ -890,9 +890,9 @@
       "question": "The derivative of (x^2 + 1)^5 requires:",
       "type": "mc",
       "options": [
-        "chain rule",
-        "Squeeze Theorem",
         "Riemann sum",
+        "Squeeze Theorem",
+        "chain rule",
         "slope field"
       ],
       "answer": "chain rule",
@@ -905,10 +905,10 @@
       "question": "For x^2 + y^2 = 25, implicit differentiation gives:",
       "type": "mc",
       "options": [
-        "2x + 2y dy/dx = 0",
         "2x + 2y = 0",
+        "dy/dx = 25",
         "x + y = 25",
-        "dy/dx = 25"
+        "2x + 2y dy/dx = 0"
       ],
       "answer": "2x + 2y dy/dx = 0",
       "explanation": "Differentiate y^2 as 2y dy/dx. The reasoning points back to the procedure used in AP Calculus AB midterm concepts, which helps students check the calculation rather than guess from the options.",
@@ -920,9 +920,9 @@
       "question": "In AP Calculus AB midterm concepts, what is d/dx of cos x?",
       "type": "mc",
       "options": [
-        "-sin x",
         "sin x",
         "cos x",
+        "-sin x",
         "-cos x"
       ],
       "answer": "-sin x",
@@ -935,10 +935,10 @@
       "question": "In related rates, a quantity such as dr/dt means:",
       "type": "mc",
       "options": [
-        "radius changing with respect to time",
-        "area under radius",
+        "a limit law",
         "a constant radius",
-        "a limit law"
+        "radius changing with respect to time",
+        "area under radius"
       ],
       "answer": "radius changing with respect to time",
       "explanation": "The notation describes rate of change over time. It connects the correct answer to AP Calculus AB midterm concepts and separates it from plausible distractors.",
@@ -947,61 +947,61 @@
     {
       "examType": "midterm",
       "order": 9,
-      "question": "MVT guarantees a point where instantaneous rate equals:",
+      "question": "For f(x) = sin(3x), f'(x) is:",
       "type": "mc",
       "options": [
-        "average rate of change",
-        "the y-intercept",
-        "total area",
-        "zero always"
+        "-3sin(3x)",
+        "3cos(3x)",
+        "3sin(3x)",
+        "cos(3x)"
       ],
-      "answer": "average rate of change",
-      "explanation": "Under the hypotheses, f prime(c) equals the secant slope. Students need to recognize why average rate of change matches the evidence in the question and why nearby options do not.",
+      "answer": "3cos(3x)",
+      "explanation": "Apply the chain rule: the derivative of sin(u) is cos(u) times u', and u = 3x has derivative 3.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 10,
-      "question": "If f prime is negative on an interval, f is:",
+      "question": "If y = e^(2x), then dy/dx at x = 0 is:",
       "type": "mc",
       "options": [
-        "decreasing",
-        "increasing",
-        "constant always",
-        "discontinuous always"
+        "2",
+        "1",
+        "0",
+        "e"
       ],
-      "answer": "decreasing",
-      "explanation": "A negative derivative means the function decreases. It highlights the operation, property, or model that makes the answer work in AP Calculus AB midterm concepts.",
+      "answer": "2",
+      "explanation": "The chain rule gives dy/dx = 2e^(2x). Substituting x = 0 gives 2e^0 = 2, so 2 is the only option consistent with both the derivative rule and the stated input.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 11,
-      "question": "Which must be checked for closed interval absolute extrema?",
+      "question": "A 10-ft ladder has its base 6 ft from a wall and moves away at 2 ft/s. At that instant, the rate of change of the top height is:",
       "type": "mc",
       "options": [
-        "critical points and endpoints",
-        "only endpoints",
-        "only inflection points",
-        "only x-intercepts"
+        "-1.5 ft/s",
+        "-2 ft/s",
+        "1.5 ft/s",
+        "2 ft/s"
       ],
-      "answer": "critical points and endpoints",
-      "explanation": "Absolute extrema can occur at interior critical points or interval endpoints.",
+      "answer": "-1.5 ft/s",
+      "explanation": "With x^2 + y^2 = 100, x = 6, y = 8, and dx/dt = 2, implicit differentiation gives 2x dx/dt + 2y dy/dt = 0, so dy/dt = -12/8 = -1.5 ft/s.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 12,
-      "question": "What does f double-prime help determine?",
+      "question": "For a circle with r = 5 cm and dr/dt = 3 cm/s, dA/dt is:",
       "type": "mc",
       "options": [
-        "concavity",
-        "initial value only",
-        "String length",
-        "domain only"
+        "3pi cm^2/s",
+        "25pi cm^2/s",
+        "15pi cm^2/s",
+        "30pi cm^2/s"
       ],
-      "answer": "concavity",
-      "explanation": "The second derivative indicates concavity. Students need to recognize why concavity matches the evidence in the question and why nearby options do not.",
+      "answer": "30pi cm^2/s",
+      "explanation": "Since A = pi r^2, differentiating with respect to time gives dA/dt = 2pi r dr/dt. Substituting r = 5 and dr/dt = 3 yields 30pi cm^2/s.",
       "points": 1
     },
     {
@@ -1010,10 +1010,10 @@
       "question": "The derivative of ln(x^2 + 1) is:",
       "type": "mc",
       "options": [
+        "2x ln x",
         "2x/(x^2 + 1)",
-        "1/(x^2 + 1)",
         "ln(2x)",
-        "2x ln x"
+        "1/(x^2 + 1)"
       ],
       "answer": "2x/(x^2 + 1)",
       "explanation": "Use chain rule: derivative of ln u is u prime/u. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB midterm concepts.",
@@ -1026,9 +1026,9 @@
       "type": "mc",
       "options": [
         "a hole",
-        "a vertical line through every point",
+        "an area",
         "a maximum only",
-        "an area"
+        "a vertical line through every point"
       ],
       "answer": "a hole",
       "explanation": "A factor cancellation can reveal a hole in the graph. It highlights the operation, property, or model that makes the answer work in AP Calculus AB midterm concepts.",
@@ -1040,10 +1040,10 @@
       "question": "The product rule for f(x)g(x) is:",
       "type": "mc",
       "options": [
-        "f'g + fg'",
-        "f'g'",
         "f/g",
-        "f+g only"
+        "f'g + fg'",
+        "f+g only",
+        "f'g'"
       ],
       "answer": "f'g + fg'",
       "explanation": "Differentiate one factor at a time and add. It highlights the operation, property, or model that makes the answer work in AP Calculus AB midterm concepts.",
@@ -1056,9 +1056,9 @@
       "type": "mc",
       "options": [
         "right endpoints",
-        "left endpoints",
         "only midpoints",
-        "critical points only"
+        "critical points only",
+        "left endpoints"
       ],
       "answer": "right endpoints",
       "explanation": "Right sums use the right endpoint of each subinterval. This reinforces the AP Calculus AB final concepts idea behind the item instead of rewarding a surface-level guess.",
@@ -1071,8 +1071,8 @@
       "type": "mc",
       "options": [
         "displacement",
-        "acceleration only",
         "slope only",
+        "acceleration only",
         "a discontinuity"
       ],
       "answer": "displacement",
@@ -1082,16 +1082,16 @@
     {
       "examType": "final",
       "order": 3,
-      "question": "FTC Part 1 says d/dx of integral from a to x f(t)dt equals:",
+      "question": "If f is continuous, FTC Part 1 says d/dx of integral from a to x f(t)dt equals:",
       "type": "mc",
       "options": [
-        "f(x)",
         "f(a)",
+        "f(x)",
         "0",
         "integral f(x)dx"
       ],
       "answer": "f(x)",
-      "explanation": "Differentiating accumulation returns the integrand. It connects the correct answer to AP Calculus AB final concepts and separates it from plausible distractors.",
+      "explanation": "For continuous f, FTC Part 1 states that differentiating the accumulation function from a to x returns the integrand value f(x).",
       "points": 1
     },
     {
@@ -1100,10 +1100,10 @@
       "question": "In AP Calculus AB final concepts, what is integral of 2x dx?",
       "type": "mc",
       "options": [
-        "x^2 + C",
-        "2 + C",
+        "x + C",
         "2x + C",
-        "x + C"
+        "x^2 + C",
+        "2 + C"
       ],
       "answer": "x^2 + C",
       "explanation": "An antiderivative of 2x is x^2. The reasoning points back to the procedure used in AP Calculus AB final concepts, which helps students check the calculation rather than guess from the options.",
@@ -1115,10 +1115,10 @@
       "question": "u-substitution most directly reverses:",
       "type": "mc",
       "options": [
-        "chain rule",
+        "curve sketching",
         "quotient rule",
-        "MVT",
-        "curve sketching"
+        "chain rule",
+        "MVT"
       ],
       "answer": "chain rule",
       "explanation": "Substitution handles integrals of composite functions. The reasoning points back to the procedure used in AP Calculus AB final concepts, which helps students check the calculation rather than guess from the options.",
@@ -1132,8 +1132,8 @@
       "options": [
         "x^2",
         "2x",
-        "cos x",
-        "dx"
+        "dx",
+        "cos x"
       ],
       "answer": "x^2",
       "explanation": "du = 2x dx appears in the integral. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
@@ -1146,8 +1146,8 @@
       "type": "mc",
       "options": [
         "y-value",
-        "area only",
         "the final answer only",
+        "area only",
         "no variables"
       ],
       "answer": "y-value",
@@ -1157,16 +1157,16 @@
     {
       "examType": "final",
       "order": 8,
-      "question": "Solving dy/dx = xy by separation starts with:",
+      "question": "For a nonzero solution of dy/dx = xy, separation starts with:",
       "type": "mc",
       "options": [
-        "(1/y) dy = x dx",
         "dy = x + y",
+        "y = x always",
         "dx/dy = xy only",
-        "y = x always"
+        "(1/y) dy = x dx"
       ],
       "answer": "(1/y) dy = x dx",
-      "explanation": "Separate y terms with dy and x terms with dx. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
+      "explanation": "When y is not zero, divide by y and write (1/y)dy = x dx. The equilibrium solution y = 0 must be checked separately because division by y excludes it.",
       "points": 1
     },
     {
@@ -1175,10 +1175,10 @@
       "question": "Area between y=x and y=x^2 on [0,1] uses:",
       "type": "mc",
       "options": [
-        "integral of x - x^2",
-        "integral of x^2 - x",
+        "zero because they intersect",
         "derivative of x + x^2",
-        "zero because they intersect"
+        "integral of x^2 - x",
+        "integral of x - x^2"
       ],
       "answer": "integral of x - x^2",
       "explanation": "On [0,1], x is above x^2. It connects the correct answer to AP Calculus AB final concepts and separates it from plausible distractors.",
@@ -1190,10 +1190,10 @@
       "question": "The disk method volume around the x-axis uses:",
       "type": "mc",
       "options": [
-        "pi integral [f(x)]^2 dx",
-        "integral f prime dx only",
         "2 pi r h only",
-        "top minus bottom only"
+        "top minus bottom only",
+        "integral f prime dx only",
+        "pi integral [f(x)]^2 dx"
       ],
       "answer": "pi integral [f(x)]^2 dx",
       "explanation": "Cross-sectional disks have area pi radius squared. It highlights the operation, property, or model that makes the answer work in AP Calculus AB final concepts.",
@@ -1205,9 +1205,9 @@
       "question": "A washer method problem subtracts:",
       "type": "mc",
       "options": [
-        "inner radius squared from outer radius squared",
         "left endpoint from right endpoint",
         "derivative from integral",
+        "inner radius squared from outer radius squared",
         "x from y always"
       ],
       "answer": "inner radius squared from outer radius squared",
@@ -1217,16 +1217,16 @@
     {
       "examType": "final",
       "order": 12,
-      "question": "An accumulation function is increasing where:",
+      "question": "If f is continuous and F(x) = integral from a to x of f(t)dt, F is increasing where:",
       "type": "mc",
       "options": [
-        "the integrand is positive",
+        "the graph is blue",
         "the integrand is negative",
         "the upper limit is missing",
-        "the graph is blue"
+        "the integrand is positive"
       ],
       "answer": "the integrand is positive",
-      "explanation": "F prime equals the integrand, so F increases where f is positive. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
+      "explanation": "FTC Part 1 gives F'(x)=f(x), so the accumulation function F increases on intervals where the integrand f is positive.",
       "points": 1
     },
     {
@@ -1235,10 +1235,10 @@
       "question": "What does a midpoint Riemann sum use?",
       "type": "mc",
       "options": [
-        "midpoints of subintervals",
+        "zeros only",
         "only endpoints of the full interval",
-        "critical points only",
-        "zeros only"
+        "midpoints of subintervals",
+        "critical points only"
       ],
       "answer": "midpoints of subintervals",
       "explanation": "Each rectangle height is sampled at the subinterval midpoint. This reinforces the AP Calculus AB final concepts idea behind the item instead of rewarding a surface-level guess.",
@@ -1247,31 +1247,31 @@
     {
       "examType": "final",
       "order": 14,
-      "question": "If f prime changes from negative to positive at c, f has:",
+      "question": "Suppose f is continuous at c and f' changes from negative to positive across c. Then f has:",
       "type": "mc",
       "options": [
-        "local minimum",
         "local maximum",
         "vertical asymptote",
-        "jump discontinuity"
+        "jump discontinuity",
+        "local minimum"
       ],
       "answer": "local minimum",
-      "explanation": "Decreasing then increasing indicates a local min. This reinforces the AP Calculus AB final concepts idea behind the item instead of rewarding a surface-level guess.",
+      "explanation": "Continuity at c plus a change from decreasing to increasing satisfies the first derivative test for a local minimum; the stated continuity rules out the discontinuity distractors.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 15,
-      "question": "For optimization, the second derivative test helps:",
+      "question": "At a stationary point c where f'(c)=0, the second derivative test helps:",
       "type": "mc",
       "options": [
-        "classify maxima/minima",
+        "avoid derivatives",
         "find domain only",
-        "make all functions continuous",
-        "avoid derivatives"
+        "classify maxima/minima",
+        "make all functions continuous"
       ],
       "answer": "classify maxima/minima",
-      "explanation": "Positive second derivative suggests local min; negative suggests local max.",
+      "explanation": "At a stationary point, f''(c)>0 identifies a local minimum and f''(c)<0 identifies a local maximum; f''(c)=0 is inconclusive.",
       "points": 1
     },
     {
@@ -1280,10 +1280,10 @@
       "question": "A separable differential equation with initial condition produces:",
       "type": "mc",
       "options": [
+        "only a table",
         "a particular solution",
-        "only a slope field",
         "no constant",
-        "only a table"
+        "only a slope field"
       ],
       "answer": "a particular solution",
       "explanation": "The initial condition determines the integration constant. The reasoning points back to the procedure used in AP Calculus AB final concepts, which helps students check the calculation rather than guess from the options.",
@@ -1295,10 +1295,10 @@
       "question": "The integral from a to b of rate of change gives:",
       "type": "mc",
       "options": [
-        "net change",
+        "a tangent equation",
         "average slope only",
         "domain only",
-        "a tangent equation"
+        "net change"
       ],
       "answer": "net change",
       "explanation": "This is the net change theorem. It connects the correct answer to AP Calculus AB final concepts and separates it from plausible distractors.",
@@ -1310,10 +1310,10 @@
       "question": "Which AP Calc concept links derivative and integral as inverse processes?",
       "type": "mc",
       "options": [
-        "Fundamental Theorem of Calculus",
         "Mean Value Theorem only",
-        "Squeeze Theorem only",
-        "Implicit differentiation"
+        "Fundamental Theorem of Calculus",
+        "Implicit differentiation",
+        "Squeeze Theorem only"
       ],
       "answer": "Fundamental Theorem of Calculus",
       "explanation": "FTC connects accumulation and rates of change. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
@@ -1325,10 +1325,10 @@
       "question": "A volume with square cross-sections perpendicular to x-axis is found by:",
       "type": "mc",
       "options": [
-        "integrating side(x)^2 dx",
-        "differentiating area only",
+        "using only endpoints",
         "using binary search",
-        "using only endpoints"
+        "integrating side(x)^2 dx",
+        "differentiating area only"
       ],
       "answer": "integrating side(x)^2 dx",
       "explanation": "Each slice area is the square of its side length. It highlights the operation, property, or model that makes the answer work in AP Calculus AB final concepts.",
@@ -1341,9 +1341,9 @@
       "type": "mc",
       "options": [
         "sin x + C",
+        "1/x + C",
         "-sin x + C",
-        "tan x + C",
-        "1/x + C"
+        "tan x + C"
       ],
       "answer": "sin x + C",
       "explanation": "The derivative of sin x is cos x. The choice fits the prompt because it applies the central rule or concept from AP Calculus AB final concepts.",
