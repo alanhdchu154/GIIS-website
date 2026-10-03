@@ -18,10 +18,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=riXcZT2ICjA",
-      "video2Note": "Professor Leonard — Introduction to Limits",
+      "video2Note": "Khan Academy — “Introduction to limits,” a visual supplement for limit notation and behavior",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Evaluate 10 limits algebraically using limit laws. Sketch a graph showing left-hand and right-hand limits that differ. Write a paragraph explaining what a limit means intuitively. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Limits module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve these limits with algebraic steps: (x²−9)/(x−3) as x→3; (√(x+4)−2)/x as x→0; sin(5x)/x as x→0; and the one-sided limits of |x|/x at 0. State whether the two-sided limit exists. Submit: one clearly labeled document or slide deck. Include: each simplification, both one-sided results where needed, the final value or DNE, and one sentence naming the limit law or technique used. Evaluation: correct results (50%), valid steps (35%), and precise notation/explanation (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 3.5
     },
     {
@@ -34,10 +34,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=joewRl1CTL8",
-      "video2Note": "Professor Leonard — Continuity and the Intermediate Value Theorem",
+      "video2Note": "The Organic Chemistry Tutor — continuity, removable, jump, and infinite discontinuities",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Classify 6 discontinuities as removable, jump, or infinite. Use the IVT to prove a root exists in a given interval for 3 functions. Submit your work as a document, image, or link showing the steps, evidence, and final response. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Continuity module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "For f(x)=(x²−1)/(x−1), analyze continuity at x=1 and give a value f(1) that makes the discontinuity removable. Then use the Intermediate Value Theorem to justify a root of g(x)=x³−2 on [1,2]. Submit: one clearly labeled document or slide deck. Include: the three continuity conditions, the repaired value, endpoint calculations for g, and a sentence verifying every IVT hypothesis. Evaluation: mathematical accuracy (50%), theorem conditions (35%), and clear reasoning (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 3
     },
     {
@@ -50,26 +50,26 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=ANyVpMS3HL4",
-      "video2Note": "Professor Leonard — Definition of the Derivative",
+      "video2Note": "Khan Academy — derivative as the slope of a tangent line",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Use the limit definition to find the derivative of 5 functions. Write the equation of the tangent line to 3 curves at given points. Submit your work as a labeled solution set that includes: (1) each major calculation or transformation step, (2) a short explanation of why the method fits the problem, (3) one checked or corrected answer with the error explained, and (4) a 100-word reflection connecting the skill to a real academic, career, or life situation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the The Derivative: Definition module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use the limit definition—not a memorized rule—to find the derivative of f(x)=x²−3x at a general x. Then find the tangent line at x=2 and interpret its slope as an instantaneous rate of change. Submit: one clearly labeled document or slide deck. Include: the difference quotient, expansion and cancellation, limiting step, derivative, tangent-line equation, and a two-sentence interpretation. Evaluation: valid limit derivation (55%), tangent line (25%), and interpretation (20%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 4
     },
     {
       "order": 4,
       "title": "Differentiation Rules",
       "titleZh": "求导法则",
-      "objectives": "Apply the power rule, constant rule, sum/difference rule, and product and quotient rules; differentiate polynomial, rational, and radical functions.",
+      "objectives": "Apply the power, constant, sum/difference, product, and quotient rules; differentiate polynomial, rational, radical, sine, and cosine functions; and interpret first and second derivatives.",
       "readingUrl": "https://openstax.org/books/calculus-volume-1",
       "readingNote": "OpenStax Calculus Volume 1 — Ch 3.3: Differentiation Rules",
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "video2Url": "https://www.youtube.com/watch?v=IiBC4ngwH6E",
-      "video2Note": "Professor Leonard — Basic Differentiation Rules",
+      "video2Url": "",
+      "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Differentiate 15 functions using power, product, quotient, and chain-ready notation. For 5 of them, find the second derivative and explain what the first and second derivatives tell you about the original function. Submit a correction log for any rule-choice mistakes. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Differentiation Rules module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Differentiate: 5x⁶−3x²+7; (x²+1)(x³−2); (x²+1)/(x−1); √x+3/x; sin x·eˣ; and x²cos x. Find a second derivative for the first and last functions. Submit: one clearly labeled document or slide deck. Include: the rule used for each function, all intermediate steps for product/quotient cases, simplified final derivatives, and one derivative check by expansion or substitution. Evaluation: correct derivatives (60%), justified rule choice (25%), and verification/notation (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 3.5
     },
     {
@@ -85,7 +85,7 @@
       "video2Note": "Professor Leonard — The Chain Rule — for a visual explanation of The Chain Rule before guided practice",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Differentiate 12 composite functions using the chain rule. Apply the chain rule combined with product/quotient rules for 5 complex functions. Submit your work as a document, image, or link showing the steps, evidence, and final response. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the The Chain Rule module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Differentiate: (3x²−1)⁵; sin(4x³); e^(x²+2x); ln(1+x⁴); √(2x+5); and (x²+1)³/(x−2). Submit: one clearly labeled document or slide deck. Include: outer and inner functions for the first five, every chain factor, product/quotient work for the final item, and one correction log entry explaining a likely omitted factor. Evaluation: correct chain-rule structure (55%), algebra and notation (30%), and error analysis (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 4
     },
     {
@@ -101,7 +101,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "For 5 functions: find critical points, classify them, determine intervals of increase/decrease and concavity, and sketch the graph. Submit your work as a labeled solution set that includes: (1) each major calculation or transformation step, (2) a short explanation of why the method fits the problem, (3) one checked or corrected answer with the error explained, and (4) a 100-word reflection connecting the skill to a real academic, career, or life situation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Applications of Derivatives module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Analyze f(x)=x³−3x²−9x+5 on [-2,5]. Submit: one clearly labeled document or slide deck. Include: f′ and f″, critical numbers, increasing/decreasing intervals, local and absolute extrema, concavity intervals, inflection points, an endpoint/critical-value table, and a labeled sketch consistent with the analysis. Evaluation: correct calculus (55%), complete interval/value evidence (30%), and coherent graph (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 4
     },
     {
@@ -117,7 +117,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve 6 classic optimization problems (fencing, box, can). Write and solve your own optimization problem from a real-world scenario. Submit your work as a labeled solution set that includes: (1) each major calculation or transformation step, (2) a short explanation of why the method fits the problem, (3) one checked or corrected answer with the error explained, and (4) a 100-word reflection connecting the skill to a real academic, career, or life situation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Optimization module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve two optimization cases: (A) 100 m of fencing forms three sides of a rectangle against a wall; maximize area. (B) an open-top box with square base has volume 32 ft³; minimize surface area. Submit: one clearly labeled document or slide deck. Include: a labeled variable diagram, constraint, one-variable objective, feasible domain, critical-point work, endpoint or second-derivative justification, units, and final dimensions for each case. Evaluation: correct models and optima (60%), justification (25%), and communication/units (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 4
     },
     {
@@ -133,7 +133,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve 6 related rates problems (ladder, balloon, shadow, water tank). Diagram each situation and clearly state all given rates. Submit your work as a labeled solution set that includes: (1) each major calculation or transformation step, (2) a short explanation of why the method fits the problem, (3) one checked or corrected answer with the error explained, and (4) a 100-word reflection connecting the skill to a real academic, career, or life situation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Related Rates module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve two related-rates cases: (A) a 10-ft ladder has its top 6 ft high while sliding down at 2 ft/s; find the base rate. (B) a spherical balloon has radius 3 cm increasing at 2 cm/s; find dV/dt. Submit: one clearly labeled document or slide deck. Include: a diagram for each, the relationship before differentiation, differentiation with respect to time, substitution only after differentiation, signed rates, and units. Evaluation: correct setup and rates (60%), timing/sign logic (25%), and diagrams/units (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 4
     },
     {
@@ -146,10 +146,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=rfG8ce4nNh0",
-      "video2Note": "Professor Leonard — Introduction to Integration (Riemann Sums)",
+      "video2Note": "3Blue1Brown — “Integration and the fundamental theorem of calculus,” a visual supplement connecting accumulation and area",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Compute left, right, and midpoint Riemann sums with n=4 for 3 functions, then compare the estimates to the exact antiderivative when possible. Find antiderivatives of 10 basic functions and write one paragraph explaining how accumulated area connects to the definite integral. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Introduction to Integrals module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "For f(x)=x² on [0,2] with n=4, compute left, right, and midpoint Riemann sums. Then find ∫x²dx and use the exact definite integral to compare the three estimates. Submit: one clearly labeled document or slide deck. Include: Δx, every sample point, sigma or expanded sums, numerical estimates, the antiderivative with +C, the exact area, and one comparison sentence. Evaluation: correct sums/integral (60%), visible construction (25%), and interpretation (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 3.5
     },
     {
@@ -162,10 +162,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=PGmVvIglZx8",
-      "video2Note": "Professor Leonard — The Fundamental Theorem of Calculus",
+      "video2Note": "PatrickJMT — “Fundamental Theorem of Calculus Part 1,” a worked visual supplement",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Evaluate 12 definite integrals using the FTC. Apply FTC Part 1 to differentiate 5 integral functions with variable upper limits. Submit your work as a labeled solution set that includes: (1) each major calculation or transformation step, (2) a short explanation of why the method fits the problem, (3) one checked or corrected answer with the error explained, and (4) a 100-word reflection connecting the skill to a real academic, career, or life situation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the The Fundamental Theorem of Calculus module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Evaluate ∫₀²(3x²−2x+1)dx and ∫₀^π sin x dx. Then differentiate F(x)=∫₁^(x²)√t dt and G(x)=∫_(x)^(3x) e^(t²)dt. Submit: one clearly labeled document or slide deck. Include: FTC steps, antiderivatives and bounds for the first two, chain factors for variable limits, and one sentence distinguishing FTC Part 1 from Part 2. Evaluation: correct FTC applications (60%), complete variable-limit reasoning (25%), and explanation/notation (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 4
     },
     {
@@ -178,10 +178,10 @@
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=sdYdnpYn-1o",
-      "video2Note": "Professor Leonard — u-Substitution — for a visual explanation of Integration Techniques before guided practice",
+      "video2Note": "The Organic Chemistry Tutor — “How To Integrate Using U-Substitution,” a worked visual supplement",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Evaluate 15 integrals using u-substitution (mix of indefinite and definite). Identify the appropriate u for 5 tricky integrals. Submit your work as a labeled solution set that includes: (1) each major calculation or transformation step, (2) a short explanation of why the method fits the problem, (3) one checked or corrected answer with the error explained, and (4) a 100-word reflection connecting the skill to a real academic, career, or life situation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Integration Techniques module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Evaluate by substitution: ∫2x(x²+1)⁴dx; ∫x√(x²+4)dx; ∫₀¹3x²e^(x³)dx; ∫sin x/(1+cos x)dx; and ∫₂⁶1/(3x−2)dx. Submit: one clearly labeled document or slide deck. Include: the chosen u and du for each, transformed integrals, changed bounds for both definite integrals, back-substitution only where needed, constants of integration, and one derivative check. Evaluation: correct substitutions/results (60%), bounds/constants (25%), and verification (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 4
     },
     {
@@ -197,7 +197,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Find the area between 5 pairs of curves. Compute the average value of 3 functions on a given interval. Solve 2 net change (displacement) problems. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Applications of Integration module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Find: (A) the area between y=x and y=x² on [0,1]; (B) the average value of x² on [0,3]; and (C) displacement and total distance for v(t)=t²−t on [0,3]. Submit: one clearly labeled document or slide deck. Include: intersection/sign analysis, correctly ordered area integral, average-value formula, a velocity sign chart, separate distance integrals, units, and final comparisons. Evaluation: correct setup and values (60%), sign/interval reasoning (25%), and interpretation (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 4
     },
     {
@@ -213,7 +213,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve 8 separable differential equations with initial conditions. Set up and solve exponential growth and decay models for 3 real scenarios. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Introduction to Differential Equations module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve the initial-value problems dy/dx=2xy with y(0)=3 and dy/dx=3x² with y(1)=4. Then build an exponential-decay model for 500 g decreasing 10% per year and state the amount after 10 years. Submit: one clearly labeled document or slide deck. Include: separation and integration steps, constants determined from each initial condition, a verification by differentiation, and an explanation of the discrete 0.90 factor versus a continuous model. Evaluation: correct solutions/models (60%), initial-condition work (25%), and verification/model distinction (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 4
     },
     {
@@ -229,7 +229,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Determine convergence for 8 sequences. Compute the sum of 3 convergent geometric series. Write a 1-page explanation of the difference between a sequence and a series. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Sequences & Series Introduction module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Analyze the sequences aₙ=(2n+1)/n and bₙ=(−1)ⁿ/n. Determine convergence. For the series Σ from n=0 to ∞ of 3(1/2)ⁿ, compute S₄ and the infinite sum; explain the remainder after four terms. Submit: one clearly labeled document or slide deck. Include: limit work for both sequences, the geometric convergence condition, partial-sum formula, infinite sum, remainder calculation, and a paragraph distinguishing a sequence from a series. Evaluation: correct convergence and sums (60%), visible formulas/reasoning (25%), and conceptual explanation (15%). Evidence requirement: justify each conclusion or method with cited case facts, calculations, or course rules.",
       "estimatedHrs": 3.5
     }
   ],
@@ -279,15 +279,15 @@
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Which option best completes this statement: The limit of (x^2 - 4)/(x - 2) as x approaches 2 is...",
+      "question": "If lim(x→0−) |x|/x = −1 and lim(x→0+) |x|/x = 1, what is the two-sided limit?",
       "options": [
-        "4",
-        "Undefined",
-        "2",
-        "0"
+        "−1",
+        "0",
+        "1",
+        "It does not exist"
       ],
-      "answer": "4",
-      "explanation": "The best answer is 4. It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "It does not exist",
+      "explanation": "A two-sided limit exists only when the left- and right-hand limits agree; here they approach different values.",
       "points": 1,
       "type": "mc"
     },
@@ -350,15 +350,15 @@
     {
       "moduleOrder": 2,
       "order": 5,
-      "question": "Which option best completes this statement: The three conditions for f to be continuous at x = a is...",
+      "question": "What value of k makes f(x)=(x²−4)/(x−2) for x≠2 and f(2)=k continuous at x=2?",
       "options": [
-        "f(a) defined, lim exists, lim = f(a)",
-        "2",
         "0",
-        "4"
+        "2",
+        "4",
+        "The discontinuity cannot be removed"
       ],
-      "answer": "f(a) defined, lim exists, lim = f(a)",
-      "explanation": "The best answer is f(a) defined, lim exists, lim = f(a). It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "4",
+      "explanation": "For x not equal to 2 the expression simplifies to x+2, whose limit at 2 is 4; defining f(2)=4 makes all continuity conditions hold.",
       "points": 1,
       "type": "mc"
     },
@@ -407,29 +407,29 @@
     {
       "moduleOrder": 3,
       "order": 4,
-      "question": "Which limit defines the derivative f'(a)?",
+      "question": "Which statement is always true at a point a?",
       "options": [
-        "lim [f(a+h) - f(a)] / h as h -> 0",
-        "lim [f(a) - f(h)] / a as h -> 0",
-        "lim [f(a+h) + f(a)] / h as h -> 0",
-        "lim f(a+h) as h -> 0"
+        "Continuity at a implies differentiability at a",
+        "Differentiability at a implies continuity at a",
+        "Every corner is differentiable",
+        "A vertical tangent always has a finite derivative"
       ],
-      "answer": "lim [f(a+h) - f(a)] / h as h -> 0",
-      "explanation": "The derivative at a point is the limit of the difference quotient [f(a+h) - f(a)] / h as h approaches 0.",
+      "answer": "Differentiability at a implies continuity at a",
+      "explanation": "A function differentiable at a point must be continuous there, but a continuous function may fail to be differentiable at a corner or cusp.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 5,
-      "question": "Geometrically, what does the derivative f'(a) represent?",
+      "question": "Which feature most directly makes f(x)=|x| nondifferentiable at x=0?",
       "options": [
-        "The area under f at x = a",
-        "The slope of the tangent line to f at x = a",
-        "The y-intercept of f",
-        "The average value of f on an interval"
+        "The function is undefined at 0",
+        "The one-sided derivatives are unequal",
+        "The function is discontinuous at 0",
+        "The function has no minimum"
       ],
-      "answer": "The slope of the tangent line to f at x = a",
-      "explanation": "The derivative at a point gives the instantaneous rate of change, which is the slope of the tangent line there.",
+      "answer": "The one-sided derivatives are unequal",
+      "explanation": "The left derivative is −1 and the right derivative is 1, so no single tangent slope exists at the corner even though the function is continuous.",
       "points": 1
     },
     {
@@ -491,12 +491,17 @@
     {
       "moduleOrder": 4,
       "order": 5,
-      "question": "Fill in the blank: ___ is the derivative of f(x) = sin(x).",
-      "options": null,
-      "answer": "cos(x)",
-      "explanation": "The correct answer is: cos(x).",
+      "question": "What is the derivative of f(x)=x²sin x?",
+      "options": [
+        "2x cos x",
+        "2x sin x + x² cos x",
+        "x² cos x",
+        "2x sin x"
+      ],
+      "answer": "2x sin x + x² cos x",
+      "explanation": "The product rule gives (2x)(sin x)+(x²)(cos x), because both factors depend on x.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 5,
@@ -571,43 +576,43 @@
     {
       "moduleOrder": 5,
       "order": 6,
-      "question": "What is d/dx[f(g(x))] according to the chain rule?",
+      "question": "Using the chain rule, what is the derivative of the composite function (x²+1)³?",
       "options": [
-        "f'(g(x))*g'(x)",
-        "f'(x)*g(x)",
-        "f(g'(x))",
-        "g'(f(x))*f'(x)"
+        "3(x²+1)²",
+        "6x(x²+1)²",
+        "6x(x²+1)³",
+        "3x²(x²+1)²"
       ],
-      "answer": "f'(g(x))*g'(x)",
-      "explanation": "The chain rule differentiates the outer function at g(x), then multiplies by the derivative of g(x).",
+      "answer": "6x(x²+1)²",
+      "explanation": "The outer derivative is 3(x²+1)² and the inner derivative is 2x; multiplying gives 6x(x²+1)².",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 1,
-      "question": "A critical point of f occurs where:",
+      "question": "For a function defined on an open interval, an interior critical number can occur where:",
       "options": [
-        "f(x) = 0",
-        "f'(x) = 0 or f'(x) is undefined",
-        "f is not continuous",
-        "f''(x) = 0"
+        "f′(x)=0 or f′(x) does not exist while f(x) is defined",
+        "f(x)=0 only",
+        "f″(x)>0 only",
+        "the domain has an endpoint only"
       ],
-      "answer": "f'(x) = 0 or f'(x) is undefined",
-      "explanation": "Critical points occur where the derivative is zero or undefined — these are candidates for relative extrema.",
+      "answer": "f′(x)=0 or f′(x) does not exist while f(x) is defined",
+      "explanation": "Interior critical numbers occur at domain points where the first derivative is zero or fails to exist; endpoints are checked separately for absolute extrema.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 2,
-      "question": "If f'(x) changes from positive to negative at x = c, then f has a:",
+      "question": "Suppose f is continuous at an interior critical number c and f′ changes from positive to negative across c. What does the first derivative test conclude?",
       "options": [
-        "Local minimum at c",
-        "Local maximum at c",
-        "Inflection point at c",
-        "Discontinuity at c"
+        "A local maximum at c",
+        "A local minimum at c",
+        "An inflection point at c",
+        "No local extremum can occur"
       ],
-      "answer": "Local maximum at c",
-      "explanation": "First Derivative Test: if f' goes from + to - at c, then f has a local maximum at c.",
+      "answer": "A local maximum at c",
+      "explanation": "The function increases before c and decreases after c, so the change from positive to negative derivative identifies a local maximum.",
       "points": 1
     },
     {
@@ -627,38 +632,43 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Where can a critical point of f occur?",
+      "question": "If f'(c)=0 and f''(c)>0, what does the second derivative test conclude?",
       "options": [
-        "Where f'(x) = 0 or f'(x) is undefined",
-        "Only where f(x) = 0",
-        "Only at endpoints of every interval",
-        "Where f''(x) = 0 only"
+        "A local maximum at c",
+        "A local minimum at c",
+        "An inflection point at c",
+        "No conclusion under any circumstances"
       ],
-      "answer": "Where f'(x) = 0 or f'(x) is undefined",
-      "explanation": "Critical points occur at interior points where the first derivative is zero or does not exist.",
+      "answer": "A local minimum at c",
+      "explanation": "With a critical point and positive second derivative, the graph is concave up near c, so c is a local minimum.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 5,
       "question": "Short response: Complete this statement: An inflection point is where...",
-      "options": null,
+      "options": [
+        "f changes concavity",
+        "f changes from positive to negative",
+        "f' equals zero without changing sign",
+        "f reaches an absolute maximum"
+      ],
       "answer": "f changes concavity",
-      "explanation": "A correct response identifies \"f changes concavity\" and connects it to the module context.",
+      "explanation": "An inflection point occurs where the graph changes from concave up to concave down or from concave down to concave up; merely having f′(x)=0 is insufficient.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 7,
       "order": 1,
       "question": "You have 100 meters of fencing for a rectangular garden against a wall (one side needs no fencing). What dimensions maximize the area?",
       "options": [
-        "25 m x 50 m",
-        "50 m x 25 m",
-        "33 m x 34 m",
-        "25 m x 25 m"
+        "50 m along the wall and 25 m perpendicular to it",
+        "25 m along the wall and 50 m perpendicular to it",
+        "Approximately 33 m along the wall and 34 m perpendicular to it",
+        "25 m along the wall and 25 m perpendicular to it"
       ],
-      "answer": "25 m x 50 m",
+      "answer": "50 m along the wall and 25 m perpendicular to it",
       "explanation": "With constraint x + 2y = 100 (x is the side along wall), Area = xy = (100-2y)y. dA/dy = 100-4y = 0, y = 25. x = 50. Max area = 50*25 = 1250 m^2.",
       "points": 1
     },
@@ -693,26 +703,31 @@
     {
       "moduleOrder": 7,
       "order": 4,
-      "question": "You have 100 meters of fencing for a rectangular garden against a wall, so only three sides need fencing. What dimensions maximize the area?",
+      "question": "A rectangle uses 100 m of fencing for three sides against a wall. If x is each side perpendicular to the wall, which one-variable area model has the correct feasible domain?",
       "options": [
-        "20 m by 60 m",
-        "25 m by 50 m",
-        "30 m by 40 m",
-        "50 m by 50 m"
+        "A(x)=x(100−2x), with 0<x<50",
+        "A(x)=x(100−x), with 0<x<100",
+        "A(x)=2x(100−2x), with x>50",
+        "A(x)=x², with 0<x<100"
       ],
-      "answer": "25 m by 50 m",
-      "explanation": "If 2w + l = 100, then A = w(100 - 2w), which is maximized at w = 25 and l = 50.",
+      "answer": "A(x)=x(100−2x), with 0<x<50",
+      "explanation": "The two perpendicular sides use 2x meters, leaving 100−2x meters for the third side; both dimensions must be positive, so 0<x<50.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 5,
       "question": "Short response: Which theorem guarantees an absolute maximum exists for a continuous f on a closed interval [a,b]?",
-      "options": null,
+      "options": [
+        "Extreme Value Theorem",
+        "Mean Value Theorem",
+        "Intermediate Value Theorem",
+        "Rolle's Theorem"
+      ],
       "answer": "Extreme Value Theorem",
-      "explanation": "A correct response identifies \"Extreme Value Theorem\" and connects it to the module context.",
+      "explanation": "The Extreme Value Theorem guarantees absolute extrema for a continuous function on a closed interval.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 8,
@@ -747,7 +762,7 @@
       "order": 3,
       "question": "A 10-ft ladder slides down a wall. When the top is 6 ft high and sliding at 2 ft/s, how fast is the base moving away?",
       "options": [
-        "1.5 ft/s",
+        "1 ft/s",
         "3/2 ft/s",
         "3 ft/s",
         "4 ft/s"
@@ -773,15 +788,15 @@
     {
       "moduleOrder": 8,
       "order": 5,
-      "question": "A spherical balloon is inflated so its radius increases at 2 cm/s. How fast is the volume increasing when r = 3 cm?",
+      "question": "For a cone with fixed height h and changing radius r, which differentiated relation follows from V=(1/3)πr²h?",
       "options": [
-        "18π cm^3/s",
-        "36π cm^3/s",
-        "72π cm^3/s",
-        "108π cm^3/s"
+        "dV/dt=(1/3)πh·dr/dt",
+        "dV/dt=(2/3)πrh·dr/dt",
+        "dV/dt=πr²·dr/dt",
+        "dV/dt=2πh·dr/dt"
       ],
-      "answer": "72π cm^3/s",
-      "explanation": "Since V = (4/3)πr^3, dV/dt = 4πr^2 dr/dt = 4π(3)^2(2) = 72π cm^3/s. It highlights the operation, property, or model that makes the answer work in Related Rates.",
+      "answer": "dV/dt=(2/3)πrh·dr/dt",
+      "explanation": "Treating h as constant, differentiating r² with respect to time contributes the factor 2r·dr/dt.",
       "points": 1
     },
     {
@@ -815,44 +830,44 @@
     {
       "moduleOrder": 9,
       "order": 3,
-      "question": "As n (number of rectangles) approaches infinity, the Riemann sum approaches:",
+      "question": "For an integrable function f, the limit of its Riemann sums on [a,b] equals:",
       "options": [
-        "0",
-        "The exact area under the curve",
-        "Infinity",
-        "The average value of f"
+        "The signed definite integral of f over [a,b]",
+        "The derivative f′(b)",
+        "Only the geometric area above the axis",
+        "The average of f(a) and f(b)"
       ],
-      "answer": "The exact area under the curve",
-      "explanation": "The definite integral is defined as the limit of Riemann sums as the number of subintervals approaches infinity.",
+      "answer": "The signed definite integral of f over [a,b]",
+      "explanation": "For an integrable function, Riemann sums converge to the definite integral, which represents signed accumulation and is not always unsigned geometric area.",
       "points": 1
     },
     {
       "moduleOrder": 9,
       "order": 4,
-      "question": "Which derivative check confirms the antiderivative of f(x) = 3x^2?",
+      "question": "For f(x)=x² on [0,2] with n=4, what is Δx?",
       "options": [
-        "d/dx[x^3 + C] = 3x^2",
-        "d/dx[6x + C] = 3x^2",
-        "d/dx[x^2 + C] = 3x^2",
-        "d/dx[9x^2 + C] = 3x^2"
+        "1/4",
+        "1/2",
+        "1",
+        "2"
       ],
-      "answer": "d/dx[x^3 + C] = 3x^2",
-      "explanation": "An antiderivative can be checked by differentiating. The derivative of x^3 + C is 3x^2.",
+      "answer": "1/2",
+      "explanation": "The subinterval width is (b−a)/n=(2−0)/4=1/2, which determines the sample intervals in the Riemann sum.",
       "points": 1,
       "type": "mc"
     },
     {
       "moduleOrder": 9,
       "order": 5,
-      "question": "For a right Riemann sum on [a, b], which sample points are used in each subinterval?",
+      "question": "Which sample points are used in a midpoint Riemann sum?",
       "options": [
-        "Left endpoints of each subinterval",
-        "Right endpoints of each subinterval",
-        "Only the midpoint of [a, b]",
-        "Only the maximum x-value of the whole interval"
+        "The left endpoint of each subinterval",
+        "The right endpoint of each subinterval",
+        "The center of each subinterval",
+        "Only a and b"
       ],
-      "answer": "Right endpoints of each subinterval",
-      "explanation": "A right Riemann sum evaluates the function at the right endpoint of each subinterval.",
+      "answer": "The center of each subinterval",
+      "explanation": "A midpoint sum evaluates the function at the center of each equal subinterval and multiplies each value by the common width.",
       "points": 1
     },
     {
@@ -915,21 +930,31 @@
       "moduleOrder": 10,
       "order": 5,
       "question": "Short response: Define or explain: Using ftc part 1, find d/dx [integral from 1 to x of sqrt(t) dt].",
-      "options": null,
+      "options": [
+        "sqrt(x)",
+        "1 / (2sqrt(x))",
+        "(2/3)x^(3/2)",
+        "sqrt(x) - 1"
+      ],
       "answer": "sqrt(x)",
-      "explanation": "A correct response identifies \"sqrt(x)\" and connects it to the module context.",
+      "explanation": "By Fundamental Theorem of Calculus Part 1, differentiating an accumulated-area function returns the integrand evaluated at the variable upper limit, so the result is sqrt(x).",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 10,
       "order": 6,
-      "question": "Fill in the blank: ___ is integral from 0 to pi of sin(x) dx.",
-      "options": null,
-      "answer": "2",
-      "explanation": "The correct answer is: 2.",
+      "question": "If F(x)=∫ from 0 to 2x of cos(t) dt, what is F′(x)?",
+      "options": [
+        "cos(2x)",
+        "2cos(2x)",
+        "sin(2x)",
+        "2sin(2x)"
+      ],
+      "answer": "2cos(2x)",
+      "explanation": "FTC Part 1 gives cos(2x) at the variable upper limit, and the chain rule multiplies by d(2x)/dx=2.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 11,
@@ -1004,15 +1029,15 @@
     {
       "moduleOrder": 11,
       "order": 6,
-      "question": "What is the best substitution for ∫ 2x(x^2 + 1)^4 dx?",
+      "question": "For ∫ from 0 to 1 of 2x(x²+1)³ dx with u=x²+1, what are the new bounds?",
       "options": [
-        "u = 2x",
-        "u = x^2 + 1",
-        "u = (x^2 + 1)^4",
-        "u = x^4"
+        "0 to 1",
+        "1 to 2",
+        "1 to 4",
+        "2 to 4"
       ],
-      "answer": "u = x^2 + 1",
-      "explanation": "The derivative of x^2 + 1 is 2x, which appears in the integrand. It connects the correct answer to Integration Techniques and separates it from plausible distractors.",
+      "answer": "1 to 2",
+      "explanation": "At x=0, u=1; at x=1, u=2. Changing bounds lets the definite integral remain entirely in u.",
       "points": 1
     },
     {
@@ -1060,49 +1085,59 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "If f(x) ≥ g(x) on [a, b], what integral gives the area between f(x) and g(x)?",
+      "question": "A particle has velocity v(t) that changes sign on [a,b]. How is total distance found?",
       "options": [
-        "∫ from a to b of [f(x) - g(x)] dx",
-        "∫ from a to b of [g(x) - f(x)] dx",
-        "∫ from a to b of f(x)g(x) dx",
-        "∫ from a to b of [f(x) + g(x)] dx"
+        "Integrate v(t) once over the whole interval",
+        "Integrate |v(t)|, splitting at sign changes",
+        "Use only the final velocity",
+        "Differentiate v(t)"
       ],
-      "answer": "∫ from a to b of [f(x) - g(x)] dx",
-      "explanation": "Area between curves is top function minus bottom function integrated over the interval.",
+      "answer": "Integrate |v(t)|, splitting at sign changes",
+      "explanation": "Displacement is the signed integral of velocity, while total distance adds magnitudes and therefore requires splitting where velocity changes sign.",
       "points": 1
     },
     {
       "moduleOrder": 12,
       "order": 5,
-      "question": "Short response: Define or explain: Net change theorem states that integral from a to b of f'(x) dx equals.",
-      "options": null,
-      "answer": "F(b) - F(a)",
-      "explanation": "A correct response identifies \"F(b) - F(a)\" and connects it to the module context.",
+      "question": "The net change theorem states that the integral from a to b of f'(x) dx equals:",
+      "options": [
+        "f(b) - f(a)",
+        "f(a) - f(b)",
+        "f(b) + f(a)",
+        "f(b) / f(a)"
+      ],
+      "answer": "f(b) - f(a)",
+      "explanation": "The net change theorem says integrating the derivative over [a,b] gives the accumulated change in the original function, equal to its ending value minus its starting value.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 12,
       "order": 6,
       "question": "Short response: Complete this statement: If v(t) = 3t^2 is the velocity at time t, the displacement from t=0 to t=2 is...",
-      "options": null,
+      "options": [
+        "8",
+        "4",
+        "6",
+        "12"
+      ],
       "answer": "8",
-      "explanation": "A correct response identifies \"8\" and connects it to the module context.",
+      "explanation": "Displacement is the signed integral of velocity: ∫₀² 3t² dt = [t³]₀² = 8, so the object moves 8 position units in the positive direction.",
       "points": 1,
-      "type": "fill"
+      "type": "mc"
     },
     {
       "moduleOrder": 13,
       "order": 1,
-      "question": "A separable differential equation can be written as:",
+      "question": "Which general form is separable because it can be rearranged into one y-only factor times dy and one x-only factor times dx?",
       "options": [
-        "dy/dx = f(x) + g(y)",
-        "dy/dx = f(x) * g(y)",
-        "dy/dx = f(x+y)",
-        "dy/dx + y = 0"
+        "dy/dx=f(x)g(y)",
+        "dy/dx=f(x)+g(y)",
+        "dy/dx=f(x+y)",
+        "d²y/dx²+y=0"
       ],
-      "answer": "dy/dx = f(x) * g(y)",
-      "explanation": "A separable ODE can be written as dy/dx = f(x)*g(y), allowing separation: g(y)^(-1) dy = f(x) dx.",
+      "answer": "dy/dx=f(x)g(y)",
+      "explanation": "When dy/dx=f(x)g(y), rearrangement gives dy/g(y)=f(x)dx wherever the division is valid, separating the variables.",
       "points": 1
     },
     {
@@ -1122,29 +1157,29 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "The exponential growth model is dy/dt = ky. Its solution is:",
+      "question": "What is the general solution family of dy/dt=ky for constant k?",
       "options": [
-        "y = e^(kt)",
-        "y = y0 + kt",
-        "y = y0 * e^(kt)",
-        "y = k * ln(t)"
+        "y=C e^(kt)",
+        "y=kt+C",
+        "y=Ct^k",
+        "y=k e^t"
       ],
-      "answer": "y = y0 * e^(kt)",
-      "explanation": "Separating: dy/y = k dt, integrating gives ln(y) = kt + C, so y = y0 * e^(kt) where y0 is the initial value.",
+      "answer": "y=C e^(kt)",
+      "explanation": "Separating and integrating gives ln|y|=kt+constant, so the general solution is y=C e^(kt); an initial condition determines C.",
       "points": 1
     },
     {
       "moduleOrder": 13,
       "order": 4,
-      "question": "Which form shows that a differential equation is separable?",
+      "question": "A quantity starts at 500 and retains 90% of its value each year. Which expression gives its value after t years?",
       "options": [
-        "dy/dx = f(x) * g(y)",
-        "dy/dx = f(x) + g(x)",
-        "d²y/dx² = 0",
-        "y = mx + b"
+        "500(0.90)^t",
+        "500(1.10)^t",
+        "500−0.10t",
+        "450t"
       ],
-      "answer": "dy/dx = f(x) * g(y)",
-      "explanation": "A separable differential equation can be rearranged so all y terms are on one side and all x terms on the other.",
+      "answer": "500(0.90)^t",
+      "explanation": "Retaining 90% each year multiplies the previous amount by 0.90, so repeated annual decay is modeled by 500(0.90)^t.",
       "points": 1
     },
     {
@@ -1206,15 +1241,15 @@
     {
       "moduleOrder": 14,
       "order": 5,
-      "question": "A sequence {a_n} converges when which condition is true?",
+      "question": "What is the finite geometric sum 1+1/2+1/4+1/8?",
       "options": [
-        "lim a_n = L for some finite L as n -> infinity",
-        "a_n increases forever without bound",
-        "a_n alternates signs at least once",
-        "a_n is always an integer"
+        "15/8",
+        "2",
+        "1/8",
+        "It diverges"
       ],
-      "answer": "lim a_n = L for some finite L as n -> infinity",
-      "explanation": "A sequence converges if its terms approach a finite limit. This reinforces the Sequences & Series Introduction idea behind the item instead of rewarding a surface-level guess.",
+      "answer": "15/8",
+      "explanation": "The finite geometric-sum formula gives S₄=1(1−(1/2)⁴)/(1−1/2)=2(15/16)=15/8; unlike the infinite sum, only four terms are included.",
       "points": 1
     }
   ],
@@ -1283,15 +1318,15 @@
       "examType": "midterm",
       "order": 5,
       "type": "mc",
-      "question": "In Calculus midterm concepts, Find d/dx [(x^2)(sin(x))].",
+      "question": "Using the product rule, find d/dx[x²sin(x)].",
       "options": [
-        "2x*cos(x)",
-        "x^2*cos(x) + 2x*sin(x)",
-        "2x*sin(x) + x^2*cos(x)",
-        "x^2*sin(x) + 2x"
+        "2x cos(x)",
+        "2x sin(x) + x² cos(x)",
+        "x² cos(x)",
+        "2x sin(x)"
       ],
-      "answer": "2x*sin(x) + x^2*cos(x)",
-      "explanation": "Product rule: (x^2)'*sin(x) + x^2*(sin(x))' = 2x*sin(x) + x^2*cos(x). This reinforces the Calculus midterm concepts idea behind the item instead of rewarding a surface-level guess.",
+      "answer": "2x sin(x) + x² cos(x)",
+      "explanation": "The product rule gives (2x)sin(x)+x²cos(x), because both x² and sin(x) depend on x.",
       "points": 1
     },
     {
@@ -1312,11 +1347,16 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
-      "question": "For f(x) = x^3 - 3x, on which interval is f decreasing?",
-      "options": null,
-      "answer": "(-1, 1)",
-      "explanation": "The correct answer is: (-1, 1).",
+      "type": "mc",
+      "question": "For f(x)=x³−3x, on which interval is f decreasing?",
+      "options": [
+        "(−∞,−1)",
+        "(−1,1)",
+        "(1,∞)",
+        "It is never decreasing"
+      ],
+      "answer": "(−1,1)",
+      "explanation": "f′(x)=3x²−3=3(x−1)(x+1). This derivative is negative between the critical numbers −1 and 1, so f decreases on (−1,1).",
       "points": 1
     },
     {
@@ -1400,13 +1440,13 @@
       "type": "mc",
       "question": "The IVT guarantees a solution to f(x) = 0 in (1, 2) for f(x) = x^2 - 2. Why?",
       "options": [
-        "f is a polynomial and f(1) = -1 < 0 < 2 = f(2)",
-        "f(1) < 0 and f(2) > 0 and f is continuous",
-        "f is differentiable everywhere",
-        "The graph crosses zero by visual inspection"
+        "f is continuous on [1,2] and f(1)<0<f(2)",
+        "f is differentiable somewhere on (1,2)",
+        "f has a local minimum at x=1",
+        "The graph appears to cross zero"
       ],
-      "answer": "f(1) < 0 and f(2) > 0 and f is continuous",
-      "explanation": "f(1) = -1 < 0 and f(2) = 2 > 0. Since f is continuous, IVT guarantees c in (1,2) with f(c) = 0.",
+      "answer": "f is continuous on [1,2] and f(1)<0<f(2)",
+      "explanation": "The polynomial is continuous on the closed interval, and its endpoint values have opposite signs, so the Intermediate Value Theorem guarantees a zero between them.",
       "points": 1
     },
     {
@@ -1517,11 +1557,16 @@
     {
       "examType": "final",
       "order": 6,
-      "type": "fill",
-      "question": "Solve the separable ODE: dy/dx = y with y(0) = 2.",
-      "options": null,
-      "answer": "y = 2e^x",
-      "explanation": "The correct answer is: y = 2e^x.",
+      "type": "mc",
+      "question": "Solve the separable ODE dy/dx=y with y(0)=2.",
+      "options": [
+        "y=2x",
+        "y=2e^x",
+        "y=e^(2x)",
+        "y=2e^(−x)"
+      ],
+      "answer": "y=2e^x",
+      "explanation": "Separating gives dy/y=dx, so ln|y|=x+C and y=Ce^x. The initial condition y(0)=2 gives C=2.",
       "points": 1
     },
     {
@@ -1588,15 +1633,15 @@
       "examType": "final",
       "order": 11,
       "type": "mc",
-      "question": "Find the absolute maximum of f(x) = x^3 - 3x on [-2, 2].",
+      "question": "What is the absolute maximum value of f(x)=x³−3x on [−2,2]?",
       "options": [
-        "f = 2 at x = -1",
-        "f = 2 at x = 1",
-        "f = 2 at x = -1 and x = 1",
-        "f = -2 at x = -2"
+        "−2",
+        "0",
+        "2",
+        "4"
       ],
-      "answer": "f = 2 at x = -1",
-      "explanation": "f'(x) = 3x^2 - 3 = 0 -> x = +/-1. f(-2)=-2, f(-1)=2, f(1)=-2, f(2)=2. Absolute max = 2, at both x=-1 and x=2. Among listed, f=2 at x=-1 is correct.",
+      "answer": "2",
+      "explanation": "Checking endpoints and critical numbers gives f(−2)=−2, f(−1)=2, f(1)=−2, and f(2)=2, so the absolute maximum value is 2.",
       "points": 1
     },
     {
@@ -1617,26 +1662,31 @@
     {
       "examType": "final",
       "order": 13,
-      "type": "fill",
-      "question": "In Calculus final concepts, Find d/dx [tan(x^2 + 1)].",
-      "options": null,
-      "answer": "2x*sec^2(x^2+1)",
-      "explanation": "The correct answer is: 2x*sec^2(x^2+1).",
+      "type": "mc",
+      "question": "Using the chain rule, what is the derivative of tan(x²+1)?",
+      "options": [
+        "sec²(x²+1)",
+        "2x sec²(x²+1)",
+        "2x tan(x²+1)",
+        "sec(x²+1)tan(x²+1)"
+      ],
+      "answer": "2x sec²(x²+1)",
+      "explanation": "The derivative of tan(u) is sec²(u)·u′. With u=x²+1 and u′=2x, the result is 2x sec²(x²+1).",
       "points": 1
     },
     {
       "examType": "final",
       "order": 14,
       "type": "mc",
-      "question": "Two cars are at an intersection. Car A moves north at 50 mph and Car B moves east at 120 mph. How fast does the distance between them increase (initially)?",
+      "question": "Two cars leave the same intersection simultaneously on perpendicular roads. One travels north at 50 mph and the other east at 120 mph. At what rate does their separation increase for t>0?",
       "options": [
         "70 mph",
+        "120 mph",
         "130 mph",
-        "170 mph",
-        "85 mph"
+        "170 mph"
       ],
       "answer": "130 mph",
-      "explanation": "d/dt = sqrt(50^2 + 120^2) = sqrt(2500 + 14400) = sqrt(16900) = 130 mph. It highlights the operation, property, or model that makes the answer work in Calculus final concepts.",
+      "explanation": "After t hours their legs are 50t and 120t, so distance is sqrt((50t)²+(120t)²)=130t and therefore increases at 130 mph.",
       "points": 1
     },
     {
@@ -1717,11 +1767,16 @@
     {
       "examType": "final",
       "order": 20,
-      "type": "fill",
-      "question": "Solve: dy/dx = 3x^2*y with y(0) = 1.",
-      "options": null,
-      "answer": "y = e^(x^3)",
-      "explanation": "The correct answer is: y = e^(x^3).",
+      "type": "mc",
+      "question": "Solve dy/dx=3x²y with y(0)=1.",
+      "options": [
+        "y=3x²",
+        "y=e^(x³)",
+        "y=e^(3x)",
+        "y=x³+1"
+      ],
+      "answer": "y=e^(x³)",
+      "explanation": "Separate dy/y=3x²dx and integrate to obtain ln|y|=x³+C. The initial condition y(0)=1 gives C=0, hence y=e^(x³).",
       "points": 1
     }
   ],
