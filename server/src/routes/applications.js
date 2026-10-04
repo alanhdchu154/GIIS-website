@@ -1,7 +1,9 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
+const Stripe = require('stripe');
 const { authenticate, requireAdmin } = require('../middleware/auth');
+const { PRICE_TIERS } = require('./checkout');
 const {
   sendApplicationInterestConfirmation,
   sendNewApplicationAlert,
@@ -14,6 +16,8 @@ const {
 
 const prisma = require('../lib/prisma');
 const router = express.Router();
+const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
+const FRONTEND_URL = (process.env.CORS_ORIGIN || 'http://localhost:3000').split(',')[0].trim();
 
 const APPLICANT_TYPES = new Set(['new', 'transfer']);
 const COMMUNICATION_LANGUAGES = new Set(['en', 'zh', 'bilingual']);
@@ -63,6 +67,13 @@ const MANUAL_PAYMENT_METHODS = new Set([
   'manual_stripe_payment_link',
   'stripe_dashboard_invoice',
   'stripe_dashboard_payment_link',
+]);
+
+const AUTOMATED_PAYMENT_PLANS = new Set([
+  'self_paced_monthly',
+  'self_paced_annual',
+  'guided_monthly',
+  'premium_monthly',
 ]);
 
 async function recordEmailLog({ kind, recipient, studentId, result }) {
@@ -127,6 +138,15 @@ function applicationEventData(applicationId, action, actorEmail, summary, metada
     actorEmail: actorEmail || 'system',
     summary,
     ...(metadata ? { metadata } : {}),
+  };
+}
+
+function stripeCheckoutMetadata(applicationId, planType, maxStudents) {
+  return {
+    applicationId,
+    planType,
+    maxStudents: String(maxStudents),
+    workflow: 'approved-application-v1',
   };
 }
 
@@ -848,17 +868,15 @@ async function applicationEnrollmentState(app) {
     },
   });
 
-  const candidateEmails = [app.parentEmail];
-  if (student?.parentAccounts?.[0]?.email) candidateEmails.push(student.parentAccounts[0].email);
-  if (student?.account?.email) {
-    const parentLogin = parentLoginEmailForStudentEmail(student.account.email);
-    if (parentLogin) candidateEmails.push(parentLogin);
-  }
-
+  const receipts = await prisma.applicationEvent.findMany({
+    where: { applicationId: app.id, action: { in: ['stripe_payment_confirmed', 'manual_payment_recorded'] } },
+    select: { metadata: true },
+  });
+  const subscriptionIds = receipts.map(event => event.metadata?.subscriptionId).filter(Boolean);
   const subscriptions = await prisma.subscription.findMany({
     where: {
       OR: [
-        { purchaserEmail: { in: [...new Set(candidateEmails)] } },
+        { id: { in: subscriptionIds } },
         ...(student?.id ? [{ studentId: student.id }] : []),
       ],
     },
@@ -866,7 +884,7 @@ async function applicationEnrollmentState(app) {
     take: 5,
   });
 
-  const activeStatuses = new Set(['active', 'trialing', 'paid']);
+  const activeStatuses = new Set(['active', 'paid']);
   const activeLinked = subscriptions.find((sub) => sub.studentId && student?.id && sub.studentId === student.id && activeStatuses.has(sub.status));
   const activeUnlinked = subscriptions.find((sub) => !sub.studentId && activeStatuses.has(sub.status));
   const latestSub = subscriptions[0] || null;
@@ -918,19 +936,108 @@ async function applicationEnrollmentState(app) {
   };
 }
 
-async function linkExistingSubscriptionsForApplication({ app, studentId, parentLoginEmail }) {
-  const emails = [...new Set([app.parentEmail, parentLoginEmail].filter(Boolean))];
-  if (!emails.length) return [];
+async function linkExistingSubscriptionsForApplication({ app, studentId }) {
+  const receipts = await prisma.applicationEvent.findMany({
+    where: { applicationId: app.id, action: { in: ['stripe_payment_confirmed', 'manual_payment_recorded'] } },
+    select: { metadata: true },
+  });
+  const subscriptionIds = receipts.map(event => event.metadata?.subscriptionId).filter(Boolean);
   const updated = await prisma.subscription.updateMany({
     where: {
       studentId: null,
-      purchaserEmail: { in: emails },
-      status: { in: ['active', 'trialing', 'paid'] },
+      id: { in: subscriptionIds },
+      status: { in: ['active', 'paid'] },
     },
     data: { studentId },
   });
   return updated.count;
 }
+
+/**
+ * POST /api/applications/:id/stripe-checkout — admin only
+ *
+ * Creates one hosted Stripe Checkout Session for an already-approved application.
+ * This endpoint creates no charge, account, enrollment, credit, or admission
+ * decision. Stripe's signed webhook is the only success signal we accept.
+ */
+router.post('/:id/stripe-checkout', authenticate, requireAdmin, async (req, res) => {
+  if (!stripe) return res.status(503).json({ error: 'Stripe is not configured.' });
+  try {
+  const app = await prisma.application.findUnique({
+    where: { id: req.params.id },
+    include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE } },
+  });
+  if (!app) return res.status(404).json({ error: 'Application not found.' });
+  if (app.status !== 'approved') {
+    return res.status(400).json({ error: 'Approve the application after path review before creating a payment link.' });
+  }
+  const approvalError = applicationApprovalError(app);
+  if (approvalError) return res.status(400).json({ error: approvalError });
+
+  const planType = String(req.body?.planType || '').trim();
+  if (!AUTOMATED_PAYMENT_PLANS.has(planType)) {
+    return res.status(400).json({ error: 'Choose an available individual payment plan.' });
+  }
+  const tier = PRICE_TIERS[planType];
+  if (!tier?.priceId || tier.public === false) {
+    return res.status(503).json({ error: 'The selected Stripe price is not configured.' });
+  }
+
+  const metadata = { ...stripeCheckoutMetadata(app.id, planType, tier.maxStudents), approvalRevision: app.reviewedAt?.toISOString() || '' };
+    const receipts = await prisma.applicationEvent.findMany({
+      where: { applicationId: app.id, action: { in: ['stripe_payment_confirmed', 'manual_payment_recorded'] } },
+      select: { id: true },
+    });
+    if (receipts.length) return res.status(409).json({ error: 'Payment is already recorded for this application. Review billing before requesting another payment.' });
+    const prior = await prisma.applicationEvent.findFirst({
+      where: { applicationId: app.id, action: 'stripe_checkout_created' },
+      orderBy: { createdAt: 'desc' },
+    });
+    if (prior?.metadata?.checkoutSessionId) {
+      const previousSession = await stripe.checkout.sessions.retrieve(prior.metadata.checkoutSessionId);
+      if (previousSession.status === 'complete') return res.status(409).json({ error: 'This application already has a completed checkout. Review its payment record.' });
+      if (previousSession.status === 'open') {
+        if (previousSession.metadata?.approvalRevision !== metadata.approvalRevision) return res.status(409).json({ error: 'The application review changed. Expire the previous payment link in Stripe before requesting a new one.' });
+        if (previousSession.metadata?.planType !== planType) return res.status(409).json({ error: 'A payment link already exists for another plan. Resolve that link before changing plans.' });
+        return res.json({ url: previousSession.url, checkoutSessionId: previousSession.id, planType, paymentState: 'awaiting_stripe_confirmation' });
+      }
+    }
+    const idempotencyKey = 'giis-checkout:' + crypto.createHash('sha256')
+      .update(JSON.stringify([app.id, app.reviewedAt, prior?.metadata?.checkoutSessionId || 'initial']))
+      .digest('hex');
+    const session = await stripe.checkout.sessions.create({
+      mode: tier.mode,
+      payment_method_types: ['card'],
+      line_items: [{ price: tier.priceId, quantity: 1 }],
+      customer_email: app.parentEmail,
+      client_reference_id: app.id,
+      success_url: `${FRONTEND_URL}/welcome?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${FRONTEND_URL}/pricing`,
+      metadata,
+      ...(tier.mode === 'subscription' && { subscription_data: { metadata } }),
+    }, { idempotencyKey });
+    await prisma.applicationEvent.upsert({
+      where: { id: `stripe-checkout:${session.id}` },
+      update: {},
+      create: { id: `stripe-checkout:${session.id}`, ...applicationEventData(
+        app.id,
+        'stripe_checkout_created',
+        req.auth?.email,
+        `Stripe Checkout created for ${planType}; await signed payment confirmation.`,
+        { planType, checkoutSessionId: session.id },
+      ) },
+    });
+    return res.status(201).json({
+      checkoutSessionId: session.id,
+      url: session.url,
+      planType,
+      paymentState: 'awaiting_stripe_confirmation',
+    });
+  } catch (err) {
+    console.error('[applications] Stripe Checkout creation failed:', err.message);
+    return res.status(502).json({ error: 'Stripe could not create the payment page. Please try again.' });
+  }
+});
 
 /**
  * POST /api/applications/:id/manual-payment  — admin only
@@ -1201,6 +1308,7 @@ router.get('/capabilities', (_req, res) => {
     transferIntakeVersion: 'transfer-v2',
     interestConfirmation: true,
     adminWorkflowVersion: 'admissions-v5',
+    applicationStripeCheckout: true,
     transferEvaluation: true,
   });
 });
@@ -1482,3 +1590,6 @@ module.exports.transferEvaluationEditError = transferEvaluationEditError;
 module.exports.interestTokenHash = interestTokenHash;
 module.exports.normalizePriorSchools = normalizePriorSchools;
 module.exports.confirmOfficialRecordsRequested = confirmOfficialRecordsRequested;
+module.exports.stripeCheckoutMetadata = stripeCheckoutMetadata;
+module.exports.applicationEnrollmentState = applicationEnrollmentState;
+module.exports.linkExistingSubscriptionsForApplication = linkExistingSubscriptionsForApplication;

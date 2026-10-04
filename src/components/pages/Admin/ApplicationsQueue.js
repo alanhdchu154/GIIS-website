@@ -537,6 +537,10 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   const [credentials, setCredentials] = useState(null);
   const [rejectModal, setRejectModal] = useState(null); // { appId, parentName, studentName }
   const [manualPaymentModal, setManualPaymentModal] = useState(null);
+  const [stripeCheckoutModal, setStripeCheckoutModal] = useState(null);
+  const [stripeCheckoutPlan, setStripeCheckoutPlan] = useState('guided_monthly');
+  const [stripeCheckoutLink, setStripeCheckoutLink] = useState('');
+  const [stripeCheckoutEnabled, setStripeCheckoutEnabled] = useState(false);
   const [manualPaymentReceipt, setManualPaymentReceipt] = useState(null);
   const [manualPaymentDraft, setManualPaymentDraft] = useState({
     planType: 'guided_monthly',
@@ -566,6 +570,9 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
           return;
         }
         setWorkflowMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v5' ? 'serious' : 'legacy');
+        const capabilitiesResponse = await fetch(`${API}/api/applications/capabilities`);
+        const capabilities = capabilitiesResponse.ok ? await capabilitiesResponse.json() : {};
+        if (active) setStripeCheckoutEnabled(capabilities.applicationStripeCheckout === true);
       } catch {
         if (active) setWorkflowMode('unavailable');
       }
@@ -763,6 +770,37 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
       paymentReference: '',
       note: '',
     });
+  }
+
+  function openStripeCheckout(app) {
+    setStripeCheckoutModal(app);
+    setStripeCheckoutPlan('guided_monthly');
+    setStripeCheckoutLink('');
+  }
+
+  async function createStripeCheckout() {
+    if (!stripeCheckoutModal) return;
+    setSaving(stripeCheckoutModal.id + 'stripe-checkout');
+    try {
+      const res = await fetch(`${API}/api/applications/${stripeCheckoutModal.id}/stripe-checkout`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ planType: stripeCheckoutPlan }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        showToast(data.error || 'Stripe Checkout could not be created');
+        return;
+      }
+      setStripeCheckoutLink(data.url || '');
+      showToast('Stripe Checkout link created — copy it to the family after review');
+      load();
+    } catch {
+      showToast('Unable to reach Stripe Checkout. Try again to recover the existing link.');
+    } finally {
+      setSaving('');
+    }
   }
 
   async function recordManualPayment() {
@@ -1252,7 +1290,13 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                             </button>
                           </>)}
 
-		                          {workflowEnabled && app.status === 'approved' && !hasPaidRecord && applicationApprovalReady && (
+	                          {stripeCheckoutEnabled && workflowEnabled && app.status === 'approved' && !hasPaidRecord && applicationApprovalReady && (
+	                            <button onClick={() => openStripeCheckout(app)} disabled={!!saving}
+	                              style={{ padding: '8px 18px', borderRadius: 8, background: '#1a73e8', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
+	                              Create Stripe Checkout
+	                            </button>
+	                          )}
+	                          {workflowEnabled && app.status === 'approved' && !hasPaidRecord && applicationApprovalReady && (
 	                            <button onClick={() => openManualPayment(app)} disabled={!!saving}
 	                              style={{ padding: '8px 18px', borderRadius: 8, background: '#7c3aed', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
 	                              Record Manual Payment
@@ -1534,6 +1578,43 @@ Welcome to GIIS!
           </div>
         </div>
       )}
+
+	      {/* Application-bound Stripe Checkout modal */}
+	      {stripeCheckoutModal && (
+	        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.55)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10000, fontFamily: 'Inter, sans-serif', padding: 24 }}>
+	          <div style={{ background: '#fff', borderRadius: 16, padding: '28px 32px', maxWidth: 560, width: '100%', boxShadow: '0 24px 64px rgba(0,0,0,0.25)' }}>
+	            <p style={{ fontSize: 11, fontWeight: 800, color: '#1a73e8', letterSpacing: 1.4, textTransform: 'uppercase', margin: '0 0 8px' }}>Approved application payment</p>
+	            <h2 style={{ fontSize: 21, fontWeight: 800, margin: '0 0 6px' }}>Create Stripe Checkout link</h2>
+	            <p style={{ fontSize: 13, color: '#5c6578', margin: '0 0 18px', lineHeight: 1.5 }}>
+	              {stripeCheckoutModal.studentName} · {stripeCheckoutModal.parentEmail}. Stripe will report a completed payment back to this exact application. Creating the link does not charge a card or activate an account.
+	            </p>
+	            {!stripeCheckoutLink ? <>
+	              <label style={fieldLabel}>
+	                Plan
+	                <select value={stripeCheckoutPlan} onChange={(e) => setStripeCheckoutPlan(e.target.value)} style={fieldControl}>
+	                  {Object.entries(MANUAL_PAYMENT_PLANS).map(([value, plan]) => <option key={value} value={value}>{plan.label}</option>)}
+	                </select>
+	              </label>
+	              <div style={{ background: '#fff8e6', border: '1px solid #f3d27b', borderRadius: 8, padding: '10px 12px', fontSize: 12, color: '#5c4a12', marginTop: 16, lineHeight: 1.5 }}>
+	                Send this link only after the admissions review is complete. Payment confirmation remains separate from account activation and academic decisions.
+	              </div>
+	              <div style={{ display: 'flex', gap: 10, marginTop: 18 }}>
+	                <button onClick={createStripeCheckout} disabled={!!saving} style={{ flex: 1, padding: '11px', borderRadius: 8, background: '#1a73e8', color: '#fff', fontWeight: 800, fontSize: 14, border: 'none', cursor: 'pointer' }}>
+	                  {saving ? 'Creating…' : 'Create secure payment link'}
+	                </button>
+	                <button onClick={() => setStripeCheckoutModal(null)} style={{ padding: '11px 20px', borderRadius: 8, background: 'none', border: '1.5px solid #d4d8e0', color: '#5c6578', fontWeight: 800, fontSize: 14, cursor: 'pointer' }}>Cancel</button>
+	              </div>
+	            </> : <>
+	              <textarea readOnly value={stripeCheckoutLink} rows={4} style={{ ...fieldControl, resize: 'none', fontFamily: 'monospace', fontSize: 11.5 }} />
+	              <p style={{ fontSize: 12, color: '#166534', margin: '10px 0 0', lineHeight: 1.5 }}>A Stripe Checkout creation event is now visible in this case. The payment status changes only after Stripe's signed webhook arrives.</p>
+	              <div style={{ display: 'flex', gap: 10, marginTop: 18 }}>
+	                <button onClick={() => copyToClipboard(stripeCheckoutLink)} style={{ flex: 1, padding: '11px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontWeight: 800, fontSize: 14, border: 'none', cursor: 'pointer' }}>Copy payment link</button>
+	                <button onClick={() => setStripeCheckoutModal(null)} style={{ padding: '11px 20px', borderRadius: 8, background: 'none', border: '1.5px solid #d4d8e0', color: '#5c6578', fontWeight: 800, fontSize: 14, cursor: 'pointer' }}>Done</button>
+	              </div>
+	            </>}
+	          </div>
+	        </div>
+	      )}
 
 	      {/* Manual payment modal */}
 	      {manualPaymentModal && (

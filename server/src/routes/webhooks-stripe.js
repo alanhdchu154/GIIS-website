@@ -8,6 +8,15 @@ const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_
 /** Number of consecutive invoice.payment_failed events before we soft-lock the student (T-103). */
 const SOFT_LOCK_THRESHOLD = 2;
 
+function stripeId(value) { return typeof value === 'string' ? value : value?.id || null; }
+function invoiceSubscriptionId(invoice) {
+  return stripeId(invoice.subscription || invoice.parent?.subscription_details?.subscription);
+}
+function subscriptionPeriodEnd(sub) {
+  const seconds = sub.current_period_end || sub.items?.data?.[0]?.current_period_end;
+  return seconds ? new Date(seconds * 1000) : null;
+}
+
 /**
  * POST /api/webhooks/stripe
  *
@@ -87,67 +96,38 @@ router.post('/', async (req, res) => {
     return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
-  // Idempotency / replay protection. Stripe retries for up to 3 days and can
-  // deliver duplicates; processing an event twice would (e.g.) double-increment
-  // paymentFailureCount and soft-lock a student who only failed once. A DB error
-  // here returns 500 so Stripe retries rather than us processing blind.
-  if (event.id) {
+  // Commit every event's state and receipt together; concurrent deliveries lose
+  // on the event primary key before running any database side effect.
+  {
+    if (!event.id) return res.status(400).json({ error: 'Missing event ID.' });
     try {
-      const seen = await prisma.processedStripeEvent.findUnique({ where: { eventId: event.id } });
-      if (seen) {
-        console.log(`[webhook] Duplicate event ${event.id} (${event.type}) — already processed, skipping.`);
-        return res.json({ received: true, duplicate: true });
+      await prisma.$transaction(async tx => {
+        await tx.processedStripeEvent.create({ data: { eventId: event.id, type: event.type } });
+        const handlers = {
+          'checkout.session.completed': handleCheckoutCompleted,
+          'checkout.session.async_payment_succeeded': handleCheckoutCompleted,
+          'customer.subscription.updated': handleSubscriptionUpdated,
+          'customer.subscription.deleted': handleSubscriptionDeleted,
+          'invoice.payment_succeeded': handlePaymentSucceeded,
+          'invoice.payment_failed': handlePaymentFailed,
+          'charge.refunded': handleChargeRefunded,
+        };
+        if (handlers[event.type]) await handlers[event.type](event.data.object, tx);
+      }, { timeout: 15000 });
+      return res.json({ received: true });
+    } catch (err) {
+      if (err.code === 'P2002') {
+        try {
+          if (await prisma.processedStripeEvent.findUnique({ where: { eventId: event.id } })) {
+            return res.json({ received: true, duplicate: true });
+          }
+        } catch (_) { /* A failed dedupe read must remain retryable. */ }
       }
-    } catch (dedupeErr) {
-      console.error('[webhook] Idempotency check failed:', dedupeErr.message);
-      return res.status(500).json({ error: 'Idempotency check failed.' });
+      console.error('[webhook] Transaction failed:', err.message);
+      return res.status(500).json({ error: 'Webhook receipt could not be recorded.' });
     }
   }
 
-  try {
-    switch (event.type) {
-      case 'checkout.session.completed':
-        await handleCheckoutCompleted(event.data.object);
-        break;
-      case 'customer.subscription.updated':
-        await handleSubscriptionUpdated(event.data.object);
-        break;
-      case 'customer.subscription.deleted':
-        await handleSubscriptionDeleted(event.data.object);
-        break;
-      case 'invoice.payment_succeeded':
-        await handlePaymentSucceeded(event.data.object);
-        break;
-      case 'invoice.payment_failed':
-        await handlePaymentFailed(event.data.object);
-        break;
-      case 'charge.refunded':
-        await handleChargeRefunded(event.data.object);
-        break;
-      default:
-        // Unhandled event types still return 200 so Stripe stops retrying.
-        console.log(`[webhook] Unhandled event type: ${event.type}`);
-    }
-  } catch (handlerErr) {
-    // Returning 500 makes Stripe retry up to 3 days. Only do this for transient errors;
-    // for permanent failures (bad data), log and return 200 so we don't get stuck.
-    // NOTE: we deliberately do NOT record the event below on this path, so a retry
-    // gets a fresh attempt rather than being skipped as a duplicate.
-    console.error('[webhook] Handler error:', handlerErr.message, handlerErr.stack);
-    return res.status(500).json({ error: 'Webhook handler failed.' });
-  }
-
-  // Record only after successful handling so a transient failure above can be retried.
-  // create() (not upsert) + ignore unique races from a concurrent duplicate delivery.
-  if (event.id) {
-    await prisma.processedStripeEvent
-      .create({ data: { eventId: event.id, type: event.type } })
-      .catch((e) => {
-        if (e.code !== 'P2002') console.error('[webhook] Failed to record processed event:', e.message);
-      });
-  }
-
-  res.json({ received: true });
 });
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -164,17 +144,18 @@ router.post('/', async (req, res) => {
  * linked student and the soft-lock / deactivate is a no-op. We log the unlinked case loudly so
  * Alan can see it in the webhook log and fix manually via /admin/subscriptions.
  */
-async function resolveLinkedAccount(stripeSubscriptionId) {
+async function resolveLinkedAccount(stripeSubscriptionId, db = prisma) {
   if (!stripeSubscriptionId) return { sub: null, account: null };
-  const sub = await prisma.subscription.findUnique({
+  const sub = await db.subscription.findUnique({
     where: { stripeSubscriptionId },
     include: { student: { include: { account: true } } },
   });
   if (!sub) return { sub: null, account: null };
   if (sub.student?.account) return { sub, account: sub.student.account };
+  if (await isApplicationCheckout(sub, db)) return { sub, account: null };
   // Fallback: try matching purchaser email to a student account
   if (sub.purchaserEmail) {
-    const account = await prisma.studentAccount.findUnique({
+    const account = await db.studentAccount.findUnique({
       where: { email: sub.purchaserEmail },
     });
     if (account) return { sub, account };
@@ -182,49 +163,49 @@ async function resolveLinkedAccount(stripeSubscriptionId) {
   return { sub, account: null };
 }
 
-async function softLockStudent(account, reason) {
+async function softLockStudent(account, reason, db = prisma) {
   if (!account) return null;
-  return prisma.studentAccount.update({
+  return db.studentAccount.update({
     where: { id: account.id },
     data: { softLocked: true, lockReason: reason },
   });
 }
 
-async function deactivateStudent(account, reason) {
+async function deactivateStudent(account, reason, db = prisma) {
   if (!account) return null;
-  return prisma.studentAccount.update({
+  return db.studentAccount.update({
     where: { id: account.id },
     data: { isActive: false, softLocked: true, lockReason: reason },
   });
 }
 
-async function clearStudentLock(account) {
+async function clearStudentLock(account, db = prisma) {
   if (!account) return null;
   if (!account.softLocked && account.lockReason === '') return account;
-  return prisma.studentAccount.update({
+  return db.studentAccount.update({
     where: { id: account.id },
     data: { softLocked: false, lockReason: '' },
   });
 }
 
-async function findStudentForPurchaserEmail(email) {
+async function findStudentForPurchaserEmail(email, db = prisma) {
   const normalized = String(email || '').trim().toLowerCase();
   if (!normalized || normalized === 'unknown') return null;
 
-  const parent = await prisma.parentAccount.findUnique({
+  const parent = await db.parentAccount.findUnique({
     where: { email: normalized },
     select: { studentId: true },
   });
   if (parent?.studentId) return parent.studentId;
 
-  const studentByParentEmail = await prisma.student.findFirst({
+  const studentByParentEmail = await db.student.findFirst({
     where: { parentEmail: { equals: normalized, mode: 'insensitive' } },
     select: { id: true },
     orderBy: { createdAt: 'desc' },
   });
   if (studentByParentEmail?.id) return studentByParentEmail.id;
 
-  const studentAccount = await prisma.studentAccount.findUnique({
+  const studentAccount = await db.studentAccount.findUnique({
     where: { email: normalized },
     select: { studentId: true },
   });
@@ -238,16 +219,17 @@ async function findStudentForPurchaserEmail(email) {
 // human to link it in /admin/subscriptions.
 const MONEY_MOVED_STATES = ['active', 'paid', 'trialing', 'past_due'];
 
-async function autoLinkSubscriptionByEmail(subscriptionRecord) {
+async function autoLinkSubscriptionByEmail(subscriptionRecord, db = prisma) {
   if (!subscriptionRecord || subscriptionRecord.studentId) return subscriptionRecord;
-  const studentId = await findStudentForPurchaserEmail(subscriptionRecord.purchaserEmail);
+  if (await isApplicationCheckout(subscriptionRecord, db)) return subscriptionRecord;
+  const studentId = await findStudentForPurchaserEmail(subscriptionRecord.purchaserEmail, db);
   if (!studentId) {
     console.warn(`[webhook] subscription ${subscriptionRecord.id} has no matching student for ${subscriptionRecord.purchaserEmail}`);
     // Surface to admins via the audit feed (GET /api/students/audit) so a paid-but-
     // unlinked subscription is visible, not just buried in server logs. Only alert when
     // money moved (skip incomplete/abandoned checkouts). Never let this break the webhook.
     if (MONEY_MOVED_STATES.includes(subscriptionRecord.status)) {
-      await prisma.auditLog
+      await db.auditLog
         .create({
           data: {
             action: 'subscription_unlinked',
@@ -261,7 +243,7 @@ async function autoLinkSubscriptionByEmail(subscriptionRecord) {
     return subscriptionRecord;
   }
 
-  const linked = await prisma.subscription.update({
+  const linked = await db.subscription.update({
     where: { id: subscriptionRecord.id },
     data: { studentId },
   });
@@ -269,9 +251,53 @@ async function autoLinkSubscriptionByEmail(subscriptionRecord) {
   return linked;
 }
 
+// Checkout Sessions created in the admissions console contain only the opaque
+// application ID and plan in Stripe metadata. A signed webhook then creates the
+// staff-visible receipt against that exact reviewed application.
+async function isApplicationCheckout(subscriptionRecord, db = prisma) {
+  if (!subscriptionRecord.stripeCheckoutSessionId) return false;
+  return !!await db.applicationEvent.findFirst({ where: {
+    action: { in: ['stripe_checkout_created', 'stripe_payment_confirmed'] },
+    metadata: { path: ['checkoutSessionId'], equals: subscriptionRecord.stripeCheckoutSessionId },
+  } });
+}
+
+async function recordApplicationPaymentConfirmation(session, subscriptionRecord, db = prisma) {
+  const applicationId = session.metadata?.applicationId;
+  const paymentSucceeded = session.payment_status === 'paid';
+  if (!applicationId || !paymentSucceeded) return;
+
+  const application = await db.application.findUnique({
+    where: { id: applicationId },
+    select: { id: true },
+  });
+  if (!application) throw new Error(`Checkout session references unknown application ${applicationId}.`);
+
+  await db.applicationEvent.upsert({
+    where: { id: `stripe-paid:${session.id}` },
+    update: {},
+    create: {
+      id: `stripe-paid:${session.id}`,
+      applicationId,
+      action: 'stripe_payment_confirmed',
+      actorEmail: 'stripe-webhook',
+      summary: `Stripe payment received: ${session.currency?.toUpperCase() || 'USD'} ${(Number(session.amount_total || 0) / 100).toFixed(2)} for ${subscriptionRecord.planType}. Reference: ${session.id}.`,
+      metadata: {
+        checkoutSessionId: session.id,
+        subscriptionId: subscriptionRecord.id,
+        planType: subscriptionRecord.planType,
+        status: subscriptionRecord.status,
+        amountTotal: subscriptionRecord.amountTotal,
+        currency: session.currency || 'usd',
+        paymentStatus: session.payment_status,
+      },
+    },
+  });
+}
+
 // ─── Event handlers ───────────────────────────────────────────────────────────
 
-async function handleCheckoutCompleted(session) {
+async function handleCheckoutCompleted(session, db = prisma) {
   const planType = session.metadata?.planType || 'unknown';
   const maxStudents = Number(session.metadata?.maxStudents || 1);
 
@@ -284,9 +310,9 @@ async function handleCheckoutCompleted(session) {
   let stripePriceId = null;
 
   if (isSubscription && session.subscription) {
-    const sub = await stripe.subscriptions.retrieve(session.subscription);
+    const sub = await stripe.subscriptions.retrieve(stripeId(session.subscription));
     status = sub.status;  // 'active' | 'trialing' | 'past_due' | etc.
-    currentPeriodEnd = new Date(sub.current_period_end * 1000);
+    currentPeriodEnd = subscriptionPeriodEnd(sub);
     stripeSubscriptionId = sub.id;
     stripePriceId = sub.items?.data?.[0]?.price?.id || null;
   } else {
@@ -295,7 +321,7 @@ async function handleCheckoutCompleted(session) {
     stripePriceId = session.line_items?.data?.[0]?.price?.id || null;
   }
 
-  const subscriptionRecord = await prisma.subscription.upsert({
+  const subscriptionRecord = await db.subscription.upsert({
     where: { stripeCheckoutSessionId: session.id },
     update: {
       status,
@@ -318,26 +344,26 @@ async function handleCheckoutCompleted(session) {
       amountTotal:             session.amount_total,
     },
   });
-  await autoLinkSubscriptionByEmail(subscriptionRecord);
+  // Application-bound purchases must never attach to a sibling by payer email.
+  // The admissions activation step links the exact recorded subscription.
+  await recordApplicationPaymentConfirmation(session, subscriptionRecord, db);
 
   console.log(`[webhook] ✓ checkout.session.completed — ${planType} · ${session.customer_email} · ${status}`);
 }
 
-async function handleSubscriptionUpdated(sub) {
-  const existing = await prisma.subscription.findUnique({
+async function handleSubscriptionUpdated(sub, db = prisma) {
+  const existing = await db.subscription.findUnique({
     where: { stripeSubscriptionId: sub.id },
   });
-  if (!existing) {
-    // Stripe may send subscription.updated before checkout.session.completed in rare cases.
-    // We'll catch it next time around or via re-sync.
-    console.warn(`[webhook] subscription.updated for unknown sub ${sub.id} — skipping`);
-    return;
-  }
-  await prisma.subscription.update({
+  if (!existing) throw new Error(`Subscription ${sub.id} is not recorded yet; retry after Checkout.`);
+  // Delayed lifecycle events must not restore a refunded/cancelled enrollment.
+  if (['refunded', 'cancelled'].includes(existing.status)) return;
+  sub = await stripe.subscriptions.retrieve(sub.id);
+  await db.subscription.update({
     where: { stripeSubscriptionId: sub.id },
     data: {
-      status:             sub.status,
-      currentPeriodEnd:   new Date(sub.current_period_end * 1000),
+      status:             sub.status === 'canceled' ? 'cancelled' : sub.status,
+      currentPeriodEnd:   subscriptionPeriodEnd(sub),
       cancelAtPeriodEnd:  !!sub.cancel_at_period_end,
       stripePriceId:      sub.items?.data?.[0]?.price?.id || existing.stripePriceId,
     },
@@ -345,22 +371,22 @@ async function handleSubscriptionUpdated(sub) {
   console.log(`[webhook] ✓ subscription.updated — ${sub.id} · ${sub.status}`);
 }
 
-async function handleSubscriptionDeleted(sub) {
-  const existing = await prisma.subscription.findUnique({
+async function handleSubscriptionDeleted(sub, db = prisma) {
+  const existing = await db.subscription.findUnique({
     where: { stripeSubscriptionId: sub.id },
   });
-  if (!existing) return;
+  if (!existing) throw new Error(`Subscription ${sub.id} is not recorded yet; retry after Checkout.`);
 
   // Cancellation arrives here. We deactivate the linked student (if any) — same as a refund —
   // because their access window has fully ended.
-  const { account } = await resolveLinkedAccount(sub.id);
+  const { account } = await resolveLinkedAccount(sub.id, db);
 
-  await prisma.subscription.update({
+  await db.subscription.update({
     where: { stripeSubscriptionId: sub.id },
     data: { status: 'cancelled', cancelAtPeriodEnd: false },
   });
   if (account) {
-    await deactivateStudent(account, 'subscription_cancelled');
+    await deactivateStudent(account, 'subscription_cancelled', db);
     console.log(`[webhook] ✓ subscription.deleted — ${sub.id} · deactivated student ${account.email}`);
   } else {
     console.log(`[webhook] ✓ subscription.deleted — ${sub.id} · no linked student`);
@@ -369,52 +395,87 @@ async function handleSubscriptionDeleted(sub) {
   // TODO (T-402 email templates): notify parent that subscription ended and access is revoked.
 }
 
-async function handlePaymentSucceeded(invoice) {
-  if (!invoice.subscription) return;
-  const existing = await prisma.subscription.findUnique({
-    where: { stripeSubscriptionId: invoice.subscription },
-  });
-  if (!existing) return;
-
-  const updated = await prisma.subscription.update({
-    where: { stripeSubscriptionId: invoice.subscription },
-    data: {
-      status: 'active',
-      paymentFailureCount: 0,
+async function recordApplicationInvoicePayment(invoice, subscription, db = prisma) {
+  if (!invoice.id) throw new Error('Invoice payment event has no invoice ID.');
+  if (!subscription.stripeCheckoutSessionId) return;
+  const checkout = await db.applicationEvent.findFirst({ where: {
+    action: { in: ['stripe_checkout_created', 'stripe_payment_confirmed'] },
+    metadata: { path: ['checkoutSessionId'], equals: subscription.stripeCheckoutSessionId },
+  } });
+  if (!checkout) return;
+  await db.applicationEvent.upsert({
+    where: { id: `stripe-invoice-paid:${invoice.id}` }, update: {},
+    create: {
+      id: `stripe-invoice-paid:${invoice.id}`,
+      applicationId: checkout.applicationId, action: 'stripe_invoice_payment_confirmed', actorEmail: 'stripe-webhook',
+      summary: `Stripe invoice paid: ${invoice.currency?.toUpperCase() || 'USD'} ${(Number(invoice.amount_paid || 0) / 100).toFixed(2)}; invoice ${invoice.id}.`,
+      metadata: { invoiceId: invoice.id, subscriptionId: subscription.id, amountPaid: invoice.amount_paid || 0, currency: invoice.currency || 'usd', billingReason: invoice.billing_reason || null },
     },
   });
-  await autoLinkSubscriptionByEmail(updated);
+}
+
+async function handlePaymentSucceeded(invoice, db = prisma) {
+  invoice = { ...invoice, subscription: invoiceSubscriptionId(invoice) };
+  if (!invoice.subscription) return;
+  const existing = await db.subscription.findUnique({
+    where: { stripeSubscriptionId: invoice.subscription },
+  });
+  if (!existing) throw new Error(`Subscription ${invoice.subscription} is not recorded yet; retry after Checkout.`);
+  // Keep the actual invoice receipt even if membership is held after a refund.
+  await recordApplicationInvoicePayment(invoice, existing, db);
+  if (['refunded', 'cancelled'].includes(existing.status)) return;
+  const current = await stripe.subscriptions.retrieve(invoice.subscription);
+  const currentStatus = current.status === 'canceled' ? 'cancelled' : current.status;
+  const paymentCurrent = currentStatus === 'active';
+
+  const updated = await db.subscription.update({
+    where: { stripeSubscriptionId: invoice.subscription },
+    data: {
+      status: currentStatus,
+      currentPeriodEnd: subscriptionPeriodEnd(current),
+      cancelAtPeriodEnd: !!current.cancel_at_period_end,
+      ...(paymentCurrent ? { paymentFailureCount: 0 } : {}),
+    },
+  });
+  await autoLinkSubscriptionByEmail(updated, db);
 
   // Successful payment — clear any soft-lock we set during past_due.
-  const { account } = await resolveLinkedAccount(invoice.subscription);
-  if (account?.softLocked && account.lockReason === 'payment_past_due') {
-    await clearStudentLock(account);
+  const { account } = await resolveLinkedAccount(invoice.subscription, db);
+  if (paymentCurrent && account?.softLocked && account.lockReason === 'payment_past_due') {
+    await clearStudentLock(account, db);
     console.log(`[webhook] ✓ invoice.payment_succeeded — ${invoice.subscription} · cleared soft-lock for ${account.email}`);
   } else {
     console.log(`[webhook] ✓ invoice.payment_succeeded — ${invoice.subscription}`);
   }
 }
 
-async function handlePaymentFailed(invoice) {
+async function handlePaymentFailed(invoice, db = prisma) {
+  invoice = { ...invoice, subscription: invoiceSubscriptionId(invoice) };
   if (!invoice.subscription) return;
-  const existing = await prisma.subscription.findUnique({
+  const existing = await db.subscription.findUnique({
     where: { stripeSubscriptionId: invoice.subscription },
   });
-  if (!existing) return;
+  if (!existing) throw new Error(`Subscription ${invoice.subscription} is not recorded yet; retry after Checkout.`);
+  if (['refunded', 'cancelled'].includes(existing.status)) return;
+  const current = await stripe.subscriptions.retrieve(invoice.subscription);
+  const currentStatus = current.status === 'canceled' ? 'cancelled' : current.status;
+  const currentlyDelinquent = ['past_due', 'unpaid'].includes(currentStatus);
 
-  const newCount = existing.paymentFailureCount + 1;
-  await prisma.subscription.update({
+  const updated = await db.subscription.update({
     where: { stripeSubscriptionId: invoice.subscription },
     data: {
-      status: 'past_due',
-      paymentFailureCount: newCount,
+      status: currentStatus,
+      currentPeriodEnd: subscriptionPeriodEnd(current),
+      cancelAtPeriodEnd: !!current.cancel_at_period_end,
+      ...(currentlyDelinquent ? { paymentFailureCount: { increment: 1 } } : {}),
     },
   });
+  const newCount = updated.paymentFailureCount;
 
-  if (newCount >= SOFT_LOCK_THRESHOLD) {
-    const { account } = await resolveLinkedAccount(invoice.subscription);
+  if (currentlyDelinquent && newCount >= SOFT_LOCK_THRESHOLD) {
+    const { account } = await resolveLinkedAccount(invoice.subscription, db);
     if (account) {
-      await softLockStudent(account, 'payment_past_due');
+      await softLockStudent(account, 'payment_past_due', db);
       console.log(
         `[webhook] ⚠ payment_failed — ${invoice.subscription} · attempt ${newCount} ` +
           `· soft-locked student ${account.email}`
@@ -432,72 +493,78 @@ async function handlePaymentFailed(invoice) {
   // TODO (T-402 email templates): notify parent and link to Stripe Customer Portal (T-101).
 }
 
-async function handleChargeRefunded(charge) {
-  // A refunded charge belongs to either a subscription invoice or a one-time payment.
-  // We update the matching Subscription row when we can find it.
-  let stripeSubscriptionId = null;
-  let checkoutSessionId = null;
-
+async function handleChargeRefunded(charge, db = prisma) {
+  // Resolve only exact invoice/PaymentIntent relationships. A shared Stripe
+  // customer is never sufficient evidence for choosing a child's subscription.
+  let subscriptionIds = [];
+  const paymentIntentId = stripeId(charge.payment_intent);
   if (charge.invoice) {
-    try {
-      const inv = await stripe.invoices.retrieve(charge.invoice);
-      stripeSubscriptionId = inv.subscription || null;
-    } catch (err) {
-      console.warn(`[webhook] charge.refunded — failed to retrieve invoice ${charge.invoice}: ${err.message}`);
+    const invoice = await stripe.invoices.retrieve(stripeId(charge.invoice));
+    const id = invoiceSubscriptionId(invoice);
+    if (id) subscriptionIds.push(id);
+  } else if (paymentIntentId) {
+    const payments = await stripe.invoicePayments.list({
+      payment: { type: 'payment_intent', payment_intent: paymentIntentId }, limit: 100,
+    });
+    if (payments.has_more) throw new Error('Refund invoice mapping requires reconciliation.');
+    for (const payment of payments.data) {
+      if (stripeId(payment.payment?.payment_intent) !== paymentIntentId) continue;
+      const invoice = await stripe.invoices.retrieve(stripeId(payment.invoice));
+      const id = invoiceSubscriptionId(invoice);
+      if (id) subscriptionIds.push(id);
     }
   }
-
-  if (!stripeSubscriptionId && charge.payment_intent) {
-    // For one-time payments, we recorded the checkout session id on Subscription.
-    // Stripe doesn't return checkout session id from a payment_intent directly,
-    // so we look up by stripeCustomerId as a fallback.
-    if (charge.customer) {
-      const oneTime = await prisma.subscription.findFirst({
-        where: { stripeCustomerId: charge.customer, planType: 'live_test' },
-        orderBy: { createdAt: 'desc' },
-      });
-      if (oneTime) checkoutSessionId = oneTime.stripeCheckoutSessionId;
-    }
-  }
-
+  subscriptionIds = [...new Set(subscriptionIds)];
+  if (subscriptionIds.length > 1) throw new Error('Refund maps to multiple subscriptions; reconciliation required.');
   let sub = null;
   let account = null;
-  if (stripeSubscriptionId) {
-    const r = await resolveLinkedAccount(stripeSubscriptionId);
-    sub = r.sub;
-    account = r.account;
-  } else if (checkoutSessionId) {
-    sub = await prisma.subscription.findUnique({
-      where: { stripeCheckoutSessionId: checkoutSessionId },
-      include: { student: { include: { account: true } } },
-    });
-    account = sub?.student?.account || null;
+  if (subscriptionIds.length === 1) {
+    ({ sub, account } = await resolveLinkedAccount(subscriptionIds[0], db));
+  } else if (paymentIntentId) {
+    const sessions = await stripe.checkout.sessions.list({ payment_intent: paymentIntentId, limit: 100 });
+    const exact = sessions.data.filter(session => stripeId(session.payment_intent) === paymentIntentId);
+    if (sessions.has_more || exact.length > 1) throw new Error('Refund Checkout mapping is ambiguous.');
+    if (exact.length === 1) {
+      sub = await db.subscription.findUnique({
+        where: { stripeCheckoutSessionId: exact[0].id },
+        include: { student: { include: { account: true } } },
+      });
+      account = sub?.student?.account || null;
+    }
   }
+  if (!sub) throw new Error(`Refund ${charge.id} has no recorded subscription; retry/reconcile.`);
 
-  if (!sub) {
-    console.warn(
-      `[webhook] charge.refunded — no matching Subscription for charge ${charge.id}. ` +
-        `Manual reconciliation needed (see /admin/subscriptions).`
-    );
-    return;
-  }
-
-  await prisma.subscription.update({
-    where: { id: sub.id },
-    data: { status: 'refunded', cancelAtPeriodEnd: true },
+  const partial = !(charge.amount > 0 && charge.amount_refunded >= charge.amount);
+  const action = partial ? 'stripe_partial_refund_recorded' : 'stripe_refund_recorded';
+  const receipt = sub.stripeCheckoutSessionId && await db.applicationEvent.findFirst({
+    where: {
+      action: { in: ['stripe_checkout_created', 'stripe_payment_confirmed'] },
+      metadata: { path: ['checkoutSessionId'], equals: sub.stripeCheckoutSessionId },
+    },
   });
-
-  if (account) {
-    await deactivateStudent(account, 'refund_issued');
-    console.log(`[webhook] ✓ charge.refunded — ${charge.id} · deactivated student ${account.email}`);
+  if (receipt) {
+    await db.applicationEvent.upsert({
+      where: { id: `stripe-refund:${charge.id}:${charge.amount_refunded}` },
+      update: {},
+      create: {
+        id: `stripe-refund:${charge.id}:${charge.amount_refunded}`,
+        applicationId: receipt.applicationId, action, actorEmail: 'stripe-webhook',
+        summary: `Stripe ${partial ? 'partial' : 'full'} refund recorded: ${charge.currency?.toUpperCase() || 'USD'} ${(charge.amount_refunded / 100).toFixed(2)}; charge ${charge.id}.`,
+        metadata: { chargeId: charge.id, subscriptionId: sub.id, amountRefunded: charge.amount_refunded, currency: charge.currency || 'usd' },
+      },
+    });
   } else {
-    console.log(`[webhook] ✓ charge.refunded — ${charge.id} · no linked student`);
+    await db.auditLog.create({ data: {
+      action: `${action}:${charge.id}:${charge.amount_refunded}`,
+      studentId: sub.studentId || null, actorRole: 'system', actorEmail: 'stripe-webhook',
+    } });
   }
-
-  // TODO (T-402 email templates):
-  //   - email parent confirming refund + access revoked
-  //   - alert admin (alanhdchu@) — refunds are rare and worth a heads-up
+  // Partial refunds can be adjustments; they do not revoke enrollment access.
+  if (partial) return;
+  await db.subscription.update({ where: { id: sub.id }, data: { status: 'refunded' } });
+  if (account) await deactivateStudent(account, 'refund_issued', db);
 }
 
 module.exports = router;
 module.exports.resolveWebhookVerificationMode = resolveWebhookVerificationMode;
+module.exports.recordApplicationPaymentConfirmation = recordApplicationPaymentConfirmation;

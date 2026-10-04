@@ -1,0 +1,128 @@
+// Synthetic route integration: no real database, keys, charges, or mail.
+const mockDb = {
+  application: { findUnique: jest.fn() },
+  applicationEvent: { findFirst: jest.fn(), findMany: jest.fn(), upsert: jest.fn() },
+  subscription: { upsert: jest.fn(), findMany: jest.fn(), updateMany: jest.fn() },
+  processedStripeEvent: { create: jest.fn(), findUnique: jest.fn() },
+  student: { findFirst: jest.fn() },
+  $transaction: jest.fn(),
+};
+const mockStripe = {
+  checkout: { sessions: { create: jest.fn(), retrieve: jest.fn() } },
+  subscriptions: { retrieve: jest.fn() },
+  webhooks: { constructEvent: jest.fn() },
+};
+jest.mock('../lib/prisma', () => mockDb);
+jest.mock('../middleware/auth', () => ({
+  authenticate: (req, res, next) => req.auth ? next() : res.status(401).json({ error: 'Unauthenticated' }),
+  requireAdmin: (req, res, next) => req.auth.role === 'admin' ? next() : res.status(403).json({ error: 'Forbidden' }),
+}));
+jest.mock('../lib/mailer', () => ({}));
+jest.mock('stripe', () => () => mockStripe);
+process.env.STRIPE_SECRET_KEY = 'synthetic-only';
+process.env.STRIPE_WEBHOOK_SECRET = 'synthetic-only';
+process.env.STRIPE_PRICE_GUIDED_MONTHLY = 'price_synthetic';
+const applications = require('./applications');
+const webhook = require('./webhooks-stripe');
+
+async function invoke(router, path, request = {}) {
+  const route = router.stack.find(layer => layer.route?.path === path && layer.route.methods.post).route;
+  const req = { params: { id: 'app_a' }, headers: {}, body: {}, ...request };
+  const res = { code: 200, status(c) { this.code = c; return this; }, json(b) { this.body = b; return this; }, send(b) { this.body = b; return this; } };
+  for (const item of route.stack) {
+    let next = false;
+    await item.handle(req, res, () => { next = true; });
+    if (!next) break;
+  }
+  return res;
+}
+const approved = { id: 'app_a', applicantType: 'new', status: 'approved', parentEmail: 'shared@example.invalid', interestConfirmedAt: new Date(), reviewedAt: new Date('2026-10-01') };
+const adminRequest = { auth: { role: 'admin', email: 'staff@example.invalid' }, body: { planType: 'guided_monthly', price: 'attacker_price', email: 'other@example.invalid' } };
+const session = { id: 'cs_a', mode: 'subscription', subscription: 'sub_a', status: 'complete', payment_status: 'paid', amount_total: 14900, currency: 'usd', customer: 'cus_a', customer_email: 'shared@example.invalid', metadata: { applicationId: 'app_a', planType: 'guided_monthly', approvalRevision: approved.reviewedAt.toISOString() } };
+beforeEach(() => {
+  jest.resetAllMocks();
+  mockDb.application.findUnique.mockResolvedValue(approved);
+  mockDb.applicationEvent.findFirst.mockResolvedValue(null);
+  mockDb.applicationEvent.findMany.mockResolvedValue([]);
+  mockStripe.checkout.sessions.create.mockResolvedValue({ id: 'cs_a', url: 'https://checkout.stripe.com/synthetic' });
+  mockDb.$transaction.mockImplementation(fn => fn(mockDb));
+  mockDb.subscription.upsert.mockResolvedValue({ id: 'dbsub_a', status: 'active', planType: 'guided_monthly', amountTotal: 14900 });
+  mockStripe.subscriptions.retrieve.mockResolvedValue({ id: 'sub_a', status: 'active', items: { data: [{ current_period_end: 1800000000, price: { id: 'price_synthetic' } }] } });
+  mockStripe.webhooks.constructEvent.mockReturnValue({ id: 'evt_a', type: 'checkout.session.completed', data: { object: session } });
+});
+
+test('non-admin and unapproved applications cannot create Stripe sessions', async () => {
+  expect((await invoke(applications, '/:id/stripe-checkout')).code).toBe(401);
+  expect((await invoke(applications, '/:id/stripe-checkout', { ...adminRequest, auth: { role: 'parent' } })).code).toBe(403);
+  mockDb.application.findUnique.mockResolvedValue({ ...approved, status: 'pending' });
+  expect((await invoke(applications, '/:id/stripe-checkout', adminRequest)).code).toBe(400);
+  expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
+});
+test('server controls price, payer, application binding and retry key', async () => {
+  expect((await invoke(applications, '/:id/stripe-checkout', adminRequest)).code).toBe(201);
+  await invoke(applications, '/:id/stripe-checkout', adminRequest);
+  const [params, options] = mockStripe.checkout.sessions.create.mock.calls[0];
+  expect(params).toMatchObject({ customer_email: approved.parentEmail, line_items: [{ price: 'price_synthetic', quantity: 1 }], metadata: { applicationId: 'app_a' } });
+  expect(mockStripe.checkout.sessions.create.mock.calls[1][1]).toEqual(options);
+  expect(options.idempotencyKey).toMatch(/^giis-checkout:/);
+});
+test('reuses an open checkout and rejects a completed one', async () => {
+  mockDb.applicationEvent.findFirst.mockResolvedValue({ metadata: { checkoutSessionId: 'cs_a' } });
+  mockStripe.checkout.sessions.retrieve.mockResolvedValue({ ...session, status: 'open', url: 'https://checkout.stripe.com/synthetic' });
+  expect((await invoke(applications, '/:id/stripe-checkout', adminRequest)).code).toBe(200);
+  mockStripe.checkout.sessions.retrieve.mockResolvedValue(session);
+  expect((await invoke(applications, '/:id/stripe-checkout', adminRequest)).code).toBe(409);
+  expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
+});
+test('manual payment receipts prevent a second charge; changed approval cannot reuse a link', async () => {
+  mockDb.applicationEvent.findMany.mockResolvedValueOnce([{ id: 'manual_payment_receipt' }]);
+  expect((await invoke(applications, '/:id/stripe-checkout', adminRequest)).code).toBe(409);
+  mockDb.applicationEvent.findFirst.mockResolvedValue({ metadata: { checkoutSessionId: 'cs_a' } });
+  mockStripe.checkout.sessions.retrieve.mockResolvedValue({ ...session, status: 'open', metadata: { ...session.metadata, approvalRevision: 'older' } });
+  expect((await invoke(applications, '/:id/stripe-checkout', adminRequest)).code).toBe(409);
+  expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
+});
+test('sibling with the same payer email cannot see or link the other application payment', async () => {
+  mockDb.student.findFirst.mockResolvedValue(null);
+  mockDb.subscription.findMany.mockResolvedValue([]);
+  const state = await applications.applicationEnrollmentState({ ...approved, id: 'app_b' });
+  expect(state.paidUnlinked).toBe(false);
+  expect(mockDb.subscription.findMany.mock.calls[0][0].where).toEqual({ OR: [{ id: { in: [] } }] });
+  mockDb.subscription.updateMany.mockResolvedValue({ count: 0 });
+  await applications.linkExistingSubscriptionsForApplication({ app: { ...approved, id: 'app_b' }, studentId: 'student_b' });
+  expect(mockDb.subscription.updateMany).toHaveBeenCalledWith({ where: { studentId: null, id: { in: [] }, status: { in: ['active', 'paid'] } }, data: { studentId: 'student_b' } });
+});
+test('legacy explicitly linked student subscription remains visible', async () => {
+  mockDb.student.findFirst.mockResolvedValue({ id: 'student_a', account: {}, parentAccounts: [{}] });
+  mockDb.subscription.findMany.mockResolvedValue([{ id: 'legacy_sub', studentId: 'student_a', status: 'active' }]);
+  const state = await applications.applicationEnrollmentState({ ...approved, accountsCreated: true });
+  expect(state.paid).toBe(true);
+  expect(mockDb.subscription.findMany.mock.calls[0][0].where.OR).toContainEqual({ studentId: 'student_a' });
+});
+test('signed paid event writes subscription and case receipt in the transaction', async () => {
+  expect((await invoke(webhook, '/', { headers: { 'stripe-signature': 'synthetic' }, body: Buffer.from('{}') })).code).toBe(200);
+  expect(mockDb.$transaction).toHaveBeenCalledTimes(1);
+  expect(mockDb.subscription.upsert.mock.calls[0][0].create.currentPeriodEnd).toEqual(new Date(1800000000000));
+  expect(mockDb.applicationEvent.upsert).toHaveBeenCalledWith(expect.objectContaining({
+    where: { id: 'stripe-paid:cs_a' }, create: expect.objectContaining({ applicationId: 'app_a', metadata: expect.objectContaining({ subscriptionId: 'dbsub_a', paymentStatus: 'paid' }) }),
+  }));
+  expect(mockDb.student.findFirst).not.toHaveBeenCalled();
+});
+test('unpaid active subscription does not create a paid receipt', async () => {
+  mockStripe.webhooks.constructEvent.mockReturnValue({ id: 'evt_a', type: 'checkout.session.completed', data: { object: { ...session, payment_status: 'unpaid' } } });
+  expect((await invoke(webhook, '/', { headers: { 'stripe-signature': 'synthetic' } })).code).toBe(200);
+  expect(mockDb.applicationEvent.upsert).not.toHaveBeenCalled();
+});
+test('duplicate event stops before effects; storage failure asks Stripe to retry', async () => {
+  mockDb.processedStripeEvent.create.mockRejectedValue(Object.assign(new Error('duplicate'), { code: 'P2002' }));
+  mockDb.processedStripeEvent.findUnique.mockResolvedValue({ eventId: 'evt_a' });
+  expect((await invoke(webhook, '/', { headers: { 'stripe-signature': 'synthetic' } })).body).toEqual({ received: true, duplicate: true });
+  expect(mockDb.subscription.upsert).not.toHaveBeenCalled();
+  mockDb.processedStripeEvent.create.mockRejectedValue(new Error('storage offline'));
+  expect((await invoke(webhook, '/', { headers: { 'stripe-signature': 'synthetic' } })).code).toBe(500);
+});
+test('invalid signatures never touch the database', async () => {
+  mockStripe.webhooks.constructEvent.mockImplementation(() => { throw new Error('bad signature'); });
+  expect((await invoke(webhook, '/', { headers: { 'stripe-signature': 'synthetic' } })).code).toBe(400);
+  expect(mockDb.$transaction).not.toHaveBeenCalled();
+});
