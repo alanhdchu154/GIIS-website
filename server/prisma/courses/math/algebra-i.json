@@ -14,7 +14,7 @@
       "titleZh": "变量与代数式",
       "objectives": "Define variables; write and evaluate algebraic expressions; apply the vocabulary of algebra. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
       "readingUrl": "https://openstax.org/books/elementary-algebra-2e/pages/1-2-use-the-language-of-algebra",
-      "readingNote": "OpenStax Elementary Algebra 2e — 1.2 Use the Language of Algebra; complete Try It 1.19–1.24 after reading the worked examples.",
+      "readingNote": "OpenStax Elementary Algebra 2e — 1.2 Use the Language of Algebra; complete Try It 1.23–1.26 after reading the worked examples.",
       "videoUrl": "https://genesisideas.school/learn",
       "videoNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "video2Url": "https://www.youtube.com/watch?v=0uCslW40VHQ",
@@ -69,7 +69,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve 15 equations that mix one-step, two-step, fractions, and negative coefficients. For 5 selected problems, show a verification check by substituting the solution back into the original equation, then write one original word problem modeled by a two-step equation. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Solving One-Step & Two-Step Equations module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve these 15 equations: (1) x + 7 = 19; (2) y − 9 = −4; (3) 6a = 42; (4) b/5 = −3; (5) 2x + 5 = 17; (6) 7 − 3y = 22; (7) x/4 + 6 = 1; (8) −5m − 8 = 12; (9) (2/3)x = 10; (10) x/3 − 5 = 7; (11) −x/6 + 2 = 5; (12) 0.4p + 1.2 = 3.6; (13) 5(q − 2) = 20; (14) (r + 3)/4 = −2; and (15) 9 − 2s = −15. Show each inverse-operation step and preserve equality on both sides. For problems 5, 7, 9, 12, and 14, verify the solution by substitution into the original equation. Then write and solve one original word problem modeled by a two-step equation. Submit: clearly labeled work, five substitution checks, and the original word problem. Include: every original equation, each equality-preserving step as evidence, final solutions, and the requested substitution checks. Evaluation: accurate solutions, valid equality-preserving steps, complete checks, and a clear connection between the word problem and its equation.",
       "estimatedHrs": 3.5
     },
     {
@@ -181,7 +181,7 @@
       "video2Note": "Supplemental YouTube — Systems of Equations Worked Example",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Solve 9 systems (3 by graphing, 3 by substitution, 3 by elimination). Write a word problem modeled by a system and solve it. Submit clearly labeled work for each method, identify the solution as an ordered pair, verify at least three solutions by substitution, and explain when each method is most efficient. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: calculations, diagrams, equations, or graphs from the Systems of Linear Equations module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Solve these nine systems using the assigned method. Graphing: (1) y = x + 1 and y = −x + 5; (2) y = 2x − 3 and y = −x + 6; (3) y = −0.5x + 4 and y = x − 2. Substitution: (4) y = 3x − 7 and 2x + y = 8; (5) x = y + 2 and 3x + 2y = 16; (6) 2x − y = 1 and y = x + 4. Elimination: (7) 2x + y = 9 and 3x − y = 11; (8) x + 2y = 7 and 3x − 2y = 5; (9) 4x + 3y = 18 and 2x − 3y = 0. Identify each solution as an ordered pair and verify systems 2, 5, and 8 by substituting into both original equations. Then write and solve one original word problem modeled by a system, and explain which method is most efficient for it. Submit: three labeled graphs, complete algebra for substitution and elimination, three verification checks, and the original word problem. Include: both original equations for every system, visible reasoning for the assigned method, ordered-pair solutions, and evidence from both equations in each verification. Evaluation: correct ordered pairs, method-appropriate reasoning, accurate checks, and a valid model.",
       "estimatedHrs": 4
     },
     {
@@ -1246,7 +1246,7 @@
       "question": "If f(x) = x² + 1 and the domain is {−2, 0, 2}, what is the range?",
       "options": [
         "{1, 5}",
-        "{5, 1, 5}",
+        "{0, 1, 2}",
         "{−2, 0, 2}",
         "{−3, 1, 3}"
       ],
