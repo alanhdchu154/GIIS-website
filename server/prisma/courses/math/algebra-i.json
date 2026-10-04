@@ -53,7 +53,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "For the chain 3(2x + 4) + 5 − 5 = 6x + 12 + 0 = 6x + 12, label the distributive, additive inverse, and additive identity steps. Then create seven additional true equation steps that demonstrate the commutative, associative, multiplicative identity, multiplicative inverse, and zero properties, for 10 labeled steps total. Simplify these five expressions and label every property used: 4(x + 3), 2a + 7 + 3a − 2, 5(2y − 1) + y, 3(m + 4) − 2(m − 1), and 6p − (2p + 5). Submit annotated work and a short error-analysis paragraph explaining one common misuse of the distributive, associative, or commutative property. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include all transformations and one clear connection to the module objective. Evaluation: accuracy of simplification, correct property labels, complete reasoning, and useful error analysis.",
+      "assignment": "For the chain 3(2x + 4) + 5 − 5 = 6x + 12 + 0 = 6x + 12, label the distributive, additive inverse, and additive identity steps. Then create seven additional true equation steps that demonstrate the commutative, associative, multiplicative identity, multiplicative inverse, and zero properties, for 10 labeled steps total. Simplify these five expressions and label every property used: 4(x + 3), 2a + 7 + 3a − 2, 5(2y − 1) + y, 3(m + 4) − 2(m − 1), and 6p − (2p + 5). Submit: annotated work and a short error-analysis paragraph explaining one common misuse of the distributive, associative, or commutative property. Include: all transformations and one clear connection to the module objective. Evaluation: accuracy of simplification, correct property labels, complete reasoning, and useful error analysis.",
       "estimatedHrs": 3
     },
     {
@@ -117,7 +117,7 @@
       "video2Note": "Math Antics — What Are Functions? — for a visual explanation of Introduction to Functions before guided practice",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Determine whether each relation is a function and state its domain and range: (1) {(1,2),(2,4),(3,6)}, (2) {(1,2),(1,5),(3,6)}, (3) {(-2,4),(0,0),(2,4)}, (4) y = 3x − 1 for x in {-1,0,2}, and (5) x = y² for y in {-2,-1,0,1,2}. Then evaluate f(x) = 2x + 3 at x = -2, 0, 1, 4; g(x) = x² − 1 at x = -3, -1, 0; and h(x) = |x| + 2 at x = -4, 0, 3. Submit a table, mapping diagram, or graph for each relation, mark the evidence that proves function/not function, and explain how domain and range describe the inputs and outputs. Evaluation: all five classifications, all ten evaluations, accurate domain/range notation, and evidence-based reasoning.",
+      "assignment": "Determine whether each relation is a function and state its domain and range: (1) {(1,2),(2,4),(3,6)}, (2) {(1,2),(1,5),(3,6)}, (3) {(-2,4),(0,0),(2,4)}, (4) y = 3x − 1 for x in {-1,0,2}, and (5) x = y² for y in {-2,-1,0,1,2}. Then evaluate f(x) = 2x + 3 at x = -2, 0, 1, 4; g(x) = x² − 1 at x = -3, -1, 0; and h(x) = |x| + 2 at x = -4, 0, 3. Submit: a table, mapping diagram, or graph for each relation. Include: the evidence that proves function/not function and an explanation of how domain and range describe inputs and outputs. Evaluation: all five classifications, all ten evaluations, accurate domain/range notation, and evidence-based reasoning.",
       "estimatedHrs": 3.5
     },
     {
@@ -165,7 +165,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Write equations for these 10 lines: slope 3 through (0,-2); slope -2 through (4,1); through (1,3) and (5,11); through (-2,4) and (2,-4); parallel to y = 4x + 1 through (2,-3); perpendicular to y = (1/2)x - 6 through (4,0); horizontal through (0,5); vertical through (-3,2); x-intercept 6 and y-intercept 3; and a taxi cost with a $4 start fee plus $2.25 per mile. Use every applicable requested form; note that a vertical line cannot be written in slope-intercept form. Show intermediate algebra and verify each line with a graph or substituted point. Evaluation: correct equations, valid form conversions, complete checks, and interpretation of slope/intercept in the taxi model.",
+      "assignment": "Write equations for these 10 lines: slope 3 through (0,-2); slope -2 through (4,1); through (1,3) and (5,11); through (-2,4) and (2,-4); parallel to y = 4x + 1 through (2,-3); perpendicular to y = (1/2)x - 6 through (4,0); horizontal through (0,5); vertical through (-3,2); x-intercept 6 and y-intercept 3; and a taxi cost with a $4 start fee plus $2.25 per mile. Use every applicable requested form; note that a vertical line cannot be written in slope-intercept form. Submit: equations, intermediate algebra, and a graph or substituted-point check for each line. Include: one sentence for each parallel, perpendicular, vertical, and taxi case explaining why the slope or form fits the condition. Evaluation: correct equations, valid form conversions, complete checks, evidence-based justification, and interpretation of slope/intercept in the taxi model.",
       "estimatedHrs": 3.5
     },
     {
@@ -1110,7 +1110,7 @@
         "t = d − r"
       ],
       "answer": "t = d/r",
-      "explanation": "Divide both sides of d = rt by r (with r ≠ 0) to isolate time: t = d/r.",
+      "explanation": "Because the rate r multiplies t in d = rt, divide both sides by the nonzero rate r. This leaves t alone and gives t = d/r; the units also check because distance divided by rate is time.",
       "points": 1
     },
     {
@@ -1379,7 +1379,7 @@
         "10°C per hour"
       ],
       "answer": "2°C per hour",
-      "explanation": "The change is 18 − 12 = 6°C over 3 hours, so 6/3 = 2°C per hour.",
+      "explanation": "Average rate of change is output change divided by time change. The temperature changes by 18 − 12 = 6°C in 3 hours, so 6 ÷ 3 = 2°C per hour. The rate is positive because the temperature increased.",
       "points": 1
     },
     {
@@ -1598,7 +1598,7 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "Simplify (x + 2)(x + 3).",
+      "question": "Use distribution to simplify (x + 2)(x + 3), then combine any like terms.",
       "options": [
         "x² + 5x + 6",
         "x² + 6",
@@ -1606,7 +1606,7 @@
         "2x² + 5x + 6"
       ],
       "answer": "x² + 5x + 6",
-      "explanation": "Distribute each term: x² + 3x + 2x + 6 = x² + 5x + 6.",
+      "explanation": "Use distribution so that each term in the first factor multiplies each term in the second: x·x + x·3 + 2·x + 2·3. Combining the like middle terms gives x² + 5x + 6, not x² + 6.",
       "points": 1
     },
     {
@@ -1662,7 +1662,7 @@
         "x(x + 10) + 25"
       ],
       "answer": "(x + 5)²",
-      "explanation": "This is a perfect square trinomial: x² + 2(5)x + 5² = (x + 5)².",
+      "explanation": "The first and last terms are squares: x² and 25 = 5². The middle term is 10x, which equals 2·x·5, so the trinomial matches x² + 2(x)(5) + 5² and factors as (x + 5)².",
       "points": 1,
       "type": "mc"
     },
@@ -1677,7 +1677,7 @@
         "3x(x + 6)"
       ],
       "answer": "3x(x + 2)",
-      "explanation": "The greatest common factor is 3x. Dividing each term by 3x leaves x + 2.",
+      "explanation": "Both terms share 3x as a greatest common factor. Factoring it out gives 3x(x + 2), because 3x·x = 3x² and 3x·2 = 6x. The other choices do not reproduce both original terms.",
       "points": 1,
       "type": "mc"
     },

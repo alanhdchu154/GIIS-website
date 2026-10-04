@@ -15,31 +15,45 @@ const { getExpertLens } = expertLensHelpers;
 function ResourceCard({ icon, label, url, note, completedAt }) {
   if (!url) return null;
   const isDone = !!completedAt;
+  // GIIS-recorded lessons render in the player immediately above this resource
+  // section.  A generic /learn URL cannot restore the current course/module
+  // context, so it must never behave like an external lesson link.
+  const isCurrentLessonPlayer = url === 'https://genesisideas.school/learn';
+  const card = (
+    <div style={{
+      display: 'flex', alignItems: 'flex-start', gap: '12px',
+      padding: '16px', background: '#f8f9fd', border: '1px solid #e0e6f0',
+      borderRadius: '10px', transition: 'border-color 0.2s', height: '100%', boxSizing: 'border-box', flex: '1 1 100%',
+    }}
+      onMouseEnter={e => e.currentTarget.style.borderColor = '#2b3d6d'}
+      onMouseLeave={e => e.currentTarget.style.borderColor = '#e0e6f0'}
+    >
+      <span style={{ fontSize: '22px', flexShrink: 0 }}>{icon}</span>
+      <div style={{ flex: 1 }}>
+        <p style={{ margin: 0, fontSize: '11px', fontWeight: 700, color: '#2b3d6d', textTransform: 'uppercase', letterSpacing: '1px' }}>{label}</p>
+        <p style={{ margin: '3px 0 0', fontSize: '13px', color: '#444', lineHeight: 1.4 }}>{note || url}</p>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px', flexShrink: 0 }}>
+        {!isCurrentLessonPlayer && <span style={{ fontSize: '16px', color: '#aaa' }}>↗</span>}
+        {isDone && (
+          <span style={{ fontSize: '10px', fontWeight: 800, color: '#1b5e20', background: '#e8f5e9', border: '1px solid #a5d6a7', borderRadius: '999px', padding: '2px 8px' }}>
+            Done
+          </span>
+        )}
+      </div>
+    </div>
+  );
+  if (isCurrentLessonPlayer) {
+    return (
+      <div style={{ display: 'flex', gap: '10px', alignItems: 'stretch', flexWrap: 'wrap' }}>
+        {card}
+      </div>
+    );
+  }
   return (
     <div style={{ display: 'flex', gap: '10px', alignItems: 'stretch', flexWrap: 'wrap' }}>
       <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', flex: '1 1 100%' }}>
-      <div style={{
-        display: 'flex', alignItems: 'flex-start', gap: '12px',
-        padding: '16px', background: '#f8f9fd', border: '1px solid #e0e6f0',
-        borderRadius: '10px', transition: 'border-color 0.2s', height: '100%', boxSizing: 'border-box',
-      }}
-        onMouseEnter={e => e.currentTarget.style.borderColor = '#2b3d6d'}
-        onMouseLeave={e => e.currentTarget.style.borderColor = '#e0e6f0'}
-      >
-        <span style={{ fontSize: '22px', flexShrink: 0 }}>{icon}</span>
-        <div style={{ flex: 1 }}>
-          <p style={{ margin: 0, fontSize: '11px', fontWeight: 700, color: '#2b3d6d', textTransform: 'uppercase', letterSpacing: '1px' }}>{label}</p>
-          <p style={{ margin: '3px 0 0', fontSize: '13px', color: '#444', lineHeight: 1.4 }}>{note || url}</p>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '6px', flexShrink: 0 }}>
-          <span style={{ fontSize: '16px', color: '#aaa' }}>↗</span>
-          {isDone && (
-            <span style={{ fontSize: '10px', fontWeight: 800, color: '#1b5e20', background: '#e8f5e9', border: '1px solid #a5d6a7', borderRadius: '999px', padding: '2px 8px' }}>
-              Done
-            </span>
-          )}
-        </div>
-      </div>
+      {card}
       </a>
     </div>
   );
