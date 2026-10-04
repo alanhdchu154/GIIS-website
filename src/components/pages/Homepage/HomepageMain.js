@@ -171,7 +171,7 @@ function WeeklyReportPreview({ language }) {
   const metrics = [
     { label: isEn ? 'Credits Earned' : '已获学分', value: '22.0 / 24' },
     { label: 'GPA (UW)', value: '3.85' },
-    { label: isEn ? 'Graduation' : '毕业进度', value: '92%' },
+    { label: isEn ? 'Total-credit progress' : '总学分进度', value: '92%' },
     { label: isEn ? 'Completed' : '已完成', value: isEn ? '18 courses' : '18 门课程' },
   ];
   const courses = [
@@ -200,8 +200,8 @@ function WeeklyReportPreview({ language }) {
           </h2>
           <p style={{ color: '#4f5868', fontSize: 16, lineHeight: 1.7, margin: '0 0 22px', maxWidth: 500 }}>
             {isEn
-              ? 'Every week, parents receive a progress digest showing credits, GPA, graduation progress, active courses, and a direct path back to the parent dashboard.'
-              : '每周家长会收到学习进度报告：学分、GPA、毕业进度、进行中课程，以及家长面板入口。'}
+              ? 'Every week, parents receive a progress digest showing credits, GPA, total-credit progress, active courses, and a direct path back to the parent dashboard. Subject requirements and graduation approval are reviewed separately.'
+              : '每周家长会收到学习进度报告：学分、GPA、总学分进度、进行中课程，以及家长面板入口。各学科要求与毕业审批另行审核。'}
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Link to="/parent/demo" style={outlineLink}>

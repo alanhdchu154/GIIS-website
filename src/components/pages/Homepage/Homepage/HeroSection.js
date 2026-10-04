@@ -152,7 +152,7 @@ function HeroSection({ language }) {
         }}>
           <img
             src={dashboardScreen}
-            alt={isEn ? 'GIIS Student Portal — track credits, GPA, and graduation progress' : 'GIIS 学生平台 — 追踪学分、GPA 与毕业进度'}
+            alt={isEn ? 'GIIS Student Portal — track credits, GPA, and total-credit progress' : 'GIIS 学生平台 — 追踪学分、GPA 与总学分进度'}
             style={{
               width: '100%',
               height: 'auto',
