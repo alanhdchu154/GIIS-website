@@ -5,6 +5,8 @@ const crypto = require('crypto');
 const { sendPasswordResetEmail } = require('../lib/mailer');
 const { DEFAULT_PARENT_PASSWORD, parentLoginEmailForStudentEmail } = require('../lib/parentCredentials');
 const { createLoginSession, closeLoginSession } = require('../lib/sessionTracker');
+const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
+const { authenticate, requireAdmin } = require('../middleware/auth');
 const { isArchivedGraduationDate, sendArchivedResponse } = require('../lib/studentArchive');
 
 const prisma = require('../lib/prisma');
@@ -24,7 +26,7 @@ function setCookieOptions() {
   return { httpOnly: true, sameSite: 'lax', secure: isProd, maxAge: COOKIE_MAX_AGE_MS, path: '/' };
 }
 
-function signParentToken(account, sessionId = null) {
+function signParentToken(account, sessionId) {
   return jwt.sign(
     { role: 'parent', parentId: account.id, email: account.email, studentId: account.studentId, sessionId },
     process.env.JWT_SECRET,
@@ -71,7 +73,8 @@ router.post('/login', async (req, res) => {
     parentAccountId: account.id,
     req,
   });
-  const token = signParentToken(account, session?.id || null);
+  if (!session?.id) return sendSessionError(res);
+  const token = signParentToken(account, session.id);
   res.cookie(COOKIE_NAME, token, setCookieOptions());
   res.json({ ok: true, studentId: account.studentId });
 });
@@ -129,37 +132,21 @@ router.post('/reset-password', async (req, res) => {
 });
 
 // POST /api/parent/logout
-function extractParentLogoutPayload(req) {
-  const cookieToken = req.cookies?.[COOKIE_NAME];
-  const header = req.headers.authorization || '';
-  const token = cookieToken || (header.startsWith('Bearer ') ? header.slice(7) : null);
-  if (!token) return null;
-  try {
-    return jwt.verify(token, process.env.JWT_SECRET);
-  } catch {
-    return null;
-  }
-}
-
 router.post('/logout', async (req, res) => {
-  const payload = extractParentLogoutPayload(req);
-  await closeLoginSession(payload?.sessionId, req);
+  const result = await readSessionAuth(req, { roles: ['parent'], cookieName: COOKIE_NAME, allowEnded: true });
+  if (!result.ok && result.status !== 401) return sendSessionError(res, result);
+  if (result.ok) {
+    try { await closeLoginSession(result.auth.sessionId, req); }
+    catch { return sendSessionError(res); }
+  }
   res.clearCookie(COOKIE_NAME, { path: '/' });
   res.json({ ok: true });
 });
 
 // POST /api/parent/setup  — admin creates parent account (or resets password)
 // Body: { studentId, email, password }
-// Protected: admin only (checked via JWT role)
-router.post('/setup', async (req, res) => {
-  const authHeader = req.headers.authorization || '';
-  const token = req.cookies?.giis_jwt || (authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null);
-  if (!token) return res.status(401).json({ error: 'Not authenticated' });
-
-  let payload;
-  try { payload = jwt.verify(token, process.env.JWT_SECRET); } catch { return res.status(401).json({ error: 'Invalid token' }); }
-  if (payload.role !== 'admin') return res.status(403).json({ error: 'Admin only' });
-
+// Protected by the same revocable admin session as other staff routes.
+router.post('/setup', authenticate, requireAdmin, async (req, res) => {
   const { studentId } = req.body || {};
   const requestedEmail = typeof req.body?.email === 'string' ? req.body.email.trim().toLowerCase() : '';
   const requestedPassword = typeof req.body?.password === 'string' ? req.body.password : '';

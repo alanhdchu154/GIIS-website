@@ -1,22 +1,11 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
+const { authenticateParent } = require('../middleware/auth');
 const Stripe = require('stripe');
 
 const router = express.Router();
 const prisma = require('../lib/prisma');
 const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'http://localhost:3000').split(',')[0].trim();
-
-function extractParentAuth(req) {
-  const cookieToken = req.cookies?.giis_parent_jwt;
-  const header = req.headers.authorization || '';
-  const token = cookieToken || (header.startsWith('Bearer ') ? header.slice(7) : null);
-  if (!token) return null;
-  try {
-    const p = jwt.verify(token, process.env.JWT_SECRET);
-    return p.role === 'parent' ? p : null;
-  } catch { return null; }
-}
 
 function normalizedEmail(value) {
   return value ? String(value).trim().toLowerCase() : '';
@@ -42,11 +31,10 @@ async function parentSubscriptionWhere(auth) {
  * The parent's browser redirects to Stripe's hosted portal where they
  * can cancel, update payment method, or download invoices.
  */
-router.post('/portal', async (req, res) => {
+router.post('/portal', authenticateParent, async (req, res) => {
   if (!stripe) return res.status(500).json({ error: 'Stripe is not configured.' });
 
-  const auth = extractParentAuth(req);
-  if (!auth) return res.status(401).json({ error: 'Not authenticated.' });
+  const auth = req.auth;
 
   const sub = await prisma.subscription.findFirst({
     where: {

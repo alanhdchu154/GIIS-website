@@ -1,48 +1,23 @@
-const jwt = require('jsonwebtoken');
-const { touchLoginSession } = require('../lib/sessionTracker');
+const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
 const { schoolDateOnly } = require('../lib/schoolDate');
 
-function extractToken(req) {
-  // Cookie takes priority over Authorization header
-  const cookieToken = req.cookies?.giis_jwt;
-  if (cookieToken) return cookieToken;
-  const header = req.headers.authorization || '';
-  return header.startsWith('Bearer ') ? header.slice(7) : null;
-}
-
 /**
- * Verifies JWT from cookie (primary) or Authorization header (fallback).
+ * Verifies JWT and its matching open server-side login session.
  * Sets req.auth on success.
  */
-function authenticate(req, res, next) {
-  const token = extractToken(req);
-  if (!token) {
-    return res.status(401).json({ error: 'Not authenticated' });
-  }
-  try {
-    const payload = jwt.verify(token, process.env.JWT_SECRET);
-    if (payload.role === 'student' && payload.studentId) {
-      req.auth = { role: 'student', studentId: payload.studentId, email: payload.email, sessionId: payload.sessionId };
-      touchLoginSession(payload.sessionId, req);
-      return next();
-    }
-    if (payload.role === 'admin' && payload.adminId) {
-      req.auth = { role: 'admin', adminId: payload.adminId, email: payload.email, sessionId: payload.sessionId };
-      req.admin = { id: payload.adminId, email: payload.email };
-      touchLoginSession(payload.sessionId, req);
-      return next();
-    }
-    // Legacy admin JWT (adminId only)
-    if (payload.adminId) {
-      req.auth = { role: 'admin', adminId: payload.adminId, email: payload.email, sessionId: payload.sessionId };
-      req.admin = { id: payload.adminId, email: payload.email };
-      touchLoginSession(payload.sessionId, req);
-      return next();
-    }
-    return res.status(401).json({ error: 'Invalid token' });
-  } catch {
-    return res.status(401).json({ error: 'Invalid or expired token' });
-  }
+async function authenticate(req, res, next) {
+  const result = await readSessionAuth(req, { roles: ['admin', 'student'] });
+  if (!result.ok) return sendSessionError(res, result);
+  req.auth = result.auth;
+  if (req.auth.role === 'admin') req.admin = { id: req.auth.adminId, email: req.auth.email };
+  return next();
+}
+
+async function authenticateParent(req, res, next) {
+  const result = await readSessionAuth(req, { roles: ['parent'], cookieName: 'giis_parent_jwt' });
+  if (!result.ok) return sendSessionError(res, result);
+  req.auth = result.auth;
+  return next();
 }
 
 function requireAdmin(req, res, next) {
@@ -126,6 +101,7 @@ const requireAuth = authenticate;
 
 module.exports = {
   authenticate,
+  authenticateParent,
   requireAuth,
   requireAdmin,
   requireStudentOrAdminForStudentParam,

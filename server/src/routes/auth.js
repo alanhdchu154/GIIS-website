@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const { authenticate } = require('../middleware/auth');
 const { sendPasswordResetEmail } = require('../lib/mailer');
 const { createLoginSession, closeLoginSession } = require('../lib/sessionTracker');
+const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
 
 const prisma = require('../lib/prisma');
 const router = express.Router();
@@ -39,7 +40,7 @@ function setAuthCookie(res, token) {
   res.cookie(COOKIE_NAME, token, setCookieOptions());
 }
 
-function signAdminToken(admin, sessionId = null) {
+function signAdminToken(admin, sessionId) {
   return jwt.sign(
     { role: 'admin', adminId: admin.id, email: admin.email, sessionId },
     process.env.JWT_SECRET,
@@ -47,7 +48,7 @@ function signAdminToken(admin, sessionId = null) {
   );
 }
 
-function signStudentToken(account, sessionId = null) {
+function signStudentToken(account, sessionId) {
   return jwt.sign(
     { role: 'student', studentId: account.studentId, email: account.email, sessionId },
     process.env.JWT_SECRET,
@@ -151,7 +152,14 @@ router.post('/register', async (req, res) => {
       studentId: account.studentId,
       req,
     });
-    const token = signStudentToken(account, session?.id || null);
+    if (!session?.id) {
+      return sendSessionError(res, {
+        status: 503,
+        code: 'registration_session_unavailable',
+        error: 'Your account was created, but sign-in is temporarily unavailable. Please try logging in again shortly.',
+      });
+    }
+    const token = signStudentToken(account, session.id);
     setAuthCookie(res, token);
     return res.status(201).json({
       token,
@@ -187,7 +195,8 @@ router.post('/login', async (req, res) => {
       adminId: admin.id,
       req,
     });
-    const token = signAdminToken(admin, session?.id || null);
+    if (!session?.id) return sendSessionError(res);
+    const token = signAdminToken(admin, session.id);
     setAuthCookie(res, token);
     return res.json({
       token,
@@ -218,7 +227,8 @@ router.post('/login', async (req, res) => {
     studentId: account.studentId,
     req,
   });
-  const token = signStudentToken(account, session?.id || null);
+  if (!session?.id) return sendSessionError(res);
+  const token = signStudentToken(account, session.id);
   const student = await prisma.student.findUnique({
     where: { id: account.studentId },
     select: { id: true, name: true },
@@ -283,21 +293,15 @@ router.post('/reset-password', async (req, res) => {
   res.json({ ok: true });
 });
 
-function extractLogoutPayload(req) {
-  const cookieToken = req.cookies?.[COOKIE_NAME];
-  const header = req.headers.authorization || '';
-  const token = cookieToken || (header.startsWith('Bearer ') ? header.slice(7) : null);
-  if (!token) return null;
-  try {
-    return jwt.verify(token, process.env.JWT_SECRET);
-  } catch {
-    return null;
-  }
-}
-
 router.post('/logout', async (req, res) => {
-  const payload = extractLogoutPayload(req);
-  await closeLoginSession(payload?.sessionId, req);
+  const result = await readSessionAuth(req, { roles: ['admin', 'student'], allowEnded: true });
+  // Already-invalid credentials need no further revocation. A lookup or write
+  // outage must remain an explicit failure, so a caller can retry logout.
+  if (!result.ok && result.status !== 401) return sendSessionError(res, result);
+  if (result.ok) {
+    try { await closeLoginSession(result.auth.sessionId, req); }
+    catch { return sendSessionError(res); }
+  }
   res.clearCookie(COOKIE_NAME, { path: '/' });
   res.json({ ok: true });
 });

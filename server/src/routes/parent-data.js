@@ -1,23 +1,9 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
+const { authenticateParent } = require('../middleware/auth');
 const { computeSemesterTotals } = require('../lib/gpa');
-const { touchLoginSession } = require('../lib/sessionTracker');
 
 const prisma = require('../lib/prisma');
 const router = express.Router();
-
-function extractParentAuth(req) {
-  const cookieToken = req.cookies?.giis_parent_jwt;
-  const header = req.headers.authorization || '';
-  const token = cookieToken || (header.startsWith('Bearer ') ? header.slice(7) : null);
-  if (!token) return null;
-  try {
-    const p = jwt.verify(token, process.env.JWT_SECRET);
-    if (p.role !== 'parent') return null;
-    touchLoginSession(p.sessionId, req);
-    return p;
-  } catch { return null; }
-}
 
 function isReleased(semester, now = new Date()) {
   return !semester.releaseDate || new Date(semester.releaseDate) <= now;
@@ -220,9 +206,8 @@ function parentSubscriptionLookup({ auth, student }) {
 
 // GET /api/parent/me
 // Returns logged-in parent's linked student data: profile, enrollments, recent activity, GPA, credits.
-router.get('/me', async (req, res) => {
-  const auth = extractParentAuth(req);
-  if (!auth) return res.status(401).json({ error: 'Not authenticated' });
+router.get('/me', authenticateParent, async (req, res) => {
+  const auth = req.auth;
 
   const student = await prisma.student.findUnique({
     where: { id: auth.studentId },
@@ -406,9 +391,8 @@ router.get('/me', async (req, res) => {
 
 // GET /api/parent/transcript
 // Parent-safe official transcript data for the linked student.
-router.get('/transcript', async (req, res) => {
-  const auth = extractParentAuth(req);
-  if (!auth) return res.status(401).json({ error: 'Not authenticated' });
+router.get('/transcript', authenticateParent, async (req, res) => {
+  const auth = req.auth;
 
   const student = await prisma.student.findUnique({
     where: { id: auth.studentId },

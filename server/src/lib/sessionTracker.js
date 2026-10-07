@@ -37,6 +37,7 @@ async function createLoginSession({ role, email, studentId = null, parentAccount
     });
   } catch (err) {
     console.error('[sessionTracker] createLoginSession failed:', err.message);
+    // Login callers must not issue a JWT when persistence fails.
     return null;
   }
 }
@@ -50,8 +51,8 @@ async function touchLoginSession(sessionId, req) {
     });
     if (!existing || existing.endedAt) return;
     const now = new Date();
-    await prisma.loginSession.update({
-      where: { id: sessionId },
+    await prisma.loginSession.updateMany({
+      where: { id: sessionId, endedAt: null },
       data: {
         lastSeenAt: now,
         durationSeconds: durationSeconds(existing.startedAt, now),
@@ -83,6 +84,9 @@ async function closeLoginSession(sessionId, req) {
     });
   } catch (err) {
     console.error('[sessionTracker] closeLoginSession failed:', err.message);
+    // A failed revocation is not a successful logout. Callers return 503 and
+    // retain the cookie so the same logout can be retried.
+    throw err;
   }
 }
 
