@@ -1,2 +1,80 @@
 /api/*  http://api.genesisideas.school/api/:splat  200!
-/*    /index.html   200
+
+# Retired public aliases use real edge redirects instead of client-only navigation.
+/register  /login?tab=register  301!
+/about/principal  /about  301!
+/about/leadership  /about  301!
+/about/faculty  /about  301!
+/student-handbook  /handbook  301!
+
+# Public and application routes that React Router actually owns.
+/  /index.html  200
+/discovery  /index.html  200
+/academics  /index.html  200
+/lessons  /index.html  200
+/admission  /index.html  200
+/support  /index.html  200
+/transcript  /index.html  200
+/login  /index.html  200
+/reset-password  /index.html  200
+/calendar  /index.html  200
+/pathways  /index.html  200
+/pathways/psychology  /index.html  200
+/pathways/cs  /index.html  200
+/pathways/business  /index.html  200
+/pathways/economics  /index.html  200
+/pathways/engineering  /index.html  200
+/pathways/math  /index.html  200
+/pathways/communications  /index.html  200
+/pathways/arts  /index.html  200
+/learn  /index.html  200
+/learn/:slug/module/:order  /index.html  200
+/learn/:slug/exam  /index.html  200
+/learn/:slug/grades  /index.html  200
+/learn/:slug/syllabus  /index.html  200
+/learn/:slug  /index.html  200
+/diploma/:studentId  /index.html  200
+/school-profile  /index.html  200
+/about  /index.html  200
+/handbook  /index.html  200
+/profile  /index.html  200
+/enrollment-verification  /index.html  200
+/pricing  /index.html  200
+/transfer-students  /index.html  200
+/trust-center  /index.html  200
+/consultation  /index.html  200
+/graduates  /index.html  200
+/assessment-proof  /index.html  200
+/refund-policy  /index.html  200
+/parent/demo  /index.html  200
+/parent/login  /index.html  200
+/parent/dashboard  /index.html  200
+/parent/transcript  /index.html  200
+/apply  /index.html  200
+/application/confirm  /index.html  200
+/welcome  /index.html  200
+/verify/enrollment/:token  /index.html  200
+/verify/:code  /index.html  200
+/privacy  /index.html  200
+/terms  /index.html  200
+
+# Administrative routes are valid SPA entries but always receive noindex in React.
+/admin/login  /index.html  200
+/admin  /index.html  200
+/admin/roster  /index.html  200
+/admin/transcript/:studentId  /index.html  200
+/admin/progress  /index.html  200
+/admin/documents  /index.html  200
+/admin/transfer-sop  /index.html  200
+/admin/courses  /index.html  200
+/admin/email-logs  /index.html  200
+/admin/calendar  /index.html  200
+/admin/students/:studentId/audit-trail  /index.html  200
+/admin/enrollment-verification/:studentId  /index.html  200
+/admin/assignments  /index.html  200
+/admin/applications  /index.html  200
+/admin/subscriptions  /index.html  200
+/admin/weekly-report  /index.html  200
+
+# Unknown paths must be real HTTP 404s so crawlers do not classify them as soft 404s.
+/*  /404.html  404
