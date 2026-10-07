@@ -6,6 +6,7 @@ import { getAdminSession, getStudentSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 import logoUrl from '../../../img/logo_nobg.png';
 import sealUrl from '../../../img/transcript_seal_transparent.png';
+import { hasEffectiveGraduationDate } from './diplomaEligibility';
 
 const API = getApiBase();
 
@@ -430,10 +431,19 @@ export default function DiplomaPage({ language }) {
       })
       .then((d) => {
         if (!d) return;
-        if (d.student) setStudent(d.student);
-        else setError('Student not found');
+        if (!d.student) {
+          setError(language === 'zh' ? '找不到学生资料。' : 'Student not found.');
+          return;
+        }
+        if (!hasEffectiveGraduationDate(d.student.graduationDate)) {
+          setError(language === 'zh'
+            ? '毕业证书尚不可用：学校尚未记录已经生效的毕业日期。达到 24 总学分并不等于已经批准毕业。'
+            : 'Diploma unavailable: the school has not recorded an effective graduation date. Reaching 24 total credits does not mean graduation has been approved.');
+          return;
+        }
+        setStudent(d.student);
       })
-      .catch(() => setError('Failed to load student data'));
+      .catch(() => setError(language === 'zh' ? '无法载入学生资料。' : 'Failed to load student data.'));
 
     const enrollmentUrl = isAdmin && studentId
       ? `${API}/api/enrollments/admin/student/${studentId}`
@@ -452,8 +462,7 @@ export default function DiplomaPage({ language }) {
         }
       })
       .catch(() => {});
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [studentId]);
+  }, [studentId, language, isAdmin, studentSession?.student?.id]);
 
   if (authFailed) return <Navigate to="/login" replace />;
 

@@ -112,6 +112,7 @@ export default function AdminHomePage({ language = 'en', toggleLanguage }) {
   const counts = data.actionCounts || {};
   const students = data.students || [];
   const revenue = data.revenue || null;
+  const totalCreditReviewCandidates = counts.totalCreditReviewCandidates ?? counts.graduationReady ?? 0;
   const T = (en, zh) => (lang === 'zh' ? zh : en);
 
   return (
@@ -155,7 +156,7 @@ export default function AdminHomePage({ language = 'en', toggleLanguage }) {
         <Tile label={T('To grade', '待批作业')} value={counts.assignmentsToGrade} tone="#9a5b00" to="/admin/assignments" />
         <Tile label={T('Applications', '待审申请')} value={counts.applicationsPending} tone="#0d47a1" to="/admin/applications" />
         <Tile label={T('Follow-ups due', '跟进到期')} value={counts.careFollowUpsDue} tone="#8a5a00" to="/admin/progress" />
-        <Tile label={T('Roster alerts', '名册提醒')} value={(counts.inactive || 0) + (counts.noLogin || 0) + (counts.graduationReady || 0)} tone="#2b3d6d" to="/admin/roster" sub={T(`${students.length} students`, `${students.length} 位学生`)} />
+        <Tile label={T('Roster alerts', '名册提醒')} value={(counts.inactive || 0) + (counts.noLogin || 0) + totalCreditReviewCandidates} tone="#2b3d6d" to="/admin/roster" sub={T(`${students.length} students`, `${students.length} 位学生`)} />
       </div>
 
       <div className="d-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(255px, 1fr))', gap: 12 }}>
@@ -169,7 +170,7 @@ export default function AdminHomePage({ language = 'en', toggleLanguage }) {
         />
         <WorkArea
           title={T('Student Records', '学生记录')}
-          desc={T('Roster, login status, transcript, graduation readiness, and archived records.', '名册、登入状态、成绩单、毕业资格与封存记录。')}
+          desc={T('Roster, login status, transcript, graduation review candidates, and archived records.', '名册、登入状态、成绩单、毕业审核对象与封存记录。')}
           metric={students.length}
           metricLabel={T('students', '学生')}
           primary={T('Open roster', '查看名册')}

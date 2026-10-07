@@ -5,9 +5,10 @@ import TranscriptContent from '../Transcript/TranscriptContent.js';
 import { getAdminSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 import { getCurrentAcademicYear } from '../../../config/schoolCalendar.js';
+import { TOTAL_CREDIT_THRESHOLD } from '../Learn/graduationPresentation';
 
 const API = getApiBase();
-const CREDITS_REQUIRED = 24;
+const CREDITS_REQUIRED = TOTAL_CREDIT_THRESHOLD;
 const currentYear = getCurrentAcademicYear();
 const CEREMONY_DATE = currentYear.graduation?.ceremonyDate ?? null;
 const SPRING_END = currentYear.spring?.ends ?? null;
@@ -713,16 +714,16 @@ function GraduationSection({ studentId }) {
   const credits = (student.semesters || []).reduce((total, sem) =>
     total + (sem.courseRows || []).reduce((s, row) =>
       row.letterGrade && row.letterGrade.trim() ? s + Number(row.credits || 0) : s, 0), 0);
-  const isEligible = credits >= CREDITS_REQUIRED;
-  const isGraduated = !!student.graduationDate;
+  const meetsTotalCreditThreshold = credits >= CREDITS_REQUIRED;
+  const hasGraduationDate = !!student.graduationDate;
   const isArchived = isArchivedGraduationDate(student.graduationDate);
   const pct = Math.min(100, (credits / CREDITS_REQUIRED) * 100);
 
   return (
     <div className="border rounded p-3 bg-white" style={adminCardStyle}>
       <div className="d-flex justify-content-between align-items-center mb-2">
-        <span className="fw-semibold small">Graduation Eligibility</span>
-        {isGraduated && !isArchived && (
+        <span className="fw-semibold small">Graduation Review</span>
+        {hasGraduationDate && !isArchived && (
           <button className="btn btn-sm btn-outline-danger" onClick={() => patch(null)} disabled={saving}>
             Clear date
           </button>
@@ -732,16 +733,24 @@ function GraduationSection({ studentId }) {
       {/* Credits progress */}
       <div className="mb-2">
         <div className="d-flex justify-content-between mb-1">
-          <span className="small text-muted">Credits earned</span>
-          <span className="small fw-bold" style={{ color: isEligible ? '#1b5e20' : '#b71c1c' }}>
+          <span className="small text-muted">Total transcript credits</span>
+          <span className="small fw-bold" style={{ color: meetsTotalCreditThreshold ? '#8a5a00' : '#b71c1c' }}>
             {credits % 1 === 0 ? credits : credits.toFixed(1)} / {CREDITS_REQUIRED}
-            {isEligible ? '  ✓ Eligible' : `  — need ${(CREDITS_REQUIRED - credits).toFixed(1)} more`}
+            {meetsTotalCreditThreshold ? '  — review required' : `  — need ${(CREDITS_REQUIRED - credits).toFixed(1)} more total credits`}
           </span>
         </div>
         <div style={{ background: '#e8ecf5', borderRadius: '4px', height: '6px' }}>
-          <div style={{ width: `${pct}%`, background: isEligible ? '#2e7d32' : '#1a2d5a', borderRadius: '4px', height: '100%', transition: 'width 0.3s' }} />
+          <div style={{ width: `${pct}%`, background: meetsTotalCreditThreshold ? '#b26a00' : '#1a2d5a', borderRadius: '4px', height: '100%', transition: 'width 0.3s' }} />
         </div>
       </div>
+
+      {meetsTotalCreditThreshold && !hasGraduationDate && (
+        <div className="alert alert-warning py-2 px-3 small mb-2">
+          The total-credit threshold is met. Verify English, Math, Science,
+          Social Studies, and Pathway/Elective requirements and record the
+          President &amp; Principal's approval before setting a graduation date.
+        </div>
+      )}
 
       {/* Calendar dates */}
       {(SPRING_END || CEREMONY_DATE) && (
@@ -752,15 +761,15 @@ function GraduationSection({ studentId }) {
       )}
 
       {/* Graduation status */}
-      {isGraduated ? (
+      {hasGraduationDate ? (
         <p className="small mb-2">
           <span className={`badge me-1 ${isArchived ? 'bg-primary' : 'bg-success'}`}>
-            {isArchived ? 'Graduated / Archived' : '✓ Graduated'}
+            {isArchived ? 'Graduated / Archived' : 'Graduation date scheduled'}
           </span>
           <span className="text-muted">{fmtDate(student.graduationDate)}</span>
         </p>
       ) : (
-        <p className="small text-muted mb-2">Not yet marked as graduated.</p>
+        <p className="small text-muted mb-2">No effective graduation has been recorded.</p>
       )}
       {isArchived && (
         <div className="alert alert-info py-1 px-2 small mb-2">
@@ -770,18 +779,11 @@ function GraduationSection({ studentId }) {
 
       {msg && <div className={`alert py-1 px-2 small mb-2 ${msg.startsWith('✓') ? 'alert-success' : 'alert-danger'}`}>{msg}</div>}
 
-      {!isGraduated && CEREMONY_DATE && (
-        <button
-          className={`btn btn-sm ${isEligible ? 'btn-success' : 'btn-outline-secondary'}`}
-          onClick={() => patch(CEREMONY_DATE)}
-          disabled={saving || !isEligible}
-          title={!isEligible ? `Student needs ${(CREDITS_REQUIRED - credits).toFixed(1)} more credits` : ''}
-        >
-          {saving ? 'Saving…' : `✓ Mark as Graduated — ${fmtDate(CEREMONY_DATE)}`}
-        </button>
-      )}
-      {!isEligible && !isGraduated && (
-        <p className="small text-muted mt-1 mb-0">Button unlocks when student reaches {CREDITS_REQUIRED} credits.</p>
+      {!hasGraduationDate && (
+        <p className="small text-muted mt-1 mb-0">
+          Total credits alone do not authorize graduation. Record a graduation
+          date only after the complete academic and principal review.
+        </p>
       )}
     </div>
   );

@@ -15,11 +15,15 @@ function getStudentStatus(s) {
   return 'enrolled';
 }
 
-// "Graduation-ready" = academically finished (met the 24-credit framework) but
-// not yet formally graduated. Kept separate from 'graduated' on purpose:
-// confirming graduation sets the graduation date and LOCKS the record.
-function isGraduationReady(s) {
-  return getStudentStatus(s) === 'enrolled' && s.meetsGraduationCredits === true;
+function meetsTotalCreditThreshold(s) {
+  if (typeof s.meetsTotalCreditThreshold === 'boolean') return s.meetsTotalCreditThreshold;
+  return s.meetsGraduationCredits === true;
+}
+
+// Reaching 24 total credits creates a review task. It does not prove that the
+// subject-area requirements are met or authorize graduation.
+function needsGraduationReview(s) {
+  return getStudentStatus(s) === 'enrolled' && meetsTotalCreditThreshold(s);
 }
 
 const STATUS_BADGE = {
@@ -93,7 +97,6 @@ export default function AdminDashboard({ language, toggleLanguage }) {
   const [formErr, setFormErr] = useState('');
   const [creating, setCreating] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
-  const [gradConfirmId, setGradConfirmId] = useState(null);
   const [toolsOpen, setToolsOpen] = useState(false);
   const [revenue, setRevenue] = useState(null);
 
@@ -178,31 +181,6 @@ export default function AdminDashboard({ language, toggleLanguage }) {
     }
   }
 
-  async function handleConfirmGraduation(s) {
-    const today = new Date().toISOString().slice(0, 10);
-    const msg = isEn
-      ? `Confirm graduation for ${s.name}?\n\nThis sets the graduation date to today (${today}) and LOCKS the academic record — transcript, grades, and enrollment can no longer be edited.`
-      : `确认 ${s.name} 毕业？\n\n这会将毕业日期设为今天（${today}），并锁定学籍记录——成绩单、成绩与选课将无法再修改。`;
-    if (!window.confirm(msg)) return;
-    setGradConfirmId(s.id);
-    setErr('');
-    try {
-      const r = await fetch(`${API_BASE}/api/students/${s.id}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ graduationDate: today }),
-      });
-      const data = await r.json().catch(() => ({}));
-      if (!r.ok) throw new Error(data.error || (isEn ? 'Failed to confirm graduation' : '确认毕业失败'));
-      await loadStudents();
-    } catch (e) {
-      setErr(e.message);
-    } finally {
-      setGradConfirmId(null);
-    }
-  }
-
   if (!session) return null;
 
   return (
@@ -212,7 +190,7 @@ export default function AdminDashboard({ language, toggleLanguage }) {
         language={language}
         toggleLanguage={toggleLanguage}
         title={isEn ? 'Student Roster' : '学生名册'}
-        subtitle={isEn ? 'Manage records, login status, transcript access, payment state, and graduation readiness.' : '管理学生记录、登入状态、成绩单、付款状态与毕业资格。'}
+        subtitle={isEn ? 'Manage records, login status, transcript access, payment state, and graduation review.' : '管理学生记录、登入状态、成绩单、付款状态与毕业审核。'}
         actions={(
           <>
           <button type="button" className="btn btn-primary btn-sm" onClick={openModal}>
@@ -301,14 +279,14 @@ export default function AdminDashboard({ language, toggleLanguage }) {
           {[
             { key: 'all',       label: { en: 'All',       zh: '全部' } },
             { key: 'enrolled',  label: { en: 'Enrolled',  zh: '在籍' } },
-            { key: 'gradReady', label: { en: 'Grad-ready', zh: '毕业资格' } },
+            { key: 'creditReview', label: { en: 'Credit review', zh: '学分审核' } },
             { key: 'graduated', label: { en: 'Graduated', zh: '已毕业' } },
             { key: 'withdrawn', label: { en: 'Withdrawn', zh: '退学' } },
           ].map(({ key, label }) => {
             const count = key === 'all'
               ? students.length
-              : key === 'gradReady'
-                ? students.filter(isGraduationReady).length
+              : key === 'creditReview'
+                ? students.filter(needsGraduationReview).length
                 : students.filter((s) => getStudentStatus(s) === key).length;
             return (
               <button
@@ -341,7 +319,7 @@ export default function AdminDashboard({ language, toggleLanguage }) {
         <p className="text-muted">{isEn ? 'Loading…' : '载入中…'}</p>
       ) : (() => {
         const filterFns = {
-          gradReady: isGraduationReady,
+          creditReview: needsGraduationReview,
           paymentIssue: (s) => s.paymentIssue,
           inactive: (s) => s.isInactive,
           noLogin: (s) => !s.loginEmail,
@@ -370,7 +348,7 @@ export default function AdminDashboard({ language, toggleLanguage }) {
                 {visible.map((s) => {
                   const status = getStudentStatus(s);
                   const badge = STATUS_BADGE[status];
-                  const gradReady = isGraduationReady(s);
+                  const graduationReview = needsGraduationReview(s);
                   const threshold = s.graduationCreditThreshold || 24;
                   return (
                     <tr key={s.id}>
@@ -385,14 +363,14 @@ export default function AdminDashboard({ language, toggleLanguage }) {
                         <span className="badge" style={{ backgroundColor: badge.bg }}>
                           {badge.label[lang]}
                         </span>
-                        {gradReady && (
+                        {graduationReview && (
                           <div className="mt-1">
                             <span
                               className="badge"
                               style={{ backgroundColor: '#fff3cd', color: '#8a5a00', border: '1px solid #ffce6a' }}
-                              title={isEn ? `Met the ${threshold}-credit graduation framework` : `已修满 ${threshold} 学分毕业框架`}
+                              title={isEn ? `Reached ${threshold} total credits; subject-area and graduation approval review remain` : `总学分已达 ${threshold}；仍需审核学科要求与毕业审批`}
                             >
-                              🎓 {isEn ? 'Meets graduation' : '已达毕业资格'}
+                              {isEn ? 'Graduation review' : '待毕业审核'}
                             </span>
                           </div>
                         )}
@@ -404,8 +382,8 @@ export default function AdminDashboard({ language, toggleLanguage }) {
                         {typeof s.creditsEarned === 'number' ? (
                           <span
                             className="fw-semibold"
-                            style={{ color: s.meetsGraduationCredits ? '#1b7a3d' : '#475467' }}
-                            title={isEn ? `${s.creditsEarned} of ${threshold} credits required` : `已修 ${s.creditsEarned} / 需 ${threshold} 学分`}
+                            style={{ color: meetsTotalCreditThreshold(s) ? '#8a5a00' : '#475467' }}
+                            title={isEn ? `${s.creditsEarned} of ${threshold} total credits; subject requirements reviewed separately` : `总学分 ${s.creditsEarned} / ${threshold}；学科要求另行审核`}
                           >
                             {s.creditsEarned}
                             <span className="text-muted fw-normal">/{threshold}</span>
@@ -438,6 +416,7 @@ export default function AdminDashboard({ language, toggleLanguage }) {
                           if (s.ungradedCount > 0) chips.push({ k: 'grade', bg: '#fff3e0', fg: '#9a5b00', t: isEn ? `${s.ungradedCount} to grade` : `${s.ungradedCount} 待批` });
                           if (s.paymentIssue) chips.push({ k: 'pay', bg: '#fde8e8', fg: '#b71c1c', t: isEn ? 'Payment' : '付款' });
                           if (s.followUpDue) chips.push({ k: 'follow', bg: '#fff3cd', fg: '#8a5a00', t: isEn ? 'Follow-up due' : '跟进到期' });
+                          if (graduationReview) chips.push({ k: 'graduation-review', bg: '#fff3cd', fg: '#8a5a00', t: isEn ? 'Graduation review' : '毕业审核' });
                           if (!s.loginEmail && status === 'enrolled') chips.push({ k: 'login', bg: '#fde8e8', fg: '#b71c1c', t: isEn ? 'No login' : '没登入' });
                           if (s.riskLevel && RISK_BADGE[s.riskLevel]) chips.push({ k: 'risk', bg: '#f3e8ff', fg: '#6a1b9a', t: RISK_BADGE[s.riskLevel].label[lang] });
                           if (chips.length === 0) return <span className="text-muted">—</span>;
@@ -451,28 +430,20 @@ export default function AdminDashboard({ language, toggleLanguage }) {
                         })()}
                       </td>
                       <td className="text-end text-nowrap">
-                        {gradReady && (
-                          <button
-                            className="btn btn-sm btn-success me-1"
-                            onClick={() => handleConfirmGraduation(s)}
-                            disabled={gradConfirmId === s.id}
-                            title={isEn ? 'Set graduation date to today and lock the record' : '将毕业日期设为今天并锁定记录'}
-                          >
-                            {gradConfirmId === s.id ? '…' : (isEn ? 'Confirm graduation' : '确认毕业')}
-                          </button>
-                        )}
                         <Link className="btn btn-sm btn-primary me-1" to={`/admin/transcript/${s.id}`}>
-                          {isEn ? 'Open' : '开启'}
+                          {graduationReview ? (isEn ? 'Review' : '审核') : (isEn ? 'Open' : '开启')}
                         </Link>
-                        <Link
-                          className="btn btn-sm btn-outline-secondary me-1"
-                          to={`/diploma/${s.id}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title={isEn ? 'View diploma' : '查看毕业证书'}
-                        >
-                          🎓
-                        </Link>
+                        {status === 'graduated' && (
+                          <Link
+                            className="btn btn-sm btn-outline-secondary me-1"
+                            to={`/diploma/${s.id}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={isEn ? 'View diploma' : '查看毕业证书'}
+                          >
+                            🎓
+                          </Link>
+                        )}
                         {status === 'withdrawn' && (
                           <button
                             className="btn btn-sm btn-outline-danger"

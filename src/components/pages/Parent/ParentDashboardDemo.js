@@ -206,19 +206,22 @@ export default function ParentDashboardDemo({ language }) {
                   </div>
                 </div>
                 <div style={statsGrid}>
-                  <Stat label={isEn ? 'Credits Earned' : '已获学分'} value={p.stats.creditsEarned.toFixed(1)} sub={`/ ${p.stats.creditsTotal} ${isEn ? 'to graduate' : '毕业学分'}`} />
+                  <Stat label={isEn ? 'Credits Earned' : '已获学分'} value={p.stats.creditsEarned.toFixed(1)} sub={`/ ${p.stats.creditsTotal} ${isEn ? 'total-credit framework' : '总学分框架'}`} />
                   <Stat label="GPA · UW" value={p.stats.gpa.toFixed(2)} sub={isEn ? '4.0 scale' : '4.0 制'} />
                   <Stat label={isEn ? 'In Progress' : '进行中'} value={p.stats.inProgress} sub={isEn ? 'active courses' : '门进行中'} />
                   <Stat label={isEn ? 'This week' : '本周'} value={`+${p.stats.creditsThisWeek.toFixed(1)}`} sub={isEn ? 'credit earned' : '学分获得'} />
                 </div>
                 <div style={{ marginTop: '18px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                    <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.7)' }}>{isEn ? 'Graduation progress' : '毕业进度'}</span>
+                    <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.7)' }}>{isEn ? 'Total-credit progress' : '总学分进度'}</span>
                     <span style={{ fontSize: '13px', fontWeight: 800, color: '#d5a836' }}>{gradPct}%</span>
                   </div>
                   <div style={{ height: '8px', background: 'rgba(255,255,255,0.12)', borderRadius: '999px', overflow: 'hidden' }}>
                     <div style={{ height: '100%', width: `${gradPct}%`, background: 'linear-gradient(to right, #d5a836, #ffce5b)', borderRadius: '999px' }} />
                   </div>
+                  <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.65)', margin: '7px 0 0', lineHeight: 1.4 }}>
+                    {isEn ? 'Subject requirements and graduation approval are reviewed separately.' : '各学科要求与毕业审批另行审核。'}
+                  </p>
                 </div>
               </div>
 

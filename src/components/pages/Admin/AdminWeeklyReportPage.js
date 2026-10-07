@@ -249,7 +249,7 @@ export default function AdminWeeklyReportPage({ language = 'en', toggleLanguage 
                   {[
                     [T('Credits', '学分'), `${p.creditsEarned ?? '—'} / 24`],
                     ['GPA (UW)', p.gpa ?? '—'],
-                    [T('Graduation', '毕业进度'), `${p.gradPercent ?? '—'}%`],
+                    [T('Total-credit progress', '总学分进度'), `${p.gradPercent ?? '—'}%`],
                     [T('Modules this week', '本周模块'), wa ? wa.modulesCompleted : '—'],
                     [T('Study hrs (est.)', '学习小时估计'), wa ? wa.estimatedStudyHours : '—'],
                     [T('Active days', '活跃天数'), wa ? wa.activeDays : '—'],

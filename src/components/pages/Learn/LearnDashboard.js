@@ -4,6 +4,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { getStudentSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 import Nav from '../../main/Nav.js';
+import {
+  TOTAL_CREDIT_THRESHOLD,
+  getGraduationPresentation,
+} from './graduationPresentation';
 import './learn-mobile.css';
 
 const API = getApiBase();
@@ -20,8 +24,6 @@ const DEPT_COLORS = {
   'Physical Education': '#37474f',
   Elective: '#546e7a',
 };
-
-const GRAD_CREDITS = 24;
 
 const DEPT_TO_PATHWAY = {
   'Psychology':           { label: 'Psychology',     slug: 'psychology' },
@@ -407,15 +409,10 @@ export default function LearnDashboard({ language }) {
   }, 0);
   const overallGPAs = computeSemGPAs(myEnrollments);
 
-  // Graduation
-  const isGradEligible = creditsEarned >= GRAD_CREDITS;
-  const latestCreditDate = completed
-    .filter((e) => e.creditEarnedAt)
-    .map((e) => new Date(e.creditEarnedAt))
-    .sort((a, b) => b - a)[0];
-  const eligibleDateStr = latestCreditDate
-    ? latestCreditDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
-    : null;
+  const graduationPresentation = getGraduationPresentation({
+    totalCredits: creditsEarned,
+    language,
+  });
 
   // Continue learning: first in-progress course with a next module
   const spotlight = inProgress.find((e) => nextModule(e) !== null) || inProgress[0];
@@ -537,7 +534,7 @@ export default function LearnDashboard({ language }) {
         {/* Stats */}
         {myEnrollments.length > 0 && (
           <div data-m="stat-grid" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px' }}>
-            <StatCard label={isEn ? 'Credits Earned' : '已获学分'} value={creditsEarned % 1 === 0 ? creditsEarned : creditsEarned.toFixed(1)} sub={`/ ${GRAD_CREDITS} ${isEn ? 'to graduate' : '毕业学分'}`} />
+            <StatCard label={isEn ? 'Credits Earned' : '已获学分'} value={creditsEarned % 1 === 0 ? creditsEarned : creditsEarned.toFixed(1)} sub={`/ ${TOTAL_CREDIT_THRESHOLD} ${isEn ? 'total-credit framework' : '总学分框架'}`} />
             <StatCard label={isEn ? 'Completed' : '已完成'} value={completed.length} sub={isEn ? `of ${myEnrollments.length} courses` : `共 ${myEnrollments.length} 门`} />
             <StatCard label="GPA"
               value={
@@ -599,44 +596,48 @@ export default function LearnDashboard({ language }) {
         )}
 
         {/* Graduation banner */}
-        {myEnrollments.length > 0 && (isGradEligible ? (
+        {myEnrollments.length > 0 && (graduationPresentation.showReviewBanner ? (
           <div data-m="banner-row" style={{
-            background: 'linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%)',
-            borderRadius: '14px', padding: '22px 28px', marginBottom: '28px',
+            background: '#fff8e1', border: '1px solid #f0c36d', borderLeft: '5px solid #b26a00',
+            borderRadius: '8px', padding: '20px 24px', marginBottom: '28px',
             display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px', flexWrap: 'wrap',
           }}>
             <div>
-              <p style={{ fontSize: '11px', fontWeight: 700, color: '#a5d6a7', letterSpacing: '2px', margin: '0 0 4px' }}>🎓 CONGRATULATIONS</p>
-              <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#fff', margin: '0 0 2px' }}>You've earned your High School Diploma</h2>
-              <p style={{ fontSize: '12px', color: '#a5d6a7', margin: 0 }}>
-                {creditsEarned} credits {eligibleDateStr ? `· Eligible ${eligibleDateStr}` : ''}
+              <p style={{ fontSize: '11px', fontWeight: 700, color: '#8a5a00', letterSpacing: '1.5px', margin: '0 0 4px', textTransform: 'uppercase' }}>
+                {isEn ? 'Graduation review needed' : '需要毕业审核'}
+              </p>
+              <h2 style={{ fontSize: '18px', fontWeight: 800, color: '#4b3200', margin: '0 0 4px' }}>
+                {graduationPresentation.banner.heading}
+              </h2>
+              <p style={{ fontSize: '12px', color: '#6b4a10', lineHeight: 1.55, margin: 0, maxWidth: 720 }}>
+                {graduationPresentation.banner.summary}
               </p>
             </div>
-            <Link to={`/diploma/${session.student?.id}`} style={{
-              background: '#fff', color: '#1b5e20', fontWeight: 800, fontSize: '13px',
-              padding: '10px 22px', borderRadius: '8px', textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0,
-            }}>View Diploma →</Link>
+            <Link to="/transcript" style={{
+              background: '#fff', color: '#6b4500', border: '1px solid #d49a28', fontWeight: 800, fontSize: '13px',
+              padding: '10px 18px', borderRadius: '7px', textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0,
+            }}>{isEn ? 'Review transcript' : '查看成绩单'}</Link>
           </div>
         ) : (
           <div style={{ background: '#fff', border: '1px solid #e0e6f0', borderRadius: '12px', padding: '18px 24px', marginBottom: '28px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
               <div>
                 <p style={{ fontSize: '11px', fontWeight: 700, color: '#2b3d6d', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 2px' }}>
-                  {isEn ? 'Graduation Progress' : '毕业进度'}
+                  {isEn ? 'Total-credit progress' : '总学分进度'}
                 </p>
                 <p style={{ fontSize: '13px', color: '#666', margin: 0 }}>
-                  {creditsEarned} / {GRAD_CREDITS} {isEn ? 'credits earned' : '学分已获'}
+                  {creditsEarned} / {TOTAL_CREDIT_THRESHOLD} {isEn ? 'total credits recorded' : '已记录总学分'}
                 </p>
               </div>
               <span style={{ fontSize: '20px', fontWeight: 800, color: '#2b3d6d' }}>
-                {Math.round((creditsEarned / GRAD_CREDITS) * 100)}%
+                {Math.round((creditsEarned / TOTAL_CREDIT_THRESHOLD) * 100)}%
               </span>
             </div>
             <div style={{ background: '#e8ecf5', borderRadius: '6px', height: '7px' }}>
-              <div style={{ width: `${Math.min(100, (creditsEarned / GRAD_CREDITS) * 100)}%`, background: 'linear-gradient(to right, #2b3d6d, #4a6fa5)', borderRadius: '6px', height: '100%', transition: 'width 0.5s' }} />
+              <div style={{ width: `${Math.min(100, (creditsEarned / TOTAL_CREDIT_THRESHOLD) * 100)}%`, background: '#4a6fa5', borderRadius: '6px', height: '100%', transition: 'width 0.5s' }} />
             </div>
             <p style={{ fontSize: '11px', color: '#aaa', margin: '6px 0 0' }}>
-              {Math.max(0, GRAD_CREDITS - creditsEarned)} {isEn ? 'more credits needed' : '学分还差'}
+              {Math.max(0, TOTAL_CREDIT_THRESHOLD - creditsEarned)} {isEn ? 'more total credits to the threshold; subject requirements are reviewed separately' : '总学分达到门槛前仍缺；各学科要求另行审核'}
             </p>
           </div>
         ))}

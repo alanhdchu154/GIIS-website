@@ -586,7 +586,7 @@ export default function ParentDashboard({ language }) {
 
   const { student, stats, enrollments, recentActivity, subscription, payment, weeklyInsights, advisor, advisorNotes } = data;
   const isPaid = (payment && payment.state === 'active') || !!subscription;
-  const gradPct = Math.min(100, Math.round((stats.creditsEarned / GRAD_CREDITS) * 100));
+  const totalCreditPct = Math.min(100, Math.round((stats.creditsEarned / GRAD_CREDITS) * 100));
   const inProgress = enrollments.filter(e => !e.creditEarned);
   const completed = enrollments.filter(e => e.creditEarned);
   const visibleActivity = aggregateRecentActivity(recentActivity, enrollments);
@@ -687,7 +687,7 @@ export default function ParentDashboard({ language }) {
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 18 }}>
-                  <StatCard label={isEn ? 'Credits Earned' : '已获学分'} value={stats.creditsEarned.toFixed(1)} sub={`/ ${GRAD_CREDITS} ${isEn ? 'to graduate' : '毕业学分'}`} />
+                  <StatCard label={isEn ? 'Credits Earned' : '已获学分'} value={stats.creditsEarned.toFixed(1)} sub={`/ ${GRAD_CREDITS} ${isEn ? 'total-credit framework' : '总学分框架'}`} />
                   <StatCard
                     label="GPA · UW"
                     value={stats.gpa ?? <span style={{ fontSize: 15, lineHeight: 1.2 }}>{isEn ? 'No GPA yet' : '暂无 GPA'}</span>}
@@ -698,12 +698,15 @@ export default function ParentDashboard({ language }) {
                 </div>
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-                    <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)' }}>{isEn ? 'Graduation progress' : '毕业进度'}</span>
-                    <span style={{ fontSize: 13, fontWeight: 800, color: '#d5a836' }}>{gradPct}%</span>
+                    <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)' }}>{isEn ? 'Total-credit progress' : '总学分进度'}</span>
+                    <span style={{ fontSize: 13, fontWeight: 800, color: '#d5a836' }}>{totalCreditPct}%</span>
                   </div>
                   <div style={{ height: 8, background: 'rgba(255,255,255,0.12)', borderRadius: 999, overflow: 'hidden' }}>
-                    <div style={{ height: '100%', width: `${gradPct}%`, background: 'linear-gradient(to right, #d5a836, #ffce5b)', borderRadius: 999 }} />
+                    <div style={{ height: '100%', width: `${totalCreditPct}%`, background: '#d5a836', borderRadius: 999 }} />
                   </div>
+                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.65)', margin: '7px 0 0', lineHeight: 1.4 }}>
+                    {isEn ? 'Subject-area requirements and graduation approval are reviewed separately.' : '各学科要求与毕业审批另行审核。'}
+                  </p>
                 </div>
               </div>
 
