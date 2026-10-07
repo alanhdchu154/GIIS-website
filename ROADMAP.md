@@ -14,6 +14,26 @@ history. No new recurring schedule or authority expansion.
 Startup and collaboration: `docs/school-operating-model.md`; role skills:
 `docs/school-departments.md`; owner mapping: `docs/school-task-registry.md`.
 
+## Mixed-branch release batches — 2026-10-07
+
+Alan authorized action rather than concealment of the mixed branch. Six
+independently reviewed batches are now on `origin/main` through `f1d09792`:
+operating guidance, payment-runbook secret redaction, shared YouTube release
+locking and duplicate HOLD, upload cleanup fail-closed, revocable persisted
+sessions, and 24-credit/graduation claim safety. The primary checkout is a clean
+fast-forward match; the archived mixed branch and stable WIP stash remain as
+recovery evidence. No T9 media, local security evidence, held transfer-credit
+PDF, student data or broad generated audit set was pushed or deleted.
+
+The session change is committed but not live on Lightsail. Before backend
+deployment, verify the production `LoginSession` table and columns, take the
+runbook backup, restart and smoke auth/parent/checkout. Legacy sessionless JWTs
+will require sign-in; password reset does not revoke every existing session.
+The graduation UI build, 31 targeted tests, official-document audit and public
+trust audit pass. Netlify published exact commit `f1d09792`; freshness and live
+`/parent/demo` readback confirm total-credit/review wording and absence of the
+former automatic-graduation wording.
+
 Current management pointer: `umi/workload.md` carries one coordinator outcome.
 Teaching & Academic Operations delivered the first verified unified midnight run;
 Admissions owns authorized case progress; Platform Engineering is available but
@@ -73,15 +93,18 @@ Five non-content risks are consolidated in
 `umi/reports/school-ops-triage-2026-10-04/REPORT.md`; policy, backup destination,
 credential maintenance and genuine payment evidence remain separate gates.
 
-Release-safety hardening is complete as a local-only candidate. Linked
+Release-safety hardening is released on `main` at `fe92dcb4` plus follow-up
+`d4e1ff38`. Linked
 worktrees now resolve through Git's common directory to the primary checkout's
 existing `umi/.quality-locks/release.lock`; the Python helper uses the same BSD
 lock protocol as macOS `lockf -k`. Synthetic cross-worktree, two-way legacy
-contention, unsafe-symlink, failure-release and dry-run tests pass 47/47 across
+contention, unsafe-symlink, failure-release and dry-run tests pass across
 the helper and two integrated YouTube release callers. Ordinary public copy now
 has an explicit pre-release exact-diff independent-review rule; post-release
 readback is not a substitute. Independent exact-set review accepted the code
-and governance wording. This did not deploy anything and does not yet cover
+and governance wording. Channel sync now holds on duplicates instead of
+deleting them, and upload cleanup is skipped whenever reconciliation returns
+nonzero. This does not yet cover
 manual git push, material database apply, Lightsail/Stripe deployment or other
 named legacy callers. Evidence:
 `umi/reports/release-lock-hardening-2026-10-04/REPORT.md`.
