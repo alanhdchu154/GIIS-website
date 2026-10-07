@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """Reconcile local lesson state with the GIIS YouTube channel.
 
-The YouTube channel is the source of truth. This tool:
+The channel is a reconciliation input; the public manifest remains the website
+source of truth. This tool:
 
   1. Queries the channel for every video the authenticated account uploaded.
   2. Parses each title with the pattern `<Course> — Module <N>: <Title>` or
      `<Course> — Module <N> — <Title>`.
   3. For each (course, module-number) group:
        • exactly 1 video  → canonical, no action
-       • >1 video         → DUPLICATE: keep the newest publishedAt, delete the rest
+       • >1 video         → HOLD by default; replacement lifecycle must resolve it
        • 0 video          → not on channel; ensure local script.json reflects that
   4. Writes the canonical set to `public/data/lessons-manifest.json`
      (replaces what `build_manifest.py` used to do — but driven by the channel,
@@ -24,7 +25,9 @@ lesson manifest.
 
 Usage:
     python3 tools/youtube-upload/sync_channel.py            # dry-run by default
-    python3 tools/youtube-upload/sync_channel.py --apply    # actually delete dups + write files
+    python3 tools/youtube-upload/sync_channel.py --apply
+
+Broad duplicate resolution/deletion is disabled. Use replacement_lifecycle.py.
 
 Quota: ~1 unit per 50 videos listed, 50 units per delete. A typical
 syncing run touches the channel ≤ 5 units when there are no duplicates.
@@ -41,6 +44,12 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 REPO          = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "tools"))
+from release_lock import (  # noqa: E402
+    ReleaseLockBusy,
+    acquire_release_lock,
+)
+
 LESSONS_DIR   = REPO / "teaching-videos"
 MANIFEST_PATH = REPO / "public" / "data" / "lessons-manifest.json"
 
@@ -213,14 +222,59 @@ def video_exists(yt, video_id: str) -> bool:
         return False
     return bool(resp.get("items"))
 
+
+def active_replacement_plans() -> list[Path]:
+    active: list[Path] = []
+    for path in (LESSONS_DIR / "_audit" / "replacements").glob("*/replacement-plan.json"):
+        try:
+            payload = json.loads(path.read_text())
+        except Exception:
+            active.append(path)
+            continue
+        if payload.get("state") != "replaced":
+            active.append(path)
+    return sorted(active)
+
 # ─── main ──────────────────────────────────────────────────────────────
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true",
-                    help="actually delete duplicates + write manifest + update script.json files")
+                    help="write manifest + update script.json files; duplicate groups fail closed")
+    ap.add_argument("--resolve-duplicates", action="store_true",
+                    help=argparse.SUPPRESS)
+    ap.add_argument("--delete-duplicates", action="store_true",
+                    help=argparse.SUPPRESS)
     args = ap.parse_args()
+    if args.resolve_duplicates or args.delete_duplicates:
+        ap.error("broad duplicate resolution is disabled; use replacement_lifecycle.py")
     apply = args.apply
+
+    release_lock = None
+    if apply:
+        active_plans = active_replacement_plans()
+        if active_plans:
+            print("[HOLD] active staged replacement plan(s) block full channel reconciliation")
+            for path in active_plans:
+                print(f"  {path}")
+            return 2
+        try:
+            release_lock = acquire_release_lock(
+                REPO,
+                owner="youtube-channel-sync",
+            )
+        except ReleaseLockBusy:
+            print("[HOLD] shared release lock is active; no reconciliation performed")
+            return 2
+
+    try:
+        return _sync_channel(apply)
+    finally:
+        if release_lock is not None:
+            release_lock.close()
+
+
+def _sync_channel(apply: bool):
 
     yt = yt_client()
     visibility = load_course_visibility()
@@ -258,9 +312,9 @@ def main():
         print(f"  {course:<12} M{num:>2}  {v['video_id']}  {v['_mod_title']}")
     if deletions:
         print()
-        print(f"== Duplicates to delete ({len(deletions)}) ==")
+        print(f"== Duplicate lesson copies; apply will HOLD ({len(deletions)}) ==")
         for v in deletions:
-            print(f"  STALE  {v['video_id']}  {v['title']}  (published {v['published_at']})")
+            print(f"  DUP    {v['video_id']}  {v['title']}  (published {v['published_at']})")
     else:
         print()
         print("== No duplicates ==")
@@ -275,13 +329,15 @@ def main():
         print("[dry-run] no changes made.  Re-run with --apply to act.")
         return
 
+    if deletions:
+        print()
+        print("[HOLD] duplicate lesson videos require the staged replacement lifecycle")
+        print("[HOLD] manifest, scripts, and YouTube videos were left unchanged")
+        return 2
+
     # ── Apply: delete dups ─────────────────────────────────────────────
-    for v in deletions:
-        try:
-            yt.videos().delete(id=v["video_id"]).execute()
-            print(f"[delete] {v['video_id']}  {v['title']}")
-        except HttpError as e:
-            print(f"[delete-FAIL] {v['video_id']}  {e._get_reason()}")
+    # Duplicate deletion is intentionally not implemented here. The staged
+    # replacement lifecycle performs exact-ID retirement after website readback.
 
     # ── Apply: rewrite manifest from canonical ────────────────────────
     manifest_entries: list[dict] = []
@@ -385,4 +441,4 @@ def main():
         print(f"[script.json] {sj.parent.name}  removed stale youtube video_id={old}")
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main() or 0)

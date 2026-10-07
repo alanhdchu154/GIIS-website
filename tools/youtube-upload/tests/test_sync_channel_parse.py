@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import importlib.util
 import tempfile
+import json
+import subprocess
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -70,6 +72,54 @@ class SyncChannelParseTest(unittest.TestCase):
                     sync_channel.script_module_title({"course": "Physics - Mechanics", "module": 14}, 14),
                     "Waves & Sound Basics",
                 )
+
+    def test_active_replacement_plan_blocks_broad_sync(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            lessons = Path(tmp)
+            plan_dir = lessons / "_audit" / "replacements" / "sample"
+            plan_dir.mkdir(parents=True)
+            (plan_dir / "replacement-plan.json").write_text(json.dumps({"state": "prepared"}))
+            with patch.object(sync_channel, "LESSONS_DIR", lessons):
+                self.assertEqual([plan_dir / "replacement-plan.json"], sync_channel.active_replacement_plans())
+            (plan_dir / "replacement-plan.json").write_text(json.dumps({"state": "replaced"}))
+            with patch.object(sync_channel, "LESSONS_DIR", lessons):
+                self.assertEqual([], sync_channel.active_replacement_plans())
+
+    def test_apply_holds_before_youtube_when_replacement_is_active(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            lessons = Path(tmp) / "teaching-videos"
+            plan_dir = lessons / "_audit" / "replacements" / "sample"
+            plan_dir.mkdir(parents=True)
+            (plan_dir / "replacement-plan.json").write_text(json.dumps({"state": "prepared"}))
+            with patch.object(sync_channel, "LESSONS_DIR", lessons), patch.object(
+                sync_channel, "yt_client"
+            ) as yt_client, patch("sys.argv", ["sync_channel.py", "--apply"]):
+                self.assertEqual(2, sync_channel.main())
+            yt_client.assert_not_called()
+
+    def test_apply_releases_shared_lock_when_sync_raises(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "repo"
+            subprocess.run(["git", "init", str(repo)], check=True, capture_output=True)
+            with patch.object(sync_channel, "REPO", repo), patch.object(
+                sync_channel, "active_replacement_plans", return_value=[]
+            ), patch.object(
+                sync_channel, "_sync_channel", side_effect=RuntimeError("seeded sync failure")
+            ), patch("sys.argv", ["sync_channel.py", "--apply"]):
+                with self.assertRaisesRegex(RuntimeError, "seeded sync failure"):
+                    sync_channel.main()
+            held = sync_channel.acquire_release_lock(
+                repo,
+                owner="test-recovery",
+            )
+            held.close()
+
+    def test_dry_run_does_not_acquire_release_lock(self) -> None:
+        with patch.object(sync_channel, "_sync_channel", return_value=0), patch.object(
+            sync_channel, "acquire_release_lock"
+        ) as acquire, patch("sys.argv", ["sync_channel.py"]):
+            self.assertEqual(0, sync_channel.main())
+        acquire.assert_not_called()
 
 
 if __name__ == "__main__":
