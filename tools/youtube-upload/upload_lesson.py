@@ -161,6 +161,38 @@ def add_to_playlist(playlist_name: str, video_id: str, privacy: str):
             time.sleep(wait)
     return pid
 
+
+def run_post_upload_followups(
+    here: Path,
+    lesson: Path,
+    *,
+    no_sync: bool,
+    no_cleanup: bool,
+) -> int:
+    """Reconcile channel state before allowing destructive local cleanup."""
+    if not no_sync:
+        sync_rc = subprocess.run(
+            [sys.executable, str(here / "sync_channel.py"), "--apply"],
+            check=False,
+        ).returncode
+        if sync_rc != 0:
+            print(
+                f"[HOLD] channel reconciliation returned {sync_rc}; "
+                "local cleanup was not attempted."
+            )
+            return sync_rc
+
+    if not no_cleanup:
+        print()
+        cleanup_rc = subprocess.run(
+            [sys.executable, str(here / "cleanup_lesson.py"), str(lesson)],
+        ).returncode
+        if cleanup_rc != 0:
+            print(f"[cleanup] returned {cleanup_rc} — local artifacts NOT removed. "
+                  f"This is safe (the YouTube upload is fine); the lesson folder "
+                  f"will use disk until next manual cleanup. See message above.")
+    return 0
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("lesson_dir", type=Path)
@@ -282,9 +314,6 @@ def main():
     # re-uploads, manual deletes, and pulls the canonical state into the
     # manifest the Learn Portal reads. Cheap (~5 quota units when no dups).
     here = Path(__file__).resolve().parent
-    if not args.no_sync:
-        subprocess.run([sys.executable, str(here / "sync_channel.py"), "--apply"], check=False)
-
     # Auto-cleanup local artifacts (slides/, audio/, *.mp4, *.wav, etc.) now
     # that the video is verifiably live on YouTube. Saves 15-210MB per lesson
     # and keeps the repo lean for everyone. Three-layer safety net inside
@@ -292,15 +321,12 @@ def main():
     # really be 'processed' on the channel before we touch local files.
     #
     # Pass --no-cleanup to keep artifacts (e.g. for debugging a bad render).
-    if not args.no_cleanup:
-        print()
-        cleanup_rc = subprocess.run(
-            [sys.executable, str(here / "cleanup_lesson.py"), str(lesson)],
-        ).returncode
-        if cleanup_rc != 0:
-            print(f"[cleanup] returned {cleanup_rc} — local artifacts NOT removed. "
-                  f"This is safe (the YouTube upload is fine); the lesson folder "
-                  f"will use disk until next manual cleanup. See message above.")
+    return run_post_upload_followups(
+        here,
+        lesson,
+        no_sync=args.no_sync,
+        no_cleanup=args.no_cleanup,
+    )
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main() or 0)

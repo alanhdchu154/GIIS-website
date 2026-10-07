@@ -121,6 +121,29 @@ class SyncChannelParseTest(unittest.TestCase):
             self.assertEqual(0, sync_channel.main())
         acquire.assert_not_called()
 
+    def test_apply_holds_on_duplicate_group_before_manifest_write(self) -> None:
+        videos = [
+            {
+                "video_id": "new-video",
+                "title": "Algebra I — Module 1: Foundations",
+                "published_at": "2026-10-07T12:00:00Z",
+            },
+            {
+                "video_id": "old-video",
+                "title": "Algebra I — Module 1: Foundations",
+                "published_at": "2026-10-06T12:00:00Z",
+            },
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest = Path(tmp) / "lessons-manifest.json"
+            with patch.object(sync_channel, "yt_client", return_value=object()), patch.object(
+                sync_channel, "load_course_visibility", return_value={}
+            ), patch.object(
+                sync_channel, "list_my_videos", return_value=videos
+            ), patch.object(sync_channel, "MANIFEST_PATH", manifest):
+                self.assertEqual(2, sync_channel._sync_channel(apply=True))
+            self.assertFalse(manifest.exists())
+
 
 if __name__ == "__main__":
     unittest.main()

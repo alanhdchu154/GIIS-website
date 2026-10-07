@@ -103,19 +103,19 @@ reconciles into:
   • `public/data/lessons-manifest.json` — what Learn Portal reads
   • each lesson's `script.json` `youtube` block — local hint, kept in sync
 
-This handles every drift case: re-uploads creating duplicates, manual deletes
-in YouTube Studio, manual uploads, failed uploads where local state never
-got updated. Run `sync_channel.py --apply` any time to re-converge.
+This handles channel drift such as manual deletes, manual uploads, and failed
+uploads where local state never got updated. `sync_channel.py --apply` is
+fail-closed: active replacement plans, a busy shared release lock, or duplicate
+lesson groups return HOLD without rewriting the manifest or lesson scripts.
+Resolve duplicates through `replacement_lifecycle.py`; broad automatic deletion
+is intentionally disabled.
 
 `upload_lesson.py` calls `sync_channel.py --apply` automatically at the end
-of every upload, but upload itself should remain gated by the human approval
-file during the quality reset.
-
-For a scheduled cleanup (e.g. nightly), add to `crontab -e`:
-```
-# 02:00 daily — reconcile YouTube channel state
-0 2 * * * cd /Users/alanhdchu/giis-website && /usr/bin/python3 tools/youtube-upload/sync_channel.py --apply >> /tmp/giis-yt-sync.log 2>&1
-```
+of every upload. If reconciliation returns HOLD, the upload identity remains
+saved but local artifact cleanup is skipped and the command returns nonzero.
+Upload itself remains gated by the human approval file during the quality
+reset. Use the Codex-managed GIIS schedule for recurring checks; do not add a
+separate system cron job.
 
 ## Trigger phrases
 
@@ -134,7 +134,7 @@ Trigger `playlist.py` on:
 
 - `upload_video.py` — low-level uploader, takes any .mp4 + metadata flags
 - `upload_lesson.py` — high-level wrapper; auto-syncs after every upload
-- `sync_channel.py` — pulls channel state, dedupes by title, writes manifest, reconciles script.json
+- `sync_channel.py` — pulls channel state, detects duplicate title groups, and writes the manifest / reconciles script.json only when safe
 - `build_manifest.py` — legacy: builds manifest from local script.json only (offline fallback if no API access)
 - `playlist.py` — playlist CRUD + add/remove/reorder
 - `client_secret.json` — Google OAuth credential (gitignored)
