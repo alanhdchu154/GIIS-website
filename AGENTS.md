@@ -1,5 +1,19 @@
 # GIIS Platform — Agent Working Agreement
 
+## School operating model
+
+Alan approved the GIIS3 operating model on 2026-10-04: three daily owners
+(Teaching & Academic Operations, Admissions & Parent Services, and Platform
+Engineering), with GIIS Umi also owning school operations. The former registrar
+and compliance contexts remain on-demand specialists, not daily departments or
+required stops. Before scoped GIIS work read
+`docs/school-operating-model.md`, your role in `docs/school-departments.md`,
+and `docs/school-task-registry.md` from `/Users/alanhdchu/giis-website` even when
+executing in a worktree. These define ownership and collaboration, not new
+academic, financial, external-action or release authority. Existing active
+work and the unified content schedule retain their scoped gates. Do not wake an
+idle specialist merely to acknowledge the reorganization.
+
 > Read this before doing **anything** in this repo.
 
 ## Central Umi coordination
