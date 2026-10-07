@@ -58,9 +58,11 @@ the production database.
    ```bash
    pwd
    git status --short
-   grep -E 'NODE_ENV|CORS_ORIGIN|DATABASE_URL|STRIPE_SECRET_KEY|STRIPE_WEBHOOK_SECRET|STRIPE_PRICE_|ALLOW_UNVERIFIED_STRIPE_WEBHOOK' server/.env
+   awk -F= '/^(NODE_ENV|CORS_ORIGIN|DATABASE_URL|STRIPE_SECRET_KEY|STRIPE_WEBHOOK_SECRET|STRIPE_PRICE_[A-Z_]+|ALLOW_UNVERIFIED_STRIPE_WEBHOOK)=/ { print $1 "=<redacted; configured>" }' server/.env
    ```
 
+   Verify the database destination privately in the approved credential surface;
+   do not print connection strings or secret values in shared logs.
    Stop if `DATABASE_URL` points anywhere other than the intended production
    Postgres database.
 
