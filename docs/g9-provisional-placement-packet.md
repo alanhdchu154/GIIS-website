@@ -1,135 +1,127 @@
-# Provisional Grade 9 Placement Packet
+# GIIS Grade 9 Readiness Screen - Operating Packet
 
-**Purpose:** a fair, low-stakes academic diagnostic for a student who has no
-official academic record. It supports a proposed first-term plan only. It does
-not grant transfer credit, set a final grade level, create a transcript entry,
-or replace the Principal's approval.
+## Purpose
 
-## Family-facing boundary
+This is a short admissions screen for students whose prior records are missing,
+incomplete, or difficult to compare. It answers one practical question: does the
+student show enough core English, mathematics, science reasoning, and independent
+work readiness to begin a conditional Grade 9 plan?
 
-GIIS can review current readiness directly. When official prior-school records
-are unavailable, GIIS does not award final transfer credit from this packet.
-The family may submit Khan Academy/IXL progress, work samples, or later-obtained
-school records as supporting context. The Principal makes the final placement
-and any credit decision in writing.
+It does not automatically admit a student, award transfer credit, set a final
+grade level, create a transcript entry, or replace the Principal's written
+decision.
 
-## Administration
+## Family materials
 
-- Give the student the English, Mathematics, and Science sections on separate
-  days if needed. Suggested total working time: 120 minutes plus breaks.
-- Allow a basic calculator only for Math Part B; do not provide answer keys,
-  tutoring, or automatic grading during the assessment.
-- Collect the student's original written work. Record only the rubric results
-  and reviewer notes in the admissions review; do not place the packet itself
-  on an official transcript.
-- Ask the family for the student's age/date of birth, current learning routine,
-  Khan Academy/IXL progress links or screenshots, and two recent independent
-  work samples. These inform review but are not credit evidence.
+- Generator: `tools/placement/generate_g9_readiness_assessment.py`
+- Student PDF: `public/admissions-materials/giis-grade-9-readiness-assessment.pdf`
+- Unlisted route: `/placement/g9-readiness`
+- Intended production URL:
+  `https://genesisideas.school/placement/g9-readiness`
 
-## Section 1 — English language and reading (40 points; 40 minutes)
+The route is absent from navigation and the sitemap and receives `noindex`. The
+PDF also receives an `X-Robots-Tag` noindex header. This is **unlisted, not
+access-controlled**: anyone with the URL may open it. Never put student data,
+answers, reviewer notes, or case decisions on the route.
 
-Read this short passage.
+The current staff key is local-only outside the public GitHub repository:
 
-> Mara's neighborhood library began lending out gardening tools after many
-> residents said that buying a shovel for one weekend of work was expensive.
-> At first, the staff worried that tools would be returned late or damaged.
->
-> Instead, the program became popular: volunteers repaired broken handles, and
-> families started sharing information about what grew well in the local soil.
-> The library now keeps a waiting list for seeds in spring.
+`/Users/alanhdchu/.codex/private/giis/placement/g9-readiness-assessment-staff-key.md`
 
-Answer in complete sentences.
+## Short blueprint
 
-1. State the central idea of the passage. (6)
-2. Give two details that support that idea. (6)
-3. What does the word *instead* signal in paragraph two? Explain using the
-   passage. (6)
-4. What can a reader reasonably infer about the volunteers? Cite one detail.
-   (6)
-5. Write a 150–200 word response: should public libraries lend items other than
-   books? State a claim, use at least two reasons, acknowledge one possible
-   concern, and organize your response with clear sentences and transitions.
-   (16)
+| Section | Time | Points | Focus |
+| --- | ---: | ---: | --- |
+| English | 35 min | 30 | One substantive passage, evidence/data use, 150-220 word argument |
+| Mathematics | 35 min | 36 | Number sense, percent/proportion, radical estimate, equation, slope, function, geometry, applied equations, error reasoning |
+| Science reasoning | 20 min | 24 | Data interpretation, fair comparison, evidence, criteria and tradeoffs |
+| Independent learning check | untimed | not scored | Directions, sustained work, file handling, help-seeking, schedule habits |
 
-### English scoring guide
+Total academic time is approximately **90 minutes**. The family may use one
+sitting or two shorter sessions. History is not an admission gate in this short
+screen; World History readiness is checked through the first assigned work if
+the student begins conditionally.
 
-| Area | Evidence | Points |
-| --- | --- | ---: |
-| Reading | Accurate central idea and supporting detail | 0–12 |
-| Reasoning | Sound inference and language/structure explanation | 0–12 |
-| Writing | Clear claim, organization, evidence, conventions | 0–16 |
+## Family workflow
 
-## Section 2 — Mathematics (40 points; 45 minutes)
+1. Admissions sends the unlisted URL.
+2. The family downloads and prints the booklet at 100% scale.
+3. The student writes answers by hand and follows the tool rules.
+4. The family scans the complete booklet or takes clear, flat photographs.
+5. The family includes two recent independent work samples and Khan Academy/IXL
+   evidence if available.
+6. The family emails everything to `admissions@genesisideas.school` with subject
+   `Grade 9 Readiness Assessment - [Student Full Name]`.
+7. Admissions records receipt, assigns a reviewer, and stores the submission in
+   the approved private case location. Never commit family submissions to git.
+8. The reviewer scores by strand and conducts a short oral walkthrough when the
+   result is close, inconsistent, or may include outside help.
+9. The Principal gives a written result: Ready, Ready with Bridge, Not Yet, or
+   Pending Clarification when evidence is incomplete.
 
-Show work for every item.
+## Administration rules
 
-### Part A — no calculator (24 points)
+- English: no dictionary, translator, AI, or internet.
+- Math Questions 1-6: no calculator.
+- Math Questions 7-12 and Science: basic calculator allowed.
+- A parent may explain procedural directions but may not translate the passage,
+  suggest methods, check answers, or edit work.
+- The student writes by hand and shows work. Extra paper must have the student
+  name and question number.
+- Record interruptions, accommodations, translation, and any assistance.
+- If English access may hide math/science knowledge, use an oral walkthrough or
+  alternate evidence and record the support. Do not silently lower standards.
 
-1. Evaluate `3(4 - 7) + 5`. (3)
-2. Solve `5x - 8 = 27`. (3)
-3. A backpack costs $48 and is discounted by 25%. What is the sale price? (4)
-4. A recipe uses 3 cups of flour for 8 servings. How many cups are needed for
-   20 servings? (4)
-5. Find the slope through `(2, 5)` and `(6, 13)`. (4)
-6. Write an equation for a line with slope `-3` and y-intercept `7`. (3)
-7. A rectangle has length `x + 4` and width `x`. Write and simplify its area.
-   (3)
+## Decision framework
 
-### Part B — basic calculator allowed (16 points)
+Do not use one total percentage as an automatic Grade 9 cut score. Use the
+local-only staff scoring guide, supporting work, learning history, and oral
+walkthrough when needed.
 
-8. A phone plan charges $18 plus $0.12 per text. Write a cost expression for
-   `t` texts and find the cost for 75 texts. (6)
-9. A cyclist travels 42 miles in 3.5 hours at a constant rate. Find the rate
-   and explain what the rate means. (5)
-10. A table shows `x: 1, 2, 3, 4` and `y: 6, 10, 14, 18`. Describe the pattern
-    and write a rule for `y` in terms of `x`. (5)
+### Ready for a conditional Grade 9 start
 
-### Mathematics scoring guide
+- English reading and writing both show usable Grade 9 entry evidence.
+- Core mathematics evidence supports beginning Algebra I.
+- Science responses show the student can interpret data and explain evidence.
+- The work appears independent and supporting evidence is consistent.
 
-Award partial credit for a correct method with an arithmetic error. Record the
-specific skill gap, not only a percentage: integer operations, proportions,
-equations, coordinate slope, or function patterns.
+### Ready with a named bridge
 
-## Section 3 — Science reasoning (20 points; 35 minutes)
+- The student can begin Grade 9, but one or two specific skills need concurrent
+  remediation.
+- Record the skill, responsible reviewer, weekly check, and 4-6 week recheck.
 
-1. A student puts identical ice cubes in a metal cup and a foam cup in the same
-   room. Predict which cube melts faster and explain a fair test. (6)
-2. In a food web, grass is eaten by rabbits and rabbits are eaten by foxes.
-   Predict one likely effect on rabbits and foxes if a drought greatly reduces
-   the grass. Explain the relationships. (6)
-3. A student claims, “Plants get all of their food from soil.” Do you agree?
-   Use the words **sunlight**, **carbon dioxide**, and **water** in an evidence-
-   based explanation. (8)
+### Not Yet
 
-### Science scoring guide
+- Multiple essential English/math strands remain below readiness;
+- the student cannot explain selected submitted work;
+- or evidence supports substantial foundational gaps.
 
-Look for claim–evidence–reasoning, fair-test awareness, and accurate use of
-basic biological/physical-science relationships. Do not treat English grammar
-alone as science failure.
+### Pending Clarification
 
-## Review and decision rule
+- Age, identity, learning history, assistance, or required evidence needs
+  clarification before an academic result can be issued.
+- This is an administrative/evidence state, not a finding that the student lacks
+  Grade 9 readiness.
 
-| Result | Recommended action |
-| --- | --- |
-| English ≥28/40, Math ≥28/40, Science ≥14/20, with no major foundational gap | Propose a **conditional Grade 9 start** using the curated first-week pack; Principal review still required. |
-| One area below threshold or a clear but remediable gap | Propose Grade 9 only with a named bridge module, weekly teacher check-in, and a 4–6 week recheck. |
-| Multiple areas materially below threshold, unable to complete independently, or age/learning history needs clarification | Do not promise Grade 9. Principal determines an alternate placement/bridge plan after further evidence. |
+No score creates prior credit, GPA, graduation timing, or a transcript row.
 
-The reviewer must separately record: date, assessor, permitted accommodations,
-scores by section, observed independent-work evidence, provisional course plan,
-and Principal decision. Reassess first-term placement assumptions if performance
-does not support them. No numerical score automatically creates transfer credit,
-GPA, graduation timing, or a transcript course row.
+## Conditional first-week evidence
 
-## Curated first-week G9 pack if conditionally approved
+If approved, begin with a small sample from Algebra I, English I, Biology, and
+World History. A human reviewer checks the first submitted work before expanding
+the schedule. The first World History task supplies the history/source-reading
+evidence intentionally omitted from this short admission screen.
 
-1. Algebra I Module 1 — Variables & Algebraic Expressions
-2. English I Module 1 — Reading Comprehension Strategies
-3. Biology Module 1 — The Chemistry of Life
-4. World History Module 1 — Early Humans & the Neolithic Revolution
+## Regeneration and verification
 
-Use the in-course assignment, not this placement packet, for ordinary course
-grading. The assigned reviewer should check the first submitted work and contact
-the family before expanding the schedule. Current video repair holds remain
-visible to staff; a video is not certified merely because it is available in the
-portal.
+```bash
+/Users/alanhdchu/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
+  tools/placement/generate_g9_readiness_assessment.py
+
+pdfinfo public/admissions-materials/giis-grade-9-readiness-assessment.pdf
+pdftotext public/admissions-materials/giis-grade-9-readiness-assessment.pdf -
+```
+
+Render every page and inspect answer space, tables, page breaks, footers, and
+page numbers. Then run route tests, public-trust audit, and a production build.

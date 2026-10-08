@@ -7,3 +7,8 @@
 ## Hashed static assets can be cached forever (filename changes on every build)
 /static/*
   Cache-Control: public, max-age=31536000, immutable
+
+## Invitation-only admissions materials are shareable by URL but not indexable.
+/admissions-materials/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: private, no-store

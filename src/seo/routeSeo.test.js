@@ -16,7 +16,7 @@ describe('route-aware search metadata', () => {
   });
 
   test('keeps private and unknown routes out of the index without inventing canonicals', () => {
-    for (const route of ['/admin', '/learn/algebra-i', '/parent/dashboard', '/not-real']) {
+    for (const route of ['/admin', '/learn/algebra-i', '/parent/dashboard', '/placement/g9-readiness', '/not-real']) {
       expect(getRouteSeo(route)).toEqual({
         indexable: false,
         canonicalUrl: null,
@@ -78,5 +78,18 @@ describe('route-aware search metadata', () => {
       .map(([source]) => source);
 
     expect(handledRoutes.sort()).toEqual(declaredRoutes.sort());
+  });
+
+  test('keeps unlisted admissions downloads out of search indexes and shared caches', () => {
+    const headers = fs.readFileSync(
+      path.resolve(process.cwd(), 'public', '_headers'),
+      'utf8'
+    );
+    expect(headers).toMatch(
+      /\/admissions-materials\/\*[\s\S]*X-Robots-Tag:\s*noindex, nofollow, noarchive/
+    );
+    expect(headers).toMatch(
+      /\/admissions-materials\/\*[\s\S]*Cache-Control:\s*private, no-store/
+    );
   });
 });
