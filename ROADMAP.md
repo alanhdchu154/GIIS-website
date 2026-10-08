@@ -25,10 +25,20 @@ fast-forward match; the archived mixed branch and stable WIP stash remain as
 recovery evidence. No T9 media, local security evidence, held transfer-credit
 PDF, student data or broad generated audit set was pushed or deleted.
 
-The session change is committed but not live on Lightsail. Before backend
-deployment, verify the production `LoginSession` table and columns, take the
-runbook backup, restart and smoke auth/parent/checkout. Legacy sessionless JWTs
-will require sign-in; password reset does not revoke every existing session.
+The session change is live on Lightsail at exact commit `391f22ba`. Production
+`LoginSession` and `ProcessedStripeEvent` tables were verified, a custom-format
+Postgres backup was created and hashed, dependencies installed, Prisma validated,
+and `giis-api` restarted cleanly. Direct/proxy health, unsigned-webhook rejection,
+checkout tiers, unauthenticated auth/parent rejection, production API12 and
+sales/payment6 gates pass. The admin Billing page reads persisted subscriptions;
+production aggregate readback shows one active subscription and three processed
+Stripe events, without exposing payer data. No charge, refund, student mutation,
+email or application workflow was triggered. Legacy sessionless JWTs must sign
+in again; password reset still does not revoke every existing session, so claim
+logout revocation only. Residual maintenance: production dependencies report
+five vulnerabilities (one critical, one high), `NODE_ENV` is not explicit in
+`server/.env`, and the host SSH negotiation lacks post-quantum KEX; remediate in
+separate reviewed changes rather than an automatic production upgrade.
 The graduation UI build, 31 targeted tests, official-document audit and public
 trust audit pass. Netlify published exact commit `f1d09792`; freshness and live
 `/parent/demo` readback confirm total-credit/review wording and absence of the
