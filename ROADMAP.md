@@ -20,10 +20,13 @@ Alan authorized action rather than concealment of the mixed branch. Six
 independently reviewed batches are now on `origin/main` through `f1d09792`:
 operating guidance, payment-runbook secret redaction, shared YouTube release
 locking and duplicate HOLD, upload cleanup fail-closed, revocable persisted
-sessions, and 24-credit/graduation claim safety. The primary checkout is a clean
-fast-forward match; the archived mixed branch and stable WIP stash remain as
-recovery evidence. No T9 media, local security evidence, held transfer-credit
-PDF, student data or broad generated audit set was pushed or deleted.
+sessions, and 24-credit/graduation claim safety. The primary checkout is now
+clean `main`, exactly matching `origin/main`. Eight clean, fully merged worktrees
+and eighteen merged local branches were removed; five dirty worktrees and every
+unmerged/archive/backup ref remain preserved for scoped reconciliation. The
+archived mixed branch and stable WIP stash remain recovery evidence. No T9 media,
+local security evidence, held transfer-credit PDF, student data or broad
+generated audit set was pushed or deleted.
 
 The session change is live on Lightsail at exact commit `391f22ba`. Production
 `LoginSession` and `ProcessedStripeEvent` tables were verified, a custom-format
