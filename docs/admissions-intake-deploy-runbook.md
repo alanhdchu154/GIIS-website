@@ -142,6 +142,18 @@ then production verification of the already-pushed frontend.
    evaluation editor. Do not change a real family's status merely for smoke
    testing.
 
+   For the Grade 9 placement workflow, also verify the additive
+   `Application.placementRequired` column and `PlacementDecision` table. The
+   capability must remain unavailable unless production explicitly sets
+   `PRINCIPAL_APPROVER_EMAIL` and exactly that normalized email belongs to a
+   working `AdminUser` account controlled by the Principal. Never substitute a
+   general admin account. Read back `/api/applications/capabilities`: an absent
+   env or signer must report `placementDecision.available=false` and the admin
+   UI must disable the placement gate. After the Principal has established the
+   account and authenticated normally, verify the capability becomes available
+   and use a synthetic/non-family case for the first sign-off smoke. Do not
+   alter a real applicant merely to prove deployment.
+
 9. Inspect API logs and the admin `Awaiting parent confirmation` filter after
    the smoke submission. `interestConfirmationSentAt` is written only after
    the mail provider accepts the send. A failed send returns a visible retry

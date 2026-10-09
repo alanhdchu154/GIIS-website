@@ -269,9 +269,29 @@ async function recordApplicationPaymentConfirmation(session, subscriptionRecord,
 
   const application = await db.application.findUnique({
     where: { id: applicationId },
-    select: { id: true },
+    select: {
+      id: true,
+      status: true,
+      reviewedAt: true,
+      placementRequired: true,
+      placementDecision: { select: { result: true, principalApprovedAt: true } },
+    },
   });
   if (!application) throw new Error(`Checkout session references unknown application ${applicationId}.`);
+
+  const currentRevision = application.reviewedAt?.toISOString() || '';
+  const checkoutRevision = session.metadata?.approvalRevision || '';
+  const placementReady = !application.placementRequired || (
+    !!application.placementDecision?.principalApprovedAt
+    && ['ready', 'ready_with_bridge'].includes(application.placementDecision.result)
+  );
+  const approvalStillValid = application.status === 'approved'
+    && checkoutRevision === currentRevision
+    && placementReady;
+  const action = approvalStillValid ? 'stripe_payment_confirmed' : 'stripe_payment_review_required';
+  const summary = approvalStillValid
+    ? `Stripe payment received: ${session.currency?.toUpperCase() || 'USD'} ${(Number(session.amount_total || 0) / 100).toFixed(2)} for ${subscriptionRecord.planType}. Reference: ${session.id}.`
+    : `Stripe payment received after the admissions approval gate changed. Manual reconciliation or refund review is required. Reference: ${session.id}.`;
 
   await db.applicationEvent.upsert({
     where: { id: `stripe-paid:${session.id}` },
@@ -279,9 +299,9 @@ async function recordApplicationPaymentConfirmation(session, subscriptionRecord,
     create: {
       id: `stripe-paid:${session.id}`,
       applicationId,
-      action: 'stripe_payment_confirmed',
+      action,
       actorEmail: 'stripe-webhook',
-      summary: `Stripe payment received: ${session.currency?.toUpperCase() || 'USD'} ${(Number(session.amount_total || 0) / 100).toFixed(2)} for ${subscriptionRecord.planType}. Reference: ${session.id}.`,
+      summary,
       metadata: {
         checkoutSessionId: session.id,
         subscriptionId: subscriptionRecord.id,
@@ -290,6 +310,10 @@ async function recordApplicationPaymentConfirmation(session, subscriptionRecord,
         amountTotal: subscriptionRecord.amountTotal,
         currency: session.currency || 'usd',
         paymentStatus: session.payment_status,
+        approvalRevision: checkoutRevision,
+        currentApprovalRevision: currentRevision,
+        approvalStillValid,
+        ...(approvalStillValid ? {} : { reviewReason: 'admissions_gate_changed_after_checkout' }),
       },
     },
   });

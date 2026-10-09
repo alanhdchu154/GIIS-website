@@ -56,23 +56,48 @@ describe('application-bound Stripe payment receipt', () => {
   beforeEach(() => jest.clearAllMocks());
 
   test('records a paid Checkout receipt on the exact application', async () => {
-    mockPrisma.application.findUnique.mockResolvedValue({ id: 'app_fixture' });
+    const reviewedAt = new Date('2026-10-09T12:00:00.000Z');
+    mockPrisma.application.findUnique.mockResolvedValue({
+      id: 'app_fixture', status: 'approved', reviewedAt,
+      placementRequired: false, placementDecision: null,
+    });
     mockPrisma.applicationEvent.upsert.mockResolvedValue({ id: 'event_fixture' });
 
     await recordApplicationPaymentConfirmation(
-      { id: 'cs_fixture', payment_status: 'paid', metadata: { applicationId: 'app_fixture' } },
+      { id: 'cs_fixture', payment_status: 'paid', metadata: { applicationId: 'app_fixture', approvalRevision: reviewedAt.toISOString() } },
       { id: 'sub_fixture', status: 'active', planType: 'guided_monthly', amountTotal: 14900 },
     );
 
-    expect(mockPrisma.application.findUnique).toHaveBeenCalledWith({
-      where: { id: 'app_fixture' }, select: { id: true },
-    });
+    expect(mockPrisma.application.findUnique).toHaveBeenCalledWith(expect.objectContaining({ where: { id: 'app_fixture' } }));
     expect(mockPrisma.applicationEvent.upsert).toHaveBeenCalledWith(expect.objectContaining({
       create: expect.objectContaining({
         applicationId: 'app_fixture',
         action: 'stripe_payment_confirmed',
         actorEmail: 'stripe-webhook',
         metadata: expect.objectContaining({ checkoutSessionId: 'cs_fixture', subscriptionId: 'sub_fixture' }),
+      }),
+    }));
+  });
+
+  test('routes payment to manual review when the approval revision or placement gate changed', async () => {
+    mockPrisma.application.findUnique.mockResolvedValue({
+      id: 'app_fixture', status: 'pending', reviewedAt: new Date('2026-10-10T12:00:00.000Z'),
+      placementRequired: true, placementDecision: null,
+    });
+    mockPrisma.applicationEvent.upsert.mockResolvedValue({ id: 'event_fixture' });
+
+    await recordApplicationPaymentConfirmation(
+      { id: 'cs_stale', payment_status: 'paid', metadata: { applicationId: 'app_fixture', approvalRevision: '2026-10-09T12:00:00.000Z' } },
+      { id: 'sub_fixture', status: 'active', planType: 'guided_monthly', amountTotal: 14900 },
+    );
+
+    expect(mockPrisma.applicationEvent.upsert).toHaveBeenCalledWith(expect.objectContaining({
+      create: expect.objectContaining({
+        action: 'stripe_payment_review_required',
+        metadata: expect.objectContaining({
+          approvalStillValid: false,
+          reviewReason: 'admissions_gate_changed_after_checkout',
+        }),
       }),
     }));
   });

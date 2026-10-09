@@ -86,6 +86,32 @@ async function requirePlacementDecisionCapability(res) {
   return false;
 }
 
+async function placementCheckoutConflict(applicationId) {
+  const events = await prisma.applicationEvent.findMany({
+    where: { applicationId, action: 'stripe_checkout_created' },
+    select: { metadata: true },
+  });
+  const checkoutIds = [...new Set(events.map((event) => event.metadata?.checkoutSessionId).filter(Boolean))];
+  if (!checkoutIds.length) return '';
+  if (!stripe) return 'Stripe must be available to verify prior Checkout links before requiring placement review.';
+  for (const checkoutId of checkoutIds) {
+    let session;
+    try {
+      session = await stripe.checkout.sessions.retrieve(checkoutId);
+    } catch (error) {
+      console.error('[applications] Prior Checkout verification failed:', error.message);
+      return 'A prior Checkout link could not be verified. Resolve it in Stripe before requiring placement review.';
+    }
+    if (session.status === 'open') {
+      return 'Expire the existing Stripe Checkout link before requiring placement review.';
+    }
+    if (session.status === 'complete') {
+      return 'A completed Checkout exists. Reconcile its payment before requiring placement review.';
+    }
+  }
+  return '';
+}
+
 const MANUAL_PAYMENT_PLANS = {
   self_paced_monthly: { label: 'Self-Paced Founders', amountCents: 4900, months: 1 },
   self_paced_annual: { label: 'Self-Paced Founders Annual', amountCents: 49900, months: 12 },
@@ -1161,7 +1187,7 @@ router.post('/:id/stripe-checkout', authenticate, requireAdmin, async (req, res)
         'stripe_checkout_created',
         req.auth?.email,
         `Stripe Checkout created for ${planType}; await signed payment confirmation.`,
-        { planType, checkoutSessionId: session.id },
+        { planType, checkoutSessionId: session.id, approvalRevision: metadata.approvalRevision },
       ) },
     });
     return res.status(201).json({
@@ -1574,6 +1600,9 @@ router.post('/:id/placement-decision/principal-approval', authenticate, requireA
   if (!hasConfirmedInterest(app)) {
     return res.status(400).json({ error: 'Wait for parent email confirmation before Principal review.' });
   }
+  if (app.placementDecision.result === 'pending_clarification') {
+    return res.status(409).json({ error: 'Pending Clarification remains an editable draft and cannot receive final Principal approval.' });
+  }
   const authenticatedEmail = String(req.auth?.email || '').trim().toLowerCase();
   if (!authenticatedEmail || authenticatedEmail !== PRINCIPAL_APPROVER_EMAIL) {
     return res.status(403).json({ error: 'Only the configured Principal admin account may approve a placement decision.' });
@@ -1673,6 +1702,8 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
     if (enrollmentState.paid || enrollmentState.paidUnlinked) {
       return res.status(409).json({ error: 'Placement requirements cannot be added after payment is recorded.' });
     }
+    const checkoutConflict = await placementCheckoutConflict(current.id);
+    if (checkoutConflict) return res.status(409).json({ error: checkoutConflict });
     data.placementRequired = true;
   }
 
@@ -1720,11 +1751,24 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
   }
 
   const actorEmail = req.auth?.email || 'admin';
+  const compareAndSet = placementRequired !== undefined || data.status === 'approved';
+  const expected = compareAndSet ? await loadCurrentApplication() : null;
   const app = await prisma.$transaction(async (tx) => {
-    const updated = await tx.application.update({
-      where: { id: req.params.id },
-      data,
-    });
+    let updated;
+    if (compareAndSet) {
+      const claimed = await tx.application.updateMany({
+        where: { id: req.params.id, updatedAt: expected.updatedAt },
+        data,
+      });
+      if (claimed.count !== 1) {
+        const conflict = new Error('application_changed');
+        conflict.code = 'APPLICATION_CHANGED';
+        throw conflict;
+      }
+      updated = await tx.application.findUnique({ where: { id: req.params.id } });
+    } else {
+      updated = await tx.application.update({ where: { id: req.params.id }, data });
+    }
     await tx.applicationEvent.create({
       data: applicationEventData(
         req.params.id,
@@ -1735,7 +1779,14 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
       ),
     });
     return updated;
+  }).catch((error) => {
+    if (error?.code === 'APPLICATION_CHANGED') return null;
+    throw error;
   });
+
+  if (!app) {
+    return res.status(409).json({ error: 'The application changed during review. Reload and verify the current placement and approval state.' });
+  }
 
   res.json({ ok: true, id: app.id, status: app.status });
 });

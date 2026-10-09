@@ -1321,11 +1321,14 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
 	                            <span style={{ fontSize: 12, color: '#92400e', fontWeight: 700, padding: '8px 0' }}>{readiness.action || 'Complete readiness steps before payment'}</span>
 	                          )}
 
-		                          {workflowEnabled && app.status === 'approved' && !app.accountsCreated && hasPaidRecord && (
+		                          {workflowEnabled && app.status === 'approved' && !app.accountsCreated && hasPaidRecord && applicationApprovalReady && (
 	                            <button onClick={() => activateApplication(app.id)} disabled={saving === app.id + 'activate'}
 	                              style={{ padding: '8px 20px', borderRadius: 8, background: '#1a73e8', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
 	                              {saving === app.id + 'activate' ? 'Creating…' : '🔑 Create Accounts'}
 	                            </button>
+	                          )}
+		                          {workflowEnabled && app.status === 'approved' && !app.accountsCreated && hasPaidRecord && !applicationApprovalReady && (
+	                            <span style={{ fontSize: 12, color: '#92400e', fontWeight: 700, padding: '8px 0' }}>{readiness.action || 'Resolve admissions readiness before account activation'}</span>
 	                          )}
 		                          {workflowEnabled && app.status === 'approved' && !app.accountsCreated && !hasPaidRecord && (
 	                            <span style={{ fontSize: 12, color: '#92400e', fontWeight: 700, padding: '8px 0' }}>Record payment before account activation</span>

@@ -102,7 +102,7 @@ async function main() {
         return respond(route, 200, {}, { 'X-GIIS-Admissions-Workflow': 'admissions-v5' });
       }
       if (pathname === '/api/applications/capabilities') {
-        return respond(route, 200, { applicationStripeCheckout: true });
+        return respond(route, 200, { applicationStripeCheckout: true, placementDecision: { available: true, reason: '' } });
       }
       if (pathname === '/api/applications' && method === 'GET') return respond(route, 200, [app]);
       if (pathname === `/api/applications/${app.id}` && method === 'PATCH') {

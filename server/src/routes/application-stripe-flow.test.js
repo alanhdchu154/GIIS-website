@@ -1,7 +1,7 @@
 // Synthetic route integration: no real database, keys, charges, or mail.
 const mockDb = {
   adminUser: { findUnique: jest.fn() },
-  application: { findUnique: jest.fn(), update: jest.fn() },
+  application: { findUnique: jest.fn(), update: jest.fn(), updateMany: jest.fn() },
   applicationEvent: { findFirst: jest.fn(), findMany: jest.fn(), create: jest.fn(), upsert: jest.fn() },
   placementDecision: { create: jest.fn(), findUnique: jest.fn(), updateMany: jest.fn() },
   subscription: { upsert: jest.fn(), findMany: jest.fn(), updateMany: jest.fn() },
@@ -46,6 +46,7 @@ beforeEach(() => {
   jest.resetAllMocks();
   mockDb.adminUser.findUnique.mockResolvedValue({ id: 'principal_admin' });
   mockDb.application.findUnique.mockResolvedValue(approved);
+  mockDb.application.updateMany.mockResolvedValue({ count: 1 });
   mockDb.applicationEvent.findFirst.mockResolvedValue(null);
   mockDb.applicationEvent.findMany.mockResolvedValue([]);
   mockDb.subscription.findMany.mockResolvedValue([]);
@@ -159,6 +160,55 @@ test('non-Principal admins cannot sign a placement decision', async () => {
   expect(response.code).toBe(403);
   expect(mockDb.placementDecision.updateMany).not.toHaveBeenCalled();
 });
+test('Pending Clarification remains editable and cannot be signed as final', async () => {
+  mockDb.application.findUnique.mockResolvedValue({
+    ...approved,
+    status: 'pending',
+    placementRequired: true,
+    placementDecision: { id: 'placement_a', result: 'pending_clarification', principalApprovedAt: null },
+  });
+  const response = await invoke(applications, '/:id/placement-decision/principal-approval', {
+    ...adminRequest,
+    body: { principalApprover: 'Shiyu Zhang, Ph.D.' },
+  });
+  expect(response.code).toBe(409);
+  expect(mockDb.placementDecision.updateMany).not.toHaveBeenCalled();
+});
+test('an open prior Checkout blocks adding a placement gate', async () => {
+  const pending = { ...approved, status: 'pending', accountsCreated: false, updatedAt: new Date('2026-10-09T12:00:00.000Z') };
+  mockDb.application.findUnique.mockResolvedValue(pending);
+  mockDb.applicationEvent.findMany
+    .mockResolvedValueOnce([])
+    .mockResolvedValueOnce([{ metadata: { checkoutSessionId: 'cs_open' } }]);
+  mockStripe.checkout.sessions.retrieve.mockResolvedValue({ id: 'cs_open', status: 'open' });
+
+  const response = await invoke(applications, '/:id', {
+    ...adminRequest,
+    body: { placementRequired: true },
+  }, 'patch');
+  expect(response.code).toBe(409);
+  expect(response.body.error).toMatch(/Expire the existing Stripe Checkout/);
+  expect(mockDb.application.updateMany).not.toHaveBeenCalled();
+});
+test('placement and approval updates fail on a concurrent application revision', async () => {
+  const updatedAt = new Date('2026-10-09T12:00:00.000Z');
+  mockDb.application.findUnique.mockResolvedValue({
+    ...approved, status: 'pending', accountsCreated: false, updatedAt,
+  });
+  mockDb.applicationEvent.findMany.mockResolvedValue([]);
+  mockDb.application.updateMany.mockResolvedValue({ count: 0 });
+
+  const response = await invoke(applications, '/:id', {
+    ...adminRequest,
+    body: { placementRequired: true },
+  }, 'patch');
+  expect(response.code).toBe(409);
+  expect(response.body.error).toMatch(/changed during review/);
+  expect(mockDb.application.updateMany).toHaveBeenCalledWith(expect.objectContaining({
+    where: { id: 'app_a', updatedAt },
+    data: expect.objectContaining({ placementRequired: true }),
+  }));
+});
 test('placement workflow stays unavailable when the configured Principal account is missing', async () => {
   mockDb.adminUser.findUnique.mockResolvedValue(null);
 
@@ -184,6 +234,11 @@ test('server controls price, payer, application binding and retry key', async ()
   expect(params).toMatchObject({ customer_email: approved.parentEmail, line_items: [{ price: 'price_synthetic', quantity: 1 }], metadata: { applicationId: 'app_a' } });
   expect(mockStripe.checkout.sessions.create.mock.calls[1][1]).toEqual(options);
   expect(options.idempotencyKey).toMatch(/^giis-checkout:/);
+  expect(mockDb.applicationEvent.upsert).toHaveBeenCalledWith(expect.objectContaining({
+    create: expect.objectContaining({
+      metadata: expect.objectContaining({ approvalRevision: approved.reviewedAt.toISOString() }),
+    }),
+  }));
 });
 test('reuses an open checkout and rejects a completed one', async () => {
   mockDb.applicationEvent.findFirst.mockResolvedValue({ metadata: { checkoutSessionId: 'cs_a' } });
