@@ -412,6 +412,7 @@ model Application {
   accountsCreated                Boolean                   @default(false)
   placementRequired              Boolean                   @default(false)
   createdAt                      DateTime                  @default(now())
+  updatedAt                      DateTime                  @updatedAt
   reviewedAt                     DateTime?
   reviewedById                   String?
   transferEvaluation             TransferCreditEvaluation?
