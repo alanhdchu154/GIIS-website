@@ -33,6 +33,7 @@ const weeklyReportRoutes = require('./routes/weekly-report');
 const adminDocumentsRoutes = require('./routes/admin-documents');
 const adminEmailLogRoutes = require('./routes/admin-email-logs');
 const enrollmentVerificationRoutes = require('./routes/enrollment-verification');
+const staffRoutes = require('./routes/staff');
 
 if (!process.env.JWT_SECRET || process.env.JWT_SECRET.length < 16) {
   console.warn('[warn] Set a strong JWT_SECRET in .env (16+ chars) before production.');
@@ -128,6 +129,7 @@ const publicWriteLimiter = rateLimit({
 });
 
 app.use('/api/auth', authLimiter, authRoutes);
+app.use('/api/admin/staff/set-password', authLimiter);
 app.use('/api/parent/login', authLimiter);
 app.use('/api/parent/forgot-password', authLimiter);
 app.use('/api/parent/reset-password', authLimiter);
@@ -147,6 +149,7 @@ app.use('/api/admin/weekly-report', weeklyReportRoutes);
 app.use('/api/admin/documents', adminDocumentsRoutes);
 app.use('/api/admin/email-logs', adminEmailLogRoutes);
 app.use('/api/enrollment-verification', publicWriteLimiter, enrollmentVerificationRoutes);
+app.use('/api/admin/staff', staffRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ error: 'Not found', path: req.path });

@@ -807,6 +807,7 @@ router.get('/audit', authenticate, requireAdmin, async (req, res) => {
 /** Full student + nested transcript — admin or that student */
 router.get('/:id', authenticate, requireStudentOrAdminForStudentParam, async (req, res) => {
   const isAdmin = req.auth?.role === 'admin';
+  const canViewOperations = req.staff?.role === 'owner';
   const student = await prisma.student.findUnique({
     where: { id: req.params.id },
     include: {
@@ -814,7 +815,7 @@ router.get('/:id', authenticate, requireStudentOrAdminForStudentParam, async (re
         orderBy: { sortOrder: 'asc' },
         include: { courseRows: { orderBy: { sortOrder: 'asc' } } },
       },
-      ...(isAdmin ? { account: { select: { email: true } } } : {}),
+      ...(canViewOperations ? { account: { select: { email: true } } } : {}),
     },
   });
   if (!student) return res.status(404).json({ error: 'Student not found' });
@@ -827,7 +828,7 @@ router.get('/:id', authenticate, requireStudentOrAdminForStudentParam, async (re
     });
   }
   const serialized = serializeStudent(student);
-  if (isAdmin) {
+  if (canViewOperations) {
     serialized.loginEmail = student.account?.email ?? null;
     serialized.paidThroughDate = student.paidThroughDate ? dateOnly(student.paidThroughDate) : null;
     serialized.paymentPlan = student.paymentPlan || '';

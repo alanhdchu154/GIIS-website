@@ -26,6 +26,9 @@ const AdminTransferSopPage = lazy(() => import('./components/pages/Admin/AdminTr
 const AdminCoursesPage = lazy(() => import('./components/pages/Admin/AdminCoursesPage'));
 const AdminEmailLogsPage = lazy(() => import('./components/pages/Admin/AdminEmailLogsPage'));
 const AdminCalendarPage = lazy(() => import('./components/pages/Admin/AdminCalendarPage'));
+const AdminStaffPage = lazy(() => import('./components/pages/Admin/AdminStaffPage'));
+const AdminSetPasswordPage = lazy(() => import('./components/pages/Admin/AdminSetPasswordPage'));
+const PrincipalReviewPage = lazy(() => import('./components/pages/Admin/PrincipalReviewPage'));
 const CalendarPage = lazy(() => import('./components/pages/Calendar/CalendarPage'));
 const DiplomaPage = lazy(() => import('./components/pages/Diploma/DiplomaPage'));
 const SchoolProfilePage = lazy(() => import('./components/pages/SchoolProfile/SchoolProfilePage'));
@@ -148,6 +151,7 @@ function App() {
          <Route path="/reset-password" element={<ResetPasswordPage language={language} />} />
          <Route path="/register" element={<Navigate to="/login?tab=register" replace />} />
          <Route path="/admin/login" element={<AdminLogin language={language} />} />
+         <Route path="/admin/set-password" element={<AdminSetPasswordPage />} />
          <Route path="/admin" element={<AdminHomePage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/admin/roster" element={<AdminDashboard language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/admin/transcript/:studentId" element={<AdminTranscriptPage language={language} />} />
@@ -157,6 +161,8 @@ function App() {
          <Route path="/admin/courses" element={<AdminCoursesPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/admin/email-logs" element={<AdminEmailLogsPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/admin/calendar" element={<AdminCalendarPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/staff" element={<AdminStaffPage language={language} toggleLanguage={toggleLanguage} />} />
+         <Route path="/admin/principal-review" element={<PrincipalReviewPage language={language} toggleLanguage={toggleLanguage} />} />
         <Route path="/admin/students/:studentId/audit-trail" element={<AdminAuditTrailPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/calendar" element={<CalendarPage language={language} />} />
          {/* Pathways hub */}

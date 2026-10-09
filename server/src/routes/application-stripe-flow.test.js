@@ -1,9 +1,10 @@
 // Synthetic route integration: no real database, keys, charges, or mail.
 const mockDb = {
-  adminUser: { findUnique: jest.fn() },
+  adminUser: { findUnique: jest.fn(), findFirst: jest.fn() },
   application: { findUnique: jest.fn(), update: jest.fn(), updateMany: jest.fn() },
   applicationEvent: { findFirst: jest.fn(), findMany: jest.fn(), create: jest.fn(), upsert: jest.fn() },
   placementDecision: { create: jest.fn(), findUnique: jest.fn(), updateMany: jest.fn() },
+  transferCreditEvaluation: { findUnique: jest.fn(), updateMany: jest.fn() },
   subscription: { upsert: jest.fn(), findMany: jest.fn(), updateMany: jest.fn() },
   processedStripeEvent: { create: jest.fn(), findUnique: jest.fn() },
   student: { findFirst: jest.fn() },
@@ -18,6 +19,8 @@ jest.mock('../lib/prisma', () => mockDb);
 jest.mock('../middleware/auth', () => ({
   authenticate: (req, res, next) => req.auth ? next() : res.status(401).json({ error: 'Unauthenticated' }),
   requireAdmin: (req, res, next) => req.auth.role === 'admin' ? next() : res.status(403).json({ error: 'Forbidden' }),
+  requirePermission: () => (req, res, next) => req.auth.role === 'admin' ? next() : res.status(403).json({ error: 'Forbidden' }),
+  requireStaffRole: role => (req, res, next) => req.staff?.role === role ? next() : res.status(403).json({ error: 'Forbidden' }),
 }));
 jest.mock('../lib/mailer', () => ({}));
 jest.mock('stripe', () => () => mockStripe);
@@ -39,12 +42,12 @@ async function invoke(router, path, request = {}, method = 'post') {
   }
   return res;
 }
-const approved = { id: 'app_a', applicantType: 'new', status: 'approved', parentEmail: 'shared@example.invalid', interestConfirmedAt: new Date(), reviewedAt: new Date('2026-10-01') };
-const adminRequest = { auth: { role: 'admin', email: 'staff@example.invalid' }, body: { planType: 'guided_monthly', price: 'attacker_price', email: 'other@example.invalid' } };
+const approved = { id: 'app_a', applicantType: 'new', status: 'approved', parentEmail: 'shared@example.invalid', interestConfirmedAt: new Date(), reviewedAt: new Date('2026-10-01'), updatedAt: new Date('2026-10-09T12:00:00.000Z') };
+const adminRequest = { auth: { role: 'admin', email: 'staff@example.invalid' }, staff: { id: 'principal_admin', email: 'staff@example.invalid', displayName: 'Shiyu Zhang, Ph.D.', role: 'principal' }, body: { planType: 'guided_monthly', price: 'attacker_price', email: 'other@example.invalid' } };
 const session = { id: 'cs_a', mode: 'subscription', subscription: 'sub_a', status: 'complete', payment_status: 'paid', amount_total: 14900, currency: 'usd', customer: 'cus_a', customer_email: 'shared@example.invalid', metadata: { applicationId: 'app_a', planType: 'guided_monthly', approvalRevision: approved.reviewedAt.toISOString() } };
 beforeEach(() => {
   jest.resetAllMocks();
-  mockDb.adminUser.findUnique.mockResolvedValue({ id: 'principal_admin' });
+  mockDb.adminUser.findUnique.mockResolvedValue({ id: 'principal_admin', role: 'principal', isActive: true });
   mockDb.application.findUnique.mockResolvedValue(approved);
   mockDb.application.updateMany.mockResolvedValue({ count: 1 });
   mockDb.applicationEvent.findFirst.mockResolvedValue(null);
@@ -56,6 +59,8 @@ beforeEach(() => {
   mockDb.placementDecision.create.mockImplementation(async ({ data }) => ({ id: 'placement_a', ...data }));
   mockDb.placementDecision.updateMany.mockResolvedValue({ count: 1 });
   mockDb.placementDecision.findUnique.mockResolvedValue({ id: 'placement_a', applicationId: 'app_a', result: 'ready_with_bridge' });
+  mockDb.transferCreditEvaluation.updateMany.mockResolvedValue({ count: 1 });
+  mockDb.transferCreditEvaluation.findUnique.mockResolvedValue({ id: 'transfer_a', applicationId: 'app_a', principalApprovedAt: new Date(), courses: [] });
   mockStripe.checkout.sessions.create.mockResolvedValue({ id: 'cs_a', url: 'https://checkout.stripe.com/synthetic' });
   mockDb.$transaction.mockImplementation(fn => fn(mockDb));
   mockDb.subscription.upsert.mockResolvedValue({ id: 'dbsub_a', status: 'active', planType: 'guided_monthly', amountTotal: 14900 });
@@ -111,21 +116,22 @@ test('admin saves placement evidence without approving admission', async () => {
 });
 
 test('Principal sign-off is recorded separately and remains idempotent', async () => {
-  const placementDecision = { id: 'placement_a', result: 'ready_with_bridge', principalApprovedAt: null };
+  const placementDecision = { id: 'placement_a', result: 'ready_with_bridge', principalApprovedAt: null, updatedAt: new Date('2026-10-09T12:05:00.000Z') };
   mockDb.application.findUnique.mockResolvedValue({
     ...approved,
     status: 'pending',
     placementRequired: true,
     placementDecision,
   });
-  const request = { ...adminRequest, body: { principalApprover: 'Shiyu Zhang, Ph.D.' } };
+  const request = { ...adminRequest, body: { principalApprover: 'Spoofed Body Name' } };
   const response = await invoke(applications, '/:id/placement-decision/principal-approval', request);
   expect(response.code).toBe(200);
   expect(mockDb.placementDecision.updateMany).toHaveBeenCalledWith(expect.objectContaining({
-    where: { applicationId: 'app_a', principalApprovedAt: null },
+    where: { applicationId: 'app_a', principalApprovedAt: null, updatedAt: placementDecision.updatedAt },
     data: expect.objectContaining({
       principalApprover: 'Shiyu Zhang, Ph.D.',
       principalApproverEmail: 'staff@example.invalid',
+      principalApproverId: 'principal_admin',
       principalApprovedAt: expect.any(Date),
     }),
   }));
@@ -145,27 +151,80 @@ test('Principal sign-off is recorded separately and remains idempotent', async (
   expect(repeat.body.alreadyApproved).toBe(true);
   expect(mockDb.placementDecision.updateMany).toHaveBeenCalledTimes(2);
 });
+test('placement signature rejects an unsigned record changed after Principal review', async () => {
+  const reviewedAt = new Date('2026-10-09T12:05:00.000Z');
+  mockDb.application.findUnique.mockResolvedValue({
+    ...approved, status: 'pending', placementRequired: true,
+    placementDecision: { id: 'placement_a', result: 'ready', principalApprovedAt: null, updatedAt: reviewedAt },
+  });
+  mockDb.placementDecision.updateMany.mockResolvedValue({ count: 0 });
+  mockDb.placementDecision.findUnique.mockResolvedValue({
+    id: 'placement_a', result: 'ready_with_bridge', principalApprovedAt: null, updatedAt: new Date(reviewedAt.getTime() + 1000),
+  });
+  const response = await invoke(applications, '/:id/placement-decision/principal-approval', adminRequest);
+  expect(response.code).toBe(409);
+  expect(response.body.error).toMatch(/changed during review/);
+});
 test('non-Principal admins cannot sign a placement decision', async () => {
   mockDb.application.findUnique.mockResolvedValue({
     ...approved,
     status: 'pending',
     placementRequired: true,
-    placementDecision: { id: 'placement_a', result: 'ready', principalApprovedAt: null },
+    placementDecision: { id: 'placement_a', result: 'ready', principalApprovedAt: null, updatedAt: new Date() },
   });
   const response = await invoke(applications, '/:id/placement-decision/principal-approval', {
     ...adminRequest,
     auth: { role: 'admin', email: 'admissions@example.invalid' },
+    staff: { id: 'admissions_admin', email: 'admissions@example.invalid', displayName: 'Admissions', role: 'admissions_staff' },
     body: { principalApprover: 'Not the Principal' },
   });
   expect(response.code).toBe(403);
   expect(mockDb.placementDecision.updateMany).not.toHaveBeenCalled();
+});
+test('a second Principal-role account cannot sign for the configured Principal', async () => {
+  mockDb.application.findUnique.mockResolvedValue({
+    ...approved, status: 'pending', placementRequired: true,
+    placementDecision: { id: 'placement_a', result: 'ready', principalApprovedAt: null, updatedAt: new Date() },
+  });
+  const response = await invoke(applications, '/:id/placement-decision/principal-approval', {
+    ...adminRequest,
+    auth: { role: 'admin', email: 'other-principal@example.invalid' },
+    staff: { id: 'principal-2', email: 'other-principal@example.invalid', displayName: 'Other Principal', role: 'principal' },
+  });
+  expect(response.code).toBe(403);
+  expect(mockDb.placementDecision.updateMany).not.toHaveBeenCalled();
+});
+test('transfer sign-off is bound to the authenticated Principal, not request body', async () => {
+  mockDb.application.findUnique.mockResolvedValue({
+    ...approved,
+    applicantType: 'transfer',
+    status: 'pending',
+    recordsStatus: 'verified',
+    transferEvaluation: {
+      id: 'transfer_a', principalApprovedAt: null, updatedAt: new Date('2026-10-09T12:05:00.000Z'),
+      courses: [{ id: 'course_a', decision: 'credit_only' }],
+    },
+  });
+  const response = await invoke(applications, '/:id/transfer-evaluation/principal-approval', {
+    ...adminRequest,
+    body: { principalApprover: 'Spoofed Body Name' },
+  });
+  expect(response.code).toBe(200);
+  expect(mockDb.transferCreditEvaluation.updateMany).toHaveBeenCalledWith({
+    where: { applicationId: 'app_a', principalApprovedAt: null, updatedAt: expect.any(Date) },
+    data: expect.objectContaining({
+      principalApprover: 'Shiyu Zhang, Ph.D.',
+      principalApproverEmail: 'staff@example.invalid',
+      principalApproverId: 'principal_admin',
+    }),
+  });
 });
 test('Pending Clarification remains editable and cannot be signed as final', async () => {
   mockDb.application.findUnique.mockResolvedValue({
     ...approved,
     status: 'pending',
     placementRequired: true,
-    placementDecision: { id: 'placement_a', result: 'pending_clarification', principalApprovedAt: null },
+    placementDecision: { id: 'placement_a', result: 'pending_clarification', principalApprovedAt: null, updatedAt: new Date() },
   });
   const response = await invoke(applications, '/:id/placement-decision/principal-approval', {
     ...adminRequest,

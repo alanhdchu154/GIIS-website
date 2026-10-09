@@ -6,6 +6,7 @@ const { authenticate } = require('../middleware/auth');
 const { sendPasswordResetEmail } = require('../lib/mailer');
 const { createLoginSession, closeLoginSession } = require('../lib/sessionTracker');
 const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
+const { isStaffRole } = require('../lib/staffPermissions');
 
 const prisma = require('../lib/prisma');
 const router = express.Router();
@@ -189,6 +190,9 @@ router.post('/login', async (req, res) => {
     if (!ok) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
+    if (!admin.isActive || !isStaffRole(admin.role)) {
+      return res.status(403).json({ error: 'Staff account disabled', code: 'staff_inactive' });
+    }
     const session = await createLoginSession({
       role: 'admin',
       email: admin.email,
@@ -201,7 +205,7 @@ router.post('/login', async (req, res) => {
     return res.json({
       token,
       role: 'admin',
-      admin: { id: admin.id, email: admin.email },
+      admin: { id: admin.id, email: admin.email, displayName: admin.displayName, staffRole: admin.role },
     });
   }
 
@@ -310,7 +314,7 @@ router.get('/me', authenticate, async (req, res) => {
   if (req.auth.role === 'admin') {
     const admin = await prisma.adminUser.findUnique({
       where: { id: req.auth.adminId },
-      select: { id: true, email: true, createdAt: true },
+      select: { id: true, email: true, displayName: true, role: true, isActive: true, createdAt: true },
     });
     if (!admin) {
       return res.status(404).json({ error: 'Admin not found' });

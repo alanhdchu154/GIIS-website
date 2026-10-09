@@ -61,6 +61,7 @@
 
 # Administrative routes are valid SPA entries but always receive noindex in React.
 /admin/login  /index.html  200
+/admin/set-password  /index.html  200
 /admin  /index.html  200
 /admin/roster  /index.html  200
 /admin/transcript/:studentId  /index.html  200
@@ -70,6 +71,8 @@
 /admin/courses  /index.html  200
 /admin/email-logs  /index.html  200
 /admin/calendar  /index.html  200
+/admin/staff  /index.html  200
+/admin/principal-review  /index.html  200
 /admin/students/:studentId/audit-trail  /index.html  200
 /admin/enrollment-verification/:studentId  /index.html  200
 /admin/assignments  /index.html  200

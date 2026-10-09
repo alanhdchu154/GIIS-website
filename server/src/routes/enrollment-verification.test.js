@@ -5,6 +5,7 @@ const {
   eligibilityMessage,
   publicVerificationStatus,
   requestedStudentId,
+  requireStudentOrOwner,
 } = require('./enrollment-verification');
 
 describe('enrollment verification route boundaries', () => {
@@ -15,8 +16,17 @@ describe('enrollment verification route boundaries', () => {
   });
 
   test('administrators must identify the student explicitly', () => {
-    expect(requestedStudentId({ auth: { role: 'admin' }, params: { studentId: 's2' } })).toBe('s2');
-    expect(requestedStudentId({ auth: { role: 'admin' }, params: {} })).toBeNull();
+    expect(requestedStudentId({ auth: { role: 'admin' }, staff: { role: 'owner' }, params: { studentId: 's2' } })).toBe('s2');
+    expect(requestedStudentId({ auth: { role: 'admin' }, staff: { role: 'owner' }, params: {} })).toBeNull();
+    expect(requestedStudentId({ auth: { role: 'admin' }, staff: { role: 'principal' }, params: { studentId: 's2' } })).toBe(false);
+  });
+
+  test('Principal cannot issue an enrollment record', () => {
+    const res = { code: 200, status(code) { this.code = code; return this; }, json(body) { this.body = body; return this; } };
+    const next = jest.fn();
+    requireStudentOrOwner({ auth: { role: 'admin' }, staff: { role: 'principal' } }, res, next);
+    expect(res.code).toBe(403);
+    expect(next).not.toHaveBeenCalled();
   });
 
   test('document payload excludes private and payment fields', () => {

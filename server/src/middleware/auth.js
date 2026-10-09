@@ -1,5 +1,7 @@
 const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
 const { schoolDateOnly } = require('../lib/schoolDate');
+const prisma = require('../lib/prisma');
+const { hasPermission, isStaffRole } = require('../lib/staffPermissions');
 
 /**
  * Verifies JWT and its matching open server-side login session.
@@ -9,7 +11,23 @@ async function authenticate(req, res, next) {
   const result = await readSessionAuth(req, { roles: ['admin', 'student'] });
   if (!result.ok) return sendSessionError(res, result);
   req.auth = result.auth;
-  if (req.auth.role === 'admin') req.admin = { id: req.auth.adminId, email: req.auth.email };
+  if (req.auth.role === 'admin') {
+    let staff;
+    try {
+      staff = await prisma.adminUser.findUnique({
+        where: { id: req.auth.adminId },
+        select: { id: true, email: true, displayName: true, role: true, isActive: true },
+      });
+    } catch {
+      return res.status(503).json({ error: 'Staff authorization could not be verified.', code: 'staff_status_unavailable' });
+    }
+    if (!staff || !staff.isActive || !isStaffRole(staff.role)
+        || staff.email.toLowerCase() !== req.auth.email.toLowerCase()) {
+      return res.status(401).json({ error: 'Session expired or staff account disabled.', code: 'invalid_staff_session' });
+    }
+    req.staff = staff;
+    req.admin = { id: staff.id, email: staff.email, role: staff.role, displayName: staff.displayName };
+  }
   return next();
 }
 
@@ -21,15 +39,34 @@ async function authenticateParent(req, res, next) {
 }
 
 function requireAdmin(req, res, next) {
-  if (req.auth?.role !== 'admin') {
-    return res.status(403).json({ error: 'Admin only' });
+  if (req.auth?.role !== 'admin' || req.staff?.role !== 'owner') {
+    return res.status(403).json({ error: 'Owner permission required', code: 'permission_denied' });
   }
   next();
 }
 
+function requirePermission(permission) {
+  if (typeof permission !== 'string' || !permission) throw new Error('permission is required');
+  return function staffPermission(req, res, next) {
+    if (req.auth?.role !== 'admin' || !hasPermission(req.staff?.role, permission)) {
+      return res.status(403).json({ error: 'Permission denied', code: 'permission_denied', permission });
+    }
+    return next();
+  };
+}
+
+function requireStaffRole(role) {
+  return function staffRole(req, res, next) {
+    if (req.auth?.role !== 'admin' || req.staff?.role !== role) {
+      return res.status(403).json({ error: 'Permission denied', code: 'permission_denied' });
+    }
+    return next();
+  };
+}
+
 function requireStudentOrAdminForStudentParam(req, res, next) {
   const sid = req.params.id;
-  if (req.auth?.role === 'admin') return next();
+  if (req.auth?.role === 'admin' && req.staff?.role === 'owner') return next();
   if (req.auth?.role === 'student' && req.auth.studentId === sid) return next();
   return res.status(403).json({ error: 'Forbidden' });
 }
@@ -104,6 +141,8 @@ module.exports = {
   authenticateParent,
   requireAuth,
   requireAdmin,
+  requirePermission,
+  requireStaffRole,
   requireStudentOrAdminForStudentParam,
   blockIfSoftLocked,
 };

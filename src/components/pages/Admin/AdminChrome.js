@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { getAdminSession } from '../../../api/authStorage';
 
 export const adminPageStyle = {
   minHeight: '100vh',
@@ -49,6 +50,7 @@ export const ADMIN_NAV_GROUPS = [
       { to: '/admin/applications', label: { en: 'Applications', zh: '招生申请' } },
       { to: '/admin/subscriptions', label: { en: 'Billing', zh: '订阅收费' } },
       { to: '/admin/email-logs', label: { en: 'Email Logs', zh: '邮件记录' } },
+      { to: '/admin/staff', label: { en: 'Staff Access', zh: '人员权限' } },
     ],
   },
 ];
@@ -59,11 +61,15 @@ export const ADMIN_NAV_GROUPS = [
  */
 export function AdminNav({ lang = 'en' }) {
   const location = useLocation();
+  const staffRole = getAdminSession()?.staffRole || '';
   const current = location?.pathname || '';
   const isActive = (to) => (to === '/admin' ? current === '/admin' : current.startsWith(to));
   return (
     <nav className="giis-admin-nav d-flex flex-wrap align-items-center gap-3 mb-3">
-      {ADMIN_NAV_GROUPS.map((group) => (
+      {ADMIN_NAV_GROUPS.map((group) => ({
+        ...group,
+        items: staffRole === 'owner' ? group.items : [],
+      })).filter((group) => group.items.length > 0).map((group) => (
         <div key={group.heading.en} className="giis-admin-nav-group d-flex align-items-center gap-1">
           <span
             className="small text-uppercase fw-bold me-1"
@@ -86,6 +92,7 @@ export function AdminNav({ lang = 'en' }) {
           })}
         </div>
       ))}
+      {staffRole === 'principal' && <Link to="/admin/principal-review" className="btn btn-sm btn-dark fw-semibold">Principal Review</Link>}
       <div className="ms-auto d-flex align-items-center">
         <Link to="/" className="btn btn-sm btn-outline-secondary fw-semibold">
           {lang === 'zh' ? '回到网站首页' : 'Public site'}

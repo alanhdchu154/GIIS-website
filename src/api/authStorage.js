@@ -34,7 +34,12 @@ export function getAdminSession() {
 export function setAdminSession(admin) {
   try {
     if (admin?.id) {
-      sessionStorage.setItem(ADMIN_SESSION_KEY, JSON.stringify({ id: admin.id, email: admin.email || '' }));
+      sessionStorage.setItem(ADMIN_SESSION_KEY, JSON.stringify({
+        id: admin.id,
+        email: admin.email || '',
+        displayName: admin.displayName || '',
+        staffRole: admin.staffRole || '',
+      }));
     } else {
       sessionStorage.removeItem(ADMIN_SESSION_KEY);
     }

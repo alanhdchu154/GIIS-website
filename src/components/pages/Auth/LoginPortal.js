@@ -90,7 +90,7 @@ export default function LoginPortal({ language, portalRole = 'student' }) {
 
       if (data.role === 'admin' && data.admin) {
         setAdminSession(data.admin);
-        navigate('/admin', { replace: true });
+        navigate(data.admin.staffRole === 'principal' ? '/admin/principal-review' : '/admin', { replace: true });
         return;
       }
       if (isAdminPortal) {

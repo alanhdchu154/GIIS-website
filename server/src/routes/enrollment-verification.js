@@ -11,6 +11,11 @@ const {
 const prisma = require('../lib/prisma');
 const router = express.Router();
 
+function requireStudentOrOwner(req, res, next) {
+  if (req.auth?.role === 'student' || req.staff?.role === 'owner') return next();
+  return res.status(403).json({ error: 'Permission denied', code: 'permission_denied' });
+}
+
 const SCHOOL = Object.freeze({
   name: 'Genesis of Ideas International School',
   address: '7901 4th St N STE 300, St. Petersburg, FL 33702, USA',
@@ -29,7 +34,7 @@ const STUDENT_INCLUDE = {
 
 function requestedStudentId(req) {
   const requested = String(req.params.studentId || '').trim();
-  if (req.auth?.role === 'admin') return requested || null;
+  if (req.auth?.role === 'admin' && req.staff?.role === 'owner') return requested || null;
   if (req.auth?.role === 'student') {
     if (requested && requested !== req.auth.studentId) return false;
     return req.auth.studentId;
@@ -125,7 +130,7 @@ router.get('/status/:studentId?', authenticate, async (req, res) => {
   }
 });
 
-router.post('/issue/:studentId?', authenticate, async (req, res) => {
+router.post('/issue/:studentId?', authenticate, requireStudentOrOwner, async (req, res) => {
   try {
     const student = await resolveAuthenticatedStudent(req, res);
     if (!student) return;
@@ -217,3 +222,4 @@ module.exports.documentData = documentData;
 module.exports.eligibilityMessage = eligibilityMessage;
 module.exports.publicVerificationStatus = publicVerificationStatus;
 module.exports.requestedStudentId = requestedStudentId;
+module.exports.requireStudentOrOwner = requireStudentOrOwner;

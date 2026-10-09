@@ -23,7 +23,7 @@ process.env.STRIPE_SECRET_KEY = 'synthetic-not-a-live-key';
 process.env.STRIPE_PRICE_GROUP_MONTHLY = 'price_synthetic_group';
 process.env.STRIPE_PRICE_SELF_PACED_MONTHLY = 'price_synthetic_monthly';
 const jwt = require('jsonwebtoken');
-const { authenticate, requireAdmin, requireStudentOrAdminForStudentParam } = require('../middleware/auth');
+const { authenticate, requireAdmin, requirePermission, requireStaffRole, requireStudentOrAdminForStudentParam } = require('../middleware/auth');
 const authRoutes = require('./auth');
 const parentAuthRoutes = require('./parent-auth');
 const parentDataRoutes = require('./parent-data');
@@ -88,7 +88,7 @@ beforeEach(() => {
     if (!row || (where.endedAt === null && row.endedAt)) return { count: 0 };
     Object.assign(row, data); return { count: 1 };
   });
-  mockPrisma.adminUser.findUnique.mockImplementation(async ({ where }) => where.email === identities.admin.email || where.id === identities.admin.adminId ? { id: identities.admin.adminId, email: identities.admin.email, passwordHash: 'synthetic' } : null);
+  mockPrisma.adminUser.findUnique.mockImplementation(async ({ where }) => where.email === identities.admin.email || where.id === identities.admin.adminId ? { id: identities.admin.adminId, email: identities.admin.email, passwordHash: 'synthetic', displayName: 'Owner', role: 'owner', isActive: true } : null);
   mockPrisma.studentAccount.findUnique.mockResolvedValue({ id: 'account-fixture', studentId: 'student-fixture', email: identities.student.email, passwordHash: 'synthetic', isActive: true, student: { id: 'student-fixture', name: 'Fixture' } });
   mockPrisma.parentAccount.findUnique.mockResolvedValue({ id: 'parent-fixture', studentId: 'student-fixture', email: identities.parent.email, passwordHash: 'synthetic' });
   mockPrisma.student.findUnique.mockResolvedValue(null);
@@ -196,6 +196,46 @@ test('roles stay isolated even if a non-admin claim carries an adminId', async (
   expect((await check(parent)).next).not.toHaveBeenCalled();
   const foreign = resDouble(); requireStudentOrAdminForStudentParam({ auth: identities.student, params: { id: 'other-student' } }, foreign, next);
   expect(foreign.code).toBe(403);
+});
+
+test('Principal cannot use the generic admin path to read an arbitrary student', () => {
+  const res = resDouble(); const next = jest.fn();
+  requireStudentOrAdminForStudentParam({ auth: identities.admin, staff: { role: 'principal' }, params: { id: 'student-fixture' } }, res, next);
+  expect(res.code).toBe(403);
+  expect(next).not.toHaveBeenCalled();
+});
+
+test('staff role and active state are reloaded from DB on every request', async () => {
+  const token = tokenFor('admin');
+  mockPrisma.adminUser.findUnique.mockResolvedValueOnce({
+    id: identities.admin.adminId, email: identities.admin.email, displayName: 'Principal', role: 'principal', isActive: true,
+  });
+  const principal = await check(token);
+  expect(principal.next).toHaveBeenCalledTimes(1);
+  expect(principal.req.staff.role).toBe('principal');
+  const ownerNext = jest.fn();
+  requireAdmin(principal.req, principal.res, ownerNext);
+  expect(principal.res.code).toBe(403);
+  const signNext = jest.fn();
+  requireStaffRole('principal')(principal.req, resDouble(), signNext);
+  expect(signNext).toHaveBeenCalledTimes(1);
+
+  mockPrisma.adminUser.findUnique.mockResolvedValueOnce({
+    id: identities.admin.adminId, email: identities.admin.email, displayName: 'Principal', role: 'principal', isActive: false,
+  });
+  const disabled = await check(token);
+  expect(disabled.res.code).toBe(401);
+  expect(disabled.next).not.toHaveBeenCalled();
+});
+
+test('Principal is denied sensitive permissions even with a valid admin JWT', async () => {
+  const req = { auth: identities.admin, staff: { role: 'principal' } };
+  for (const permission of ['staff.manage', 'finance.write', 'students.write', 'courses.write', 'enrollments.write', 'email.send', 'graduation.send']) {
+    const res = resDouble(); const next = jest.fn();
+    requirePermission(permission)(req, res, next);
+    expect(res.code).toBe(403);
+    expect(next).not.toHaveBeenCalled();
+  }
 });
 
 test.each(['admin', 'parent'])('%s logout is idempotent and a new login session still works', async role => {

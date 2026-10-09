@@ -559,7 +559,10 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   const [outreachFlow, setOutreachFlow] = useState(null);
 
   const session = getAdminSession();
-  useEffect(() => { if (!session) navigate('/admin/login', { replace: true }); }, [session, navigate]);
+  useEffect(() => {
+    if (!session) navigate('/admin/login', { replace: true });
+    else if (session.staffRole === 'principal') navigate('/admin/principal-review', { replace: true });
+  }, [session, navigate]);
 
   useEffect(() => {
     let active = true;
@@ -904,7 +907,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
     return filtered;
   })();
 
-  if (!session) return null;
+  if (!session || session.staffRole === 'principal') return null;
   const workflowEnabled = workflowMode === 'serious';
   const outreachChannels = outreachFlow ? outreachChannelsFor(outreachFlow.app) : [];
   const outreachDraft = outreachFlow ? firstOutreachDraft(outreachFlow.app, outreachFlow.messageLanguage) : null;

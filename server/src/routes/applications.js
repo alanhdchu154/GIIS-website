@@ -2,7 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const Stripe = require('stripe');
-const { authenticate, requireAdmin } = require('../middleware/auth');
+const { authenticate, requireAdmin, requirePermission } = require('../middleware/auth');
 const { PRICE_TIERS } = require('./checkout');
 const {
   sendApplicationInterestConfirmation,
@@ -65,15 +65,25 @@ async function placementDecisionCapability(prismaClient = prisma) {
   try {
     const signer = await prismaClient.adminUser.findUnique({
       where: { email: PRINCIPAL_APPROVER_EMAIL },
-      select: { id: true },
+      select: { id: true, role: true, isActive: true },
     });
-    return signer
+    return signer?.role === 'principal' && signer.isActive
       ? { available: true, reason: '' }
       : { available: false, reason: 'principal_admin_missing' };
   } catch (error) {
     console.error('[applications] Placement signer capability check failed:', error.message);
     return { available: false, reason: 'principal_signer_check_failed' };
   }
+}
+
+function requireConfiguredPrincipal(req, res, next) {
+  if (!PRINCIPAL_APPROVER_EMAIL) {
+    return res.status(503).json({ error: 'Principal signer is not configured.', code: 'principal_email_not_configured' });
+  }
+  if (req.staff?.role !== 'principal' || req.staff.email.toLowerCase() !== PRINCIPAL_APPROVER_EMAIL) {
+    return res.status(403).json({ error: 'Only the configured Principal account may sign this decision.', code: 'permission_denied' });
+  }
+  return next();
 }
 
 async function requirePlacementDecisionCapability(res) {
@@ -1398,7 +1408,7 @@ router.put('/:id/transfer-evaluation', authenticate, requireAdmin, async (req, r
 
 // POST /api/applications/:id/transfer-evaluation/principal-approval — record
 // the human sign-off required before a transfer application can be approved.
-router.post('/:id/transfer-evaluation/principal-approval', authenticate, requireAdmin, async (req, res) => {
+router.post('/:id/transfer-evaluation/principal-approval', authenticate, requireConfiguredPrincipal, async (req, res) => {
   const app = await prisma.application.findUnique({
     where: { id: req.params.id },
     include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE } },
@@ -1420,15 +1430,40 @@ router.post('/:id/transfer-evaluation/principal-approval', authenticate, require
   if (evaluation.courses.some((course) => course.decision === 'deferred')) {
     return res.status(400).json({ error: 'Resolve deferred course decisions before principal approval.' });
   }
-  const principalApprover = cleanString(req.body?.principalApprover);
-  if (!principalApprover) return res.status(400).json({ error: 'principalApprover is required.' });
-  if (principalApprover.length > 120) return res.status(400).json({ error: 'principalApprover is too long.' });
+  if (!app.updatedAt) return res.status(409).json({ error: 'Reload the application before signing.' });
+  if (!evaluation.updatedAt) return res.status(409).json({ error: 'Reload the transfer evaluation before signing.' });
+  const principalApprover = req.staff.displayName || req.staff.email;
 
   const approvedAt = new Date();
-  const saved = await prisma.$transaction(async (tx) => {
-    const result = await tx.transferCreditEvaluation.update({
+  const outcome = await prisma.$transaction(async (tx) => {
+    const currentApp = await tx.application.findUnique({ where: { id: app.id } });
+    if (!currentApp || currentApp.updatedAt?.getTime() !== app.updatedAt?.getTime()
+        || currentApp.status !== 'pending' || currentApp.recordsStatus !== 'verified'
+        || !hasConfirmedInterest(currentApp)) {
+      return { conflict: true, alreadyApproved: false, evaluation: null };
+    }
+    const claimed = await tx.transferCreditEvaluation.updateMany({
+      where: { applicationId: app.id, principalApprovedAt: null, updatedAt: evaluation.updatedAt },
+      data: {
+        principalApprover,
+        principalApproverEmail: req.staff.email,
+        principalApproverId: req.staff.id,
+        principalApprovedAt: approvedAt,
+      },
+    });
+    if (claimed.count === 0) {
+      const current = await tx.transferCreditEvaluation.findUnique({
+        where: { applicationId: app.id },
+        include: TRANSFER_EVALUATION_INCLUDE,
+      });
+      return {
+        alreadyApproved: !!current?.principalApprovedAt,
+        conflict: !current?.principalApprovedAt,
+        evaluation: current,
+      };
+    }
+    const result = await tx.transferCreditEvaluation.findUnique({
       where: { applicationId: app.id },
-      data: { principalApprover, principalApprovedAt: approvedAt },
       include: TRANSFER_EVALUATION_INCLUDE,
     });
     await tx.applicationEvent.create({
@@ -1439,9 +1474,10 @@ router.post('/:id/transfer-evaluation/principal-approval', authenticate, require
         `Principal approval recorded for ${principalApprover}.`,
       ),
     });
-    return result;
-  });
-  return res.json({ ok: true, evaluation: saved });
+    return { alreadyApproved: false, evaluation: result };
+  }, { isolationLevel: 'Serializable' });
+  if (outcome.conflict) return res.status(409).json({ error: 'The transfer evaluation changed during review. Reload before signing.' });
+  return res.json({ ok: true, ...outcome });
 });
 
 // POST /api/applications  — public, no auth required
@@ -1485,7 +1521,7 @@ router.get('/capabilities', async (_req, res) => {
 });
 
 // GET /api/applications  — admin only
-router.get('/', authenticate, requireAdmin, async (req, res) => {
+router.get('/', authenticate, requirePermission('applications.read'), async (req, res) => {
   const status = req.query.status;
   const where = status ? { status } : {};
   const apps = await prisma.application.findMany({
@@ -1497,6 +1533,16 @@ router.get('/', authenticate, requireAdmin, async (req, res) => {
   const enriched = await Promise.all(apps.map(async (app) => {
     const safeApp = { ...app };
     delete safeApp.interestConfirmationTokenHash;
+    if (req.staff?.role === 'principal') {
+      delete safeApp.accountsCreated;
+      safeApp.events = (safeApp.events || [])
+        .filter((event) => /^(placement_|principal_(placement|transfer)|transfer_evaluation)/.test(event.action))
+        .map((event) => ({ ...event, metadata: null }));
+      return {
+        ...safeApp,
+        readiness: applicationReadiness(app),
+      };
+    }
     return {
       ...safeApp,
       readiness: applicationReadiness(app),
@@ -1590,7 +1636,7 @@ router.put('/:id/placement-decision', authenticate, requireAdmin, async (req, re
 // POST /api/applications/:id/placement-decision/principal-approval — immutable
 // sign-off for the current record. Non-ready results may be signed as an honest
 // outcome, but they still block application approval.
-router.post('/:id/placement-decision/principal-approval', authenticate, requireAdmin, async (req, res) => {
+router.post('/:id/placement-decision/principal-approval', authenticate, requireConfiguredPrincipal, async (req, res) => {
   if (!(await requirePlacementDecisionCapability(res))) return;
   const app = await prisma.application.findUnique({
     where: { id: req.params.id },
@@ -1609,25 +1655,36 @@ router.post('/:id/placement-decision/principal-approval', authenticate, requireA
   if (app.placementDecision.result === 'pending_clarification') {
     return res.status(409).json({ error: 'Pending Clarification remains an editable draft and cannot receive final Principal approval.' });
   }
-  const authenticatedEmail = String(req.auth?.email || '').trim().toLowerCase();
-  if (!authenticatedEmail || authenticatedEmail !== PRINCIPAL_APPROVER_EMAIL) {
-    return res.status(403).json({ error: 'Only the configured Principal admin account may approve a placement decision.' });
-  }
-  const principalApprover = boundedText(req.body?.principalApprover, 120);
-  if (!principalApprover) return res.status(400).json({ error: 'Principal approver name is required.' });
+  if (!app.updatedAt) return res.status(409).json({ error: 'Reload the application before signing.' });
+  if (!app.placementDecision.updatedAt) return res.status(409).json({ error: 'Reload the placement decision before signing.' });
+  const authenticatedEmail = req.staff.email;
+  const principalApprover = req.staff.displayName || req.staff.email;
   const approvedAt = new Date();
   const actorEmail = req.auth?.email || 'admin';
   let outcome;
   try {
     outcome = await prisma.$transaction(async (tx) => {
+      const currentApp = await tx.application.findUnique({ where: { id: app.id } });
+      if (!currentApp || currentApp.updatedAt?.getTime() !== app.updatedAt?.getTime()
+          || currentApp.status !== 'pending' || !currentApp.placementRequired
+          || !hasConfirmedInterest(currentApp)) {
+        return { conflict: true, alreadyApproved: false, decision: null };
+      }
       const claimed = await tx.placementDecision.updateMany({
-        where: { applicationId: app.id, principalApprovedAt: null },
-        data: { principalApprover, principalApproverEmail: authenticatedEmail, principalApprovedAt: approvedAt },
+        where: { applicationId: app.id, principalApprovedAt: null, updatedAt: app.placementDecision.updatedAt },
+        data: {
+          principalApprover,
+          principalApproverEmail: authenticatedEmail,
+          principalApproverId: req.staff.id,
+          principalApprovedAt: approvedAt,
+        },
       });
       if (claimed.count === 0) {
+        const current = await tx.placementDecision.findUnique({ where: { applicationId: app.id } });
         return {
-          alreadyApproved: true,
-          decision: await tx.placementDecision.findUnique({ where: { applicationId: app.id } }),
+          alreadyApproved: !!current?.principalApprovedAt,
+          conflict: !current?.principalApprovedAt,
+          decision: current,
         };
       }
       const updated = await tx.placementDecision.findUnique({ where: { applicationId: app.id } });
@@ -1646,12 +1703,13 @@ router.post('/:id/placement-decision/principal-approval', authenticate, requireA
         ),
       });
       return { alreadyApproved: false, decision: updated };
-    });
+    }, { isolationLevel: 'Serializable' });
   } catch (error) {
     console.error('[applications] Principal placement approval failed:', error.message);
     return res.status(500).json({ error: 'Principal placement approval could not be recorded. Please try again.' });
   }
 
+  if (outcome.conflict) return res.status(409).json({ error: 'The placement decision changed during review. Reload before signing.' });
   return res.json({ ok: true, ...outcome });
 });
 
@@ -1939,6 +1997,7 @@ module.exports.applicationApprovalError = applicationApprovalError;
 module.exports.applicationReadiness = applicationReadiness;
 module.exports.activationReadinessError = activationReadinessError;
 module.exports.transferEvaluationEditError = transferEvaluationEditError;
+module.exports.requireConfiguredPrincipal = requireConfiguredPrincipal;
 module.exports.parsePlacementDecision = parsePlacementDecision;
 module.exports.placementDecisionEditError = placementDecisionEditError;
 module.exports.placementDecisionCapability = placementDecisionCapability;
