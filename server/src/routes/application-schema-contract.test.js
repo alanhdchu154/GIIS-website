@@ -7,6 +7,8 @@ describe('Application persistence contract', () => {
     const schema = fs.readFileSync(schemaPath, 'utf8');
     const applicationModel = schema.match(/model Application \{([\s\S]*?)\n\}/)?.[1] || '';
 
-    expect(applicationModel).toMatch(/\n\s+updatedAt\s+DateTime\s+@updatedAt\s*(?:\n|$)/);
+    expect(applicationModel).toMatch(
+      /\n\s+updatedAt\s+DateTime\s+@default\(now\(\)\)\s+@updatedAt\s*(?:\n|$)/,
+    );
   });
 });
