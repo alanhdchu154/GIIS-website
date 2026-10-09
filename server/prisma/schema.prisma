@@ -368,7 +368,7 @@ model Application {
   currentSchool                  String                    @default("")
   targetUniversities             String                    @default("")
   preferredLanguage              String                    @default("en") // "en" | "zh"
-  communicationLanguage          String?                   // "en" | "zh" | "bilingual"; null legacy rows fall back to preferredLanguage
+  communicationLanguage          String? // "en" | "zh" | "bilingual"; null legacy rows fall back to preferredLanguage
   parentName                     String
   parentEmail                    String
   phone                          String                    @default("")
@@ -410,15 +410,47 @@ model Application {
   rejectionReason                String                    @default("")
   adminNotes                     String                    @default("")
   accountsCreated                Boolean                   @default(false)
+  placementRequired              Boolean                   @default(false)
   createdAt                      DateTime                  @default(now())
   reviewedAt                     DateTime?
   reviewedById                   String?
   transferEvaluation             TransferCreditEvaluation?
+  placementDecision              PlacementDecision?
   events                         ApplicationEvent[]
 
   @@index([status, applicantType])
   @@index([parentEmail, status, createdAt])
   @@index([interestConfirmedAt, status, createdAt])
+}
+
+/// Human-reviewed admission placement record. This records evidence and the
+/// Principal's decision; it never awards credit or creates an enrollment.
+model PlacementDecision {
+  id                       String      @id @default(cuid())
+  applicationId            String      @unique
+  application              Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  assessmentDate           DateTime
+  assessor                 String
+  englishScore             Int?
+  mathScore                Int?
+  scienceScore             Int?
+  assistanceNotes          String      @default("")
+  evidenceReviewed         String
+  independentLearningNotes String      @default("")
+  result                   String // ready | ready_with_bridge | not_yet | pending_clarification
+  recommendedGradeLevel    String
+  decisionRationale        String
+  bridgePlan               String      @default("")
+  firstTermPlan            String
+  firstWeekReviewer        String
+  recheckDate              DateTime?
+  principalApprover        String      @default("")
+  principalApproverEmail   String      @default("")
+  principalApprovedAt      DateTime?
+  createdAt                DateTime    @default(now())
+  updatedAt                DateTime    @updatedAt
+
+  @@index([result, principalApprovedAt])
 }
 
 model ApplicationEvent {

@@ -5,6 +5,7 @@ import { getApiBase } from '../../../config/apiBase';
 import { AdminHeader, AdminPage } from './AdminChrome';
 import { getAdminSession } from '../../../api/authStorage';
 import TransferEvaluationEditor from './TransferEvaluationEditor';
+import PlacementDecisionEditor from './PlacementDecisionEditor';
 
 const API = getApiBase();
 
@@ -635,7 +636,8 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
         credentials: 'include',
         body: JSON.stringify({ status, ...extra }),
       });
-      if (!res.ok) { showToast('Error updating status'); return; }
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) { showToast(data.error || 'Error updating status'); return; }
       showToast(`Marked as ${status}`);
       setExpanded(null);
       load();
@@ -1136,6 +1138,14 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                         </div>
 
                         <ApplicantReviewPanel app={app} />
+
+                        {workflowEnabled && (
+                          <PlacementDecisionEditor
+                            app={app}
+                            showToast={showToast}
+                            onChanged={load}
+                          />
+                        )}
 
                         {transferNeedsRecordReview && workflowEnabled && interestConfirmed && (
                           <div style={{ marginBottom: 16, padding: '13px 14px', border: '1px solid #cfe0f8', borderRadius: 8, background: '#f8fbff' }}>

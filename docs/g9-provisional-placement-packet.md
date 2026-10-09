@@ -59,6 +59,25 @@ the student begins conditionally.
 9. The Principal gives a written result: Ready, Ready with Bridge, Not Yet, or
    Pending Clarification when evidence is incomplete.
 
+## Admin placement record
+
+For a case that needs this screen, open the application in Admin Applications
+and choose **Require placement review** while the case is still Pending. The
+application cannot be approved, sent to Checkout, or activated until all of the
+following are true:
+
+1. The academic reviewer saves the assessment date, English/Math/Science strand
+   scores, evidence and assistance reviewed, result, rationale, first-term plan,
+   first-week reviewer, and any bridge/recheck plan.
+2. The Principal separately records the placement decision while signed in
+   through the configured Principal admin account.
+3. The recorded result is Ready or Ready with Bridge.
+
+A Principal-approved placement record is locked against ordinary editing. The
+application event trail records the evidence-save and Principal-signoff actions.
+The placement record does not award credit, create a transcript row, enroll a
+course, confirm payment, or send an email.
+
 ## Administration rules
 
 - English: no dictionary, translator, AI, or internet.

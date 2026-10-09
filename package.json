@@ -66,6 +66,7 @@
     "audit:sales-owner-decisions": "node tools/ops-quality/audit_parent_sales_owner_decisions.js",
     "audit:sales-launch-mode": "node tools/ops-quality/audit_parent_sales_launch_mode.js",
     "audit:parent-journey": "node tools/ops-quality/audit_parent_journey_acceptance.js",
+    "audit:placement-flow": "node tools/ops-quality/audit_placement_decision_browser_smoke.js",
     "audit:production-api-proxy": "node tools/ops-quality/audit_production_api_proxy.js",
     "audit:production-payment-env": "node tools/ops-quality/audit_production_payment_env.js",
     "school:ops-report": "node tools/ops-quality/generate_school_ops_report.js",

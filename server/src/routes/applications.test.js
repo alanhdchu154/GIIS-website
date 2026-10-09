@@ -6,10 +6,13 @@ const {
   nextBusinessResponseDue,
   applicationTypeFor,
   transferApprovalError,
+  placementApprovalError,
   applicationApprovalError,
   applicationReadiness,
   activationReadinessError,
   transferEvaluationEditError,
+  parsePlacementDecision,
+  placementDecisionEditError,
   interestTokenHash,
   normalizePriorSchools,
   confirmOfficialRecordsRequested,
@@ -402,6 +405,126 @@ describe('application approval and activation gates', () => {
       'Transfer decisions cannot be edited after account activation. Use a reviewed registrar correction.'
     );
     expect(transferEvaluationEditError({ status: 'pending', accountsCreated: false }, {})).toBe('');
+  });
+
+  test('requires a signed Ready placement decision when the case is marked required', () => {
+    const base = {
+      applicantType: 'new',
+      placementRequired: true,
+      interestConfirmedAt: new Date(),
+    };
+    expect(placementApprovalError(base)).toBe(
+      'A completed placement decision is required before application approval.'
+    );
+    expect(applicationReadiness(base).code).toBe('placement_pending');
+
+    const unsigned = { ...base, placementDecision: { result: 'ready', principalApprovedAt: null } };
+    expect(placementApprovalError(unsigned)).toBe(
+      'The placement decision requires recorded Principal approval.'
+    );
+    expect(applicationReadiness(unsigned).code).toBe('placement_principal_review');
+
+    const clarification = {
+      ...base,
+      placementDecision: { result: 'pending_clarification', principalApprovedAt: new Date() },
+    };
+    expect(placementApprovalError(clarification)).toBe(
+      'The placement decision is pending clarification and cannot support approval.'
+    );
+    expect(applicationReadiness(clarification).code).toBe('placement_hold');
+
+    const ready = {
+      ...base,
+      placementDecision: { result: 'ready_with_bridge', principalApprovedAt: new Date() },
+    };
+    expect(applicationApprovalError(ready)).toBe('');
+    expect(applicationReadiness(ready).code).toBe('approval_ready');
+  });
+
+  test('keeps placement evidence editable only before payment, activation, or Principal sign-off', () => {
+    expect(placementDecisionEditError({ placementDecision: null, accountsCreated: false }, {})).toBe('');
+    expect(placementDecisionEditError({ placementDecision: null, accountsCreated: false }, { paid: true })).toBe(
+      'Placement decisions cannot be edited after payment is recorded.'
+    );
+    expect(placementDecisionEditError({ placementDecision: null, accountsCreated: true }, {})).toBe(
+      'Placement decisions cannot be edited after account activation.'
+    );
+    expect(placementDecisionEditError({
+      placementDecision: { principalApprovedAt: new Date() },
+      accountsCreated: false,
+    }, {})).toBe(
+      'A Principal-approved placement decision is locked. Record a reviewed correction instead of overwriting it.'
+    );
+  });
+});
+
+describe('placement decision parsing', () => {
+  function validPlacement(overrides = {}) {
+    return {
+      assessmentDate: '2026-10-09',
+      assessor: 'Academic Reviewer',
+      englishScore: 24,
+      mathScore: 27,
+      scienceScore: 19,
+      assistanceNotes: 'Procedural directions only.',
+      evidenceReviewed: 'GIIS readiness packet, two work samples, and Khan Academy evidence.',
+      independentLearningNotes: 'Followed directions and showed work.',
+      result: 'ready_with_bridge',
+      recommendedGradeLevel: 'Grade 9',
+      decisionRationale: 'Core readiness is sufficient with a named writing bridge.',
+      bridgePlan: 'Weekly writing check for four weeks.',
+      firstTermPlan: 'Algebra I, English I, Biology, and World History introductory modules.',
+      firstWeekReviewer: 'First Week Reviewer',
+      recheckDate: '2026-11-20',
+      ...overrides,
+    };
+  }
+
+  test('normalizes a complete Ready with Bridge record', () => {
+    const parsed = parsePlacementDecision(validPlacement());
+    expect(parsed.ok).toBe(true);
+    expect(parsed.data).toMatchObject({
+      englishScore: 24,
+      mathScore: 27,
+      scienceScore: 19,
+      result: 'ready_with_bridge',
+      recommendedGradeLevel: 'Grade 9',
+    });
+    expect(parsed.data.assessmentDate).toEqual(new Date('2026-10-09T12:00:00.000Z'));
+    expect(parsed.data.recheckDate).toEqual(new Date('2026-11-20T12:00:00.000Z'));
+  });
+
+  test('requires the bridge and recheck date for Ready with Bridge', () => {
+    expect(parsePlacementDecision(validPlacement({ bridgePlan: '' }))).toEqual({
+      ok: false,
+      error: 'Ready with Bridge requires a named bridge plan.',
+    });
+    expect(parsePlacementDecision(validPlacement({ recheckDate: '' }))).toEqual({
+      ok: false,
+      error: 'Ready with Bridge requires a recheck date.',
+    });
+  });
+
+  test('allows missing scores only while clarification is pending', () => {
+    expect(parsePlacementDecision(validPlacement({
+      result: 'pending_clarification',
+      englishScore: '',
+      mathScore: '',
+      scienceScore: '',
+      bridgePlan: '',
+      recheckDate: '',
+    })).ok).toBe(true);
+    expect(parsePlacementDecision(validPlacement({ englishScore: '' }))).toEqual({
+      ok: false,
+      error: 'English, Math, and Science scores are required for a completed academic result.',
+    });
+  });
+
+  test('rejects scores outside the assessment blueprint', () => {
+    expect(parsePlacementDecision(validPlacement({ mathScore: 37 }))).toEqual({
+      ok: false,
+      error: 'Math score must be a whole number from 0 to 36.',
+    });
   });
 });
 

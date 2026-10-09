@@ -18,6 +18,9 @@ const prisma = require('../lib/prisma');
 const router = express.Router();
 const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'http://localhost:3000').split(',')[0].trim();
+const PRINCIPAL_APPROVER_EMAIL = String(
+  process.env.PRINCIPAL_APPROVER_EMAIL || 'shiyu.zhang@genesisideas.school'
+).trim().toLowerCase();
 
 const APPLICANT_TYPES = new Set(['new', 'transfer']);
 const COMMUNICATION_LANGUAGES = new Set(['en', 'zh', 'bilingual']);
@@ -40,6 +43,7 @@ const TRANSFER_MAPPED_AREAS = new Set(['english', 'math', 'science', 'social_stu
 const TRANSFER_DECISIONS = new Set(['credit_and_gpa', 'credit_only', 'conditional', 'rejected', 'deferred']);
 const TRANSFER_WEIGHTING = new Set(['none', 'ap_equivalent', 'advanced']);
 const TRANSFER_VALIDATIONS = new Set(['none', 'first_term', 'portfolio', 'assessment', 'school_verification', 'other']);
+const PLACEMENT_RESULTS = new Set(['ready', 'ready_with_bridge', 'not_yet', 'pending_clarification']);
 const DUPLICATE_WINDOW_MS = 30 * 24 * 60 * 60 * 1000;
 const INTEREST_CONFIRMATION_TTL_MS = 72 * 60 * 60 * 1000;
 const PUBLIC_SITE = process.env.CORS_ORIGIN?.split(',')[0]?.trim() || 'https://genesisideas.school';
@@ -52,6 +56,7 @@ const TRANSFER_EVALUATION_INCLUDE = {
 };
 const APPLICATION_INCLUDE = {
   transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE },
+  placementDecision: true,
   events: { orderBy: { createdAt: 'desc' }, take: 30 },
 };
 
@@ -266,6 +271,22 @@ function transferApprovalError(app) {
   return '';
 }
 
+function placementApprovalError(app) {
+  if (!app?.placementRequired) return '';
+  if (!app.placementDecision) {
+    return 'A completed placement decision is required before application approval.';
+  }
+  if (!app.placementDecision.principalApprovedAt) {
+    return 'The placement decision requires recorded Principal approval.';
+  }
+  if (!['ready', 'ready_with_bridge'].includes(app.placementDecision.result)) {
+    return app.placementDecision.result === 'pending_clarification'
+      ? 'The placement decision is pending clarification and cannot support approval.'
+      : 'The placement decision does not support admission at this time.';
+  }
+  return '';
+}
+
 function hasConfirmedInterest(app) {
   // Legacy applications have no confirmation token and remain reviewable.
   // New-intake applications stay gated even when email delivery fails before
@@ -277,12 +298,23 @@ function applicationApprovalError(app) {
   if (!hasConfirmedInterest(app)) {
     return 'Parent email interest confirmation is required before application approval.';
   }
-  return transferApprovalError(app);
+  return placementApprovalError(app) || transferApprovalError(app);
 }
 
 function applicationReadiness(app) {
   if (!hasConfirmedInterest(app)) {
     return { code: 'unconfirmed', label: 'Parent confirmation pending', action: 'Wait for parent email confirmation' };
+  }
+  if (app?.placementRequired) {
+    if (!app.placementDecision) {
+      return { code: 'placement_pending', label: 'Placement record required', action: 'Complete the placement decision record' };
+    }
+    if (!app.placementDecision.principalApprovedAt) {
+      return { code: 'placement_principal_review', label: 'Placement awaiting Principal review', action: 'Record the Principal decision' };
+    }
+    if (!['ready', 'ready_with_bridge'].includes(app.placementDecision.result)) {
+      return { code: 'placement_hold', label: 'Placement does not support approval', action: 'Resolve the placement outcome before admission' };
+    }
   }
   if (applicationTypeFor(app) !== 'transfer') {
     return { code: 'approval_ready', label: 'Approval-ready', action: 'Complete admissions review' };
@@ -297,6 +329,85 @@ function applicationReadiness(app) {
     return { code: 'ready_for_principal_review', label: 'Ready for principal review', action: 'Record principal decision' };
   }
   return { code: 'approval_ready', label: 'Approval-ready', action: 'Approve application when admissions review is complete' };
+}
+
+function parsePlacementDecision(body = {}) {
+  const score = (value, label, maximum) => {
+    if (value === '' || value === null || value === undefined) return { value: null };
+    const parsed = Number(value);
+    if (!Number.isInteger(parsed) || parsed < 0 || parsed > maximum) {
+      return { error: `${label} score must be a whole number from 0 to ${maximum}.` };
+    }
+    return { value: parsed };
+  };
+  const english = score(body.englishScore, 'English', 30);
+  if (english.error) return { ok: false, error: english.error };
+  const math = score(body.mathScore, 'Math', 36);
+  if (math.error) return { ok: false, error: math.error };
+  const science = score(body.scienceScore, 'Science', 24);
+  if (science.error) return { ok: false, error: science.error };
+
+  const assessmentDate = cleanString(body.assessmentDate);
+  const recheckDate = cleanString(body.recheckDate);
+  const result = cleanString(body.result);
+  const data = {
+    assessmentDate,
+    assessor: boundedText(body.assessor, 120),
+    englishScore: english.value,
+    mathScore: math.value,
+    scienceScore: science.value,
+    assistanceNotes: boundedText(body.assistanceNotes, 2000),
+    evidenceReviewed: boundedText(body.evidenceReviewed, 3000),
+    independentLearningNotes: boundedText(body.independentLearningNotes, 2000),
+    result,
+    recommendedGradeLevel: boundedText(body.recommendedGradeLevel, 80),
+    decisionRationale: boundedText(body.decisionRationale, 4000),
+    bridgePlan: boundedText(body.bridgePlan, 4000),
+    firstTermPlan: boundedText(body.firstTermPlan, 4000),
+    firstWeekReviewer: boundedText(body.firstWeekReviewer, 120),
+    recheckDate,
+  };
+
+  if (!isIsoDate(assessmentDate)) return { ok: false, error: 'Assessment date must use YYYY-MM-DD.' };
+  if (!data.assessor) return { ok: false, error: 'Assessor is required.' };
+  if (!data.evidenceReviewed) return { ok: false, error: 'Evidence reviewed is required.' };
+  if (!PLACEMENT_RESULTS.has(result)) return { ok: false, error: 'Invalid placement result.' };
+  if (result !== 'pending_clarification' && [english.value, math.value, science.value].some((value) => value === null)) {
+    return { ok: false, error: 'English, Math, and Science scores are required for a completed academic result.' };
+  }
+  if (!data.recommendedGradeLevel) return { ok: false, error: 'Recommended grade level is required.' };
+  if (!data.decisionRationale) return { ok: false, error: 'Decision rationale is required.' };
+  if (!data.firstTermPlan) return { ok: false, error: 'First-term plan is required.' };
+  if (!data.firstWeekReviewer) return { ok: false, error: 'First-week reviewer is required.' };
+  if (recheckDate && !isIsoDate(recheckDate)) return { ok: false, error: 'Recheck date must use YYYY-MM-DD.' };
+  if (result === 'ready_with_bridge' && !data.bridgePlan) {
+    return { ok: false, error: 'Ready with Bridge requires a named bridge plan.' };
+  }
+  if (result === 'ready_with_bridge' && !recheckDate) {
+    return { ok: false, error: 'Ready with Bridge requires a recheck date.' };
+  }
+
+  return {
+    ok: true,
+    data: {
+      ...data,
+      assessmentDate: new Date(`${assessmentDate}T12:00:00.000Z`),
+      recheckDate: recheckDate ? new Date(`${recheckDate}T12:00:00.000Z`) : null,
+    },
+  };
+}
+
+function placementDecisionEditError(app, enrollmentState = {}) {
+  if (app?.placementDecision?.principalApprovedAt) {
+    return 'A Principal-approved placement decision is locked. Record a reviewed correction instead of overwriting it.';
+  }
+  if (app?.accountsCreated) {
+    return 'Placement decisions cannot be edited after account activation.';
+  }
+  if (enrollmentState.paid || enrollmentState.paidUnlinked) {
+    return 'Placement decisions cannot be edited after payment is recorded.';
+  }
+  return '';
 }
 
 function activationReadinessError(app, enrollmentState) {
@@ -965,7 +1076,7 @@ router.post('/:id/stripe-checkout', authenticate, requireAdmin, async (req, res)
   try {
   const app = await prisma.application.findUnique({
     where: { id: req.params.id },
-    include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE } },
+    include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE }, placementDecision: true },
   });
   if (!app) return res.status(404).json({ error: 'Application not found.' });
   if (app.status !== 'approved') {
@@ -1050,7 +1161,7 @@ router.post('/:id/stripe-checkout', authenticate, requireAdmin, async (req, res)
 router.post('/:id/manual-payment', authenticate, requireAdmin, async (req, res) => {
   const app = await prisma.application.findUnique({
     where: { id: req.params.id },
-    include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE } },
+    include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE }, placementDecision: true },
   });
   if (!app) return res.status(404).json({ error: 'Application not found.' });
   if (app.status !== 'approved') {
@@ -1345,7 +1456,141 @@ router.post('/:id/records-requested', authenticate, requireAdmin, async (req, re
   return res.status(result.status).json({ ok: true, alreadyRequested: result.alreadyRequested });
 });
 
-// PATCH /api/applications/:id  — update status, rejectionReason, or adminNotes
+// PUT /api/applications/:id/placement-decision — save the reviewed academic
+// evidence. Saving is not Principal approval and never grants admission/credit.
+router.put('/:id/placement-decision', authenticate, requireAdmin, async (req, res) => {
+  const app = await prisma.application.findUnique({
+    where: { id: req.params.id },
+    include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE }, placementDecision: true },
+  });
+  if (!app) return res.status(404).json({ error: 'Application not found.' });
+  if (!app.placementRequired) {
+    return res.status(400).json({ error: 'Mark this application as requiring a placement decision first.' });
+  }
+  if (app.status !== 'pending') {
+    return res.status(409).json({ error: 'Placement decisions must be completed while the application is Pending.' });
+  }
+  const enrollmentState = await applicationEnrollmentState(app);
+  const editError = placementDecisionEditError(app, enrollmentState);
+  if (editError) return res.status(409).json({ error: editError });
+
+  const parsed = parsePlacementDecision(req.body);
+  if (!parsed.ok) return res.status(400).json({ error: parsed.error });
+  const actorEmail = req.auth?.email || 'admin';
+  let saved;
+  try {
+    saved = await prisma.$transaction(async (tx) => {
+      let decision;
+      if (app.placementDecision) {
+        const claimed = await tx.placementDecision.updateMany({
+          where: { applicationId: app.id, principalApprovedAt: null },
+          data: parsed.data,
+        });
+        if (claimed.count !== 1) {
+          const conflict = new Error('placement_locked');
+          conflict.code = 'PLACEMENT_LOCKED';
+          throw conflict;
+        }
+        decision = await tx.placementDecision.findUnique({ where: { applicationId: app.id } });
+      } else {
+        decision = await tx.placementDecision.create({
+          data: { applicationId: app.id, ...parsed.data },
+        });
+      }
+      await tx.applicationEvent.create({
+        data: applicationEventData(
+          app.id,
+          'placement_decision_saved',
+          actorEmail,
+          `Placement decision saved: ${decision.result}.`,
+          {
+            result: decision.result,
+            englishScore: decision.englishScore,
+            mathScore: decision.mathScore,
+            scienceScore: decision.scienceScore,
+            recommendedGradeLevel: decision.recommendedGradeLevel,
+            applicationResetToPending: false,
+          },
+        ),
+      });
+      return decision;
+    });
+  } catch (error) {
+    if (error?.code === 'PLACEMENT_LOCKED' || error?.code === 'P2002') {
+      return res.status(409).json({ error: 'The placement record changed or was signed during this edit. Reload before continuing.' });
+    }
+    console.error('[applications] Placement decision save failed:', error.message);
+    return res.status(500).json({ error: 'Placement decision could not be saved. Please try again.' });
+  }
+
+  return res.json({ ok: true, decision: saved, applicationResetToPending: false });
+});
+
+// POST /api/applications/:id/placement-decision/principal-approval — immutable
+// sign-off for the current record. Non-ready results may be signed as an honest
+// outcome, but they still block application approval.
+router.post('/:id/placement-decision/principal-approval', authenticate, requireAdmin, async (req, res) => {
+  const app = await prisma.application.findUnique({
+    where: { id: req.params.id },
+    include: { placementDecision: true },
+  });
+  if (!app) return res.status(404).json({ error: 'Application not found.' });
+  if (!app.placementRequired || !app.placementDecision) {
+    return res.status(400).json({ error: 'Save a placement decision before Principal approval.' });
+  }
+  if (app.status !== 'pending') {
+    return res.status(409).json({ error: 'Principal placement approval must be recorded while the application is Pending.' });
+  }
+  if (!hasConfirmedInterest(app)) {
+    return res.status(400).json({ error: 'Wait for parent email confirmation before Principal review.' });
+  }
+  const authenticatedEmail = String(req.auth?.email || '').trim().toLowerCase();
+  if (!authenticatedEmail || authenticatedEmail !== PRINCIPAL_APPROVER_EMAIL) {
+    return res.status(403).json({ error: 'Only the configured Principal admin account may approve a placement decision.' });
+  }
+  const principalApprover = boundedText(req.body?.principalApprover, 120);
+  if (!principalApprover) return res.status(400).json({ error: 'Principal approver name is required.' });
+  const approvedAt = new Date();
+  const actorEmail = req.auth?.email || 'admin';
+  let outcome;
+  try {
+    outcome = await prisma.$transaction(async (tx) => {
+      const claimed = await tx.placementDecision.updateMany({
+        where: { applicationId: app.id, principalApprovedAt: null },
+        data: { principalApprover, principalApproverEmail: authenticatedEmail, principalApprovedAt: approvedAt },
+      });
+      if (claimed.count === 0) {
+        return {
+          alreadyApproved: true,
+          decision: await tx.placementDecision.findUnique({ where: { applicationId: app.id } }),
+        };
+      }
+      const updated = await tx.placementDecision.findUnique({ where: { applicationId: app.id } });
+      await tx.applicationEvent.create({
+        data: applicationEventData(
+          app.id,
+          'placement_decision_principal_approved',
+          actorEmail,
+          `Principal placement decision recorded: ${updated.result}.`,
+          {
+            result: updated.result,
+            principalApprover,
+            principalApproverEmail: authenticatedEmail,
+            principalApprovedAt: approvedAt.toISOString(),
+          },
+        ),
+      });
+      return { alreadyApproved: false, decision: updated };
+    });
+  } catch (error) {
+    console.error('[applications] Principal placement approval failed:', error.message);
+    return res.status(500).json({ error: 'Principal placement approval could not be recorded. Please try again.' });
+  }
+
+  return res.json({ ok: true, ...outcome });
+});
+
+// PATCH /api/applications/:id  — update status, rejectionReason, notes, or case gates
 router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
   const {
     status,
@@ -1355,6 +1600,7 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
     assignedTo,
     nextAction,
     markContacted,
+    placementRequired,
   } = req.body || {};
   const data = {};
   let currentApplication = null;
@@ -1362,7 +1608,7 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
     if (!currentApplication) {
       currentApplication = await prisma.application.findUnique({
         where: { id: req.params.id },
-        include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE } },
+        include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE }, placementDecision: true },
       });
     }
     return currentApplication;
@@ -1381,6 +1627,23 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
   }
 
   if (adminNotes !== undefined) data.adminNotes = adminNotes;
+
+  if (placementRequired !== undefined) {
+    if (placementRequired !== true) {
+      return res.status(400).json({ error: 'A required placement gate cannot be cleared through the general application editor.' });
+    }
+    const current = await loadCurrentApplication();
+    if (!current) return res.status(404).json({ error: 'Application not found.' });
+    if (current.accountsCreated) return res.status(409).json({ error: 'Placement requirements cannot be added after account activation.' });
+    if (current.status !== 'pending') {
+      return res.status(409).json({ error: 'Reset the application to Pending before adding a placement requirement.' });
+    }
+    const enrollmentState = await applicationEnrollmentState(current);
+    if (enrollmentState.paid || enrollmentState.paidUnlinked) {
+      return res.status(409).json({ error: 'Placement requirements cannot be added after payment is recorded.' });
+    }
+    data.placementRequired = true;
+  }
 
   if (recordsStatus !== undefined) {
     if (!RECORDS_STATUSES.has(recordsStatus)) {
@@ -1455,7 +1718,7 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
 router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
   const app = await prisma.application.findUnique({
     where: { id: req.params.id },
-    include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE } },
+    include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE }, placementDecision: true },
   });
   if (!app) return res.status(404).json({ error: 'Application not found.' });
   if (app.status !== 'approved') return res.status(400).json({ error: 'Application must be approved first.' });
@@ -1583,10 +1846,13 @@ module.exports.confirmPublicApplicationInterest = confirmPublicApplicationIntere
 module.exports.nextBusinessResponseDue = nextBusinessResponseDue;
 module.exports.applicationTypeFor = applicationTypeFor;
 module.exports.transferApprovalError = transferApprovalError;
+module.exports.placementApprovalError = placementApprovalError;
 module.exports.applicationApprovalError = applicationApprovalError;
 module.exports.applicationReadiness = applicationReadiness;
 module.exports.activationReadinessError = activationReadinessError;
 module.exports.transferEvaluationEditError = transferEvaluationEditError;
+module.exports.parsePlacementDecision = parsePlacementDecision;
+module.exports.placementDecisionEditError = placementDecisionEditError;
 module.exports.interestTokenHash = interestTokenHash;
 module.exports.normalizePriorSchools = normalizePriorSchools;
 module.exports.confirmOfficialRecordsRequested = confirmOfficialRecordsRequested;
