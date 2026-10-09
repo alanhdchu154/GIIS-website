@@ -58,12 +58,13 @@ function Field({ label, children, hint }) {
   );
 }
 
-export default function PlacementDecisionEditor({ app, onChanged, showToast }) {
+export default function PlacementDecisionEditor({ app, capability, onChanged, showToast }) {
   const [draft, setDraft] = useState(() => initialDraft(app));
   const [saving, setSaving] = useState('');
   const [principalApprover, setPrincipalApprover] = useState(app.placementDecision?.principalApprover || '');
   const record = app.placementDecision;
   const signed = !!record?.principalApprovedAt;
+  const available = capability?.available === true;
 
   useEffect(() => {
     setDraft(initialDraft(app));
@@ -136,10 +137,12 @@ export default function PlacementDecisionEditor({ app, onChanged, showToast }) {
       <div style={{ border: '1.5px solid #d8deea', borderRadius: 10, padding: '14px 16px', marginBottom: 16, background: '#fbfcff' }}>
         <p style={{ margin: '0 0 5px', fontSize: 12, fontWeight: 800, color: '#26324f' }}>Placement Decision Record</p>
         <p style={{ margin: '0 0 10px', fontSize: 12, color: '#5c6578', lineHeight: 1.5 }}>
-          Use for a candidate whose grade-entry readiness requires documented academic review. Marking this required blocks approval until a signed Ready outcome exists.
+          {available
+            ? 'Use for a candidate whose grade-entry readiness requires documented academic review. Marking this required blocks approval until a signed Ready outcome exists.'
+            : 'Unavailable: configure the Principal signer email and create that exact Principal admin account before requiring placement review.'}
         </p>
-        <button type="button" onClick={markRequired} disabled={!!saving}
-          style={{ padding: '8px 14px', borderRadius: 7, border: 'none', background: '#2b3d6d', color: '#fff', fontWeight: 800, fontSize: 12, cursor: 'pointer' }}>
+        <button type="button" onClick={markRequired} disabled={!!saving || !available}
+          style={{ padding: '8px 14px', borderRadius: 7, border: 'none', background: available ? '#2b3d6d' : '#a9afbc', color: '#fff', fontWeight: 800, fontSize: 12, cursor: available ? 'pointer' : 'not-allowed' }}>
           {saving === 'required' ? 'Saving…' : 'Require placement review'}
         </button>
       </div>
@@ -162,7 +165,13 @@ export default function PlacementDecisionEditor({ app, onChanged, showToast }) {
         )}
       </div>
 
-      <fieldset disabled={signed || !!saving} style={{ border: 0, padding: 0, margin: 0 }}>
+      {!available && !signed && (
+        <p style={{ margin: '0 0 12px', padding: '9px 11px', borderRadius: 7, background: '#fff0d6', color: '#8a4b08', fontSize: 11.5, lineHeight: 1.45 }}>
+          Placement editing and sign-off are paused until the configured Principal admin account is available.
+        </p>
+      )}
+
+      <fieldset disabled={signed || !!saving || !available} style={{ border: 0, padding: 0, margin: 0 }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(145px, 1fr))', gap: 10, marginBottom: 12 }}>
           <Field label="Assessment date"><input type="date" value={draft.assessmentDate} onChange={(event) => setField('assessmentDate', event.target.value)} style={fieldStyle} /></Field>
           <Field label="Assessor"><input value={draft.assessor} onChange={(event) => setField('assessor', event.target.value)} style={fieldStyle} /></Field>
@@ -189,7 +198,7 @@ export default function PlacementDecisionEditor({ app, onChanged, showToast }) {
         </div>
       </fieldset>
 
-      {!signed && (
+      {!signed && available && (
         <div style={{ display: 'flex', gap: 10, alignItems: 'end', marginTop: 14, flexWrap: 'wrap' }}>
           <button type="button" onClick={saveDecision} disabled={!!saving}
             style={{ padding: '9px 15px', borderRadius: 7, border: 'none', background: '#2b3d6d', color: '#fff', fontWeight: 800, fontSize: 12, cursor: 'pointer' }}>

@@ -542,6 +542,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   const [stripeCheckoutPlan, setStripeCheckoutPlan] = useState('guided_monthly');
   const [stripeCheckoutLink, setStripeCheckoutLink] = useState('');
   const [stripeCheckoutEnabled, setStripeCheckoutEnabled] = useState(false);
+  const [placementDecisionCapability, setPlacementDecisionCapability] = useState({ available: false, reason: 'loading' });
   const [manualPaymentReceipt, setManualPaymentReceipt] = useState(null);
   const [manualPaymentDraft, setManualPaymentDraft] = useState({
     planType: 'guided_monthly',
@@ -573,7 +574,10 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
         setWorkflowMode(response.headers.get('X-GIIS-Admissions-Workflow') === 'admissions-v5' ? 'serious' : 'legacy');
         const capabilitiesResponse = await fetch(`${API}/api/applications/capabilities`);
         const capabilities = capabilitiesResponse.ok ? await capabilitiesResponse.json() : {};
-        if (active) setStripeCheckoutEnabled(capabilities.applicationStripeCheckout === true);
+        if (active) {
+          setStripeCheckoutEnabled(capabilities.applicationStripeCheckout === true);
+          setPlacementDecisionCapability(capabilities.placementDecision || { available: false, reason: 'backend_not_ready' });
+        }
       } catch {
         if (active) setWorkflowMode('unavailable');
       }
@@ -1142,6 +1146,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
                         {workflowEnabled && (
                           <PlacementDecisionEditor
                             app={app}
+                            capability={placementDecisionCapability}
                             showToast={showToast}
                             onChanged={load}
                           />

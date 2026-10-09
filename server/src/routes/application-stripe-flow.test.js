@@ -1,5 +1,6 @@
 // Synthetic route integration: no real database, keys, charges, or mail.
 const mockDb = {
+  adminUser: { findUnique: jest.fn() },
   application: { findUnique: jest.fn(), update: jest.fn() },
   applicationEvent: { findFirst: jest.fn(), findMany: jest.fn(), create: jest.fn(), upsert: jest.fn() },
   placementDecision: { create: jest.fn(), findUnique: jest.fn(), updateMany: jest.fn() },
@@ -43,6 +44,7 @@ const adminRequest = { auth: { role: 'admin', email: 'staff@example.invalid' }, 
 const session = { id: 'cs_a', mode: 'subscription', subscription: 'sub_a', status: 'complete', payment_status: 'paid', amount_total: 14900, currency: 'usd', customer: 'cus_a', customer_email: 'shared@example.invalid', metadata: { applicationId: 'app_a', planType: 'guided_monthly', approvalRevision: approved.reviewedAt.toISOString() } };
 beforeEach(() => {
   jest.resetAllMocks();
+  mockDb.adminUser.findUnique.mockResolvedValue({ id: 'principal_admin' });
   mockDb.application.findUnique.mockResolvedValue(approved);
   mockDb.applicationEvent.findFirst.mockResolvedValue(null);
   mockDb.applicationEvent.findMany.mockResolvedValue([]);
@@ -156,6 +158,24 @@ test('non-Principal admins cannot sign a placement decision', async () => {
   });
   expect(response.code).toBe(403);
   expect(mockDb.placementDecision.updateMany).not.toHaveBeenCalled();
+});
+test('placement workflow stays unavailable when the configured Principal account is missing', async () => {
+  mockDb.adminUser.findUnique.mockResolvedValue(null);
+
+  const capabilities = await invoke(applications, '/capabilities', {}, 'get');
+  expect(capabilities.code).toBe(200);
+  expect(capabilities.body.placementDecision).toEqual({
+    available: false,
+    reason: 'principal_admin_missing',
+  });
+
+  const markRequired = await invoke(applications, '/:id', {
+    ...adminRequest,
+    body: { placementRequired: true },
+  }, 'patch');
+  expect(markRequired.code).toBe(503);
+  expect(markRequired.body.code).toBe('principal_admin_missing');
+  expect(mockDb.application.update).not.toHaveBeenCalled();
 });
 test('server controls price, payer, application binding and retry key', async () => {
   expect((await invoke(applications, '/:id/stripe-checkout', adminRequest)).code).toBe(201);

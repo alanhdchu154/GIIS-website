@@ -18,9 +18,7 @@ const prisma = require('../lib/prisma');
 const router = express.Router();
 const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'http://localhost:3000').split(',')[0].trim();
-const PRINCIPAL_APPROVER_EMAIL = String(
-  process.env.PRINCIPAL_APPROVER_EMAIL || 'shiyu.zhang@genesisideas.school'
-).trim().toLowerCase();
+const PRINCIPAL_APPROVER_EMAIL = String(process.env.PRINCIPAL_APPROVER_EMAIL || '').trim().toLowerCase();
 
 const APPLICANT_TYPES = new Set(['new', 'transfer']);
 const COMMUNICATION_LANGUAGES = new Set(['en', 'zh', 'bilingual']);
@@ -59,6 +57,34 @@ const APPLICATION_INCLUDE = {
   placementDecision: true,
   events: { orderBy: { createdAt: 'desc' }, take: 30 },
 };
+
+async function placementDecisionCapability(prismaClient = prisma) {
+  if (!PRINCIPAL_APPROVER_EMAIL) {
+    return { available: false, reason: 'principal_email_not_configured' };
+  }
+  try {
+    const signer = await prismaClient.adminUser.findUnique({
+      where: { email: PRINCIPAL_APPROVER_EMAIL },
+      select: { id: true },
+    });
+    return signer
+      ? { available: true, reason: '' }
+      : { available: false, reason: 'principal_admin_missing' };
+  } catch (error) {
+    console.error('[applications] Placement signer capability check failed:', error.message);
+    return { available: false, reason: 'principal_signer_check_failed' };
+  }
+}
+
+async function requirePlacementDecisionCapability(res) {
+  const capability = await placementDecisionCapability();
+  if (capability.available) return true;
+  res.status(503).json({
+    error: 'Placement decisions are unavailable until the configured Principal admin account is ready.',
+    code: capability.reason,
+  });
+  return false;
+}
 
 const MANUAL_PAYMENT_PLANS = {
   self_paced_monthly: { label: 'Self-Paced Founders', amountCents: 4900, months: 1 },
@@ -1413,7 +1439,8 @@ router.post('/confirm-interest', async (req, res) => {
 
 // Public rollout contract. The frontend uses this to avoid claiming that the
 // confirmation workflow is live while an older backend is still deployed.
-router.get('/capabilities', (_req, res) => {
+router.get('/capabilities', async (_req, res) => {
+  const placementDecision = await placementDecisionCapability();
   res.json({
     applicationIntakeVersion: 'serious-v1',
     transferIntakeVersion: 'transfer-v2',
@@ -1421,6 +1448,7 @@ router.get('/capabilities', (_req, res) => {
     adminWorkflowVersion: 'admissions-v5',
     applicationStripeCheckout: true,
     transferEvaluation: true,
+    placementDecision,
   });
 });
 
@@ -1459,6 +1487,7 @@ router.post('/:id/records-requested', authenticate, requireAdmin, async (req, re
 // PUT /api/applications/:id/placement-decision — save the reviewed academic
 // evidence. Saving is not Principal approval and never grants admission/credit.
 router.put('/:id/placement-decision', authenticate, requireAdmin, async (req, res) => {
+  if (!(await requirePlacementDecisionCapability(res))) return;
   const app = await prisma.application.findUnique({
     where: { id: req.params.id },
     include: { transferEvaluation: { include: TRANSFER_EVALUATION_INCLUDE }, placementDecision: true },
@@ -1530,6 +1559,7 @@ router.put('/:id/placement-decision', authenticate, requireAdmin, async (req, re
 // sign-off for the current record. Non-ready results may be signed as an honest
 // outcome, but they still block application approval.
 router.post('/:id/placement-decision/principal-approval', authenticate, requireAdmin, async (req, res) => {
+  if (!(await requirePlacementDecisionCapability(res))) return;
   const app = await prisma.application.findUnique({
     where: { id: req.params.id },
     include: { placementDecision: true },
@@ -1632,6 +1662,7 @@ router.patch('/:id', authenticate, requireAdmin, async (req, res) => {
     if (placementRequired !== true) {
       return res.status(400).json({ error: 'A required placement gate cannot be cleared through the general application editor.' });
     }
+    if (!(await requirePlacementDecisionCapability(res))) return;
     const current = await loadCurrentApplication();
     if (!current) return res.status(404).json({ error: 'Application not found.' });
     if (current.accountsCreated) return res.status(409).json({ error: 'Placement requirements cannot be added after account activation.' });
@@ -1853,6 +1884,7 @@ module.exports.activationReadinessError = activationReadinessError;
 module.exports.transferEvaluationEditError = transferEvaluationEditError;
 module.exports.parsePlacementDecision = parsePlacementDecision;
 module.exports.placementDecisionEditError = placementDecisionEditError;
+module.exports.placementDecisionCapability = placementDecisionCapability;
 module.exports.interestTokenHash = interestTokenHash;
 module.exports.normalizePriorSchools = normalizePriorSchools;
 module.exports.confirmOfficialRecordsRequested = confirmOfficialRecordsRequested;
