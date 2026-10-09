@@ -91,6 +91,9 @@ async function placementCheckoutConflict(applicationId) {
     where: { applicationId, action: 'stripe_checkout_created' },
     select: { metadata: true },
   });
+  if (events.some((event) => !event.metadata?.checkoutSessionId)) {
+    return 'A prior Checkout record is incomplete. Reconcile it before requiring placement review.';
+  }
   const checkoutIds = [...new Set(events.map((event) => event.metadata?.checkoutSessionId).filter(Boolean))];
   if (!checkoutIds.length) return '';
   if (!stripe) return 'Stripe must be available to verify prior Checkout links before requiring placement review.';
@@ -107,6 +110,9 @@ async function placementCheckoutConflict(applicationId) {
     }
     if (session.status === 'complete') {
       return 'A completed Checkout exists. Reconcile its payment before requiring placement review.';
+    }
+    if (session.status !== 'expired') {
+      return 'A prior Checkout has an unknown state. Reconcile it in Stripe before requiring placement review.';
     }
   }
   return '';

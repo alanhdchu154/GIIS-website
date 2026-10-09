@@ -190,6 +190,22 @@ test('an open prior Checkout blocks adding a placement gate', async () => {
   expect(response.body.error).toMatch(/Expire the existing Stripe Checkout/);
   expect(mockDb.application.updateMany).not.toHaveBeenCalled();
 });
+test('an unknown prior Checkout state fails closed before adding a placement gate', async () => {
+  const pending = { ...approved, status: 'pending', accountsCreated: false, updatedAt: new Date('2026-10-09T12:00:00.000Z') };
+  mockDb.application.findUnique.mockResolvedValue(pending);
+  mockDb.applicationEvent.findMany
+    .mockResolvedValueOnce([])
+    .mockResolvedValueOnce([{ metadata: { checkoutSessionId: 'cs_unknown' } }]);
+  mockStripe.checkout.sessions.retrieve.mockResolvedValue({ id: 'cs_unknown', status: 'unexpected_future_state' });
+
+  const response = await invoke(applications, '/:id', {
+    ...adminRequest,
+    body: { placementRequired: true },
+  }, 'patch');
+  expect(response.code).toBe(409);
+  expect(response.body.error).toMatch(/unknown state/);
+  expect(mockDb.application.updateMany).not.toHaveBeenCalled();
+});
 test('placement and approval updates fail on a concurrent application revision', async () => {
   const updatedAt = new Date('2026-10-09T12:00:00.000Z');
   mockDb.application.findUnique.mockResolvedValue({
