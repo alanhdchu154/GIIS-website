@@ -39,9 +39,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from upload_video import get_creds  # noqa: E402
 from manifest_order import canonical_manifest_rows  # noqa: E402
+from lesson_identity import parse_lesson_title, stable_lesson_identity  # noqa: E402
 
 from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
 
 REPO          = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "tools"))
@@ -52,19 +52,6 @@ from release_lock import (  # noqa: E402
 
 LESSONS_DIR   = REPO / "teaching-videos"
 MANIFEST_PATH = REPO / "public" / "data" / "lessons-manifest.json"
-
-# Title pattern — matches:
-#   "Algebra I — Module 4: Solving One-Step…"
-#   "Algebra I — Module 4 — Solving One-Step…"
-#   "Biology Advanced — 14: Conservation Biology"
-#   "Physics - Mechanics — 14"
-# Accepts —, –, or -- as the course/module separator; flexible whitespace.
-# Do not treat a single hyphen as a separator because course names such as
-# "English I - Writing" legitimately contain one.
-TITLE_RE = re.compile(
-    r"^\s*(?P<course>.+?)\s*(?:[—–]|--)\s*(?:Module\s+)?(?P<num>\d+)(?:\s*(?::|：|[—–]|--)\s*(?P<title>.+?))?\s*$",
-    re.UNICODE,
-)
 
 # ─── helpers ───────────────────────────────────────────────────────────
 
@@ -97,11 +84,7 @@ def list_my_videos(yt):
 
 def parse_title(t: str):
     """Return (course, module_number, module_title) or None if not a lesson."""
-    m = TITLE_RE.match(t)
-    if not m: return None
-    return (m.group("course").strip(),
-            int(m.group("num")),
-            (m.group("title") or "").strip())
+    return parse_lesson_title(t)
 
 def script_module_number(doc: dict) -> int | None:
     for key in ("module_number", "moduleNumber", "module_order", "moduleOrder"):
@@ -170,11 +153,11 @@ def load_course_visibility() -> dict[str, bool]:
 
 def find_lesson_dir(course: str, module_num: int) -> Path | None:
     """Best-effort match folder by reading every script.json's course+module."""
+    target = stable_lesson_identity(course, module_num)
     for f in LESSONS_DIR.glob("*/script.json"):
         try: d = json.loads(f.read_text())
         except Exception: continue
-        if d.get("course") != course: continue
-        if script_module_number(d) == module_num:
+        if lesson_key_from_script(d) == target:
             return f.parent
     return None
 
@@ -205,27 +188,24 @@ def local_module_title(lesson_dir: Path, module_num: int, fallback: str) -> str:
 def slugify(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
 
-def lesson_key_from_script(doc: dict) -> tuple[str, int] | None:
+def lesson_key_from_script(doc: dict) -> str | None:
     course = doc.get("course")
     if not course:
         return None
     module_num = script_module_number(doc)
     if module_num is None:
         return None
-    return (course, module_num)
+    return stable_lesson_identity(course, module_num)
 
 
 def video_exists(yt, video_id: str) -> bool:
-    try:
-        resp = yt.videos().list(id=video_id, part="id").execute()
-    except HttpError:
-        return False
+    resp = yt.videos().list(id=video_id, part="id").execute()
     return bool(resp.get("items"))
 
 
 def active_replacement_plans() -> list[Path]:
     active: list[Path] = []
-    for path in (LESSONS_DIR / "_audit" / "replacements").glob("*/replacement-plan.json"):
+    for path in (LESSONS_DIR / "_audit" / "replacements").glob("*/replacement-plan*.json"):
         try:
             payload = json.loads(path.read_text())
         except Exception:
@@ -252,12 +232,6 @@ def main():
 
     release_lock = None
     if apply:
-        active_plans = active_replacement_plans()
-        if active_plans:
-            print("[HOLD] active staged replacement plan(s) block full channel reconciliation")
-            for path in active_plans:
-                print(f"  {path}")
-            return 2
         try:
             release_lock = acquire_release_lock(
                 REPO,
@@ -265,6 +239,13 @@ def main():
             )
         except ReleaseLockBusy:
             print("[HOLD] shared release lock is active; no reconciliation performed")
+            return 2
+        active_plans = active_replacement_plans()
+        if active_plans:
+            print("[HOLD] active staged replacement plan(s) block full channel reconciliation")
+            for path in active_plans:
+                print(f"  {path}")
+            release_lock.close()
             return 2
 
     try:
@@ -282,8 +263,8 @@ def _sync_channel(apply: bool):
     videos = list(list_my_videos(yt))
     print(f"[sync] {len(videos)} video(s) on channel")
 
-    # Group by (course, module_number) — non-matching titles go to extras.
-    groups: dict[tuple[str, int], list[dict]] = {}
+    # Group by normalized course/module identity; non-matching titles are extras.
+    groups: dict[str, list[dict]] = {}
     extras: list[dict] = []
     for v in videos:
         parsed = parse_title(v["title"])
@@ -291,10 +272,10 @@ def _sync_channel(apply: bool):
             extras.append(v); continue
         course, num, mod_title = parsed
         v["_course"] = course; v["_num"] = num; v["_mod_title"] = mod_title
-        groups.setdefault((course, num), []).append(v)
+        groups.setdefault(stable_lesson_identity(course, num), []).append(v)
 
     # ── Deduplicate ────────────────────────────────────────────────────
-    canonical: dict[tuple[str, int], dict] = {}
+    canonical: dict[str, dict] = {}
     deletions: list[dict] = []
     for key, vids in groups.items():
         if len(vids) == 1:
@@ -308,8 +289,8 @@ def _sync_channel(apply: bool):
     # ── Report ─────────────────────────────────────────────────────────
     print()
     print(f"== Canonical lessons ({len(canonical)}) ==")
-    for (course, num), v in sorted(canonical.items()):
-        print(f"  {course:<12} M{num:>2}  {v['video_id']}  {v['_mod_title']}")
+    for v in sorted(canonical.values(), key=lambda row: (row["_course"].casefold(), row["_num"])):
+        print(f"  {v['_course']:<12} M{v['_num']:>2}  {v['video_id']}  {v['_mod_title']}")
     if deletions:
         print()
         print(f"== Duplicate lesson copies; apply will HOLD ({len(deletions)}) ==")
@@ -335,6 +316,23 @@ def _sync_channel(apply: bool):
         print("[HOLD] manifest, scripts, and YouTube videos were left unchanged")
         return 2
 
+    # Resolve all stale local-video checks before writing anything. Any API,
+    # auth, quota, or transient error propagates and leaves manifest/scripts
+    # untouched rather than being mistaken for a deleted video.
+    stale_scripts: list[tuple[Path, dict, str, bool]] = []
+    for sj in LESSONS_DIR.glob("*/script.json"):
+        try:
+            doc = json.loads(sj.read_text())
+        except Exception:
+            continue
+        youtube = doc.get("youtube") or {}
+        key = lesson_key_from_script(doc)
+        if not youtube or not key or key in canonical:
+            continue
+        old = youtube.get("video_id")
+        exists = bool(old) and video_exists(yt, old)
+        stale_scripts.append((sj, doc, old, exists))
+
     # ── Apply: delete dups ─────────────────────────────────────────────
     # Duplicate deletion is intentionally not implemented here. The staged
     # replacement lifecycle performs exact-ID retirement after website readback.
@@ -343,9 +341,8 @@ def _sync_channel(apply: bool):
     manifest_entries: list[dict] = []
     skipped_without_local_folder: list[dict] = []
     skipped_unpublished_local_course: list[dict] = []
-    for (course, num), v in sorted(
-        canonical.items(), key=lambda item: (item[0][0].casefold(), item[0][1])
-    ):
+    for v in sorted(canonical.values(), key=lambda row: (row["_course"].casefold(), row["_num"])):
+        course, num = v["_course"], v["_num"]
         lesson_dir = find_lesson_dir(course, num)
         if not lesson_dir:
             skipped_without_local_folder.append(v)
@@ -388,7 +385,8 @@ def _sync_channel(apply: bool):
             print(f"  SKIP   {v['video_id']}  {v['title']}")
 
     # ── Apply: reconcile script.json youtube blocks ───────────────────
-    for (course, num), v in canonical.items():
+    for v in canonical.values():
+        course, num = v["_course"], v["_num"]
         ld = find_lesson_dir(course, num)
         if not ld: continue
         sj = ld / "script.json"
@@ -418,19 +416,8 @@ def _sync_channel(apply: bool):
     # If a local lesson has a youtube block but the channel no longer has a
     # canonical lesson video for its (course, module), remove the stale local
     # claim so dashboards do not show failed/deleted uploads as live.
-    for sj in LESSONS_DIR.glob("*/script.json"):
-        try:
-            doc = json.loads(sj.read_text())
-        except Exception:
-            continue
-        youtube = doc.get("youtube") or {}
-        if not youtube:
-            continue
-        key = lesson_key_from_script(doc)
-        if not key or key in canonical:
-            continue
-        old = youtube.get("video_id")
-        if old and video_exists(yt, old):
+    for sj, doc, old, exists in stale_scripts:
+        if exists:
             print(
                 f"[script.json] {sj.parent.name}  kept local youtube video_id={old} "
                 "(video exists; uploads playlist may be lagging)"

@@ -45,7 +45,9 @@ LATEST_FOUNDATION_APPROVAL_PATH = TEACHING_ROOT / "_audit" / "release-gate" / "l
 HANDOFF_DIR = ROOT / "umi" / "handoffs"
 CC_WORKER = ROOT / "tools" / "lesson-video" / "cc_foundation_worker.py"
 CC_DENSITY_REPAIR = ROOT / "tools" / "lesson-video" / "cc_density_repair.py"
-CC_REVIEWER = ROOT / "tools" / "lesson-video" / "cc_independent_video_reviewer.py"
+# Legacy filename retained for existing callers; the wrapper is provider-aware.
+INDEPENDENT_REVIEWER = ROOT / "tools" / "lesson-video" / "cc_independent_video_reviewer.py"
+LOCAL_AUDIO_REVIEW = ROOT / "tools" / "lesson-video" / "local_audio_review.py"
 FOUNDATION_GATE = ROOT / "tools" / "lesson-video" / "foundation_video_gate.py"
 RELEASE_GATE = ROOT / "tools" / "lesson-video" / "lesson_release_gate.py"
 PARENT_TRUST_AUDIT = ROOT / "tools" / "lesson-video" / "parent_trust_video_audit.py"
@@ -54,7 +56,9 @@ SYNC_CHANNEL = ROOT / "tools" / "youtube-upload" / "sync_channel.py"
 EXPERT_LENS_BRIDGE = ROOT / "tools" / "lesson-video" / "expert_lens_packet.js"
 
 sys.path.insert(0, str(ROOT / "tools" / "lesson-video"))
+sys.path.insert(0, str(ROOT / "tools" / "youtube-upload"))
 from audit_lessons import audit_lesson, sha256_review_script  # noqa: E402
+from approval_gate import is_clean_approval_row as upload_approval_row_is_clean  # noqa: E402
 
 
 DEFAULT_TARGET_GRADE = 10
@@ -268,7 +272,14 @@ def url_refs(module: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def fetch_status(url: str, *, timeout: float) -> dict[str, Any]:
-    req = urllib.request.Request(url, headers={"User-Agent": "GIIS-foundation-daily/1.0"})
+    req = urllib.request.Request(url, headers={
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/126.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    })
     try:
         with urllib.request.urlopen(req, timeout=timeout) as res:
             return {"ok": 200 <= res.status < 400, "status": res.status}
@@ -682,7 +693,9 @@ def select_candidates(candidates: list[Candidate], state: dict[str, Any], *, lim
     quarantined_resource_failures = {
         key
         for key, row in (state.get("modules") or {}).items()
-        if row.get("status") == "resource_failed" and int(row.get("attempts") or 1) >= 1
+        if row.get("status") == "resource_failed"
+        and int(row.get("attempts") or 1) >= 1
+        and not is_retryable_resource_failure(row)
     }
     selected_keys = []
     for key, row in sorted((state.get("modules") or {}).items()):
@@ -698,6 +711,13 @@ def select_candidates(candidates: list[Candidate], state: dict[str, Any], *, lim
         if candidate.key not in selected_keys:
             selected_keys.append(candidate.key)
     return [by_key[key] for key in selected_keys[:limit] if key in by_key]
+
+
+def is_retryable_resource_failure(row: dict[str, Any]) -> bool:
+    errors = ((row.get("details") or {}).get("errors") or [])
+    if not errors:
+        return False
+    return all("fetch check failed: open.lib.umn.edu (403)" in str(error) for error in errors)
 
 
 def subject_area(course: dict[str, Any]) -> str:
@@ -1309,16 +1329,16 @@ def generated_render_paths(folder: Path) -> list[Path]:
 
 
 def invalidate_render_cache_if_needed(folder: Path, *, reason: str, force: bool = False) -> bool:
-    """Delete audio/MP4 derivatives when script.json is newer or hash changed."""
+    """Delete audio/MP4 derivatives when source artifacts are newer or hash changed."""
     current_sha = script_sha(folder)
     if not current_sha:
         return False
     marker = render_cache_marker(folder)
     marker_sha = marker.read_text().strip() if marker.exists() else ""
     generated = [p for p in generated_render_paths(folder) if p.exists()]
-    script_path = folder / "script.json"
-    script_mtime = script_path.stat().st_mtime
-    stale_by_mtime = any(p.stat().st_mtime < script_mtime for p in generated)
+    source_paths = [folder / name for name in ("script.json", "build_slides.py", "style_manifest.json")]
+    source_mtime = max((p.stat().st_mtime for p in source_paths if p.exists()), default=0)
+    stale_by_mtime = any(p.stat().st_mtime < source_mtime for p in generated)
     stale_by_marker = bool(marker_sha and marker_sha != current_sha)
     should_clear = force or stale_by_mtime or stale_by_marker
     if not should_clear:
@@ -1487,10 +1507,14 @@ def independent_reviews_current(folder: Path) -> bool:
     current_sha = review_script_sha(folder)
     if not current_sha:
         return True
+    source_paths = [folder / name for name in ("script.json", "build_slides.py", "contact-sheet.jpg")]
+    source_mtime = max((p.stat().st_mtime for p in source_paths if p.exists()), default=0)
     for name in ("_review_independent_pass.json", "_review_source_alignment.json"):
         path = folder / name
         payload = read_json(path, None)
         if isinstance(payload, dict) and payload.get("script_sha") != current_sha:
+            return False
+        if path.exists() and path.stat().st_mtime < source_mtime:
             return False
     return True
 
@@ -1520,6 +1544,53 @@ def find_mp4(folder: Path) -> Path | None:
         return canonical
     mp4s = sorted(folder.glob("*.mp4"))
     return mp4s[0] if len(mp4s) == 1 else None
+
+
+def independent_review_command(args: argparse.Namespace, folder: Path) -> tuple[list[str] | None, str | None]:
+    """Build a reviewer command only when one explicit valid MP4 is selected."""
+    mp4 = find_mp4(folder)
+    if not mp4:
+        return None, "missing_or_ambiguous_review_candidate_mp4"
+    if not valid_mp4(mp4):
+        return None, "invalid_review_candidate_mp4"
+    command = [
+        sys.executable,
+        str(INDEPENDENT_REVIEWER),
+        str(folder.relative_to(ROOT)),
+        "--mp4",
+        mp4.name,
+        "--provider",
+        str(getattr(args, "review_provider", "codex")),
+        "--model",
+        str(args.review_model),
+        "--reasoning-effort",
+        str(getattr(args, "review_reasoning_effort", "high")),
+        "--review-scope",
+        "full-release",
+        "--timeout-seconds",
+        str(args.review_timeout_seconds),
+    ]
+    review_budget = getattr(args, "review_budget_usd", None)
+    if getattr(args, "review_provider", "codex") == "claude" and review_budget is not None:
+        command.extend(["--budget-usd", str(review_budget)])
+    return command, None
+
+
+def run_local_audio_review(folder: Path) -> tuple[int, str | None]:
+    """Create exact-MP4 automated audio evidence before full-release review."""
+    mp4 = find_mp4(folder)
+    if not mp4:
+        return 2, "missing_or_ambiguous_audio_review_candidate_mp4"
+    if not valid_mp4(mp4):
+        return 2, "invalid_audio_review_candidate_mp4"
+    rc = run_checked([
+        sys.executable,
+        str(LOCAL_AUDIO_REVIEW),
+        str(folder.relative_to(ROOT)),
+        "--mp4",
+        mp4.name,
+    ], timeout=2100)
+    return rc, None if rc == 0 else "local_audio_review_blocked"
 
 
 def valid_mp4(path: Path | None) -> bool:
@@ -1558,9 +1629,13 @@ def gate_ready(folder: Path) -> tuple[bool, dict[str, Any], list[str]]:
         reasons.append(f"audit verdict is {audit.get('verdict')}")
     if int(audit.get("quality_score") or 0) < 100:
         reasons.append(f"quality score {audit.get('quality_score')} < 100")
+    protocol_v2 = reviewers.get("protocol_v2") or {}
+    local_audio = reviewers.get("local_audio_v1") or {}
+    candidate_text = protocol_v2.get("candidate_mp4") if protocol_v2.get("valid") else None
+    candidate_mp4 = (ROOT / candidate_text) if candidate_text else find_mp4(folder)
     if not assets.get("has_mp4"):
         reasons.append("missing MP4")
-    elif not valid_mp4(find_mp4(folder)):
+    elif not valid_mp4(candidate_mp4):
         reasons.append("invalid MP4 (ffprobe failed)")
     if not assets.get("has_transcript"):
         reasons.append("missing transcript.txt")
@@ -1570,36 +1645,28 @@ def gate_ready(folder: Path) -> tuple[bool, dict[str, Any], list[str]]:
         reasons.append("missing style_manifest.json")
     if checks.get("count", 0) < 3:
         reasons.append("missing at least 3 learning checks")
-    if not reviewers.get("has_phd_level"):
-        reasons.append("missing PhD/peer reviewer")
-    if not reviewers.get("has_adversarial_student"):
-        reasons.append("missing adversarial-student reviewer")
-    if not reviewers.get("has_citation_checker"):
-        reasons.append("missing citation/source reviewer")
-    if not reviewers.get("has_expert_lens_alignment"):
-        reasons.append("missing Expert Lens alignment reviewer")
-    if not reviewers.get("has_independent_second_pass"):
-        reasons.append("missing independent second-pass reviewer")
-    if not reviewers.get("has_source_alignment"):
-        reasons.append("missing source-alignment reviewer")
+    if protocol_v2.get("valid"):
+        if protocol_v2.get("verdict") != "PASS":
+            reasons.append(f"validated review protocol verdict is {protocol_v2.get('verdict')}")
+        if not local_audio.get("valid"):
+            reasons.append("missing or invalid version-bound local audio review")
+        elif local_audio.get("status") != "PASS":
+            reasons.append(f"local audio review status is {local_audio.get('status')}")
+    elif protocol_v2.get("present"):
+        reasons.append(f"invalid review protocol v2: {', '.join((protocol_v2.get('errors') or [])[:3])}")
+    else:
+        reasons.append("missing version-bound review protocol v2")
     return not reasons, audit, reasons
 
 
 def is_clean_approval_row(row: Any) -> bool:
-    if not isinstance(row, dict):
-        return False
-    required = ("slug", "path", "quality_score", "verdict", "approved_by", "approved_at")
-    if any(not row.get(field) for field in required):
-        return False
-    if row.get("verdict") != "pass":
-        return False
-    try:
-        return int(row.get("quality_score")) >= 100
-    except (TypeError, ValueError):
-        return False
+    return upload_approval_row_is_clean(row)
 
 
 def append_approval(rows: list[dict[str, Any]]) -> None:
+    invalid = [str(row.get("slug") or "<missing-slug>") for row in rows if not is_clean_approval_row(row)]
+    if invalid:
+        raise ValueError(f"refusing structurally invalid approval rows: {invalid}")
     existing = read_json(APPROVAL_PATH, {})
     existing_rows = existing.get("approved_ready_to_upload", existing.get("ready_to_upload", [])) if isinstance(existing, dict) else existing
     merged = {}
@@ -1619,6 +1686,16 @@ def append_approval(rows: list[dict[str, Any]]) -> None:
 
 
 def approval_row(candidate: Candidate, lesson_audit: dict[str, Any]) -> dict[str, Any]:
+    protocol = ((lesson_audit.get("reviewers") or {}).get("protocol_v2") or {})
+    local_audio = ((lesson_audit.get("reviewers") or {}).get("local_audio_v1") or {})
+    candidate_mp4 = Path(str(protocol.get("candidate_mp4") or ""))
+    candidate_sha = ""
+    if candidate_mp4.is_file():
+        digest = hashlib.sha256()
+        with candidate_mp4.open("rb") as handle:
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(chunk)
+        candidate_sha = digest.hexdigest()
     return {
         "slug": candidate.target_slug,
         "path": str(candidate.target_dir.relative_to(ROOT)),
@@ -1629,7 +1706,133 @@ def approval_row(candidate: Candidate, lesson_audit: dict[str, Any]) -> dict[str
         "verdict": lesson_audit.get("verdict"),
         "approved_by": "foundation_daily_orchestrator",
         "approved_at": now_utc(),
+        "review_id": protocol.get("review_id"),
+        "review_schema_version": "giis.lesson-video-review.v2",
+        "review_packet_sha256": protocol.get("packet_sha256"),
+        "candidate_mp4": protocol.get("candidate_mp4"),
+        "candidate_mp4_sha256": candidate_sha,
+        "local_audio_schema_version": "giis.local-audio-review.v1",
+        "local_audio_receipt_sha256": local_audio.get("receipt_sha256"),
+        "local_audio_model_sha256": local_audio.get("model_sha256"),
     }
+
+
+def process_existing_lesson_artifacts(
+    args: argparse.Namespace,
+    candidate: Candidate,
+    state: dict[str, Any],
+    row: dict[str, Any],
+    run_report: dict[str, Any],
+) -> tuple[dict[str, Any] | None, bool]:
+    reconcile_existing_lesson_artifacts(candidate.target_dir, reason="existing lesson preflight")
+    ready, lesson_audit, _reasons = gate_ready(candidate.target_dir)
+    if ready:
+        approved = approval_row(candidate, lesson_audit)
+        update_state_row(state, candidate, status="approved", details={
+            "quality_score": lesson_audit.get("quality_score"),
+            "source": "existing_gate_ready",
+        })
+        print(f"[ready-existing] {candidate.target_slug} score={lesson_audit.get('quality_score')}", flush=True)
+        return approved, True
+
+    if args.no_gate:
+        return None, False
+
+    pre_review_gate_rc = run_foundation_gate(
+        candidate.target_dir,
+        render_mp4=False,
+        timeout=args.gate_timeout_seconds,
+        reason="existing lesson preflight gate",
+    )
+    pre_audit = audit_lesson(candidate.target_dir)
+    ok_for_render, render_blockers = ready_for_render(pre_audit)
+    if not ok_for_render:
+        return None, False
+    if pre_review_gate_rc != 0:
+        details = {
+            "foundation_gate_rc": pre_review_gate_rc,
+            "quality_score": pre_audit.get("quality_score"),
+            "verdict": pre_audit.get("verdict"),
+        }
+        update_state_row(state, candidate, status="gate_failed", details=details)
+        run_report["blocked"].append({**row, "reason": "existing_preflight_gate_failed", **details})
+        return None, True
+
+    render_gate_rc = run_foundation_gate(
+        candidate.target_dir,
+        render_mp4=args.render_mp4,
+        timeout=args.gate_timeout_seconds,
+        reason="existing lesson release-candidate render gate",
+    )
+    pre_audit = audit_lesson(candidate.target_dir)
+    if render_gate_rc != 0:
+        details = {
+            "foundation_gate_rc": render_gate_rc,
+            "quality_score": pre_audit.get("quality_score"),
+            "verdict": pre_audit.get("verdict"),
+        }
+        update_state_row(state, candidate, status="gate_failed", details=details)
+        run_report["blocked"].append({**row, "reason": "existing_render_gate_failed", **details})
+        return None, True
+
+    ok_for_review, pre_review_blockers = ready_for_independent_review(pre_audit)
+    if not ok_for_review and not args.no_independent_review:
+        details = {
+            "ready_reasons": pre_review_blockers,
+            "quality_score": pre_audit.get("quality_score"),
+            "verdict": pre_audit.get("verdict"),
+        }
+        update_state_row(state, candidate, status="gate_failed", details=details)
+        run_report["blocked"].append({**row, "reason": "existing_pre_review_gate_failed", **details})
+        return None, True
+
+    if not args.no_independent_review and not args.no_cc:
+        audio_rc, audio_error = run_local_audio_review(candidate.target_dir)
+        if audio_rc != 0:
+            details = {"returncode": audio_rc, "reason": audio_error}
+            update_state_row(state, candidate, status="review_blocked", details=details)
+            run_report["blocked"].append({**row, "reason": audio_error, **details})
+            return None, True
+        review_cmd, review_cmd_error = independent_review_command(args, candidate.target_dir)
+        if review_cmd is None:
+            details = {"returncode": None, "saw_tool_progress": False, "reason": review_cmd_error}
+            update_state_row(state, candidate, status="review_blocked", details=details)
+            run_report["blocked"].append({**row, "reason": review_cmd_error, **details})
+            return None, True
+        rc, saw_tool = run_stream(review_cmd, timeout=args.review_timeout_seconds + 30)
+        if rc != 0 or not saw_tool:
+            details = {"returncode": rc, "saw_tool_progress": saw_tool}
+            update_state_row(state, candidate, status="review_blocked", details=details)
+            reason = "independent_reviewer_rate_limited" if rc == CC_RATE_LIMIT_RC else "existing_independent_review_blocked"
+            run_report["blocked"].append({**row, "reason": reason, **details})
+            return None, True
+
+    gate_rc = run_foundation_gate(
+        candidate.target_dir,
+        render_mp4=args.render_mp4,
+        timeout=args.gate_timeout_seconds,
+        reason="existing lesson final release gate",
+    )
+    release_rc = run_checked([sys.executable, str(RELEASE_GATE), str(candidate.target_dir), "--check"])
+    ready, lesson_audit, reasons = gate_ready(candidate.target_dir)
+    if gate_rc != 0 or release_rc != 0 or not ready:
+        details = {
+            "foundation_gate_rc": gate_rc,
+            "release_gate_rc": release_rc,
+            "ready_reasons": reasons,
+            "quality_score": lesson_audit.get("quality_score"),
+            "verdict": lesson_audit.get("verdict"),
+        }
+        update_state_row(state, candidate, status="gate_failed", details=details)
+        run_report["blocked"].append({**row, "reason": "existing_gate_failed", **details})
+        return None, True
+
+    approved = approval_row(candidate, lesson_audit)
+    update_state_row(state, candidate, status="approved", details={
+        "quality_score": lesson_audit.get("quality_score"),
+        "source": "existing_rendered_and_reviewed",
+    })
+    return approved, True
 
 
 def update_state_row(state: dict[str, Any], candidate: Candidate, *, status: str, details: dict[str, Any]) -> None:
@@ -1769,35 +1972,30 @@ def orchestrate(args: argparse.Namespace) -> int:
             })
             continue
 
-        if candidate.target_dir.exists() and (candidate.target_dir / "script.json").exists():
-            reconcile_existing_lesson_artifacts(candidate.target_dir, reason="existing lesson preflight")
-            ready, lesson_audit, reasons = gate_ready(candidate.target_dir)
-            if ready:
-                approved = approval_row(candidate, lesson_audit)
-                approved_rows.append(approved)
-                run_report["approved"].append(approved)
-                if not args.dry_run:
-                    update_state_row(state, candidate, status="approved", details={
-                        "quality_score": lesson_audit.get("quality_score"),
-                        "source": "existing_gate_ready",
-                    })
-                print(f"[ready-existing] {candidate.target_slug} score={lesson_audit.get('quality_score')}", flush=True)
-                # Existing gate-ready lessons still consume this run's bounded
-                # module slot; otherwise a catch-up upload can unexpectedly
-                # probe or block a second module after satisfying max-modules.
-                production_count += 1
-                continue
-
-        audit = resource_audit(candidate.module, network=not args.skip_network_check, timeout=args.url_timeout)
-        packet = build_packet(candidate, audit)
         row = {
             "key": candidate.key,
             "target_slug": candidate.target_slug,
             "course": candidate.course.get("name"),
             "module": candidate.module.get("title"),
-            "resource_errors": audit["errors"],
-            "resource_warnings": audit["warnings"],
+            "resource_errors": [],
+            "resource_warnings": [],
         }
+        if not args.dry_run and candidate.target_dir.exists() and (candidate.target_dir / "script.json").exists():
+            approved, consumed_existing = process_existing_lesson_artifacts(args, candidate, state, row, run_report)
+            if approved:
+                approved_rows.append(approved)
+                run_report["approved"].append(approved)
+            if consumed_existing:
+                # Existing lessons still consume this run's bounded module slot;
+                # otherwise a catch-up upload can unexpectedly probe or block a
+                # second module after satisfying max-modules.
+                production_count += 1
+                continue
+
+        audit = resource_audit(candidate.module, network=not args.skip_network_check, timeout=args.url_timeout)
+        packet = build_packet(candidate, audit)
+        row["resource_errors"] = audit["errors"]
+        row["resource_warnings"] = audit["warnings"]
         run_report["selected"].append(row)
         if audit["errors"]:
             print(f"[resource:fail] {candidate.target_slug}: {audit['errors']}", flush=True)
@@ -1933,16 +2131,23 @@ def orchestrate(args: argparse.Namespace) -> int:
             print("[pre-review-gate] skipped by --no-gate")
 
         if not args.no_independent_review and not args.no_cc:
-            rc, saw_tool = run_stream([
-                sys.executable, str(CC_REVIEWER), str(candidate.target_dir.relative_to(ROOT)),
-                "--model", str(args.review_model),
-                "--budget-usd", str(args.review_budget_usd),
-                "--timeout-seconds", str(args.review_timeout_seconds),
-            ], timeout=args.review_timeout_seconds + 30)
+            audio_rc, audio_error = run_local_audio_review(candidate.target_dir)
+            if audio_rc != 0:
+                details = {"returncode": audio_rc, "reason": audio_error}
+                update_state_row(state, candidate, status="review_blocked", details=details)
+                run_report["blocked"].append({**row, "reason": audio_error, **details})
+                continue
+            review_cmd, review_cmd_error = independent_review_command(args, candidate.target_dir)
+            if review_cmd is None:
+                details = {"returncode": None, "saw_tool_progress": False, "reason": review_cmd_error}
+                update_state_row(state, candidate, status="review_blocked", details=details)
+                run_report["blocked"].append({**row, "reason": review_cmd_error, **details})
+                continue
+            rc, saw_tool = run_stream(review_cmd, timeout=args.review_timeout_seconds + 30)
             if rc != 0 or not saw_tool:
                 details = {"returncode": rc, "saw_tool_progress": saw_tool}
                 update_state_row(state, candidate, status="review_blocked", details=details)
-                reason = "cc_rate_limited" if rc == CC_RATE_LIMIT_RC else "independent_review_blocked"
+                reason = "independent_reviewer_rate_limited" if rc == CC_RATE_LIMIT_RC else "independent_review_blocked"
                 run_report["blocked"].append({**row, "reason": reason, **details})
                 if rc == CC_RATE_LIMIT_RC:
                     print("[cc-review:rate-limit] stopping batch before selecting more modules", flush=True)
@@ -2038,9 +2243,19 @@ def main() -> int:
     ap.add_argument("--cc-model", default=os.environ.get("FOUNDATION_CC_MODEL", "sonnet"))
     ap.add_argument("--budget-usd", default="10")
     ap.add_argument("--cc-timeout-seconds", type=int, default=1800)
-    ap.add_argument("--review-model", default=os.environ.get("FOUNDATION_REVIEW_MODEL", "opus"))
-    ap.add_argument("--review-budget-usd", type=float, default=3)
-    ap.add_argument("--review-timeout-seconds", type=int, default=420)
+    ap.add_argument(
+        "--review-provider",
+        choices=("codex", "claude"),
+        default=os.environ.get("FOUNDATION_REVIEW_PROVIDER", "codex"),
+    )
+    ap.add_argument("--review-model", default=os.environ.get("FOUNDATION_REVIEW_MODEL"))
+    ap.add_argument(
+        "--review-reasoning-effort",
+        choices=("low", "medium", "high", "xhigh", "max", "ultra"),
+        default=os.environ.get("FOUNDATION_REVIEW_REASONING", "high"),
+    )
+    ap.add_argument("--review-budget-usd", type=float)
+    ap.add_argument("--review-timeout-seconds", type=int, default=1200)
     ap.add_argument("--density-repair-attempts", type=int, default=1)
     ap.add_argument("--density-repair-budget-usd", type=float, default=3)
     ap.add_argument("--density-repair-timeout-seconds", type=int, default=600)
@@ -2070,6 +2285,10 @@ def main() -> int:
     ap.add_argument("--no-render-mp4", dest="render_mp4", action="store_false", default=True)
     ap.add_argument("--foundation-priority-only", dest="include_other_foundation", action="store_false", default=True)
     args = ap.parse_args()
+    if not args.review_model:
+        args.review_model = "gpt-5.6-sol" if args.review_provider == "codex" else "opus"
+    if args.review_provider == "codex" and args.review_budget_usd is not None:
+        ap.error("--review-budget-usd is Claude-only; Codex reviewer uses the signed-in plan")
     os.chdir(ROOT)
     return orchestrate(args)
 

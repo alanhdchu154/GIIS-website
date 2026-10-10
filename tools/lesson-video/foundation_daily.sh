@@ -2,7 +2,7 @@
 #
 # Daily foundation-video orchestrator.
 #
-# This is the Umi/Codex -> Claude Code -> Codex gate -> gated YouTube pipeline
+# This is the producer -> independent reviewer -> release gate -> YouTube pipeline
 # for new non-AP foundation videos.
 #
 # Manual dry-run:
@@ -13,7 +13,7 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO_ROOT"
 
-LOG="${HOME}/Library/Logs/giis-foundation-video-daily.log"
+LOG="${FOUNDATION_LOG:-${HOME}/Library/Logs/giis-foundation-video-daily.log}"
 mkdir -p "$(dirname "$LOG")"
 
 PYTHON_CANDIDATES=(
@@ -49,12 +49,20 @@ ORCHESTRATOR_ARGS=(
   --cc-model "${FOUNDATION_CC_MODEL:-sonnet}"
   --budget-usd "${FOUNDATION_CC_BUDGET_USD:-10}"
   --cc-timeout-seconds "${FOUNDATION_CC_TIMEOUT_SECONDS:-1800}"
-  --review-model "${FOUNDATION_REVIEW_MODEL:-opus}"
-  --review-budget-usd "${FOUNDATION_REVIEW_BUDGET_USD:-3}"
-  --review-timeout-seconds "${FOUNDATION_REVIEW_TIMEOUT_SECONDS:-420}"
+  --review-provider "${FOUNDATION_REVIEW_PROVIDER:-codex}"
+  --review-reasoning-effort "${FOUNDATION_REVIEW_REASONING:-high}"
+  --review-timeout-seconds "${FOUNDATION_REVIEW_TIMEOUT_SECONDS:-1200}"
   --ignore-upload-quota-estimate
   --auto-commit
 )
+# Model defaults are provider-aware in the orchestrator. Budget is Claude-only;
+# the orchestrator also checks the final provider after CLI overrides.
+if [ -n "${FOUNDATION_REVIEW_MODEL:-}" ]; then
+  ORCHESTRATOR_ARGS+=(--review-model "$FOUNDATION_REVIEW_MODEL")
+fi
+if [ "${FOUNDATION_REVIEW_PROVIDER:-codex}" = "claude" ] && [ -n "${FOUNDATION_REVIEW_BUDGET_USD:-}" ]; then
+  ORCHESTRATOR_ARGS+=(--review-budget-usd "$FOUNDATION_REVIEW_BUDGET_USD")
+fi
 if [ "${FOUNDATION_AUTO_ADVANCE_GRADE:-1}" != "0" ]; then
   ORCHESTRATOR_ARGS+=(--auto-advance-grade)
 fi
@@ -68,7 +76,7 @@ ORCHESTRATOR_ARGS+=("$@")
   echo "  repo:        $REPO_ROOT"
   echo "  python:      $PYTHON"
   echo "  cc model:    ${FOUNDATION_CC_MODEL:-sonnet}"
-  echo "  review model:${FOUNDATION_REVIEW_MODEL:-opus}"
+  echo "  reviewer:    ${FOUNDATION_REVIEW_PROVIDER:-codex} / ${FOUNDATION_REVIEW_MODEL:-provider default}"
   echo
   "$PYTHON" "${ORCHESTRATOR_ARGS[@]}"
 } 2>&1 | tee -a "$LOG"

@@ -194,6 +194,12 @@ def main():
                      "  Wait for the next quota window OR request a quota increase in GCP console.")
         raise
 
+    # Emit the durable external identity before any optional operation. Callers
+    # can reconcile a successful core upload even if a later media step fails.
+    print(f"\nVIDEO_ID={vid}", flush=True)
+    print(f"URL=https://youtu.be/{vid}", flush=True)
+    print(f"STUDIO=https://studio.youtube.com/video/{vid}/edit", flush=True)
+
     if args.thumbnail:
         try: upload_thumbnail(vid, args.thumbnail)
         except HttpError as e:
@@ -208,10 +214,6 @@ def main():
         try: upload_captions(vid, args.captions)
         except HttpError as e:
             print(f"  captions skipped: {e}")
-
-    print(f"\nVIDEO_ID={vid}")
-    print(f"URL=https://youtu.be/{vid}")
-    print(f"STUDIO=https://studio.youtube.com/video/{vid}/edit")
 
 if __name__ == "__main__":
     main()

@@ -94,6 +94,21 @@ def reviewer_gate(audit: dict, *, require_reviewers: bool) -> list[str]:
     if not require_reviewers:
         return []
     reviewers = audit.get("reviewers") or {}
+    protocol_v2 = reviewers.get("protocol_v2") or {}
+    local_audio = reviewers.get("local_audio_v1") or {}
+    audio_reasons = []
+    if any(isinstance(f, dict) and f.get("severity") == "minor" for f in protocol_v2.get("findings") or []):
+        audio_reasons.append("independent review minor findings require revision")
+    if not local_audio.get("valid"):
+        audio_reasons.append("missing or invalid version-bound local audio review")
+    elif local_audio.get("status") != "PASS":
+        audio_reasons.append(f"local audio review status is {local_audio.get('status')}")
+    if protocol_v2.get("valid"):
+        if protocol_v2.get("verdict") != "PASS":
+            return [f"validated review protocol verdict is {protocol_v2.get('verdict')}", *audio_reasons]
+        return audio_reasons
+    if protocol_v2.get("present") and protocol_v2.get("errors"):
+        return [f"invalid review protocol v2: {', '.join(protocol_v2['errors'][:3])}", *audio_reasons]
     missing = []
     if not reviewers.get("has_phd_level"):
         missing.append("missing PhD/peer reviewer")
@@ -107,7 +122,7 @@ def reviewer_gate(audit: dict, *, require_reviewers: bool) -> list[str]:
         missing.append("missing independent second-pass reviewer")
     if not reviewers.get("has_source_alignment"):
         missing.append("missing source-alignment reviewer")
-    return missing
+    return [*missing, *audio_reasons]
 
 
 def lesson_reasons(audit: dict, args: argparse.Namespace) -> tuple[str, list[str]]:
@@ -131,7 +146,10 @@ def lesson_reasons(audit: dict, args: argparse.Namespace) -> tuple[str, list[str
         reasons.append(f"audit verdict is {verdict}")
     if score < args.min_score:
         reasons.append(f"quality score {score} < required {args.min_score}")
-    mp4 = find_mp4(ROOT / audit["path"])
+    reviewers = audit.get("reviewers") or {}
+    protocol_v2 = reviewers.get("protocol_v2") or {}
+    candidate = protocol_v2.get("candidate_mp4") if protocol_v2.get("valid") else None
+    mp4 = (ROOT / candidate) if candidate else find_mp4(ROOT / audit["path"])
     if not assets.get("has_mp4"):
         reasons.append("missing MP4")
     elif not valid_mp4(mp4):

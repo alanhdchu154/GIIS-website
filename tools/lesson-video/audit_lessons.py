@@ -18,10 +18,15 @@ import json
 import math
 import re
 import statistics
+import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from video_review_evidence import RESPONSE_NAME, validate_review_evidence  # noqa: E402
+from local_audio_review import validate_local_audio_review  # noqa: E402
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -75,13 +80,12 @@ EXPERT_LENS_STOPWORDS = {
 EXPECTED_THEME_PREFIXES = [
     (("Algebra", "Geometry", "Calculus", "Pre-Calculus", "Trigonometry",
       "Statistics", "AP Statistics"), "math"),
-    (("Biology", "AP Biology", "Chemistry", "Physics", "Environmental",
-      "Research Methods"), "science"),
+    (("Biology", "AP Biology", "Chemistry", "Physics", "Environmental"), "science"),
     # Psychology before literature so "Media Psychology" resolves to psychology,
     # not to literature via the "Media" prefix.
     (("Psychology", "AP Psychology", "Cognitive", "Counseling", "Behavioral",
       "Human Development"), "psychology"),
-    (("English", "Composition", "Academic Writing", "Business Writing", "Communication", "Media"), "literature"),
+    (("English", "Composition", "Academic Writing", "Business Writing", "Communication", "Media", "Public Speaking"), "literature"),
     (("History", "Government", "Geography", "Economics", "AP Human",
       "World Politics", "World History", "Politics", "Sociology",
       "Social Studies"), "social_studies"),
@@ -195,6 +199,8 @@ def find_lessons(args: argparse.Namespace) -> list[Path]:
 def collect_reviewer_verdicts(folder: Path, script_sha: str | None = None) -> dict[str, Any]:
     verdicts: list[dict[str, str]] = []
     for path in sorted(folder.glob("_review*.json")):
+        if path.name in {"_review_packet_v2.json", RESPONSE_NAME, "_review_execution_v2.json"}:
+            continue
         data = load_json(path)
         if not isinstance(data, dict):
             continue
@@ -207,6 +213,24 @@ def collect_reviewer_verdicts(folder: Path, script_sha: str | None = None) -> di
             "verdict": verdict,
             "script_sha": str(reviewer_script_sha) if reviewer_script_sha else "",
             "script_sha_matches": bool(script_sha and reviewer_script_sha == script_sha),
+        })
+    protocol_v2 = validate_review_evidence(folder)
+    packet = load_json(folder / "_review_packet_v2.json") or {}
+    script_binding = (packet.get("artifacts") or {}).get("script") or {}
+    allowed_review_script_sha = (
+        script_binding.get("sha256") if script_binding.get("hash_mode") == "review_script" else None
+    )
+    local_audio_v1 = validate_local_audio_review(
+        folder,
+        allowed_review_script_sha=allowed_review_script_sha,
+    )
+    if (folder / "_review_packet_v2.json").exists() or (folder / RESPONSE_NAME).exists():
+        verdicts.append({
+            "file": RESPONSE_NAME,
+            "reviewer": str((protocol_v2.get("reviewer") or {}).get("identity") or "review_protocol_v2"),
+            "verdict": str(protocol_v2.get("verdict") or "HOLD").lower(),
+            "script_sha": str(script_sha or ""),
+            "script_sha_matches": bool(protocol_v2.get("valid")),
         })
     counts = Counter(v["verdict"] for v in verdicts)
     stale = [v["file"] for v in verdicts if script_sha and not v["script_sha_matches"]]
@@ -234,6 +258,8 @@ def collect_reviewer_verdicts(folder: Path, script_sha: str | None = None) -> di
         "has_source_alignment": any("source_alignment" in v["file"].lower()
                                     or "source alignment" in v["reviewer"].lower()
                                     for v in verdicts),
+        "protocol_v2": protocol_v2,
+        "local_audio_v1": local_audio_v1,
     }
 
 
@@ -382,6 +408,16 @@ def inspect_source_alignment(folder: Path, script: dict[str, Any]) -> dict[str, 
     }
 
 
+def is_pause_prompt_id(section_id: str) -> bool:
+    lowered = section_id.lower()
+    return (
+        "pause" in lowered
+        and "_silence" not in lowered
+        and "answer" not in lowered
+        and "solution" not in lowered
+    )
+
+
 def inspect_script(folder: Path, script: dict[str, Any]) -> dict[str, Any]:
     sections = script.get("sections") or []
     ids = [str(s.get("id", "")) for s in sections]
@@ -404,10 +440,7 @@ def inspect_script(folder: Path, script: dict[str, Any]) -> dict[str, Any]:
         name: any(hint in id_blob for hint in hints)
         for name, hints in REQUIRED_ID_HINTS.items()
     }
-    pause_count = sum(1 for sid in ids if "pause" in sid.lower()
-                      and not sid.lower().endswith("_silence")
-                      and "answer" not in sid.lower()
-                      and "solution" not in sid.lower())
+    pause_count = sum(1 for sid in ids if is_pause_prompt_id(sid))
     silence_count = sum(1 for sid in ids if sid.lower().endswith("_silence"))
     answer_count = sum(1 for sid in ids if any(token in sid.lower()
                                                for token in ("answer", "solution", "walkthrough")))
@@ -478,8 +511,7 @@ def inspect_assets(folder: Path, section_ids: list[str]) -> dict[str, Any]:
     }
     identical_pause_answer_pairs = []
     for idx, sid in enumerate(section_ids[:-1]):
-        lowered = sid.lower()
-        if "pause" not in lowered or lowered.endswith("_silence"):
+        if not is_pause_prompt_id(sid):
             continue
         nxt = section_ids[idx + 1]
         nlower = nxt.lower()
@@ -636,7 +668,16 @@ def score_lesson(script_info: dict[str, Any], assets: dict[str, Any],
         if source_alignment.get("external_platform_refs"):
             add("major", "Video-visible lesson text directs or labels external learning platforms; use textbook/official sources plus the Learn Portal assignment.")
 
-    if reviewers["count"] == 0:
+    protocol_v2 = reviewers.get("protocol_v2") or {}
+    for finding in protocol_v2.get("findings") or []:
+        if isinstance(finding, dict) and finding.get("severity") == "minor":
+            add("minor", f"Independent review revision {finding.get('id')}: {finding.get('description')}")
+    if protocol_v2.get("valid"):
+        if protocol_v2.get("verdict") != "PASS":
+            add("major", f"Validated review protocol verdict is {protocol_v2.get('verdict')}.")
+    elif protocol_v2.get("present") and (folder_protocol := protocol_v2.get("errors")):
+        add("major", f"Review protocol v2 invalid: {folder_protocol[:3]}")
+    elif reviewers["count"] == 0:
         add("major", "No reviewer JSON found; needs PhD/adversarial/citation audit before auto-release.")
     else:
         if not reviewers["has_phd_level"]:
