@@ -147,7 +147,7 @@ Partnership correction — 2026-09-29 17:08 CDT: Alan rejected footer-only prese
 
 Search visibility update — 2026-09-29 15:46 CDT: Alan's Google account is now a verified owner of https://genesisideas.school/. Single-meta frontend commit5768a327 published from isolated fresh-main worktree; independent source review, build/trust/parent/proxy checks, remote CI and public meta readback passed. Search Console reports data processing, not zero traffic; retain verification meta in future releases. No analytics/DNS/backend change. Evidence: `umi/reports/2026-09-29-search-console-verification.md`.
 
-Last updated: 2026-10-07 America/Chicago
+Last updated: 2026-10-10 America/Chicago
 
 ## Provisional G9 first-student readiness — scoped local repair (2026-10-03)
 
@@ -182,6 +182,23 @@ hardening, not blanket replacement. The temporary G9 priority override is
 closed and the material rotation resumes at cursor 69. The unified workflow's video phase still owns 85 unresolved G9 identities and this material
 release does not certify audiovisual quality. Evidence:
 `umi/reports/material-quality/2026-10-04-g9-recheck/REPORT.md`.
+
+Fresh G9 recheck and Biology M1 replacement, 2026-10-10: all 21 Grade 9
+source identities still have zero hard failures across the current course,
+module-syllabus, assessment/homework, and assessment-polish audits. Study Skills
+keeps only its intentional unpublished warning. The 151 known
+source-to-production field differences remain explicit holds rather than source
+failures: 142 English fields are protected by historical learner state, and
+nine Geography/Intro Business & Economics fields need updater support. Biology
+M1 passed exact audio and independent four-dimension full-release review, then
+completed the protected replacement lifecycle. New YouTube ID `lzyDGiDzAXI` is
+live in manifest commit `69fcf69d`; after manifest, website, and playlist
+verification, the old exact ID `JZln1AXPU24` was retired and the subsequent
+post-retirement browser readback passed. The
+Grade 9 video ledger now has 100 identities: three replaced, two
+sandbox-prepared, and 95 queued, leaving 97 unresolved. The whole-catalog video
+ledger has 627 identities and 620 unresolved. Next bounded video work is World
+History M1, followed by World History M5; keep WIP at two identities or fewer.
 
 ## Material Quality Rotation — Run 025 released with two item holds (2026-10-07)
 

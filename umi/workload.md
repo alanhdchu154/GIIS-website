@@ -1,25 +1,35 @@
 # Active worker handoff
 
-Updated: 2026-10-07 America/Chicago. One focused task only; completed branch
-release history remains in `ROADMAP.md` and accepted reports.
+Updated: 2026-10-10 America/Chicago. One focused task only; completed release
+history remains in `ROADMAP.md` and accepted reports.
 
-## Current coordinator outcome — post-deploy session observation
+## Current coordinator outcome — repair World History M1 exact sections
 
-**Task ID:** `TASK-GIIS-SESSION-OBSERVE-20261007`
+**Task ID:** `TASK-GIIS-WORLD-HISTORY-M1-REPAIR-20261010`
 
-**Owner:** Platform Engineering, coordinated by GIIS Umi.
+**Owner:** Teaching & Academic Operations, coordinated by GIIS Umi.
 
-**State:** revocable sessions are live on Lightsail at exact commit `391f22ba`.
-The protected backup, Prisma validation, PM2 restart and production smoke passed.
-No rollback was required. Exact receipts are local-only under
-`umi/reports/session-deploy-2026-10-07/`; durable state is in `ROADMAP.md`.
+**State:** Biology M1 is terminally replaced. Candidate SHA-256
+`ced6e46c5464fa51408c65fd8a4b9c93188fe48a450a6bc0da24841aec02acc4`
+passed exact audio and independent four-dimension review. New YouTube ID
+`lzyDGiDzAXI` is live at manifest commit `69fcf69d`; after website and playlist
+verification, old ID `JZln1AXPU24` was retired and the subsequent
+post-retirement browser readback passed.
+Grade 9 now has 97 unresolved video identities; the whole catalog has 620.
 
-**Next bounded action:** at the next normal operator login/logout, confirm the
-session becomes ended and cannot reuse protected auth. Do not manufacture a real
-family/admin workflow only to create evidence. Continue to claim logout
-revocation only; password-reset global revocation remains unimplemented.
+**Next bounded action:** repair World History M1 sections 10
+(`221.81–247.73`) and 12 (`272.50–301.99`) so they teach the current
+five-dimension comparison chart, map/timeline evidence, source labels, and
+150-word benefit/cost claim. Sections 1–9 and 11 may be reused only as inputs.
+Render one complete MP4 and rerun the exact-source, audio, audiovisual,
+parent-trust, manifest, upload, live-readback, and old-ID-retirement gates.
 
-**Separate maintenance holds:** triage the five production dependency
-vulnerabilities with package-level evidence before proposing upgrades; explicitly
-set and verify production `NODE_ENV` in a reviewed maintenance window; plan the
-host SSH/KEX upgrade separately. None currently overturns the healthy release.
+**WIP and holds:** keep at most two video identities open. World History M5 is
+next after M1. Do not rewrite historical English I assessment attempts; the
+four exam and eleven quiz item differences remain in the versioning/learner-
+history hold until an attempt-safe plan exists.
+
+**Evidence:** Biology replacement plan and receipts are under
+`teaching-videos/_audit/replacements/biology-module-1-chemistry-of-life-v2/`;
+the sentence-level World History packet is
+`umi/reports/video-quality/2026-10-09/SENTENCE_LEVEL_REPAIR_PACKETS.md`.
