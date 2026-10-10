@@ -80,7 +80,8 @@ For a deterministic still-slide lesson with no animation or transition effects,
 `full` visual coverage requires all of the following, not merely a contact sheet
 or periodic sampling: inspect every full-resolution rendered slide with one
 exact `tools.view_image` wrapper per image; read the entire `slides_concat.txt`
-with a literal `cat`; run an untrimmed exact-MP4 `ffmpeg -f hash -` traversal;
+with a literal `cat`; run an untrimmed exact-MP4 full video decode to the null
+muxer;
 and run whole-file scene-change detection with the exact safe filter
 `select=gt(scene\\,0.10),showinfo` to confirm there are no blank, duplicate,
 missing, or unexpected visual states between mapped sections. If those checks
@@ -106,6 +107,10 @@ are not evidence for this independent pass.
 
 Hard constraints:
 - This is a review pass, not a production pass.
+- The wrapper has already applied the operating policy. Do not read AGENTS.md,
+  SKILL.md, goals.md, ROADMAP.md, workload files, handoff files, storage docs,
+  or any other instruction/policy file. Those paths are outside the immutable
+  evidence roots and reading them invalidates the review execution.
 - Do not edit `script.json`, `build_slides.py`, slides, audio, MP4, transcript,
   playlist, manifest, or YouTube metadata.
 - Do not upload to YouTube.
@@ -129,12 +134,20 @@ Hard constraints:
   Do not use loops, arrays, computed paths, or multiple image calls per wrapper.
 - For full release, inspect the bound contact sheet with its own exact
   `tools.view_image` wrapper as well as every rendered slide.
+- For the complete exact-MP4 visual traversal, use exactly
+  `ffmpeg -v error -i <bound-mp4> -map 0:v:0 -f null -`.
+- For whole-file scene detection, use exactly
+  `ffmpeg -hide_banner -i <bound-mp4> -map 0:v:0 -vf 'select=gt(scene\\,0.10),showinfo' -f null -`.
+  Do not add `-threads`, `-an`, `-hash`, or other options to either command.
+- Read only the bound artifacts needed for coverage. Do not hash or inspect
+  executables, model binaries, ASR derivatives, or other files merely named
+  inside a bound receipt.
 - {delivery_instruction}
 - Do not make AP, College Board, CEEB, accreditation, Common App, F-1, NCAA,
   admissions, college-credit, or outcome-guarantee claims.
 - Do not claim full audiovisual coverage unless the packet has a valid exact-MP4
   local audio PASS and the persisted execution contains the required full slide,
-  concat, exact-MP4 hash traversal, and whole-file scene-detection observations.
+  concat, exact-MP4 full-decode traversal, and whole-file scene-detection observations.
   A summary, contact sheet, or self-attested coverage statement is insufficient.
 - Do not claim human subject expertise or academic-owner approval. A model pass
   is independent review evidence, not human academic certification.
@@ -144,6 +157,9 @@ Hard constraints:
 - Every REPAIR/HOLD finding must name the artifact and a section, timestamp,
   JSON path, or exact text locator. Use PASS only when the declared coverage
   supports it. If evidence is missing, use HOLD rather than guessing.
+- Reference each finding only from the dimension matching `finding.dimension`.
+  If the same underlying issue blocks another dimension, create a separate
+  finding whose `dimension` matches that dimension.
 
 Produce exactly one JSON object with this shape:
 

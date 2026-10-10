@@ -137,7 +137,7 @@ class VideoReviewEvidenceTests(unittest.TestCase):
                   and isinstance(packet["artifacts"].get(name), dict)),
                 f"cat {(self.folder / self.review.LOCAL_AUDIO_RECEIPT_NAME).resolve()}",
                 f"cat {concat}",
-                f"ffmpeg -v error -i {mp4} -map 0:v:0 -f hash -",
+                f"ffmpeg -v error -i {mp4} -map 0:v:0 -f null -",
                 f"ffmpeg -hide_banner -i {mp4} -map 0:v:0 -vf 'select=gt(scene\\,0.10),showinfo' -f null -",
             ]
             events = [{"type": "thread.started", "thread_id": "session-1"}]
@@ -596,6 +596,7 @@ class VideoReviewEvidenceTests(unittest.TestCase):
             "ffmpeg -v error -i lesson.mp4 -map 0:v:0 -f framemd5 -",
             "ffmpeg -hide_banner -i lesson.mp4 -vf 'select=gt(scene\\,0.10),showinfo' -f null -",
             "ffprobe -v error -of json -show_format lesson.mp4",
+            "ffprobe -v error -count_frames -show_entries stream=index,nb_read_frames:format=duration -of json lesson.mp4",
         ]
         blocked = ["ffmpeg -i lesson.mp4 changed.mp4 -f null -", "ffmpeg -i https://example.test/a.mp4 -f null -",
                    "ffprobe -o stolen.txt lesson.mp4", "rg --pre=upload.py topic .", "rg --hostname-bin=upload.py topic .",
@@ -721,6 +722,29 @@ class VideoReviewEvidenceTests(unittest.TestCase):
         result = self.review.validate_review_evidence(self.folder)
         self.assertTrue(result["valid"], result)
 
+    def test_current_codex_exec_wrapper_accepts_bounded_output_pragma(self):
+        wrapper = (
+            '// @exec: {"max_output_tokens": 35000}\n'
+            'const r = await tools.exec_command({"cmd":"cat script.json","max_output_tokens":35000}); '
+            'text(JSON.stringify({output:r.output,exit_code:r.exit_code}));'
+        )
+        self.assertEqual(
+            ["cat script.json"],
+            self.review._codex_exec_wrapper_commands(
+                wrapper, allowed_roots=(self.root.resolve(), self.folder.resolve()),
+            ),
+        )
+        for pragma in (
+            '{"max_output_tokens": 50001}',
+            '{"network": true}',
+            '{"yield_time_ms": "30000"}',
+        ):
+            with self.subTest(pragma=pragma):
+                self.assertIsNone(self.review._codex_exec_wrapper_commands(
+                    f"// @exec: {pragma}\n" + wrapper.split("\n", 1)[1],
+                    allowed_roots=(self.root.resolve(), self.folder.resolve()),
+                ))
+
     def test_current_codex_exec_wrapper_rejects_out_of_scope_workdir(self):
         wrapper = (
             'const r = await tools.exec_command({cmd:"cat script.json",'
@@ -787,7 +811,7 @@ class VideoReviewEvidenceTests(unittest.TestCase):
         complete = {
             "commands": [
                 f"cat {concat.resolve()}",
-                f"ffmpeg -v error -i {mp4} -map 0:v:0 -f hash -",
+                f"ffmpeg -v error -i {mp4} -map 0:v:0 -f null -",
                 f"ffmpeg -hide_banner -i {mp4} -map 0:v:0 -vf 'select=gt(scene\\,0.10),showinfo' -f null -",
             ],
             "images": [str(first.resolve()), str(second.resolve())],
@@ -818,22 +842,22 @@ class VideoReviewEvidenceTests(unittest.TestCase):
         cases = {
             "partial concat": [
                 f"cat {concat} | head -n 1",
-                f"ffmpeg -v error -i {mp4} -map 0:v:0 -f hash -",
+                f"ffmpeg -v error -i {mp4} -map 0:v:0 -f null -",
                 f"ffmpeg -i {mp4} -map 0:v:0 -vf 'select=gt(scene\\,0.10),showinfo' -f null -",
             ],
-            "audio-only hash": [
+            "audio-only traversal": [
                 f"cat {concat}",
-                f"ffmpeg -v error -i {mp4} -map 0:a:0 -f hash -",
+                f"ffmpeg -v error -i {mp4} -map 0:a:0 -f null -",
                 f"ffmpeg -i {mp4} -map 0:v:0 -vf 'select=gt(scene\\,0.10),showinfo' -f null -",
             ],
-            "disabled video hash": [
+            "disabled video traversal": [
                 f"cat {concat}",
-                f"ffmpeg -v error -i {mp4} -map 0:v:0 -vn -f hash -",
+                f"ffmpeg -v error -i {mp4} -map 0:v:0 -vn -f null -",
                 f"ffmpeg -i {mp4} -map 0:v:0 -vf 'select=gt(scene\\,0.10),showinfo' -f null -",
             ],
             "trimmed scene": [
                 f"cat {concat}",
-                f"ffmpeg -v error -i {mp4} -map 0:v:0 -f hash -",
+                f"ffmpeg -v error -i {mp4} -map 0:v:0 -f null -",
                 f"ffmpeg -ss 2 -i {mp4} -map 0:v:0 -vf 'select=gt(scene\\,0.10),showinfo' -f null -",
             ],
         }

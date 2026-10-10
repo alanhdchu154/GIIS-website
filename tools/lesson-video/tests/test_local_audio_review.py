@@ -105,6 +105,28 @@ class LocalAudioReviewTests(unittest.TestCase):
         codes = {item["code"] for item in findings}
         self.assertTrue({"AUDIO_DURATION_MISMATCH", "ASR_EARLY_END", "ASR_ALIGNMENT_ERROR", "LOUDNESS_OUT_OF_RANGE", "CLIPPING_RISK", "LONG_SILENCE"}.issubset(codes))
 
+    def test_asr_segment_end_allows_small_whisper_overshoot_but_holds_large_one(self) -> None:
+        base = {
+            "segments": [{"start": 1.0, "end": 11.5, "text": "alpha beta gamma"}],
+            "text": "alpha beta gamma",
+            "first_speech_seconds": 1.0,
+            "last_speech_seconds": 11.5,
+        }
+        metrics, findings = self.audio.evaluate_metrics(
+            mp4_duration=10.0, wav_duration=10.0, transcription=base,
+            reference_text="alpha beta gamma",
+            audio_metrics={"integrated_lufs": -20.0, "true_peak_dbfs": -2.0}, silences=[],
+        )
+        self.assertEqual(1.5, metrics["asr_end_overshoot_seconds"])
+        self.assertNotIn("ASR_END_OVERSHOOT", {row["code"] for row in findings})
+        _, findings = self.audio.evaluate_metrics(
+            mp4_duration=10.0, wav_duration=10.0,
+            transcription={**base, "last_speech_seconds": 12.1},
+            reference_text="alpha beta gamma",
+            audio_metrics={"integrated_lufs": -20.0, "true_peak_dbfs": -2.0}, silences=[],
+        )
+        self.assertIn("ASR_END_OVERSHOOT", {row["code"] for row in findings})
+
     def test_wer_and_normalization(self) -> None:
         self.assertEqual(["english", "four", "question", "and", "answer"], self.audio.normalize_words("English IV; Q&A"))
         self.assertAlmostEqual(1 / 3, self.audio.word_error_rate(["a", "b", "c"], ["a", "x", "c"]))

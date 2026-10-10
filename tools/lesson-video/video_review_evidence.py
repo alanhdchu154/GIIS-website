@@ -539,7 +539,10 @@ def _read_only_command(command: Any) -> bool:
                 flags = {"-hide_banner", "-nostats", "-vn"}
                 if name == "ffprobe":
                     options |= {"-show_entries", "-of", "-print_format", "-select_streams"}
-                    flags |= {"-show_format", "-show_streams", "-show_frames", "-show_packets"}
+                    flags |= {
+                        "-show_format", "-show_streams", "-show_frames", "-show_packets",
+                        "-count_frames",
+                    }
                     tail = args[1:]
                 else:
                     if args[-3:] not in (["-f", "null", "-"], ["-f", "framemd5", "-"], ["-f", "hash", "-"]):
@@ -702,6 +705,25 @@ def _codex_exec_wrapper_commands(
     """Parse the complete, single-call Codex ``exec`` wrapper grammar."""
     if not isinstance(value, str):
         return None
+    if value.lstrip().startswith("// @exec:"):
+        lines = value.lstrip().splitlines()
+        if len(lines) < 2:
+            return None
+        prefix = "// @exec:"
+        try:
+            pragma = json.loads(lines[0][len(prefix):].strip())
+        except json.JSONDecodeError:
+            return None
+        if not isinstance(pragma, dict) or not set(pragma) <= {"max_output_tokens", "yield_time_ms"}:
+            return None
+        limits = {"max_output_tokens": (1, 50_000), "yield_time_ms": (250, 120_000)}
+        if any(
+            not isinstance(number, int) or isinstance(number, bool)
+            or number < limits[key][0] or number > limits[key][1]
+            for key, number in pragma.items()
+        ):
+            return None
+        value = "\n".join(lines[1:])
     import re
     string = r'"(?:\\.|[^"\\])*"'
     wrapper = re.fullmatch(
@@ -1245,7 +1267,7 @@ def _validate_full_release_observations(
             for index in range(len(args) - 1)
         )
         has_video = "-vn" not in args and maps_video
-        if has_video and not trimmed and args[-3:] in (["-f", "hash", "-"], ["-f", "framemd5", "-"]):
+        if has_video and not trimmed and args[-3:] == ["-f", "null", "-"] and "-vf" not in args and "-filter:v" not in args:
             full_traversal = True
         for flag in ("-vf", "-filter:v"):
             if has_video and not trimmed and flag in args and args[-3:] == ["-f", "null", "-"]:
@@ -1259,7 +1281,7 @@ def _validate_full_release_observations(
     slides = set((folder / "slides").glob("*.png"))
     missing_slides = sorted(str(path) for path in slides if path.resolve() not in viewed)
     if not full_traversal:
-        errors.append("full visual PASS lacks an observed complete exact-MP4 hash traversal")
+        errors.append("full visual PASS lacks an observed complete exact-MP4 full-decode traversal")
     if not scene_detection:
         errors.append("full visual PASS lacks observed whole-file scene detection")
     if not concat_inspected:

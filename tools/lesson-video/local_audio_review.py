@@ -26,6 +26,9 @@ THRESHOLDS = {
     "duration_delta_seconds_max": 0.30,
     "asr_leading_gap_seconds_max": 8.0,
     "asr_trailing_gap_seconds_max": 8.0,
+    # whisper.cpp timestamps are segment-level and may close slightly after
+    # the decoded file boundary even when the recognized words are complete.
+    "asr_end_overshoot_seconds_max": 2.0,
     "word_error_rate_max": 0.20,
     "word_ratio_min": 0.85,
     "word_ratio_max": 1.15,
@@ -274,7 +277,9 @@ def evaluate_metrics(
     wer = word_error_rate(reference_words, observed_words)
     ratio = len(observed_words) / len(reference_words) if reference_words else 0.0
     leading_gap = float(transcription["first_speech_seconds"])
-    trailing_gap = max(0.0, mp4_duration - float(transcription["last_speech_seconds"]))
+    last_speech = float(transcription["last_speech_seconds"])
+    trailing_gap = max(0.0, mp4_duration - last_speech)
+    end_overshoot = max(0.0, last_speech - mp4_duration)
     duration_delta = abs(mp4_duration - wav_duration)
     findings: list[dict[str, Any]] = []
 
@@ -290,6 +295,8 @@ def evaluate_metrics(
         hold("ASR_LATE_START", f"First recognized speech begins at {leading_gap:.3f}s", timestamp=leading_gap)
     if trailing_gap > THRESHOLDS["asr_trailing_gap_seconds_max"]:
         hold("ASR_EARLY_END", f"Recognized speech ends {trailing_gap:.3f}s before media end", timestamp=transcription["last_speech_seconds"])
+    if end_overshoot > THRESHOLDS["asr_end_overshoot_seconds_max"]:
+        hold("ASR_END_OVERSHOOT", f"ASR segment end extends {end_overshoot:.3f}s beyond media end", timestamp=mp4_duration)
     if wer > THRESHOLDS["word_error_rate_max"]:
         hold("ASR_ALIGNMENT_ERROR", f"Normalized word error rate {wer:.4f} exceeds threshold")
     if not THRESHOLDS["word_ratio_min"] <= ratio <= THRESHOLDS["word_ratio_max"]:
@@ -316,6 +323,7 @@ def evaluate_metrics(
         "first_speech_seconds": round(leading_gap, 3),
         "last_speech_seconds": round(float(transcription["last_speech_seconds"]), 3),
         "trailing_gap_seconds": round(trailing_gap, 3),
+        "asr_end_overshoot_seconds": round(end_overshoot, 3),
         "reference_word_count": len(reference_words),
         "observed_word_count": len(observed_words),
         "word_error_rate": round(wer, 6),
@@ -393,6 +401,7 @@ def validate_analysis(payload: dict[str, Any], bindings: dict[str, Any], errors:
     numeric = {
         "mp4_duration_seconds", "wav_duration_seconds", "duration_delta_seconds",
         "asr_segment_count", "first_speech_seconds", "last_speech_seconds", "trailing_gap_seconds",
+        "asr_end_overshoot_seconds",
         "reference_word_count", "observed_word_count", "word_error_rate", "word_ratio",
         "integrated_lufs", "true_peak_dbfs",
     }
@@ -423,8 +432,6 @@ def validate_analysis(payload: dict[str, Any], bindings: dict[str, Any], errors:
         transcription = parse_whisper_payload(json.loads(bound_text("whisper_json")))
         if normalize_words(bound_text("asr_transcript")) != normalize_words(transcription["text"]):
             errors.append("local audio ASR text and JSON disagree")
-        if transcription["last_speech_seconds"] > duration + THRESHOLDS["duration_delta_seconds_max"]:
-            errors.append("local audio ASR extends beyond media duration")
         expected, findings = evaluate_metrics(
             mp4_duration=duration, wav_duration=wav["duration_seconds"], transcription=transcription,
             reference_text=bound_text("reference_transcript"),
