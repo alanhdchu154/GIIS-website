@@ -147,7 +147,7 @@ Partnership correction — 2026-09-29 17:08 CDT: Alan rejected footer-only prese
 
 Search visibility update — 2026-09-29 15:46 CDT: Alan's Google account is now a verified owner of https://genesisideas.school/. Single-meta frontend commit5768a327 published from isolated fresh-main worktree; independent source review, build/trust/parent/proxy checks, remote CI and public meta readback passed. Search Console reports data processing, not zero traffic; retain verification meta in future releases. No analytics/DNS/backend change. Evidence: `umi/reports/2026-09-29-search-console-verification.md`.
 
-Last updated: 2026-10-10 America/Chicago
+Last updated: 2026-10-11 America/Chicago
 
 ## Provisional G9 first-student readiness — scoped local repair (2026-10-03)
 
@@ -199,6 +199,21 @@ Grade 9 video ledger now has 100 identities: three replaced, two
 sandbox-prepared, and 95 queued, leaving 97 unresolved. The whole-catalog video
 ledger has 627 identities and 620 unresolved. Next bounded video work is World
 History M1, followed by World History M5; keep WIP at two identities or fewer.
+
+World History M1 terminal replacement, 2026-10-11: the assigned OpenStax route
+was corrected from the unrelated Chapter 1 introduction to Chapter 2, with
+sections 2.1 and 2.3 bound to the migration and Neolithic claims. The lesson
+script, learning checks, slides, narration and source packet were rebuilt; the
+exact MP4 passed automated audio review, complete deterministic visual
+traversal, independent four-dimension full-release review and parent-trust
+gates. New YouTube ID `YDAycaXzyiU` is live in manifest commit `68452890`.
+Manifest, live website, browser and playlist readbacks passed, then old exact
+ID `nt2EQM89Hms` was retired; the post-retirement browser readback also passed.
+The Grade 9 video ledger now has
+100 identities: four replaced, two sandbox-prepared and 94 queued, leaving 96
+unresolved. The whole-catalog ledger has 627 identities and 619 unresolved.
+Next bounded video work is World History M5; the normal material rotation
+remains at cursor 81 and video inspection remains at cursor 500.
 
 ## Material Quality Rotation — Run 025 released with two item holds (2026-10-07)
 
