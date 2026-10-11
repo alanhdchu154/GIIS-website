@@ -215,6 +215,22 @@ unresolved. The whole-catalog ledger has 627 identities and 619 unresolved.
 Next bounded video work is World History M5; the normal material rotation
 remains at cursor 81 and video inspection remains at cursor 500.
 
+World History M5 bounded repair, 2026-10-11: OpenStax §10.1 now anchors the
+decline analysis, with §§6.4–6.5 retained for the Republic-to-principate
+transition. The source corrects the 410 sack versus 476 deposition, tetrarchy,
+causal factors, assignment and quiz wording. Source commit `d9f60397` is on
+`origin/main`; a fresh production preflight found zero learner state, and the
+update-only reading and quiz transactions completed with private rollback
+snapshots and readback PASS. Exact candidate
+`dd13de00d0e500f86290b1825cc907e1a2bcf79f7c9134df441cbadafa4f6dfc`
+has automated audio PASS and all 11 expected scene transitions across 12
+slides. The protected replacement remains held because two sandbox-bound
+review runs returned substantive PASS but failed the execution-evidence
+validator on unsafe or unverifiable shell wrappers. No upload, manifest change,
+playlist mutation or old-ID retirement occurred; `9H5aynPKFZc` remains live.
+Grade 9 therefore still has 96 unresolved video identities and the whole
+catalog still has 619. Material cursor 81 and video cursor 500 did not advance.
+
 ## Material Quality Rotation — Run 025 released with two item holds (2026-10-07)
 
 Counseling & Mental Health, Digital Media & Society and Advanced Economics passed
