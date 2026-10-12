@@ -21,7 +21,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Write a 1-page reflection: describe one organization you belong to (school, sports team, club). Identify at least one behavior or pattern you notice at the individual, group, and organizational level. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Introduction to Organizational Behavior module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Analyze this fictional organization: Riverbend School's service club has one faculty adviser, two student coordinators, and 18 volunteers. One coordinator prepares every agenda, small friend groups choose tasks together, attendance fell after the school moved meetings to Friday afternoons, and club rules require all spending decisions to be approved by the adviser. In one page, identify and explain one pattern at the individual, group, and organizational level. Do not name real individuals or disclose confidential information. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Introduction to Organizational Behavior module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 2.5
     },
     {
@@ -101,7 +101,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Think of a group project you have participated in. Write a journal entry tracing the group through Tuckman's five stages. Identify which stage was most difficult and explain what the group could have done differently. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Group Dynamics & Teamwork module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Use this fictional team scenario: four students meet politely and wait for direction; two then argue about the topic and workload; the team agrees on roles, deadlines, and a decision rule; members complete coordinated research and peer review; after presenting, they document lessons and close the project. Trace the events through Tuckman's five stages, identify the most difficult stage, and explain two actions that could have improved the team's process. Do not name classmates or disclose private conflicts. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: notes, examples, evidence, calculations, sources, or analysis from the Group Dynamics & Teamwork module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
       "estimatedHrs": 3
     },
     {
@@ -231,11 +231,16 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
-      "question": "According to Herzberg's Two-Factor Theory, which of the following is a 'motivator' (not just a hygiene factor)?",
-      "options": null,
-      "answer": "Recognition and achievement",
-      "explanation": "The correct answer is: Recognition and achievement.",
+      "type": "mc",
+      "question": "According to Herzberg's Two-Factor Theory, which option is a motivator rather than a hygiene factor?",
+      "options": [
+        "Salary administration",
+        "Working conditions",
+        "Recognition for achievement",
+        "Company policy"
+      ],
+      "answer": "Recognition for achievement",
+      "explanation": "Achievement and recognition are motivators; policy, pay administration, and working conditions are hygiene factors.",
       "points": 1
     },
     {
@@ -316,21 +321,31 @@
     {
       "examType": "midterm",
       "order": 13,
-      "type": "short",
-      "question": "Explain the difference between internal and external attribution. Give one workplace example of each, and describe one error people commonly make when using attribution.",
-      "options": null,
-      "answer": "Internal attribution assigns behavior to personal traits (e.g., 'She succeeded because she is talented'). External attribution assigns behavior to situational factors (e.g., 'He failed because the project requirements were unclear'). The fundamental attribution error is the tendency to overestimate internal causes and underestimate situational ones when explaining others' behavior.",
-      "explanation": "A complete answer defines both attribution types with clear workplace examples and correctly names (and briefly explains) at least one common attribution error such as the fundamental attribution error or self-serving bias.",
+      "type": "mc",
+      "question": "A manager says an employee missed a deadline because the employee is careless, while ignoring that the requirements changed twice. This best illustrates:",
+      "options": [
+        "The fundamental attribution error",
+        "Job enlargement",
+        "Equity theory",
+        "Social loafing"
+      ],
+      "answer": "The fundamental attribution error",
+      "explanation": "The manager overemphasizes a personal cause and underestimates a strong situational cause.",
       "points": 2
     },
     {
       "examType": "midterm",
       "order": 14,
-      "type": "short",
-      "question": "Describe Expectancy Theory. Name its three components and explain how a manager could use this theory to improve employee motivation.",
-      "options": null,
-      "answer": "Expectancy Theory (Vroom) states motivation = Expectancy × Instrumentality × Valence. Expectancy: belief that effort leads to performance. Instrumentality: belief that performance leads to a reward. Valence: value the employee places on the reward. A manager can improve motivation by ensuring employees have the skills/training to perform (expectancy), creating clear links between performance and rewards (instrumentality), and offering rewards employees actually value (valence).",
-      "explanation": "A complete answer correctly names and explains all three components and provides practical, specific managerial actions tied to each component.",
+      "type": "mc",
+      "question": "Under Expectancy Theory, motivation is most likely to be weak when an employee values the reward but believes strong performance will not lead to it. Which component is low?",
+      "options": [
+        "Expectancy",
+        "Instrumentality",
+        "Valence",
+        "Task identity"
+      ],
+      "answer": "Instrumentality",
+      "explanation": "Instrumentality is the belief that performance will lead to a particular outcome or reward.",
       "points": 2
     },
     {
@@ -426,11 +441,16 @@
     {
       "examType": "final",
       "order": 6,
-      "type": "fill",
+      "type": "mc",
       "question": "Which of French and Raven's bases of power derives from expertise and specialized knowledge?",
-      "options": null,
+      "options": [
+        "Coercive power",
+        "Legitimate power",
+        "Expert power",
+        "Reward power"
+      ],
       "answer": "Expert power",
-      "explanation": "The correct answer is: Expert power.",
+      "explanation": "Expert power comes from valued knowledge, skill, or expertise; it differs from legitimate power based on a formal role and reward or coercive power.",
       "points": 1
     },
     {
@@ -616,21 +636,31 @@
     {
       "examType": "final",
       "order": 19,
-      "type": "short",
-      "question": "Describe Kotter's 8-Step Change Model. Choose any four steps and explain specifically what a school principal would do at each of those steps when introducing a new all-digital grading system.",
-      "options": null,
-      "answer": "Kotter's 8 steps: (1) Create urgency, (2) Build guiding coalition, (3) Develop vision, (4) Communicate the vision, (5) Empower broad-based action, (6) Generate short-term wins, (7) Sustain acceleration, (8) Institute change. Example application for a school: Step 1 — the principal shares data showing grading errors and time wasted on paper. Step 3 — a clear vision is articulated: 'All grades accessible to students and parents in real time.' Step 5 — IT training is provided to remove barriers for less tech-confident teachers. Step 6 — the first department to go fully digital is publicly recognized.",
-      "explanation": "A complete answer names all 8 steps (or at least the 4 chosen) and provides specific, realistic actions a school principal would take — not generic descriptions.",
+      "type": "mc",
+      "question": "A principal introducing a digital grading system first shares evidence of grading delays, then recruits respected teachers to lead the rollout. Which two Kotter steps are shown?",
+      "options": [
+        "Create urgency and build a guiding coalition",
+        "Anchor change and declare victory",
+        "Remove barriers and institute change",
+        "Generate wins and sustain acceleration"
+      ],
+      "answer": "Create urgency and build a guiding coalition",
+      "explanation": "The evidence creates urgency, and the respected teacher group forms a guiding coalition.",
       "points": 2
     },
     {
       "examType": "final",
       "order": 20,
-      "type": "short",
-      "question": "Compare transformational and transactional leadership. Give a specific example of each style in action, and explain which style you think would be more effective for managing a creative team working on a long-term innovation project. Justify your answer.",
-      "options": null,
-      "answer": "Transformational leadership: inspires followers through vision, intellectual stimulation, and individualized consideration (e.g., a CEO who rallies the team around a mission to make education accessible globally). Transactional leadership: motivates through contingent rewards and management by exception (e.g., a supervisor who promises bonuses for hitting weekly quotas and corrects employees who miss targets). For a creative innovation team, transformational leadership is typically more effective because intrinsic motivation, psychological safety, and purpose-driven work drive creativity better than external rewards alone.",
-      "explanation": "A complete answer correctly defines both styles, provides distinct and appropriate examples, and gives a reasoned, evidence-linked justification for the chosen style in the innovation context.",
+      "type": "mc",
+      "question": "A creative team understands its long-term mission but repeatedly misses short-term milestones. Which response best uses both transformational and transactional leadership?",
+      "options": [
+        "Reconnect the work to the shared vision, invite new approaches, and agree on clear milestone feedback and rewards",
+        "Repeat the vision but avoid milestones because measurement always harms creativity",
+        "Set penalties for every missed milestone and stop discussing purpose",
+        "Let the team work without goals, feedback, or role clarity"
+      ],
+      "answer": "Reconnect the work to the shared vision, invite new approaches, and agree on clear milestone feedback and rewards",
+      "explanation": "The response combines transformational vision and intellectual stimulation with transactional clarity about near-term performance and rewards.",
       "points": 2
     }
   ],
@@ -666,26 +696,30 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "Choose the best answer: Organizational behavior (OB) is primarily concerned with:",
+      "question": "A team member's motivation is an example of which OB level of analysis?",
       "options": [
-        "Marketing strategies for growing a business",
-        "How people and groups behave in organizations",
-        "Financial accounting and budgeting",
-        "Legal compliance in the workplace"
+        "Individual",
+        "Group",
+        "Organizational",
+        "Market"
       ],
-      "answer": "How people and groups behave in organizations",
-      "explanation": "OB studies individual, group, and organizational factors that influence behavior - with the goal of improving organizational effectiveness and employee well-being.",
+      "answer": "Individual",
+      "explanation": "Motivation is a person-level process, even though group and organizational conditions can influence it.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Short response: Define or explain: Organizational culture and structure are best analyzed at which ob level.",
-      "options": null,
+      "question": "Organizational culture and formal structure are primarily analyzed at which OB level?",
+      "options": [
+        "Individual",
+        "Group",
+        "Organizational",
+        "Interpersonal"
+      ],
       "answer": "Organizational",
-      "explanation": "A correct response identifies \"Organizational\" and connects it to the module context.",
-      "points": 1,
-      "type": "fill"
+      "explanation": "Culture and formal structure are organization-level characteristics because they shape patterns and rules across the whole organization, not just one person or team.",
+      "points": 1
     },
     {
       "moduleOrder": 2,
@@ -732,15 +766,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "Choose the best answer: What does the 'O' in the Big Five OCEAN model stand for?",
+      "question": "Why should managers avoid using a personality test as the sole basis for a hiring decision?",
       "options": [
-        "Optimism",
-        "Openness to Experience",
-        "Objectivity",
-        "Orderliness"
+        "No personality traits relate to work behavior",
+        "A single test has limits and should be combined with job-relevant evidence",
+        "All applicants receive identical scores",
+        "Personality can never be measured"
       ],
-      "answer": "Openness to Experience",
-      "explanation": "OCEAN: Openness to Experience, Conscientiousness, Extraversion, Agreeableness, Neuroticism. The choice fits the prompt because it applies the central rule or concept from Individual Differences & Personality.",
+      "answer": "A single test has limits and should be combined with job-relevant evidence",
+      "explanation": "Selection decisions should use validated, job-related evidence and should not overinterpret one assessment.",
       "points": 1
     },
     {
@@ -872,29 +906,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "Choose the best answer: The Job Characteristics Model was developed by:",
+      "question": "In the Job Characteristics Model, task identity means:",
       "options": [
-        "Maslow and Herzberg",
-        "Hackman and Oldham",
-        "Tuckman and Vroom",
-        "French and Raven"
+        "Completing a whole, identifiable piece of work",
+        "Receiving a larger salary",
+        "Using many unrelated reporting lines",
+        "Working without feedback"
       ],
-      "answer": "Hackman and Oldham",
-      "explanation": "Richard Hackman and Greg Oldham developed the Job Characteristics Model in the 1970s, identifying five core job dimensions that produce three critical psychological states.",
+      "answer": "Completing a whole, identifiable piece of work",
+      "explanation": "Task identity is the degree to which a job involves completing a whole and identifiable piece of work.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Choose the best answer: Which core job dimension refers to the degree to which a job requires a variety of different skills and activities?",
+      "question": "Which redesign most directly increases feedback from the job itself?",
       "options": [
-        "Task identity",
-        "Skill variety",
-        "Autonomy",
-        "Feedback"
+        "Give workers immediate information about the quality of their output",
+        "Remove all performance information",
+        "Divide each task into smaller invisible fragments",
+        "Add an unrelated approval layer"
       ],
-      "answer": "Skill variety",
-      "explanation": "Skill variety is the extent to which a job requires diverse skills and talents - a monotonous, repetitive job has low skill variety and produces low experienced meaningfulness.",
+      "answer": "Give workers immediate information about the quality of their output",
+      "explanation": "Feedback helps workers understand the effectiveness of their performance; immediate output information is therefore a direct job-design source of feedback.",
       "points": 1
     },
     {
@@ -942,15 +976,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Choose the best answer: In which stage of Tuckman's model do team members get to know each other and roles are still unclear?",
+      "question": "A team that has stable roles and works efficiently toward its goal is most likely in which Tuckman stage?",
       "options": [
+        "Forming",
         "Storming",
         "Norming",
-        "Forming",
         "Performing"
       ],
-      "answer": "Forming",
-      "explanation": "In the Forming stage, team members are polite and tentative, trying to understand the group's purpose, structure, and leadership - conflict is minimal because people are still getting acquainted.",
+      "answer": "Performing",
+      "explanation": "In the performing stage, the team is coordinated and focused on effective task completion.",
       "points": 1
     },
     {
@@ -984,15 +1018,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "Choose the best answer: Transactional leadership primarily motivates through:",
+      "question": "Transformational leaders most directly motivate followers by:",
       "options": [
-        "Inspiring followers with a compelling vision",
-        "Contingent rewards and corrective action",
-        "Empowering followers to lead themselves",
-        "Building deep personal relationships with each follower"
+        "Connecting work to a shared vision and encouraging development",
+        "Using only corrective punishment",
+        "Avoiding all communication about purpose",
+        "Setting no goals or expectations"
       ],
-      "answer": "Contingent rewards and corrective action",
-      "explanation": "Transactional leaders use exchange relationships - rewarding good performance and correcting (or punishing) poor performance - effective for routine, structured tasks.",
+      "answer": "Connecting work to a shared vision and encouraging development",
+      "explanation": "Transformational leadership emphasizes a shared vision, intellectual stimulation, and individualized consideration rather than relying only on contingent rewards.",
       "points": 1
     },
     {
@@ -1040,15 +1074,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "Choose the best answer: Formal communication in an organization refers to:",
+      "question": "Which message is an example of upward communication?",
       "options": [
-        "Communication that follows officially sanctioned channels and reporting lines",
-        "Messages sent via email between friends at work",
-        "Rumors and gossip circulating through the office",
-        "Face-to-face communication only"
+        "An employee reports a process problem to a manager",
+        "A manager assigns a task to an employee",
+        "Two peers coordinate a shared deadline",
+        "A company publishes an advertisement"
       ],
-      "answer": "Communication that follows officially sanctioned channels and reporting lines",
-      "explanation": "Formal communication travels through prescribed organizational channels - upward (employee to supervisor), downward (management directives), and horizontal (peers in different departments).",
+      "answer": "An employee reports a process problem to a manager",
+      "explanation": "Upward communication moves from lower organizational levels to higher ones.",
       "points": 1
     }
   ],
