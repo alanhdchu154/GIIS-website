@@ -88,6 +88,12 @@ missing, or unexpected visual states between mapped sections. If those checks
 cover every source slide, every section, and the entire decoded timeline, they
 may be declared `full`. If the lesson has animation, transitions, or any
 unmapped visual state, use HOLD because sampled evidence remains `sampled`.
+
+Do not run `rg`, `grep`, or any supplementary search against
+`slides_concat.txt`. The required literal `cat` is the complete concat read for
+the execution record even if the displayed output is visually truncated. Do
+not compensate with regex probes, constructed quoting, or speculative shell
+commands; one unsafe or unparsable command invalidates the execution receipt.
 """
     delivery_instruction = (
         f"Return exactly one JSON object matching the required shape. Do not write any files; "
