@@ -147,7 +147,7 @@ Partnership correction — 2026-09-29 17:08 CDT: Alan rejected footer-only prese
 
 Search visibility update — 2026-09-29 15:46 CDT: Alan's Google account is now a verified owner of https://genesisideas.school/. Single-meta frontend commit5768a327 published from isolated fresh-main worktree; independent source review, build/trust/parent/proxy checks, remote CI and public meta readback passed. Search Console reports data processing, not zero traffic; retain verification meta in future releases. No analytics/DNS/backend change. Evidence: `umi/reports/2026-09-29-search-console-verification.md`.
 
-Last updated: 2026-10-11 America/Chicago
+Last updated: 2026-10-12 America/Chicago
 
 ## Provisional G9 first-student readiness — scoped local repair (2026-10-03)
 
@@ -215,21 +215,21 @@ unresolved. The whole-catalog ledger has 627 identities and 619 unresolved.
 Next bounded video work is World History M5; the normal material rotation
 remains at cursor 81 and video inspection remains at cursor 500.
 
-World History M5 bounded repair, 2026-10-11: OpenStax §10.1 now anchors the
-decline analysis, with §§6.4–6.5 retained for the Republic-to-principate
-transition. The source corrects the 410 sack versus 476 deposition, tetrarchy,
-causal factors, assignment and quiz wording. Source commit `d9f60397` is on
-`origin/main`; a fresh production preflight found zero learner state, and the
-update-only reading and quiz transactions completed with private rollback
-snapshots and readback PASS. Exact candidate
+World History M5 terminal replacement, 2026-10-12: OpenStax §10.1 anchors
+the decline analysis, with §§6.4–6.5 retained for the Republic-to-principate
+transition. The corrected source, assignment and quiz remain live from
+`d9f60397`. Exact candidate
 `dd13de00d0e500f86290b1825cc907e1a2bcf79f7c9134df441cbadafa4f6dfc`
-has automated audio PASS and all 11 expected scene transitions across 12
-slides. The protected replacement remains held because two sandbox-bound
-review runs returned substantive PASS but failed the execution-evidence
-validator on unsafe or unverifiable shell wrappers. No upload, manifest change,
-playlist mutation or old-ID retirement occurred; `9H5aynPKFZc` remains live.
-Grade 9 therefore still has 96 unresolved video identities and the whole
-catalog still has 619. Material cursor 81 and video cursor 500 did not advance.
+passed automated audio, complete 12-slide visual traversal, validator-compliant
+independent full-release review and score-100/TRUST_READY gates. New YouTube ID
+`KnqH7aTiNVk` is live in manifest commit `b3a6859c`; production manifest,
+website iframe, channel, playlist and post-retirement browser readbacks passed.
+Old exact ID `9H5aynPKFZc` was retired. Source commit `dbfbc0e5` and a fresh
+zero-learner production transaction synchronized exactly the Module 5
+`videoUrl`, with private rollback snapshot and readback PASS. Grade 9 now has 95
+unresolved video identities and the whole catalog has 618. The planned
+three-course material rotation and 20-video inspection were deferred; material
+cursor 81 and video cursor 500 did not advance.
 
 ## Material Quality Rotation — Run 025 released with two item holds (2026-10-07)
 
