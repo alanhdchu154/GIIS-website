@@ -188,7 +188,7 @@
       "order": 12,
       "title": "Capstone: Sport Leadership Portfolio",
       "titleZh": "结课项目：体育领导力作品集",
-      "objectives": "Synthesize leadership theory, strategic planning, financial judgment, community responsibility, crisis response, inclusion, and innovation into a practical sport leadership portfolio and growth plan.",
+      "objectives": "Create and defend an integrated sport leadership portfolio for a fictional organization; justify strategic, budget, inclusion, community, crisis, and technology decisions with course evidence; and define two measurable growth goals with review criteria.",
       "readingUrl": "https://open.umn.edu/opentextbooks/textbooks/690",
       "readingNote": "Open Textbook Library — use the sport management open resource to review leadership, strategy, and operations themes.",
       "videoUrl": "https://genesisideas.school/learn",
@@ -233,21 +233,21 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "Which leadership theory focuses on identifying characteristics associated with effective leaders?",
+      "question": "In Path-Goal theory, when is directive leadership most useful?",
       "options": [
-        "Trait theory",
-        "Contingency theory",
-        "Servant leadership",
-        "Systems theory"
+        "When a task is ambiguous and staff need clear expectations and procedures",
+        "When every staff member already knows the task and needs no guidance",
+        "When a leader wants to avoid setting any performance standards",
+        "When authority must be inherited rather than earned"
       ],
-      "answer": "Trait theory",
-      "explanation": "Trait theory studies leader characteristics and attributes. The choice fits the prompt because it applies the central rule or concept from Leadership Theories in Sport.",
+      "answer": "When a task is ambiguous and staff need clear expectations and procedures",
+      "explanation": "Path-Goal theory treats directive leadership as useful when roles or tasks are unclear because the leader clarifies the path, standards, and procedures.",
       "points": 1
     },
     {
       "moduleOrder": 1,
       "order": 4,
-      "question": "Short response: Complete this statement: In sport management, which theory is most useful for understanding how an athletic director should adjust leadership style when managing both experienced coaches and new staff...",
+      "question": "Short response: Which leadership theory is most useful for understanding how an athletic director should adjust leadership style when managing both experienced coaches and new staff?",
       "options": null,
       "answer": "Situational leadership theory",
       "explanation": "A correct response identifies \"Situational leadership theory\" and connects it to the module context.",
@@ -299,15 +299,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "Which component of transformational leadership involves serving as an ethical role model?",
+      "question": "An athletic director gives a new assistant coach tailored mentoring and a development plan based on that coach's needs. Which transformational behavior is this?",
       "options": [
-        "Idealized influence",
-        "Passive management by exception",
-        "Avoiding leadership",
-        "Contingent punishment"
+        "Individualized consideration",
+        "Intellectual stimulation",
+        "Management by exception",
+        "Laissez-faire leadership"
       ],
-      "answer": "Idealized influence",
-      "explanation": "Idealized influence refers to modeling values and earning trust. It connects the correct answer to Transformational Leadership and separates it from plausible distractors.",
+      "answer": "Individualized consideration",
+      "explanation": "Individualized consideration means coaching and supporting each follower according to that person's development needs rather than using one identical approach for everyone.",
       "points": 1
     },
     {
@@ -439,29 +439,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "In the Thomas-Kilmann model, which conflict style is high in both assertiveness and cooperativeness?",
+      "question": "Two departments each give up part of their preferred schedule to reach a workable agreement. Which Thomas-Kilmann style is illustrated?",
       "options": [
-        "Collaborating",
+        "Competing",
         "Avoiding",
-        "Competing only",
-        "Accommodating only"
+        "Compromising",
+        "Accommodating"
       ],
-      "answer": "Collaborating",
-      "explanation": "Collaborating seeks both the leader's concerns and others' concerns. This reinforces the Conflict Resolution in Sport Organizations idea behind the item instead of rewarding a surface-level guess.",
+      "answer": "Compromising",
+      "explanation": "Compromising seeks a middle-ground solution in which each side gives up something, unlike collaborating, which aims to satisfy both sides' core interests more fully.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "A sport manager who delays addressing a conflict between two coaches is most likely using which conflict style?",
+      "question": "What is the defining role of a mediator in an organizational conflict?",
       "options": [
-        "Avoiding",
-        "Collaborating",
-        "Competing",
-        "Problem-solving"
+        "Issue a binding ruling without hearing both sides",
+        "Act as a neutral third party who helps the parties communicate and seek agreement",
+        "Represent only the employee with greater seniority",
+        "Delay discussion until the conflict disappears"
       ],
-      "answer": "Avoiding",
-      "explanation": "Avoiding involves postponing or sidestepping the conflict rather than engaging it directly.",
+      "answer": "Act as a neutral third party who helps the parties communicate and seek agreement",
+      "explanation": "Mediation uses a neutral facilitator to clarify interests, improve communication, and support a voluntary agreement; the mediator does not advocate for one side.",
       "points": 1
     },
     {
@@ -509,15 +509,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "The rational decision-making model assumes decision-makers have what?",
+      "question": "A team keeps funding a failing promotional event because it has already spent heavily on it. Which decision bias is this?",
       "options": [
-        "Complete information and the ability to choose the optimal option",
-        "No information and no alternatives",
-        "Only emotional reactions",
-        "A rule that prevents comparison"
+        "Sunk-cost bias",
+        "Availability heuristic",
+        "Confirmation through random sampling",
+        "Perfect rationality"
       ],
-      "answer": "Complete information and the ability to choose the optimal option",
-      "explanation": "The rational model is idealized because it assumes full information and objective comparison.",
+      "answer": "Sunk-cost bias",
+      "explanation": "Sunk-cost bias occurs when irrecoverable past spending influences a current decision that should instead compare future costs and benefits.",
       "points": 1
     },
     {
@@ -551,15 +551,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "In this course, the NFL's Rooney Rule is best described as a policy intended to do what?",
+      "question": "Which statement best distinguishes equity from equality in a sport organization?",
       "options": [
-        "Expand interview opportunities for minority candidates in key football leadership hiring",
-        "Require teams to draft only local players",
-        "Set ticket prices for playoff games",
-        "Replace all hiring interviews with fan votes"
+        "Equity adjusts support to address different barriers, while equality gives everyone the same resources",
+        "Equity and equality both require identical treatment in every circumstance",
+        "Equity applies only to athlete salaries, while equality applies only to facilities",
+        "Equity removes performance standards, while equality strengthens them"
       ],
-      "answer": "Expand interview opportunities for minority candidates in key football leadership hiring",
-      "explanation": "The Rooney Rule is used as an example of policy aimed at improving access in leadership hiring.",
+      "answer": "Equity adjusts support to address different barriers, while equality gives everyone the same resources",
+      "explanation": "Equality emphasizes the same provision, while equity examines differing barriers and directs support so people can participate and develop fairly.",
       "points": 1
     },
     {
@@ -607,15 +607,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "In professional sport, what is the purpose of a salary cap?",
+      "question": "A sport program has $40,000 in fixed event costs and earns a $10 contribution toward those costs from each ticket sold. What is the break-even attendance?",
       "options": [
-        "Limit team spending on player salaries to support competitive balance",
-        "Set the price of every ticket",
-        "Choose the league champion",
-        "Prevent athletes from training"
+        "400 attendees",
+        "4,000 attendees",
+        "40,000 attendees",
+        "400,000 attendees"
       ],
-      "answer": "Limit team spending on player salaries to support competitive balance",
-      "explanation": "Salary caps are league rules intended to limit payroll differences among teams.",
+      "answer": "4,000 attendees",
+      "explanation": "Break-even units equal fixed costs divided by contribution per ticket: $40,000 divided by $10 equals 4,000 attendees.",
       "points": 1
     },
     {
@@ -747,29 +747,85 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "Wearable technology in sport performance management is primarily used to do what?",
+      "question": "What is the most responsible practice when a sport organization collects athlete biometric data?",
       "options": [
-        "Monitor athlete workload and biometrics to inform training and reduce injury risk",
-        "Replace coaches in every decision",
-        "Guarantee wins in competition",
-        "Measure only ticket sales"
+        "Obtain informed consent, limit access, and define retention and use",
+        "Share raw data with every sponsor by default",
+        "Keep data forever in case it becomes useful",
+        "Assume participation removes all privacy interests"
       ],
-      "answer": "Monitor athlete workload and biometrics to inform training and reduce injury risk",
-      "explanation": "Wearables can support training decisions by tracking workload and physiological data, but they do not replace professional judgment.",
+      "answer": "Obtain informed consent, limit access, and define retention and use",
+      "explanation": "Biometric governance should explain purpose and consent, restrict access, protect the data, and set retention and secondary-use limits.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "In sport management, what does 'big data' refer to?",
+      "question": "What is a primary management use of a customer relationship management platform in sport?",
       "options": [
-        "Large volumes of structured and unstructured data used for analysis and decision-making",
-        "Large stadium capacities only",
-        "A single coach's opinion",
-        "The size of printed media guides"
+        "Combine fan interactions and preferences to support service and engagement decisions",
+        "Replace every coach's technical judgment",
+        "Measure only athlete heart rate during training",
+        "Determine game results through automated scoring"
       ],
-      "answer": "Large volumes of structured and unstructured data used for analysis and decision-making",
-      "explanation": "Big data refers to data scale, variety, and analysis, not simply large buildings or crowds.",
+      "answer": "Combine fan interactions and preferences to support service and engagement decisions",
+      "explanation": "A CRM system helps an organization manage fan and customer relationships across ticketing, communication, service, and engagement touchpoints.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 1,
+      "question": "What makes a sport leadership portfolio an integrated capstone rather than a collection of unrelated documents?",
+      "options": [
+        "Each section is linked to a course concept, evidence, and the organization's stated priority",
+        "Every section uses the same page layout",
+        "The portfolio includes as many pages as possible",
+        "The budget and crisis plan are prepared for different unnamed organizations"
+      ],
+      "answer": "Each section is linked to a course concept, evidence, and the organization's stated priority",
+      "explanation": "Integration requires a coherent organizational context and explicit reasoning that connects leadership, strategy, finance, inclusion, crisis response, and innovation decisions.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 2,
+      "question": "A fictional athletic department has a fixed annual budget. What should the portfolio show when proposing a new community program?",
+      "options": [
+        "Only the program's benefits",
+        "The funding source, opportunity cost, and reason the tradeoff supports strategy",
+        "An assumption that extra money will become available",
+        "A promise that every stakeholder will approve"
+      ],
+      "answer": "The funding source, opportunity cost, and reason the tradeoff supports strategy",
+      "explanation": "A credible budget recommendation identifies what will fund the proposal, what must be reduced or deferred, and why the tradeoff advances the strategic priority.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 3,
+      "question": "What should come first in a sport organization's crisis-response checklist after an incident is reported?",
+      "options": [
+        "Protect immediate safety and verify essential facts before public claims",
+        "Assign blame on social media",
+        "Delete all internal records related to the incident",
+        "Promise a final outcome before an investigation begins"
+      ],
+      "answer": "Protect immediate safety and verify essential facts before public claims",
+      "explanation": "A responsible first response protects people, confirms essential facts, identifies authorized decision makers, and communicates only what is verified.",
+      "points": 1
+    },
+    {
+      "moduleOrder": 12,
+      "order": 4,
+      "question": "Which growth-plan goal is most measurable for a developing sport leader?",
+      "options": [
+        "Become a better leader someday",
+        "By the end of the semester, lead three structured team debriefs and collect participant feedback",
+        "Try harder whenever conflict occurs",
+        "Learn everything about sport management"
+      ],
+      "answer": "By the end of the semester, lead three structured team debriefs and collect participant feedback",
+      "explanation": "The goal has a deadline, an observable leadership practice, a numeric target, and evidence that can be reviewed for progress.",
       "points": 1
     }
   ],
@@ -867,11 +923,16 @@
     {
       "examType": "midterm",
       "order": 7,
-      "type": "fill",
-      "question": "The four components of Bass's transformational leadership model include all of the following EXCEPT:",
-      "options": null,
+      "type": "mc",
+      "question": "Which option is not one of Bass's four core components of transformational leadership?",
+      "options": [
+        "Idealized influence",
+        "Inspirational motivation",
+        "Intellectual stimulation",
+        "Contingent reward"
+      ],
       "answer": "Contingent reward",
-      "explanation": "The correct answer is: Contingent reward.",
+      "explanation": "Contingent reward is associated with transactional leadership; the four transformational components also include individualized consideration.",
       "points": 1
     },
     {
