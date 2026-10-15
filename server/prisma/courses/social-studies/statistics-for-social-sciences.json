@@ -756,15 +756,15 @@
     {
       "moduleOrder": 1,
       "order": 3,
-      "question": "Which option best describes the primary idea behind statistics in social science?",
+      "question": "Which research question can be answered most directly with social statistics?",
       "options": [
-        "To describe patterns and test claims about social phenomena systematically",
-        "To replace common sense with math",
-        "To collect more data than needed",
-        "To prove that researchers are right"
+        "Whether a city should value fairness",
+        "How voter turnout differs across age groups",
+        "Whether honesty is always the best policy",
+        "What makes a life meaningful"
       ],
-      "answer": "To describe patterns and test claims about social phenomena systematically",
-      "explanation": "The best answer is To describe patterns and test claims about social phenomena systematically. It directly fits the prompt, while the other choices reflect different course ideas, incomplete definitions, or common mistakes.",
+      "answer": "How voter turnout differs across age groups",
+      "explanation": "Voter turnout and age can both be measured, so data can describe the pattern and test whether the groups differ. The other choices are primarily value or philosophical questions.",
       "points": 1,
       "type": "mc"
     },
@@ -813,15 +813,15 @@
     {
       "moduleOrder": 2,
       "order": 4,
-      "question": "Race (e.g., Asian, Black, White, Other) is an example of which level of measurement?",
+      "question": "Annual household income measured in dollars is usually treated as which level of measurement?",
       "options": [
         "Nominal",
         "Ordinal",
         "Interval",
         "Ratio"
       ],
-      "answer": "Nominal",
-      "explanation": "The correct answer is: Nominal. It connects the correct answer to Types of Data & Measurement and separates it from plausible distractors.",
+      "answer": "Ratio",
+      "explanation": "Income has equal units and a meaningful zero, so ratios are interpretable: $60,000 is twice $30,000.",
       "points": 1
     },
     {
@@ -953,29 +953,29 @@
     {
       "moduleOrder": 5,
       "order": 3,
-      "question": "Which option best completes this statement? In a dataset of {2, 3, 3, 4, 8}, the median is:",
+      "question": "What is the mean of the dataset {2, 3, 3, 4, 8}?",
       "options": [
         "3",
-        "3.5",
         "4",
-        "8"
+        "5",
+        "20"
       ],
-      "answer": "3",
-      "explanation": "The correct answer is: 3. It ties the answer to the historical, civic, geographic, or economic concept being assessed.",
+      "answer": "4",
+      "explanation": "Add the five values to get 20, then divide by the five observations. The mean is 4; choosing 20 would confuse the sum with the average.",
       "points": 1
     },
     {
       "moduleOrder": 5,
       "order": 4,
-      "question": "Which option best completes this statement? The mode of a dataset is:",
+      "question": "Which measure of center is usually most appropriate for a highly right-skewed income distribution?",
       "options": [
-        "The average of all values",
-        "The middle value when sorted",
-        "The most frequently occurring value",
-        "The difference between max and min"
+        "Mean",
+        "Median",
+        "Range",
+        "Variance"
       ],
-      "answer": "The most frequently occurring value",
-      "explanation": "The correct answer is: The most frequently occurring value. This reinforces the Measures of Center & Spread idea behind the item instead of rewarding a surface-level guess.",
+      "answer": "Median",
+      "explanation": "A few extremely high incomes can pull the mean upward. The median is resistant to those outliers and better represents a typical income.",
       "points": 1
     },
     {
@@ -1023,15 +1023,15 @@
     {
       "moduleOrder": 6,
       "order": 4,
-      "question": "Which option best completes this statement? The probability of flipping a fair coin and getting heads is:",
+      "question": "A condition is rare, and a screening test is highly accurate. Which explanation correctly applies the base rate when interpreting positive results?",
       "options": [
-        "0.25",
-        "0.5",
-        "0.75",
-        "1.0"
+        "False positives among the many people without the condition can outnumber true positives among the few who have it",
+        "A 99% sensitivity means 99% of all positive results are true positives, regardless of prevalence",
+        "Specificity matters only when the condition is common",
+        "The number of false positives must always equal the number of false negatives"
       ],
-      "answer": "0.5",
-      "explanation": "The correct answer is: 0.5. It ties the answer to the historical, civic, geographic, or economic concept being assessed.",
+      "answer": "False positives among the many people without the condition can outnumber true positives among the few who have it",
+      "explanation": "When prevalence is very low, the large group without the condition can produce more false positives than the small group of true cases. Sensitivity alone is not the probability of having the condition after a positive result.",
       "points": 1
     },
     {
@@ -1065,15 +1065,15 @@
     {
       "moduleOrder": 7,
       "order": 3,
-      "question": "Which option best completes this statement? The normal distribution is sometimes called the 'bell curve' because:",
+      "question": "A student has a score of 80 in a distribution with mean 70 and standard deviation 5. What is the student's z-score?",
       "options": [
-        "It was invented by Alexander Graham Bell",
-        "It is shaped symmetrically like a bell, with most data near the mean",
-        "Its area sums to the number of bells in a dataset",
-        "Data always follows this distribution"
+        "-2",
+        "-0.5",
+        "2",
+        "10"
       ],
-      "answer": "It is shaped symmetrically like a bell, with most data near the mean",
-      "explanation": "The correct answer is: It is shaped symmetrically like a bell, with most data near the mean.",
+      "answer": "2",
+      "explanation": "Compute z = (80 - 70) / 5 = 2. The score is two standard deviations above the mean.",
       "points": 1
     },
     {
@@ -1121,15 +1121,15 @@
     {
       "moduleOrder": 8,
       "order": 4,
-      "question": "Which option best completes this statement? A scatterplot displaying a pattern from lower-left to upper-right indicates:",
+      "question": "A study finds that students who sleep more tend to earn higher grades. What conclusion is justified by correlation alone?",
       "options": [
-        "A negative correlation",
-        "No correlation",
-        "A positive correlation",
-        "A perfect correlation of 1.0"
+        "More sleep definitely causes higher grades",
+        "Higher grades definitely cause more sleep",
+        "Sleep and grades are associated, but other variables or reverse causation may explain the pattern",
+        "The correlation proves there are no confounding variables"
       ],
-      "answer": "A positive correlation",
-      "explanation": "The correct answer is: A positive correlation. Students need to recognize why A positive correlation matches the evidence in the question and why nearby options do not.",
+      "answer": "Sleep and grades are associated, but other variables or reverse causation may explain the pattern",
+      "explanation": "Correlation describes an association. Without a design that rules out confounding and reverse causation, it does not establish cause and effect.",
       "points": 1
     },
     {
@@ -1261,29 +1261,29 @@
     {
       "moduleOrder": 11,
       "order": 3,
-      "question": "Which option best completes this statement? A confidence interval provides:",
+      "question": "A 95% confidence interval for average weekly study time is 6 to 8 hours. Which interpretation is most appropriate?",
       "options": [
-        "The exact population parameter",
-        "A range of plausible values for the population parameter",
-        "The probability that the sample is representative",
-        "A single best-guess estimate with no uncertainty"
+        "Every student studies between 6 and 8 hours",
+        "The method used would capture the true population mean in about 95% of repeated samples",
+        "There is a 95% chance that every future sample mean will equal 7 hours",
+        "Ninety-five percent of the observations must fall between 6 and 8 hours"
       ],
-      "answer": "A range of plausible values for the population parameter",
-      "explanation": "The correct answer is: A range of plausible values for the population parameter.",
+      "answer": "The method used would capture the true population mean in about 95% of repeated samples",
+      "explanation": "The confidence level describes the long-run success rate of the interval-building method, not the percentage of individual observations inside one interval.",
       "points": 1
     },
     {
       "moduleOrder": 11,
       "order": 4,
-      "question": "Which option best completes this statement? The margin of error in a poll is directly related to:",
+      "question": "Holding the sample size and variability constant, what happens when a confidence level increases from 90% to 99%?",
       "options": [
-        "The number of questions in the survey",
-        "The sample size — larger samples produce smaller margins of error",
-        "The political topic being studied",
-        "The response rate of the poll"
+        "The interval becomes narrower",
+        "The interval becomes wider",
+        "The margin of error becomes zero",
+        "The sample mean changes automatically"
       ],
-      "answer": "The sample size — larger samples produce smaller margins of error",
-      "explanation": "The correct answer is: The sample size — larger samples produce smaller margins of error.",
+      "answer": "The interval becomes wider",
+      "explanation": "A higher confidence level requires a larger margin of error, so the interval widens when the other inputs remain fixed.",
       "points": 1
     },
     {
@@ -1331,15 +1331,15 @@
     {
       "moduleOrder": 12,
       "order": 4,
-      "question": "Which option best completes this statement? The null hypothesis (H₀) in social research typically states:",
+      "question": "Which question is best suited to a chi-square test of independence?",
       "options": [
-        "That the researcher's prediction is correct",
-        "That there is no effect or no difference",
-        "That the sample is biased",
-        "That results are statistically significant"
+        "Do two classes have different mean test scores?",
+        "Are preferred news source and age group associated?",
+        "What is the correlation between income and years of education?",
+        "Can income be predicted from work experience?"
       ],
-      "answer": "That there is no effect or no difference",
-      "explanation": "The correct answer is: That there is no effect or no difference. It connects the correct answer to Hypothesis Testing in Social Research and separates it from plausible distractors.",
+      "answer": "Are preferred news source and age group associated?",
+      "explanation": "A chi-square test of independence evaluates whether two categorical variables, such as news-source category and age group, are associated.",
       "points": 1
     },
     {
@@ -1373,15 +1373,15 @@
     {
       "moduleOrder": 13,
       "order": 3,
-      "question": "Which option best completes this statement? An observational study differs from an experiment because:",
+      "question": "Why does random assignment strengthen a controlled experiment?",
       "options": [
-        "It never uses statistics",
-        "Researchers observe without manipulating variables, so causal inference is limited",
-        "It always has a control group",
-        "The sample is always larger"
+        "It guarantees a representative sample of the whole population",
+        "It tends to balance preexisting differences between treatment groups",
+        "It eliminates the need to measure outcomes",
+        "It makes every result statistically significant"
       ],
-      "answer": "Researchers observe without manipulating variables, so causal inference is limited",
-      "explanation": "The correct answer is: Researchers observe without manipulating variables, so causal inference is limited.",
+      "answer": "It tends to balance preexisting differences between treatment groups",
+      "explanation": "Random assignment reduces systematic group differences before treatment, making a later outcome difference more plausibly attributable to the treatment.",
       "points": 1
     }
   ],
