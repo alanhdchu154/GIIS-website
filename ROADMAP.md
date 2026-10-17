@@ -23,9 +23,13 @@ email, payment or academic decision was used during release verification.
 Operational follow-up: existing applications receive no automatic retroactive
 email; authorized staff must use **Send status link** when appropriate. Production
 capabilities currently report `principal_admin_missing` for placement approval,
-which is a separate staff-account setup blocker and does not negate the family
-access release. Dependency audit still reports inherited vulnerabilities and
-requires a separate reviewed maintenance change.
+which is a separate staff-account setup blocker. Alan authorized the Principal
+invitation on October17; the one-time setup email was provider-confirmed sent to
+the configured Principal address at15:10UTC and expires at16:10UTC. The invite
+remains pending and no AdminUser exists until the Principal follows the link and
+sets a password. Do not claim placement signing is enabled before that acceptance
+readback. Dependency audit still reports inherited vulnerabilities and requires
+a separate reviewed maintenance change.
 
 ## School organization
 

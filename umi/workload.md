@@ -45,6 +45,12 @@ exact backend commit, proxy checks and browser readback are recorded in
 Existing applications require an authorized staff member to choose **Send status
 link**; deployment itself intentionally sent no email.
 
+**External wait:** Alan authorized the configured Principal invitation on
+October17. Provider receipt and production EmailLog both report `sent`; one
+unexpired invite exists and no Principal AdminUser exists yet. The link expires
+at16:10UTC. Placement approval remains `principal_admin_missing` until the
+Principal accepts the link and chooses a password. Do not resend automatically.
+
 **Stop conditions:** any need to expose PII in a URL/response, reuse the
 short-lived interest-confirmation token as a permanent credential without a
 documented security decision, mutate real application/account data for a test,
