@@ -119,7 +119,10 @@ test('status-link issuance is admin-only, stores only a hash, and returns no cre
   const persisted = mockDb.application.updateMany.mock.calls[0][0].data;
   expect(persisted.statusTokenHash).toMatch(/^[a-f0-9]{64}$/);
   const delivery = mockSendStatusLinkEmail.mock.calls[0][0];
-  expect(delivery.statusUrl).toMatch(/^https:\/\/genesisideas\.school\/application\/status#token=[A-Za-z0-9_-]{43}$/);
+  const configuredSite = (process.env.CORS_ORIGIN || 'https://genesisideas.school').split(',')[0].trim().replace(/\/$/, '');
+  expect(delivery.statusUrl).toMatch(new RegExp(
+    `^${configuredSite.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/application/status#token=[A-Za-z0-9_-]{43}$`,
+  ));
   expect(JSON.stringify(response.body)).not.toContain('token');
   expect(JSON.stringify(response.body)).not.toContain('statusUrl');
 });
