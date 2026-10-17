@@ -72,15 +72,17 @@ beforeEach(() => {
 
 test('public status lookup returns a fixed parent-safe allowlist and no-store headers', async () => {
   mockDb.application.findUnique.mockResolvedValue({
+    id: 'app_a', parentEmail: 'parent@example.invalid', studentName: 'Student',
     status: 'pending', applicantType: 'transfer', recordsStatus: 'requested',
     interestConfirmedAt: new Date('2026-10-01T00:00:00.000Z'), accountsCreated: false,
+    placementRequired: false, placementDecision: null,
     createdAt: new Date('2026-09-30T00:00:00.000Z'), updatedAt: new Date('2026-10-02T00:00:00.000Z'),
   });
   const response = await invoke(applications, '/status', { body: { token: 's'.repeat(43) } });
   expect(response.code).toBe(200);
   expect(response.headers['Cache-Control']).toBe('no-store, private');
   expect(Object.keys(response.body).sort()).toEqual([
-    'accountsReady', 'interestConfirmed', 'nextStep', 'recordsStatus', 'stage', 'state', 'submittedAt', 'updatedAt',
+    'accountsReady', 'interestConfirmed', 'nextStep', 'placement', 'recordsStatus', 'stage', 'state', 'submittedAt', 'updatedAt',
   ].sort());
   expect(response.body).not.toHaveProperty('id');
   expect(response.body).not.toHaveProperty('parentEmail');

@@ -89,7 +89,7 @@ function FirstWeekGrid({ isEn }) {
         fontSize: '22px', fontWeight: 800, color: '#1a1a2e',
         margin: '34px 0 16px', letterSpacing: '-0.01em',
       }}>
-        {isEn ? 'Your first week at GIIS' : '加入 GIIS 的第一周'}
+        {isEn ? 'After activation: your first week at GIIS' : '帐号与课程启用后：加入 GIIS 的第一周'}
       </h2>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: 12 }}>
@@ -148,13 +148,16 @@ export default function WelcomePage({ language }) {
 
   const [state, setState] = useState({ loading: true, data: null, error: null });
 
-  // If parent is already logged in and payment is confirmed, go straight to dashboard
+  const paymentConfirmed = ['paid', 'no_payment_required'].includes(state.data?.paymentStatus);
+
+  // A session id alone is not payment proof. Redirect only after the sanitized
+  // session endpoint confirms payment and a parent session already exists.
   useEffect(() => {
-    if (parentSession && sessionId) {
+    if (parentSession && sessionId && paymentConfirmed) {
       const timer = setTimeout(() => navigate('/parent/dashboard', { replace: true }), 2500);
       return () => clearTimeout(timer);
     }
-  }, [parentSession, sessionId, navigate]);
+  }, [parentSession, sessionId, paymentConfirmed, navigate]);
 
   useEffect(() => {
     if (!sessionId) {
@@ -192,8 +195,8 @@ export default function WelcomePage({ language }) {
       <Shell isEn={isEn}>
         <p style={{ color: '#5c6578', fontSize: '15px', lineHeight: 1.7, margin: '24px 0' }}>
           {isEn
-            ? "We couldn't read your checkout session. If you completed payment, don't worry — Stripe has the record and we'll process it within minutes. "
-            : '我们读不到你的 checkout 信息。如果你已完成付款，请放心——Stripe 已有记录，我们会在几分钟内处理。'}
+            ? "We couldn't verify this checkout session. If you completed payment, keep your Stripe receipt and contact GIIS so we can confirm the application and payment record. "
+            : '我们目前无法验证这笔 checkout。如果你已完成付款，请保留 Stripe 收据并联系 GIIS，以便核对申请与付款记录。'}
           {isEn ? 'You can email ' : '可以发邮件至 '}
           <a href="mailto:admissions@genesisideas.school" style={{ color: '#2b3d6d', fontWeight: 700 }}>
             admissions@genesisideas.school
@@ -230,7 +233,7 @@ export default function WelcomePage({ language }) {
           <p style={{ margin: 0, fontSize: '20px', fontWeight: 800, color: '#1B6B3A' }}>
             {isPaid
               ? (isEn ? 'Payment confirmed' : '付款确认')
-              : (isEn ? 'Payment received' : '已收到付款')}
+              : (isEn ? 'Payment processing' : '付款处理中')}
           </p>
         </div>
         <p style={{ margin: 0, fontSize: '14px', color: '#1a3024', lineHeight: 1.7 }}>
@@ -241,6 +244,12 @@ export default function WelcomePage({ language }) {
             : 'Stripe 会将收据发送至结账时使用的电子邮箱。'}
         </p>
       </div>
+
+      <p style={{ margin: '0 0 24px', padding: '12px 16px', background: '#fff8e6', border: '1px solid #efd08a', borderRadius: 8, color: '#6d5317', fontSize: 13, lineHeight: 1.6 }}>
+        {isEn
+          ? 'Payment confirmation does not by itself mean enrollment is active or courses are ready. GIIS will separately confirm account activation and the approved first-term course setup.'
+          : '付款确认本身不代表学籍已经启用或课程已经准备完成。GIIS 会另行确认帐号启用及获批准的第一学期课程安排。'}
+      </p>
 
       <h2 style={{
         fontSize: '22px', fontWeight: 800, color: '#1a1a2e',
@@ -254,16 +263,16 @@ export default function WelcomePage({ language }) {
       }}>
         {[
           {
-            en: 'If admissions has already activated your account, your parent and student login credentials are in the welcome email.',
-            zh: '如果招生办公室已经启用账号，你的家长与学生登录凭据会在欢迎信里。',
+            en: 'GIIS first verifies the approved application and payment record, then activates the parent and student accounts.',
+            zh: 'GIIS 会先核对已批准的申请与付款记录，然后启用家长与学生帐号。',
           },
           {
             en: 'A GIIS advisor will reach out to schedule onboarding, confirm course planning, and review any transfer-credit questions.',
             zh: 'GIIS 顾问会联系你安排入学沟通，确认课程规划，并审核转学分相关问题。',
           },
           {
-            en: 'Your child can start the first active module after login. The parent dashboard will show weekly progress, advisor-approved notes, missing-work flags, and one next action.',
-            zh: '学生登录后可以开始第一个进行中模块。家长面板会显示每周进度、顾问审核留言、缺交提醒与一个下一步。',
+            en: 'Your child begins only after the approved first-term courses appear in Learn Portal. The parent dashboard will then show progress, advisor-approved notes, missing-work flags, and one next action.',
+            zh: '只有当获批准的第一学期课程出现在 Learn Portal 后，学生才开始学习。届时家长面板会显示进度、顾问审核留言、缺交提醒与一个下一步。',
           },
           {
             en: 'Private internal advisor notes are not shown to families. Parent summaries are reviewed before they appear in the dashboard.',
@@ -305,8 +314,8 @@ export default function WelcomePage({ language }) {
           lineHeight: 1.55,
         }}>
           {isEn
-            ? '⚙ Your payment is reaching our system right now. This message will disappear once everything is synced (usually within 30 seconds).'
-            : '⚙ 你的付款正在同步到我们的系统。这条提示在同步完成后会消失（通常 30 秒内）。'}
+            ? '⚙ Stripe confirmed the checkout, but the GIIS payment record is still syncing. Keep your receipt and contact admissions if this notice persists.'
+            : '⚙ Stripe 已确认结帐，但 GIIS 付款记录仍在同步。请保留收据；如果此提示持续出现，请联系招生部门。'}
         </p>
       )}
 
@@ -341,14 +350,14 @@ function Shell({ isEn, children }) {
             letterSpacing: '2px', textTransform: 'uppercase',
             margin: '0 0 12px',
           }}>
-            {isEn ? 'Welcome to GIIS' : '欢迎加入 GIIS'}
+            {isEn ? 'GIIS checkout' : 'GIIS 付款确认'}
           </p>
           <h1 style={{
             fontSize: 'clamp(28px, 3.6vw, 38px)', fontWeight: 800,
             color: '#1a1a2e', lineHeight: 1.1,
             margin: '0 0 24px', letterSpacing: '-0.01em',
           }}>
-            {isEn ? "You're in. 🎉" : '你已加入。🎉'}
+            {isEn ? 'Payment and account setup' : '付款与帐号设置'}
           </h1>
           {children}
         </div>

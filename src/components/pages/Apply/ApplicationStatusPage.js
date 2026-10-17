@@ -19,8 +19,14 @@ const STAGE_LABEL_ZH = {
   awaiting_confirmation: '等待确认',
   records_review: '记录审核中',
   admissions_review: '招生审核中',
-  approved: '已批准 — 注册进行中',
-  enrolled: '已注册',
+  assessment_review: '入学评估补充中',
+  principal_review: '等待校长审核',
+  placement_outcome: '年级安排审核已完成',
+  approved_payment: '已批准 — 下一步为付款',
+  paid_activation: '付款已确认 — 帐号建立中',
+  course_setup: '帐号已就绪 — 课程安排中',
+  ready_to_begin: '已准备开始学习',
+  active_student: '已开始学习',
   closed: '申请已关闭',
 };
 
@@ -28,17 +34,35 @@ const STAGE_NEXT_ZH = {
   awaiting_confirmation: '请检查您的邮箱并点击确认链接。',
   records_review: '我们的团队将会联系您有关正式记录的事宜。',
   admissions_review: '我们的招生团队正在审核您的申请，我们将很快与您联系。',
-  approved: '您的注册正在完成中，请检查您的邮箱获取帐号详情。',
-  enrolled: '请登入学生入口开始课程学习。',
+  assessment_review: 'GIIS 会联系家庭，说明还需要的评估证据或简短口头核对。',
+  principal_review: '校长审核 placement 记录期间，家庭暂时无需操作。',
+  placement_outcome: 'GIIS 会联系家庭，说明已批准的准备建议。',
+  approved_payment: '请等待 GIIS 发送与本申请绑定的安全付款链接，不要使用其他结帐链接。',
+  paid_activation: '付款已确认。GIIS 正在建立学生与家长帐号。',
+  course_setup: '帐号已就绪。GIIS 正在指派已批准的第一学期课程，课程安排完成后再开始学习。',
+  ready_to_begin: '请使用 GIIS 发送的登入资料，并只开始已批准的第一学期课程。',
+  active_student: '请继续已指派的课程，并按已批准计划中的日期参加下一次回顾。',
   closed: '请联系 admissions@genesisideas.school 获取帮助。',
+};
+
+const PLACEMENT_RESULT = {
+  ready: { en: 'Ready for a conditional start', zh: '可有条件开始' },
+  ready_with_bridge: { en: 'Ready with Bridge', zh: '可开始，需配合衔接支持' },
+  not_yet: { en: 'Not Yet', zh: '尚未准备好' },
 };
 
 const STAGE_COLORS = {
   awaiting_confirmation: { bg: '#fef3c7', fg: '#92400e' },
   records_review: { bg: '#e0f2fe', fg: '#075985' },
   admissions_review: { bg: '#eff6ff', fg: '#1d4ed8' },
-  approved: { bg: '#dcfce7', fg: '#166534' },
-  enrolled: { bg: '#dcfce7', fg: '#166534' },
+  assessment_review: { bg: '#fef3c7', fg: '#92400e' },
+  principal_review: { bg: '#fef3c7', fg: '#92400e' },
+  placement_outcome: { bg: '#e0f2fe', fg: '#075985' },
+  approved_payment: { bg: '#dcfce7', fg: '#166534' },
+  paid_activation: { bg: '#e0f2fe', fg: '#075985' },
+  course_setup: { bg: '#e0f2fe', fg: '#075985' },
+  ready_to_begin: { bg: '#dcfce7', fg: '#166534' },
+  active_student: { bg: '#dcfce7', fg: '#166534' },
   closed: { bg: '#fee2e2', fg: '#991b1b' },
 };
 
@@ -403,6 +427,44 @@ export default function ApplicationStatusPage({ language }) {
                         '学生和家长入口帐号已创建，请检查邮箱获取登入信息。',
                       )}
                     </p>
+                  </div>
+                )}
+
+                {/* Only a Principal-approved, family-safe placement subset is returned by the API. */}
+                {statusData.placement && (
+                  <div style={{ background: '#fffaf0', border: '1px solid #efd08a', borderRadius: 8, padding: '14px 16px', marginBottom: 20 }}>
+                    <p style={{ fontSize: 10, fontWeight: 900, color: '#7a5511', letterSpacing: 1, textTransform: 'uppercase', margin: '0 0 8px' }}>
+                      {T('Principal-approved placement summary', '校长已批准的年级安排摘要')}
+                    </p>
+                    <p style={{ margin: '0 0 8px', color: '#463719', fontSize: 13.5, fontWeight: 800 }}>
+                      {PLACEMENT_RESULT[statusData.placement.result]
+                        ? (isEn ? PLACEMENT_RESULT[statusData.placement.result].en : PLACEMENT_RESULT[statusData.placement.result].zh)
+                        : statusData.placement.result}
+                    </p>
+                    {statusData.placement.bridgePlan && (
+                      <div style={{ marginBottom: 8 }}>
+                        <strong>{T('Bridge support: ', '衔接支持：')}</strong>
+                        <span style={{ whiteSpace: 'pre-wrap' }}>{statusData.placement.bridgePlan}</span>
+                      </div>
+                    )}
+                    {statusData.placement.firstTermPlan && (
+                      <div style={{ marginBottom: 8 }}>
+                        <strong>{T('First-term plan: ', '第一学期计划：')}</strong>
+                        <span style={{ whiteSpace: 'pre-wrap' }}>{statusData.placement.firstTermPlan}</span>
+                      </div>
+                    )}
+                    {statusData.placement.firstWeekReviewer && (
+                      <div style={{ marginBottom: 8 }}>
+                        <strong>{T('First-week reviewer: ', '首周审核人：')}</strong>
+                        {statusData.placement.firstWeekReviewer}
+                      </div>
+                    )}
+                    {statusData.placement.recheckDate && (
+                      <div>
+                        <strong>{T('Recheck date: ', '再次评估日期：')}</strong>
+                        {formatDate(statusData.placement.recheckDate, dateLocale)}
+                      </div>
+                    )}
                   </div>
                 )}
 

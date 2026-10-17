@@ -879,6 +879,8 @@ describe('parent-safe status response', () => {
       interestConfirmedAt: null,
       interestConfirmationTokenHash: 'synthetic-confirmation-hash',
       accountsCreated: false,
+      placementRequired: false,
+      placementDecision: null,
       createdAt: new Date('2026-10-01T00:00:00.000Z'),
       updatedAt: new Date('2026-10-02T00:00:00.000Z'),
       ...overrides,
@@ -888,7 +890,7 @@ describe('parent-safe status response', () => {
   test('returns only the exact parent-safe key set — no PII, IDs, or internal strings', () => {
     const result = buildParentSafeStatus(appFixture({ interestConfirmedAt: new Date() }));
     const keys = Object.keys(result).sort();
-    expect(keys).toEqual(['accountsReady', 'interestConfirmed', 'nextStep', 'recordsStatus', 'stage', 'state', 'submittedAt', 'updatedAt'].sort());
+    expect(keys).toEqual(['accountsReady', 'interestConfirmed', 'nextStep', 'placement', 'recordsStatus', 'stage', 'state', 'submittedAt', 'updatedAt'].sort());
     expect(result).not.toHaveProperty('id');
     expect(result).not.toHaveProperty('parentEmail');
     expect(result).not.toHaveProperty('studentName');
@@ -901,11 +903,26 @@ describe('parent-safe status response', () => {
     expect(buildParentSafeStatus(appFixture()).state).toBe('found');
   });
 
-  test('maps stage correctly across all status/applicantType combinations', () => {
+  test('maps every parent-facing application, payment, activation, and learning stage truthfully', () => {
     expect(buildParentSafeStatus(appFixture()).stage.code).toBe('awaiting_confirmation');
 
     const confirmed = appFixture({ interestConfirmedAt: new Date() });
     expect(buildParentSafeStatus(confirmed).stage.code).toBe('admissions_review');
+
+    const assessmentReview = appFixture({ interestConfirmedAt: new Date(), placementRequired: true });
+    expect(buildParentSafeStatus(assessmentReview).stage.code).toBe('assessment_review');
+
+    const principalReview = appFixture({
+      interestConfirmedAt: new Date(), placementRequired: true,
+      placementDecision: { result: 'ready_with_bridge', principalApprovedAt: null },
+    });
+    expect(buildParentSafeStatus(principalReview).stage.code).toBe('principal_review');
+
+    const placementOutcome = appFixture({
+      interestConfirmedAt: new Date(), placementRequired: true,
+      placementDecision: { result: 'not_yet', principalApprovedAt: new Date() },
+    });
+    expect(buildParentSafeStatus(placementOutcome).stage.code).toBe('placement_outcome');
 
     const transferPending = appFixture({ applicantType: 'transfer', interestConfirmedAt: new Date() });
     expect(buildParentSafeStatus(transferPending).stage.code).toBe('records_review');
@@ -914,10 +931,18 @@ describe('parent-safe status response', () => {
     expect(buildParentSafeStatus(transferVerified).stage.code).toBe('admissions_review');
 
     const approved = appFixture({ status: 'approved', interestConfirmedAt: new Date() });
-    expect(buildParentSafeStatus(approved).stage.code).toBe('approved');
+    expect(buildParentSafeStatus(approved).stage.code).toBe('approved_payment');
 
-    const enrolled = appFixture({ status: 'approved', interestConfirmedAt: new Date(), accountsCreated: true });
-    expect(buildParentSafeStatus(enrolled).stage.code).toBe('enrolled');
+    const accountsCreatedOnly = appFixture({ status: 'approved', interestConfirmedAt: new Date(), accountsCreated: true });
+    expect(buildParentSafeStatus(accountsCreatedOnly).stage.code).toBe('approved_payment');
+    expect(buildParentSafeStatus(accountsCreatedOnly).accountsReady).toBe(false);
+
+    expect(buildParentSafeStatus(approved, { paidUnlinked: true }).stage.code).toBe('paid_activation');
+    expect(buildParentSafeStatus(approved, { paid: true, accountsReady: true, courseCount: 0 }).stage.code).toBe('course_setup');
+    expect(buildParentSafeStatus(approved, { paid: true, accountsReady: true, courseCount: 1 }).stage.code).toBe('ready_to_begin');
+    expect(buildParentSafeStatus(approved, {
+      paid: true, accountsReady: true, courseCount: 1, learningStarted: true,
+    }).stage.code).toBe('active_student');
 
     const rejected = appFixture({ status: 'rejected', interestConfirmedAt: new Date() });
     expect(buildParentSafeStatus(rejected).stage.code).toBe('closed');
@@ -927,10 +952,7 @@ describe('parent-safe status response', () => {
     expect(buildParentSafeStatus(legacyPending).interestConfirmed).toBe(true);
 
     const legacyApproved = appFixture({ status: 'approved', interestConfirmationTokenHash: null });
-    expect(buildParentSafeStatus(legacyApproved).stage.code).toBe('approved');
-
-    const legacyEnrolled = appFixture({ status: 'approved', accountsCreated: true, interestConfirmationTokenHash: null });
-    expect(buildParentSafeStatus(legacyEnrolled).stage.code).toBe('enrolled');
+    expect(buildParentSafeStatus(legacyApproved).stage.code).toBe('approved_payment');
   });
 
   test('recordsStatus uses a safe label object, never the raw DB string', () => {
@@ -939,15 +961,44 @@ describe('parent-safe status response', () => {
     expect(typeof result.recordsStatus).toBe('object');
   });
 
-  test('interestConfirmed reflects the boolean, accountsReady reflects accountsCreated', () => {
+  test('interestConfirmed and accountsReady come from separate verified states', () => {
     const notConfirmed = buildParentSafeStatus(appFixture());
     expect(notConfirmed.interestConfirmed).toBe(false);
     expect(notConfirmed.accountsReady).toBe(false);
 
-    const enrolled = appFixture({ status: 'approved', interestConfirmedAt: new Date(), accountsCreated: true });
-    const result = buildParentSafeStatus(enrolled);
+    const activated = appFixture({ status: 'approved', interestConfirmedAt: new Date(), accountsCreated: true });
+    const result = buildParentSafeStatus(activated, { paid: true, accountsReady: true, courseCount: 1 });
     expect(result.interestConfirmed).toBe(true);
     expect(result.accountsReady).toBe(true);
+  });
+
+  test('exposes only the Principal-approved family-safe placement summary', () => {
+    const internal = {
+      result: 'ready_with_bridge', bridgePlan: 'Weekly writing bridge',
+      firstTermPlan: 'English I and Algebra I', firstWeekReviewer: 'Academic Advisor',
+      recheckDate: new Date('2026-11-20T00:00:00.000Z'),
+      decisionRationale: 'Internal rationale', evidenceReviewed: 'Private evidence',
+      assistanceNotes: 'Internal support note', independentLearningNotes: 'Internal observation',
+    };
+    const unsigned = buildParentSafeStatus(appFixture({
+      interestConfirmedAt: new Date(), placementRequired: true,
+      placementDecision: { ...internal, principalApprovedAt: null },
+    }));
+    expect(unsigned.placement).toBeNull();
+
+    const signed = buildParentSafeStatus(appFixture({
+      interestConfirmedAt: new Date(), placementRequired: true,
+      placementDecision: { ...internal, principalApprovedAt: new Date() },
+    }));
+    expect(signed.placement).toEqual({
+      result: 'ready_with_bridge', bridgePlan: 'Weekly writing bridge',
+      firstTermPlan: 'English I and Algebra I', firstWeekReviewer: 'Academic Advisor',
+      recheckDate: new Date('2026-11-20T00:00:00.000Z'),
+    });
+    expect(signed.placement).not.toHaveProperty('decisionRationale');
+    expect(signed.placement).not.toHaveProperty('evidenceReviewed');
+    expect(signed.placement).not.toHaveProperty('assistanceNotes');
+    expect(signed.placement).not.toHaveProperty('independentLearningNotes');
   });
 });
 

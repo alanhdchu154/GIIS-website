@@ -14,6 +14,7 @@ const FOUND = {
   stage: { code: 'admissions_review', label: 'Admissions review in progress' },
   nextStep: 'Our admissions team is reviewing your application.',
   accountsReady: false,
+  placement: null,
 };
 
 function renderPage() {
@@ -77,4 +78,30 @@ test('treats an unrecognized successful response as retryable instead of invalid
   renderPage();
   await screen.findByRole('button', { name: 'Try again' });
   expect(screen.queryByText('This status link is no longer valid')).not.toBeInTheDocument();
+});
+
+test('renders only the Principal-approved family-safe placement summary returned by the API', async () => {
+  global.fetch.mockResolvedValue({
+    ok: true,
+    json: async () => ({
+      ...FOUND,
+      stage: { code: 'ready_to_begin', label: 'Ready to begin' },
+      placement: {
+        result: 'ready_with_bridge',
+        bridgePlan: 'Weekly writing bridge',
+        firstTermPlan: 'English I and Algebra I',
+        firstWeekReviewer: 'Academic Advisor',
+        recheckDate: '2026-11-20T00:00:00.000Z',
+      },
+    }),
+  });
+  renderPage();
+
+  await screen.findByText('Principal-approved placement summary');
+  expect(screen.getByText('Ready with Bridge')).toBeInTheDocument();
+  expect(screen.getByText('Weekly writing bridge')).toBeInTheDocument();
+  expect(screen.getByText('English I and Algebra I')).toBeInTheDocument();
+  expect(screen.getByText('Academic Advisor')).toBeInTheDocument();
+  expect(screen.queryByText(/internal rationale/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/private evidence/i)).not.toBeInTheDocument();
 });

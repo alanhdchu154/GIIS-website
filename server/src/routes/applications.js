@@ -305,21 +305,52 @@ const RECORDS_STATUS_LABELS = {
   verified: { code: 'verified', label: 'Verified' },
 };
 
-function buildParentSafeStatus(app) {
+function parentSafePlacementSummary(placementDecision) {
+  if (!placementDecision?.principalApprovedAt) return null;
+  return {
+    result: placementDecision.result,
+    bridgePlan: placementDecision.bridgePlan || '',
+    firstTermPlan: placementDecision.firstTermPlan || '',
+    firstWeekReviewer: placementDecision.firstWeekReviewer || '',
+    recheckDate: placementDecision.recheckDate || null,
+  };
+}
+
+function buildParentSafeStatus(app, enrollmentState = {}) {
   // Applications created before email confirmation was introduced have no
   // token hash and are treated as confirmed by the admissions workflow.
   const interestConfirmed = !!app.interestConfirmedAt || !app.interestConfirmationTokenHash;
   let stage;
+  const placement = parentSafePlacementSummary(app.placementDecision);
+  const paymentConfirmed = enrollmentState.paid === true || enrollmentState.paidUnlinked === true;
+  const accountsReady = enrollmentState.accountsReady === true;
+  const courseCount = Number(enrollmentState.courseCount || 0);
+  const learningStarted = enrollmentState.learningStarted === true;
+
   if (app.status === 'rejected') {
     stage = { code: 'closed', label: 'Application closed' };
-  } else if (app.status === 'approved' && app.accountsCreated) {
-    stage = { code: 'enrolled', label: 'Enrolled' };
   } else if (app.status === 'approved') {
-    stage = { code: 'approved', label: 'Approved — enrollment in progress' };
+    if (!paymentConfirmed) {
+      stage = { code: 'approved_payment', label: 'Approved — payment is the next step' };
+    } else if (!accountsReady) {
+      stage = { code: 'paid_activation', label: 'Payment confirmed — account setup in progress' };
+    } else if (courseCount === 0) {
+      stage = { code: 'course_setup', label: 'Accounts ready — course setup in progress' };
+    } else if (!learningStarted) {
+      stage = { code: 'ready_to_begin', label: 'Ready to begin' };
+    } else {
+      stage = { code: 'active_student', label: 'Active student' };
+    }
   } else if (!interestConfirmed) {
     stage = { code: 'awaiting_confirmation', label: 'Awaiting confirmation' };
   } else if (app.status === 'pending') {
-    if (app.applicantType === 'transfer' && app.recordsStatus !== 'verified') {
+    if (app.placementRequired && (!app.placementDecision || app.placementDecision.result === 'pending_clarification')) {
+      stage = { code: 'assessment_review', label: 'Assessment follow-up in progress' };
+    } else if (app.placementRequired && !app.placementDecision?.principalApprovedAt) {
+      stage = { code: 'principal_review', label: 'Awaiting Principal review' };
+    } else if (placement && !['ready', 'ready_with_bridge'].includes(placement.result)) {
+      stage = { code: 'placement_outcome', label: 'Placement review complete' };
+    } else if (app.applicantType === 'transfer' && app.recordsStatus !== 'verified') {
       stage = { code: 'records_review', label: 'Records under review' };
     } else {
       stage = { code: 'admissions_review', label: 'Admissions review in progress' };
@@ -335,10 +366,22 @@ function buildParentSafeStatus(app) {
     nextStep = 'Our team will be in touch about official records.';
   } else if (stage.code === 'admissions_review') {
     nextStep = 'Our admissions team is reviewing your application. We will contact you soon.';
-  } else if (stage.code === 'approved') {
-    nextStep = 'Your enrollment is being finalized. Check your email for account details.';
-  } else if (stage.code === 'enrolled') {
-    nextStep = 'Log in to the student portal to begin coursework.';
+  } else if (stage.code === 'assessment_review') {
+    nextStep = 'GIIS will contact your family about the specific assessment evidence or walkthrough still needed.';
+  } else if (stage.code === 'principal_review') {
+    nextStep = 'No family action is required while the Principal reviews the placement record.';
+  } else if (stage.code === 'placement_outcome') {
+    nextStep = 'GIIS will contact your family about the approved preparation recommendation.';
+  } else if (stage.code === 'approved_payment') {
+    nextStep = 'Wait for the secure payment link tied to this approved application; do not use an unrelated checkout link.';
+  } else if (stage.code === 'paid_activation') {
+    nextStep = 'Payment is confirmed. GIIS is preparing the student and parent accounts.';
+  } else if (stage.code === 'course_setup') {
+    nextStep = 'Your accounts are ready. GIIS is assigning the approved first-term courses before learning begins.';
+  } else if (stage.code === 'ready_to_begin') {
+    nextStep = 'Use the login details from GIIS and begin only the courses listed in the approved first-term plan.';
+  } else if (stage.code === 'active_student') {
+    nextStep = 'Continue the assigned coursework and follow the next review date in the approved plan.';
   } else {
     nextStep = 'Contact admissions@genesisideas.school for assistance.';
   }
@@ -350,7 +393,8 @@ function buildParentSafeStatus(app) {
     recordsStatus: recordsStatusSafe,
     stage,
     nextStep,
-    accountsReady: !!app.accountsCreated,
+    accountsReady,
+    placement,
   };
 }
 
@@ -1125,6 +1169,12 @@ async function applicationEnrollmentState(app) {
       account: { select: { email: true, isActive: true, softLocked: true, lockReason: true } },
       parentAccounts: { select: { email: true }, take: 1 },
       subscriptions: { orderBy: { createdAt: 'desc' }, take: 3 },
+      enrollments: {
+        select: {
+          completedModules: true,
+          _count: { select: { examAttempts: true, quizAttempts: true, assignments: true, moduleProgresses: true } },
+        },
+      },
     },
   });
 
@@ -1148,6 +1198,19 @@ async function applicationEnrollmentState(app) {
   const activeLinked = subscriptions.find((sub) => sub.studentId && student?.id && sub.studentId === student.id && activeStatuses.has(sub.status));
   const activeUnlinked = subscriptions.find((sub) => !sub.studentId && activeStatuses.has(sub.status));
   const latestSub = subscriptions[0] || null;
+  const enrollments = student?.enrollments || [];
+  const learningStarted = enrollments.some((enrollment) => (
+    (enrollment.completedModules || []).length > 0
+    || enrollment._count?.examAttempts > 0
+    || enrollment._count?.quizAttempts > 0
+    || enrollment._count?.assignments > 0
+    || enrollment._count?.moduleProgresses > 0
+  ));
+  const accountsReady = !!(
+    app.accountsCreated
+    && student?.account?.isActive
+    && student?.parentAccounts?.length
+  );
 
   let code = app.status;
   let label = app.status;
@@ -1193,6 +1256,9 @@ async function applicationEnrollmentState(app) {
     subscriptionStatus: (activeLinked || activeUnlinked || latestSub)?.status || null,
     paid: !!activeLinked,
     paidUnlinked: !!activeUnlinked,
+    accountsReady,
+    courseCount: enrollments.length,
+    learningStarted,
   };
 }
 
@@ -1279,18 +1345,33 @@ router.post('/status', async (req, res) => {
     const app = await prisma.application.findUnique({
       where: { statusTokenHash: statusTokenHash(raw) },
       select: {
+        id: true,
+        parentEmail: true,
+        studentName: true,
         status: true,
         applicantType: true,
         recordsStatus: true,
         interestConfirmedAt: true,
         interestConfirmationTokenHash: true,
         accountsCreated: true,
+        placementRequired: true,
+        placementDecision: {
+          select: {
+            result: true,
+            bridgePlan: true,
+            firstTermPlan: true,
+            firstWeekReviewer: true,
+            recheckDate: true,
+            principalApprovedAt: true,
+          },
+        },
         createdAt: true,
         updatedAt: true,
       },
     });
     if (!app) return res.json({ state: 'invalid' });
-    return res.json(buildParentSafeStatus(app));
+    const enrollmentState = await applicationEnrollmentState(app);
+    return res.json(buildParentSafeStatus(app, enrollmentState));
   } catch (err) {
     console.error('[applications] Status lookup failed:', err.message);
     return res.status(503).json({
