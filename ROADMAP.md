@@ -1,5 +1,32 @@
 # GIIS Website Roadmap
 
+## Family application and account access — live 2026-10-17
+
+Release `29d5d65a` is live on the Netlify frontend and the Lightsail backend.
+Applicants now have a private fragment-token status page with a fixed
+parent-safe response; staff with `applications.manage` can rotate and email the
+link. Public student self-registration fails closed, and student/parent password
+reset is serialized with login and revokes active sessions. Existing persisted
+staff RBAC/invitation behavior was preserved rather than reimplemented.
+
+Independent security review accepted the exact candidate after login/reset and
+status-link concurrency fixes. Backend 234/234 and frontend 69/69 tests, Prisma
+validation, build, parent-journey 7/7, public-trust and staged-artifact gates
+passed. Production was backed up to a hashed custom Postgres dump; three nullable
+status-token columns and their unique index were added, PM2 now runs a clean
+release worktree at the exact code commit, and direct/proxy health, unauthenticated
+denial, registration403, synthetic-invalid status, fragment removal, noindex and
+login-page browser checks passed. The prior dirty production checkout and its
+unrelated teaching scripts were not modified. No real family record, account,
+email, payment or academic decision was used during release verification.
+
+Operational follow-up: existing applications receive no automatic retroactive
+email; authorized staff must use **Send status link** when appropriate. Production
+capabilities currently report `principal_admin_missing` for placement approval,
+which is a separate staff-account setup blocker and does not negate the family
+access release. Dependency audit still reports inherited vulnerabilities and
+requires a separate reviewed maintenance change.
+
 ## School organization
 
 Alan approved GIIS3 on 2026-10-04: three daily owners for Teaching & Academic
@@ -147,7 +174,7 @@ Partnership correction — 2026-09-29 17:08 CDT: Alan rejected footer-only prese
 
 Search visibility update — 2026-09-29 15:46 CDT: Alan's Google account is now a verified owner of https://genesisideas.school/. Single-meta frontend commit5768a327 published from isolated fresh-main worktree; independent source review, build/trust/parent/proxy checks, remote CI and public meta readback passed. Search Console reports data processing, not zero traffic; retain verification meta in future releases. No analytics/DNS/backend change. Evidence: `umi/reports/2026-09-29-search-console-verification.md`.
 
-Last updated: 2026-10-12 America/Chicago
+Last updated: 2026-10-17 America/Chicago
 
 ## Provisional G9 first-student readiness — scoped local repair (2026-10-03)
 

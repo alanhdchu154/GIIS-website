@@ -38,10 +38,12 @@ Local evidence: backend 234/234 tests, frontend 69/69 tests, focused status-page
 4/4 tests, Prisma validation, production build, parent-journey 7/7, public trust
 claims audit and `git diff --check` all pass.
 
-**Current action:** commit and push the exact accepted allowlist, back up the
-production database, apply the additive status-token schema, update/restart the
-backend without disturbing unrelated remote dirty files, run safe API checks,
-then verify the GitHub-triggered Netlify deployment at the exact commit.
+**Status:** `COMPLETE`. Release `29d5d65a` is live on the frontend and backend.
+The protected database backup, additive schema receipt, clean PM2 release path,
+exact backend commit, proxy checks and browser readback are recorded in
+`ROADMAP.md`. No active Platform Engineering mutation remains in this handoff.
+Existing applications require an authorized staff member to choose **Send status
+link**; deployment itself intentionally sent no email.
 
 **Stop conditions:** any need to expose PII in a URL/response, reuse the
 short-lived interest-confirmation token as a permanent credential without a
