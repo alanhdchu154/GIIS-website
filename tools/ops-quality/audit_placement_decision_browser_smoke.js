@@ -235,7 +235,7 @@ async function main() {
     await page.getByRole('button', { name: 'View' }).click();
     await page.getByRole('button', { name: 'Create Accounts' }).click();
     await page.getByText('Account credentials created').waitFor();
-    await page.getByRole('button', { name: 'Enroll in courses' }).waitFor();
+    await page.getByRole('button', { name: 'Set up approved courses' }).waitFor();
     stages.push('accounts-activated');
     stages.push('course-enrollment-required-before-handoff');
 
