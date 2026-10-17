@@ -1196,13 +1196,13 @@ async function applicationEnrollmentState(app) {
   };
 }
 
-async function linkExistingSubscriptionsForApplication({ app, studentId }) {
-  const receipts = await prisma.applicationEvent.findMany({
+async function linkExistingSubscriptionsForApplication({ app, studentId, prismaClient = prisma }) {
+  const receipts = await prismaClient.applicationEvent.findMany({
     where: { applicationId: app.id, action: { in: ['stripe_payment_confirmed', 'manual_payment_recorded'] } },
     select: { metadata: true },
   });
   const subscriptionIds = receipts.map(event => event.metadata?.subscriptionId).filter(Boolean);
-  const updated = await prisma.subscription.updateMany({
+  const updated = await prismaClient.subscription.updateMany({
     where: {
       studentId: null,
       id: { in: subscriptionIds },
@@ -1211,6 +1211,54 @@ async function linkExistingSubscriptionsForApplication({ app, studentId }) {
     data: { studentId },
   });
   return updated.count;
+}
+
+async function activatedApplicationAccountState(applicationId) {
+  const activationEvent = await prisma.applicationEvent.findFirst({
+    where: { applicationId, action: 'accounts_activated' },
+    orderBy: { createdAt: 'desc' },
+    select: { metadata: true },
+  });
+  const studentId = activationEvent?.metadata?.studentId;
+  if (!studentId) return null;
+  const student = await prisma.student.findUnique({
+    where: { id: studentId },
+    select: {
+      id: true,
+      studentCode: true,
+      account: { select: { email: true } },
+      parentAccounts: { select: { email: true }, take: 1 },
+    },
+  });
+  if (!student?.account?.email || !student.parentAccounts?.[0]?.email) return null;
+  return student;
+}
+
+function activatedAccountResponse({ student, parentContactEmail, linkedSubscriptions = 0, credentials = null }) {
+  const parentLoginEmail = student.parentAccounts?.[0]?.email || credentials?.parentLoginEmail;
+  const studentLoginEmail = student.account?.email || credentials?.studentLoginEmail;
+  return {
+    ok: true,
+    alreadyActivated: !credentials,
+    studentCode: student.studentCode,
+    studentId: student.id,
+    parentContactEmail,
+    parentEmail: parentLoginEmail,
+    parentLoginEmail,
+    studentEmail: studentLoginEmail,
+    linkedSubscriptions,
+    loginUrl: `${process.env.CORS_ORIGIN || 'https://genesisideas.school'}/parent/login`,
+    credentialsAvailable: !!credentials,
+    ...(credentials ? {
+      parentPassword: credentials.parentPassword,
+      studentPassword: credentials.studentPassword,
+      tempPassword: credentials.parentPassword,
+    } : {}),
+    courseSetupPending: true,
+    nextStep: credentials
+      ? 'Accounts are active. Course setup remains pending and must be completed as a separate reviewed step.'
+      : 'Accounts were already active. Use password reset if credentials were not retained. Course setup remains pending and must be completed as a separate reviewed step.',
+  };
 }
 
 // POST /api/applications/status — public, no auth
@@ -2089,7 +2137,17 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
   });
   if (!app) return res.status(404).json({ error: 'Application not found.' });
   if (app.status !== 'approved') return res.status(400).json({ error: 'Application must be approved first.' });
-  if (app.accountsCreated) return res.status(409).json({ error: 'Accounts already created for this application.' });
+  if (app.accountsCreated) {
+    const existing = await activatedApplicationAccountState(app.id);
+    if (!existing) {
+      return res.status(409).json({
+        error: 'Application is marked activated, but its account link could not be verified. Review the activation record before retrying.',
+        code: 'activation_state_incomplete',
+        courseSetupPending: true,
+      });
+    }
+    return res.json(activatedAccountResponse({ student: existing, parentContactEmail: app.parentEmail }));
+  }
   const enrollmentBeforeActivation = await applicationEnrollmentState(app);
   const readinessError = activationReadinessError(app, enrollmentBeforeActivation);
   if (readinessError) return res.status(400).json({ error: readinessError });
@@ -2118,53 +2176,83 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
   const studentPasswordHash = await bcrypt.hash(studentPassword, 12);
   const parentPasswordHash = await bcrypt.hash(parentPassword, 12);
 
-  // Create Student + ParentAccount in a transaction
-  const student = await prisma.student.create({
-    data: {
-      name: app.studentName,
-      studentCode,
-      birthDate,
-      parentGuardian: app.parentName,
-      parentEmail: app.parentEmail,
-      entryDate: new Date(),
-      account: {
-        create: {
-          email: studentLoginEmail,
-          passwordHash: studentPasswordHash,
-          isActive: true,
+  let activation;
+  try {
+    activation = await prisma.$transaction(async (tx) => {
+      const claimed = await tx.application.updateMany({
+        where: { id: app.id, status: 'approved', accountsCreated: false, updatedAt: app.updatedAt },
+        data: { accountsCreated: true },
+      });
+      if (claimed.count !== 1) {
+        const conflict = new Error('activation_changed');
+        conflict.code = 'ACTIVATION_CHANGED';
+        throw conflict;
+      }
+
+      const student = await tx.student.create({
+        data: {
+          name: app.studentName,
+          studentCode,
+          birthDate,
+          parentGuardian: app.parentName,
+          parentEmail: app.parentEmail,
+          entryDate: new Date(),
+          account: {
+            create: {
+              email: studentLoginEmail,
+              passwordHash: studentPasswordHash,
+              isActive: true,
+            },
+          },
         },
-      },
-    },
-  });
+        include: {
+          account: { select: { email: true } },
+          parentAccounts: { select: { email: true }, take: 1 },
+        },
+      });
 
-  await prisma.parentAccount.create({
-    data: {
-      email: parentLoginEmail,
-      passwordHash: parentPasswordHash,
-      studentId: student.id,
-    },
-  });
+      const parentAccount = await tx.parentAccount.create({
+        data: {
+          email: parentLoginEmail,
+          passwordHash: parentPasswordHash,
+          studentId: student.id,
+        },
+        select: { email: true },
+      });
+      const studentWithAccounts = { ...student, parentAccounts: [parentAccount] };
 
-  await prisma.$transaction(async (tx) => {
-    await tx.application.update({
+      const linkedSubscriptions = await linkExistingSubscriptionsForApplication({
+        app,
+        studentId: student.id,
+        prismaClient: tx,
+      });
+      await tx.applicationEvent.create({
+        data: applicationEventData(
+          app.id,
+          'accounts_activated',
+          req.auth?.email || 'admin',
+          'Student and parent accounts activated; course setup remains pending.',
+          { studentId: student.id, courseSetupPending: true },
+        ),
+      });
+      return { student: studentWithAccounts, linkedSubscriptions };
+    });
+  } catch (error) {
+    if (error?.code !== 'ACTIVATION_CHANGED') throw error;
+    const current = await prisma.application.findUnique({
       where: { id: app.id },
-      data: { accountsCreated: true },
+      select: { accountsCreated: true },
     });
-    await tx.applicationEvent.create({
-      data: applicationEventData(
-        app.id,
-        'accounts_activated',
-        req.auth?.email,
-        'Student and parent accounts activated.',
-        { studentId: student.id },
-      ),
+    const existing = current?.accountsCreated ? await activatedApplicationAccountState(app.id) : null;
+    if (existing) return res.json(activatedAccountResponse({ student: existing, parentContactEmail: app.parentEmail }));
+    return res.status(409).json({
+      error: 'The application changed during activation. Reload and verify the account state before retrying.',
+      code: 'activation_changed',
+      courseSetupPending: true,
     });
-  });
-  const linkedSubscriptions = await linkExistingSubscriptionsForApplication({
-    app,
-    studentId: student.id,
-    parentLoginEmail,
-  });
+  }
+
+  const { student, linkedSubscriptions } = activation;
 
   const loginUrl = `${process.env.CORS_ORIGIN || 'https://genesisideas.school'}/parent/login`;
 
@@ -2180,7 +2268,7 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
     studentLoginEmail,
     studentPassword,
     communicationLanguage: app.communicationLanguage || app.preferredLanguage || 'en',
-  });
+  }).catch(error => ({ ok: false, error: error.message || 'welcome delivery failed' }));
   await recordEmailLog({
     kind: 'welcome_parent_login',
     recipient: app.parentEmail,
@@ -2188,20 +2276,12 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
     result: welcomeResult,
   });
 
-  res.json({
-    ok: true,
-    studentCode,
-    studentId: student.id,
+  res.json(activatedAccountResponse({
+    student,
     parentContactEmail: app.parentEmail,
-    parentEmail: parentLoginEmail,
-    parentLoginEmail,
-    parentPassword,
-    studentEmail: studentLoginEmail,
-    studentPassword,
-    tempPassword: parentPassword,
     linkedSubscriptions,
-    loginUrl,
-  });
+    credentials: { parentLoginEmail, parentPassword, studentLoginEmail, studentPassword },
+  }));
 });
 
 module.exports = router;
