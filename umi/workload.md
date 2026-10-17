@@ -1,38 +1,55 @@
 # Active worker handoff
 
-Updated: 2026-10-12 America/Chicago. One focused task only; completed release
-history remains in `ROADMAP.md` and accepted reports.
+Updated: 2026-10-17 America/Chicago. One focused task only.
 
-## Next coordinator outcome — resume the bounded Grade 9 quality rotation
+## Family access completion and production release
 
-**Task ID:** `TASK-GIIS-G9-QUALITY-ROTATION-20261012`
+**Task ID:** `TASK-GIIS-FAMILY-ACCESS-RELEASE-20261017`
 
-**Owner:** Teaching & Academic Operations, coordinated by GIIS Umi.
+**Owner:** Platform Engineering, coordinated and accepted by GIIS Umi.
 
-**Completed state:** World History M5 is terminally replaced. Exact candidate
-SHA-256 `dd13de00d0e500f86290b1825cc907e1a2bcf79f7c9134df441cbadafa4f6dfc`
-passed the accepted full-release review. New ID `KnqH7aTiNVk` is live in the
-manifest, website and managed playlist; old exact ID `9H5aynPKFZc` is retired,
-and the post-retirement browser readback passed. Production Module 5 `videoUrl`
-was synchronized after a fresh zero-learner gate with rollback snapshot and
-transaction readback.
+**Alan-authorized outcome:** complete and release the missing family-account
+workflow after the current-state audit: a private applicant status URL, no public
+student self-registration, and password-reset revocation of all active student
+or parent sessions. Preserve the already-implemented staff RBAC/invitation
+system; do not replace it or create a real staff account during testing.
 
-**Next bounded action:** begin the next daily run at material cursor 81. Review
-exactly these three courses as one bounded packet: `media-psychology`,
-`organizational-behavior-communication`, and
-`personal-finance-applied-economics`. Refresh production learner and attempt
-state before any mutation. After that packet is accepted or explicitly held,
-resume the actual-MP4 inspection at video cursor 500 for up to 20 identities.
-Do not report either phase complete until its evidence is saved.
+**Baseline:** isolated worktree at exact `origin/main` commit `f4d70e33`. The
+primary checkout has unrelated dirty school-operations/audit files and is out of
+scope. Current main already contains database-backed staff roles and owner-only
+staff access management, so this task must not misreport that work as newly
+implemented.
 
-**WIP and holds:** keep no more than two video identities open and complete any
-partial lifecycle before starting another replacement. Do not rewrite historical
-English I assessment attempts; its four exam and eleven quiz differences remain
-in the versioning/learner-history hold until an attempt-safe plan exists.
+**Allowed files:** applicant/application API and tests; student/parent auth and
+session tests; Prisma schema/migration only if the status-token design genuinely
+requires it; Apply/status frontend route/components and focused frontend tests;
+the smallest related roadmap/report/workload documentation.
 
-**Current counts and evidence:** Grade 9 has 95 unresolved video identities; the
-whole catalog has 618. Material cursor 81 and video cursor 500 remain unchanged
-because this run completed the M5 terminal lifecycle instead of starting the
-normal three-course and 20-video phases. Evidence is summarized in
-`umi/reports/unified-quality-2026-10-12/REPORT.md` and the immutable replacement
-plan under `teaching-videos/_audit/replacements/world-history-module-5-the-roman-empire-v2/`.
+**Forbidden:** real family/student/staff data, sending test email, charging or
+refunding, enrollment/credit/placement/graduation decisions, changing public
+school/accreditation claims, broad dependency upgrades, teaching-video/content
+changes, and unrelated dirty primary-checkout files.
+
+**Accepted candidate:** independent security review returned `ACCEPT` against
+baseline `f4d70e33` after login/reset row fencing, legacy status semantics,
+compare-and-swap status-link rotation/rollback, retryable status errors, token
+field stripping, capability gating and the direct-route rewrite were verified.
+Local evidence: backend 234/234 tests, frontend 69/69 tests, focused status-page
+4/4 tests, Prisma validation, production build, parent-journey 7/7, public trust
+claims audit and `git diff --check` all pass.
+
+**Current action:** commit and push the exact accepted allowlist, back up the
+production database, apply the additive status-token schema, update/restart the
+backend without disturbing unrelated remote dirty files, run safe API checks,
+then verify the GitHub-triggered Netlify deployment at the exact commit.
+
+**Stop conditions:** any need to expose PII in a URL/response, reuse the
+short-lived interest-confirmation token as a permanent credential without a
+documented security decision, mutate real application/account data for a test,
+send real mail, or discover a source/production schema conflict that cannot be
+made backward compatible.
+
+**Execution provenance:** Codex/Umi implemented and ran the local verification.
+An independent security reviewer performed findings-first review of the exact
+candidate and required the concurrency/rollback fixes before acceptance. No
+real account, family record, email or payment was used in testing.

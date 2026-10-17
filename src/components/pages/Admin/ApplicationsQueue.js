@@ -542,6 +542,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
   const [stripeCheckoutPlan, setStripeCheckoutPlan] = useState('guided_monthly');
   const [stripeCheckoutLink, setStripeCheckoutLink] = useState('');
   const [stripeCheckoutEnabled, setStripeCheckoutEnabled] = useState(false);
+  const [applicationStatusEnabled, setApplicationStatusEnabled] = useState(false);
   const [placementDecisionCapability, setPlacementDecisionCapability] = useState({ available: false, reason: 'loading' });
   const [manualPaymentReceipt, setManualPaymentReceipt] = useState(null);
   const [manualPaymentDraft, setManualPaymentDraft] = useState({
@@ -579,6 +580,7 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
         const capabilities = capabilitiesResponse.ok ? await capabilitiesResponse.json() : {};
         if (active) {
           setStripeCheckoutEnabled(capabilities.applicationStripeCheckout === true);
+          setApplicationStatusEnabled(capabilities.applicationStatus === true);
           setPlacementDecisionCapability(capabilities.placementDecision || { available: false, reason: 'backend_not_ready' });
         }
       } catch {
@@ -870,6 +872,31 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
       () => showToast('Copied to clipboard'),
       () => showToast('Copy failed — select manually'),
     );
+  }
+
+  async function sendStatusLink(app) {
+    const confirmed = window.confirm(
+      `Send a status link email to ${app.parentName} (${app.parentEmail}) for ${app.studentName}? A new link will be issued and the previous one will stop working.`
+    );
+    if (!confirmed) return;
+    setSaving(app.id + 'status-link');
+    try {
+      const res = await fetch(`${API}/api/applications/${app.id}/status-link`, {
+        method: 'POST',
+        credentials: 'include',
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        showToast(data.error || 'Status link could not be sent');
+        return;
+      }
+      showToast('Status link sent to parent');
+      load();
+    } catch {
+      showToast('Status link could not be sent');
+    } finally {
+      setSaving('');
+    }
   }
 
   function openRejectModal(app) {
@@ -1345,6 +1372,17 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
 	                              Record Manual Payment
 	                            </button>
 	                          )}
+
+                          {workflowEnabled && applicationStatusEnabled && (
+                            <button
+                              onClick={() => sendStatusLink(app)}
+                              disabled={saving === app.id + 'status-link'}
+                              title="Send a secure status link to the parent email on file"
+                              style={{ padding: '8px 14px', borderRadius: 8, background: 'none', border: '1.5px solid #2b3d6d', color: '#2b3d6d', fontWeight: 700, fontSize: 12, cursor: 'pointer' }}
+                            >
+                              {saving === app.id + 'status-link' ? T('Sending…', '发送中…') : T('Send status link', '发送状态链接')}
+                            </button>
+                          )}
 
                           <button onClick={() => copyToClipboard(app.parentEmail)}
                             style={{ padding: '8px 14px', borderRadius: 8, background: 'none', border: '1.5px solid #d4d8e0', color: '#2b3d6d', fontWeight: 600, fontSize: 12, cursor: 'pointer' }}>

@@ -53,6 +53,7 @@
 /parent/transcript  /index.html  200
 /apply  /index.html  200
 /application/confirm  /index.html  200
+/application/status  /index.html  200
 /welcome  /index.html  200
 /verify/enrollment/:token  /index.html  200
 /verify/:code  /index.html  200

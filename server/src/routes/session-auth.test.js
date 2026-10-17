@@ -3,8 +3,9 @@
 const mockPrisma = {
   loginSession: { create: jest.fn(), findUnique: jest.fn(), update: jest.fn(), updateMany: jest.fn() },
   adminUser: { findUnique: jest.fn() },
-  studentAccount: { findUnique: jest.fn(), create: jest.fn() },
-  parentAccount: { findUnique: jest.fn(), update: jest.fn() },
+  studentAccount: { findUnique: jest.fn(), create: jest.fn(), update: jest.fn(), updateMany: jest.fn() },
+  parentAccount: { findUnique: jest.fn(), update: jest.fn(), updateMany: jest.fn() },
+  passwordResetToken: { findUnique: jest.fn(), update: jest.fn(), updateMany: jest.fn() },
   student: { findUnique: jest.fn(), create: jest.fn() },
   subscription: { findFirst: jest.fn() },
   $transaction: jest.fn(),
@@ -94,8 +95,14 @@ beforeEach(() => {
   mockPrisma.student.findUnique.mockResolvedValue(null);
   mockPrisma.student.create.mockResolvedValue({ id: 'student-fixture', name: 'Fixture' });
   mockPrisma.studentAccount.create.mockResolvedValue({ id: 'account-fixture', studentId: 'student-fixture', email: identities.student.email });
+  mockPrisma.studentAccount.updateMany.mockResolvedValue({ count: 1 });
+  mockPrisma.parentAccount.updateMany.mockResolvedValue({ count: 1 });
   mockPrisma.$transaction.mockImplementation(async operation => operation(mockPrisma));
   mockPrisma.subscription.findFirst.mockResolvedValue({ stripeCustomerId: 'cus_synthetic' });
+  mockPrisma.passwordResetToken.findUnique.mockResolvedValue(null);
+  mockPrisma.passwordResetToken.update.mockResolvedValue({});
+  mockPrisma.passwordResetToken.updateMany.mockResolvedValue({ count: 1 });
+  mockPrisma.studentAccount.update.mockResolvedValue({});
   mockStripe.checkout.sessions.create.mockResolvedValue({ id: 'cs_synthetic', url: 'https://example.invalid/checkout' });
   mockStripe.billingPortal.sessions.create.mockResolvedValue({ url: 'https://example.invalid/portal' });
   jest.spyOn(console, 'error').mockImplementation(() => {});
@@ -304,22 +311,36 @@ test('revocation racing activity telemetry cannot reopen or retouch a closed ses
   await expect(mockPrisma.loginSession.updateMany.mock.results[0].value).resolves.toEqual({ count: 0 });
 });
 
-test('registration cannot issue a sessionless token if session persistence fails', async () => {
-  mockPrisma.studentAccount.findUnique.mockResolvedValue(null);
-  mockPrisma.loginSession.create.mockRejectedValue(Error('synthetic create failure'));
+test('POST /register returns 403 without any mutation, session, or cookie', async () => {
   const result = await invoke(authRoutes, 'post', '/register', { body: {
     email: identities.student.email, password: 'fixture-password', name: 'Fixture',
     birthDate: '2009-01-01', parentGuardian: 'Fixture guardian', address: 'Fixture', city: 'Fixture', province: 'Fixture',
   } });
-  expect(result.res.code).toBe(503);
+  expect(result.res.code).toBe(403);
   expect(result.res.body).toMatchObject({
-    code: 'registration_session_unavailable',
-    error: expect.stringMatching(/account was created.*logging in/i),
+    error: expect.any(String),
+    code: 'self_registration_disabled',
+    applyUrl: '/apply',
   });
-  expect(result.res.body.token).toBeUndefined(); expect(result.res.cookies).toEqual({});
-  // The existing registration transaction commits the account before session
-  // creation. A subsequent login can retry; this does not claim full rollback.
-  expect(mockPrisma.studentAccount.create).toHaveBeenCalledTimes(1);
+  expect(result.res.body.token).toBeUndefined();
+  expect(result.res.cookies).toEqual({});
+  expect(mockPrisma.studentAccount.create).not.toHaveBeenCalled();
+  expect(mockPrisma.student.create).not.toHaveBeenCalled();
+  expect(mockPrisma.$transaction).not.toHaveBeenCalled();
+  expect(mockPrisma.loginSession.create).not.toHaveBeenCalled();
+});
+
+test.each(['student', 'parent'])('%s login issues no session when reset wins the account-row fence', async role => {
+  const account = role === 'parent' ? mockPrisma.parentAccount : mockPrisma.studentAccount;
+  account.updateMany.mockResolvedValueOnce({ count: 0 });
+  const router = role === 'parent' ? parentAuthRoutes : authRoutes;
+  const result = await invoke(router, 'post', '/login', {
+    body: { email: identities[role].email, password: 'fixture-password' },
+  });
+  expect(result.res.code).toBe(503);
+  expect(mockPrisma.loginSession.create).not.toHaveBeenCalled();
+  expect(result.res.body.token).toBeUndefined();
+  expect(result.res.cookies).toEqual({});
 });
 
 test('valid admin session still reaches parent setup and internal checkout', async () => {
@@ -327,4 +348,74 @@ test('valid admin session still reaches parent setup and internal checkout', asy
   const setup = await invoke(parentAuthRoutes, 'post', '/setup', req);
   expect(setup.res.code).toBe(400); expect(setup.res.body.error).toBe('studentId required');
   expect((await invoke(checkoutRoutes, 'post', '/create-session', { ...req, body: { planType: 'group_monthly' } })).res.code).toBe(200);
+});
+
+test('student password reset atomically revokes active sessions and uses single now', async () => {
+  mockPrisma.passwordResetToken.findUnique.mockResolvedValue({
+    id: 'reset-student-fixture', role: 'student', email: identities.student.email,
+    usedAt: null, expiresAt: new Date(Date.now() + 3_600_000),
+  });
+  const result = await invoke(authRoutes, 'post', '/reset-password', {
+    body: { token: 'valid-token', password: 'NewPassword1' },
+  });
+  expect(result.res.code).toBe(200);
+  expect(result.res.body).toEqual({ ok: true });
+  expect(mockPrisma.$transaction).toHaveBeenCalledTimes(1);
+  expect(mockPrisma.loginSession.updateMany).toHaveBeenCalledWith(
+    expect.objectContaining({
+      where: expect.objectContaining({ studentId: 'student-fixture', role: 'student', endedAt: null }),
+    })
+  );
+  const updateManyCall = mockPrisma.loginSession.updateMany.mock.calls[0][0];
+  const tokenUpdateCall = mockPrisma.passwordResetToken.updateMany.mock.calls[0][0];
+  expect(updateManyCall.data.endedAt).toEqual(tokenUpdateCall.data.usedAt);
+});
+
+test('parent password reset atomically revokes active sessions and uses single now', async () => {
+  mockPrisma.passwordResetToken.findUnique.mockResolvedValue({
+    id: 'reset-parent-fixture', role: 'parent', email: identities.parent.email,
+    usedAt: null, expiresAt: new Date(Date.now() + 3_600_000),
+  });
+  const result = await invoke(parentAuthRoutes, 'post', '/reset-password', {
+    body: { token: 'valid-token', password: 'NewPassword1' },
+  });
+  expect(result.res.code).toBe(200);
+  expect(result.res.body).toEqual({ ok: true });
+  expect(mockPrisma.$transaction).toHaveBeenCalledTimes(1);
+  expect(mockPrisma.loginSession.updateMany).toHaveBeenCalledWith(
+    expect.objectContaining({
+      where: expect.objectContaining({ parentAccountId: 'parent-fixture', role: 'parent', endedAt: null }),
+    })
+  );
+  const updateManyCall = mockPrisma.loginSession.updateMany.mock.calls[0][0];
+  const tokenUpdateCall = mockPrisma.passwordResetToken.updateMany.mock.calls[0][0];
+  expect(updateManyCall.data.endedAt).toEqual(tokenUpdateCall.data.usedAt);
+});
+
+test.each(['student', 'parent'])('invalid %s reset token produces no transaction or session revocation', async role => {
+  mockPrisma.passwordResetToken.findUnique.mockResolvedValue(null);
+  const router = role === 'parent' ? parentAuthRoutes : authRoutes;
+  const result = await invoke(router, 'post', '/reset-password', {
+    body: { token: 'bad-token', password: 'NewPassword1' },
+  });
+  expect(result.res.code).toBe(400);
+  expect(mockPrisma.$transaction).not.toHaveBeenCalled();
+  expect(mockPrisma.loginSession.updateMany).not.toHaveBeenCalled();
+});
+
+test.each(['student', 'parent'])('concurrent %s reset loses the atomic token claim and changes nothing', async role => {
+  const email = role === 'parent' ? identities.parent.email : identities.student.email;
+  mockPrisma.passwordResetToken.findUnique.mockResolvedValue({
+    id: `reset-${role}-fixture`, role, email,
+    usedAt: null, expiresAt: new Date(Date.now() + 3_600_000),
+  });
+  mockPrisma.passwordResetToken.updateMany.mockResolvedValue({ count: 0 });
+  const router = role === 'parent' ? parentAuthRoutes : authRoutes;
+  const result = await invoke(router, 'post', '/reset-password', {
+    body: { token: 'raced-token', password: 'NewPassword1' },
+  });
+  expect(result.res.code).toBe(400);
+  expect(mockPrisma.studentAccount.update).not.toHaveBeenCalled();
+  expect(mockPrisma.parentAccount.update).not.toHaveBeenCalled();
+  expect(mockPrisma.loginSession.updateMany).not.toHaveBeenCalled();
 });

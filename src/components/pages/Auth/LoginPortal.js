@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logoSlogan from '../../../img/logo_slogan.png';
 import { setAdminSession, setStudentSession } from '../../../api/authStorage';
 import { getAuthPageStrings } from '../../../i18n/siteStrings';
@@ -21,54 +21,16 @@ async function readApiJson(response, fallbackMessage) {
   }
 }
 
-function emptyRegisterForm() {
-  return {
-    name: '',
-    email: '',
-    password: '',
-    birthDate: '',
-    gender: 'Female',
-    parentGuardian: '',
-    address: '',
-    city: '',
-    province: '',
-    zipCode: '',
-  };
-}
-
 export default function LoginPortal({ language, portalRole = 'student' }) {
   const t = getAuthPageStrings(language);
   const navigate = useNavigate();
-  const [, setSearchParams] = useSearchParams();
   const isEn = language === 'en';
   const isAdminPortal = portalRole === 'admin';
 
-  const tabFromUrl = 'signin'; // registration is admin-only; self-register is disabled
-  const [tab, setTab] = useState(tabFromUrl);
-
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
-  const [reg, setReg] = useState(emptyRegisterForm);
   const [err, setErr] = useState('');
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setTab(tabFromUrl);
-  }, [tabFromUrl]);
-
-  function setRegField(key, value) {
-    setReg((prev) => ({ ...prev, [key]: value }));
-  }
-
-  function selectTab(next) {
-    setTab(next);
-    setErr('');
-    if (next === 'register') {
-      setSearchParams({ tab: 'register' }, { replace: true });
-    } else {
-      setSearchParams({}, { replace: true });
-    }
-  }
 
   async function submitLogin(e) {
     e.preventDefault();
@@ -104,43 +66,6 @@ export default function LoginPortal({ language, portalRole = 'student' }) {
       throw new Error(t.unexpectedLogin);
     } catch (e) {
       setErr(e.message || t.loginFailed);
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  async function submitRegister(e) {
-    e.preventDefault();
-    setErr('');
-    if (!API_BASE) {
-      setErr(t.missingApiUrl);
-      return;
-    }
-    setLoading(true);
-    try {
-      const r = await fetch(`${API_BASE}/api/auth/register`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({
-          name: reg.name.trim(),
-          email: reg.email.trim(),
-          password: reg.password,
-          birthDate: reg.birthDate,
-          gender: reg.gender,
-          parentGuardian: reg.parentGuardian.trim(),
-          address: reg.address.trim(),
-          city: reg.city.trim(),
-          province: reg.province.trim(),
-          zipCode: reg.zipCode.trim(),
-        }),
-      });
-      const data = await readApiJson(r, t.unexpectedApiResponse);
-      if (!r.ok) throw new Error(data.error || t.registerFailed);
-      setStudentSession(data.token, data.student);
-      navigate('/transcript', { replace: true });
-    } catch (e) {
-      setErr(e.message || t.registerFailed);
     } finally {
       setLoading(false);
     }
@@ -201,9 +126,8 @@ export default function LoginPortal({ language, portalRole = 'student' }) {
                 <button
                   type="button"
                   role="tab"
-                  aria-selected={tab === 'signin'}
-                  className={tab === 'signin' ? styles.tabActive : styles.tab}
-                  onClick={() => selectTab('signin')}
+                  aria-selected="true"
+                  className={styles.tabActive}
                 >
                   {isAdminPortal ? (isEn ? 'Admin sign in' : '管理员登入') : (isEn ? 'Student sign in' : '学生登入')}
                 </button>
@@ -225,205 +149,58 @@ export default function LoginPortal({ language, portalRole = 'student' }) {
                 </div>
               )}
 
-              {tab === 'signin' && (
-                <form className={styles.formBody} onSubmit={submitLogin} noValidate>
-                  <p className="small text-muted mb-3">
-                    {isAdminPortal
-                      ? (isEn ? 'Use your GIIS admin account. Student and parent accounts should use their own portals.' : '请使用 GIIS 管理员帐号。学生与家长帐号应使用各自入口。')
-                      : t.signInBlurb}
-                  </p>
-                  <div className="mb-3">
-                    <label className={styles.label} htmlFor="portal-email">
-                      {t.email}
-                    </label>
-                    <input
-                      id="portal-email"
-                      type="email"
-                      className="form-control"
-                      value={loginEmail}
-                      onChange={(e) => setLoginEmail(e.target.value)}
-                      autoComplete="username"
-                      required
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label className={styles.label} htmlFor="portal-password">
-                      {t.password}
-                    </label>
-                    <input
-                      id="portal-password"
-                      type="password"
-                      className="form-control"
-                      value={loginPassword}
-                      onChange={(e) => setLoginPassword(e.target.value)}
-                      autoComplete="current-password"
-                      required
-                    />
-                  </div>
-                  <button type="submit" className={styles.submitBtn} disabled={loading}>
-                    {loading ? t.signingIn : t.signInCta}
-                  </button>
-                  <p className="small text-center mb-0 mt-3">
-                    <Link to={isAdminPortal ? '/reset-password?role=admin' : '/reset-password?role=student'}>
+              <form className={styles.formBody} onSubmit={submitLogin} noValidate>
+                <p className="small text-muted mb-3">
+                  {isAdminPortal
+                    ? (isEn ? 'Use your GIIS admin account. Student and parent accounts should use their own portals.' : '请使用 GIIS 管理员帐号。学生与家长帐号应使用各自入口。')
+                    : t.signInBlurb}
+                </p>
+                <div className="mb-3">
+                  <label className={styles.label} htmlFor="portal-email">
+                    {t.email}
+                  </label>
+                  <input
+                    id="portal-email"
+                    type="email"
+                    className="form-control"
+                    value={loginEmail}
+                    onChange={(e) => setLoginEmail(e.target.value)}
+                    autoComplete="username"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <label className={styles.label} htmlFor="portal-password">
+                    {t.password}
+                  </label>
+                  <input
+                    id="portal-password"
+                    type="password"
+                    className="form-control"
+                    value={loginPassword}
+                    onChange={(e) => setLoginPassword(e.target.value)}
+                    autoComplete="current-password"
+                    required
+                  />
+                </div>
+                <button type="submit" className={styles.submitBtn} disabled={loading}>
+                  {loading ? t.signingIn : t.signInCta}
+                </button>
+                <p className="small text-center mb-0 mt-3">
+                  {isAdminPortal ? (
+                    <span className="text-muted" style={{ fontSize: '0.85rem' }}>
+                      {isEn
+                        ? 'Password issues? Contact your school account administrator or use the staff access reset.'
+                        : '密码问题？请联系学校帐号管理员或使用员工访问重置流程。'}
+                    </span>
+                  ) : (
+                    <Link to="/reset-password?role=student">
                       {isEn ? 'Forgot password?' : '忘记密码？'}
                     </Link>
-                  </p>
-                </form>
-              )}
-
-              {tab === 'register' && (
-                <form className={styles.formBody} onSubmit={submitRegister} noValidate>
-                  <p className="small text-muted mb-2">{t.registerBlurb}</p>
-                  <p className="small text-muted mb-3">{t.registerRequiredNote}</p>
-
-                  <div className="row g-2">
-                    <div className="col-md-6">
-                      <label className={styles.label} htmlFor="reg-name">
-                        {t.displayName} *
-                      </label>
-                      <input
-                        id="reg-name"
-                        type="text"
-                        className="form-control"
-                        value={reg.name}
-                        onChange={(e) => setRegField('name', e.target.value)}
-                        autoComplete="name"
-                        required
-                      />
-                    </div>
-                  <div className="col-md-6">
-                    <label className={styles.label} htmlFor="reg-birth">
-                      {t.birthDate} *
-                    </label>
-                    <input
-                      id="reg-birth"
-                      type="date"
-                      className="form-control"
-                      value={reg.birthDate}
-                      onChange={(e) => setRegField('birthDate', e.target.value)}
-                      required
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label className={styles.label} htmlFor="reg-gender">
-                      {t.gender} *
-                    </label>
-                    <select
-                      id="reg-gender"
-                      className="form-select"
-                      value={reg.gender}
-                      onChange={(e) => setRegField('gender', e.target.value)}
-                    >
-                      <option value="Female">{t.genderFemale}</option>
-                      <option value="Male">{t.genderMale}</option>
-                    </select>
-                  </div>
-                  <div className="col-md-6">
-                    <label className={styles.label} htmlFor="reg-parent">
-                      {t.parentGuardian} *
-                    </label>
-                    <input
-                      id="reg-parent"
-                      type="text"
-                      className="form-control"
-                      value={reg.parentGuardian}
-                      onChange={(e) => setRegField('parentGuardian', e.target.value)}
-                      autoComplete="section-parent name"
-                      required
-                    />
-                  </div>
-                  <div className="col-12">
-                    <label className={styles.label} htmlFor="reg-address">
-                      {t.address} *
-                    </label>
-                    <input
-                      id="reg-address"
-                      type="text"
-                      className="form-control"
-                      value={reg.address}
-                      onChange={(e) => setRegField('address', e.target.value)}
-                      autoComplete="street-address"
-                      required
-                    />
-                  </div>
-                  <div className="col-md-4">
-                    <label className={styles.label} htmlFor="reg-city">
-                      {t.city} *
-                    </label>
-                    <input
-                      id="reg-city"
-                      type="text"
-                      className="form-control"
-                      value={reg.city}
-                      onChange={(e) => setRegField('city', e.target.value)}
-                      autoComplete="address-level2"
-                      required
-                    />
-                  </div>
-                  <div className="col-md-4">
-                    <label className={styles.label} htmlFor="reg-province">
-                      {t.province} *
-                    </label>
-                    <input
-                      id="reg-province"
-                      type="text"
-                      className="form-control"
-                      value={reg.province}
-                      onChange={(e) => setRegField('province', e.target.value)}
-                      autoComplete="address-level1"
-                      required
-                    />
-                  </div>
-                  <div className="col-md-4">
-                    <label className={styles.label} htmlFor="reg-zip">
-                      {t.zipCode}
-                    </label>
-                    <input
-                      id="reg-zip"
-                      type="text"
-                      className="form-control"
-                      value={reg.zipCode}
-                      onChange={(e) => setRegField('zipCode', e.target.value)}
-                      autoComplete="postal-code"
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label className={styles.label} htmlFor="reg-email">
-                      {t.email} *
-                    </label>
-                    <input
-                      id="reg-email"
-                      type="email"
-                      className="form-control"
-                      value={reg.email}
-                      onChange={(e) => setRegField('email', e.target.value)}
-                      autoComplete="email"
-                      required
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label className={styles.label} htmlFor="reg-password">
-                      {t.password} *
-                    </label>
-                    <input
-                      id="reg-password"
-                      type="password"
-                      className="form-control"
-                      value={reg.password}
-                      onChange={(e) => setRegField('password', e.target.value)}
-                      autoComplete="new-password"
-                      minLength={8}
-                      required
-                    />
-                    <div className={styles.hint}>{t.passwordHint}</div>
-                  </div>
-                </div>
-
-                <button type="submit" className={styles.submitBtn} disabled={loading}>
-                  {loading ? t.creating : t.createAccount}
-                </button>
+                  )}
+                </p>
               </form>
-            )}
+
           </div>
           </div>
 

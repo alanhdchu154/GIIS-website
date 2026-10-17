@@ -3,6 +3,7 @@ const {
   DEFAULT_PRINCIPAL_EMAIL,
   applicationAlertRecipients,
   buildApplicationInterestConfirmation,
+  buildStatusLinkEmail,
   buildNewApplicationAlert,
   buildWelcomeEmail,
 } = require('./mailer');
@@ -142,6 +143,42 @@ describe('application interest confirmation email', () => {
     expect(content.text).toContain('Confirmation does not guarantee admission');
     expect(content.text).toContain('确认不代表录取');
     expect(content.html.match(/bilingual-token/g)).toHaveLength(6);
+  });
+
+  test('includes the separate fragment-only status link when provided', () => {
+    const statusUrl = 'https://example.test/application/status#token=status-secret';
+    const content = buildApplicationInterestConfirmation({
+      parentName: 'Diana Parent',
+      studentName: 'Cecilia Student',
+      preferredLanguage: 'en',
+      communicationLanguage: 'en',
+      confirmationUrl: 'https://example.test/application/confirm?token=confirm-secret',
+      statusUrl,
+      expiresHours: 72,
+    });
+    expect(content.text).toContain(statusUrl);
+    expect(content.html).toContain(statusUrl);
+  });
+});
+
+describe('application status-link email', () => {
+  test('builds bilingual copy, escapes family fields, and preserves fragment URL', () => {
+    const statusUrl = 'https://example.test/application/status#token=status-secret';
+    const content = buildStatusLinkEmail({
+      parentName: 'Wang & Family',
+      studentName: '<Student>',
+      preferredLanguage: 'zh',
+      communicationLanguage: 'bilingual',
+      statusUrl,
+    });
+    expect(content.subject).toContain('application status link');
+    expect(content.subject).toContain('申请进度链接');
+    expect(content.html).toContain('Wang &amp; Family');
+    expect(content.html).toContain('&lt;Student&gt;');
+    expect(content.text).toContain(statusUrl);
+    expect(content.html).toContain(statusUrl);
+    expect(content.text).toContain('Do not share it publicly');
+    expect(content.text).toContain('请勿公开分享');
   });
 });
 

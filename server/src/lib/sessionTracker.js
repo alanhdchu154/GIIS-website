@@ -21,9 +21,9 @@ function durationSeconds(startedAt, now = new Date()) {
   return Math.max(0, Math.floor((now.getTime() - start.getTime()) / 1000));
 }
 
-async function createLoginSession({ role, email, studentId = null, parentAccountId = null, adminId = null, req }) {
+async function createLoginSession({ role, email, studentId = null, parentAccountId = null, adminId = null, req, db = prisma }) {
   try {
-    return await prisma.loginSession.create({
+    return await db.loginSession.create({
       data: {
         role,
         email: String(email || '').toLowerCase(),

@@ -440,6 +440,9 @@ model Application {
   interestConfirmationExpiresAt  DateTime?
   interestConfirmationSentAt     DateTime?
   interestConfirmedAt            DateTime?
+  statusTokenHash                String?                   @unique
+  statusTokenIssuedAt            DateTime?
+  statusTokenRotatedAt           DateTime?
   recordsStatus                  String                    @default("not_requested") // not_requested | requested | partial | received | verified
   assignedTo                     String                    @default("")
   nextAction                     String                    @default("Review application")

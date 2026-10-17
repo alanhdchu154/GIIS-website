@@ -64,14 +64,22 @@ router.post('/login', async (req, res) => {
   const ok = await bcrypt.compare(password, account.passwordHash);
   if (!ok) return res.status(401).json({ error: 'Invalid email or password' });
 
-  await prisma.parentAccount.update({ where: { id: account.id }, data: { lastLoginAt: new Date() } });
-
-  const session = await createLoginSession({
-    role: 'parent',
-    email: account.email,
-    studentId: account.studentId,
-    parentAccountId: account.id,
-    req,
+  // Serialize successful login issuance with password reset on the account row.
+  // See the student login path for the two possible transaction orderings.
+  const session = await prisma.$transaction(async (tx) => {
+    const claimed = await tx.parentAccount.updateMany({
+      where: { id: account.id, passwordHash: account.passwordHash },
+      data: { lastLoginAt: new Date() },
+    });
+    if (claimed.count !== 1) return null;
+    return createLoginSession({
+      role: 'parent',
+      email: account.email,
+      studentId: account.studentId,
+      parentAccountId: account.id,
+      req,
+      db: tx,
+    });
   });
   if (!session?.id) return sendSessionError(res);
   const token = signParentToken(account, session.id);
@@ -123,10 +131,27 @@ router.post('/reset-password', async (req, res) => {
   if (!account) return res.status(400).json({ error: 'Invalid or expired reset link' });
 
   const passwordHash = await bcrypt.hash(password, 12);
-  await prisma.$transaction([
-    prisma.parentAccount.update({ where: { id: account.id }, data: { passwordHash } }),
-    prisma.passwordResetToken.update({ where: { id: reset.id }, data: { usedAt: new Date() } }),
-  ]);
+  const now = new Date();
+  try {
+    await prisma.$transaction(async (tx) => {
+      const claimed = await tx.passwordResetToken.updateMany({
+        where: { id: reset.id, role: 'parent', usedAt: null, expiresAt: { gt: now } },
+        data: { usedAt: now },
+      });
+      if (claimed.count !== 1) {
+        const error = new Error('invalid_reset');
+        error.code = 'INVALID_RESET';
+        throw error;
+      }
+      await tx.parentAccount.update({ where: { id: account.id }, data: { passwordHash } });
+      await tx.loginSession.updateMany({ where: { parentAccountId: account.id, role: 'parent', endedAt: null }, data: { endedAt: now } });
+    });
+  } catch (error) {
+    if (error.code === 'INVALID_RESET') {
+      return res.status(400).json({ error: 'Invalid or expired reset link' });
+    }
+    throw error;
+  }
 
   res.json({ ok: true });
 });

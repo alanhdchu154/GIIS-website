@@ -86,19 +86,30 @@ function buildApplicationInterestConfirmation({
   communicationLanguage,
   confirmationUrl,
   expiresHours = 72,
+  statusUrl = null,
 }) {
   const language = normalizeCommunicationLanguage(communicationLanguage, preferredLanguage);
   const safeParentName = escapeHtml(parentName);
   const safeStudentName = escapeHtml(studentName);
   const safeUrl = escapeHtml(confirmationUrl);
+  const safeStatusUrl = statusUrl ? escapeHtml(statusUrl) : null;
+  const statusLinkEn = safeStatusUrl
+    ? `<p style="font-size:13px;color:#5c6578;margin-top:16px">You can also <a href="${safeStatusUrl}" style="color:#2b3d6d">check your application status</a> at any time using the link in this email.</p>`
+    : '';
+  const statusLinkZh = safeStatusUrl
+    ? `<p style="font-size:13px;color:#5c6578;margin-top:16px">您也可以随时通过此邮件中的链接<a href="${safeStatusUrl}" style="color:#2b3d6d">查看申请进度</a>。</p>`
+    : '';
+  const statusTextEn = statusUrl ? `\n\nCheck application status anytime: ${statusUrl}` : '';
+  const statusTextZh = statusUrl ? `\n\n随时查看申请进度：${statusUrl}` : '';
   const english = {
     heading: 'Confirm and continue application',
     greeting: `Dear ${safeParentName},`,
     intro: `We received the application for <strong>${safeStudentName}</strong>. Please confirm that you would like the GIIS admissions team to continue the review.`,
     boundary: 'Confirmation does not create a fee or guarantee admission, transfer credit, grade placement, or a graduation date.',
     expiry: `This link expires in ${expiresHours} hours. If you did not submit an application, you can ignore this email.`,
+    statusBlock: statusLinkEn,
     fallback: 'If the button does not work, open this link:',
-    text: `Dear ${parentName},\n\nWe received the application for ${studentName}. Confirm that you would like GIIS to continue the review:\n${confirmationUrl}\n\nConfirmation does not guarantee admission, transfer credit, grade placement, or a graduation date. This link expires in ${expiresHours} hours.`,
+    text: `Dear ${parentName},\n\nWe received the application for ${studentName}. Confirm that you would like GIIS to continue the review:\n${confirmationUrl}\n\nConfirmation does not guarantee admission, transfer credit, grade placement, or a graduation date. This link expires in ${expiresHours} hours.${statusTextEn}`,
   };
   const chinese = {
     heading: '确认继续申请',
@@ -106,8 +117,9 @@ function buildApplicationInterestConfirmation({
     intro: `我们已收到 <strong>${safeStudentName}</strong> 的入学申请。请确认您希望 GIIS 招生团队继续审核。`,
     boundary: '确认申请不会产生费用，也不代表学分、年级安排、毕业日期或录取结果已经获得批准。',
     expiry: `此链接将在 ${expiresHours} 小时后失效。若您没有提交申请，可以忽略此邮件。`,
+    statusBlock: statusLinkZh,
     fallback: '如果按钮无法打开，请复制此链接：',
-    text: `${parentName} 家长，您好：\n\n我们已收到 ${studentName} 的入学申请。请确认继续申请：\n${confirmationUrl}\n\n确认不代表录取、转学分、年级安排或毕业日期已经获得批准。链接将在 ${expiresHours} 小时后失效。`,
+    text: `${parentName} 家长，您好：\n\n我们已收到 ${studentName} 的入学申请。请确认继续申请：\n${confirmationUrl}\n\n确认不代表录取、转学分、年级安排或毕业日期已经获得批准。链接将在 ${expiresHours} 小时后失效。${statusTextZh}`,
   };
   const sections = language === 'bilingual' ? [english, chinese] : [language === 'zh' ? chinese : english];
   const subject = language === 'bilingual'
@@ -120,6 +132,7 @@ function buildApplicationInterestConfirmation({
     <p style="margin:24px 0"><a href="${safeUrl}" style="background:#2b3d6d;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:800;display:inline-block">${section.heading}</a></p>
     <p style="font-size:13px;color:#5c6578">${section.boundary}</p>
     <p style="font-size:13px;color:#5c6578">${section.expiry}</p>
+    ${section.statusBlock || ''}
     <p style="font-size:12px;color:#9aa0ad;margin-top:24px">${section.fallback}<br><a href="${safeUrl}" style="color:#2b3d6d">${safeUrl}</a></p>
   `).join('');
 
@@ -728,6 +741,79 @@ async function sendGraduationDocumentPackage({
   });
 }
 
+function buildStatusLinkEmail({
+  parentName,
+  studentName,
+  preferredLanguage,
+  communicationLanguage,
+  statusUrl,
+}) {
+  const language = normalizeCommunicationLanguage(communicationLanguage, preferredLanguage);
+  const safeParentName = escapeHtml(parentName);
+  const safeStudentName = escapeHtml(studentName);
+  const safeStatusUrl = escapeHtml(statusUrl);
+
+  const english = {
+    subject: 'Your GIIS application status link',
+    heading: 'Check your application status',
+    greeting: `Dear ${safeParentName},`,
+    intro: `You can check the current status of the application for <strong>${safeStudentName}</strong> at any time using the link below.`,
+    note: 'This link is personal to your application. Do not share it publicly.',
+    cta: 'View application status',
+    fallback: 'If the button does not work, open this link:',
+    text: `Dear ${parentName},\n\nYou can check the status of the application for ${studentName} here:\n${statusUrl}\n\nThis link is personal to your application. Do not share it publicly.`,
+  };
+  const chinese = {
+    subject: '您的 GIIS 申请进度链接',
+    heading: '查看申请进度',
+    greeting: `${safeParentName} 家长，您好：`,
+    intro: `您可以随时通过以下链接查看 <strong>${safeStudentName}</strong> 的申请进度。`,
+    note: '此链接仅限您本人使用，请勿公开分享。',
+    cta: '查看申请进度',
+    fallback: '如果按钮无法打开，请复制此链接：',
+    text: `${parentName} 家长，您好：\n\n点击以下链接查看 ${studentName} 的申请进度：\n${statusUrl}\n\n此链接仅限您本人使用，请勿公开分享。`,
+  };
+
+  const sections = language === 'bilingual' ? [english, chinese] : [language === 'zh' ? chinese : english];
+  const subject = language === 'bilingual'
+    ? `${english.subject} / ${chinese.subject}`
+    : language === 'zh' ? chinese.subject : english.subject;
+
+  const sectionHtml = sections.map((section, index) => `
+    ${index ? '<hr style="border:none;border-top:1px solid #e8ecf5;margin:28px 0">' : ''}
+    <p>${section.greeting}</p>
+    <p>${section.intro}</p>
+    <p style="margin:24px 0"><a href="${safeStatusUrl}" style="background:#2b3d6d;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:800;display:inline-block">${section.cta}</a></p>
+    <p style="font-size:13px;color:#5c6578">${section.note}</p>
+    <p style="font-size:12px;color:#9aa0ad;margin-top:24px">${section.fallback}<br><a href="${safeStatusUrl}" style="color:#2b3d6d">${safeStatusUrl}</a></p>
+  `).join('');
+
+  return {
+    subject,
+    html: `
+<div style="font-family:Inter,sans-serif;max-width:560px;margin:0 auto;color:#1a1d24">
+  <div style="background:#1a1a2e;padding:28px 32px;border-radius:12px 12px 0 0">
+    <p style="color:#d5a836;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin:0 0 8px">Genesis of Ideas International School</p>
+    <h1 style="color:#fff;font-size:24px;font-weight:800;margin:0">${sections.map((s) => s.heading).join(' / ')}</h1>
+  </div>
+  <div style="background:#fff;border:1px solid #e8ecf5;border-top:none;padding:28px 32px;border-radius:0 0 12px 12px">
+    ${sectionHtml}
+  </div>
+</div>
+    `.trim(),
+    text: sections.map((s) => s.text).join('\n\n---\n\n'),
+  };
+}
+
+async function sendStatusLinkEmail(details) {
+  const content = buildStatusLinkEmail(details);
+  return send({
+    to: details.parentEmail,
+    replyTo: ADMISSIONS_EMAIL,
+    ...content,
+  });
+}
+
 async function sendStaffAccessEmail({ email, displayName, accessUrl, purpose = 'invite', expiresMinutes = 60 }) {
   const reset = purpose === 'password_reset';
   const action = reset ? 'Reset staff password' : 'Set up staff account';
@@ -749,10 +835,12 @@ module.exports = {
   applicationAlertRecipients,
   buildNewApplicationAlert,
   buildApplicationInterestConfirmation,
+  buildStatusLinkEmail,
   buildWelcomeEmail,
   normalizeCommunicationLanguage,
   sendNewApplicationAlert,
   sendApplicationInterestConfirmation,
+  sendStatusLinkEmail,
   sendWelcomeEmail,
   sendRejectionEmail,
   sendWeeklyProgressEmail,

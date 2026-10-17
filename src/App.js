@@ -68,6 +68,7 @@ const AdminSubscriptionsPage = lazy(() => import('./components/pages/Admin/Admin
 const AdminWeeklyReportPage = lazy(() => import('./components/pages/Admin/AdminWeeklyReportPage'));
 const ApplyForm = lazy(() => import('./components/pages/Apply/ApplyForm'));
 const InterestConfirmationPage = lazy(() => import('./components/pages/Apply/InterestConfirmationPage'));
+const ApplicationStatusPage = lazy(() => import('./components/pages/Apply/ApplicationStatusPage'));
 const VerifyPage = lazy(() => import('./components/pages/Verify/VerifyPage'));
 const EnrollmentVerificationPage = lazy(() => import('./components/pages/EnrollmentVerification/EnrollmentVerificationPage'));
 const EnrollmentVerificationPublicPage = lazy(() => import('./components/pages/EnrollmentVerification/EnrollmentVerificationPublicPage'));
@@ -129,7 +130,8 @@ function App() {
   const isProfile = location.pathname === '/profile';
   const isEnrollmentVerification = location.pathname.startsWith('/enrollment-verification') || location.pathname.startsWith('/verify/enrollment/');
   const isParent = location.pathname.startsWith('/parent');
-  const hideChrome = isTranscript || isAdmin || isLearn || isProfile || isParent || isEnrollmentVerification;
+  const isApplicationStatus = location.pathname === '/application/status';
+  const hideChrome = isTranscript || isAdmin || isLearn || isProfile || isParent || isEnrollmentVerification || isApplicationStatus;
 
   return (
      <>
@@ -212,6 +214,7 @@ function App() {
          <Route path="/admin/weekly-report" element={<AdminWeeklyReportPage language={language} toggleLanguage={toggleLanguage} />} />
          <Route path="/apply" element={<ApplyForm language={language} />} />
          <Route path="/application/confirm" element={<InterestConfirmationPage language={language} />} />
+         <Route path="/application/status" element={<ApplicationStatusPage language={language} />} />
          <Route path="/welcome" element={<WelcomePage language={language} />} />
          <Route path="/verify/enrollment/:token" element={<EnrollmentVerificationPublicPage />} />
          <Route path="/verify/:code" element={<VerifyPage />} />

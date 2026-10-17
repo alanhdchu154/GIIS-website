@@ -15,6 +15,7 @@ const mockStripe = {
   subscriptions: { retrieve: jest.fn() },
   webhooks: { constructEvent: jest.fn() },
 };
+const mockSendStatusLinkEmail = jest.fn();
 jest.mock('../lib/prisma', () => mockDb);
 jest.mock('../middleware/auth', () => ({
   authenticate: (req, res, next) => req.auth ? next() : res.status(401).json({ error: 'Unauthenticated' }),
@@ -22,7 +23,7 @@ jest.mock('../middleware/auth', () => ({
   requirePermission: () => (req, res, next) => req.auth.role === 'admin' ? next() : res.status(403).json({ error: 'Forbidden' }),
   requireStaffRole: role => (req, res, next) => req.staff?.role === role ? next() : res.status(403).json({ error: 'Forbidden' }),
 }));
-jest.mock('../lib/mailer', () => ({}));
+jest.mock('../lib/mailer', () => ({ sendStatusLinkEmail: mockSendStatusLinkEmail }));
 jest.mock('stripe', () => () => mockStripe);
 process.env.STRIPE_SECRET_KEY = 'synthetic-only';
 process.env.STRIPE_WEBHOOK_SECRET = 'synthetic-only';
@@ -34,7 +35,7 @@ const webhook = require('./webhooks-stripe');
 async function invoke(router, path, request = {}, method = 'post') {
   const route = router.stack.find(layer => layer.route?.path === path && layer.route.methods[method]).route;
   const req = { params: { id: 'app_a' }, headers: {}, body: {}, ...request };
-  const res = { code: 200, status(c) { this.code = c; return this; }, json(b) { this.body = b; return this; }, send(b) { this.body = b; return this; } };
+  const res = { code: 200, headers: {}, status(c) { this.code = c; return this; }, set(k, v) { this.headers[k] = v; return this; }, json(b) { this.body = b; return this; }, send(b) { this.body = b; return this; } };
   for (const item of route.stack) {
     let next = false;
     await item.handle(req, res, () => { next = true; });
@@ -56,6 +57,7 @@ beforeEach(() => {
   mockDb.student.findFirst.mockResolvedValue(null);
   mockDb.applicationEvent.create.mockResolvedValue({ id: 'application_event' });
   mockDb.application.update.mockResolvedValue(approved);
+  mockSendStatusLinkEmail.mockResolvedValue({ ok: true, id: 'mail_synthetic' });
   mockDb.placementDecision.create.mockImplementation(async ({ data }) => ({ id: 'placement_a', ...data }));
   mockDb.placementDecision.updateMany.mockResolvedValue({ count: 1 });
   mockDb.placementDecision.findUnique.mockResolvedValue({ id: 'placement_a', applicationId: 'app_a', result: 'ready_with_bridge' });
@@ -66,6 +68,138 @@ beforeEach(() => {
   mockDb.subscription.upsert.mockResolvedValue({ id: 'dbsub_a', status: 'active', planType: 'guided_monthly', amountTotal: 14900 });
   mockStripe.subscriptions.retrieve.mockResolvedValue({ id: 'sub_a', status: 'active', items: { data: [{ current_period_end: 1800000000, price: { id: 'price_synthetic' } }] } });
   mockStripe.webhooks.constructEvent.mockReturnValue({ id: 'evt_a', type: 'checkout.session.completed', data: { object: session } });
+});
+
+test('public status lookup returns a fixed parent-safe allowlist and no-store headers', async () => {
+  mockDb.application.findUnique.mockResolvedValue({
+    status: 'pending', applicantType: 'transfer', recordsStatus: 'requested',
+    interestConfirmedAt: new Date('2026-10-01T00:00:00.000Z'), accountsCreated: false,
+    createdAt: new Date('2026-09-30T00:00:00.000Z'), updatedAt: new Date('2026-10-02T00:00:00.000Z'),
+  });
+  const response = await invoke(applications, '/status', { body: { token: 's'.repeat(43) } });
+  expect(response.code).toBe(200);
+  expect(response.headers['Cache-Control']).toBe('no-store, private');
+  expect(Object.keys(response.body).sort()).toEqual([
+    'accountsReady', 'interestConfirmed', 'nextStep', 'recordsStatus', 'stage', 'state', 'submittedAt', 'updatedAt',
+  ].sort());
+  expect(response.body).not.toHaveProperty('id');
+  expect(response.body).not.toHaveProperty('parentEmail');
+  expect(response.body).not.toHaveProperty('studentName');
+  expect(response.body).not.toHaveProperty('rejectionReason');
+});
+
+test('public status lookup uses one generic invalid response', async () => {
+  const malformed = await invoke(applications, '/status', { body: { token: 'short' } });
+  expect(malformed.body).toEqual({ state: 'invalid' });
+  expect(mockDb.application.findUnique).not.toHaveBeenCalled();
+  mockDb.application.findUnique.mockResolvedValue(null);
+  const unknown = await invoke(applications, '/status', { body: { token: 'u'.repeat(43) } });
+  expect(unknown.body).toEqual({ state: 'invalid' });
+});
+
+test('public status lookup reports a retryable temporary failure without claiming the token is invalid', async () => {
+  mockDb.application.findUnique.mockRejectedValueOnce(new Error('synthetic database outage'));
+  const response = await invoke(applications, '/status', { body: { token: 't'.repeat(43) } });
+  expect(response.code).toBe(503);
+  expect(response.body).toEqual({
+    state: 'unavailable',
+    error: 'Application status is temporarily unavailable. Please try again.',
+  });
+});
+
+test('status-link issuance is admin-only, stores only a hash, and returns no credential', async () => {
+  expect((await invoke(applications, '/:id/status-link')).code).toBe(401);
+  mockDb.application.findUnique.mockResolvedValue({
+    id: 'app_a', parentEmail: 'parent@example.invalid', parentName: 'Parent', studentName: 'Student',
+    preferredLanguage: 'en', communicationLanguage: 'en', statusTokenIssuedAt: null,
+  });
+  const response = await invoke(applications, '/:id/status-link', adminRequest);
+  expect(response.code).toBe(200);
+  expect(response.body).toEqual({ ok: true, delivery: { status: 'sent' } });
+  const persisted = mockDb.application.updateMany.mock.calls[0][0].data;
+  expect(persisted.statusTokenHash).toMatch(/^[a-f0-9]{64}$/);
+  const delivery = mockSendStatusLinkEmail.mock.calls[0][0];
+  expect(delivery.statusUrl).toMatch(/^https:\/\/genesisideas\.school\/application\/status#token=[A-Za-z0-9_-]{43}$/);
+  expect(JSON.stringify(response.body)).not.toContain('token');
+  expect(JSON.stringify(response.body)).not.toContain('statusUrl');
+});
+
+test('status-link delivery failure is explicit and records no credential', async () => {
+  mockDb.application.findUnique.mockResolvedValue({
+    id: 'app_a', parentEmail: 'parent@example.invalid', parentName: 'Parent', studentName: 'Student',
+    preferredLanguage: 'en', communicationLanguage: 'en',
+    statusTokenHash: 'old-hash',
+    statusTokenIssuedAt: new Date('2026-10-01T00:00:00.000Z'),
+    statusTokenRotatedAt: new Date('2026-10-02T00:00:00.000Z'),
+  });
+  mockSendStatusLinkEmail.mockResolvedValue({ ok: false, error: 'synthetic failure' });
+  const response = await invoke(applications, '/:id/status-link', adminRequest);
+  expect(response.code).toBe(502);
+  expect(response.body).toEqual({
+    error: 'Status link email could not be delivered. The previous status link remains valid.',
+    code: 'status_link_delivery_failed',
+  });
+  expect(mockDb.application.updateMany).toHaveBeenNthCalledWith(2, {
+    where: { id: 'app_a', statusTokenHash: expect.stringMatching(/^[a-f0-9]{64}$/) },
+    data: {
+      statusTokenHash: 'old-hash',
+      statusTokenIssuedAt: new Date('2026-10-01T00:00:00.000Z'),
+      statusTokenRotatedAt: new Date('2026-10-02T00:00:00.000Z'),
+    },
+  });
+  expect(mockDb.applicationEvent.create).toHaveBeenCalledWith({
+    data: expect.objectContaining({ action: 'status_link_delivery_failed' }),
+  });
+  expect(JSON.stringify(response.body)).not.toContain('#token=');
+});
+
+test('failed first status-link delivery restores null and does not claim an older link exists', async () => {
+  mockDb.application.findUnique.mockResolvedValue({
+    id: 'app_a', parentEmail: 'parent@example.invalid', parentName: 'Parent', studentName: 'Student',
+    preferredLanguage: 'en', communicationLanguage: 'en', statusTokenHash: null,
+    statusTokenIssuedAt: null, statusTokenRotatedAt: null,
+  });
+  mockSendStatusLinkEmail.mockResolvedValue({ ok: false, error: 'synthetic failure' });
+  const response = await invoke(applications, '/:id/status-link', adminRequest);
+  expect(response.code).toBe(502);
+  expect(response.body).toEqual({
+    error: 'Status link email could not be delivered. No status link was issued.',
+    code: 'status_link_delivery_failed',
+  });
+  expect(mockDb.application.updateMany).toHaveBeenNthCalledWith(2, {
+    where: { id: 'app_a', statusTokenHash: expect.stringMatching(/^[a-f0-9]{64}$/) },
+    data: { statusTokenHash: null, statusTokenIssuedAt: null, statusTokenRotatedAt: null },
+  });
+});
+
+test('status-link delivery reports uncertain state if guarded rollback loses a concurrent rotation', async () => {
+  mockDb.application.findUnique.mockResolvedValue({
+    id: 'app_a', parentEmail: 'parent@example.invalid', parentName: 'Parent', studentName: 'Student',
+    preferredLanguage: 'en', communicationLanguage: 'en', statusTokenHash: 'old-hash',
+    statusTokenIssuedAt: new Date('2026-10-01T00:00:00.000Z'), statusTokenRotatedAt: null,
+  });
+  mockSendStatusLinkEmail.mockResolvedValue({ ok: false, error: 'synthetic failure' });
+  mockDb.application.updateMany
+    .mockResolvedValueOnce({ count: 1 })
+    .mockResolvedValueOnce({ count: 0 });
+  const response = await invoke(applications, '/:id/status-link', adminRequest);
+  expect(response.code).toBe(503);
+  expect(response.body.code).toBe('status_link_delivery_state_uncertain');
+  expect(JSON.stringify(response.body)).not.toContain('#token=');
+});
+
+test('status-link issuance fails closed on a concurrent credential rotation before sending mail', async () => {
+  mockDb.application.findUnique.mockResolvedValue({
+    id: 'app_a', parentEmail: 'parent@example.invalid', parentName: 'Parent', studentName: 'Student',
+    preferredLanguage: 'en', communicationLanguage: 'en', statusTokenHash: 'observed-old-hash',
+    statusTokenIssuedAt: new Date('2026-10-01T00:00:00.000Z'), statusTokenRotatedAt: null,
+  });
+  mockDb.application.updateMany.mockResolvedValueOnce({ count: 0 });
+  const response = await invoke(applications, '/:id/status-link', adminRequest);
+  expect(response.code).toBe(409);
+  expect(response.body.code).toBe('status_link_rotation_conflict');
+  expect(mockSendStatusLinkEmail).not.toHaveBeenCalled();
+  expect(mockDb.applicationEvent.create).not.toHaveBeenCalled();
 });
 
 test('non-admin and unapproved applications cannot create Stripe sessions', async () => {

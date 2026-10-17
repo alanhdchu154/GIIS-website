@@ -14,6 +14,10 @@ const {
   parsePlacementDecision,
   placementDecisionEditError,
   interestTokenHash,
+  statusTokenHash,
+  createStatusToken,
+  statusUrlForToken,
+  buildParentSafeStatus,
   normalizePriorSchools,
   confirmOfficialRecordsRequested,
 } = require('./applications');
@@ -839,5 +843,269 @@ describe('parent interest confirmation', () => {
       .resolves.toEqual({ ok: true, state: 'invalid_or_expired' });
     await expect(confirmPublicApplicationInterest('f'.repeat(43), { prismaClient: expiredPrisma, now }))
       .resolves.toEqual({ ok: true, state: 'invalid_or_expired' });
+  });
+});
+
+describe('status token helpers', () => {
+  test('creates a 32-byte base64url token and produces a distinct SHA-256 hash', () => {
+    const token = createStatusToken();
+    expect(token).toMatch(/^[A-Za-z0-9_-]{43}$/);
+    const hash = statusTokenHash(token);
+    expect(hash).toMatch(/^[a-f0-9]{64}$/);
+    expect(statusTokenHash(token)).toBe(hash);
+    expect(statusTokenHash('other')).not.toBe(hash);
+  });
+
+  test('hash never contains the plaintext token', () => {
+    const token = 'plaintextstatustoken';
+    const hash = statusTokenHash(token);
+    expect(hash).not.toContain(token);
+    expect(hash).not.toBe(token);
+  });
+
+  test('status URL uses a fragment so the token is never sent to the server in navigation', () => {
+    const url = statusUrlForToken('abc123', 'https://example.test');
+    expect(url).toBe('https://example.test/application/status#token=abc123');
+    expect(url).not.toContain('?');
+  });
+});
+
+describe('parent-safe status response', () => {
+  function appFixture(overrides = {}) {
+    return {
+      status: 'pending',
+      applicantType: 'new',
+      recordsStatus: 'not_requested',
+      interestConfirmedAt: null,
+      interestConfirmationTokenHash: 'synthetic-confirmation-hash',
+      accountsCreated: false,
+      createdAt: new Date('2026-10-01T00:00:00.000Z'),
+      updatedAt: new Date('2026-10-02T00:00:00.000Z'),
+      ...overrides,
+    };
+  }
+
+  test('returns only the exact parent-safe key set — no PII, IDs, or internal strings', () => {
+    const result = buildParentSafeStatus(appFixture({ interestConfirmedAt: new Date() }));
+    const keys = Object.keys(result).sort();
+    expect(keys).toEqual(['accountsReady', 'interestConfirmed', 'nextStep', 'recordsStatus', 'stage', 'state', 'submittedAt', 'updatedAt'].sort());
+    expect(result).not.toHaveProperty('id');
+    expect(result).not.toHaveProperty('parentEmail');
+    expect(result).not.toHaveProperty('studentName');
+    expect(result).not.toHaveProperty('rejectionReason');
+    expect(result).not.toHaveProperty('adminNotes');
+    expect(result).not.toHaveProperty('applicantType');
+  });
+
+  test('state is always "found" from buildParentSafeStatus', () => {
+    expect(buildParentSafeStatus(appFixture()).state).toBe('found');
+  });
+
+  test('maps stage correctly across all status/applicantType combinations', () => {
+    expect(buildParentSafeStatus(appFixture()).stage.code).toBe('awaiting_confirmation');
+
+    const confirmed = appFixture({ interestConfirmedAt: new Date() });
+    expect(buildParentSafeStatus(confirmed).stage.code).toBe('admissions_review');
+
+    const transferPending = appFixture({ applicantType: 'transfer', interestConfirmedAt: new Date() });
+    expect(buildParentSafeStatus(transferPending).stage.code).toBe('records_review');
+
+    const transferVerified = { ...transferPending, recordsStatus: 'verified' };
+    expect(buildParentSafeStatus(transferVerified).stage.code).toBe('admissions_review');
+
+    const approved = appFixture({ status: 'approved', interestConfirmedAt: new Date() });
+    expect(buildParentSafeStatus(approved).stage.code).toBe('approved');
+
+    const enrolled = appFixture({ status: 'approved', interestConfirmedAt: new Date(), accountsCreated: true });
+    expect(buildParentSafeStatus(enrolled).stage.code).toBe('enrolled');
+
+    const rejected = appFixture({ status: 'rejected', interestConfirmedAt: new Date() });
+    expect(buildParentSafeStatus(rejected).stage.code).toBe('closed');
+
+    const legacyPending = appFixture({ interestConfirmationTokenHash: null });
+    expect(buildParentSafeStatus(legacyPending).stage.code).toBe('admissions_review');
+    expect(buildParentSafeStatus(legacyPending).interestConfirmed).toBe(true);
+
+    const legacyApproved = appFixture({ status: 'approved', interestConfirmationTokenHash: null });
+    expect(buildParentSafeStatus(legacyApproved).stage.code).toBe('approved');
+
+    const legacyEnrolled = appFixture({ status: 'approved', accountsCreated: true, interestConfirmationTokenHash: null });
+    expect(buildParentSafeStatus(legacyEnrolled).stage.code).toBe('enrolled');
+  });
+
+  test('recordsStatus uses a safe label object, never the raw DB string', () => {
+    const result = buildParentSafeStatus(appFixture({ interestConfirmedAt: new Date(), recordsStatus: 'requested' }));
+    expect(result.recordsStatus).toEqual({ code: 'requested', label: 'Requested' });
+    expect(typeof result.recordsStatus).toBe('object');
+  });
+
+  test('interestConfirmed reflects the boolean, accountsReady reflects accountsCreated', () => {
+    const notConfirmed = buildParentSafeStatus(appFixture());
+    expect(notConfirmed.interestConfirmed).toBe(false);
+    expect(notConfirmed.accountsReady).toBe(false);
+
+    const enrolled = appFixture({ status: 'approved', interestConfirmedAt: new Date(), accountsCreated: true });
+    const result = buildParentSafeStatus(enrolled);
+    expect(result.interestConfirmed).toBe(true);
+    expect(result.accountsReady).toBe(true);
+  });
+});
+
+describe('public application submission with status token', () => {
+  test('stores the status token hash (not plaintext) when creating a new application', async () => {
+    const prismaClient = {
+      application: {
+        findFirst: jest.fn().mockResolvedValue(null),
+        update: jest.fn(),
+        create: jest.fn().mockImplementation(async ({ data }) => ({ id: 'new-app', ...data })),
+      },
+      applicationEvent: { create: jest.fn().mockResolvedValue({ id: 'event-1' }) },
+    };
+    prismaClient.$transaction = jest.fn((callback) => callback(prismaClient));
+    const sToken = 's'.repeat(43);
+
+    await submitPublicApplication(validBody(), {
+      prismaClient,
+      sendConfirmation: jest.fn().mockResolvedValue({ ok: true }),
+      tokenFactory: () => 'b'.repeat(43),
+      statusTokenFactory: () => sToken,
+      publicSite: 'https://example.test',
+    });
+
+    const createCall = prismaClient.application.create.mock.calls[0][0];
+    expect(createCall.data).toHaveProperty('statusTokenHash', statusTokenHash(sToken));
+    expect(createCall.data.statusTokenHash).not.toContain(sToken);
+    expect(createCall.data).not.toHaveProperty('statusToken');
+    expect(createCall.data).toHaveProperty('statusTokenIssuedAt');
+  });
+
+  test('passes the fragment statusUrl to the confirmation email', async () => {
+    const prismaClient = {
+      application: {
+        findFirst: jest.fn().mockResolvedValue(null),
+        update: jest.fn(),
+        create: jest.fn().mockImplementation(async ({ data }) => ({ id: 'new-app', ...data })),
+      },
+      applicationEvent: { create: jest.fn().mockResolvedValue({ id: 'event-1' }) },
+    };
+    prismaClient.$transaction = jest.fn((callback) => callback(prismaClient));
+    const sendConfirmation = jest.fn().mockResolvedValue({ ok: true });
+    const sToken = 's'.repeat(43);
+
+    await submitPublicApplication(validBody(), {
+      prismaClient,
+      sendConfirmation,
+      tokenFactory: () => 'b'.repeat(43),
+      statusTokenFactory: () => sToken,
+      publicSite: 'https://example.test',
+    });
+
+    expect(sendConfirmation).toHaveBeenCalledWith(expect.objectContaining({
+      statusUrl: `https://example.test/application/status#token=${sToken}`,
+    }));
+  });
+
+  test('public submission response body never contains the status token or url', async () => {
+    const prismaClient = {
+      application: {
+        findFirst: jest.fn().mockResolvedValue(null),
+        update: jest.fn(),
+        create: jest.fn().mockImplementation(async ({ data }) => ({ id: 'new-app', ...data })),
+      },
+      applicationEvent: { create: jest.fn().mockResolvedValue({ id: 'event-1' }) },
+    };
+    prismaClient.$transaction = jest.fn((callback) => callback(prismaClient));
+    const sToken = 's'.repeat(43);
+
+    const result = await submitPublicApplication(validBody(), {
+      prismaClient,
+      sendConfirmation: jest.fn().mockResolvedValue({ ok: true }),
+      tokenFactory: () => 'b'.repeat(43),
+      statusTokenFactory: () => sToken,
+      publicSite: 'https://example.test',
+    });
+
+    const serialized = JSON.stringify(result.body);
+    expect(serialized).not.toContain(sToken);
+    expect(serialized).not.toContain('statusUrl');
+    expect(serialized).not.toContain('statusToken');
+    expect(Object.keys(result.body)).toEqual(['ok', 'id', 'duplicate', 'confirmationRequired']);
+  });
+
+  test('rotates status token for unconfirmed duplicate and passes new statusUrl to email', async () => {
+    const existing = {
+      id: 'existing-app',
+      parentEmail: 'parent@example.com',
+      parentName: 'Diana Parent',
+      studentName: 'Cecilia Student',
+      preferredLanguage: 'en',
+      communicationLanguage: null,
+      interestConfirmedAt: null,
+      statusTokenIssuedAt: new Date('2026-10-01T00:00:00.000Z'),
+    };
+    const prismaClient = {
+      application: {
+        findFirst: jest.fn().mockResolvedValue(existing),
+        update: jest.fn().mockResolvedValue({ id: 'existing-app' }),
+        create: jest.fn(),
+      },
+      applicationEvent: { create: jest.fn().mockResolvedValue({ id: 'event-1' }) },
+    };
+    prismaClient.$transaction = jest.fn((callback) => callback(prismaClient));
+    const sendConfirmation = jest.fn().mockResolvedValue({ ok: true });
+    const sToken = 'r'.repeat(43);
+
+    await submitPublicApplication(validBody(), {
+      prismaClient,
+      sendConfirmation,
+      tokenFactory: () => 'a'.repeat(43),
+      statusTokenFactory: () => sToken,
+      publicSite: 'https://example.test',
+    });
+
+    const updateCall = prismaClient.application.update.mock.calls[0][0];
+    expect(updateCall.data).toHaveProperty('statusTokenHash', statusTokenHash(sToken));
+    expect(updateCall.data).toHaveProperty('statusTokenRotatedAt');
+    expect(sendConfirmation).toHaveBeenCalledWith(expect.objectContaining({
+      statusUrl: `https://example.test/application/status#token=${sToken}`,
+    }));
+  });
+
+  test('does not rotate or expose status token for a confirmed duplicate', async () => {
+    const existing = {
+      id: 'existing-app',
+      parentEmail: 'parent@example.com',
+      parentName: 'Diana Parent',
+      studentName: 'Cecilia Student',
+      preferredLanguage: 'en',
+      communicationLanguage: null,
+      interestConfirmedAt: new Date('2026-10-01T00:00:00.000Z'),
+      statusTokenIssuedAt: new Date('2026-10-01T00:00:00.000Z'),
+    };
+    const prismaClient = {
+      application: {
+        findFirst: jest.fn().mockResolvedValue(existing),
+        update: jest.fn().mockResolvedValue({ id: 'existing-app' }),
+        create: jest.fn(),
+      },
+      applicationEvent: { create: jest.fn().mockResolvedValue({ id: 'event-1' }) },
+    };
+    prismaClient.$transaction = jest.fn((callback) => callback(prismaClient));
+    const sendConfirmation = jest.fn().mockResolvedValue({ ok: true });
+
+    await submitPublicApplication(validBody(), {
+      prismaClient,
+      sendConfirmation,
+      tokenFactory: () => 'a'.repeat(43),
+      statusTokenFactory: () => 'q'.repeat(43),
+      publicSite: 'https://example.test',
+    });
+
+    // Update should not touch status token fields
+    const updateCall = prismaClient.application.update.mock.calls[0][0];
+    expect(updateCall.data).not.toHaveProperty('statusTokenHash');
+    expect(updateCall.data).not.toHaveProperty('statusTokenRotatedAt');
+    // sendConfirmation should not be called for confirmed duplicate
+    expect(sendConfirmation).not.toHaveBeenCalled();
   });
 });

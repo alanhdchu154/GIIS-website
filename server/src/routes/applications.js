@@ -7,6 +7,7 @@ const { PRICE_TIERS } = require('./checkout');
 const {
   sendApplicationInterestConfirmation,
   sendNewApplicationAlert,
+  sendStatusLinkEmail,
   sendWelcomeEmail,
 } = require('../lib/mailer');
 const {
@@ -280,8 +281,77 @@ function createInterestToken() {
   return crypto.randomBytes(32).toString('base64url');
 }
 
+function statusTokenHash(token) {
+  return crypto.createHash('sha256').update(String(token || '')).digest('hex');
+}
+
+function createStatusToken() {
+  return crypto.randomBytes(32).toString('base64url');
+}
+
+function statusUrlForToken(token, site = PUBLIC_SITE) {
+  return `${String(site).replace(/\/$/, '')}/application/status#token=${token}`;
+}
+
 function confirmationUrlForToken(token, site = PUBLIC_SITE) {
   return `${String(site).replace(/\/$/, '')}/application/confirm?token=${encodeURIComponent(token)}`;
+}
+
+const RECORDS_STATUS_LABELS = {
+  not_requested: { code: 'not_requested', label: 'Not yet requested' },
+  requested: { code: 'requested', label: 'Requested' },
+  partial: { code: 'partial', label: 'Partial records received' },
+  received: { code: 'received', label: 'Received' },
+  verified: { code: 'verified', label: 'Verified' },
+};
+
+function buildParentSafeStatus(app) {
+  // Applications created before email confirmation was introduced have no
+  // token hash and are treated as confirmed by the admissions workflow.
+  const interestConfirmed = !!app.interestConfirmedAt || !app.interestConfirmationTokenHash;
+  let stage;
+  if (app.status === 'rejected') {
+    stage = { code: 'closed', label: 'Application closed' };
+  } else if (app.status === 'approved' && app.accountsCreated) {
+    stage = { code: 'enrolled', label: 'Enrolled' };
+  } else if (app.status === 'approved') {
+    stage = { code: 'approved', label: 'Approved — enrollment in progress' };
+  } else if (!interestConfirmed) {
+    stage = { code: 'awaiting_confirmation', label: 'Awaiting confirmation' };
+  } else if (app.status === 'pending') {
+    if (app.applicantType === 'transfer' && app.recordsStatus !== 'verified') {
+      stage = { code: 'records_review', label: 'Records under review' };
+    } else {
+      stage = { code: 'admissions_review', label: 'Admissions review in progress' };
+    }
+  } else {
+    stage = { code: 'admissions_review', label: 'Admissions review in progress' };
+  }
+  const recordsStatusSafe = RECORDS_STATUS_LABELS[app.recordsStatus] || RECORDS_STATUS_LABELS.not_requested;
+  let nextStep;
+  if (stage.code === 'awaiting_confirmation') {
+    nextStep = 'Check your email and click the confirmation link.';
+  } else if (stage.code === 'records_review') {
+    nextStep = 'Our team will be in touch about official records.';
+  } else if (stage.code === 'admissions_review') {
+    nextStep = 'Our admissions team is reviewing your application. We will contact you soon.';
+  } else if (stage.code === 'approved') {
+    nextStep = 'Your enrollment is being finalized. Check your email for account details.';
+  } else if (stage.code === 'enrolled') {
+    nextStep = 'Log in to the student portal to begin coursework.';
+  } else {
+    nextStep = 'Contact admissions@genesisideas.school for assistance.';
+  }
+  return {
+    state: 'found',
+    submittedAt: app.createdAt,
+    updatedAt: app.updatedAt,
+    interestConfirmed,
+    recordsStatus: recordsStatusSafe,
+    stage,
+    nextStep,
+    accountsReady: !!app.accountsCreated,
+  };
 }
 
 function nextBusinessResponseDue(value = new Date()) {
@@ -829,6 +899,7 @@ async function submitPublicApplication(body, {
   sendConfirmation = sendApplicationInterestConfirmation,
   now = new Date(),
   tokenFactory = createInterestToken,
+  statusTokenFactory = createStatusToken,
   publicSite = PUBLIC_SITE,
 } = {}) {
   const parsed = parseApplicationSubmission(body);
@@ -838,7 +909,10 @@ async function submitPublicApplication(body, {
   const token = tokenFactory();
   const tokenHash = interestTokenHash(token);
   const expiresAt = new Date(now.getTime() + INTEREST_CONFIRMATION_TTL_MS);
-  const deliverConfirmation = async ({ application, confirmationToken }) => {
+  const sToken = statusTokenFactory();
+  const sTokenHash = statusTokenHash(sToken);
+  const sUrl = statusUrlForToken(sToken, publicSite);
+  const deliverConfirmation = async ({ application, confirmationToken, statusUrl = null }) => {
     let delivery;
     try {
       delivery = await sendConfirmation({
@@ -849,6 +923,7 @@ async function submitPublicApplication(body, {
         communicationLanguage: application.communicationLanguage || application.preferredLanguage || 'en',
         confirmationUrl: confirmationUrlForToken(confirmationToken, publicSite),
         expiresHours: 72,
+        statusUrl,
       });
     } catch (err) {
       delivery = { ok: false, error: err.message };
@@ -900,6 +975,9 @@ async function submitPublicApplication(body, {
             interestConfirmationExpiresAt: expiresAt,
             interestConfirmationSentAt: null,
             nextAction: 'Send parent confirmation email',
+            statusTokenHash: sTokenHash,
+            statusTokenIssuedAt: existing.statusTokenIssuedAt || now,
+            ...(existing.statusTokenIssuedAt ? { statusTokenRotatedAt: now } : {}),
           } : {}),
         },
       });
@@ -920,6 +998,7 @@ async function submitPublicApplication(body, {
           communicationLanguage: data.communicationLanguage || existing.communicationLanguage || existing.preferredLanguage,
         },
         confirmationToken: token,
+        statusUrl: sUrl,
       });
       if (!delivered) {
         return {
@@ -947,6 +1026,8 @@ async function submitPublicApplication(body, {
         interestConfirmationTokenHash: tokenHash,
         interestConfirmationExpiresAt: expiresAt,
         interestConfirmationSentAt: null,
+        statusTokenHash: sTokenHash,
+        statusTokenIssuedAt: now,
       },
     });
     if (tx.applicationEvent) {
@@ -957,7 +1038,7 @@ async function submitPublicApplication(body, {
     return created;
   });
 
-  const delivered = await deliverConfirmation({ application: app, confirmationToken: token });
+  const delivered = await deliverConfirmation({ application: app, confirmationToken: token, statusUrl: sUrl });
   if (!delivered) {
     return {
       ok: false,
@@ -1131,6 +1212,45 @@ async function linkExistingSubscriptionsForApplication({ app, studentId }) {
   });
   return updated.count;
 }
+
+// POST /api/applications/status — public, no auth
+// Accepts a status token in the request body (never in the URL — the token is in
+// a URL fragment, so the browser never sends it to the server in navigation).
+// Returns HTTP 200 {state:'invalid'} for missing/malformed/unknown tokens, and
+// a retryable 503 for infrastructure failures.
+// Returning only a fixed set of parent-safe keys; no PII, IDs, or internal strings.
+router.post('/status', async (req, res) => {
+  res.set('Cache-Control', 'no-store, private');
+  res.set('Pragma', 'no-cache');
+  res.set('Referrer-Policy', 'no-referrer');
+  try {
+    const raw = String(req.body?.token || '').trim();
+    if (!/^[A-Za-z0-9_-]{32,200}$/.test(raw)) {
+      return res.json({ state: 'invalid' });
+    }
+    const app = await prisma.application.findUnique({
+      where: { statusTokenHash: statusTokenHash(raw) },
+      select: {
+        status: true,
+        applicantType: true,
+        recordsStatus: true,
+        interestConfirmedAt: true,
+        interestConfirmationTokenHash: true,
+        accountsCreated: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+    });
+    if (!app) return res.json({ state: 'invalid' });
+    return res.json(buildParentSafeStatus(app));
+  } catch (err) {
+    console.error('[applications] Status lookup failed:', err.message);
+    return res.status(503).json({
+      state: 'unavailable',
+      error: 'Application status is temporarily unavailable. Please try again.',
+    });
+  }
+});
 
 /**
  * POST /api/applications/:id/stripe-checkout — admin only
@@ -1343,6 +1463,103 @@ router.post('/:id/manual-payment', authenticate, requireAdmin, async (req, res) 
   });
 });
 
+// POST /api/applications/:id/status-link — authenticated, applications.manage
+// Rotates the application status token and sends a dedicated status link email to
+// the parent. Never returns or logs the token, URL, or PII in this response.
+// Returns {ok:true,delivery:{status:'sent'}} on confirmed delivery; 502 on failure.
+router.post('/:id/status-link', authenticate, requirePermission('applications.manage'), async (req, res) => {
+  const app = await prisma.application.findUnique({
+    where: { id: req.params.id },
+    select: {
+      id: true,
+      parentEmail: true,
+      parentName: true,
+      studentName: true,
+      preferredLanguage: true,
+      communicationLanguage: true,
+      statusTokenHash: true,
+      statusTokenIssuedAt: true,
+      statusTokenRotatedAt: true,
+    },
+  });
+  if (!app) return res.status(404).json({ error: 'Application not found.' });
+
+  const newToken = createStatusToken();
+  const newHash = statusTokenHash(newToken);
+  const now = new Date();
+  const isFirstIssue = !app.statusTokenIssuedAt;
+
+  // Compare-and-swap the observed credential. This prevents concurrent staff
+  // sends from reviving an older link when one delivery succeeds and another
+  // later delivery fails.
+  const issued = await prisma.application.updateMany({
+    where: { id: app.id, statusTokenHash: app.statusTokenHash },
+    data: {
+      statusTokenHash: newHash,
+      statusTokenIssuedAt: isFirstIssue ? now : app.statusTokenIssuedAt,
+      ...(isFirstIssue ? {} : { statusTokenRotatedAt: now }),
+    },
+  });
+  if (issued.count !== 1) {
+    return res.status(409).json({
+      error: 'The status link changed while this request was running. Refresh the application before retrying.',
+      code: 'status_link_rotation_conflict',
+    });
+  }
+
+  const sUrl = statusUrlForToken(newToken, PUBLIC_SITE);
+  let delivery;
+  try {
+    delivery = await sendStatusLinkEmail({
+      parentEmail: app.parentEmail,
+      parentName: app.parentName,
+      studentName: app.studentName,
+      preferredLanguage: app.preferredLanguage || 'en',
+      communicationLanguage: app.communicationLanguage || app.preferredLanguage || 'en',
+      statusUrl: sUrl,
+    });
+  } catch (err) {
+    delivery = { ok: false, error: err.message };
+  }
+
+  const delivered = delivery?.ok === true;
+  const actorEmail = req.auth?.email || 'admin';
+
+  await prisma.applicationEvent.create({
+    data: applicationEventData(
+      app.id,
+      delivered ? 'status_link_sent' : 'status_link_delivery_failed',
+      actorEmail,
+      delivered ? 'Application status link sent to parent.' : 'Application status link delivery failed.',
+    ),
+  }).catch(() => null);
+
+  if (!delivered) {
+    const rollback = await prisma.application.updateMany({
+      where: { id: app.id, statusTokenHash: newHash },
+      data: {
+        statusTokenHash: app.statusTokenHash,
+        statusTokenIssuedAt: app.statusTokenIssuedAt,
+        statusTokenRotatedAt: app.statusTokenRotatedAt,
+      },
+    }).catch(() => ({ count: 0 }));
+    if (rollback.count !== 1) {
+      return res.status(503).json({
+        error: 'Status link delivery state could not be confirmed. Do not retry until the application is refreshed.',
+        code: 'status_link_delivery_state_uncertain',
+      });
+    }
+    const previousLinkMessage = app.statusTokenHash
+      ? 'The previous status link remains valid.'
+      : 'No status link was issued.';
+    return res.status(502).json({
+      error: `Status link email could not be delivered. ${previousLinkMessage}`,
+      code: 'status_link_delivery_failed',
+    });
+  }
+  return res.json({ ok: true, delivery: { status: 'sent' } });
+});
+
 // PUT /api/applications/:id/transfer-evaluation — save a draft course review.
 // Saving a changed draft revokes any prior principal approval until it is
 // reviewed again.
@@ -1517,6 +1734,7 @@ router.get('/capabilities', async (_req, res) => {
     applicationStripeCheckout: true,
     transferEvaluation: true,
     placementDecision,
+    applicationStatus: true,
   });
 });
 
@@ -1533,6 +1751,9 @@ router.get('/', authenticate, requirePermission('applications.read'), async (req
   const enriched = await Promise.all(apps.map(async (app) => {
     const safeApp = { ...app };
     delete safeApp.interestConfirmationTokenHash;
+    delete safeApp.statusTokenHash;
+    delete safeApp.statusTokenIssuedAt;
+    delete safeApp.statusTokenRotatedAt;
     if (req.staff?.role === 'principal') {
       delete safeApp.accountsCreated;
       safeApp.events = (safeApp.events || [])
@@ -2002,6 +2223,10 @@ module.exports.parsePlacementDecision = parsePlacementDecision;
 module.exports.placementDecisionEditError = placementDecisionEditError;
 module.exports.placementDecisionCapability = placementDecisionCapability;
 module.exports.interestTokenHash = interestTokenHash;
+module.exports.statusTokenHash = statusTokenHash;
+module.exports.createStatusToken = createStatusToken;
+module.exports.statusUrlForToken = statusUrlForToken;
+module.exports.buildParentSafeStatus = buildParentSafeStatus;
 module.exports.normalizePriorSchools = normalizePriorSchools;
 module.exports.confirmOfficialRecordsRequested = confirmOfficialRecordsRequested;
 module.exports.stripeCheckoutMetadata = stripeCheckoutMetadata;

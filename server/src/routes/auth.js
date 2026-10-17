@@ -73,104 +73,12 @@ async function recordPasswordResetEmail({ email, result }) {
   }).catch(() => null);
 }
 
-/** Student self-registration: creates Student + StudentAccount (profile fields match transcript header). */
-router.post('/register', async (req, res) => {
-  const body = req.body || {};
-  const email = (body.email || '').trim().toLowerCase();
-  const password = body.password || '';
-  const name = (body.name || '').trim();
-  const birthDate = (body.birthDate || '').trim();
-  const gender = (body.gender || '').trim() || 'Female';
-  const parentGuardian = (body.parentGuardian || '').trim();
-  const address = (body.address || '').trim();
-  const city = (body.city || '').trim();
-  const province = (body.province || '').trim();
-  const zipCode = (body.zipCode || '').trim();
-
-  const missing = [];
-  if (!email) missing.push('email');
-  if (!password) missing.push('password');
-  if (!name) missing.push('name');
-  if (!birthDate) missing.push('birthDate');
-  if (!parentGuardian) missing.push('parentGuardian');
-  if (!address) missing.push('address');
-  if (!city) missing.push('city');
-  if (!province) missing.push('province');
-  if (missing.length) {
-    return res.status(400).json({ error: `missing: ${missing.join(', ')}` });
-  }
-  if (password.length < MIN_PASSWORD) {
-    return res.status(400).json({ error: `password must be at least ${MIN_PASSWORD} characters` });
-  }
-  if (gender !== 'Male' && gender !== 'Female') {
-    return res.status(400).json({ error: 'gender must be Male or Female' });
-  }
-  const birth = new Date(`${birthDate}T00:00:00.000Z`);
-  if (!birthDate || Number.isNaN(birth.getTime())) {
-    return res.status(400).json({ error: 'birthDate must be YYYY-MM-DD' });
-  }
-
-  const adminExists = await prisma.adminUser.findUnique({ where: { email } });
-  if (adminExists) {
-    return res.status(409).json({ error: 'email already in use' });
-  }
-
-  const existingAccount = await prisma.studentAccount.findUnique({ where: { email } });
-  if (existingAccount) {
-    return res.status(409).json({ error: 'email already registered' });
-  }
-
-  const passwordHash = await bcrypt.hash(password, 12);
-
-  try {
-    const { student, account } = await prisma.$transaction(async (tx) => {
-      const st = await tx.student.create({
-        data: {
-          name,
-          birthDate: birth,
-          gender,
-          parentGuardian,
-          address,
-          city,
-          province,
-          zipCode: zipCode || '',
-        },
-      });
-      const acc = await tx.studentAccount.create({
-        data: {
-          email,
-          passwordHash,
-          isActive: true,
-          studentId: st.id,
-        },
-      });
-      return { student: st, account: acc };
-    });
-
-    const session = await createLoginSession({
-      role: 'student',
-      email: account.email,
-      studentId: account.studentId,
-      req,
-    });
-    if (!session?.id) {
-      return sendSessionError(res, {
-        status: 503,
-        code: 'registration_session_unavailable',
-        error: 'Your account was created, but sign-in is temporarily unavailable. Please try logging in again shortly.',
-      });
-    }
-    const token = signStudentToken(account, session.id);
-    setAuthCookie(res, token);
-    return res.status(201).json({
-      token,
-      role: 'student',
-      student: { id: student.id, email: account.email, name: student.name },
-    });
-  } catch (e) {
-    console.error(e);
-    return res.status(500).json({ error: 'Registration failed' });
-  }
+router.post('/register', (req, res) => {
+  return res.status(403).json({
+    error: 'Student accounts are created only after admissions approval and enrollment activation.',
+    code: 'self_registration_disabled',
+    applyUrl: '/apply',
+  });
 });
 
 /**
@@ -225,11 +133,26 @@ router.post('/login', async (req, res) => {
     return res.status(401).json({ error: 'Invalid credentials' });
   }
 
-  const session = await createLoginSession({
-    role: 'student',
-    email: account.email,
-    studentId: account.studentId,
-    req,
+  // Serialize successful login issuance with password reset on the account row.
+  // The conditional update locks the row: if reset wins first, the old hash no
+  // longer matches; if login wins first, reset subsequently closes this session.
+  const session = await prisma.$transaction(async (tx) => {
+    const claimed = await tx.studentAccount.updateMany({
+      where: {
+        id: account.id,
+        passwordHash: account.passwordHash,
+        isActive: true,
+      },
+      data: { updatedAt: new Date() },
+    });
+    if (claimed.count !== 1) return null;
+    return createLoginSession({
+      role: 'student',
+      email: account.email,
+      studentId: account.studentId,
+      req,
+      db: tx,
+    });
   });
   if (!session?.id) return sendSessionError(res);
   const token = signStudentToken(account, session.id);
@@ -289,10 +212,27 @@ router.post('/reset-password', async (req, res) => {
   if (!account) return res.status(400).json({ error: 'Invalid or expired reset link' });
 
   const passwordHash = await bcrypt.hash(password, 12);
-  await prisma.$transaction([
-    prisma.studentAccount.update({ where: { id: account.id }, data: { passwordHash } }),
-    prisma.passwordResetToken.update({ where: { id: reset.id }, data: { usedAt: new Date() } }),
-  ]);
+  const now = new Date();
+  try {
+    await prisma.$transaction(async (tx) => {
+      const claimed = await tx.passwordResetToken.updateMany({
+        where: { id: reset.id, role: 'student', usedAt: null, expiresAt: { gt: now } },
+        data: { usedAt: now },
+      });
+      if (claimed.count !== 1) {
+        const error = new Error('invalid_reset');
+        error.code = 'INVALID_RESET';
+        throw error;
+      }
+      await tx.studentAccount.update({ where: { id: account.id }, data: { passwordHash } });
+      await tx.loginSession.updateMany({ where: { studentId: account.studentId, role: 'student', endedAt: null }, data: { endedAt: now } });
+    });
+  } catch (error) {
+    if (error.code === 'INVALID_RESET') {
+      return res.status(400).json({ error: 'Invalid or expired reset link' });
+    }
+    throw error;
+  }
 
   res.json({ ok: true });
 });
