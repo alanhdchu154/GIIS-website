@@ -294,24 +294,26 @@ function buildWelcomeEmail({
   const bilingual = language === 'bilingual';
   const isZh = language === 'zh';
   const subject = bilingual
-    ? 'Your GIIS account is ready / 您的 GIIS 帐号已建立'
-    : isZh ? '您的 GIIS 帐号已建立 — 请完成入学' : 'Your GIIS account is ready — complete your enrollment';
-  const heading = bilingual ? 'Welcome to GIIS! / 欢迎加入 GIIS！' : isZh ? '欢迎加入 GIIS！' : 'Welcome to GIIS!';
+    ? 'Your GIIS accounts are ready — course setup pending / GIIS 帐号已建立 — 等待排课'
+    : isZh ? 'GIIS 帐号已建立 — 等待排课' : 'Your GIIS accounts are ready — course setup pending';
+  const heading = bilingual ? 'Account access is ready / 帐号已可使用' : isZh ? '帐号已可使用' : 'Account access is ready';
   const intro = bilingual
-    ? `<p>Your child <strong>${escapeHtml(studentName)}</strong>'s account has been created. Log in to complete enrollment and activate full course access.</p><p>您孩子 <strong>${escapeHtml(studentName)}</strong> 的帐号已经建立。请登入完成入学步骤并启用完整课程权限。</p>`
+    ? `<p>Your child <strong>${escapeHtml(studentName)}</strong>'s parent and student accounts have been created. Course setup is still pending; account creation does not by itself mean that the student is enrolled in courses or ready to begin.</p><p>您孩子 <strong>${escapeHtml(studentName)}</strong> 的家长与学生帐号已经建立。排课仍在进行中；建立帐号本身不代表学生已完成选课或已经可以开始上课。</p>`
     : isZh
-      ? `<p>您孩子 <strong>${escapeHtml(studentName)}</strong> 的帐号已经建立。请登入完成入学步骤并启用完整课程权限。</p>`
-      : `<p>Your child <strong>${escapeHtml(studentName)}</strong>'s account has been created. Log in to complete enrollment and activate full course access.</p>`;
+      ? `<p>您孩子 <strong>${escapeHtml(studentName)}</strong> 的家长与学生帐号已经建立。排课仍在进行中；建立帐号本身不代表学生已完成选课或已经可以开始上课。</p>`
+      : `<p>Your child <strong>${escapeHtml(studentName)}</strong>'s parent and student accounts have been created. Course setup is still pending; account creation does not by itself mean that the student is enrolled in courses or ready to begin.</p>`;
   const label = (en, zh) => bilingual ? `${en} / ${zh}` : isZh ? zh : en;
   const activationNote = bilingual
-    ? `After logging in, you can complete the remaining enrollment steps for ${escapeHtml(studentName)}. Access remains subject to the reviewed enrollment and payment status.<br>登入后可完成 ${escapeHtml(studentName)} 的其余入学步骤。课程权限仍以已审核的入学与付款状态为准。`
+    ? `You may verify that both logins work now. Please wait for GIIS to send the approved first-term courses, first due date, and reviewer before beginning coursework. If the dashboard is empty, that means course setup is still pending; contact admissions rather than adding courses yourself.<br>您现在可以确认两个帐号都能登入。请等待 GIIS 确认核准的第一学期课程、第一次作业日期与审核老师后再开始学习。如果页面暂时没有课程，表示排课尚未完成；请联系招生部门，不要自行加课。`
     : isZh
-      ? `登入后可完成 ${escapeHtml(studentName)} 的其余入学步骤。课程权限仍以已审核的入学与付款状态为准。`
-      : `After logging in, you can complete the remaining enrollment steps for ${escapeHtml(studentName)}. Access remains subject to the reviewed enrollment and payment status.`;
-  const cta = label('Log in and complete enrollment', '登入并完成入学');
+      ? `您现在可以确认两个帐号都能登入。请等待 GIIS 确认核准的第一学期课程、第一次作业日期与审核老师后再开始学习。如果页面暂时没有课程，表示排课尚未完成；请联系招生部门，不要自行加课。`
+      : `You may verify that both logins work now. Please wait for GIIS to send the approved first-term courses, first due date, and reviewer before beginning coursework. If the dashboard is empty, that means course setup is still pending; contact admissions rather than adding courses yourself.`;
+  const cta = label('Verify account access', '确认帐号登入');
   const textIntro = bilingual
-    ? `Welcome to GIIS!\nYour account is ready.\n\n欢迎加入 GIIS！\n您的帐号已经建立。`
-    : isZh ? '欢迎加入 GIIS！\n您的帐号已经建立。' : 'Welcome to GIIS!\nYour account is ready.';
+    ? `Your GIIS accounts are ready; course setup is still pending. Account creation does not mean the student is enrolled in courses or ready to begin.\n\nGIIS 帐号已建立；排课仍在进行中。建立帐号不代表学生已完成选课或已经可以开始上课。`
+    : isZh
+      ? 'GIIS 帐号已建立；排课仍在进行中。建立帐号不代表学生已完成选课或已经可以开始上课。'
+      : 'Your GIIS accounts are ready; course setup is still pending. Account creation does not mean the student is enrolled in courses or ready to begin.';
   return {
     subject,
     html: `
@@ -341,7 +343,7 @@ function buildWelcomeEmail({
   </div>
 </div>
     `.trim(),
-    text: `${textIntro}\n\n${label('Login URL', '登入链接')}: ${loginUrl}\n${label('Parent Portal email', '家长入口邮箱')}: ${parentPortalEmail}\n${label('Parent temporary password', '家长临时密码')}: ${parentPortalPassword}${studentLoginEmail ? `\n${label('Student Portal email', '学生入口邮箱')}: ${studentLoginEmail}` : ''}${studentPassword ? `\n${label('Student temporary password', '学生临时密码')}: ${studentPassword}` : ''}\n${label('Student code', '学生编号')}: ${studentCode}`,
+    text: `${textIntro}\n\n${label('Login URL', '登入链接')}: ${loginUrl}\n${label('Parent Portal email', '家长入口邮箱')}: ${parentPortalEmail}\n${label('Parent temporary password', '家长临时密码')}: ${parentPortalPassword}${studentLoginEmail ? `\n${label('Student Portal email', '学生入口邮箱')}: ${studentLoginEmail}` : ''}${studentPassword ? `\n${label('Student temporary password', '学生临时密码')}: ${studentPassword}` : ''}\n${label('Student code', '学生编号')}: ${studentCode}\n\n${bilingual ? 'Please wait for GIIS to confirm the approved first-term courses, first due date, and reviewer before beginning coursework. If the dashboard is empty, course setup is still pending. / 请等待 GIIS 确认核准的第一学期课程、第一次作业日期与审核老师后再开始学习。若页面没有课程，表示排课仍在进行中。' : isZh ? '请等待 GIIS 确认核准的第一学期课程、第一次作业日期与审核老师后再开始学习。若页面没有课程，表示排课仍在进行中。' : 'Please wait for GIIS to confirm the approved first-term courses, first due date, and reviewer before beginning coursework. If the dashboard is empty, course setup is still pending.'}`,
   };
 }
 

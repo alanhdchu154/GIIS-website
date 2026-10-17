@@ -196,10 +196,13 @@ describe('welcome account email', () => {
       communicationLanguage: 'bilingual',
     });
 
-    expect(content.subject).toContain('帐号已建立');
+    expect(content.subject).toContain('等待排课');
     expect(content.text).toContain('Parent Portal email / 家长入口邮箱');
     expect(content.text).toContain('parent.portal@example.com');
-    expect(content.html).toContain('Access remains subject to the reviewed enrollment and payment status');
-    expect(content.html).toContain('课程权限仍以已审核的入学与付款状态为准');
+    expect(content.html).toContain('Course setup is still pending');
+    expect(content.html).toContain('建立帐号本身不代表学生已完成选课或已经可以开始上课');
+    expect(content.text).toContain('Please wait for GIIS to confirm the approved first-term courses');
+    expect(content.text).toContain('若页面没有课程，表示排课仍在进行中');
+    expect(content.html).not.toContain('complete enrollment and activate full course access');
   });
 });
