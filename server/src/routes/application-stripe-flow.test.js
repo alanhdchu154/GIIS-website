@@ -7,7 +7,8 @@ const mockDb = {
   transferCreditEvaluation: { findUnique: jest.fn(), updateMany: jest.fn() },
   subscription: { upsert: jest.fn(), findMany: jest.fn(), updateMany: jest.fn() },
   processedStripeEvent: { create: jest.fn(), findUnique: jest.fn() },
-  student: { findFirst: jest.fn() },
+  student: { findFirst: jest.fn(), create: jest.fn() },
+  parentAccount: { findUnique: jest.fn(), create: jest.fn() },
   $transaction: jest.fn(),
 };
 const mockStripe = {
@@ -480,12 +481,59 @@ test('sibling with the same payer email cannot see or link the other application
   await applications.linkExistingSubscriptionsForApplication({ app: { ...approved, id: 'app_b' }, studentId: 'student_b' });
   expect(mockDb.subscription.updateMany).toHaveBeenCalledWith({ where: { studentId: null, id: { in: [] }, status: { in: ['active', 'paid'] } }, data: { studentId: 'student_b' } });
 });
-test('legacy explicitly linked student subscription remains visible', async () => {
-  mockDb.student.findFirst.mockResolvedValue({ id: 'student_a', account: {}, parentAccounts: [{}] });
+test('an active subscription from this application receipt is valid pre-activation payment evidence', async () => {
+  mockDb.student.findFirst.mockResolvedValue(null);
+  mockDb.applicationEvent.findMany.mockResolvedValue([
+    { metadata: { subscriptionId: 'receipt_subscription' } },
+  ]);
+  mockDb.subscription.findMany.mockResolvedValue([
+    { id: 'receipt_subscription', studentId: null, status: 'active' },
+  ]);
+
+  const state = await applications.applicationEnrollmentState(approved);
+
+  expect(state.paid).toBe(false);
+  expect(state.paidUnlinked).toBe(true);
+  expect(state.subscriptionId).toBe('receipt_subscription');
+});
+test('the exact accounts_activated link preserves post-activation subscription state', async () => {
+  mockDb.applicationEvent.findFirst.mockResolvedValue({ metadata: { studentId: 'student_a' } });
+  mockDb.student.findFirst.mockResolvedValue({ id: 'student_a', account: { isActive: true }, parentAccounts: [{}] });
   mockDb.subscription.findMany.mockResolvedValue([{ id: 'legacy_sub', studentId: 'student_a', status: 'active' }]);
   const state = await applications.applicationEnrollmentState({ ...approved, accountsCreated: true });
   expect(state.paid).toBe(true);
   expect(mockDb.subscription.findMany.mock.calls[0][0].where.OR).toContainEqual({ studentId: 'student_a' });
+});
+test('a second application cannot activate from an old subscription for the same child', async () => {
+  const secondApplication = {
+    ...approved,
+    id: 'app_b',
+    studentName: 'Same Child',
+    dob: '2012-01-02',
+    accountsCreated: false,
+  };
+  mockDb.application.findUnique.mockResolvedValue(secondApplication);
+  mockDb.student.findFirst.mockResolvedValue({
+    id: 'student_old',
+    account: { email: 'student-old@example.invalid', isActive: true, softLocked: false, lockReason: '' },
+    parentAccounts: [{ email: 'parent-old@example.invalid' }],
+    enrollments: [],
+  });
+  mockDb.subscription.findMany.mockResolvedValue([
+    { id: 'old_subscription', studentId: 'student_old', status: 'active' },
+  ]);
+
+  const response = await invoke(applications, '/:id/activate', {
+    ...adminRequest,
+    params: { id: 'app_b' },
+  });
+
+  expect(response.code).toBe(400);
+  expect(response.body.error).toBe('Verified payment evidence is required before account activation.');
+  expect(mockDb.subscription.findMany.mock.calls[0][0].where).toEqual({ OR: [{ id: { in: [] } }] });
+  expect(mockDb.student.create).not.toHaveBeenCalled();
+  expect(mockDb.parentAccount.create).not.toHaveBeenCalled();
+  expect(mockDb.application.updateMany).not.toHaveBeenCalled();
 });
 test('signed paid event writes subscription and case receipt in the transaction', async () => {
   expect((await invoke(webhook, '/', { headers: { 'stripe-signature': 'synthetic' }, body: Buffer.from('{}') })).code).toBe(200);

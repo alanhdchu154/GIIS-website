@@ -1159,11 +1159,24 @@ async function findStudentForApplication(app) {
 }
 
 async function applicationEnrollmentState(app) {
+  // Before activation, payment eligibility must come only from a receipt owned
+  // by this application. After activation, the immutable activation event is
+  // the exact link back to the student's ongoing account/subscription state.
+  const activationEvent = app.accountsCreated
+    ? await prisma.applicationEvent.findFirst({
+      where: { applicationId: app.id, action: 'accounts_activated' },
+      orderBy: { createdAt: 'desc' },
+      select: { metadata: true },
+    })
+    : null;
+  const activatedStudentId = activationEvent?.metadata?.studentId || null;
   const student = await prisma.student.findFirst({
-    where: {
-      parentEmail: { equals: app.parentEmail, mode: 'insensitive' },
-      name: { equals: app.studentName, mode: 'insensitive' },
-    },
+    where: activatedStudentId
+      ? { id: activatedStudentId }
+      : {
+        parentEmail: { equals: app.parentEmail, mode: 'insensitive' },
+        name: { equals: app.studentName, mode: 'insensitive' },
+      },
     orderBy: { createdAt: 'desc' },
     include: {
       account: { select: { email: true, isActive: true, softLocked: true, lockReason: true } },
@@ -1187,7 +1200,7 @@ async function applicationEnrollmentState(app) {
     where: {
       OR: [
         { id: { in: subscriptionIds } },
-        ...(student?.id ? [{ studentId: student.id }] : []),
+        ...(activatedStudentId ? [{ studentId: activatedStudentId }] : []),
       ],
     },
     orderBy: { createdAt: 'desc' },
@@ -1195,8 +1208,17 @@ async function applicationEnrollmentState(app) {
   });
 
   const activeStatuses = new Set(['active', 'paid']);
-  const activeLinked = subscriptions.find((sub) => sub.studentId && student?.id && sub.studentId === student.id && activeStatuses.has(sub.status));
-  const activeUnlinked = subscriptions.find((sub) => !sub.studentId && activeStatuses.has(sub.status));
+  const receiptSubscriptionIds = new Set(subscriptionIds);
+  const activeReceipt = subscriptions.find((sub) => receiptSubscriptionIds.has(sub.id) && activeStatuses.has(sub.status));
+  const activeReceiptLinked = activeReceipt
+    && activatedStudentId
+    && activeReceipt.studentId === activatedStudentId
+    ? activeReceipt
+    : null;
+  const activeLinked = activatedStudentId
+    ? subscriptions.find((sub) => sub.studentId === activatedStudentId && activeStatuses.has(sub.status))
+    : null;
+  const activeUnlinked = activeReceipt && !activeReceiptLinked ? activeReceipt : null;
   const latestSub = subscriptions[0] || null;
   const enrollments = student?.enrollments || [];
   const learningStarted = enrollments.some((enrollment) => (
@@ -1208,6 +1230,8 @@ async function applicationEnrollmentState(app) {
   ));
   const accountsReady = !!(
     app.accountsCreated
+    && activatedStudentId
+    && student?.id === activatedStudentId
     && student?.account?.isActive
     && student?.parentAccounts?.length
   );
@@ -1254,7 +1278,7 @@ async function applicationEnrollmentState(app) {
     parentLoginEmail: student?.parentAccounts?.[0]?.email || null,
     subscriptionId: (activeLinked || activeUnlinked || latestSub)?.id || null,
     subscriptionStatus: (activeLinked || activeUnlinked || latestSub)?.status || null,
-    paid: !!activeLinked,
+    paid: !!(activeReceiptLinked || (accountsReady && activeLinked)),
     paidUnlinked: !!activeUnlinked,
     accountsReady,
     courseCount: enrollments.length,

@@ -195,20 +195,30 @@ test('revoked admin cannot use parent setup or private checkout, and public chec
   expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
 });
 
-test('authenticated parent can renew but cannot redirect checkout to another email', async () => {
+test('authenticated parent renewal binds email and deduplicates a double-click with Stripe idempotency', async () => {
+  jest.spyOn(Date, 'now').mockReturnValue(1_800_000_000_000);
   const token = tokenFor('parent');
   const result = await invoke(checkoutRoutes, 'post', '/create-session', {
     cookies: { giis_parent_jwt: token },
     body: { planType: 'self_paced_monthly', email: 'someone-else@example.invalid' },
   });
+  const retry = await invoke(checkoutRoutes, 'post', '/create-session', {
+    cookies: { giis_parent_jwt: token },
+    body: { planType: 'self_paced_monthly', email: 'someone-else@example.invalid' },
+  });
   expect(result.res.code).toBe(200);
-  expect(mockStripe.checkout.sessions.create).toHaveBeenCalledWith(expect.objectContaining({
+  expect(retry.res.code).toBe(200);
+  expect(retry.res.body.sessionId).toBe(result.res.body.sessionId);
+  const [params, options] = mockStripe.checkout.sessions.create.mock.calls[0];
+  expect(params).toEqual(expect.objectContaining({
     customer_email: identities.parent.email,
     metadata: expect.objectContaining({ workflow: 'existing-parent-renewal-v1' }),
     subscription_data: expect.objectContaining({
       metadata: expect.objectContaining({ workflow: 'existing-parent-renewal-v1' }),
     }),
   }));
+  expect(options.idempotencyKey).toMatch(/^giis-parent-checkout:[a-f0-9]{64}$/);
+  expect(mockStripe.checkout.sessions.create.mock.calls[1][1]).toEqual(options);
 });
 
 test('roles stay isolated even if a non-admin claim carries an adminId', async () => {

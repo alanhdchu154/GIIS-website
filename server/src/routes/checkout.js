@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const crypto = require('crypto');
 const ADMISSIONS_WORKFLOW_VERSION = 'admissions-v5';
 const Stripe = require('stripe');
 const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
@@ -7,6 +8,17 @@ const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
 const prisma = require('../lib/prisma');
 const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'http://localhost:3000').split(',')[0].trim();
+// Prevent accidental double-click/network-retry duplication without turning a
+// completed renewal into a permanent lock on future plan changes.
+const RENEWAL_CHECKOUT_RETRY_WINDOW_MS = 15 * 60 * 1000;
+
+function renewalCheckoutIdempotencyKey({ parentId, studentId, planType, now = Date.now() }) {
+  const retryWindow = Math.floor(Number(now) / RENEWAL_CHECKOUT_RETRY_WINDOW_MS);
+  const digest = crypto.createHash('sha256')
+    .update(JSON.stringify([parentId, studentId, planType, retryWindow]))
+    .digest('hex');
+  return `giis-parent-checkout:${digest}`;
+}
 
 function checkoutSessionSummary(session, knownInDb) {
   return {
@@ -100,6 +112,7 @@ router.post('/create-session', async (req, res) => {
   }
   let checkoutEmail = email || undefined;
   let checkoutWorkflow = 'staff-created-checkout-v1';
+  let checkoutIdempotencyKey = null;
   if (tier.public === false) {
     const result = await readSessionAuth(req, { roles: ['admin'] });
     if (!result.ok) return sendSessionError(res, result);
@@ -117,6 +130,11 @@ router.post('/create-session', async (req, res) => {
     // the existing student account.
     checkoutEmail = result.auth.email;
     checkoutWorkflow = 'existing-parent-renewal-v1';
+    checkoutIdempotencyKey = renewalCheckoutIdempotencyKey({
+      parentId: result.auth.parentId,
+      studentId: result.auth.studentId,
+      planType,
+    });
   }
   if (!tier.priceId) {
     return res.status(500).json({
@@ -125,7 +143,7 @@ router.post('/create-session', async (req, res) => {
   }
 
   try {
-    const session = await stripe.checkout.sessions.create({
+    const checkoutParams = {
       mode: tier.mode,
       payment_method_types: ['card'],
       line_items: [{ price: tier.priceId, quantity: 1 }],
@@ -148,7 +166,10 @@ router.post('/create-session', async (req, res) => {
           },
         },
       }),
-    });
+    };
+    const session = checkoutIdempotencyKey
+      ? await stripe.checkout.sessions.create(checkoutParams, { idempotencyKey: checkoutIdempotencyKey })
+      : await stripe.checkout.sessions.create(checkoutParams);
 
     res.json({ url: session.url, sessionId: session.id });
   } catch (err) {
@@ -199,4 +220,6 @@ router.get('/tiers', (_req, res) => {
 module.exports = router;
 module.exports.PRICE_TIERS = PRICE_TIERS;  // exposed for webhook handler to read tier config
 module.exports.checkoutSessionSummary = checkoutSessionSummary;
+module.exports.renewalCheckoutIdempotencyKey = renewalCheckoutIdempotencyKey;
+module.exports.RENEWAL_CHECKOUT_RETRY_WINDOW_MS = RENEWAL_CHECKOUT_RETRY_WINDOW_MS;
 module.exports.ADMISSIONS_WORKFLOW_VERSION = ADMISSIONS_WORKFLOW_VERSION;
