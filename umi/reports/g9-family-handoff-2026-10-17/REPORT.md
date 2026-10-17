@@ -1,8 +1,8 @@
 # G9 family handoff and application-safety candidate
 
-Date: 2026-10-17 America/Chicago  
-Case reference: `G9-20261017-A` (family originals and detailed score record stay outside git)  
-Candidate: `codex/g9-family-handoff-20261017` at `8b7e1803d879193d5fb1080b9de66ae869d33ba7`  
+Date: 2026-10-17 America/Chicago
+Case reference: `G9-20261017-A` (family originals and detailed score record stay outside git)
+Candidate: `codex/g9-family-handoff-20261017` at `8b7e1803d879193d5fb1080b9de66ae869d33ba7`
 Base: `origin/main` at `d89a48636455df88318279b7fcb667308eb8bb9a`
 
 ## Outcome
