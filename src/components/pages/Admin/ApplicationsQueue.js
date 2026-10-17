@@ -206,6 +206,31 @@ GIIS 招生团队`;
   return language === 'zh' ? chinese : english;
 }
 
+export function accountFallbackWelcomeEmail(credentials) {
+  const contactEmail = credentials.parentContactEmail || credentials.parentEmail || '';
+  const contactName = contactEmail ? contactEmail.split('@')[0] : '';
+  const paymentCopy = (credentials.linkedSubscriptions || 0) > 0
+    ? 'Payment has been recorded. GIIS is now setting up the approved courses, first due date, and first-week reviewer. Please wait for GIIS to confirm those details before the student begins.'
+    : 'Course access remains pending while admissions confirms payment and sets up the approved courses, first due date, and first-week reviewer. Please wait for GIIS confirmation before the student begins.';
+  return `Subject: GIIS portal accounts verified — course setup pending
+
+Hi ${contactName},
+
+Your family's GIIS portal accounts have been created. You can verify account access using the login details below. Account access does not mean course setup is complete.
+
+Login: ${credentials.loginUrl}
+Parent Portal email: ${credentials.parentLoginEmail || credentials.parentEmail}
+Parent temp password: ${credentials.parentPassword || credentials.tempPassword}
+Student Portal email: ${credentials.studentEmail || ''}
+Student temp password: ${credentials.studentPassword || ''}
+
+${paymentCopy}
+
+If the parent or student dashboard is empty, setup is still pending; it does not mean courses have been assigned.
+
+GIIS Admissions`;
+}
+
 function labelApplicationValue(field, value) {
   const clean = String(value || 'not provided').trim();
   if (field === 'applicantType') return APPLICANT_TYPE_LABELS[clean] || clean || 'Not provided';
@@ -1559,13 +1584,13 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
             <div style={{ background: '#eef6ff', border: '1px solid #2b3d6d', borderRadius: 10, padding: '13px 16px', marginBottom: 16 }}>
               <p style={{ margin: '0 0 4px', fontSize: 11, fontWeight: 800, color: '#2b3d6d', letterSpacing: '0.8px', textTransform: 'uppercase' }}>⚠ Required next step</p>
               <p style={{ margin: '0 0 10px', fontSize: 13, color: '#26324f', lineHeight: 1.55 }}>
-                Accounts exist but this student is <strong>not enrolled in any course yet</strong>. Enroll them now, otherwise the parent dashboard will look empty on first login.
+                Accounts can now be verified, but <strong>no approved courses are assigned yet</strong>. Complete course setup before telling the family to begin. An empty dashboard means setup is pending.
               </p>
               <button
                 onClick={() => { const sid = credentials.studentId; setCredentials(null); navigate(`/admin/transcript/${sid}`); }}
                 disabled={!credentials.studentId}
                 style={{ padding: '9px 16px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontWeight: 800, fontSize: 13, border: 'none', cursor: credentials.studentId ? 'pointer' : 'not-allowed', opacity: credentials.studentId ? 1 : 0.5 }}>
-                Enroll in courses →
+                Set up approved courses →
               </button>
             </div>
 
@@ -1574,27 +1599,12 @@ export default function ApplicationsQueue({ language = 'en', toggleLanguage }) {
             </div>
 
             <div style={{ background: '#f4f6fa', borderRadius: 8, padding: '12px 16px', fontFamily: 'monospace', fontSize: 12, whiteSpace: 'pre-wrap', marginBottom: 16, color: '#1a1d24', lineHeight: 1.7 }}>
-{`Subject: Your GIIS account is ready — next step
-
-Hi ${(credentials.parentContactEmail || credentials.parentEmail) ? (credentials.parentContactEmail || credentials.parentEmail).split('@')[0] : ''},
-
-Your child's GIIS account has been created. Please log in to complete enrollment:
-
-Login: ${credentials.loginUrl}
-Parent Portal email: ${credentials.parentLoginEmail || credentials.parentEmail}
-Parent temp password: ${credentials.parentPassword || credentials.tempPassword}
-Student Portal email: ${credentials.studentEmail || ''}
-Student temp password: ${credentials.studentPassword || ''}
-
-	${(credentials.linkedSubscriptions || 0) > 0 ? 'Payment has been recorded. After logging in, you will see the parent dashboard and first-week instructions.' : 'After logging in, please wait for admissions to confirm payment before full course access.'}
-
-Welcome to GIIS!
-— The GIIS Team`}
+{accountFallbackWelcomeEmail(credentials)}
             </div>
 
             <div style={{ display: 'flex', gap: 10 }}>
               <button
-	                onClick={() => copyToClipboard(`Subject: Your GIIS account is ready — next step\n\nHi ${(credentials.parentContactEmail || credentials.parentEmail) ? (credentials.parentContactEmail || credentials.parentEmail).split('@')[0] : ''},\n\nYour child's GIIS account has been created. Please log in to complete enrollment:\n\nLogin: ${credentials.loginUrl}\nParent Portal email: ${credentials.parentLoginEmail || credentials.parentEmail}\nParent temp password: ${credentials.parentPassword || credentials.tempPassword}\nStudent Portal email: ${credentials.studentEmail || ''}\nStudent temp password: ${credentials.studentPassword || ''}\n\n${(credentials.linkedSubscriptions || 0) > 0 ? 'Payment has been recorded. After logging in, you will see the parent dashboard and first-week instructions.' : 'After logging in, please wait for admissions to confirm payment before full course access.'}\n\nWelcome to GIIS!\n— The GIIS Team`)}
+                onClick={() => copyToClipboard(accountFallbackWelcomeEmail(credentials))}
                 style={{ flex: 1, padding: '11px', borderRadius: 8, background: '#2b3d6d', color: '#fff', fontWeight: 700, fontSize: 13, border: 'none', cursor: 'pointer' }}>
                 📋 Copy fallback welcome email
               </button>

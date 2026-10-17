@@ -10,6 +10,8 @@ const RESULT_LABELS = {
   pending_clarification: 'Pending Clarification',
 };
 
+export const FAMILY_VISIBLE_PLACEMENT_NOTICE = 'After Principal signature, Bridge / next-step plan, First-term plan, and First-week reviewer will appear on the family status page, together with the signed result and recheck date. Write these fields in clear, parent-safe language. Decision rationale, evidence reviewed, assistance or accommodations, and independent-learning observations remain staff-only.';
+
 function dateOnly(value) {
   if (!value) return '';
   const parsed = new Date(value);
@@ -112,7 +114,7 @@ export default function PlacementDecisionEditor({ app, capability, onChanged, sh
   async function approveDecision() {
     if (!principalApprover.trim()) return showToast('Principal approver name is required');
     const confirmed = window.confirm(
-      `Record ${principalApprover.trim()} as approving the current ${RESULT_LABELS[record?.result] || 'placement'} decision? This locks the record.`
+      `Record ${principalApprover.trim()} as approving the current ${RESULT_LABELS[record?.result] || 'placement'} decision? This locks the record and makes the marked family-visible fields available on the family status page.`
     );
     if (!confirmed) return;
     setSaving('approval');
@@ -171,6 +173,10 @@ export default function PlacementDecisionEditor({ app, capability, onChanged, sh
         </p>
       )}
 
+      <p style={{ margin: '0 0 12px', padding: '10px 12px', borderRadius: 7, background: '#eef6ff', border: '1px solid #a9c4eb', color: '#263f68', fontSize: 11.5, lineHeight: 1.5 }}>
+        <strong>Family visibility:</strong> {FAMILY_VISIBLE_PLACEMENT_NOTICE}
+      </p>
+
       <fieldset disabled={signed || !!saving || !available} style={{ border: 0, padding: 0, margin: 0 }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(145px, 1fr))', gap: 10, marginBottom: 12 }}>
           <Field label="Assessment date"><input type="date" value={draft.assessmentDate} onChange={(event) => setField('assessmentDate', event.target.value)} style={fieldStyle} /></Field>
@@ -184,7 +190,7 @@ export default function PlacementDecisionEditor({ app, capability, onChanged, sh
             </select>
           </Field>
           <Field label="Recommended grade"><input value={draft.recommendedGradeLevel} onChange={(event) => setField('recommendedGradeLevel', event.target.value)} style={fieldStyle} /></Field>
-          <Field label="First-week reviewer"><input value={draft.firstWeekReviewer} onChange={(event) => setField('firstWeekReviewer', event.target.value)} style={fieldStyle} /></Field>
+          <Field label="First-week reviewer — family-visible after signature"><input value={draft.firstWeekReviewer} onChange={(event) => setField('firstWeekReviewer', event.target.value)} style={fieldStyle} /></Field>
           <Field label="Recheck date" hint="Required for Ready with Bridge"><input type="date" value={draft.recheckDate} onChange={(event) => setField('recheckDate', event.target.value)} style={fieldStyle} /></Field>
         </div>
 
@@ -193,8 +199,8 @@ export default function PlacementDecisionEditor({ app, capability, onChanged, sh
           <Field label="Assistance or accommodations"><textarea rows={3} value={draft.assistanceNotes} onChange={(event) => setField('assistanceNotes', event.target.value)} style={{ ...fieldStyle, resize: 'vertical' }} /></Field>
           <Field label="Independent-learning observations"><textarea rows={3} value={draft.independentLearningNotes} onChange={(event) => setField('independentLearningNotes', event.target.value)} style={{ ...fieldStyle, resize: 'vertical' }} /></Field>
           <Field label="Decision rationale"><textarea rows={3} value={draft.decisionRationale} onChange={(event) => setField('decisionRationale', event.target.value)} style={{ ...fieldStyle, resize: 'vertical' }} /></Field>
-          <Field label="Bridge or next-step plan"><textarea rows={3} value={draft.bridgePlan} onChange={(event) => setField('bridgePlan', event.target.value)} style={{ ...fieldStyle, resize: 'vertical' }} /></Field>
-          <Field label="First-term plan"><textarea rows={3} value={draft.firstTermPlan} onChange={(event) => setField('firstTermPlan', event.target.value)} style={{ ...fieldStyle, resize: 'vertical' }} /></Field>
+          <Field label="Bridge or next-step plan — family-visible after signature"><textarea rows={3} value={draft.bridgePlan} onChange={(event) => setField('bridgePlan', event.target.value)} style={{ ...fieldStyle, resize: 'vertical' }} /></Field>
+          <Field label="First-term plan — family-visible after signature"><textarea rows={3} value={draft.firstTermPlan} onChange={(event) => setField('firstTermPlan', event.target.value)} style={{ ...fieldStyle, resize: 'vertical' }} /></Field>
         </div>
       </fieldset>
 
