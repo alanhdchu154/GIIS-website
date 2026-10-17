@@ -540,26 +540,6 @@ export default function ParentDashboard({ language }) {
     }
   }
 
-  async function handleStartCheckout() {
-    setPortalLoading(true);
-    setPortalError(null);
-    try {
-      const res = await fetch(`${API}/api/checkout/create-session`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ planType: 'founders_monthly', email: session.email }),
-      });
-      const json = await res.json();
-      if (!res.ok) { setPortalError(json.error || 'Could not start checkout.'); return; }
-      window.location.href = json.url;
-    } catch {
-      setPortalError('Network error — please try again.');
-    } finally {
-      setPortalLoading(false);
-    }
-  }
-
   if (!session) return null;
 
   if (!data && !error) {
@@ -634,23 +614,24 @@ export default function ParentDashboard({ language }) {
             </div>
           )}
 
-          {/* Enrollment pending banner */}
+          {/* Payment / plan review banner */}
           {!isPaid && (
             <div style={{ background: 'linear-gradient(90deg, #b45309, #d97706)', borderRadius: 12, padding: '16px 24px', marginBottom: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
               <div>
                 <p style={{ fontSize: 14, fontWeight: 800, color: '#fff', margin: '0 0 2px' }}>
-                  {isEn ? 'Your enrollment is not yet active' : '你的学籍尚未激活'}
+                  {isEn ? 'Payment or plan review is needed' : '需要确认付款或方案'}
                 </p>
                 <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.8)', margin: 0 }}>
-                  {isEn ? 'Complete payment to unlock full course access.' : '完成付款以解锁全部课程。'}
+                  {isEn
+                    ? 'GIIS staff will confirm the correct plan and payment link. Please do not start a second checkout.'
+                    : 'GIIS 工作人员会确认正确的方案和付款链接，请勿自行发起第二次结账。'}
                 </p>
               </div>
-              <button
-                onClick={handleStartCheckout}
-                disabled={portalLoading}
-                style={{ background: '#fff', color: '#b45309', fontWeight: 800, fontSize: 13, border: 'none', borderRadius: 8, padding: '10px 20px', cursor: portalLoading ? 'wait' : 'pointer', whiteSpace: 'nowrap', fontFamily: 'Inter, sans-serif' }}>
-                {portalLoading ? (isEn ? 'Loading…' : '加载中…') : (isEn ? 'Complete Enrollment →' : '完成报名 →')}
-              </button>
+              <a
+                href="mailto:admissions@genesisideas.school?subject=GIIS%20payment%20or%20plan%20review"
+                style={{ background: '#fff', color: '#b45309', fontWeight: 800, fontSize: 13, borderRadius: 8, padding: '10px 20px', whiteSpace: 'nowrap', fontFamily: 'Inter, sans-serif', textDecoration: 'none' }}>
+                {isEn ? 'Contact admissions →' : '联系招生办公室 →'}
+              </a>
             </div>
           )}
 
@@ -805,22 +786,35 @@ export default function ParentDashboard({ language }) {
                 <p style={{ fontSize: 11, fontWeight: 700, color: '#888', letterSpacing: '1.5px', textTransform: 'uppercase', margin: '0 0 14px' }}>
                   {isEn ? 'Subscription' : '订阅管理'}
                 </p>
-                <button
-                  onClick={handleManageBilling}
-                  disabled={portalLoading}
-                  style={{ width: '100%', background: '#1a1a2e', color: '#fff', border: 'none', borderRadius: 8, padding: '11px 16px', fontSize: 13.5, fontWeight: 700, cursor: portalLoading ? 'wait' : 'pointer', fontFamily: 'Inter, sans-serif', letterSpacing: '0.01em' }}
-                >
-                  {portalLoading
-                    ? (isEn ? 'Opening…' : '开启中…')
-                    : (isEn ? 'Manage subscription →' : '管理订阅 →')}
-                </button>
+                {subscription ? (
+                  <button
+                    onClick={handleManageBilling}
+                    disabled={portalLoading}
+                    style={{ width: '100%', background: '#1a1a2e', color: '#fff', border: 'none', borderRadius: 8, padding: '11px 16px', fontSize: 13.5, fontWeight: 700, cursor: portalLoading ? 'wait' : 'pointer', fontFamily: 'Inter, sans-serif', letterSpacing: '0.01em' }}
+                  >
+                    {portalLoading
+                      ? (isEn ? 'Opening…' : '开启中…')
+                      : (isEn ? 'Manage billing →' : '管理账单 →')}
+                  </button>
+                ) : (
+                  <a
+                    href="mailto:admissions@genesisideas.school?subject=GIIS%20billing%20support"
+                    style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '100%', boxSizing: 'border-box', background: '#1a1a2e', color: '#fff', borderRadius: 8, padding: '11px 16px', fontSize: 13.5, fontWeight: 700, textDecoration: 'none', fontFamily: 'Inter, sans-serif' }}
+                  >
+                    {isEn ? 'Contact billing support →' : '联系账单支持 →'}
+                  </a>
+                )}
                 {portalError && (
                   <p style={{ fontSize: 12, color: '#b91c1c', margin: '8px 0 0' }}>{portalError}</p>
                 )}
                 <p style={{ fontSize: 11, color: '#9aa0ad', margin: '8px 0 0', lineHeight: 1.5 }}>
-                  {isEn
-                    ? 'Cancel, update payment method, or download invoices via Stripe.'
-                    : '透过 Stripe 取消订阅、更新付款方式或下载发票。'}
+                  {subscription
+                    ? (isEn
+                      ? 'Recurring subscriptions renew automatically. Use Stripe for payment methods, invoices, or cancellation. Contact GIIS for plan changes or upgrades.'
+                      : '订阅会自动续费。可在 Stripe 更新付款方式、下载发票或取消订阅；变更或升级方案请联系 GIIS。')
+                    : (isEn
+                      ? 'GIIS staff issues reviewed payment links. Contact us for payment, plan changes, or upgrades.'
+                      : 'GIIS 工作人员会在审核后提供付款链接；付款、变更或升级方案请联系我们。')}
                 </p>
               </div>
 

@@ -60,6 +60,8 @@ const createdStudent = {
   parentAccounts: [],
 };
 
+let mockSubscriptionStudentId;
+
 function response() {
   return {
     code: 200,
@@ -86,6 +88,7 @@ async function activate() {
 
 beforeEach(() => {
   jest.resetAllMocks();
+  mockSubscriptionStudentId = null;
   mockDb.application.findUnique.mockResolvedValue(approvedApplication);
   mockDb.student.findFirst.mockResolvedValue(null);
   mockDb.student.findUnique.mockResolvedValue(null);
@@ -93,11 +96,18 @@ beforeEach(() => {
   mockDb.parentAccount.findUnique.mockResolvedValue(null);
   mockDb.applicationEvent.findFirst.mockResolvedValue(null);
   mockDb.applicationEvent.findMany.mockResolvedValue([{ metadata: { subscriptionId: 'subscription-1' } }]);
-  mockDb.subscription.findMany.mockResolvedValue([{ id: 'subscription-1', studentId: null, status: 'active' }]);
+  mockDb.subscription.findMany.mockImplementation(async () => ([{
+    id: 'subscription-1',
+    studentId: mockSubscriptionStudentId,
+    status: 'active',
+  }]));
   mockDb.application.updateMany.mockResolvedValue({ count: 1 });
   mockDb.student.create.mockResolvedValue({ ...createdStudent, parentAccounts: [] });
   mockDb.parentAccount.create.mockResolvedValue({ email: 'parent.synthetic.student@genesisideas.school' });
-  mockDb.subscription.updateMany.mockResolvedValue({ count: 1 });
+  mockDb.subscription.updateMany.mockImplementation(async ({ data }) => {
+    mockSubscriptionStudentId = data.studentId;
+    return { count: 1 };
+  });
   mockDb.applicationEvent.create.mockResolvedValue({ id: 'event-1' });
   mockDb.emailLog.create.mockResolvedValue({ id: 'email-log-1' });
   mockDb.$transaction.mockImplementation(async callback => callback(mockDb));
@@ -138,6 +148,39 @@ test('success atomically claims the application and returns explicit course-setu
       metadata: { studentId: 'student-1', courseSetupPending: true },
     }),
   });
+});
+
+test('an application-owned payment already linked to another student fails closed before activation writes', async () => {
+  mockSubscriptionStudentId = 'student-other';
+
+  const result = await activate();
+
+  expect(result.code).toBe(409);
+  expect(result.body).toMatchObject({ code: 'payment_link_conflict' });
+  expect(mockDb.$transaction).not.toHaveBeenCalled();
+  expect(mockDb.application.updateMany).not.toHaveBeenCalled();
+  expect(mockDb.student.create).not.toHaveBeenCalled();
+  expect(mockDb.parentAccount.create).not.toHaveBeenCalled();
+  expect(mockDb.applicationEvent.create).not.toHaveBeenCalled();
+  expect(mockSendWelcomeEmail).not.toHaveBeenCalled();
+  expect(mockDb.emailLog.create).not.toHaveBeenCalled();
+});
+
+test('activation transaction refuses to record activation unless every receipt subscription links to the new student', async () => {
+  const unlinkedReceipt = [{ id: 'subscription-1', studentId: null, status: 'active' }];
+  mockDb.subscription.findMany
+    .mockResolvedValueOnce(unlinkedReceipt)
+    .mockResolvedValueOnce(unlinkedReceipt)
+    .mockResolvedValueOnce(unlinkedReceipt);
+  mockDb.subscription.updateMany.mockResolvedValue({ count: 0 });
+
+  const result = await activate();
+
+  expect(result.code).toBe(409);
+  expect(result.body).toMatchObject({ code: 'payment_link_conflict' });
+  expect(mockDb.applicationEvent.create).not.toHaveBeenCalled();
+  expect(mockSendWelcomeEmail).not.toHaveBeenCalled();
+  expect(mockDb.emailLog.create).not.toHaveBeenCalled();
 });
 
 test('retry returns the existing account without creating duplicates or exposing old passwords', async () => {

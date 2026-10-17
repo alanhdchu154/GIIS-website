@@ -1204,12 +1204,17 @@ async function applicationEnrollmentState(app) {
       ],
     },
     orderBy: { createdAt: 'desc' },
-    take: 5,
   });
 
   const activeStatuses = new Set(['active', 'paid']);
   const receiptSubscriptionIds = new Set(subscriptionIds);
-  const activeReceipt = subscriptions.find((sub) => receiptSubscriptionIds.has(sub.id) && activeStatuses.has(sub.status));
+  const activeReceiptSubscriptions = subscriptions.filter((sub) => (
+    receiptSubscriptionIds.has(sub.id) && activeStatuses.has(sub.status)
+  ));
+  const paymentLinkConflict = activeReceiptSubscriptions.some((sub) => (
+    !!sub.studentId && sub.studentId !== activatedStudentId
+  ));
+  const activeReceipt = activeReceiptSubscriptions[0] || null;
   const activeReceiptLinked = activeReceipt
     && activatedStudentId
     && activeReceipt.studentId === activatedStudentId
@@ -1218,7 +1223,9 @@ async function applicationEnrollmentState(app) {
   const activeLinked = activatedStudentId
     ? subscriptions.find((sub) => sub.studentId === activatedStudentId && activeStatuses.has(sub.status))
     : null;
-  const activeUnlinked = activeReceipt && !activeReceiptLinked ? activeReceipt : null;
+  const activeUnlinked = !paymentLinkConflict
+    ? activeReceiptSubscriptions.find((sub) => !sub.studentId) || null
+    : null;
   const latestSub = subscriptions[0] || null;
   const enrollments = student?.enrollments || [];
   const learningStarted = enrollments.some((enrollment) => (
@@ -1280,6 +1287,7 @@ async function applicationEnrollmentState(app) {
     subscriptionStatus: (activeLinked || activeUnlinked || latestSub)?.status || null,
     paid: !!(activeReceiptLinked || (accountsReady && activeLinked)),
     paidUnlinked: !!activeUnlinked,
+    paymentLinkConflict,
     accountsReady,
     courseCount: enrollments.length,
     learningStarted,
@@ -1291,16 +1299,47 @@ async function linkExistingSubscriptionsForApplication({ app, studentId, prismaC
     where: { applicationId: app.id, action: { in: ['stripe_payment_confirmed', 'manual_payment_recorded'] } },
     select: { metadata: true },
   });
-  const subscriptionIds = receipts.map(event => event.metadata?.subscriptionId).filter(Boolean);
-  const updated = await prismaClient.subscription.updateMany({
+  const subscriptionIds = [...new Set(receipts.map(event => event.metadata?.subscriptionId).filter(Boolean))];
+  const qualifying = await prismaClient.subscription.findMany({
+    where: { id: { in: subscriptionIds }, status: { in: ['active', 'paid'] } },
+    select: { id: true, studentId: true },
+  });
+  if (!qualifying.length) {
+    const error = new Error('payment_evidence_changed');
+    error.code = 'PAYMENT_EVIDENCE_CHANGED';
+    throw error;
+  }
+  if (qualifying.some((subscription) => subscription.studentId && subscription.studentId !== studentId)) {
+    const error = new Error('payment_link_conflict');
+    error.code = 'PAYMENT_LINK_CONFLICT';
+    throw error;
+  }
+
+  await prismaClient.subscription.updateMany({
     where: {
       studentId: null,
-      id: { in: subscriptionIds },
+      id: { in: qualifying.map(subscription => subscription.id) },
       status: { in: ['active', 'paid'] },
     },
     data: { studentId },
   });
-  return updated.count;
+  const linked = await prismaClient.subscription.findMany({
+    where: { id: { in: qualifying.map(subscription => subscription.id) }, status: { in: ['active', 'paid'] } },
+    select: { id: true, studentId: true },
+  });
+  if (linked.length !== qualifying.length || linked.some((subscription) => subscription.studentId !== studentId)) {
+    const error = new Error('payment_link_conflict');
+    error.code = 'PAYMENT_LINK_CONFLICT';
+    throw error;
+  }
+  return linked.length;
+}
+
+function paymentLinkConflictResponse(res) {
+  return res.status(409).json({
+    error: 'This application payment is already linked to another student. Review billing and the application receipt before activation.',
+    code: 'payment_link_conflict',
+  });
 }
 
 async function activatedApplicationAccountState(applicationId) {
@@ -2243,6 +2282,8 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
   if (!app) return res.status(404).json({ error: 'Application not found.' });
   if (app.status !== 'approved') return res.status(400).json({ error: 'Application must be approved first.' });
   if (app.accountsCreated) {
+    const enrollmentState = await applicationEnrollmentState(app);
+    if (enrollmentState.paymentLinkConflict) return paymentLinkConflictResponse(res);
     const existing = await activatedApplicationAccountState(app.id);
     if (!existing) {
       return res.status(409).json({
@@ -2254,6 +2295,7 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
     return res.json(activatedAccountResponse({ student: existing, parentContactEmail: app.parentEmail }));
   }
   const enrollmentBeforeActivation = await applicationEnrollmentState(app);
+  if (enrollmentBeforeActivation.paymentLinkConflict) return paymentLinkConflictResponse(res);
   const readinessError = activationReadinessError(app, enrollmentBeforeActivation);
   if (readinessError) return res.status(400).json({ error: readinessError });
 
@@ -2343,6 +2385,13 @@ router.post('/:id/activate', authenticate, requireAdmin, async (req, res) => {
       return { student: studentWithAccounts, linkedSubscriptions };
     });
   } catch (error) {
+    if (error?.code === 'PAYMENT_LINK_CONFLICT') return paymentLinkConflictResponse(res);
+    if (error?.code === 'PAYMENT_EVIDENCE_CHANGED') {
+      return res.status(409).json({
+        error: 'The verified payment evidence changed during activation. Reload and review billing before retrying.',
+        code: 'payment_evidence_changed',
+      });
+    }
     if (error?.code !== 'ACTIVATION_CHANGED') throw error;
     const current = await prisma.application.findUnique({
       where: { id: app.id },

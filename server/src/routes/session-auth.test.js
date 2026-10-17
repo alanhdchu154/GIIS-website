@@ -191,34 +191,19 @@ test('revoked admin cannot use parent setup or private checkout, and public chec
   expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
   const publicAttempt = await invoke(checkoutRoutes, 'post', '/create-session', { body: { planType: 'self_paced_monthly' } });
   expect(publicAttempt.res.code).toBe(403);
-  expect(publicAttempt.res.body.code).toBe('application_review_required');
+  expect(publicAttempt.res.body.code).toBe('staff_checkout_required');
   expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
 });
 
-test('authenticated parent renewal binds email and deduplicates a double-click with Stripe idempotency', async () => {
-  jest.spyOn(Date, 'now').mockReturnValue(1_800_000_000_000);
+test('authenticated parent cannot create a generic public-plan Checkout session', async () => {
   const token = tokenFor('parent');
   const result = await invoke(checkoutRoutes, 'post', '/create-session', {
     cookies: { giis_parent_jwt: token },
     body: { planType: 'self_paced_monthly', email: 'someone-else@example.invalid' },
   });
-  const retry = await invoke(checkoutRoutes, 'post', '/create-session', {
-    cookies: { giis_parent_jwt: token },
-    body: { planType: 'self_paced_monthly', email: 'someone-else@example.invalid' },
-  });
-  expect(result.res.code).toBe(200);
-  expect(retry.res.code).toBe(200);
-  expect(retry.res.body.sessionId).toBe(result.res.body.sessionId);
-  const [params, options] = mockStripe.checkout.sessions.create.mock.calls[0];
-  expect(params).toEqual(expect.objectContaining({
-    customer_email: identities.parent.email,
-    metadata: expect.objectContaining({ workflow: 'existing-parent-renewal-v1' }),
-    subscription_data: expect.objectContaining({
-      metadata: expect.objectContaining({ workflow: 'existing-parent-renewal-v1' }),
-    }),
-  }));
-  expect(options.idempotencyKey).toMatch(/^giis-parent-checkout:[a-f0-9]{64}$/);
-  expect(mockStripe.checkout.sessions.create.mock.calls[1][1]).toEqual(options);
+  expect(result.res.code).toBe(403);
+  expect(result.res.body.code).toBe('staff_checkout_required');
+  expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
 });
 
 test('roles stay isolated even if a non-admin claim carries an adminId', async () => {

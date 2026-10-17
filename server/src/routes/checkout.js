@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const crypto = require('crypto');
 const ADMISSIONS_WORKFLOW_VERSION = 'admissions-v5';
 const Stripe = require('stripe');
 const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
@@ -8,17 +7,6 @@ const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
 const prisma = require('../lib/prisma');
 const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'http://localhost:3000').split(',')[0].trim();
-// Prevent accidental double-click/network-retry duplication without turning a
-// completed renewal into a permanent lock on future plan changes.
-const RENEWAL_CHECKOUT_RETRY_WINDOW_MS = 15 * 60 * 1000;
-
-function renewalCheckoutIdempotencyKey({ parentId, studentId, planType, now = Date.now() }) {
-  const retryWindow = Math.floor(Number(now) / RENEWAL_CHECKOUT_RETRY_WINDOW_MS);
-  const digest = crypto.createHash('sha256')
-    .update(JSON.stringify([parentId, studentId, planType, retryWindow]))
-    .digest('hex');
-  return `giis-parent-checkout:${digest}`;
-}
 
 function checkoutSessionSummary(session, knownInDb) {
   return {
@@ -93,9 +81,10 @@ const LEGACY_ALIASES = {
 /**
  * POST /api/checkout/create-session
  * Body: { planType: string, email?: string }
- * Publicly listed plans are renewal/upgrade checkout for an authenticated
- * parent account. New families must use the application-bound checkout after
- * admissions approval (and a signed placement decision when required).
+ * Publicly listed plans cannot be purchased through this generic endpoint.
+ * New families use application-bound Checkout after admissions approval;
+ * existing families contact staff for plan changes. This route remains only
+ * for nonpublic, staff-controlled test/group tiers.
  * Returns: { url: string }   — frontend does `window.location = url`
  */
 router.post('/create-session', async (req, res) => {
@@ -110,32 +99,15 @@ router.post('/create-session', async (req, res) => {
   if (!tier) {
     return res.status(400).json({ error: `Unknown planType: ${planType}` });
   }
-  let checkoutEmail = email || undefined;
-  let checkoutWorkflow = 'staff-created-checkout-v1';
-  let checkoutIdempotencyKey = null;
-  if (tier.public === false) {
-    const result = await readSessionAuth(req, { roles: ['admin'] });
-    if (!result.ok) return sendSessionError(res, result);
-  } else {
-    const result = await readSessionAuth(req, { roles: ['parent'], cookieName: 'giis_parent_jwt' });
-    if (!result.ok) {
-      if (result.status === 503) return sendSessionError(res, result);
-      return res.status(403).json({
-        error: 'Enrollment payment is available after application and academic review. Existing families can renew or upgrade from the Parent Portal.',
-        code: 'application_review_required',
-      });
-    }
-    // Never let a caller redirect a renewal checkout to another email. The
-    // authenticated parent email is also how the webhook links the payment to
-    // the existing student account.
-    checkoutEmail = result.auth.email;
-    checkoutWorkflow = 'existing-parent-renewal-v1';
-    checkoutIdempotencyKey = renewalCheckoutIdempotencyKey({
-      parentId: result.auth.parentId,
-      studentId: result.auth.studentId,
-      planType,
+  const checkoutEmail = email || undefined;
+  if (tier.public !== false) {
+    return res.status(403).json({
+      error: 'Payment links are issued by GIIS staff after application review. Existing families should contact the school for plan changes or upgrades.',
+      code: 'staff_checkout_required',
     });
   }
+  const result = await readSessionAuth(req, { roles: ['admin'] });
+  if (!result.ok) return sendSessionError(res, result);
   if (!tier.priceId) {
     return res.status(500).json({
       error: `No Stripe price ID configured for "${planType}". Add STRIPE_PRICE_${planType.toUpperCase()} to server/.env.`,
@@ -154,7 +126,7 @@ router.post('/create-session', async (req, res) => {
       metadata: {
         planType,
         maxStudents: String(tier.maxStudents),
-        workflow: checkoutWorkflow,
+        workflow: 'staff-created-checkout-v1',
       },
       // Only valid for subscription mode — passed through to the Subscription object
       ...(tier.mode === 'subscription' && {
@@ -162,14 +134,12 @@ router.post('/create-session', async (req, res) => {
           metadata: {
             planType,
             maxStudents: String(tier.maxStudents),
-            workflow: checkoutWorkflow,
+            workflow: 'staff-created-checkout-v1',
           },
         },
       }),
     };
-    const session = checkoutIdempotencyKey
-      ? await stripe.checkout.sessions.create(checkoutParams, { idempotencyKey: checkoutIdempotencyKey })
-      : await stripe.checkout.sessions.create(checkoutParams);
+    const session = await stripe.checkout.sessions.create(checkoutParams);
 
     res.json({ url: session.url, sessionId: session.id });
   } catch (err) {
@@ -220,6 +190,4 @@ router.get('/tiers', (_req, res) => {
 module.exports = router;
 module.exports.PRICE_TIERS = PRICE_TIERS;  // exposed for webhook handler to read tier config
 module.exports.checkoutSessionSummary = checkoutSessionSummary;
-module.exports.renewalCheckoutIdempotencyKey = renewalCheckoutIdempotencyKey;
-module.exports.RENEWAL_CHECKOUT_RETRY_WINDOW_MS = RENEWAL_CHECKOUT_RETRY_WINDOW_MS;
 module.exports.ADMISSIONS_WORKFLOW_VERSION = ADMISSIONS_WORKFLOW_VERSION;

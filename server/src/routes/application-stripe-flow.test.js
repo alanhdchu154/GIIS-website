@@ -478,8 +478,11 @@ test('sibling with the same payer email cannot see or link the other application
   expect(state.paidUnlinked).toBe(false);
   expect(mockDb.subscription.findMany.mock.calls[0][0].where).toEqual({ OR: [{ id: { in: [] } }] });
   mockDb.subscription.updateMany.mockResolvedValue({ count: 0 });
-  await applications.linkExistingSubscriptionsForApplication({ app: { ...approved, id: 'app_b' }, studentId: 'student_b' });
-  expect(mockDb.subscription.updateMany).toHaveBeenCalledWith({ where: { studentId: null, id: { in: [] }, status: { in: ['active', 'paid'] } }, data: { studentId: 'student_b' } });
+  await expect(applications.linkExistingSubscriptionsForApplication({
+    app: { ...approved, id: 'app_b' },
+    studentId: 'student_b',
+  })).rejects.toMatchObject({ code: 'PAYMENT_EVIDENCE_CHANGED' });
+  expect(mockDb.subscription.updateMany).not.toHaveBeenCalled();
 });
 test('an active subscription from this application receipt is valid pre-activation payment evidence', async () => {
   mockDb.student.findFirst.mockResolvedValue(null);
