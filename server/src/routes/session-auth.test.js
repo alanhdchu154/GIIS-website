@@ -190,8 +190,7 @@ test('revoked admin cannot use parent setup or private checkout, and public chec
   expect((await invoke(checkoutRoutes, 'post', '/create-session', { ...req, body: { planType: 'group_monthly' } })).res.code).toBe(401);
   expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
   const publicAttempt = await invoke(checkoutRoutes, 'post', '/create-session', { body: { planType: 'self_paced_monthly' } });
-  expect(publicAttempt.res.code).toBe(403);
-  expect(publicAttempt.res.body.code).toBe('staff_checkout_required');
+  expect(publicAttempt.res.code).toBe(401);
   expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
 });
 
@@ -201,9 +200,31 @@ test('authenticated parent cannot create a generic public-plan Checkout session'
     cookies: { giis_parent_jwt: token },
     body: { planType: 'self_paced_monthly', email: 'someone-else@example.invalid' },
   });
-  expect(result.res.code).toBe(403);
-  expect(result.res.body.code).toBe('staff_checkout_required');
+  expect(result.res.code).toBe(401);
   expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
+});
+
+test.each([
+  ['owner', 200],
+  ['principal', 403],
+  ['academic_staff', 403],
+  ['admissions_staff', 403],
+  ['support_read_only', 403],
+])('generic nonpublic Checkout is owner-only: %s receives %s', async (staffRole, expectedStatus) => {
+  const token = tokenFor('admin');
+  mockPrisma.adminUser.findUnique.mockResolvedValue({
+    id: identities.admin.adminId,
+    email: identities.admin.email,
+    displayName: staffRole,
+    role: staffRole,
+    isActive: true,
+  });
+  const result = await invoke(checkoutRoutes, 'post', '/create-session', {
+    headers: { authorization: `Bearer ${token}` },
+    body: { planType: 'group_monthly', email: 'reviewed-group@example.invalid' },
+  });
+  expect(result.res.code).toBe(expectedStatus);
+  expect(mockStripe.checkout.sessions.create).toHaveBeenCalledTimes(staffRole === 'owner' ? 1 : 0);
 });
 
 test('roles stay isolated even if a non-admin claim carries an adminId', async () => {

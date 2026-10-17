@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const ADMISSIONS_WORKFLOW_VERSION = 'admissions-v5';
 const Stripe = require('stripe');
-const { readSessionAuth, sendSessionError } = require('../lib/sessionAuth');
+const { authenticate, requireAdmin } = require('../middleware/auth');
 
 const prisma = require('../lib/prisma');
 const stripe = process.env.STRIPE_SECRET_KEY ? Stripe(process.env.STRIPE_SECRET_KEY) : null;
@@ -87,7 +87,7 @@ const LEGACY_ALIASES = {
  * for nonpublic, staff-controlled test/group tiers.
  * Returns: { url: string }   — frontend does `window.location = url`
  */
-router.post('/create-session', async (req, res) => {
+router.post('/create-session', authenticate, requireAdmin, async (req, res) => {
   if (!stripe) {
     return res.status(500).json({ error: 'Stripe is not configured (STRIPE_SECRET_KEY missing).' });
   }
@@ -106,8 +106,6 @@ router.post('/create-session', async (req, res) => {
       code: 'staff_checkout_required',
     });
   }
-  const result = await readSessionAuth(req, { roles: ['admin'] });
-  if (!result.ok) return sendSessionError(res, result);
   if (!tier.priceId) {
     return res.status(500).json({
       error: `No Stripe price ID configured for "${planType}". Add STRIPE_PRICE_${planType.toUpperCase()} to server/.env.`,
