@@ -81,6 +81,9 @@ const LEGACY_ALIASES = {
 /**
  * POST /api/checkout/create-session
  * Body: { planType: string, email?: string }
+ * Publicly listed plans are renewal/upgrade checkout for an authenticated
+ * parent account. New families must use the application-bound checkout after
+ * admissions approval (and a signed placement decision when required).
  * Returns: { url: string }   — frontend does `window.location = url`
  */
 router.post('/create-session', async (req, res) => {
@@ -95,9 +98,25 @@ router.post('/create-session', async (req, res) => {
   if (!tier) {
     return res.status(400).json({ error: `Unknown planType: ${planType}` });
   }
+  let checkoutEmail = email || undefined;
+  let checkoutWorkflow = 'staff-created-checkout-v1';
   if (tier.public === false) {
     const result = await readSessionAuth(req, { roles: ['admin'] });
     if (!result.ok) return sendSessionError(res, result);
+  } else {
+    const result = await readSessionAuth(req, { roles: ['parent'], cookieName: 'giis_parent_jwt' });
+    if (!result.ok) {
+      if (result.status === 503) return sendSessionError(res, result);
+      return res.status(403).json({
+        error: 'Enrollment payment is available after application and academic review. Existing families can renew or upgrade from the Parent Portal.',
+        code: 'application_review_required',
+      });
+    }
+    // Never let a caller redirect a renewal checkout to another email. The
+    // authenticated parent email is also how the webhook links the payment to
+    // the existing student account.
+    checkoutEmail = result.auth.email;
+    checkoutWorkflow = 'existing-parent-renewal-v1';
   }
   if (!tier.priceId) {
     return res.status(500).json({
@@ -110,13 +129,14 @@ router.post('/create-session', async (req, res) => {
       mode: tier.mode,
       payment_method_types: ['card'],
       line_items: [{ price: tier.priceId, quantity: 1 }],
-      customer_email: email || undefined,
+      customer_email: checkoutEmail,
       success_url: `${FRONTEND_URL}/welcome?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url:  `${FRONTEND_URL}/pricing`,
       allow_promotion_codes: true,
       metadata: {
         planType,
         maxStudents: String(tier.maxStudents),
+        workflow: checkoutWorkflow,
       },
       // Only valid for subscription mode — passed through to the Subscription object
       ...(tier.mode === 'subscription' && {
@@ -124,6 +144,7 @@ router.post('/create-session', async (req, res) => {
           metadata: {
             planType,
             maxStudents: String(tier.maxStudents),
+            workflow: checkoutWorkflow,
           },
         },
       }),

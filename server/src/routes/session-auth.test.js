@@ -183,13 +183,32 @@ test.each(['admin', 'parent'])('%s logout failure reports 503 and keeps cookie f
   expect(sessions.get(`${role}-session`).endedAt).toBeNull();
 });
 
-test('revoked admin cannot use parent setup or private checkout, public checkout stays public', async () => {
+test('revoked admin cannot use parent setup or private checkout, and public checkout fails closed', async () => {
   const token = tokenFor('admin', {}, { endedAt: new Date() });
   const req = { headers: { authorization: `Bearer ${token}` } };
   expect((await invoke(parentAuthRoutes, 'post', '/setup', req)).res.code).toBe(401);
   expect((await invoke(checkoutRoutes, 'post', '/create-session', { ...req, body: { planType: 'group_monthly' } })).res.code).toBe(401);
   expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
-  expect((await invoke(checkoutRoutes, 'post', '/create-session', { body: { planType: 'self_paced_monthly' } })).res.code).toBe(200);
+  const publicAttempt = await invoke(checkoutRoutes, 'post', '/create-session', { body: { planType: 'self_paced_monthly' } });
+  expect(publicAttempt.res.code).toBe(403);
+  expect(publicAttempt.res.body.code).toBe('application_review_required');
+  expect(mockStripe.checkout.sessions.create).not.toHaveBeenCalled();
+});
+
+test('authenticated parent can renew but cannot redirect checkout to another email', async () => {
+  const token = tokenFor('parent');
+  const result = await invoke(checkoutRoutes, 'post', '/create-session', {
+    cookies: { giis_parent_jwt: token },
+    body: { planType: 'self_paced_monthly', email: 'someone-else@example.invalid' },
+  });
+  expect(result.res.code).toBe(200);
+  expect(mockStripe.checkout.sessions.create).toHaveBeenCalledWith(expect.objectContaining({
+    customer_email: identities.parent.email,
+    metadata: expect.objectContaining({ workflow: 'existing-parent-renewal-v1' }),
+    subscription_data: expect.objectContaining({
+      metadata: expect.objectContaining({ workflow: 'existing-parent-renewal-v1' }),
+    }),
+  }));
 });
 
 test('roles stay isolated even if a non-admin claim carries an adminId', async () => {

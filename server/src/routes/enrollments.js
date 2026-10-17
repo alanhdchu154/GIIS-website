@@ -385,30 +385,11 @@ router.get('/', authenticate, requireStudent, async (req, res) => {
   res.json(enriched);
 });
 
-router.post('/', authenticate, requireStudent, blockIfSoftLocked, async (req, res) => {
-  const { slug } = req.body || {};
-  if (!slug) return res.status(400).json({ error: 'slug is required' });
-  const student = await ensureStudentMutable(prisma, req.auth.studentId, res);
-  if (!student) return;
-  const course = await prisma.course.findUnique({ where: { slug }, select: { id: true, isPublished: true } });
-  if (!course || !course.isPublished) return res.status(404).json({ error: 'Course not found' });
-  try {
-    const enrollment = await prisma.enrollment.create({
-      data: { studentId: req.auth.studentId, courseId: course.id },
-      include: STUDENT_ENROLLMENT_INCLUDE,
-    });
-    res.status(201).json(enrichStudentEnrollment(enrollment));
-  } catch (e) {
-    if (e.code === 'P2002') {
-      const existing = await prisma.enrollment.findUnique({
-        where: { studentId_courseId: { studentId: req.auth.studentId, courseId: course.id } },
-        include: STUDENT_ENROLLMENT_INCLUDE,
-      });
-      if (existing) return res.status(200).json({ ...enrichStudentEnrollment(existing), alreadyEnrolled: true });
-      return res.status(409).json({ error: 'Already enrolled' });
-    }
-    throw e;
-  }
+router.post('/', authenticate, requireStudent, (_req, res) => {
+  return res.status(403).json({
+    error: 'Courses are assigned by GIIS staff from the approved course plan. Contact your advisor or admissions to request a course change.',
+    code: 'staff_assignment_required',
+  });
 });
 
 // ── Course detail ─────────────────────────────────────────────────────────────

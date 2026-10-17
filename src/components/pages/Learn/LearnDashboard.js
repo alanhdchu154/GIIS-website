@@ -285,7 +285,7 @@ function useEnrollments(enabled = true) {
       });
   }, [enabled]);
   useEffect(() => { reload(); }, [reload]);
-  return { enrollments, setEnrollments, reload };
+  return { enrollments };
 }
 
 function useProfile(enabled = true) {
@@ -323,12 +323,9 @@ export default function LearnDashboard({ language }) {
   const navigate = useNavigate();
   const session = getStudentSession();
   const hasSession = Boolean(session);
-  const { enrollments, setEnrollments, reload } = useEnrollments(hasSession);
+  const { enrollments } = useEnrollments(hasSession);
   const allCourses = useCourses(hasSession);
   const profile = useProfile(hasSession);
-  const [enrolling, setEnrolling] = useState(null);
-  const [enrollErr, setEnrollErr] = useState('');
-  const [enrollSuccess, setEnrollSuccess] = useState(null);
   const [pathwayFilter, setPathwayFilter] = useState(null); // null = auto-detect
   const [courseSearch, setCourseSearch] = useState('');
   const [courseTypeFilter, setCourseTypeFilter] = useState('all');
@@ -347,44 +344,6 @@ export default function LearnDashboard({ language }) {
   useEffect(() => {
     if (!session) navigate('/login', { replace: true });
   }, [session, navigate]);
-
-  async function enroll(slug) {
-    setEnrolling(slug);
-    setEnrollErr('');
-    setEnrollSuccess(null);
-    try {
-      const r = await fetch(`${API}/api/enrollments`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({ slug }),
-      });
-      const d = await r.json().catch(() => ({}));
-      if (!r.ok) {
-        setEnrollErr(d.error || 'Enrollment failed');
-      } else {
-        if (d?.course?.slug) {
-          setEnrollments((previous) => {
-            const list = Array.isArray(previous) ? previous : [];
-            const withoutDuplicate = list.filter((item) => item.course?.slug !== d.course.slug);
-            return [d, ...withoutDuplicate];
-          });
-          setEnrollSuccess({
-            slug: d.course.slug,
-            name: isEn ? d.course.name : (d.course.nameZh || d.course.name),
-            already: Boolean(d.alreadyEnrolled),
-          });
-          setShowExploreCatalog(false);
-          setCourseSearch('');
-        }
-        await reload();
-      }
-    } catch {
-      setEnrollErr('Network error');
-    } finally {
-      setEnrolling(null);
-    }
-  }
 
   if (!session) return null;
 
@@ -556,45 +515,6 @@ export default function LearnDashboard({ language }) {
 
         <WeekOneStart isEn={isEn} spotlight={spotlight} />
 
-        {enrollSuccess && (
-          <div style={{
-            background: '#f4faf6',
-            border: '1px solid #cde8d1',
-            borderLeft: '5px solid #1B6B3A',
-            borderRadius: 10,
-            padding: '14px 16px',
-            marginBottom: 24,
-            display: 'flex',
-            justifyContent: 'space-between',
-            gap: 14,
-            alignItems: 'center',
-            flexWrap: 'wrap',
-          }}>
-            <div>
-              <p style={{ margin: '0 0 3px', color: '#1B6B3A', fontSize: 12, fontWeight: 850, letterSpacing: 1.1, textTransform: 'uppercase' }}>
-                {enrollSuccess.already ? (isEn ? 'Already enrolled' : '已在你的课程中') : (isEn ? 'Course added' : '课程已加入')}
-              </p>
-              <p style={{ margin: 0, color: '#263b2b', fontSize: 13, lineHeight: 1.55, fontWeight: 650 }}>
-                {isEn
-                  ? `${enrollSuccess.name} now appears in My Courses. No sign-out or refresh is needed.`
-                  : `${enrollSuccess.name} 已出现在「我的课程」。不需要退出或重新登录。`}
-              </p>
-            </div>
-            <Link to={`/learn/${enrollSuccess.slug}`} style={{
-              background: '#1B6B3A',
-              color: '#fff',
-              borderRadius: 7,
-              padding: '9px 14px',
-              fontSize: 12,
-              fontWeight: 850,
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-            }}>
-              {isEn ? 'Open course' : '打开课程'}
-            </Link>
-          </div>
-        )}
-
         {/* Graduation banner */}
         {myEnrollments.length > 0 && (graduationPresentation.showReviewBanner ? (
           <div data-m="banner-row" style={{
@@ -718,13 +638,12 @@ export default function LearnDashboard({ language }) {
                         ? `${courseTypeLabel(c.type, isEn)} in your detected pathway. Check the full pathway if you need exact sequence.`
                         : `属于当前检测到的学习方向。需要具体先后顺序时请查看完整路径。`}
                     </p>
-                    <button onClick={() => enroll(c.slug)} disabled={enrolling === c.slug} style={{
-                      fontSize: '12px', fontWeight: 700, color: '#fff',
-                      background: enrolling === c.slug ? '#aaa' : color,
-                      border: 'none', borderRadius: '6px', padding: '6px 14px', cursor: 'pointer', alignSelf: 'flex-start',
+                    <span style={{
+                      fontSize: '11px', fontWeight: 700, color,
+                      background: color + '12', borderRadius: '6px', padding: '6px 10px', alignSelf: 'flex-start',
                     }}>
-                      {enrolling === c.slug ? (isEn ? 'Enrolling…' : '报名中…') : (isEn ? '+ Enroll' : '+ 报名')}
-                    </button>
+                      {isEn ? 'Advisor assignment required' : '需由顾问安排'}
+                    </span>
                   </div>
                 );
               })}
@@ -744,7 +663,7 @@ export default function LearnDashboard({ language }) {
                 {isEn ? "You're not enrolled in any courses yet." : '你还没有报名任何课程。'}
               </p>
               <p style={{ fontSize: '13px', color: '#888', margin: 0 }}>
-                {isEn ? 'Browse the course catalog below to get started.' : '在下方课程目录找到你感兴趣的课程开始学习。'}
+                {isEn ? 'Admissions or your advisor will assign courses from your approved semester plan.' : '招生团队或课程顾问会根据已批准的学期计划为你安排课程。'}
               </p>
             </div>
           ) : (
@@ -983,8 +902,6 @@ export default function LearnDashboard({ language }) {
             </>
           )}
 
-          {enrollErr && <p style={{ color: '#c62828', marginBottom: '12px', fontSize: '14px' }}>{enrollErr}</p>}
-
           {!showExplore ? (
             <p style={{ color: '#888', fontSize: '13px', padding: '8px 0 0' }}>
               {isEn ? 'Open the catalog when you want to browse beyond the suggested course plan.' : '需要查看课程计划以外的课程时，可展开目录。'}
@@ -1045,13 +962,9 @@ export default function LearnDashboard({ language }) {
                           {isEn ? `G${c.gradeLevel}+ only` : `需 G${c.gradeLevel}+`}
                         </span>
                       ) : (
-                        <button onClick={() => enroll(c.slug)} disabled={enrolling === c.slug} style={{
-                          fontSize: '12px', fontWeight: 700, color: '#fff',
-                          background: enrolling === c.slug ? '#aaa' : color,
-                          border: 'none', borderRadius: '6px', padding: '5px 14px', cursor: 'pointer',
-                        }}>
-                          {enrolling === c.slug ? (isEn ? 'Enrolling…' : '报名中…') : (isEn ? '+ Enroll' : '+ 报名')}
-                        </button>
+                        <span style={{ fontSize: '11px', color, fontWeight: 700 }}>
+                          {isEn ? 'Ask your advisor' : '请联系顾问'}
+                        </span>
                       )}
                     </div>
                   </div>
