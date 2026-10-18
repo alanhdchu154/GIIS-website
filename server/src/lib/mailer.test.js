@@ -6,7 +6,15 @@ const {
   buildStatusLinkEmail,
   buildNewApplicationAlert,
   buildWelcomeEmail,
+  staffAccessExpiryLabel,
 } = require('./mailer');
+
+describe('staff access expiry label', () => {
+  test('renders seven-day invitations clearly while keeping short resets in minutes', () => {
+    expect(staffAccessExpiryLabel(7 * 24 * 60)).toBe('7 days');
+    expect(staffAccessExpiryLabel(60)).toBe('60 minutes');
+  });
+});
 
 describe('new application alert', () => {
   test('includes transfer triage fields, flags transfer in the subject, and sets the parent reply-to address', () => {

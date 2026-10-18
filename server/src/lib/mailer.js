@@ -816,16 +816,25 @@ async function sendStatusLinkEmail(details) {
   });
 }
 
+function staffAccessExpiryLabel(expiresMinutes) {
+  if (expiresMinutes >= 1440 && expiresMinutes % 1440 === 0) {
+    const days = expiresMinutes / 1440;
+    return `${days} day${days === 1 ? '' : 's'}`;
+  }
+  return `${expiresMinutes} minute${expiresMinutes === 1 ? '' : 's'}`;
+}
+
 async function sendStaffAccessEmail({ email, displayName, accessUrl, purpose = 'invite', expiresMinutes = 60 }) {
   const reset = purpose === 'password_reset';
   const action = reset ? 'Reset staff password' : 'Set up staff account';
   const safeName = escapeHtml(displayName || 'GIIS staff member');
   const safeUrl = escapeHtml(accessUrl);
+  const expiryLabel = staffAccessExpiryLabel(expiresMinutes);
   return send({
     to: email,
     subject: `GIIS staff access — ${action}`,
-    html: `<p>Dear ${safeName},</p><p>Use this one-time link to ${reset ? 'reset your password' : 'finish setting up your staff account'}:</p><p><a href="${safeUrl}">${action}</a></p><p>This link expires in ${expiresMinutes} minutes. If you were not expecting it, do not use it and contact the school owner.</p>`,
-    text: `Dear ${displayName || 'GIIS staff member'},\n\n${action}: ${accessUrl}\n\nThis one-time link expires in ${expiresMinutes} minutes. If you were not expecting it, do not use it and contact the school owner.`,
+    html: `<p>Dear ${safeName},</p><p>Use this one-time link to ${reset ? 'reset your password' : 'finish setting up your staff account'}:</p><p><a href="${safeUrl}">${action}</a></p><p>This link expires in ${expiryLabel}. If you were not expecting it, do not use it and contact the school owner.</p>`,
+    text: `Dear ${displayName || 'GIIS staff member'},\n\n${action}: ${accessUrl}\n\nThis one-time link expires in ${expiryLabel}. If you were not expecting it, do not use it and contact the school owner.`,
   });
 }
 
@@ -851,4 +860,5 @@ module.exports = {
   sendGraduationIssuanceRequest,
   sendGraduationDocumentPackage,
   sendStaffAccessEmail,
+  staffAccessExpiryLabel,
 };

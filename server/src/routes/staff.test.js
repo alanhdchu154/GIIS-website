@@ -49,6 +49,7 @@ beforeEach(() => {
 });
 
 test('only owner can invite and invitation records a delivery receipt without returning token', async () => {
+  const before = Date.now();
   const body = { email: 'principal@example.invalid', displayName: 'Principal', role: 'principal' };
   expect((await invoke('post', '/invite', { staff: { id: 'p', role: 'principal' }, body })).code).toBe(403);
   mockDb.adminUser.findUnique.mockResolvedValue(null);
@@ -56,15 +57,24 @@ test('only owner can invite and invitation records a delivery receipt without re
   expect(result.code).toBe(201);
   expect(result.body.token).toBeUndefined();
   expect(mockDb.staffInvite.create).toHaveBeenCalledWith({ data: expect.objectContaining({ email: body.email, role: 'principal', purpose: 'invite', tokenHash: expect.stringMatching(/^[a-f0-9]{64}$/) }) });
+  const created = mockDb.staffInvite.create.mock.calls[0][0].data;
+  expect(created.expiresAt.getTime()).toBeGreaterThanOrEqual(before + (7 * 24 * 60 * 60 * 1000));
+  expect(created.expiresAt.getTime()).toBeLessThanOrEqual(Date.now() + (7 * 24 * 60 * 60 * 1000));
+  expect(mockSendStaffAccessEmail).toHaveBeenCalledWith(expect.objectContaining({ expiresMinutes: 7 * 24 * 60 }));
   expect(mockDb.emailLog.create).toHaveBeenCalledWith({ data: expect.objectContaining({ kind: 'staff_invite', status: 'sent', providerId: 'provider-1' }) });
 });
 
 test('staff reset revokes all open sessions before issuing one-use reset', async () => {
+  const before = Date.now();
   mockDb.adminUser.findUnique.mockResolvedValue({ id: 'staff-2', email: 'staff@example.invalid', displayName: 'Staff', role: 'academic_staff', isActive: true });
   const result = await invoke('post', '/:id/password-reset', { params: { id: 'staff-2' } });
   expect(result.code).toBe(200);
   expect(mockDb.loginSession.updateMany).toHaveBeenCalledWith({ where: { adminId: 'staff-2', endedAt: null }, data: { endedAt: expect.any(Date) } });
   expect(mockDb.staffInvite.create).toHaveBeenCalledWith({ data: expect.objectContaining({ purpose: 'password_reset', email: 'staff@example.invalid' }) });
+  const created = mockDb.staffInvite.create.mock.calls[0][0].data;
+  expect(created.expiresAt.getTime()).toBeGreaterThanOrEqual(before + (60 * 60 * 1000));
+  expect(created.expiresAt.getTime()).toBeLessThanOrEqual(Date.now() + (60 * 60 * 1000));
+  expect(mockSendStaffAccessEmail).toHaveBeenCalledWith(expect.objectContaining({ expiresMinutes: 60 }));
 });
 
 test('a failed delivery invalidates the undelivered access token', async () => {

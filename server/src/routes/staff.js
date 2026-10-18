@@ -7,7 +7,8 @@ const { sendStaffAccessEmail } = require('../lib/mailer');
 const prisma = require('../lib/prisma');
 
 const router = express.Router();
-const TOKEN_MINUTES = 60;
+const INVITE_TOKEN_MINUTES = 7 * 24 * 60;
+const RESET_TOKEN_MINUTES = 60;
 const MIN_PASSWORD = 12;
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'https://genesisideas.school').split(',')[0].trim();
 const manageStaff = requirePermission('staff.manage');
@@ -65,9 +66,9 @@ async function finalizeAccessDelivery({ inviteId, kind, email, delivery }) {
   return receiptRecorded;
 }
 
-async function createAccessToken({ email, displayName, role, purpose, actor }) {
+async function createAccessToken({ email, displayName, role, purpose, actor, expiresMinutes }) {
   const rawToken = crypto.randomBytes(32).toString('hex');
-  const expiresAt = new Date(Date.now() + TOKEN_MINUTES * 60 * 1000);
+  const expiresAt = new Date(Date.now() + expiresMinutes * 60 * 1000);
   const invite = await prisma.$transaction(async (tx) => {
     await tx.staffInvite.updateMany({
       where: { email, usedAt: null },
@@ -116,9 +117,19 @@ router.post('/invite', authenticate, manageStaff, async (req, res) => {
   ]);
   if (admin || student || parent) return res.status(409).json({ error: 'Email is already in use.' });
 
-  const access = await createAccessToken({ ...data, purpose: 'invite', actor: req.staff });
+  const access = await createAccessToken({
+    ...data,
+    purpose: 'invite',
+    actor: req.staff,
+    expiresMinutes: INVITE_TOKEN_MINUTES,
+  });
   const accessUrl = `${FRONTEND_URL}/admin/set-password?token=${access.rawToken}`;
-  const delivery = await sendStaffAccessEmail({ ...data, accessUrl, purpose: 'invite', expiresMinutes: TOKEN_MINUTES });
+  const delivery = await sendStaffAccessEmail({
+    ...data,
+    accessUrl,
+    purpose: 'invite',
+    expiresMinutes: INVITE_TOKEN_MINUTES,
+  });
   const receiptRecorded = await finalizeAccessDelivery({ inviteId: access.invite.id, kind: 'staff_invite', email: data.email, delivery });
   if (!receiptRecorded) return res.status(503).json({ ok: false, code: 'invite_receipt_failed', inviteId: access.invite.id });
   if (!delivery.ok) {
@@ -136,9 +147,19 @@ router.post('/:id/password-reset', authenticate, manageStaff, async (req, res) =
   if (!target.isActive) return res.status(409).json({ error: 'Enable the staff account before resetting its password.' });
 
   await prisma.loginSession.updateMany({ where: { adminId: target.id, endedAt: null }, data: { endedAt: new Date() } });
-  const access = await createAccessToken({ ...target, purpose: 'password_reset', actor: req.staff });
+  const access = await createAccessToken({
+    ...target,
+    purpose: 'password_reset',
+    actor: req.staff,
+    expiresMinutes: RESET_TOKEN_MINUTES,
+  });
   const accessUrl = `${FRONTEND_URL}/admin/set-password?token=${access.rawToken}`;
-  const delivery = await sendStaffAccessEmail({ ...target, accessUrl, purpose: 'password_reset', expiresMinutes: TOKEN_MINUTES });
+  const delivery = await sendStaffAccessEmail({
+    ...target,
+    accessUrl,
+    purpose: 'password_reset',
+    expiresMinutes: RESET_TOKEN_MINUTES,
+  });
   const receiptRecorded = await finalizeAccessDelivery({ inviteId: access.invite.id, kind: 'staff_password_reset', email: target.email, delivery });
   if (!receiptRecorded) return res.status(503).json({ ok: false, code: 'reset_receipt_failed', inviteId: access.invite.id });
   if (!delivery.ok) return res.status(502).json({ ok: false, code: 'reset_delivery_failed', inviteId: access.invite.id, expiresAt: access.expiresAt });
