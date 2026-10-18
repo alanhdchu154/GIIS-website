@@ -13,12 +13,20 @@ replacement. This supersedes the paused/MWF quality-lane descriptions.
 
 ## Daily Run
 
-Same Codex thread, daily 00:00 midnight America/Chicago. Inspect twenty actual
-videos, then process the repair queue with a target and cap of five replacements
-per night when eligible work exists. Add newly discovered defects to the queue.
-Continue unfinished repairs first; do not stop after one. Complete fewer only
-when eligible work is insufficient or an actual gate, quota, overlap or runtime
-blocker intervenes; record the reason and save progress. Quality gates remain.
+Same Teaching & Academic Operations Codex thread, daily 03:00 America/Chicago.
+Resume the oldest
+eligible partial repair before the normal inspection rotation. Take one
+exact-source candidate to its next terminal replacement or explicit
+evidence-based HOLD before spending the bounded video slot on new inspection.
+If the candidate remains actively repairable in the current run, reduce or skip
+the twenty-video rotation without advancing its cursor. After a terminal result
+or a genuine current-run blocker, inspect up to twenty actual videos and process
+the repair queue with a target and cap of five replacements per night when
+eligible work exists. Add newly discovered defects to the queue. Continue
+unfinished repairs first; do not stop after one when additional gate-ready
+capacity remains. Complete fewer only when eligible work is insufficient or an
+actual gate, quota, overlap or runtime blocker intervenes; record the reason and
+save progress. Quality gates remain.
 Do not restart volume
 production or add new lessons. Persist progress in
 `umi/video-quality-round-robin.json`; reports go under `umi/reports/video-quality/`.
@@ -105,7 +113,13 @@ mistaken for completed evidence.
 
 Replacement requires demonstrable before/after visual improvement, score 100,
 TRUST_READY, independent/source alignment, complete replacement audio/video
-review, version binding and manifest/dirty-state checks. Use
+review, version binding and manifest/dirty-state checks. For deterministic
+still-slide lessons, use `tools/lesson-video/visual_timeline_review.py` when
+scene-change detection does not distinguish similar consecutive slides. A valid
+receipt must bind the exact MP4, concat map and every source slide, uniquely
+match every mapped midpoint, and retain its stated thresholds. It is supporting
+evidence only: full decode, full-resolution slide inspection, local audio,
+independent full-release review and all lifecycle gates still apply. Use
 `tools/youtube-upload/replacement_lifecycle.py` for the publication half of a
 replacement. Its `prepare` step creates a one-candidate approval and immutable
 old/candidate identity plan under a per-identity lock. Its `upload --apply` step

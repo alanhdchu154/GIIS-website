@@ -76,6 +76,14 @@ It does not prove human subjective listening or pronunciation quality. Review
 the complete visual timeline and use HOLD for any dimension you cannot fully
 cover.
 
+When the packet contains a valid `automated_visual_timeline_review`, inspect its
+receipt and cite `visual_timeline_review` in audiovisual and technical coverage.
+For a deterministic still-slide lesson, this exact-MP4/concat/source-bound PASS
+may resolve visually similar boundaries that the fixed scene threshold does not
+detect. It complements the required full decode, full-resolution slide review,
+concat read and scene-detection observation; it does not replace them or prove
+teaching correctness.
+
 For a deterministic still-slide lesson with no animation or transition effects,
 `full` visual coverage requires all of the following, not merely a contact sheet
 or periodic sampling: inspect every full-resolution rendered slide with one
@@ -155,6 +163,11 @@ Hard constraints:
   local audio PASS and the persisted execution contains the required full slide,
   concat, exact-MP4 full-decode traversal, and whole-file scene-detection observations.
   A summary, contact sheet, or self-attested coverage statement is insufficient.
+- Coverage `artifacts` may cite only keys from `packet.artifacts`, plus the two
+  validated supplemental keys `local_audio_review` and
+  `visual_timeline_review` when their packet sections are present. The concat
+  file must be read as required execution evidence, but do not cite the unbound
+  key `slides_concat` in a dimension coverage list.
 - Do not claim human subject expertise or academic-owner approval. A model pass
   is independent review evidence, not human academic certification.
 - Preserve every academic hold in the packet. You may give a concrete safe

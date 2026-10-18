@@ -48,6 +48,7 @@ CC_DENSITY_REPAIR = ROOT / "tools" / "lesson-video" / "cc_density_repair.py"
 # Legacy filename retained for existing callers; the wrapper is provider-aware.
 INDEPENDENT_REVIEWER = ROOT / "tools" / "lesson-video" / "cc_independent_video_reviewer.py"
 LOCAL_AUDIO_REVIEW = ROOT / "tools" / "lesson-video" / "local_audio_review.py"
+VISUAL_TIMELINE_REVIEW = ROOT / "tools" / "lesson-video" / "visual_timeline_review.py"
 FOUNDATION_GATE = ROOT / "tools" / "lesson-video" / "foundation_video_gate.py"
 RELEASE_GATE = ROOT / "tools" / "lesson-video" / "lesson_release_gate.py"
 PARENT_TRUST_AUDIT = ROOT / "tools" / "lesson-video" / "parent_trust_video_audit.py"
@@ -1593,6 +1594,28 @@ def run_local_audio_review(folder: Path) -> tuple[int, str | None]:
     return rc, None if rc == 0 else "local_audio_review_blocked"
 
 
+def run_visual_timeline_review(folder: Path) -> tuple[int, str | None]:
+    """Bind each concat-mapped interval for deterministic still-slide lessons."""
+    concat = folder / "slides_concat.txt"
+    if not concat.is_file():
+        return 0, None
+    mp4 = find_mp4(folder)
+    if not mp4:
+        return 2, "missing_or_ambiguous_visual_review_candidate_mp4"
+    if not valid_mp4(mp4):
+        return 2, "invalid_visual_review_candidate_mp4"
+    rc = run_checked([
+        sys.executable,
+        str(VISUAL_TIMELINE_REVIEW),
+        str(folder.relative_to(ROOT)),
+        "--mp4",
+        mp4.name,
+        "--concat",
+        concat.name,
+    ], timeout=2100)
+    return rc, None if rc == 0 else "visual_timeline_review_blocked"
+
+
 def valid_mp4(path: Path | None) -> bool:
     if not path or not path.exists():
         return False
@@ -1792,6 +1815,12 @@ def process_existing_lesson_artifacts(
             details = {"returncode": audio_rc, "reason": audio_error}
             update_state_row(state, candidate, status="review_blocked", details=details)
             run_report["blocked"].append({**row, "reason": audio_error, **details})
+            return None, True
+        visual_rc, visual_error = run_visual_timeline_review(candidate.target_dir)
+        if visual_rc != 0:
+            details = {"returncode": visual_rc, "reason": visual_error}
+            update_state_row(state, candidate, status="review_blocked", details=details)
+            run_report["blocked"].append({**row, "reason": visual_error, **details})
             return None, True
         review_cmd, review_cmd_error = independent_review_command(args, candidate.target_dir)
         if review_cmd is None:
@@ -2136,6 +2165,12 @@ def orchestrate(args: argparse.Namespace) -> int:
                 details = {"returncode": audio_rc, "reason": audio_error}
                 update_state_row(state, candidate, status="review_blocked", details=details)
                 run_report["blocked"].append({**row, "reason": audio_error, **details})
+                continue
+            visual_rc, visual_error = run_visual_timeline_review(candidate.target_dir)
+            if visual_rc != 0:
+                details = {"returncode": visual_rc, "reason": visual_error}
+                update_state_row(state, candidate, status="review_blocked", details=details)
+                run_report["blocked"].append({**row, "reason": visual_error, **details})
                 continue
             review_cmd, review_cmd_error = independent_review_command(args, candidate.target_dir)
             if review_cmd is None:

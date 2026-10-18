@@ -58,16 +58,28 @@ An enrollment, grade, payment, or diploma is never changed by this view.
    owner gates. Isolated safe source corrections may ship before a matching
    video only if stale video risk is explicitly assessed and the module remains
    marked partial; never call that module or course fully ready.
-6. Inspect twenty actual manifest MP4 identities using the saved non-starving
-   rotation; separate confirmed defects from access/evidence debt. Work from
-   already-reviewed stable sources when repairing media. Target up to five
-   eligible full replacements daily, not five uploads or five renders. Continue
-   saved repairs first. Do not stop after one merely because one succeeded;
-   record exact capacity/quality/runtime/overlap/owner blockers if fewer finish.
+6. **Terminal-first video rule:** before the normal twenty-item rotation, resume
+   the oldest eligible partial repair and spend the bounded video slot taking one
+   exact-source candidate as far as its next terminal or explicit HOLD stage.
+   While a candidate is at `repairing`, `evidence_ready`, or a later lifecycle
+   stage, do not let routine inspection consume its repair capacity. After one
+   terminal replacement, or after the active candidate reaches an evidence-based
+   HOLD that cannot be resolved in the current run, inspect up to twenty actual
+   manifest MP4 identities using the saved non-starving rotation; reduced or zero
+   inspection is valid and must not advance the cursor. Separate confirmed
+   defects from access/evidence debt. Target up to five eligible full replacements
+   daily, not five uploads or five renders; continue after the first only when
+   capacity and every gate remain available.
 7. Repair original slides/script/audio together as required; retain originals.
    Verify actual MP4 visuals, complete technical audio review, full independent
    source/release review, exact hashes, score100/TRUST_READY and all existing
-   gates. Sampling or decoder success alone is not full audiovisual acceptance.
+   gates. For deterministic still-slide lessons, use
+   `tools/lesson-video/visual_timeline_review.py` to bind every concat-mapped
+   interval to a uniquely matching source slide when fixed-threshold scene
+   detection misses a visually similar boundary. Its receipt complements, but
+   never replaces, full decode, full-resolution slide inspection, local audio,
+   independent review or release lifecycle evidence. Sampling or decoder success
+   alone is not full audiovisual acceptance.
 8. Publish only via the existing exact-identity replacement lifecycle: remote
    old-video/channel/playlist preflight, staged upload, processed/new identity
    readback, isolated manifest release, live manifest, exact-row local sync before

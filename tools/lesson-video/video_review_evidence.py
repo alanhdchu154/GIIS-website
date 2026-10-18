@@ -21,6 +21,11 @@ from local_audio_review import (  # noqa: E402
     SCHEMA_VERSION as LOCAL_AUDIO_SCHEMA_VERSION,
     validate_local_audio_review,
 )
+from visual_timeline_review import (  # noqa: E402
+    RECEIPT_NAME as VISUAL_TIMELINE_RECEIPT_NAME,
+    SCHEMA_VERSION as VISUAL_TIMELINE_SCHEMA_VERSION,
+    validate_receipt as validate_visual_timeline_review,
+)
 
 SCHEMA_VERSION = "giis.lesson-video-review.v2"
 PACKET_NAME = "_review_packet_v2.json"
@@ -206,6 +211,7 @@ def build_review_packet(
         "lesson_folder": display_path(folder),
     }
     audio_review: dict[str, Any] | None = None
+    visual_timeline_review: dict[str, Any] | None = None
     if require_local_audio:
         validation = validate_local_audio_review(folder, expected_mp4=mp4)
         if not validation.get("valid") or validation.get("status") != "PASS":
@@ -218,12 +224,27 @@ def build_review_packet(
             "model_sha256": validation.get("model_sha256"),
             "candidate_mp4": validation.get("candidate_mp4"),
         }
+    visual_receipt_path = folder / VISUAL_TIMELINE_RECEIPT_NAME
+    if review_scope == "full-release" and visual_receipt_path.exists():
+        visual_validation = validate_visual_timeline_review(folder, expected_mp4=mp4)
+        if not visual_validation.get("valid") or visual_validation.get("status") != "PASS":
+            details = "; ".join(visual_validation.get("errors") or []) or "status=HOLD"
+            raise ValueError(f"full-release visual timeline receipt is invalid: {details}")
+        visual_receipt = visual_validation.get("receipt") or {}
+        visual_timeline_review = {
+            "schema_version": VISUAL_TIMELINE_SCHEMA_VERSION,
+            "status": "PASS",
+            "receipt": artifact_binding(visual_receipt_path),
+            "candidate_mp4": str(mp4),
+            "mapped_sections": (visual_receipt.get("coverage") or {}).get("mapped_sections"),
+        }
 
     fingerprint = json.dumps(
         {
             "identity": identity,
             "artifacts": required,
             "automated_audio_review": audio_review,
+            "automated_visual_timeline_review": visual_timeline_review,
             "review_scope": review_scope,
         },
         sort_keys=True,
@@ -254,6 +275,8 @@ def build_review_packet(
     }
     if audio_review:
         packet["automated_audio_review"] = audio_review
+    if visual_timeline_review:
+        packet["automated_visual_timeline_review"] = visual_timeline_review
     return packet
 
 
@@ -349,6 +372,42 @@ def _validate_automated_audio_review(
     return True
 
 
+def _validate_automated_visual_timeline_review(
+    folder: Path,
+    packet: dict[str, Any],
+    errors: list[str],
+) -> bool:
+    visual = packet.get("automated_visual_timeline_review")
+    if visual is None:
+        return False
+    if not isinstance(visual, dict):
+        errors.append("packet automated_visual_timeline_review must be an object")
+        return True
+    if visual.get("schema_version") != VISUAL_TIMELINE_SCHEMA_VERSION or visual.get("status") != "PASS":
+        errors.append("packet automated visual timeline review is not a supported PASS receipt")
+    binding = visual.get("receipt")
+    receipt_path = folder / VISUAL_TIMELINE_RECEIPT_NAME
+    if not isinstance(binding, dict):
+        errors.append("packet automated visual timeline receipt binding is missing")
+    else:
+        path = resolve_path(str(binding.get("path") or ""))
+        if path.resolve() != receipt_path.resolve():
+            errors.append("packet automated visual timeline receipt path is not lesson-local")
+        if sha256_file(path) != binding.get("sha256"):
+            errors.append("packet automated visual timeline receipt changed or is missing")
+    mp4_binding = (packet.get("artifacts") or {}).get("mp4") or {}
+    expected_mp4 = resolve_path(str(mp4_binding.get("path") or ""))
+    validation = validate_visual_timeline_review(folder, expected_mp4=expected_mp4)
+    if not validation.get("valid") or validation.get("status") != "PASS":
+        errors.append("current visual timeline review is missing, invalid, HOLD, or bound to another MP4")
+    receipt = validation.get("receipt") or {}
+    if visual.get("candidate_mp4") != str(expected_mp4.resolve()):
+        errors.append("packet automated visual timeline candidate does not match current MP4")
+    if visual.get("mapped_sections") != (receipt.get("coverage") or {}).get("mapped_sections"):
+        errors.append("packet automated visual timeline section count does not match current receipt")
+    return True
+
+
 def _validate_findings(response: dict[str, Any], errors: list[str]) -> set[str]:
     findings = response.get("findings")
     if not isinstance(findings, list):
@@ -427,6 +486,13 @@ def _validate_dimensions(packet: dict[str, Any], response: dict[str, Any], findi
                 and "local_audio_review" not in artifacts
             ):
                 errors.append(f"dimension {name} PASS lacks local_audio_review coverage")
+            if (
+                packet.get("automated_visual_timeline_review")
+                and name in {"audiovisual_source_alignment", "technical_trust_release"}
+                and isinstance(artifacts, list)
+                and "visual_timeline_review" not in artifacts
+            ):
+                errors.append(f"dimension {name} PASS lacks visual_timeline_review coverage")
 
     finding_dimensions = {
         str(finding.get("id")): str(finding.get("dimension"))
@@ -1314,6 +1380,8 @@ def _validate_declared_artifact_observations(
             continue  # Exact decode/traversal is enforced by the visual gate.
         if name == "local_audio_review":
             path = (folder / LOCAL_AUDIO_RECEIPT_NAME).resolve()
+        elif name == "visual_timeline_review":
+            path = (folder / VISUAL_TIMELINE_RECEIPT_NAME).resolve()
         else:
             binding = bindings.get(name)
             if not isinstance(binding, dict):
@@ -1396,6 +1464,7 @@ def validate_review_evidence(folder: Path) -> dict[str, Any]:
 
     _validate_artifact_bindings(packet, response, errors)
     _validate_automated_audio_review(folder, packet, errors)
+    _validate_automated_visual_timeline_review(folder, packet, errors)
     finding_ids = _validate_findings(response, errors)
     dimensions = _validate_dimensions(packet, response, finding_ids, errors)
     if review_scope == "content-source":

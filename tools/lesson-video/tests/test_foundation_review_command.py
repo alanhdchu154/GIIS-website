@@ -94,6 +94,35 @@ class FoundationReviewCommandTests(unittest.TestCase):
             self.assertIn("local_audio_review.py", str(command[1]))
             self.assertEqual("sample_lesson.mp4", command[command.index("--mp4") + 1])
 
+    def test_visual_timeline_review_runs_for_concat_lesson(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            folder = root / "teaching-videos" / "sample-lesson"
+            folder.mkdir(parents=True)
+            canonical = folder / "sample_lesson.mp4"
+            canonical.write_bytes(b"candidate")
+            (folder / "slides_concat.txt").write_text("file 'slide.png'\nduration 1\n")
+            with patch.object(self.orchestrator, "ROOT", root), patch.object(
+                self.orchestrator, "valid_mp4", return_value=True
+            ), patch.object(self.orchestrator, "run_checked", return_value=0) as run_checked:
+                rc, reason = self.orchestrator.run_visual_timeline_review(folder)
+            self.assertEqual(0, rc)
+            self.assertIsNone(reason)
+            command = run_checked.call_args.args[0]
+            self.assertIn("visual_timeline_review.py", str(command[1]))
+            self.assertEqual("sample_lesson.mp4", command[command.index("--mp4") + 1])
+            self.assertEqual("slides_concat.txt", command[command.index("--concat") + 1])
+
+    def test_visual_timeline_review_skips_non_concat_lesson(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp) / "teaching-videos" / "sample-lesson"
+            folder.mkdir(parents=True)
+            with patch.object(self.orchestrator, "run_checked") as run_checked:
+                rc, reason = self.orchestrator.run_visual_timeline_review(folder)
+            self.assertEqual(0, rc)
+            self.assertIsNone(reason)
+            run_checked.assert_not_called()
+
     def test_claude_reviewer_has_only_read_tools_and_wrapper_delivery(self):
         path = MODULE_PATH.parent / "cc_independent_video_reviewer.py"
         spec = importlib.util.spec_from_file_location("reviewer_wrapper_tested", path)
