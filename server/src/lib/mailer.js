@@ -825,6 +825,9 @@ function staffAccessExpiryLabel(expiresMinutes) {
 }
 
 async function sendStaffAccessEmail({ email, displayName, accessUrl, purpose = 'invite', expiresMinutes = 60 }) {
+  if (!['invite', 'password_reset', 'owner_bootstrap'].includes(purpose)) {
+    throw new Error('Unsupported staff access email purpose.');
+  }
   const reset = purpose === 'password_reset';
   const ownerBootstrap = purpose === 'owner_bootstrap';
   const action = reset ? 'Reset staff password' : ownerBootstrap ? 'Set up Owner account' : 'Set up staff account';

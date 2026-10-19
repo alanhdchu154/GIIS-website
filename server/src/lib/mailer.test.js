@@ -6,6 +6,7 @@ const {
   buildStatusLinkEmail,
   buildNewApplicationAlert,
   buildWelcomeEmail,
+  sendStaffAccessEmail,
   staffAccessExpiryLabel,
 } = require('./mailer');
 
@@ -13,6 +14,16 @@ describe('staff access expiry label', () => {
   test('renders seven-day invitations clearly while keeping short resets in minutes', () => {
     expect(staffAccessExpiryLabel(7 * 24 * 60)).toBe('7 days');
     expect(staffAccessExpiryLabel(60)).toBe('60 minutes');
+  });
+
+  test('rejects unknown staff access purposes before provider delivery', async () => {
+    await expect(sendStaffAccessEmail({
+      email: 'nobody@example.invalid',
+      displayName: 'Nobody',
+      accessUrl: 'https://example.invalid/never-send',
+      purpose: 'owner',
+      expiresMinutes: 60,
+    })).rejects.toThrow('Unsupported staff access email purpose.');
   });
 });
 

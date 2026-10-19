@@ -1,11 +1,11 @@
 const mockDb = {
-  adminUser: { findMany: jest.fn(), findUnique: jest.fn(), create: jest.fn(), update: jest.fn(), count: jest.fn() },
-  studentAccount: { findUnique: jest.fn() },
-  parentAccount: { findUnique: jest.fn() },
+  adminUser: { findMany: jest.fn(), findFirst: jest.fn(), findUnique: jest.fn(), create: jest.fn(), update: jest.fn(), count: jest.fn() },
+  studentAccount: { findFirst: jest.fn(), findUnique: jest.fn() },
+  parentAccount: { findFirst: jest.fn(), findUnique: jest.fn() },
   staffInvite: { findMany: jest.fn(), findUnique: jest.fn(), findFirst: jest.fn(), create: jest.fn(), updateMany: jest.fn() },
-  staffAuditLog: { findMany: jest.fn(), create: jest.fn() },
+  staffAuditLog: { findMany: jest.fn(), findFirst: jest.fn(), create: jest.fn() },
   loginSession: { findMany: jest.fn(), updateMany: jest.fn() },
-  emailLog: { findMany: jest.fn(), create: jest.fn() },
+  emailLog: { findMany: jest.fn(), findUnique: jest.fn(), create: jest.fn() },
   $transaction: jest.fn(),
 };
 const mockSendStaffAccessEmail = jest.fn();
@@ -43,18 +43,26 @@ beforeEach(() => {
   require('bcryptjs').hash.mockResolvedValue('hashed-password');
   mockDb.$transaction.mockImplementation(async (fn) => fn(mockDb));
   mockDb.studentAccount.findUnique.mockResolvedValue(null);
+  mockDb.studentAccount.findFirst.mockResolvedValue(null);
   mockDb.parentAccount.findUnique.mockResolvedValue(null);
+  mockDb.parentAccount.findFirst.mockResolvedValue(null);
   mockDb.staffInvite.updateMany.mockResolvedValue({ count: 1 });
   mockDb.staffInvite.create.mockImplementation(async ({ data }) => ({ id: 'invite-1', ...data }));
   mockDb.staffAuditLog.create.mockResolvedValue({ id: 'audit-1' });
   mockDb.emailLog.create.mockResolvedValue({ id: 'email-1' });
   mockDb.loginSession.updateMany.mockResolvedValue({ count: 2 });
   mockDb.adminUser.findMany.mockResolvedValue([]);
+  mockDb.adminUser.findFirst.mockResolvedValue(null);
   mockDb.staffInvite.findMany.mockResolvedValue([]);
   mockDb.staffInvite.findFirst.mockResolvedValue(null);
   mockDb.staffAuditLog.findMany.mockResolvedValue([]);
+  mockDb.staffAuditLog.findFirst.mockResolvedValue({ id: 'owner-provider-audit' });
   mockDb.loginSession.findMany.mockResolvedValue([]);
   mockDb.emailLog.findMany.mockResolvedValue([]);
+  mockDb.emailLog.findUnique.mockResolvedValue({
+    kind: 'owner_bootstrap', recipient: 'alanhdchu@genesisideas.school', status: 'sent',
+    dedupeKey: 'owner_bootstrap:owner-bootstrap-alanhdchu-v1',
+  });
   mockSendStaffAccessEmail.mockResolvedValue({ ok: true, id: 'provider-1' });
 });
 
@@ -104,8 +112,9 @@ test('break-glass Owner can request the fixed one-time named Owner bootstrap wit
   });
   expect(result.code).toBe(201);
   expect(result.body).not.toHaveProperty('token');
-  expect(JSON.stringify(result.body)).not.toMatch(/set-password|alanhdchu/);
+  expect(JSON.stringify(result.body)).not.toMatch(/set-password|#token=|rawToken|password/);
   expect(mockDb.staffInvite.create).toHaveBeenCalledWith({ data: expect.objectContaining({
+    id: 'owner-bootstrap-alanhdchu-v1',
     email: 'alanhdchu@genesisideas.school', role: 'owner', purpose: 'owner_bootstrap',
     tokenHash: expect.stringMatching(/^[a-f0-9]{64}$/), invitedById: 'break-glass-1',
   }) });
@@ -147,13 +156,64 @@ test('Owner bootstrap fails closed for the wrong actor, duplicate request, and c
   expect(duplicate.body.code).toBe('owner_bootstrap_duplicate');
 
   mockDb.staffInvite.findFirst.mockResolvedValue(null);
-  mockDb.studentAccount.findUnique.mockResolvedValue({ id: 'student-collision' });
+  mockDb.studentAccount.findFirst.mockResolvedValue({ id: 'student-collision', email: 'AlanHDChu@GenesisIdeas.School' });
   const collision = await invoke('post', '/owner-bootstrap', {
     staff: { id: 'break-glass-1', email: 'admin@genesisideas.school', role: 'owner' },
     body: { reason: 'Cross-role collision request' },
   });
   expect(collision.body.code).toBe('owner_bootstrap_identity_conflict');
   expect(mockDb.staffInvite.create).not.toHaveBeenCalled();
+});
+
+test.each([
+  ['AdminUser', 'adminUser'],
+  ['StudentAccount', 'studentAccount'],
+  ['ParentAccount', 'parentAccount'],
+])('Owner bootstrap issuance rejects a mixed-case %s identity collision', async (_label, model) => {
+  mockDb.adminUser.findUnique.mockResolvedValue({
+    id: 'break-glass-1', email: 'admin@genesisideas.school', role: 'owner', isActive: true,
+  });
+  mockDb[model].findFirst.mockResolvedValue({ id: 'mixed-case-collision', email: 'AlanHDChu@GenesisIdeas.School' });
+  const result = await invoke('post', '/owner-bootstrap', {
+    staff: { id: 'break-glass-1', email: 'admin@genesisideas.school', role: 'owner' },
+    body: { reason: 'Mixed-case collision test' },
+  });
+  expect(result.code).toBe(409);
+  expect(result.body.code).toBe('owner_bootstrap_identity_conflict');
+  expect(mockDb[model].findFirst).toHaveBeenCalledWith(expect.objectContaining({
+    where: { email: { equals: 'alanhdchu@genesisideas.school', mode: 'insensitive' } },
+  }));
+  expect(mockDb.staffInvite.create).not.toHaveBeenCalled();
+});
+
+test('Owner bootstrap issuance rejects a mixed-case prior or pending StaffInvite', async () => {
+  mockDb.adminUser.findUnique.mockResolvedValue({
+    id: 'break-glass-1', email: 'admin@genesisideas.school', role: 'owner', isActive: true,
+  });
+  mockDb.staffInvite.findFirst.mockImplementation(async ({ where }) => (
+    where.email?.mode === 'insensitive' ? { id: 'mixed-case-invite', email: 'AlanHDChu@GenesisIdeas.School' } : null
+  ));
+  const result = await invoke('post', '/owner-bootstrap', {
+    staff: { id: 'break-glass-1', email: 'admin@genesisideas.school', role: 'owner' },
+    body: { reason: 'Mixed-case invite collision test' },
+  });
+  expect(result.code).toBe(409);
+  expect(result.body.code).toBe('owner_bootstrap_duplicate');
+  expect(mockDb.staffInvite.create).not.toHaveBeenCalled();
+});
+
+test('Owner bootstrap maps deterministic invite-id uniqueness failure to duplicate conflict', async () => {
+  mockDb.adminUser.findUnique.mockResolvedValue({
+    id: 'break-glass-1', email: 'admin@genesisideas.school', role: 'owner', isActive: true,
+  });
+  mockDb.staffInvite.create.mockRejectedValueOnce(Object.assign(new Error('duplicate key'), { code: 'P2002' }));
+  const result = await invoke('post', '/owner-bootstrap', {
+    staff: { id: 'break-glass-1', email: 'admin@genesisideas.school', role: 'owner' },
+    body: { reason: 'Duplicate-key race test' },
+  });
+  expect(result.code).toBe(409);
+  expect(result.body.code).toBe('owner_bootstrap_duplicate');
+  expect(mockSendStaffAccessEmail).not.toHaveBeenCalled();
 });
 
 test('a failed delivery invalidates the undelivered access token', async () => {
@@ -208,7 +268,7 @@ test('one-use token is claimed atomically before account creation', async () => 
 
 test('Owner bootstrap acceptance rechecks break-glass Owner, creates only the named Owner, and audits acceptance', async () => {
   mockDb.staffInvite.findUnique.mockResolvedValue({
-    id: 'owner-bootstrap-1', email: 'alanhdchu@genesisideas.school', displayName: 'Alan Chu', role: 'owner',
+    id: 'owner-bootstrap-alanhdchu-v1', email: 'alanhdchu@genesisideas.school', displayName: 'Alan Chu', role: 'owner',
     purpose: 'owner_bootstrap', usedAt: null, expiresAt: new Date(Date.now() + 60000), invitedById: 'break-glass-1',
   });
   mockDb.adminUser.findUnique.mockImplementation(async ({ where }) => {
@@ -229,11 +289,18 @@ test('Owner bootstrap acceptance rechecks break-glass Owner, creates only the na
   expect(mockDb.staffAuditLog.create).toHaveBeenCalledWith({ data: expect.objectContaining({
     action: 'owner_bootstrap_accepted', actorAdminId: 'alan-owner-1', targetAdminId: 'alan-owner-1',
   }) });
+  expect(mockDb.emailLog.findUnique).toHaveBeenCalledWith({
+    where: { dedupeKey: 'owner_bootstrap:owner-bootstrap-alanhdchu-v1' },
+    select: { kind: true, recipient: true, status: true, dedupeKey: true },
+  });
+  expect(mockDb.staffAuditLog.findFirst).toHaveBeenCalledWith(expect.objectContaining({
+    where: expect.objectContaining({ action: 'owner_bootstrap_provider_accepted' }),
+  }));
 });
 
 test('Owner bootstrap acceptance fails closed if break-glass Owner changed or target collides', async () => {
   mockDb.staffInvite.findUnique.mockResolvedValue({
-    id: 'owner-bootstrap-1', email: 'alanhdchu@genesisideas.school', displayName: 'Alan Chu', role: 'owner',
+    id: 'owner-bootstrap-alanhdchu-v1', email: 'alanhdchu@genesisideas.school', displayName: 'Alan Chu', role: 'owner',
     purpose: 'owner_bootstrap', usedAt: null, expiresAt: new Date(Date.now() + 60000), invitedById: 'break-glass-1',
   });
   mockDb.adminUser.findUnique.mockImplementation(async ({ where }) => {
@@ -245,17 +312,65 @@ test('Owner bootstrap acceptance fails closed if break-glass Owner changed or ta
   })).code).toBe(400);
   expect(mockDb.adminUser.create).not.toHaveBeenCalled();
 
-  mockDb.adminUser.findUnique.mockImplementation(async ({ where }) => {
-    if (where.email === 'admin@genesisideas.school') return { id: 'break-glass-1', role: 'owner', isActive: true };
-    if (where.email === 'alanhdchu@genesisideas.school') return { id: 'existing-account' };
-    return null;
-  });
+  mockDb.adminUser.findUnique.mockResolvedValue({ id: 'break-glass-1', role: 'owner', isActive: true });
+  mockDb.adminUser.findFirst.mockResolvedValue({ id: 'existing-account', email: 'AlanHDChu@GenesisIdeas.School' });
   expect((await invoke('post', '/set-password', {
     staff: undefined, body: { token: 'one-use-owner-token', password: 'long-password-123' },
   })).code).toBe(400);
   expect(mockDb.staffInvite.updateMany).not.toHaveBeenCalledWith(expect.objectContaining({
-    where: expect.objectContaining({ id: 'owner-bootstrap-1' }),
+    where: expect.objectContaining({ id: 'owner-bootstrap-alanhdchu-v1' }),
   }));
+});
+
+test.each([
+  ['missing delivery receipt', null, { id: 'provider-audit' }],
+  ['wrong delivery receipt', {
+    kind: 'owner_bootstrap', recipient: 'alanhdchu@genesisideas.school', status: 'error',
+    dedupeKey: 'owner_bootstrap:owner-bootstrap-alanhdchu-v1',
+  }, { id: 'provider-audit' }],
+  ['missing provider audit', {
+    kind: 'owner_bootstrap', recipient: 'alanhdchu@genesisideas.school', status: 'sent',
+    dedupeKey: 'owner_bootstrap:owner-bootstrap-alanhdchu-v1',
+  }, null],
+  ['wrong provider audit', {
+    kind: 'owner_bootstrap', recipient: 'alanhdchu@genesisideas.school', status: 'sent',
+    dedupeKey: 'owner_bootstrap:owner-bootstrap-alanhdchu-v1',
+  }, null],
+])('Owner bootstrap acceptance rejects %s before atomic claim', async (_label, receipt, audit) => {
+  mockDb.staffInvite.findUnique.mockResolvedValue({
+    id: 'owner-bootstrap-alanhdchu-v1', email: 'alanhdchu@genesisideas.school', displayName: 'Alan Chu', role: 'owner',
+    purpose: 'owner_bootstrap', usedAt: null, expiresAt: new Date(Date.now() + 60000), invitedById: 'break-glass-1',
+  });
+  mockDb.adminUser.findUnique.mockResolvedValue({ id: 'break-glass-1', role: 'owner', isActive: true });
+  mockDb.emailLog.findUnique.mockResolvedValue(receipt);
+  mockDb.staffAuditLog.findFirst.mockResolvedValue(audit);
+  const result = await invoke('post', '/set-password', {
+    staff: undefined, body: { token: 'owner-token-without-provenance', password: 'long-password-123' },
+  });
+  expect(result.code).toBe(400);
+  expect(mockDb.staffInvite.updateMany).not.toHaveBeenCalledWith(expect.objectContaining({
+    where: expect.objectContaining({ id: 'owner-bootstrap-alanhdchu-v1' }),
+  }));
+  expect(mockDb.adminUser.create).not.toHaveBeenCalled();
+});
+
+test.each([
+  ['AdminUser', 'adminUser'],
+  ['StudentAccount', 'studentAccount'],
+  ['ParentAccount', 'parentAccount'],
+  ['pending StaffInvite', 'staffInvite'],
+])('Owner bootstrap acceptance rejects a mixed-case %s collision before claim', async (_label, model) => {
+  mockDb.staffInvite.findUnique.mockResolvedValue({
+    id: 'owner-bootstrap-alanhdchu-v1', email: 'alanhdchu@genesisideas.school', displayName: 'Alan Chu', role: 'owner',
+    purpose: 'owner_bootstrap', usedAt: null, expiresAt: new Date(Date.now() + 60000), invitedById: 'break-glass-1',
+  });
+  mockDb.adminUser.findUnique.mockResolvedValue({ id: 'break-glass-1', role: 'owner', isActive: true });
+  mockDb[model].findFirst.mockResolvedValue({ id: 'mixed-case-collision', email: 'AlanHDChu@GenesisIdeas.School' });
+  const result = await invoke('post', '/set-password', {
+    staff: undefined, body: { token: 'owner-token-with-collision', password: 'long-password-123' },
+  });
+  expect(result.code).toBe(400);
+  expect(mockDb.adminUser.create).not.toHaveBeenCalled();
 });
 
 test('staff update accepts exactly one mutation and labels enable correctly', async () => {

@@ -13,6 +13,7 @@ const MIN_PASSWORD = 12;
 const OWNER_BOOTSTRAP_EMAIL = 'alanhdchu@genesisideas.school';
 const OWNER_BOOTSTRAP_DISPLAY_NAME = 'Alan Chu';
 const BREAK_GLASS_OWNER_EMAIL = 'admin@genesisideas.school';
+const OWNER_BOOTSTRAP_INVITE_ID = 'owner-bootstrap-alanhdchu-v1';
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'https://genesisideas.school').split(',')[0].trim();
 const manageStaff = requirePermission('staff.manage');
 const PROVISIONABLE_ROLES = ['principal', 'academic_staff', 'admissions_staff'];
@@ -103,6 +104,10 @@ function safeAuditMetadata(metadata) {
 
 function tokenHash(token) {
   return crypto.createHash('sha256').update(token).digest('hex');
+}
+
+function emailInsensitive(email) {
+  return { equals: email, mode: 'insensitive' };
 }
 
 function deliveryStatus(result) {
@@ -203,11 +208,11 @@ async function createOwnerBootstrapToken({ actor, reason }) {
   const result = await prisma.$transaction(async (tx) => {
     const [breakGlassOwner, existingAdmin, existingStudent, existingParent, previousBootstrap, pendingAccess] = await Promise.all([
       tx.adminUser.findUnique({ where: { email: BREAK_GLASS_OWNER_EMAIL } }),
-      tx.adminUser.findUnique({ where: { email: OWNER_BOOTSTRAP_EMAIL }, select: { id: true } }),
-      tx.studentAccount.findUnique({ where: { email: OWNER_BOOTSTRAP_EMAIL }, select: { id: true } }),
-      tx.parentAccount.findUnique({ where: { email: OWNER_BOOTSTRAP_EMAIL }, select: { id: true } }),
-      tx.staffInvite.findFirst({ where: { email: OWNER_BOOTSTRAP_EMAIL, purpose: 'owner_bootstrap' }, select: { id: true } }),
-      tx.staffInvite.findFirst({ where: { email: OWNER_BOOTSTRAP_EMAIL, usedAt: null }, select: { id: true } }),
+      tx.adminUser.findFirst({ where: { email: emailInsensitive(OWNER_BOOTSTRAP_EMAIL) }, select: { id: true } }),
+      tx.studentAccount.findFirst({ where: { email: emailInsensitive(OWNER_BOOTSTRAP_EMAIL) }, select: { id: true } }),
+      tx.parentAccount.findFirst({ where: { email: emailInsensitive(OWNER_BOOTSTRAP_EMAIL) }, select: { id: true } }),
+      tx.staffInvite.findFirst({ where: { email: emailInsensitive(OWNER_BOOTSTRAP_EMAIL), purpose: 'owner_bootstrap' }, select: { id: true } }),
+      tx.staffInvite.findFirst({ where: { email: emailInsensitive(OWNER_BOOTSTRAP_EMAIL), usedAt: null }, select: { id: true } }),
     ]);
     if (!breakGlassOwner || breakGlassOwner.id !== actor.id || breakGlassOwner.role !== 'owner' || !breakGlassOwner.isActive) {
       const error = new Error('break_glass_owner_required');
@@ -226,6 +231,7 @@ async function createOwnerBootstrapToken({ actor, reason }) {
     }
     const created = await tx.staffInvite.create({
       data: {
+        id: OWNER_BOOTSTRAP_INVITE_ID,
         email: OWNER_BOOTSTRAP_EMAIL,
         displayName: OWNER_BOOTSTRAP_DISPLAY_NAME,
         role: 'owner',
@@ -339,9 +345,9 @@ router.post('/invite', requireTrustedOrigin, authenticate, manageStaff, async (r
     });
   }
   const [admin, student, parent] = await Promise.all([
-    prisma.adminUser.findUnique({ where: { email: data.email }, select: { id: true } }),
-    prisma.studentAccount.findUnique({ where: { email: data.email }, select: { id: true } }),
-    prisma.parentAccount.findUnique({ where: { email: data.email }, select: { id: true } }),
+    prisma.adminUser.findFirst({ where: { email: emailInsensitive(data.email) }, select: { id: true } }),
+    prisma.studentAccount.findFirst({ where: { email: emailInsensitive(data.email) }, select: { id: true } }),
+    prisma.parentAccount.findFirst({ where: { email: emailInsensitive(data.email) }, select: { id: true } }),
   ]);
   if (admin || student || parent) return res.status(409).json({ error: 'Email is already in use.' });
 
@@ -403,7 +409,7 @@ router.post('/owner-bootstrap', requireTrustedOrigin, authenticate, manageStaff,
     if (error.code === 'OWNER_BOOTSTRAP_IDENTITY_CONFLICT') {
       return res.status(409).json({ error: 'The approved Owner email is already in use.', code: 'owner_bootstrap_identity_conflict' });
     }
-    if (error.code === 'OWNER_BOOTSTRAP_DUPLICATE' || error.code === 'P2034') {
+    if (error.code === 'OWNER_BOOTSTRAP_DUPLICATE' || error.code === 'P2002' || error.code === 'P2034') {
       return res.status(409).json({ error: 'The one-time Owner bootstrap was already requested or another access link is pending.', code: 'owner_bootstrap_duplicate' });
     }
     throw error;
@@ -587,15 +593,35 @@ router.post('/set-password', requireTrustedOrigin, async (req, res) => {
       if (normalizedEmail !== access.email || !['invite', 'password_reset', 'owner_bootstrap'].includes(access.purpose)) return null;
       const isOwnerBootstrap = access.purpose === 'owner_bootstrap';
       if (isOwnerBootstrap) {
-        if (normalizedEmail !== OWNER_BOOTSTRAP_EMAIL || access.role !== 'owner') return null;
+        if (access.id !== OWNER_BOOTSTRAP_INVITE_ID || normalizedEmail !== OWNER_BOOTSTRAP_EMAIL || access.role !== 'owner') return null;
       } else if (normalizedEmail === OWNER_BOOTSTRAP_EMAIL || !PROVISIONABLE_ROLES.includes(access.role)) return null;
-      const [existingAdmin, existingStudent, existingParent, breakGlassOwner] = await Promise.all([
-        tx.adminUser.findUnique({ where: { email: normalizedEmail } }),
-        tx.studentAccount.findUnique({ where: { email: normalizedEmail }, select: { id: true } }),
-        tx.parentAccount.findUnique({ where: { email: normalizedEmail }, select: { id: true } }),
+      const [existingAdmin, existingStudent, existingParent, conflictingPending, breakGlassOwner, deliveryReceipt, providerAudit] = await Promise.all([
+        tx.adminUser.findFirst({ where: { email: emailInsensitive(normalizedEmail) } }),
+        tx.studentAccount.findFirst({ where: { email: emailInsensitive(normalizedEmail) }, select: { id: true } }),
+        tx.parentAccount.findFirst({ where: { email: emailInsensitive(normalizedEmail) }, select: { id: true } }),
+        tx.staffInvite.findFirst({
+          where: { email: emailInsensitive(normalizedEmail), usedAt: null, id: { not: access.id } },
+          select: { id: true },
+        }),
         isOwnerBootstrap ? tx.adminUser.findUnique({ where: { email: BREAK_GLASS_OWNER_EMAIL } }) : Promise.resolve(null),
+        isOwnerBootstrap ? tx.emailLog.findUnique({
+          where: { dedupeKey: `owner_bootstrap:${access.id}` },
+          select: { kind: true, recipient: true, status: true, dedupeKey: true },
+        }) : Promise.resolve(null),
+        isOwnerBootstrap ? tx.staffAuditLog.findFirst({
+          where: {
+            action: 'owner_bootstrap_provider_accepted',
+            actorAdminId: access.invitedById,
+            targetEmail: OWNER_BOOTSTRAP_EMAIL,
+            AND: [
+              { metadata: { path: ['inviteId'], equals: access.id } },
+              { metadata: { path: ['result'], equals: 'provider_accepted' } },
+            ],
+          },
+          select: { id: true },
+        }) : Promise.resolve(null),
       ]);
-      if (existingStudent || existingParent) return null;
+      if (existingStudent || existingParent || conflictingPending) return null;
       if (access.purpose === 'invite' && existingAdmin) return null;
       if (access.purpose === 'password_reset') {
         if (!existingAdmin || !existingAdmin.isActive || existingAdmin.role !== access.role || existingAdmin.role === 'owner') return null;
@@ -603,6 +629,9 @@ router.post('/set-password', requireTrustedOrigin, async (req, res) => {
       if (isOwnerBootstrap) {
         if (existingAdmin || !breakGlassOwner || breakGlassOwner.id !== access.invitedById
           || breakGlassOwner.role !== 'owner' || !breakGlassOwner.isActive) return null;
+        if (!deliveryReceipt || deliveryReceipt.dedupeKey !== `owner_bootstrap:${access.id}`
+          || deliveryReceipt.kind !== 'owner_bootstrap' || deliveryReceipt.recipient !== OWNER_BOOTSTRAP_EMAIL
+          || deliveryReceipt.status !== 'sent' || !providerAudit) return null;
       }
       const claimed = await tx.staffInvite.updateMany({
         where: { id: access.id, usedAt: null, expiresAt: { gt: new Date() } },
@@ -621,7 +650,7 @@ router.post('/set-password', requireTrustedOrigin, async (req, res) => {
         return null;
       }
       await tx.loginSession.updateMany({ where: { adminId: staff.id, endedAt: null }, data: { endedAt: new Date() } });
-      await tx.staffInvite.updateMany({ where: { email: staff.email, usedAt: null }, data: { usedAt: new Date() } });
+      await tx.staffInvite.updateMany({ where: { email: emailInsensitive(staff.email), usedAt: null }, data: { usedAt: new Date() } });
       await tx.staffAuditLog.create({
         data: {
           action: isOwnerBootstrap ? 'owner_bootstrap_accepted'
