@@ -1,5 +1,21 @@
 # GIIS Website Roadmap
 
+## Staff Access Control v1 — accepted local candidate 2026-10-18
+
+The Owner-only staff console now has fixed Principal, Academic and Admissions
+roles; protected Owner and configured-Principal behavior; safe pending-invite,
+session and audit summaries; explicit session revocation; and fragment-based
+one-time setup links. Server authorization remains the authority; UI role state
+is only a display hint. Invitation delivery distinguishes requested, provider
+accepted/failed and recipient-accepted events without exposing tokens.
+
+The candidate is automatically included in the existing frontend and
+`server-smoke` CI jobs. Local evidence: frontend 82/82, server 275/275, focused
+Staff Access UI 4/4 and backend 23/23, production build, Prisma validation and
+diff checks pass. Independent security review accepted the corrected candidate.
+This is not deployed: no real invitation, account/role/credential change,
+production data, schema apply, push or release occurred.
+
 ## Family application and account access — live 2026-10-17
 
 Release `29d5d65a` is live on the Netlify frontend and the Lightsail backend.

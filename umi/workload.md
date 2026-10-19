@@ -1,6 +1,61 @@
 # Active worker handoff
 
-Updated: 2026-10-17 America/Chicago. One focused task only.
+Updated: 2026-10-18 America/Chicago. One focused task only.
+
+## Staff Access Control v1 — local implementation and testing
+
+**Task ID:** `TASK-GIIS-STAFF-ACCESS-V1-20261018`
+
+**Owner:** Platform Engineering, coordinated and accepted by GIIS Umi.
+
+**Authorized outcome:** extend the existing Owner-only `/admin/staff` foundation
+with fixed single roles for Owner, Principal, Academic and Admissions; account
+identity/role/active state; plain-language allow/deny role descriptions;
+pending invitation state; Owner invite/assign/disable/session revoke; Owner-only
+append-only audit history; and protected Owner/configured-Principal behavior.
+
+**Baseline:** clean isolated worktree at exact `origin/main` `9fe7f889`. The
+primary checkout is stale and contains unrelated dirty school-operations files.
+The separate two-file Admissions/Academic RBAC production release is explicitly
+out of scope and must not be imported or treated as approved.
+
+**Allowed:** `server/src/routes/staff.js` and focused tests; existing staff
+permission helpers/tests when needed for truthful role descriptions; the
+smallest admin staff UI/test files; additive local-only test helpers or docs.
+Use existing Prisma models unless a concrete requirement cannot be met safely.
+
+**Forbidden:** sending real invitation/reset email, creating or changing real
+staff accounts/roles/credentials, production data access, push, deploy, schema
+apply, changing production environment, broad route-RBAC rollout, arbitrary
+permission editor, multi-role union, or Support provisioning.
+
+**Acceptance:** focused backend/frontend tests cover every operation and denial;
+configured Principal and Owner protections fail closed; role/state mutations
+revoke sessions and invalidate pending links; list response contains safe
+pending/session/audit summaries without tokens or password data; UI explains
+permissions and confirmation consequences; full bounded server/frontend tests,
+build, Prisma validation and `git diff --check` pass with synthetic data only.
+
+**Model routing:** Claude Code Sonnet implementation for scoped routine product
+work; Codex/Umi owns diff review and acceptance. Independent security review is
+separate and may use Opus-class judgment. Worker may edit only allowed product/
+test files, not this workload, ROADMAP, AGENTS, Central files or production.
+
+**Stop conditions:** required schema migration, conflict with configured
+Principal identity policy, inability to test without mail/production/real data,
+unexpected dirty overlap, or any need to widen route permissions beyond the
+existing role matrix.
+
+**Local trial result (2026-10-18):** implementation candidate is complete and
+automatically covered by the existing frontend and `server-smoke` CI jobs; no
+workflow-file change was needed. Focused Staff Access backend coverage is 23/23;
+frontend Staff Access/link coverage is 4/4. Full evidence: frontend 82/82,
+production build succeeds; server 275/275; Prisma schema validates with a
+synthetic URL; `git diff --check` passes. Independent final security review
+returned **ACCEPT** after Principal-config, audit-lifecycle and single-mutation
+blockers were corrected. No real mail, account, credential, production data,
+schema apply, push or deploy occurred. Status is **LOCAL PIPELINE CANDIDATE
+ACCEPTED**, not released or production-verified.
 
 ## Family access completion and production release
 
