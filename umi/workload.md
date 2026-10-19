@@ -57,6 +57,14 @@ blockers were corrected. No real mail, account, credential, production data,
 schema apply, push or deploy occurred. Status is **LOCAL PIPELINE CANDIDATE
 ACCEPTED**, not released or production-verified.
 
+**Browser acceptance follow-up:** a dedicated local synthetic database and Mac
+browser run exposed unsupported native `prompt/confirm`; the UI was changed to
+an in-page reasoned confirmation panel and rerun successfully. Academic disable
+and idempotent revoke produced visible state and audit deltas; direct Owner and
+configured-Principal bypasses returned 409. Frontend is now 83/83 and focused UI
+is 5/5. Evidence and rollback boundaries:
+`docs/staff-access-browser-acceptance-2026-10-18.md`.
+
 ## Family access completion and production release
 
 **Task ID:** `TASK-GIIS-FAMILY-ACCESS-RELEASE-20261017`

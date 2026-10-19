@@ -16,6 +16,14 @@ diff checks pass. Independent security review accepted the corrected candidate.
 This is not deployed: no real invitation, account/role/credential change,
 production data, schema apply, push or release occurred.
 
+Synthetic browser acceptance then found and fixed an unsupported native
+prompt/confirm flow. All access actions now use an in-page reasoned confirmation
+panel. The rerun visibly confirmed role explanations, protected controls,
+pending-provider state, Academic disable/session revoke and matching audit rows;
+direct Owner and configured-Principal bypass attempts both returned 409. Updated
+frontend evidence is 83/83. See
+`docs/staff-access-browser-acceptance-2026-10-18.md`.
+
 ## Family application and account access — live 2026-10-17
 
 Release `29d5d65a` is live on the Netlify frontend and the Lightsail backend.
