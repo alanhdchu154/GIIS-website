@@ -25,7 +25,7 @@ function response() {
 async function invoke(method, path, request = {}) {
   const layer = router.stack.find((item) => item.route?.path === path && item.route.methods[method]);
   const req = {
-    params: {}, body: {}, headers: { origin: 'https://genesisideas.school' },
+    params: {}, body: {}, headers: { origin: (process.env.CORS_ORIGIN || 'https://genesisideas.school').split(',')[0].trim() },
     get(name) { return this.headers[String(name).toLowerCase()]; },
     staff: { id: 'owner-1', email: 'owner@example.invalid', role: 'owner' }, ...request,
   };
