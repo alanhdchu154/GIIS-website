@@ -10,6 +10,9 @@ const router = express.Router();
 const INVITE_TOKEN_MINUTES = 7 * 24 * 60;
 const RESET_TOKEN_MINUTES = 60;
 const MIN_PASSWORD = 12;
+const OWNER_BOOTSTRAP_EMAIL = 'alanhdchu@genesisideas.school';
+const OWNER_BOOTSTRAP_DISPLAY_NAME = 'Alan Chu';
+const BREAK_GLASS_OWNER_EMAIL = 'admin@genesisideas.school';
 const FRONTEND_URL = (process.env.CORS_ORIGIN || 'https://genesisideas.school').split(',')[0].trim();
 const manageStaff = requirePermission('staff.manage');
 const PROVISIONABLE_ROLES = ['principal', 'academic_staff', 'admissions_staff'];
@@ -63,6 +66,10 @@ const actionSchema = z.object({
   reason: z.string().trim().min(3).max(300),
   acknowledgePrincipalDowntime: z.boolean().optional(),
 });
+
+const ownerBootstrapSchema = z.object({
+  reason: z.string().trim().min(3).max(300),
+}).strict();
 
 function configuredPrincipalEmail() {
   return String(process.env.PRINCIPAL_APPROVER_EMAIL || '').trim().toLowerCase();
@@ -190,6 +197,57 @@ async function createAccessToken({ email, displayName, role, purpose, actor, exp
   return { invite: invite.created, rawToken, expiresAt, sessionsRevoked: invite.sessionsRevoked, linksInvalidated: invite.linksInvalidated };
 }
 
+async function createOwnerBootstrapToken({ actor, reason }) {
+  const rawToken = crypto.randomBytes(32).toString('hex');
+  const expiresAt = new Date(Date.now() + INVITE_TOKEN_MINUTES * 60 * 1000);
+  const result = await prisma.$transaction(async (tx) => {
+    const [breakGlassOwner, existingAdmin, existingStudent, existingParent, previousBootstrap, pendingAccess] = await Promise.all([
+      tx.adminUser.findUnique({ where: { email: BREAK_GLASS_OWNER_EMAIL } }),
+      tx.adminUser.findUnique({ where: { email: OWNER_BOOTSTRAP_EMAIL }, select: { id: true } }),
+      tx.studentAccount.findUnique({ where: { email: OWNER_BOOTSTRAP_EMAIL }, select: { id: true } }),
+      tx.parentAccount.findUnique({ where: { email: OWNER_BOOTSTRAP_EMAIL }, select: { id: true } }),
+      tx.staffInvite.findFirst({ where: { email: OWNER_BOOTSTRAP_EMAIL, purpose: 'owner_bootstrap' }, select: { id: true } }),
+      tx.staffInvite.findFirst({ where: { email: OWNER_BOOTSTRAP_EMAIL, usedAt: null }, select: { id: true } }),
+    ]);
+    if (!breakGlassOwner || breakGlassOwner.id !== actor.id || breakGlassOwner.role !== 'owner' || !breakGlassOwner.isActive) {
+      const error = new Error('break_glass_owner_required');
+      error.code = 'BREAK_GLASS_OWNER_REQUIRED';
+      throw error;
+    }
+    if (existingAdmin || existingStudent || existingParent) {
+      const error = new Error('owner_bootstrap_identity_conflict');
+      error.code = 'OWNER_BOOTSTRAP_IDENTITY_CONFLICT';
+      throw error;
+    }
+    if (previousBootstrap || pendingAccess) {
+      const error = new Error('owner_bootstrap_duplicate');
+      error.code = 'OWNER_BOOTSTRAP_DUPLICATE';
+      throw error;
+    }
+    const created = await tx.staffInvite.create({
+      data: {
+        email: OWNER_BOOTSTRAP_EMAIL,
+        displayName: OWNER_BOOTSTRAP_DISPLAY_NAME,
+        role: 'owner',
+        purpose: 'owner_bootstrap',
+        tokenHash: tokenHash(rawToken),
+        expiresAt,
+        invitedById: breakGlassOwner.id,
+      },
+    });
+    await tx.staffAuditLog.create({
+      data: {
+        action: 'owner_bootstrap_requested',
+        actorAdminId: breakGlassOwner.id,
+        targetEmail: OWNER_BOOTSTRAP_EMAIL,
+        metadata: { role: 'owner', inviteId: created.id, reason },
+      },
+    });
+    return created;
+  }, { isolationLevel: 'Serializable' });
+  return { invite: result, rawToken, expiresAt };
+}
+
 router.get('/', authenticate, manageStaff, async (_req, res) => {
   const now = new Date();
   const [staffRows, inviteRows, sessionRows, auditRows] = await Promise.all([
@@ -274,6 +332,12 @@ router.post('/invite', requireTrustedOrigin, authenticate, manageStaff, async (r
   const parsed = inviteSchema.safeParse(req.body);
   if (!parsed.success) return res.status(400).json({ error: 'Invalid staff invitation', detail: parsed.error.format() });
   const data = { ...parsed.data, email: parsed.data.email.trim().toLowerCase() };
+  if (data.email === OWNER_BOOTSTRAP_EMAIL) {
+    return res.status(409).json({
+      error: 'This email is reserved for the approved one-time Owner bootstrap.',
+      code: 'reserved_owner_bootstrap_identity',
+    });
+  }
   const [admin, student, parent] = await Promise.all([
     prisma.adminUser.findUnique({ where: { email: data.email }, select: { id: true } }),
     prisma.studentAccount.findUnique({ where: { email: data.email }, select: { id: true } }),
@@ -301,6 +365,49 @@ router.post('/invite', requireTrustedOrigin, authenticate, manageStaff, async (r
     return res.status(502).json({ ok: false, code: 'invite_delivery_failed', inviteId: access.invite.id, expiresAt: access.expiresAt });
   }
   return res.status(201).json({ ok: true, inviteId: access.invite.id, expiresAt: access.expiresAt, delivery: { status: 'sent', providerId: delivery.id || null } });
+});
+
+// Deliberately backend-only: routine Staff UI and /invite cannot provision Owners.
+router.post('/owner-bootstrap', requireTrustedOrigin, authenticate, manageStaff, async (req, res) => {
+  const parsed = ownerBootstrapSchema.safeParse(req.body);
+  if (!parsed.success) return res.status(400).json({ error: 'A reason is required.', detail: parsed.error.format() });
+  try {
+    const access = await createOwnerBootstrapToken({ actor: req.staff, reason: parsed.data.reason });
+    const accessUrl = `${FRONTEND_URL}/admin/set-password#token=${access.rawToken}`;
+    const delivery = await sendStaffAccessEmail({
+      email: OWNER_BOOTSTRAP_EMAIL,
+      displayName: OWNER_BOOTSTRAP_DISPLAY_NAME,
+      accessUrl,
+      purpose: 'owner_bootstrap',
+      expiresMinutes: INVITE_TOKEN_MINUTES,
+    });
+    const receiptRecorded = await finalizeAccessDelivery({
+      inviteId: access.invite.id,
+      kind: 'owner_bootstrap',
+      email: OWNER_BOOTSTRAP_EMAIL,
+      delivery,
+      actorAdminId: req.staff.id,
+    });
+    if (!receiptRecorded) return res.status(503).json({ ok: false, code: 'owner_bootstrap_receipt_failed', inviteId: access.invite.id });
+    if (!delivery.ok) return res.status(502).json({ ok: false, code: 'owner_bootstrap_delivery_failed', inviteId: access.invite.id, expiresAt: access.expiresAt });
+    return res.status(201).json({
+      ok: true,
+      inviteId: access.invite.id,
+      expiresAt: access.expiresAt,
+      delivery: { status: 'provider_accepted', providerId: delivery.id || null },
+    });
+  } catch (error) {
+    if (error.code === 'BREAK_GLASS_OWNER_REQUIRED') {
+      return res.status(409).json({ error: 'The active break-glass Owner must request this bootstrap.', code: 'break_glass_owner_required' });
+    }
+    if (error.code === 'OWNER_BOOTSTRAP_IDENTITY_CONFLICT') {
+      return res.status(409).json({ error: 'The approved Owner email is already in use.', code: 'owner_bootstrap_identity_conflict' });
+    }
+    if (error.code === 'OWNER_BOOTSTRAP_DUPLICATE' || error.code === 'P2034') {
+      return res.status(409).json({ error: 'The one-time Owner bootstrap was already requested or another access link is pending.', code: 'owner_bootstrap_duplicate' });
+    }
+    throw error;
+  }
 });
 
 router.post('/:id/password-reset', requireTrustedOrigin, authenticate, manageStaff, async (req, res) => {
@@ -477,17 +584,25 @@ router.post('/set-password', requireTrustedOrigin, async (req, res) => {
       const access = await tx.staffInvite.findUnique({ where: { tokenHash: hash } });
       if (!access || access.usedAt || access.expiresAt <= new Date()) return null;
       const normalizedEmail = String(access.email || '').trim().toLowerCase();
-      if (normalizedEmail !== access.email || !PROVISIONABLE_ROLES.includes(access.role)) return null;
-      if (!['invite', 'password_reset'].includes(access.purpose)) return null;
-      const [existingAdmin, existingStudent, existingParent] = await Promise.all([
+      if (normalizedEmail !== access.email || !['invite', 'password_reset', 'owner_bootstrap'].includes(access.purpose)) return null;
+      const isOwnerBootstrap = access.purpose === 'owner_bootstrap';
+      if (isOwnerBootstrap) {
+        if (normalizedEmail !== OWNER_BOOTSTRAP_EMAIL || access.role !== 'owner') return null;
+      } else if (normalizedEmail === OWNER_BOOTSTRAP_EMAIL || !PROVISIONABLE_ROLES.includes(access.role)) return null;
+      const [existingAdmin, existingStudent, existingParent, breakGlassOwner] = await Promise.all([
         tx.adminUser.findUnique({ where: { email: normalizedEmail } }),
         tx.studentAccount.findUnique({ where: { email: normalizedEmail }, select: { id: true } }),
         tx.parentAccount.findUnique({ where: { email: normalizedEmail }, select: { id: true } }),
+        isOwnerBootstrap ? tx.adminUser.findUnique({ where: { email: BREAK_GLASS_OWNER_EMAIL } }) : Promise.resolve(null),
       ]);
       if (existingStudent || existingParent) return null;
       if (access.purpose === 'invite' && existingAdmin) return null;
       if (access.purpose === 'password_reset') {
         if (!existingAdmin || !existingAdmin.isActive || existingAdmin.role !== access.role || existingAdmin.role === 'owner') return null;
+      }
+      if (isOwnerBootstrap) {
+        if (existingAdmin || !breakGlassOwner || breakGlassOwner.id !== access.invitedById
+          || breakGlassOwner.role !== 'owner' || !breakGlassOwner.isActive) return null;
       }
       const claimed = await tx.staffInvite.updateMany({
         where: { id: access.id, usedAt: null, expiresAt: { gt: new Date() } },
@@ -496,7 +611,7 @@ router.post('/set-password', requireTrustedOrigin, async (req, res) => {
       if (claimed.count !== 1) return null;
       const passwordHash = await bcrypt.hash(password, 12);
       let staff;
-      if (access.purpose === 'invite') {
+      if (access.purpose === 'invite' || isOwnerBootstrap) {
         staff = await tx.adminUser.create({
           data: { email: access.email, displayName: access.displayName, role: access.role, isActive: true, passwordHash },
         });
@@ -509,7 +624,8 @@ router.post('/set-password', requireTrustedOrigin, async (req, res) => {
       await tx.staffInvite.updateMany({ where: { email: staff.email, usedAt: null }, data: { usedAt: new Date() } });
       await tx.staffAuditLog.create({
         data: {
-          action: access.purpose === 'invite' ? 'staff_invite_accepted' : 'staff_password_reset_completed',
+          action: isOwnerBootstrap ? 'owner_bootstrap_accepted'
+            : access.purpose === 'invite' ? 'staff_invite_accepted' : 'staff_password_reset_completed',
           actorAdminId: staff.id,
           targetAdminId: staff.id,
           targetEmail: staff.email,
