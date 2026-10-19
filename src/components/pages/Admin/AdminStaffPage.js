@@ -15,6 +15,9 @@ export default function AdminStaffPage({ language = 'en', toggleLanguage }) {
   const [message, setMessage] = useState('');
   const [denied, setDenied] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [pendingAction, setPendingAction] = useState(null);
+  const [actionReason, setActionReason] = useState('');
+  const [principalAck, setPrincipalAck] = useState(false);
 
   async function load() {
     const response = await fetch(`${API}/api/admin/staff`, { credentials: 'include' });
@@ -42,27 +45,54 @@ export default function AdminStaffPage({ language = 'en', toggleLanguage }) {
     finally { setBusy(false); }
   }
 
-  async function invite(event) {
+  function stageAction(action) {
+    setPendingAction(action);
+    setActionReason(action.reason || '');
+    setPrincipalAck(false);
+  }
+
+  function invite(event) {
     event.preventDefault();
-    if (!window.confirm(`Invite ${form.email} as ${label(form.role)}?`)) return;
-    const accepted = await request('/api/admin/staff/invite', 'POST', form, () => `Invitation request accepted for ${form.email}. Check delivery status below.`);
-    if (accepted) setForm({ email: '', displayName: '', role: 'principal', reason: '' });
+    stageAction({
+      title: `Invite ${form.email} as ${label(form.role)}`,
+      consequence: 'Creates one expiring access link. Provider acceptance does not prove receipt.',
+      path: '/api/admin/staff/invite', method: 'POST', body: form, reason: form.reason, invite: true,
+      success: () => `Invitation request accepted for ${form.email}. Check delivery status below.`,
+    });
   }
 
-  function getReason(action) { return window.prompt(`${action}\nEnter the operational reason (required):`, '')?.trim() || ''; }
-
-  async function changeAccess(person, change, action) {
-    const reason = getReason(action);
-    if (!reason || !window.confirm(`${action} for ${person.email}? Existing sessions and links may be revoked.`)) return;
-    await request(`/api/admin/staff/${person.id}`, 'PATCH', { ...change, reason }, () => `${action} completed for ${person.email}.`);
+  function changeAccess(person, change, action) {
+    stageAction({
+      title: `${action} for ${person.email}`,
+      consequence: 'Existing sessions and unused access links will be revoked when access changes.',
+      path: `/api/admin/staff/${person.id}`, method: 'PATCH', body: change,
+      success: () => `${action} completed for ${person.email}.`,
+    });
   }
 
-  async function accountAction(person, route, action) {
-    const reason = getReason(action);
-    if (!reason) return;
-    const principalAck = person.protection !== 'configured_principal' || window.confirm('This is the configured Principal. Continue only if temporary Principal downtime is understood.');
-    if (!principalAck || !window.confirm(`${action} for ${person.email}?`)) return;
-    await request(`/api/admin/staff/${person.id}/${route}`, 'POST', { reason, acknowledgePrincipalDowntime: person.protection === 'configured_principal' }, (result) => `${action} completed; ${result.sessionsRevoked ?? 0} session(s) revoked.`);
+  function accountAction(person, route, action) {
+    stageAction({
+      title: `${action} for ${person.email}`,
+      consequence: route === 'password-reset'
+        ? 'Revokes current sessions and creates a new expiring reset link.'
+        : 'Revokes every open session and invalidates unused access links.',
+      path: `/api/admin/staff/${person.id}/${route}`, method: 'POST', body: {},
+      principal: person.protection === 'configured_principal',
+      success: (result) => `${action} completed; ${result.sessionsRevoked ?? 0} session(s) revoked.`,
+    });
+  }
+
+  async function confirmAction(event) {
+    event.preventDefault();
+    if (!pendingAction || actionReason.trim().length < 3 || (pendingAction.principal && !principalAck)) return;
+    const accepted = await request(pendingAction.path, pendingAction.method, {
+      ...pendingAction.body,
+      reason: actionReason.trim(),
+      ...(pendingAction.principal ? { acknowledgePrincipalDowntime: true } : {}),
+    }, pendingAction.success);
+    if (!accepted) return;
+    if (pendingAction.invite) setForm({ email: '', displayName: '', role: 'principal', reason: '' });
+    setPendingAction(null); setActionReason(''); setPrincipalAck(false);
   }
 
   if (!session) return null;
@@ -70,6 +100,15 @@ export default function AdminStaffPage({ language = 'en', toggleLanguage }) {
   return <AdminPage>
     <AdminHeader language={language} toggleLanguage={toggleLanguage} title="Staff access" subtitle="Owner-only role assignment, invitations, account state, sessions, and audit evidence." />
     {message && <div className="alert alert-info py-2" role="status">{message}</div>}
+    {pendingAction && <form onSubmit={confirmAction} className="alert alert-warning" aria-labelledby="staff-action-title">
+      <h2 id="staff-action-title" className="h6">Review access action</h2>
+      <p className="mb-1"><strong>{pendingAction.title}</strong></p>
+      <p className="small mb-2">{pendingAction.consequence}</p>
+      <label className="form-label" htmlFor="staff-action-reason">Operational reason</label>
+      <input id="staff-action-reason" className="form-control mb-2" minLength={3} maxLength={300} required autoFocus value={actionReason} onChange={(event) => setActionReason(event.target.value)} />
+      {pendingAction.principal && <div className="form-check mb-2"><input id="principal-downtime" className="form-check-input" type="checkbox" checked={principalAck} onChange={(event) => setPrincipalAck(event.target.checked)} /><label className="form-check-label" htmlFor="principal-downtime">I understand this can temporarily interrupt Principal signing.</label></div>}
+      <div className="d-flex gap-2"><button className="btn btn-danger btn-sm" disabled={busy}>Confirm action</button><button type="button" className="btn btn-outline-secondary btn-sm" disabled={busy} onClick={() => setPendingAction(null)}>Cancel</button></div>
+    </form>}
     <div className="row g-3 mb-3">{[['Active accounts', data.summary?.activeAccounts], ['Pending invitations', data.summary?.pendingInvitations], ['Open sessions', data.summary?.openSessions], ['Principal identity', data.summary?.configuredPrincipal]].map(([name, value]) => <div className="col-md-3" key={name}><div style={{ ...adminCardStyle, padding: 14 }}><div className="small text-muted">{name}</div><strong>{value ?? '—'}</strong></div></div>)}</div>
 
     <section style={{ ...adminCardStyle, padding: 18, marginBottom: 18 }}><h2 className="h6">Role boundaries</h2><div className="row g-3">{(data.roleDefinitions || []).map((role) => <div className="col-lg-3" key={role.id}><div className="border rounded p-3 h-100"><strong>{role.label}</strong>{role.protected && <span className="badge text-bg-warning ms-2">Protected</span>}<p className="small text-success mb-1 mt-2">Allowed: {role.allowed.join('; ')}</p><p className="small text-danger mb-1">Denied: {role.denied.join('; ')}</p><p className="small text-muted mb-0">{role.signingRule}</p></div></div>)}</div></section>

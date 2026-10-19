@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import AdminStaffPage from './AdminStaffPage';
 
@@ -33,4 +33,18 @@ test('fails closed when the server denies staff management', async () => {
   render(<MemoryRouter><AdminStaffPage /></MemoryRouter>);
   await waitFor(() => expect(screen.getByRole('alert')).toHaveTextContent('not authorized'));
   expect(screen.queryByRole('button', { name: 'Send' })).not.toBeInTheDocument();
+});
+
+test('stages a reasoned access action before sending a mutation', async () => {
+  const mutable = { ...payload, staff: [{ id: 'academic-1', email: 'academic@example.invalid', displayName: 'Academic', role: 'academic_staff', isActive: true, protection: null, sessions: { openSessionCount: 1 } }] };
+  global.fetch.mockImplementation(async () => ({ ok: true, status: 200, json: async () => mutable }));
+  render(<MemoryRouter><AdminStaffPage /></MemoryRouter>);
+  await screen.findByText('academic@example.invalid');
+  fireEvent.click(screen.getByRole('button', { name: 'Disable' }));
+  expect(screen.getByText('Review access action')).toBeInTheDocument();
+  expect(global.fetch).toHaveBeenCalledTimes(1);
+  fireEvent.change(screen.getByLabelText('Operational reason'), { target: { value: 'Synthetic browser acceptance' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Confirm action' }));
+  await waitFor(() => expect(global.fetch).toHaveBeenCalledWith('/api/admin/staff/academic-1', expect.objectContaining({ method: 'PATCH', body: expect.stringContaining('Synthetic browser acceptance') })));
+  expect(await screen.findByText(/Disable account completed/)).toBeInTheDocument();
 });
