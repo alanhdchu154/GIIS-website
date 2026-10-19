@@ -2,7 +2,7 @@
 
 Updated: 2026-10-18 America/Chicago. One focused task only.
 
-## Staff Access Control v1 — local implementation and testing
+## Staff Access Control v1 — production release complete
 
 **Task ID:** `TASK-GIIS-STAFF-ACCESS-V1-20261018`
 
@@ -24,10 +24,10 @@ permission helpers/tests when needed for truthful role descriptions; the
 smallest admin staff UI/test files; additive local-only test helpers or docs.
 Use existing Prisma models unless a concrete requirement cannot be met safely.
 
-**Forbidden:** sending real invitation/reset email, creating or changing real
-staff accounts/roles/credentials, production data access, push, deploy, schema
-apply, changing production environment, broad route-RBAC rollout, arbitrary
-permission editor, multi-role union, or Support provisioning.
+**Forbidden during verification:** sending real invitation/reset email, creating
+or changing real staff accounts/roles/credentials, schema apply without a
+delta, broad route-RBAC rollout, arbitrary permission editor, multi-role union,
+or Support provisioning.
 
 **Acceptance:** focused backend/frontend tests cover every operation and denial;
 configured Principal and Owner protections fail closed; role/state mutations
@@ -64,6 +64,13 @@ and idempotent revoke produced visible state and audit deltas; direct Owner and
 configured-Principal bypasses returned 409. Frontend is now 83/83 and focused UI
 is 5/5. Evidence and rollback boundaries:
 `docs/staff-access-browser-acceptance-2026-10-18.md`.
+
+**Status:** `COMPLETE`. Alan authorized the exact accepted release. Commit
+`a03e8400` passed GitHub CI run `39191310863` and is live on Netlify and the
+Lightsail API. Production backup, exact immutable release path, direct/proxied
+401 denial, API proxy 12/12 and payment regression 6/6 receipts are recorded in
+`ROADMAP.md`. No schema or real staff/family/payment mutation was performed.
+There is no active Platform Engineering mutation remaining in this handoff.
 
 ## Family access completion and production release
 

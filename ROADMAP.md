@@ -1,6 +1,6 @@
 # GIIS Website Roadmap
 
-## Staff Access Control v1 — accepted local candidate 2026-10-18
+## Staff Access Control v1 — live 2026-10-18
 
 The Owner-only staff console now has fixed Principal, Academic and Admissions
 roles; protected Owner and configured-Principal behavior; safe pending-invite,
@@ -9,12 +9,12 @@ one-time setup links. Server authorization remains the authority; UI role state
 is only a display hint. Invitation delivery distinguishes requested, provider
 accepted/failed and recipient-accepted events without exposing tokens.
 
-The candidate is automatically included in the existing frontend and
-`server-smoke` CI jobs. Local evidence: frontend 82/82, server 275/275, focused
-Staff Access UI 4/4 and backend 23/23, production build, Prisma validation and
-diff checks pass. Independent security review accepted the corrected candidate.
-This is not deployed: no real invitation, account/role/credential change,
-production data, schema apply, push or release occurred.
+The accepted code release is `a03e8400`. GitHub CI run `39191310863` passed;
+Netlify published that exact commit, and Lightsail PM2 runs the clean immutable
+release `/home/ubuntu/releases/giis-a03e8400/server`. Local evidence before
+release: frontend 83/83, server 275/275, focused Staff Access UI 5/5 and backend
+20/20 under CI origin, production build, Prisma validation and diff checks pass.
+Independent security review accepted the corrected candidate.
 
 Synthetic browser acceptance then found and fixed an unsupported native
 prompt/confirm flow. All access actions now use an in-page reasoned confirmation
@@ -23,6 +23,18 @@ pending-provider state, Academic disable/session revoke and matching audit rows;
 direct Owner and configured-Principal bypass attempts both returned 409. Updated
 frontend evidence is 83/83. See
 `docs/staff-access-browser-acceptance-2026-10-18.md`.
+
+Production release used a fresh archive-validated Postgres backup
+`pre-staff-access-v1-20261019T030632Z.dump` with SHA-256
+`858b5960d2323edf215a7bdffb0dabcffd643f0132af80d9bf5a9c76459c8b0d`.
+No schema delta existed, so no production schema apply ran. Post-release direct
+and proxied health passed; unauthenticated direct and Netlify-proxied Staff API
+requests both returned 401; production API proxy checks passed 12/12 and the
+payment regression gate passed 6/6. The production staff chunk contains the new
+in-page confirmation and role-boundary UI. No real invitation, email, account,
+role, credential, session, family, student, payment or academic record was
+changed during deployment or verification. Rollback remains the prior immutable
+release `giis-932dae77`; it was not needed.
 
 ## Family application and account access — live 2026-10-17
 
