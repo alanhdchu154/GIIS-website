@@ -10,8 +10,9 @@ is only a display hint. Invitation delivery distinguishes requested, provider
 accepted/failed and recipient-accepted events without exposing tokens.
 
 The accepted code release is `a03e8400`. GitHub CI run `39191310863` passed;
-Netlify published that exact commit, and Lightsail PM2 runs the clean immutable
-release `/home/ubuntu/releases/giis-a03e8400/server`. Local evidence before
+Netlify published the accepted frontend code and its deploy-freshness gate
+matches current `origin/main`; Lightsail PM2 runs the clean immutable release
+`/home/ubuntu/releases/giis-a03e8400/server`. Local evidence before
 release: frontend 83/83, server 275/275, focused Staff Access UI 5/5 and backend
 20/20 under CI origin, production build, Prisma validation and diff checks pass.
 Independent security review accepted the corrected candidate.
