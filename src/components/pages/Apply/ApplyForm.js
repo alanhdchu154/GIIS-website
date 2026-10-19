@@ -509,8 +509,8 @@ export default function ApplyForm({ language }) {
               </p>
               <p style={{ margin: '0 0 9px', color: '#4f5868', fontSize: 12.5, lineHeight: 1.65 }}>
                 {T(
-                  'After the parent confirms interest by email, admissions reviews the path within one business day, asks for missing records if needed, and recommends Self-Paced, Guided, or Premium before payment.',
-                  '家长通过邮件确认继续申请后，招生团队会在一个工作日内审核路径，必要时要求补充资料，并在付款前建议 Self-Paced、Guided 或 Premium。'
+                  'After the parent confirms interest by email, admissions reviews the path within one business day and asks for missing records if needed. The family then chooses Self-Paced, Guided, or Premium before payment.',
+                  '家长通过邮件确认继续申请后，招生团队会在一个工作日内审核路径，必要时要求补充资料；家庭再于付款前自行选择 Self-Paced、Guided 或 Premium。'
                 )}
               </p>
               <Link to="/consultation" style={{ color: '#2b3d6d', fontSize: 12.5, fontWeight: 800, textDecoration: 'underline', textUnderlineOffset: 3 }}>
@@ -914,8 +914,8 @@ export default function ApplyForm({ language }) {
 
             <p style={{ textAlign: 'center', marginTop: 16, fontSize: 12, color: '#7b8496', lineHeight: 1.6 }}>
               {T(
-                'No payment is collected here. Admissions first reviews the path, requests missing records if needed, and recommends the support level before enrollment/payment. Questions? Email ',
-                '此处不会收款。招生团队会先审核路径、必要时要求补充资料，并在入学/付款前建议合适支持方案。有问题？发邮件至 '
+                'No payment is collected here. Admissions first reviews the academic path and requests missing records if needed. The family chooses its support level before enrollment/payment. Questions? Email ',
+                '此处不会收款。招生团队会先审核学术路径，并在必要时要求补充资料；家庭于入学／付款前自行选择支持层级。有问题？发邮件至 '
               )}
               <a href="mailto:admissions@genesisideas.school" style={{ color: '#2b3d6d', fontWeight: 600 }}>admissions@genesisideas.school</a>
               {' · '}

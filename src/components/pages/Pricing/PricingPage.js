@@ -28,13 +28,13 @@ const TIERS = [
   },
   {
     key: 'guided',
-    eyebrow: { en: 'Guided · Transfer Family Default', zh: '顾问指导 · 转学生家庭默认方案' },
+    eyebrow: { en: 'Guided · Advisor Support', zh: '顾问指导方案' },
     price: '$149',
     cadence: { en: '/ month', zh: '/ 月' },
-    annual: { en: 'Recommended for transfer students', zh: '转学生家庭推荐' },
+    annual: { en: 'For families who want monthly guidance', zh: '适合希望每月获得指导的家庭' },
     note: {
-      en: 'The right default when a family needs a credit review, a graduation timeline, and monthly human accountability.',
-      zh: '当家庭需要转学分审核、毕业时间规划与每月人为跟进时，这是最合适的默认方案。',
+      en: 'Adds credit review, graduation planning, and monthly human accountability for families who choose more support.',
+      zh: '供希望获得更多支持的家庭选择，增加学分审核、毕业规划与每月人为跟进。',
     },
     features: [
       { en: 'Everything in Self-Paced', zh: '包含自主学习方案全部内容' },
@@ -44,7 +44,7 @@ const TIERS = [
       { en: 'Parent progress review with missing-work risk flags', zh: '家长进度解读，并标出缺交风险提醒' },
     ],
     cta: { en: 'Apply for Guided', zh: '申请顾问指导方案' },
-    highlighted: true,
+    highlighted: false,
   },
   {
     key: 'premium',
@@ -121,9 +121,76 @@ const FAQS = [
   {
     q: { en: 'What if the support level is wrong after we start?', zh: '如果开始后发现支持层级不合适怎么办？' },
     a: {
-      en: 'Email admissions before the next billing decision. GIIS can review whether the student should stay Self-Paced, move into Guided support, or reduce support after the family understands the tradeoff. The written 30-day refund policy remains available for new reviewed enrollments.',
-      zh: '请在下一次计费决定前联系招生邮箱。GIIS 可以重新评估学生应继续 Self-Paced、转入 Guided，或在家长理解取舍后降低支持层级。完成审核后入学的新家庭仍可查看书面 30 天退款政策。',
+      en: 'Email admissions before the next billing decision. After reviewing the differences, the family may stay Self-Paced, choose Guided support, or reduce support. The written 30-day refund policy remains available for new reviewed enrollments.',
+      zh: '请在下一次计费决定前联系招生邮箱。了解方案差别后，家庭可自行决定继续 Self-Paced、选择 Guided，或降低支持层级。完成审核后入学的新家庭仍可查看书面 30 天退款政策。',
     },
+  },
+];
+
+const PLAN_COMPARISON = [
+  {
+    label: { en: 'Learn Portal courses, quizzes and exams', zh: '学习平台课程、测验与考试' },
+    values: [
+      { en: 'Included', zh: '包含' },
+      { en: 'Included', zh: '包含' },
+      { en: 'Included', zh: '包含' },
+    ],
+  },
+  {
+    label: { en: 'Assignment review and written feedback', zh: '作业批改与书面反馈' },
+    values: [
+      { en: 'Included', zh: '包含' },
+      { en: 'Included', zh: '包含' },
+      { en: 'Included', zh: '包含' },
+    ],
+  },
+  {
+    label: { en: 'Parent dashboard and transcript record', zh: '家长面板与成绩单记录' },
+    values: [
+      { en: 'Included', zh: '包含' },
+      { en: 'Included', zh: '包含' },
+      { en: 'Included', zh: '包含' },
+    ],
+  },
+  {
+    label: { en: 'Course and graduation-path planning', zh: '选课与毕业路径规划' },
+    values: [
+      { en: 'Student / family managed', zh: '学生／家庭自行管理' },
+      { en: '24-credit course plan', zh: '24 学分选课规划' },
+      { en: 'Major and college-pathway plan', zh: '目标专业与升学路径规划' },
+    ],
+  },
+  {
+    label: { en: 'Scheduled advisor check-in', zh: '固定顾问 check-in' },
+    values: [
+      { en: 'Not included', zh: '不包含' },
+      { en: 'Monthly', zh: '每月一次' },
+      { en: 'More frequent planning support', zh: '更密集的规划支持' },
+    ],
+  },
+  {
+    label: { en: 'Parent progress interpretation', zh: '家长进度解读' },
+    values: [
+      { en: 'Dashboard access', zh: '查看家长面板' },
+      { en: 'Monthly advisor-reviewed summary', zh: '每月顾问审核摘要' },
+      { en: 'Higher-touch planning review', zh: '更密集的规划检视' },
+    ],
+  },
+  {
+    label: { en: 'Writing and project portfolio guidance', zh: '写作与项目作品集指导' },
+    values: [
+      { en: 'Not included', zh: '不包含' },
+      { en: 'Not included', zh: '不包含' },
+      { en: 'Included', zh: '包含' },
+    ],
+  },
+  {
+    label: { en: 'Weekly 1:1 subject tutoring', zh: '每周一对一学科家教' },
+    values: [
+      { en: 'Not included', zh: '不包含' },
+      { en: 'Not included', zh: '不包含' },
+      { en: 'Not included unless separately agreed', zh: '除非另行书面约定' },
+    ],
   },
 ];
 
@@ -313,8 +380,8 @@ function TransferPathReviewCallout({ isEn }) {
           <div>
             <p style={{ margin: '0 0 14px', color: '#4f5868', fontSize: 14, lineHeight: 1.7 }}>
               {isEn
-                ? 'Admissions should review previous credits, documents, and graduation timing before a family chooses a plan. Guided is the usual recommendation when the path is unclear or the student needs accountability.'
-                : '招生团队应先审核既有学分、可提供文件与毕业时间，再让家庭选择方案。当路径不清楚或学生需要跟进时，Guided 通常是推荐选择。'}
+                ? 'Admissions reviews previous credits, documents, and graduation timing. The family then chooses Self-Paced, Guided, or Premium based on how much support it wants.'
+                : '招生团队负责审核既有学分、文件与毕业时间；家庭再依自己需要的支持程度，自行选择 Self-Paced、Guided 或 Premium。'}
             </p>
             <Link to="/apply" style={{ display: 'inline-block', background: '#2b3d6d', color: '#fff', borderRadius: 8, padding: '11px 18px', fontSize: 13, fontWeight: 850, textDecoration: 'none' }}>
               {isEn ? 'Request transfer path review' : '申请转学路径评估'}
@@ -347,6 +414,74 @@ function PricingTiersSection({ isEn }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 18, alignItems: 'stretch' }}>
           {TIERS.map((tier) => <TierCard key={tier.key} tier={tier} isEn={isEn} />)}
         </div>
+
+        <div style={{ marginTop: 34, background: '#fff', border: '1px solid #dfe5ef', borderRadius: 8, padding: '26px 24px' }}>
+          <div style={{ maxWidth: 760, marginBottom: 18 }}>
+            <p style={{ margin: '0 0 7px', color: '#b8962e', fontSize: 11, fontWeight: 850, letterSpacing: 1.5, textTransform: 'uppercase' }}>
+              {isEn ? 'Exactly What Changes' : '具体差别'}
+            </p>
+            <h3 style={{ margin: '0 0 8px', color: '#1a1a2e', fontSize: 'clamp(22px, 2.8vw, 30px)', lineHeight: 1.2, fontWeight: 850 }}>
+              {isEn ? '$49, $149, or $299: compare the support, not the coursework.' : '$49、$149、$299：差别在支持，不在课程内容。'}
+            </h3>
+            <p style={{ margin: 0, color: '#5c6578', fontSize: 13, lineHeight: 1.7 }}>
+              {isEn
+                ? 'All three plans use the same Learn Portal and academic courses. Higher tiers add human planning and accountability; Guided does not include weekly 1:1 subject tutoring.'
+                : '三个方案使用相同的学习平台与课程。较高层级增加的是人为规划与跟进；Guided 不包含每周一对一学科家教。'}
+            </p>
+          </div>
+
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', minWidth: 720, borderCollapse: 'collapse', tableLayout: 'fixed', fontSize: 13 }}>
+              <thead>
+                <tr>
+                  {[
+                    isEn ? 'Service' : '服务内容',
+                    isEn ? 'Self-Paced · $49' : '自主学习 · $49',
+                    isEn ? 'Guided · $149' : '顾问指导 · $149',
+                    isEn ? 'Premium · $299' : '升学路径 · $299',
+                  ].map((heading, index) => (
+                    <th key={heading} style={{
+                      padding: '13px 12px',
+                      textAlign: index === 0 ? 'left' : 'center',
+                      borderBottom: '2px solid #dfe5ef',
+                      color: '#2b3d6d',
+                      background: '#f8faff',
+                      wordBreak: 'break-word',
+                    }}>
+                      {heading}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {PLAN_COMPARISON.map((row) => (
+                  <tr key={row.label.en}>
+                    <td style={{ padding: '13px 12px', borderBottom: '1px solid #edf0f6', color: '#333', fontWeight: 750, lineHeight: 1.45 }}>
+                      {row.label[isEn ? 'en' : 'zh']}
+                    </td>
+                    {row.values.map((value, index) => (
+                      <td key={`${row.label.en}-${index}`} style={{
+                        padding: '13px 12px',
+                        borderBottom: '1px solid #edf0f6',
+                        textAlign: 'center',
+                        color: '#3f4858',
+                        background: '#fff',
+                        lineHeight: 1.45,
+                        fontWeight: 500,
+                      }}>
+                        {value[isEn ? 'en' : 'zh']}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ margin: '10px 0 0', color: '#7b8496', fontSize: 11, lineHeight: 1.5 }}>
+            {isEn ? 'On a phone, swipe the table horizontally to compare all plans.' : '手机上可左右滑动表格，比较全部方案。'}
+          </p>
+        </div>
+
         <p style={{ margin: '18px 0 0', color: '#777', textAlign: 'center', fontSize: 12, lineHeight: 1.6 }}>
           {isEn
             ? 'All plans start with an application review. Payment happens after the enrollment path is clear.'
@@ -388,8 +523,8 @@ export default function PricingPage({ language, toggleLanguage }) {
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.72)', maxWidth: 680, margin: '0 auto', lineHeight: 1.75, fontSize: 16 }}>
             {isEn
-              ? 'Self-paced access stays affordable. Transfer families should usually start with Guided so credits, graduation timing, and parent visibility are reviewed before payment.'
-              : '自主学习仍保持可负担；转学生家庭通常应从 Guided 开始，让学分、毕业时间与家长可见度在付款前先被审核清楚。'}
+              ? 'Every family receives the same academic course access. Choose Self-Paced, Guided, or Premium based on the amount of planning and follow-up your family wants.'
+              : '所有家庭获得相同的学术课程；家长可依希望获得的规划与跟进程度，自行选择 Self-Paced、Guided 或 Premium。'}
           </p>
           <div style={{
             display: 'grid',
@@ -400,7 +535,7 @@ export default function PricingPage({ language, toggleLanguage }) {
           }}>
             {[
               { en: 'Path review before payment', zh: '先审核路径，再付款' },
-              { en: 'Guided $149/month transfer default', zh: 'Guided $149/月，转学生默认' },
+              { en: 'Family chooses the support level', zh: '家庭自行选择支持层级' },
               { en: '30-day full refund window', zh: '30 天全额退款窗口' },
             ].map((item) => (
               <div key={item.en} style={{
