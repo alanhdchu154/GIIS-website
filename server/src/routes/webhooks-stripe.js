@@ -151,6 +151,9 @@ async function resolveLinkedAccount(stripeSubscriptionId, db = prisma) {
     include: { student: { include: { account: true } } },
   });
   if (!sub) return { sub: null, account: null };
+  // Internal live-payment smoke tests are deliberately unlinked. Never use a
+  // coincidentally matching payer email to change a learner's access or lock.
+  if (sub.planType === 'live_test') return { sub, account: null };
   if (sub.student?.account) return { sub, account: sub.student.account };
   if (await isApplicationCheckout(sub, db)) return { sub, account: null };
   // Fallback: try matching purchaser email to a student account
@@ -221,6 +224,9 @@ const MONEY_MOVED_STATES = ['active', 'paid', 'trialing', 'past_due'];
 
 async function autoLinkSubscriptionByEmail(subscriptionRecord, db = prisma) {
   if (!subscriptionRecord || subscriptionRecord.studentId) return subscriptionRecord;
+  // Internal live-payment smoke tests must never grant or revoke learner access,
+  // even when the payer email happens to match an existing family account.
+  if (subscriptionRecord.planType === 'live_test') return subscriptionRecord;
   if (await isApplicationCheckout(subscriptionRecord, db)) return subscriptionRecord;
   const studentId = await findStudentForPurchaserEmail(subscriptionRecord.purchaserEmail, db);
   if (!studentId) {
@@ -375,10 +381,48 @@ async function handleCheckoutCompleted(session, db = prisma) {
   console.log(`[webhook] ✓ checkout.session.completed — ${planType} · ${session.customer_email} · ${status}`);
 }
 
-async function handleSubscriptionUpdated(sub, db = prisma) {
-  const existing = await db.subscription.findUnique({
-    where: { stripeSubscriptionId: sub.id },
+/**
+ * Stripe does not guarantee webhook delivery order. If a subscription or invoice
+ * lifecycle event arrives before its Checkout completion (or that completion was
+ * missed during an outage), recover the authoritative Checkout Session directly
+ * from Stripe and run the same idempotent upsert used by the Checkout webhook.
+ *
+ * A subscription with no unique Checkout Session remains retryable: it may be an
+ * unmanaged Dashboard subscription, or Stripe may not have made the Checkout
+ * object available yet. We do not guess, create access, or acknowledge it away.
+ */
+async function findOrRecoverSubscription(stripeSubscriptionId, db = prisma, include) {
+  const lookup = {
+    where: { stripeSubscriptionId },
+    ...(include ? { include } : {}),
+  };
+  let existing = await db.subscription.findUnique(lookup);
+  if (existing) return existing;
+
+  const sessions = await stripe.checkout.sessions.list({
+    subscription: stripeSubscriptionId,
+    limit: 2,
   });
+  if (sessions.has_more || sessions.data.length > 1) {
+    throw new Error(`Subscription ${stripeSubscriptionId} has ambiguous Checkout Sessions; manual review required.`);
+  }
+  const session = sessions.data[0];
+  if (!session) return null;
+  if (stripeId(session.subscription) !== stripeSubscriptionId) {
+    throw new Error(`Checkout Session ${session.id} does not match subscription ${stripeSubscriptionId}.`);
+  }
+
+  await handleCheckoutCompleted(session, db);
+  existing = await db.subscription.findUnique(lookup);
+  if (!existing) {
+    throw new Error(`Subscription ${stripeSubscriptionId} recovery did not create a local record.`);
+  }
+  console.log(`[webhook] ✓ recovered missing subscription ${stripeSubscriptionId} from Checkout ${session.id}`);
+  return existing;
+}
+
+async function handleSubscriptionUpdated(sub, db = prisma) {
+  const existing = await findOrRecoverSubscription(sub.id, db);
   if (!existing) throw new Error(`Subscription ${sub.id} is not recorded yet; retry after Checkout.`);
   // Delayed lifecycle events must not restore a refunded/cancelled enrollment.
   if (['refunded', 'cancelled'].includes(existing.status)) return;
@@ -396,9 +440,7 @@ async function handleSubscriptionUpdated(sub, db = prisma) {
 }
 
 async function handleSubscriptionDeleted(sub, db = prisma) {
-  const existing = await db.subscription.findUnique({
-    where: { stripeSubscriptionId: sub.id },
-  });
+  const existing = await findOrRecoverSubscription(sub.id, db);
   if (!existing) throw new Error(`Subscription ${sub.id} is not recorded yet; retry after Checkout.`);
 
   // Cancellation arrives here. We deactivate the linked student (if any) — same as a refund —
@@ -441,9 +483,7 @@ async function recordApplicationInvoicePayment(invoice, subscription, db = prism
 async function handlePaymentSucceeded(invoice, db = prisma) {
   invoice = { ...invoice, subscription: invoiceSubscriptionId(invoice) };
   if (!invoice.subscription) return;
-  const existing = await db.subscription.findUnique({
-    where: { stripeSubscriptionId: invoice.subscription },
-  });
+  const existing = await findOrRecoverSubscription(invoice.subscription, db);
   if (!existing) throw new Error(`Subscription ${invoice.subscription} is not recorded yet; retry after Checkout.`);
   // Keep the actual invoice receipt even if membership is held after a refund.
   await recordApplicationInvoicePayment(invoice, existing, db);
@@ -476,9 +516,7 @@ async function handlePaymentSucceeded(invoice, db = prisma) {
 async function handlePaymentFailed(invoice, db = prisma) {
   invoice = { ...invoice, subscription: invoiceSubscriptionId(invoice) };
   if (!invoice.subscription) return;
-  const existing = await db.subscription.findUnique({
-    where: { stripeSubscriptionId: invoice.subscription },
-  });
+  const existing = await findOrRecoverSubscription(invoice.subscription, db);
   if (!existing) throw new Error(`Subscription ${invoice.subscription} is not recorded yet; retry after Checkout.`);
   if (['refunded', 'cancelled'].includes(existing.status)) return;
   const current = await stripe.subscriptions.retrieve(invoice.subscription);

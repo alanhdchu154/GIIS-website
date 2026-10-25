@@ -1,7 +1,7 @@
 // Synthetic lifecycle checks: never instantiate real Stripe or a real DB.
 const mockDb = {
   processedStripeEvent: { create: jest.fn(), findUnique: jest.fn() },
-  subscription: { findUnique: jest.fn(), update: jest.fn() },
+  subscription: { findUnique: jest.fn(), update: jest.fn(), upsert: jest.fn() },
   applicationEvent: { findFirst: jest.fn(), upsert: jest.fn() },
   studentAccount: { update: jest.fn(), findUnique: jest.fn() },
   auditLog: { create: jest.fn() },
@@ -33,10 +33,12 @@ beforeEach(() => {
   mockDb.$transaction.mockImplementation(callback => callback(mockDb));
   mockDb.subscription.findUnique.mockResolvedValue(record);
   mockDb.subscription.update.mockResolvedValue({ ...record, paymentFailureCount: 1 });
+  mockDb.subscription.upsert.mockResolvedValue(record);
   mockDb.applicationEvent.findFirst.mockResolvedValue({ applicationId: 'app_a' });
   mockStripe.invoicePayments.list.mockResolvedValue({ has_more: false, data: [{ invoice: 'in_a', payment: { payment_intent: 'pi_a' } }] });
   mockStripe.invoices.retrieve.mockResolvedValue({ parent: { subscription_details: { subscription: 'sub_a' } } });
   mockStripe.subscriptions.retrieve.mockResolvedValue({ id: 'sub_a', status: 'past_due', items: { data: [{ current_period_end: 1800000000 }] } });
+  mockStripe.checkout.sessions.list.mockResolvedValue({ has_more: false, data: [] });
 });
 test('modern invoice failure mutation and dedupe use one transaction', async () => {
   const response = await deliver('invoice.payment_failed', { parent: { subscription_details: { subscription: 'sub_a' } } });
@@ -54,7 +56,78 @@ test('duplicate non-Checkout event cannot increment failures again', async () =>
 test('invoice arriving before Checkout is retryable', async () => {
   mockDb.subscription.findUnique.mockResolvedValue(null);
   expect((await deliver('invoice.payment_succeeded', { subscription: 'sub_a' })).code).toBe(500);
+  expect(mockStripe.checkout.sessions.list).toHaveBeenCalledWith({ subscription: 'sub_a', limit: 2 });
   expect(mockDb.subscription.update).not.toHaveBeenCalled();
+});
+test('missed Checkout completion is recovered before processing a lifecycle event', async () => {
+  mockDb.subscription.findUnique
+    .mockResolvedValueOnce(null)
+    .mockResolvedValueOnce({ ...record, planType: 'guided_monthly' });
+  mockStripe.checkout.sessions.list.mockResolvedValue({
+    has_more: false,
+    data: [{
+      id: 'cs_a', mode: 'subscription', subscription: 'sub_a',
+      customer: 'cus_a', customer_email: 'parent@example.invalid',
+      payment_status: 'paid', amount_total: 14900,
+      metadata: { planType: 'guided_monthly', maxStudents: '1' },
+    }],
+  });
+  mockStripe.subscriptions.retrieve.mockResolvedValue({
+    id: 'sub_a', status: 'active', cancel_at_period_end: true,
+    items: { data: [{ current_period_end: 1800000000, price: { id: 'price_a' } }] },
+  });
+
+  expect((await deliver('customer.subscription.updated', { id: 'sub_a' })).code).toBe(200);
+  expect(mockDb.subscription.upsert).toHaveBeenCalledWith(expect.objectContaining({
+    where: { stripeCheckoutSessionId: 'cs_a' },
+    create: expect.objectContaining({ planType: 'guided_monthly', stripeSubscriptionId: 'sub_a' }),
+  }));
+  expect(mockDb.subscription.update).toHaveBeenCalledWith(expect.objectContaining({
+    where: { stripeSubscriptionId: 'sub_a' },
+    data: expect.objectContaining({ cancelAtPeriodEnd: true }),
+  }));
+});
+test('recovered live test payment never auto-links by payer email', async () => {
+  const liveTestRecord = { ...record, studentId: null, student: null, planType: 'live_test' };
+  mockDb.subscription.findUnique
+    .mockResolvedValueOnce(null)
+    .mockResolvedValueOnce(liveTestRecord);
+  mockDb.subscription.upsert.mockResolvedValue(liveTestRecord);
+  mockDb.subscription.update.mockResolvedValue({ ...liveTestRecord, status: 'active' });
+  mockDb.applicationEvent.findFirst.mockResolvedValue(null);
+  mockStripe.checkout.sessions.list.mockResolvedValue({
+    has_more: false,
+    data: [{
+      id: 'cs_test', mode: 'subscription', subscription: 'sub_a',
+      customer: 'cus_test', customer_email: 'staff@example.invalid',
+      payment_status: 'paid', amount_total: 100,
+      metadata: { planType: 'live_test', maxStudents: '1' },
+    }],
+  });
+  mockStripe.subscriptions.retrieve.mockResolvedValue({
+    id: 'sub_a', status: 'active', cancel_at_period_end: true,
+    items: { data: [{ current_period_end: 1800000000, price: { id: 'price_test' } }] },
+  });
+
+  expect((await deliver('invoice.payment_succeeded', { subscription: 'sub_a' })).code).toBe(200);
+  expect(mockDb.studentAccount.findUnique).not.toHaveBeenCalled();
+  expect(mockDb.studentAccount.update).not.toHaveBeenCalled();
+});
+test('live test cancellation never resolves or deactivates a learner by payer email', async () => {
+  const liveTestRecord = {
+    ...record,
+    studentId: null,
+    student: null,
+    planType: 'live_test',
+    purchaserEmail: 'shared@example.invalid',
+  };
+  mockDb.subscription.findUnique.mockResolvedValue(liveTestRecord);
+  mockDb.subscription.update.mockResolvedValue({ ...liveTestRecord, status: 'cancelled' });
+  mockDb.applicationEvent.findFirst.mockResolvedValue(null);
+
+  expect((await deliver('customer.subscription.deleted', { id: 'sub_a' })).code).toBe(200);
+  expect(mockDb.studentAccount.findUnique).not.toHaveBeenCalled();
+  expect(mockDb.studentAccount.update).not.toHaveBeenCalled();
 });
 test('modern exact PaymentIntent refund creates visible receipt and revokes full-refund access', async () => {
   expect((await deliver('charge.refunded', { id: 'ch_a', payment_intent: 'pi_a', customer: 'shared_customer', amount: 14900, amount_refunded: 14900, currency: 'usd' })).code).toBe(200);
