@@ -5,7 +5,7 @@
   "credits": 0.5,
   "department": "Psychology",
   "type": "Core",
-  "description": "A lifespan survey of physical, cognitive, and socioemotional development from conception through death, integrating theories of Piaget, Erikson, Vygotsky, and Bronfenbrenner.",
+  "description": "An evidence-based survey of physical, cognitive, language, and socioemotional development from prenatal development through middle childhood, integrating Piaget, Erikson, Vygotsky, attachment research, and contextual influences.",
   "isPublished": true,
   "modules": [
     {
@@ -13,15 +13,15 @@
       "title": "Theories of Development",
       "titleZh": "发展理论（皮亚杰、埃里克森、维果茨基）",
       "objectives": "Compare Piaget's cognitive stages, Erikson's psychosocial stages, and Vygotsky's sociocultural theory; evaluate each theory's contributions and limitations. Students will interpret sources or examples, explain cause-and-effect relationships, and support claims with evidence in the module assignment.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
-      "readingNote": "OpenStax Psychology 2e, Lifespan Development — use the sections relevant to Module 1: Theories of Development.",
+      "readingUrl": "https://openstax.org/books/lifespan-development/pages/1-3-major-theories-and-theorists",
+      "readingNote": "OpenStax Lifespan Development 1.3 — major developmental theories, including Erikson, Piaget, and Vygotsky.",
       "videoUrl": "https://youtu.be/7WM972-UAmA",
       "videoNote": "GIIS — Module 1: Theories of Development lesson video.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Create a three-column comparison chart contrasting Piaget, Erikson, and Vygotsky on: unit of analysis, primary driving force, stages or mechanisms, and educational implications. Write a 250-word reflection on which theory you find most convincing and why. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: examples, evidence, observations, concepts, or analysis from the Theories of Development module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Submit: a three-column comparison chart and a 250-word evidence-based conclusion. Include: Piaget, Erikson, and Vygotsky compared by primary question, mechanism of development, role of social context, age or stage assumptions, educational implication, one contribution, and one limitation; cite the assigned OpenStax section. Apply the theories to this fictional example: a teacher first models fraction tiles, then gives hints while a 10-year-old solves a new fraction problem, and gradually removes help as the student succeeds. Explain which theory best fits the example and what the other two still contribute. Evaluation: all three theories are represented accurately, comparisons use source evidence, and the conclusion acknowledges that the theories address partly different questions.",
       "estimatedHrs": 3
     },
     {
@@ -29,15 +29,15 @@
       "title": "Prenatal Development & Birth",
       "titleZh": "产前发展与出生",
       "objectives": "Describe the three stages of prenatal development (germinal, embryonic, fetal), identify teratogens and their critical periods, and explain the birth process and its psychological dimensions.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
-      "readingNote": "OpenStax Psychology 2e, Lifespan Development — use the sections relevant to Module 2: Prenatal Development & Birth.",
+      "readingUrl": "https://openstax.org/books/lifespan-development/pages/2-3-pregnancy-and-prenatal-development",
+      "readingNote": "OpenStax Lifespan Development 2.3 — prenatal stages, teratogens, timing, dose, susceptibility, and context.",
       "videoUrl": "https://youtu.be/xDNcquortDE",
       "videoNote": "GIIS — Module 2: Prenatal Development & Birth lesson video.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Research one teratogen (such as alcohol, cocaine, or Zika virus) and write a 350-word analysis of its mechanism of harm, the critical period of greatest vulnerability, and the developmental outcomes for the child at different prenatal stages of exposure. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: examples, evidence, observations, concepts, or analysis from the Prenatal Development & Birth module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "assignment": "Submit: a 350-word evidence table and analysis of one teratogen from the assigned source. Include: route of exposure, timing and dose considerations, possible outcomes stated as risks rather than certainties, at least two qualified citations, and one paragraph explaining why exposure does not determine one inevitable outcome. Evaluation: the evidence distinguishes association, mechanism, and uncertainty; uses current qualified sources; and avoids diagnosing an individual pregnancy.",
       "estimatedHrs": 2.5
     },
     {
@@ -45,15 +45,13 @@
       "title": "Infancy: Physical & Cognitive Development",
       "titleZh": "婴儿期：身体与认知发展",
       "objectives": "Describe major physical milestones of infancy, explain the development of sensory and motor abilities, and apply Piaget's sensorimotor stage including object permanence.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
-      "readingNote": "OpenStax Psychology 2e, Lifespan Development — use the sections relevant to Module 3: Infancy: Physical & Cognitive Development.",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-3-stages-of-development",
+      "readingNote": "OpenStax Psychology 2e 9.3 — infancy, sensorimotor development, milestones, and the limits of stage-based age ranges.",
       "videoUrl": "https://youtu.be/gAVjVdruYIs",
       "videoNote": "GIIS — Module 3: Infancy: Physical & Cognitive Development lesson video.",
-      "video2Url": "https://www.youtube.com/watch?v=9vpqilhW9uI",
-      "video2Note": "YouTube — Piaget's Sensorimotor Stage",
-      "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Submit: a 300-word developmental narrative based on the provided infant case or a published case with no identifying information. Include: five observed behaviors, evidence for the relevant sensorimotor concepts or milestones, and a note about the limits of one case; interviewing or observing a child is not required. Evaluation: each interpretation cites a behavior, uses the developmental concept accurately, and avoids unsupported diagnosis.",
+      "practiceUrl": "https://openstax.org/books/lifespan-development/pages/3-4-cognition-and-memory-in-infants-and-toddlers",
+      "practiceNote": "OpenStax Lifespan Development 3.4 — habituation, dishabituation, infant cognition, memory, and limits of interpreting infant responses; apply it to the fictional Ari case.",
+      "assignment": "Submit: a 300-word developmental analysis of this fictional case: at 6 months Ari tracks a moving toy and grasps it; at 9 months Ari searches after a toy is partly hidden; at 13 months Ari retrieves a toy hidden under a cloth after a short delay; motor skills and responses vary across situations. Include: five evidence-based behavior-to-concept links, relevant sensorimotor ideas or milestones, and two limits of interpreting one short case. Evaluation: every interpretation cites a stated behavior, uses age ranges as approximate, and avoids diagnosis.",
       "estimatedHrs": 2.5
     },
     {
@@ -61,15 +59,15 @@
       "title": "Infancy: Social & Emotional Development",
       "titleZh": "婴儿期：社会与情绪发展",
       "objectives": "Describe temperament types, explain Bowlby's attachment theory, distinguish secure from insecure attachment patterns, and describe the development of social referencing and basic emotions.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
-      "readingNote": "OpenStax Psychology 2e, Lifespan Development — use the sections relevant to Module 4: Infancy: Social & Emotional Development.",
+      "readingUrl": "https://openstax.org/books/lifespan-development/pages/4-4-social-development-in-infants-and-toddlers",
+      "readingNote": "OpenStax Lifespan Development 4.4 — social development, attachment theory, attachment patterns, and cultural context.",
       "videoUrl": "https://youtu.be/N-n2DuoJW5g",
       "videoNote": "GIIS — Module 4: Infancy: Social & Emotional Development lesson video.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Submit: a 300-word evidence-based analysis of a provided or published Strange Situation case. Include: observed behaviors, the attachment pattern the evidence most closely resembles, alternative explanations or limits, and no identifying information. Evaluation: the classification is supported by scenario evidence and clearly states that a classroom analysis is not a diagnosis or a basis for blaming a caregiver.",
+      "practiceUrl": "https://openstax.org/books/lifespan-development/pages/4-2-temperament-and-personality-in-infants-and-toddlers",
+      "practiceNote": "OpenStax Lifespan Development 4.2 — temperament dimensions and historical categories, goodness of fit, stability, and context; use it alongside assigned §4.4 on attachment.",
+      "assignment": "Submit: a 300-word analysis of this fictional Strange Situation pattern: Maya explores while her caregiver is present, protests at separation, seeks contact at reunion, is soothed, and resumes exploration. Include: the attachment pattern the behavior most closely resembles, evidence from separation and reunion, two alternative or contextual considerations, and the limits of one laboratory observation. Evaluation: the classification is evidence-based and clearly states that it is not a diagnosis or a basis for blaming a caregiver.",
       "estimatedHrs": 2.5
     },
     {
@@ -77,15 +75,15 @@
       "title": "Early Childhood: Cognitive Development",
       "titleZh": "幼儿期：认知发展",
       "objectives": "Describe cognitive characteristics of the preoperational stage including symbolic thinking, egocentrism, and animism; explain theory of mind development and Vygotsky's ZPD in early education.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
-      "readingNote": "OpenStax Psychology 2e, Lifespan Development — use the sections relevant to Module 5: Early Childhood: Cognitive Development.",
+      "readingUrl": "https://openstax.org/books/lifespan-development/pages/5-3-cognition-in-early-childhood",
+      "readingNote": "OpenStax Lifespan Development 5.3 — early-childhood cognition, Piaget, Vygotsky, theory of mind, and variation.",
       "videoUrl": "https://youtu.be/FgA8CYeBDzE",
       "videoNote": "GIIS — Module 5: Early Childhood: Cognitive Development lesson video.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Submit: a 350-word analysis of a provided false-belief-task transcript or published findings comparing typical responses around ages three and five. Include: quoted or paraphrased task evidence, an explanation of theory-of-mind development, and at least one limitation of the task; testing or interviewing children is not required. Evaluation: claims are tied to evidence, the age comparison is accurate, and the conclusion does not diagnose an individual child.",
+      "assignment": "Submit: a 350-word analysis of this fictional false-belief task: Sam watches a ball placed in a red box and leaves; Lee moves it to a blue box; when asked where Sam will first look, a 3-year-old says 'blue' and a 5-year-old says 'red.' Include: quoted task evidence, an explanation of false-belief reasoning and theory of mind, age variation, and at least two task limitations. Evaluation: claims are tied to the transcript and do not diagnose either child.",
       "estimatedHrs": 3
     },
     {
@@ -93,15 +91,15 @@
       "title": "Early Childhood: Social-Emotional Development",
       "titleZh": "幼儿期：社会情感发展",
       "objectives": "Describe Erikson's initiative vs. guilt stage, compare parenting styles and their research associations without treating them as deterministic, and analyze the role of play in social-emotional development.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
-      "readingNote": "OpenStax Psychology 2e, Lifespan Development — use the sections relevant to Module 6: Early Childhood: Social-Emotional Development.",
+      "readingUrl": "https://openstax.org/books/lifespan-development/pages/6-3-families-as-context-in-early-childhood",
+      "readingNote": "OpenStax Lifespan Development 6.3 — family context and parenting-style dimensions, associations, and limitations.",
       "videoUrl": "https://youtu.be/HoDYb-IYE9s",
       "videoNote": "GIIS — Module 6: Early Childhood: Social-Emotional Development lesson video.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Submit: a 350-word comparison of two fictional family scenarios. Include: evidence for relevant parenting-style concepts, possible developmental associations, and an explanation of how child, culture, resources, and context can affect outcomes; personal family disclosure is not required. Evaluation: the comparison uses scenario evidence, avoids causal or deterministic claims, and accurately applies the four-style framework.",
+      "practiceUrl": "https://openstax.org/books/lifespan-development/pages/5-5-play-in-early-childhood",
+      "practiceNote": "OpenStax Lifespan Development 5.5 — play categories, social play, cooperative play, and cultural context; use it alongside assigned §6.3 on family context and parenting dimensions.",
+      "assignment": "Submit: a 350-word comparison of two fictional family scenarios: Scenario A uses warm explanations, clear limits, and flexible discussion; Scenario B uses strict rules, little explanation, and low responsiveness. Include: evidence for the closest parenting-style dimensions, possible research associations stated without causation, and how child characteristics, culture, resources, stress, and context may change outcomes. Evaluation: the comparison uses scenario evidence, avoids deterministic claims, and treats the four-style framework as a simplified model.",
       "estimatedHrs": 2.5
     },
     {
@@ -109,15 +107,15 @@
       "title": "Language Development",
       "titleZh": "语言发展",
       "objectives": "Trace the milestones of language development from cooing to complex syntax, evaluate nativist (Chomsky) vs. social-interactionist (Vygotsky) explanations, and explain bilingualism and critical periods.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
-      "readingNote": "OpenStax Psychology 2e, Lifespan Development — use the sections relevant to Module 7: Language Development.",
+      "readingUrl": "https://openstax.org/books/lifespan-development/pages/3-5-language-in-infants-and-toddlers",
+      "readingNote": "OpenStax Lifespan Development 3.5 — early language milestones, overextension, biological preparedness, social interaction, and variation. Treat named theories as models with strengths and limits, not settled single-cause explanations.",
       "videoUrl": "https://youtu.be/wy03jVL9i_s",
       "videoNote": "GIIS — Module 7: Language Development lesson video.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Compare two theories of language acquisition (nativist and social-interactionist) in a 350-word essay. Present evidence for each and argue which theory better explains bilingual children's language acquisition. Submit: a document, worksheet, slide, image, or link that shows the completed work. Include: examples, evidence, observations, concepts, or analysis from the Language Development module, plus a short explanation of how your work supports your answer. Evaluation: the teacher should be able to see the final product, the steps or evidence used, and one clear connection to the module objective.",
+      "practiceUrl": "https://openstax.org/books/lifespan-development/pages/5-4-language-in-early-childhood",
+      "practiceNote": "OpenStax Lifespan Development 5.4 — language structure, environment, and bilingual development. Its broad age-seven endpoint is not a universal cutoff: timing differs by language component, learning conditions, and outcome measured. Compare that claim with Hartshorne, Tenenbaum, and Pinker (2018), https://doi.org/10.1016/j.cognition.2018.04.007, and distinguish strict critical periods from more flexible sensitive periods.",
+      "assignment": "Submit: a 350-word comparison of nativist and social-interactionist accounts of language acquisition using both assigned OpenStax sections and the linked Hartshorne et al. study. Include: each theory's proposed mechanism, two pieces of evidence or examples, the common cooing–babbling–first-word–two-word sequence with normal variation, implications for bilingual development, one limitation of each account, and a justified conclusion. Explain why no single birthday makes all language learning impossible. Evaluation: both theories are represented accurately, bilingualism is not treated as a deficit, critical and sensitive periods are distinguished, and the conclusion follows from cited evidence.",
       "estimatedHrs": 3
     },
     {
@@ -125,15 +123,15 @@
       "title": "Middle Childhood: School & Learning",
       "titleZh": "童年中期：学校与学习",
       "objectives": "Describe Piaget's concrete operational stage abilities (conservation, classification, seriation), apply Erikson's industry vs. inferiority stage, and explain the role of school, peers, and achievement motivation.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/9-introduction",
-      "readingNote": "OpenStax Psychology 2e, Lifespan Development — use the sections relevant to Module 8: Middle Childhood: School & Learning.",
+      "readingUrl": "https://openstax.org/books/lifespan-development/pages/7-2-cognition-in-middle-childhood",
+      "readingNote": "OpenStax Lifespan Development 7.2 — concrete operations, conservation, information processing, and variation in middle childhood.",
       "videoUrl": "https://youtu.be/EtCD-mQXUn0",
       "videoNote": "GIIS — Module 8: Middle Childhood: School & Learning lesson video.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://genesisideas.school/learn",
-      "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Submit: a 300-word report using the provided transcript of an elementary-age student's conservation-task reasoning. Include: specific transcript evidence, connections to conservation and concrete operations, and the limits of interpreting one task; interviewing a child is not required. Evaluation: the reasoning is accurately described, each claim cites evidence, and the report avoids diagnosis or identifying information.",
+      "practiceUrl": "https://openstax.org/books/lifespan-development/pages/8-1-identity-self-concept-and-self-esteem-in-middle-childhood",
+      "practiceNote": "OpenStax Lifespan Development 8.1 — apply Erikson’s industry-versus-inferiority framework to a fictional school-learning scenario.",
+      "assignment": "Submit: a 300-word report using this fictional conservation transcript: equal water is shown in two identical cups; one cup is poured into a taller, narrower glass; Jordan says 'the tall glass has more because the water is higher'; after the water is poured back, Jordan agrees the amounts match. Include: specific transcript evidence, conservation and reversibility concepts, one alternative task explanation, and two limits of one observation. Evaluation: the reasoning is accurately described, each claim cites the transcript, and the report avoids diagnosis.",
       "estimatedHrs": 2.5
     }
   ],
@@ -143,13 +141,13 @@
       "order": 1,
       "question": "Piaget's theory of cognitive development is best described as:",
       "options": [
-        "A sociocultural theory of learning",
-        "A stage theory based on qualitatively different ways of thinking",
-        "A behavioral theory based on reinforcement",
-        "A nativist theory of language acquisition"
+        "Qualitative changes in thinking across cognitive stages",
+        "An innate capacity supporting the acquisition of grammar",
+        "Learning through shared cultural tools and guided participation",
+        "Gradual behavior changes chiefly through reinforcement"
       ],
-      "answer": "A stage theory based on qualitatively different ways of thinking",
-      "explanation": "Piaget proposed that children progress through four universal stages, each representing qualitatively different cognitive structures.",
+      "answer": "Qualitative changes in thinking across cognitive stages",
+      "explanation": "Piaget proposed stages characterized by qualitatively different ways of thinking. Later research questions how sharply separated and universal those stages are.",
       "points": 1
     },
     {
@@ -157,12 +155,12 @@
       "order": 2,
       "question": "Vygotsky's zone of proximal development emphasizes the role of:",
       "options": [
-        "Biological maturation",
-        "Intrinsic motivation",
-        "Social interaction and scaffolding in learning",
-        "Reinforcement schedules"
+        "Biological readiness independent of instructional support",
+        "Guided participation in tasks beyond independent ability",
+        "Repeated rewards for tasks already completed independently",
+        "Independent practice without adjusting the difficulty level"
       ],
-      "answer": "Social interaction and scaffolding in learning",
+      "answer": "Guided participation in tasks beyond independent ability",
       "explanation": "Vygotsky's ZPD is the gap between what a child can do alone and what they can achieve with social guidance (scaffolding).",
       "points": 1
     },
@@ -172,9 +170,9 @@
       "question": "Which question is central to Erikson's psychosocial theory?",
       "options": [
         "How social challenges shape development across life stages",
-        "How reinforcement schedules control every behavior",
-        "How nutrients provide energy",
-        "How genes determine all outcomes without context"
+        "How children revise schemas to explain new experiences",
+        "How guided participation helps children acquire cultural tools",
+        "How reinforcement changes the frequency of learned behaviors"
       ],
       "answer": "How social challenges shape development across life stages",
       "explanation": "Erikson described psychosocial conflicts across the lifespan and how people respond within social contexts.",
@@ -185,13 +183,13 @@
       "order": 1,
       "question": "Teratogens are substances or agents that:",
       "options": [
-        "Accelerate fetal development",
-        "Cause birth defects or developmental abnormalities",
-        "Support placental function",
-        "Only affect postnatal development"
+        "Influence prenatal development mainly through inherited genes",
+        "Can disrupt prenatal structural or functional development",
+        "Indicate the fetus’s current level of physical maturity",
+        "Provide nutrients through the developing placental circulation"
       ],
-      "answer": "Cause birth defects or developmental abnormalities",
-      "explanation": "Teratogens (drugs, diseases, radiation) interfere with normal prenatal development and can cause structural or functional birth defects.",
+      "answer": "Can disrupt prenatal structural or functional development",
+      "explanation": "Teratogens are exposures that can disrupt prenatal development. Effects depend on factors such as dose, timing, duration, and susceptibility; exposure is not proof of a particular outcome.",
       "points": 1
     },
     {
@@ -199,12 +197,12 @@
       "order": 2,
       "question": "The germinal stage of prenatal development lasts approximately:",
       "options": [
-        "9 months",
-        "The first two weeks after fertilization",
+        "Weeks 9–12 after fertilization",
+        "Weeks 13–16 after fertilization",
         "Weeks 3–8 after fertilization",
-        "The third trimester"
+        "Weeks 0–2 after fertilization"
       ],
-      "answer": "The first two weeks after fertilization",
+      "answer": "Weeks 0–2 after fertilization",
       "explanation": "The germinal stage covers fertilization through implantation of the blastocyst — approximately the first two weeks.",
       "points": 1
     },
@@ -213,13 +211,13 @@
       "order": 3,
       "question": "Fetal Alcohol Spectrum Disorder (FASD) is caused by:",
       "options": [
-        "Maternal stress during pregnancy",
+        "Prenatal lead exposure",
         "Prenatal alcohol exposure",
-        "Genetic mutation in the fetus",
-        "Insufficient prenatal nutrition"
+        "Prenatal nicotine exposure",
+        "Prenatal mercury exposure"
       ],
       "answer": "Prenatal alcohol exposure",
-      "explanation": "FASD is caused by alcohol crossing the placenta and disrupting fetal brain development, causing lifelong cognitive and behavioral impairments.",
+      "explanation": "FASD describes a range of effects associated with prenatal alcohol exposure. Effects and support needs vary, and a brief classroom scenario cannot establish a diagnosis.",
       "points": 1
     },
     {
@@ -227,27 +225,27 @@
       "order": 4,
       "question": "Why does the timing of teratogen exposure matter?",
       "options": [
-        "Different organs and systems have periods of greater vulnerability",
-        "All prenatal days are identical",
-        "Teratogens affect only after birth",
-        "Timing matters only for the pregnant person's age"
+        "Earlier exposure reliably produces a milder effect than later exposure",
+        "The same dose affects each organ equally throughout pregnancy",
+        "Timing changes exposure risk mainly by changing placental nutrition",
+        "Organs and systems have different windows of greater vulnerability"
       ],
-      "answer": "Different organs and systems have periods of greater vulnerability",
+      "answer": "Organs and systems have different windows of greater vulnerability",
       "explanation": "The effect of an exposure can vary with dose, timing, duration, and individual susceptibility as organs develop.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 1,
-      "question": "Object permanence typically develops during which sub-stage of Piaget's sensorimotor period?",
+      "question": "In Piaget's original sensorimotor sequence, deliberate searching for a fully hidden object is associated with which approximate substage?",
       "options": [
-        "Birth to 1 month",
-        "1–4 months",
+        "18–24 months",
         "8–12 months",
-        "18–24 months"
+        "1–4 months",
+        "Birth to 1 month"
       ],
       "answer": "8–12 months",
-      "explanation": "Object permanence — knowing objects exist when hidden — typically emerges around 8 months in Piaget's sensorimotor stage.",
+      "explanation": "Piaget placed deliberate search for a fully hidden object in the 8–12 month substage. Modern looking-time studies suggest some expectations about hidden objects appear earlier, so this item is specifically about Piaget’s sequence.",
       "points": 1
     },
     {
@@ -255,26 +253,26 @@
       "order": 2,
       "question": "The rooting reflex in newborns is best described as:",
       "options": [
-        "Turning toward a touch on the cheek and beginning to suck",
-        "Extending arms when startled",
-        "Curling fingers around objects placed in the palm",
-        "Stepping when held upright"
+        "Closing the fingers around an object placed in the palm",
+        "Extending the arms after a sudden change in support",
+        "Turning the head toward a gentle touch on the cheek",
+        "Making stepping movements when supported in an upright position"
       ],
-      "answer": "Turning toward a touch on the cheek and beginning to suck",
-      "explanation": "The rooting reflex causes infants to turn toward a cheek touch — an adaptive reflex that facilitates breastfeeding.",
+      "answer": "Turning the head toward a gentle touch on the cheek",
+      "explanation": "Rooting is turning toward a touch on the cheek or near the mouth, helping an infant orient toward feeding. Grasping, Moro, and stepping responses are different reflexes.",
       "points": 1
     },
     {
       "moduleOrder": 3,
       "order": 3,
-      "question": "Habituation in infants is used by researchers to assess:",
+      "question": "When responses decline to a repeated stimulus and recover to a new one, what do researchers most directly infer?",
       "options": [
-        "Motor development",
-        "Cognitive abilities such as memory and discrimination",
-        "Emotional temperament",
-        "Sleep patterns"
+        "Memory and discrimination through stimulus responses",
+        "Motor coordination shown through reaching movements",
+        "Temperament through typical intensity of emotional reactions",
+        "Attachment security through responses to caregiver separation"
       ],
-      "answer": "Cognitive abilities such as memory and discrimination",
+      "answer": "Memory and discrimination through stimulus responses",
       "explanation": "Researchers use habituation (decreased response to repeated stimuli) and dishabituation (renewed response to novelty) to infer infant cognition.",
       "points": 1
     },
@@ -283,13 +281,13 @@
       "order": 1,
       "question": "Ainsworth's Strange Situation procedure was designed to measure:",
       "options": [
-        "Cognitive development",
-        "Quality of infant-caregiver attachment",
-        "Motor coordination",
-        "Language development"
+        "Quality of motor coordination",
+        "Level of expressive language",
+        "Patterns of caregiver attachment",
+        "Level of object-classification skill"
       ],
-      "answer": "Quality of infant-caregiver attachment",
-      "explanation": "The Strange Situation is a structured laboratory procedure assessing attachment security by observing infant reactions to separation and reunion.",
+      "answer": "Patterns of caregiver attachment",
+      "explanation": "The Strange Situation is a structured laboratory observation of infant-caregiver attachment behavior during separation and reunion. Its classification is contextual and is not a diagnosis or a fixed prediction of later outcomes.",
       "points": 1
     },
     {
@@ -297,12 +295,12 @@
       "order": 2,
       "question": "Securely attached infants, when reunited with their caregiver after separation, typically:",
       "options": [
-        "Show no reaction to the caregiver's return",
-        "Show anger and resist comfort",
-        "Seek contact, are comforted, and return to play",
-        "Avoid the caregiver entirely"
+        "Seek comfort, settle, and resume exploration",
+        "Avoid contact and focus on toys at reunion",
+        "Seek contact but resist comfort after reunion",
+        "Approach and then show contradictory, disoriented behavior"
       ],
-      "answer": "Seek contact, are comforted, and return to play",
+      "answer": "Seek comfort, settle, and resume exploration",
       "explanation": "Secure infants use the caregiver as a safe haven — they seek comfort upon reunion, are soothed, and can resume exploration.",
       "points": 1
     },
@@ -311,13 +309,13 @@
       "order": 3,
       "question": "Thomas and Chess's 'easy' temperament type is characterized by:",
       "options": [
-        "Irregular routines, slow adaptation, and intense negative mood",
-        "Regular routines, positive mood, and easy adaptation to new situations",
-        "Slow adaptation but mild emotional reactions",
-        "Intense reactions to novelty and unpredictable schedules"
+        "Slow adaptation, cautious approach, and relatively mild reactions",
+        "Irregular routines, slow adaptation, and intense negative reactions",
+        "Variable routines, intense reactions, and frequent negative mood",
+        "Regular routines, positive mood, and ready adaptation to novelty"
       ],
-      "answer": "Regular routines, positive mood, and easy adaptation to new situations",
-      "explanation": "Easy temperament infants have predictable routines, positive affect, and adapt readily to new experiences — approximately 40% of infants.",
+      "answer": "Regular routines, positive mood, and ready adaptation to novelty",
+      "explanation": "In the classic Thomas and Chess framework, the easy category described relatively regular routines, generally positive mood, and ready adaptation. These broad historical categories do not capture every infant or determine later personality.",
       "points": 1
     },
     {
@@ -325,12 +323,12 @@
       "order": 4,
       "question": "Social referencing in infancy refers to:",
       "options": [
-        "Imitating a peer's behavior",
-        "Looking to a caregiver's emotional signals to guide behavior in ambiguous situations",
-        "Following a caregiver's gaze toward an object",
-        "Recognizing one's reflection in a mirror"
+        "Following another person’s gaze to locate a shared object",
+        "Copying an observed action to learn how an object works",
+        "Using caregiver emotion to assess an uncertain situation",
+        "Checking a mirror image to recognize one’s own reflection"
       ],
-      "answer": "Looking to a caregiver's emotional signals to guide behavior in ambiguous situations",
+      "answer": "Using caregiver emotion to assess an uncertain situation",
       "explanation": "Social referencing is the infant's use of caregiver facial expressions and voice to decide how to respond to unfamiliar or uncertain situations.",
       "points": 1
     },
@@ -339,12 +337,12 @@
       "order": 1,
       "question": "Animism, typical of the preoperational stage, refers to children's belief that:",
       "options": [
-        "Animals are superior to humans",
-        "Inanimate objects have feelings and intentions",
-        "Nature is random and purposeless",
-        "All living things die"
+        "A tall narrow glass holds more liquid than a short wide glass",
+        "Another observer sees an object from the child’s own viewpoint",
+        "A nonliving object can have feelings and act with intentions",
+        "A hidden object has ceased to exist when it leaves sight"
       ],
-      "answer": "Inanimate objects have feelings and intentions",
+      "answer": "A nonliving object can have feelings and act with intentions",
       "explanation": "Preoperational animism is the attribution of life and mental states to inanimate objects (e.g., 'the rock is angry').",
       "points": 1
     },
@@ -353,12 +351,12 @@
       "order": 2,
       "question": "Theory of mind (ToM) refers to the ability to:",
       "options": [
-        "Solve abstract math problems",
-        "Understand that others have mental states different from one's own",
-        "Follow logical rules of classification",
-        "Use language to describe emotions"
+        "Classify objects according to a shared physical characteristic",
+        "Represent beliefs and desires that differ from one’s own",
+        "Remember where an object was placed before it was hidden",
+        "Name an emotion by recognizing a familiar facial expression"
       ],
-      "answer": "Understand that others have mental states different from one's own",
+      "answer": "Represent beliefs and desires that differ from one’s own",
       "explanation": "ToM is the cognitive ability to attribute mental states (beliefs, desires, intentions) to others and understand they differ from one's own.",
       "points": 1
     },
@@ -369,8 +367,8 @@
       "options": [
         "Egocentrism",
         "Conservation",
-        "Seriation",
-        "Object permanence"
+        "Object permanence",
+        "Seriation"
       ],
       "answer": "Egocentrism",
       "explanation": "In Piaget's account, egocentrism is difficulty taking another person's perspective.",
@@ -381,12 +379,12 @@
       "order": 4,
       "question": "Which classroom example best illustrates Vygotsky's zone of proximal development?",
       "options": [
-        "A child completes a harder puzzle with prompts from a skilled partner",
-        "A child repeats only tasks already mastered alone",
-        "A teacher removes all interaction",
-        "A student is graded without instruction"
+        "A child finishes a familiar puzzle alone",
+        "A child attempts an advanced puzzle despite unhelpful prompts",
+        "A child solves a puzzle with help, but not yet alone",
+        "A child watches a partner finish a puzzle without participating"
       ],
-      "answer": "A child completes a harder puzzle with prompts from a skilled partner",
+      "answer": "A child solves a puzzle with help, but not yet alone",
       "explanation": "The ZPD includes tasks a learner cannot yet do independently but can complete with appropriate guidance.",
       "points": 1
     },
@@ -395,13 +393,13 @@
       "order": 1,
       "question": "Baumrind's authoritative parenting style is characterized by:",
       "options": [
-        "High demands, low warmth, and strict obedience",
-        "High demands combined with high warmth, explanations, and responsiveness",
-        "Low demands and high permissiveness",
-        "Uninvolved and neglectful caregiving"
+        "High expectations with low warmth and obedience",
+        "Low expectations with low warmth and little involvement",
+        "Low expectations with high warmth and few enforced limits",
+        "High expectations with warmth and responsiveness"
       ],
-      "answer": "High demands combined with high warmth, explanations, and responsiveness",
-      "explanation": "Authoritative parents set clear standards while being warm, responsive, and willing to explain rules — associated with best outcomes.",
+      "answer": "High expectations with warmth and responsiveness",
+      "explanation": "The authoritative style combines warmth and responsiveness with clear, developmentally appropriate expectations. Research reports average associations rather than guaranteed outcomes, and culture, child characteristics, stress, resources, and context matter.",
       "points": 1
     },
     {
@@ -409,27 +407,27 @@
       "order": 2,
       "question": "Erikson's initiative vs. guilt stage occurs during:",
       "options": [
-        "Infancy",
-        "Middle childhood",
-        "Early childhood (approximately ages 3–6)",
-        "Adolescence"
+        "Adolescence, approximately ages 12–18",
+        "Infancy, approximately birth–1 year",
+        "Middle childhood, approximately ages 6–12",
+        "Early childhood, approximately ages 3–6"
       ],
-      "answer": "Early childhood (approximately ages 3–6)",
+      "answer": "Early childhood, approximately ages 3–6",
       "explanation": "Erikson's third stage occurs in the preschool years when children's expanding abilities create initiative, which guilt can suppress if overdisciplined.",
       "points": 1
     },
     {
       "moduleOrder": 6,
       "order": 3,
-      "question": "Cooperative play, in which children play with shared goals and rules, typically emerges:",
+      "question": "When does coordinated cooperative play with shared goals commonly become more evident?",
       "options": [
-        "In infancy",
-        "During the sensorimotor stage",
-        "Around ages 4–6 in the preschool years",
-        "Not until middle school"
+        "Preschool years, roughly ages 4–6",
+        "Infancy, roughly birth–12 months",
+        "Early toddlerhood, roughly ages 1–2",
+        "Later childhood, roughly ages 10–12"
       ],
-      "answer": "Around ages 4–6 in the preschool years",
-      "explanation": "Cooperative play with shared goals and rule-governed interaction develops during the preschool years as social cognition matures.",
+      "answer": "Preschool years, roughly ages 4–6",
+      "explanation": "Coordinated cooperative play commonly becomes more evident during the preschool years. Exact timing and play patterns vary with experience, context, culture, and the activity.",
       "points": 1
     },
     {
@@ -437,41 +435,41 @@
       "order": 4,
       "question": "Which example best shows cooperative play?",
       "options": [
-        "Children organize roles and rules to build a pretend store together",
-        "Two children play separately without interaction",
-        "A child watches others without joining",
-        "A child plays alone with blocks"
+        "Children assign roles and build a pretend store together",
+        "Children build separate stores side by side without interaction",
+        "Children watch a pretend store without taking part in it",
+        "Children share store toys without organizing a common activity"
       ],
-      "answer": "Children organize roles and rules to build a pretend store together",
+      "answer": "Children assign roles and build a pretend store together",
       "explanation": "Cooperative play involves shared goals, coordinated roles, agreed rules, and reciprocal interaction, unlike parallel play in which children play near one another without organizing a common activity.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 1,
-      "question": "Infants typically produce their first words around:",
+      "question": "Around what age do many infants produce recognizable first words, while normal timing varies?",
       "options": [
-        "2–3 months",
-        "6 months",
-        "10–13 months",
-        "18–24 months"
+        "Around 6 months of age",
+        "Around 3 months of age",
+        "Around 12 months of age",
+        "Around 24 months of age"
       ],
-      "answer": "10–13 months",
-      "explanation": "First words — typically nouns referring to important people and objects — emerge around 10–13 months of age.",
+      "answer": "Around 12 months of age",
+      "explanation": "Many infants produce recognizable first words near 12 months, but timing varies with language, development, opportunity, and how a word is defined; one age is not a diagnostic cutoff.",
       "points": 1
     },
     {
       "moduleOrder": 7,
       "order": 2,
-      "question": "The language acquisition device (LAD) proposed by Chomsky is a theoretical:",
+      "question": "Chomsky used the term language acquisition device (LAD) for what kind of proposal?",
       "options": [
-        "Computer program for teaching language",
-        "Innate brain structure predisposing humans to acquire language",
-        "Social learning mechanism",
-        "Reward system for language use"
+        "An anatomical organ identified as the specific seat of grammar",
+        "A learning process explained chiefly through reward schedules",
+        "A teaching method that uses repeated correction of sentences",
+        "A proposed innate mechanism supporting language acquisition"
       ],
-      "answer": "Innate brain structure predisposing humans to acquire language",
-      "explanation": "Chomsky's LAD is a hypothetical innate mechanism that contains universal grammar, enabling rapid language acquisition in children.",
+      "answer": "A proposed innate mechanism supporting language acquisition",
+      "explanation": "The LAD is a historical theoretical construct about innate language capacity, not a directly identified anatomical structure. Modern language science considers biological, cognitive, social, and cultural evidence.",
       "points": 1
     },
     {
@@ -479,12 +477,12 @@
       "order": 3,
       "question": "Which statement about bilingual language development is most accurate?",
       "options": [
-        "Learning two languages does not inherently cause a language disorder",
-        "Bilingual children can never distinguish their languages",
-        "Only one language can develop during childhood",
-        "Temporary mixing proves permanent confusion"
+        "Language mixing typically signals a language disorder",
+        "Learning two languages does not inherently cause a disorder",
+        "Uneven vocabulary across languages shows that learning has stalled",
+        "Total vocabulary is best measured using only the school language"
       ],
-      "answer": "Learning two languages does not inherently cause a language disorder",
+      "answer": "Learning two languages does not inherently cause a disorder",
       "explanation": "Bilingual development can include uneven exposure and temporary language mixing; these patterns do not by themselves indicate a disorder.",
       "points": 1
     },
@@ -493,12 +491,12 @@
       "order": 1,
       "question": "Conservation, mastered in the concrete operational stage, is the understanding that:",
       "options": [
-        "Objects can be classified into categories",
-        "Two objects can be in the same place",
-        "Quantity remains constant despite changes in shape or arrangement",
-        "Actions can be performed in sequence"
+        "Objects can belong to several overlapping classification groups",
+        "Quantity stays the same despite changes in shape or arrangement",
+        "Objects can be arranged by a single measurable dimension",
+        "Events can be represented by words, drawings, or pretend actions"
       ],
-      "answer": "Quantity remains constant despite changes in shape or arrangement",
+      "answer": "Quantity stays the same despite changes in shape or arrangement",
       "explanation": "Conservation (Piaget) is the recognition that amount, number, or volume does not change when its appearance is altered.",
       "points": 1
     },
@@ -507,12 +505,12 @@
       "order": 2,
       "question": "Erikson's industry vs. inferiority stage corresponds to:",
       "options": [
-        "Infancy",
-        "Early childhood",
-        "Middle childhood (ages 6–12)",
-        "Adolescence"
+        "Early childhood, approximately ages 3–6",
+        "Infancy, approximately birth–1 year",
+        "Middle childhood, approximately ages 6–12",
+        "Adolescence, approximately ages 12–18"
       ],
-      "answer": "Middle childhood (ages 6–12)",
+      "answer": "Middle childhood, approximately ages 6–12",
       "explanation": "Erikson's fourth stage occurs during the school years; children develop competence (industry) through mastery of skills or feel inferior when they fail.",
       "points": 1
     },
@@ -521,12 +519,12 @@
       "order": 3,
       "question": "Seriation in the concrete operational stage refers to the ability to:",
       "options": [
-        "Sort objects into categories",
-        "Arrange objects in order along a dimension such as height or weight",
-        "Understand symbolic representation",
-        "Understand reversibility"
+        "Order objects along a dimension such as length",
+        "Sort objects into groups by shared characteristics",
+        "Mentally undo an action to restore its earlier state",
+        "Use a familiar object to represent something else"
       ],
-      "answer": "Arrange objects in order along a dimension such as height or weight",
+      "answer": "Order objects along a dimension such as length",
       "explanation": "Seriation is the ability to mentally arrange a set of objects in order along a quantitative dimension — mastered in concrete operations.",
       "points": 1
     },
@@ -535,10 +533,10 @@
       "order": 4,
       "question": "A child gains confidence by mastering school tasks and receiving constructive feedback. Which Erikson stage does this illustrate?",
       "options": [
-        "Industry vs. inferiority",
-        "Trust vs. mistrust",
         "Identity vs. role confusion",
-        "Generativity vs. stagnation"
+        "Trust vs. mistrust",
+        "Generativity vs. stagnation",
+        "Industry vs. inferiority"
       ],
       "answer": "Industry vs. inferiority",
       "explanation": "During middle childhood, successful effort and recognition can support a sense of competence or industry.",
@@ -552,12 +550,12 @@
       "type": "mc",
       "question": "Piaget's concept of assimilation refers to:",
       "options": [
-        "Changing a schema to fit new information",
-        "Incorporating new information into an existing schema",
-        "Balancing assimilation and accommodation",
-        "Moving to a new cognitive stage"
+        "Interpreting new information through an existing schema",
+        "Advancing from one cognitive stage to the next",
+        "Resolving cognitive conflict through equilibration",
+        "Altering an existing schema to explain a new experience"
       ],
-      "answer": "Incorporating new information into an existing schema",
+      "answer": "Interpreting new information through an existing schema",
       "explanation": "Assimilation is the process of interpreting new experiences through an existing schema without changing the schema.",
       "points": 1
     },
@@ -567,12 +565,12 @@
       "type": "mc",
       "question": "Which statement about alcohol exposure during pregnancy is safest and most accurate?",
       "options": [
-        "No amount or timing has been established as safe, so avoiding alcohol during pregnancy is recommended",
-        "Wine is safe during the first trimester",
-        "Alcohol affects development only during labor",
-        "A small amount guarantees no effect"
+        "Small amounts of wine are established as safe after early pregnancy",
+        "Avoiding intoxication establishes a safe exposure level in pregnancy",
+        "No safe amount or timing is established; avoiding alcohol is advised",
+        "Exposure matters chiefly during the weeks when organs first form"
       ],
-      "answer": "No amount or timing has been established as safe, so avoiding alcohol during pregnancy is recommended",
+      "answer": "No safe amount or timing is established; avoiding alcohol is advised",
       "explanation": "Alcohol can affect development throughout pregnancy, and no amount or timing has been established as safe.",
       "points": 1
     },
@@ -583,57 +581,57 @@
       "question": "Object permanence develops during Piaget's:",
       "options": [
         "Preoperational stage",
-        "Concrete operational stage",
         "Sensorimotor stage",
-        "Formal operational stage"
+        "Formal operational stage",
+        "Concrete operational stage"
       ],
       "answer": "Sensorimotor stage",
-      "explanation": "Object permanence — knowing objects continue to exist when out of sight — develops during the sensorimotor stage, around 8 months.",
+      "explanation": "Object permanence develops during the sensorimotor period. Searching behavior often appears in the latter half of the first year, while other research methods can detect some expectations earlier.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 4,
       "type": "mc",
-      "question": "Disorganized attachment in infancy is most associated with:",
+      "question": "Which caregiving context most directly illustrates a caregiver becoming both a potential source of comfort and a source of fear?",
       "options": [
-        "Frightening or frightened caregiver behavior and serious caregiving disruption",
-        "Consistently responsive caregiving",
-        "Advanced abstract reasoning",
-        "Earlier puberty timing"
+        "Frightening or frightened caregiving and severe caregiving disruption",
+        "Consistently sensitive responses to an infant’s bids for comfort",
+        "Repeated rebuffing of contact without frightened caregiver behavior",
+        "Inconsistent comfort without frightening or disoriented interactions"
       ],
-      "answer": "Frightening or frightened caregiver behavior and serious caregiving disruption",
-      "explanation": "Disorganized attachment behavior is associated with frightening, frightened, or highly disrupted caregiving contexts; an observed pattern does not by itself establish one cause or diagnose a family.",
+      "answer": "Frightening or frightened caregiving and severe caregiving disruption",
+      "explanation": "Frightening or frightened caregiving can create an approach-avoidance conflict when the caregiver is both a potential source of comfort and a source of fear. Research associations do not prove a cause in a particular family, and a single observation cannot establish a diagnosis.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 5,
       "type": "mc",
-      "question": "Theory of mind is typically well-established by age:",
+      "question": "By what age do most children pass a standard verbal false-belief task?",
       "options": [
         "18 months",
         "2 years",
-        "4–5 years",
-        "8 years"
+        "8 years",
+        "4–5 years"
       ],
       "answer": "4–5 years",
-      "explanation": "Most children pass standard false-belief tasks by age 4–5, indicating a functional theory of mind has developed.",
+      "explanation": "Most children pass standard verbal false-belief tasks around ages 4–5, but performance depends on language, task demands, culture, and experience; theory of mind is broader than one task.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 6,
       "type": "mc",
-      "question": "Authoritative parenting is associated with which child outcomes?",
+      "question": "In many studies, which pattern is associated with authoritative parenting?",
       "options": [
-        "Low self-esteem and high anxiety",
-        "High self-esteem, academic achievement, and social competence",
-        "Increased aggression",
-        "Social withdrawal"
+        "Low warmth and strict obedience are linked to stronger peer competence",
+        "Warmth with few enforced limits reliably predicts stronger self-regulation",
+        "Warmth and limits have the same effects regardless of culture or resources",
+        "Warmth and clear limits are associated with stronger average outcomes"
       ],
-      "answer": "High self-esteem, academic achievement, and social competence",
-      "explanation": "Research often finds associations between authoritative parenting and positive outcomes, but culture, child characteristics, resources, and other contexts also matter.",
+      "answer": "Warmth and clear limits are associated with stronger average outcomes",
+      "explanation": "Many studies report positive average associations, but the framework is simplified and outcomes also reflect culture, child characteristics, resources, stress, and other contexts.",
       "points": 1
     },
     {
@@ -642,12 +640,12 @@
       "type": "mc",
       "question": "Overextension in early language development refers to:",
       "options": [
-        "Using a word too narrowly for only one object",
-        "Using a word to refer to a broader category than its correct meaning",
-        "Applying grammar rules incorrectly",
-        "Using invented words"
+        "Applying a word to a broader category than intended",
+        "Applying a regular grammar rule to an irregular word",
+        "Applying a word to a narrower category than intended",
+        "Creating a new word for an unfamiliar object"
       ],
-      "answer": "Using a word to refer to a broader category than its correct meaning",
+      "answer": "Applying a word to a broader category than intended",
       "explanation": "Overextension is applying a word too broadly — calling all men 'daddy' or all round objects 'ball.'",
       "points": 1
     },
@@ -657,10 +655,10 @@
       "type": "mc",
       "question": "Conservation of liquid quantity is mastered during Piaget's:",
       "options": [
-        "Concrete operational stage",
-        "Sensorimotor stage",
         "Preoperational stage",
-        "Formal operational stage only"
+        "Concrete operational stage",
+        "Formal operational stage",
+        "Sensorimotor stage"
       ],
       "answer": "Concrete operational stage",
       "explanation": "Conservation tasks are typically mastered during the concrete operational stage.",
@@ -672,10 +670,10 @@
       "type": "mc",
       "question": "A caregiver hides a toy, and an infant searches for it. Which concept does this behavior demonstrate?",
       "options": [
-        "Object permanence",
+        "Overextension",
         "Animism",
         "Seriation",
-        "Overextension"
+        "Object permanence"
       ],
       "answer": "Object permanence",
       "explanation": "Searching for a hidden object indicates understanding that it continues to exist when out of sight.",
@@ -687,12 +685,12 @@
       "type": "mc",
       "question": "Which observation best illustrates social referencing?",
       "options": [
-        "An infant looks to a caregiver's expression before approaching an unfamiliar toy",
-        "A child sorts sticks by length",
-        "A newborn turns toward a touched cheek",
-        "A student memorizes a spelling list alone"
+        "An infant follows a caregiver’s gaze to locate a toy on a shelf",
+        "An infant copies a caregiver’s action to open an unfamiliar box",
+        "An infant checks a caregiver’s emotion before trying a new toy",
+        "An infant points toward a new toy to share interest with a caregiver"
       ],
-      "answer": "An infant looks to a caregiver's expression before approaching an unfamiliar toy",
+      "answer": "An infant checks a caregiver’s emotion before trying a new toy",
       "explanation": "Social referencing uses another person's emotional cues to guide a response to an uncertain situation.",
       "points": 1
     },
@@ -700,15 +698,15 @@
       "examType": "midterm",
       "order": 11,
       "type": "mc",
-      "question": "A preschooler says the moon is following the car. Which preoperational concept best fits?",
+      "question": "A preschooler says, 'The moon wants to keep us company, so it follows our car.' Which preoperational concept best fits?",
       "options": [
-        "Animism",
+        "Formal operations",
         "Conservation",
-        "Seriation",
-        "Formal operations"
+        "Animism",
+        "Seriation"
       ],
       "answer": "Animism",
-      "explanation": "Animism attributes life-like intention, feelings, or purpose to nonliving things, a pattern Piaget described as common in preoperational thought.",
+      "explanation": "The child attributes intention and purpose to a nonliving object. That added evidence distinguishes animism from merely noticing apparent motion.",
       "points": 1
     },
     {
@@ -717,12 +715,12 @@
       "type": "mc",
       "question": "Which caregiver response best reflects an authoritative style?",
       "options": [
-        "Set a clear limit, explain the reason, and listen to the child's perspective",
-        "Set no limits or expectations",
-        "Use harsh punishment without explanation",
-        "Remain uninvolved and unavailable"
+        "Let the child decide the limit to prevent further conflict",
+        "Explain a clear limit and listen to the child’s perspective",
+        "Enforce the limit without discussing the child’s concerns",
+        "Postpone the limit and give reassurance to stop the distress"
       ],
-      "answer": "Set a clear limit, explain the reason, and listen to the child's perspective",
+      "answer": "Explain a clear limit and listen to the child’s perspective",
       "explanation": "Authoritative parenting combines warmth and responsiveness with clear, developmentally appropriate expectations.",
       "points": 1
     },
@@ -732,10 +730,10 @@
       "type": "mc",
       "question": "A child calls every four-legged animal 'dog.' Which language pattern is this?",
       "options": [
-        "Overextension",
         "Underextension",
-        "Babbling",
-        "Conservation"
+        "Overextension",
+        "Overregularization",
+        "Telegraphic speech"
       ],
       "answer": "Overextension",
       "explanation": "Overextension applies a familiar word to a category broader than its conventional meaning.",
@@ -747,12 +745,12 @@
       "type": "mc",
       "question": "Which ability is characteristic of concrete operational thinking?",
       "options": [
-        "Conserving quantity despite a change in appearance",
-        "Reasoning only through reflexes",
-        "Believing all objects are alive",
-        "Using no logical classifications"
+        "Judging quantity mainly from the height of a container",
+        "Attributing intentions to objects that appear to move",
+        "Conserving quantity despite changes in visible arrangement",
+        "Solving purely hypothetical problems without concrete examples"
       ],
-      "answer": "Conserving quantity despite a change in appearance",
+      "answer": "Conserving quantity despite changes in visible arrangement",
       "explanation": "Concrete operational thinkers can apply logical rules such as conservation to tangible situations.",
       "points": 1
     },
@@ -762,12 +760,12 @@
       "type": "mc",
       "question": "Vygotsky's emphasis on the ZPD has the most direct implications for:",
       "options": [
-        "Understanding innate language ability",
-        "Designing educational environments with adult scaffolding",
-        "Understanding the role of reinforcement in learning",
-        "Explaining unconscious drives in development"
+        "Providing guidance just beyond independent ability",
+        "Assigning tasks according to biological age alone",
+        "Repeating familiar tasks before introducing new ones",
+        "Rewarding performance without adjusting instructional support"
       ],
-      "answer": "Designing educational environments with adult scaffolding",
+      "answer": "Providing guidance just beyond independent ability",
       "explanation": "The ZPD implies that optimal instruction targets skills slightly above current ability, with expert guidance (scaffolding) to support acquisition.",
       "points": 1
     },
@@ -777,12 +775,12 @@
       "type": "mc",
       "question": "Accommodation in Piaget's theory involves:",
       "options": [
-        "Changing existing schemas to fit new information",
-        "Fitting new information into existing schemas",
-        "Imitating a model for reinforcement",
-        "Repeating a conditioned response after rest"
+        "Changing a schema to explain new information",
+        "Repeating a learned response after receiving reinforcement",
+        "Using an existing schema for new information",
+        "Copying a modeled action to obtain a similar outcome"
       ],
-      "answer": "Changing existing schemas to fit new information",
+      "answer": "Changing a schema to explain new information",
       "explanation": "Accommodation changes schemas; assimilation fits new experiences into schemas already in place.",
       "points": 1
     },
@@ -790,15 +788,15 @@
       "examType": "final",
       "order": 2,
       "type": "mc",
-      "question": "The embryonic stage is most vulnerable to teratogens because:",
+      "question": "Why is the embryonic stage especially vulnerable to teratogens that cause major structural malformations?",
       "options": [
-        "The placenta is not yet formed",
-        "The immune system is weakest then",
-        "All major organ systems are undergoing rapid formation (organogenesis)",
-        "The fetus is too small to be affected by larger doses"
+        "Prenatal exposures accumulate only during this stage",
+        "Small fetal size prevents dilution of any exposure",
+        "The nervous system is already fully mature at this stage",
+        "Major organs are rapidly forming during this stage"
       ],
-      "answer": "All major organ systems are undergoing rapid formation (organogenesis)",
-      "explanation": "Organogenesis occurs in weeks 3–8 — the period of greatest teratogenic risk for organ malformation.",
+      "answer": "Major organs are rapidly forming during this stage",
+      "explanation": "Organogenesis occurs mainly in weeks 3–8, creating high vulnerability to major structural malformations; susceptibility to other effects varies by system, timing, dose, and context.",
       "points": 1
     },
     {
@@ -807,8 +805,8 @@
       "type": "mc",
       "question": "Which reflex is shown when a newborn responds to a sudden sensation by extending the arms and then drawing them inward?",
       "options": [
-        "Moro reflex",
         "Rooting reflex",
+        "Moro reflex",
         "Babinski reflex",
         "Stepping reflex"
       ],
@@ -820,30 +818,30 @@
       "examType": "final",
       "order": 4,
       "type": "mc",
-      "question": "Secure attachment in infancy is most strongly predicted by:",
+      "question": "Which caregiver behavior is commonly associated with secure attachment, while remaining only one part of a larger developmental context?",
       "options": [
-        "Infant temperament alone",
-        "Caregiver sensitivity and responsiveness to infant signals",
-        "Socioeconomic status",
-        "Birth order"
+        "Responding sensitively to the infant’s changing signals",
+        "Redirecting contact bids toward independent play each time",
+        "Delaying comfort mainly to teach the infant self-reliance",
+        "Using a fixed response without attending to the infant’s cues"
       ],
-      "answer": "Caregiver sensitivity and responsiveness to infant signals",
-      "explanation": "Research consistently identifies caregiver sensitivity — reading and responding promptly and appropriately to infant cues — as the strongest predictor of secure attachment.",
+      "answer": "Responding sensitively to the infant’s changing signals",
+      "explanation": "Caregiver sensitivity has a reliable but not deterministic association with attachment security; temperament, culture, caregiving networks, stress, and measurement context also matter.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 5,
       "type": "mc",
-      "question": "Which statement best reflects current understanding of autism spectrum disorder?",
+      "question": "Which statement best reflects current developmental science?",
       "options": [
-        "It involves differences in social communication or interaction and restricted or repetitive patterns, with individual profiles that vary",
-        "It is defined only by low intelligence",
-        "Every autistic person has the same strengths and needs",
-        "It is caused by parenting style"
+        "Age norms identify the same developmental sequence for each child",
+        "Stage labels provide enough evidence to predict adult outcomes",
+        "Age trends coexist with individual and contextual variation",
+        "One carefully observed milestone can establish a developmental diagnosis"
       ],
-      "answer": "It involves differences in social communication or interaction and restricted or repetitive patterns, with individual profiles that vary",
-      "explanation": "Autism is heterogeneous; diagnostic domains describe patterns while each person's abilities, communication, sensory experience, and support needs differ.",
+      "answer": "Age trends coexist with individual and contextual variation",
+      "explanation": "Developmental theories organize common patterns, while evidence also shows variation and context. Conclusions should use repeated, appropriate evidence rather than one observation or deterministic stage labels.",
       "points": 1
     },
     {
@@ -860,15 +858,15 @@
       "examType": "final",
       "order": 7,
       "type": "mc",
-      "question": "A child who points to a cat in a book and says 'doggy' is demonstrating:",
+      "question": "A child repeatedly calls cats, cows, and horses 'doggy.' Which language pattern does this best demonstrate?",
       "options": [
-        "Underextension",
-        "Overextension",
         "Telegraphic speech",
-        "Overregularization"
+        "Overregularization",
+        "Underextension",
+        "Overextension"
       ],
       "answer": "Overextension",
-      "explanation": "Overextension applies a word (here, 'doggy') to objects beyond its correct referent — a common early vocabulary error.",
+      "explanation": "Repeatedly applying 'doggy' to several different four-legged-animal categories is overextension rather than a single possible misidentification.",
       "points": 1
     },
     {
@@ -892,10 +890,10 @@
       "type": "mc",
       "question": "Which sequence correctly orders early language milestones?",
       "options": [
-        "Cooing, babbling, first words, two-word combinations",
-        "First words, cooing, two-word combinations, babbling",
+        "Babbling, complex syntax, cooing, first words",
         "Two-word combinations, babbling, cooing, first words",
-        "Babbling, complex syntax, cooing, first words"
+        "Cooing, babbling, first words, two-word combinations",
+        "First words, cooing, two-word combinations, babbling"
       ],
       "answer": "Cooing, babbling, first words, two-word combinations",
       "explanation": "Although timing varies, this sequence reflects a common progression in early language development.",
@@ -907,12 +905,12 @@
       "type": "mc",
       "question": "Which example best shows scaffolding?",
       "options": [
-        "An adult gives temporary prompts and removes them as the child gains skill",
-        "An adult completes every task permanently",
-        "A child receives no feedback on a new task",
-        "A test is given before any instruction"
+        "An adult repeats identical instructions despite changes in the child’s skill",
+        "An adult finishes a task so the child can observe the correct result",
+        "An adult adjusts prompts and fades support as the child gains skill",
+        "An adult gives a fixed reward without changing support for the task"
       ],
-      "answer": "An adult gives temporary prompts and removes them as the child gains skill",
+      "answer": "An adult adjusts prompts and fades support as the child gains skill",
       "explanation": "Scaffolding provides adjustable support within the learner's zone of proximal development.",
       "points": 1
     },
@@ -920,15 +918,15 @@
       "examType": "final",
       "order": 11,
       "type": "mc",
-      "question": "Which statement best describes a critical period in development?",
+      "question": "Which statement correctly distinguishes critical and sensitive periods?",
       "options": [
-        "A time when particular experiences can have especially strong effects on a developing system",
-        "A birthday shared by all children",
-        "A period when learning is impossible",
-        "A stage determined only by school grade"
+        "Critical refers to faster physical growth; sensitive refers to emotional growth",
+        "Critical implies required timing; sensitive implies heightened responsiveness",
+        "Critical refers to school-taught skills; sensitive refers to home-taught skills",
+        "Critical implies gradual change; sensitive implies a fixed developmental cutoff"
       ],
-      "answer": "A time when particular experiences can have especially strong effects on a developing system",
-      "explanation": "Critical or sensitive periods describe windows of heightened developmental responsiveness, while timing and flexibility vary by system.",
+      "answer": "Critical implies required timing; sensitive implies heightened responsiveness",
+      "explanation": "A critical period is a relatively restricted window when particular input is required for typical development of a function. A sensitive period offers heightened responsiveness with more flexibility. Neither term should be used as a blanket claim that later learning is impossible.",
       "points": 1
     },
     {
@@ -937,12 +935,12 @@
       "type": "mc",
       "question": "Which behavior best demonstrates theory of mind?",
       "options": [
-        "Predicting that another person will search where they falsely believe an object is",
-        "Sorting sticks from shortest to longest",
-        "Turning toward a touched cheek",
-        "Repeating a sound without social meaning"
+        "Tracking an object’s path and locating it after it leaves sight",
+        "Ordering objects by size and explaining how they were sorted",
+        "Predicting a search from someone else’s mistaken belief",
+        "Recognizing emotion in a familiar person’s face"
       ],
-      "answer": "Predicting that another person will search where they falsely believe an object is",
+      "answer": "Predicting a search from someone else’s mistaken belief",
       "explanation": "False-belief reasoning requires representing another person's mental state as different from reality and from one's own knowledge.",
       "points": 1
     },
@@ -952,12 +950,12 @@
       "type": "mc",
       "question": "Which statement about attachment patterns is most accurate?",
       "options": [
-        "They describe observed relationship behavior in a context and should not be used alone to diagnose a child or blame a caregiver",
-        "They permanently determine every adult outcome",
-        "They measure intelligence",
-        "They are identical to temperament"
+        "They describe contextual relationship behavior, not a standalone diagnosis",
+        "They describe stable infant temperament across different relationships",
+        "They predict adult relationship outcomes from one infant observation",
+        "They identify caregiving quality without considering culture or conditions"
       ],
-      "answer": "They describe observed relationship behavior in a context and should not be used alone to diagnose a child or blame a caregiver",
+      "answer": "They describe contextual relationship behavior, not a standalone diagnosis",
       "explanation": "Attachment classifications summarize behavior in a specific assessment context; development reflects many relationships and conditions.",
       "points": 1
     },
@@ -967,12 +965,12 @@
       "type": "mc",
       "question": "Which example best shows seriation?",
       "options": [
-        "Arranging sticks from shortest to longest",
-        "Searching for a hidden toy",
-        "Calling every animal 'doggy'",
-        "Pretending a box is a spaceship"
+        "Sorting sticks into separate groups by their color",
+        "Arranging sticks from shortest to longest in order",
+        "Recognizing that hidden sticks continue to exist",
+        "Counting sticks again after their spacing changes"
       ],
-      "answer": "Arranging sticks from shortest to longest",
+      "answer": "Arranging sticks from shortest to longest in order",
       "explanation": "Seriation is the ability to order objects along a measurable dimension such as length, weight, or number, a skill associated with concrete operational reasoning.",
       "points": 1
     },
@@ -982,12 +980,12 @@
       "type": "mc",
       "question": "Which statement best compares temperament and parenting?",
       "options": [
-        "Temperament reflects early behavioral tendencies, while caregiving and context interact with those tendencies over time",
-        "Parenting completely determines temperament",
-        "Temperament never relates to behavior",
-        "Both terms mean the same thing"
+        "Temperament chiefly records the caregiving a child has already received",
+        "Early behavioral tendencies interact with caregiving and context over time",
+        "Parenting styles and temperament describe the same individual differences",
+        "Temperament fixes later behavior largely independently of relationships"
       ],
-      "answer": "Temperament reflects early behavioral tendencies, while caregiving and context interact with those tendencies over time",
+      "answer": "Early behavioral tendencies interact with caregiving and context over time",
       "explanation": "Development emerges through interaction among individual characteristics, relationships, and broader contexts.",
       "points": 1
     },
@@ -995,15 +993,15 @@
       "examType": "final",
       "order": 16,
       "type": "mc",
-      "question": "Piaget has been criticized primarily because his research:",
+      "question": "Which is one major evidence-based criticism of Piaget's stage account?",
       "options": [
-        "Did not include cross-cultural samples",
-        "Underestimated the cognitive abilities of infants and young children",
-        "Focused too much on social development",
-        "Used only case study methods"
+        "It treated social relationships as the primary cause of cognitive change",
+        "It explained cognitive changes chiefly through rewards and punishments",
+        "Some original tasks underestimated abilities detected with other methods",
+        "It described development as gradual accumulation without qualitative shifts"
       ],
-      "answer": "Underestimated the cognitive abilities of infants and young children",
-      "explanation": "Subsequent research using more sensitive measures (habituation, preferential looking) found infants and young children capable of more than Piaget's tasks suggested.",
+      "answer": "Some original tasks underestimated abilities detected with other methods",
+      "explanation": "Later studies using looking-time, simplified tasks, and other methods found some abilities earlier than Piaget’s original tasks suggested; researchers also debate how discrete and universal the stages are.",
       "points": 1
     },
     {
@@ -1012,12 +1010,12 @@
       "type": "mc",
       "question": "The strange situation experiment by Ainsworth involved observing infants in response to:",
       "options": [
-        "Separations and reunions with a caregiver in the presence of a stranger",
-        "New toys and problem tasks",
-        "A conservation-of-liquid task",
-        "A moral reasoning interview"
+        "Responses to questions about motives in a moral dilemma",
+        "Responses to liquid poured between differently shaped cups",
+        "Responses to new toys and unfamiliar problem-solving tasks",
+        "Responses to caregiver separations, reunions, and a stranger"
       ],
-      "answer": "Separations and reunions with a caregiver in the presence of a stranger",
+      "answer": "Responses to caregiver separations, reunions, and a stranger",
       "explanation": "Ainsworth's Strange Situation assesses attachment behavior during separations, reunions, and stranger episodes.",
       "points": 1
     },
@@ -1025,15 +1023,15 @@
       "examType": "final",
       "order": 18,
       "type": "mc",
-      "question": "A student persists at a difficult school task and receives useful feedback. Which psychosocial strength can grow?",
+      "question": "In Erikson’s account of middle childhood, a child masters school tasks with useful feedback. Which psychosocial strength can grow?",
       "options": [
         "Industry or competence",
-        "Mistrust",
-        "Role confusion",
-        "Stagnation"
+        "Identity or self-definition",
+        "Autonomy or self-direction",
+        "Initiative or purposeful action"
       ],
       "answer": "Industry or competence",
-      "explanation": "Erikson linked middle childhood with developing competence through effort, mastery, and recognition.",
+      "explanation": "Erikson linked middle childhood and mastery of school tasks with industry or competence. Autonomy and initiative are associated with earlier psychosocial conflicts, while identity is especially associated with adolescence.",
       "points": 1
     },
     {
@@ -1042,10 +1040,10 @@
       "type": "mc",
       "question": "A baby turns toward a gentle touch on the cheek and opens the mouth. Which reflex is this?",
       "options": [
+        "Palmar grasp reflex",
         "Rooting reflex",
-        "Moro reflex",
-        "Conservation",
-        "Seriation"
+        "Babinski reflex",
+        "Moro reflex"
       ],
       "answer": "Rooting reflex",
       "explanation": "The rooting reflex helps a newborn orient toward a possible feeding source.",
@@ -1057,12 +1055,12 @@
       "type": "mc",
       "question": "Why should one developmental observation be interpreted cautiously?",
       "options": [
-        "Behavior can vary with context, task, culture, experience, and the child's state",
-        "One observation always proves a diagnosis",
-        "Development never changes",
-        "All children reach every milestone on the same day"
+        "Standard tasks eliminate language and culture effects",
+        "A typical age range provides a firm cutoff for each individual child",
+        "A single observation reveals a stable ability regardless of setting",
+        "Behavior varies with context, task, and the child’s state"
       ],
-      "answer": "Behavior can vary with context, task, culture, experience, and the child's state",
+      "answer": "Behavior varies with context, task, and the child’s state",
       "explanation": "Developmental conclusions should use repeated evidence and context rather than treating one observation as deterministic.",
       "points": 1
     }
