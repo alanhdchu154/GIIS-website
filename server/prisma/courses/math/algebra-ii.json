@@ -46,7 +46,7 @@
       "titleZh": "多项式除法",
       "objectives": "Divide polynomials using long division and synthetic division; apply the Remainder Theorem and Factor Theorem to find zeros. Students will show step-by-step reasoning, check solutions for accuracy, and apply the method to the module assignment or a real problem.",
       "readingUrl": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/5-4-dividing-polynomials",
-      "readingNote": "OpenStax Algebra and Trigonometry 2e §5.4 — polynomial division and the Remainder and Factor Theorems.",
+      "readingNote": "OpenStax Algebra and Trigonometry 2e §5.4 — polynomial division; also use §5.5 at https://openstax.org/books/algebra-and-trigonometry-2e/pages/5-5-zeros-of-polynomial-functions for the Remainder and Factor Theorems.",
       "videoUrl": "https://youtu.be/7NIY5hXt7aU",
       "videoNote": "GIIS lesson video — Module 3: Dividing Polynomials.",
       "video2Url": "",
@@ -66,7 +66,7 @@
       "videoUrl": "https://youtu.be/BpN6Jdql26c",
       "videoNote": "GIIS lesson video — Module 4: Rational Expressions & Equations.",
       "video2Url": "https://www.youtube.com/watch?v=RROSgr4oXjU",
-      "video2Note": "Professor Leonard — Rational Expressions and Equations",
+      "video2Note": "The Organic Chemistry Tutor — Multiplying Rational Expressions",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "assignment": "Simplify (x²−9)/(x²−3x), (x²−4)/(x²−x−2), (x²+5x+6)/(x²−9), (4x²−16)/(2x²+4x), (x²−2x+1)/(x²−1), and (3x²−12x)/(x²−16). Multiply or divide these pairs: [(x²−4)/(x²+x−6)]·[(x−2)/(x+2)], [(x²−9)/(x²−1)]÷[(x−3)/(x−1)], [(2x)/(x²−4)]·[(x+2)/(3x)], and [(x²−1)/(x²+2x+1)]÷[(x−1)/(x+1)]. Solve 1/x+1/(x+2)=3/4, 2/(x−1)=x/(x−1), 3/x−2/(x+1)=1, 1/(x−2)+1/(x+2)=x/4, x/(x−3)=2, and 4/(x+1)=x−1. Identify vertical and horizontal asymptotes of (2x+1)/(x−3), (x²−4)/(x²+x−6), and (3x²+1)/(x²−4). Submit: one numbered solution-set document, PDF, or clear scan. Include: original excluded values, factorizations, checks, and asymptote reasoning. Evaluation: correct simplification and solutions, preserved restrictions, accurate asymptotes, and readable work.",
@@ -114,7 +114,7 @@
       "videoUrl": "https://youtu.be/12i_zq8AdLs",
       "videoNote": "GIIS lesson video — Module 7: Logarithmic Functions.",
       "video2Url": "https://www.youtube.com/watch?v=mQTWzLpCcW0",
-      "video2Note": "Professor Leonard — Logarithmic Functions",
+      "video2Note": "Khan Academy — Introduction to Logarithms",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "assignment": "Convert 2³=8, 5⁰=1, 10²=100, 3⁻²=1/9, log₂32=5, log₁₀0.01=−2, ln(e⁴)=4, and log₄(1/16)=−2 between exponential and logarithmic form. Expand log(x²y/√z), ln(a³/b), log₂[(m−1)(m+1)], and log₅(∛p/q²); condense 2log x+log y−log z and 3ln a−2ln b. Solve log x+log(x+3)=1, log₂(x−1)=3, ln x=2, log₃x+log₃(x−2)=2, 2log x=log49, and log₅(x+4)−log₅x=1. Evaluate ln1, ln(e³), ln(e⁻²), and ln√e. Submit: one numbered PDF or clear scan. Include: property names, domains, algebra, and substitution checks. Evaluation: correct conversions and properties, valid domains, complete reasoning, and accurate notation.",
@@ -133,7 +133,7 @@
       "video2Note": "",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
-      "assignment": "Use the stated models. Half-life: (1) 80 mg with half-life 6 h, find amount after 18 h; (2) 250 g with half-life 12 years, find time to reach 31.25 g. pH: calculate for [H⁺]=1×10⁻³, 2.5×10⁻⁵, and 6.3×10⁻⁸ M. Earthquake: use M=log₁₀(I/I₀) to compare events with I/I₀=10⁴ and 10⁶ and state the intensity ratio. Continuous growth: (1) $2,000 at 4% for 7 years and (2) a population of 1,500 at 2.5% for 12 years using A=Pe^(rt). Submit: one numbered PDF or clear scan. Include: show reasoning that supports each conclusion; formula choice, parameter meanings, units, logarithmic steps, rounding, and a contextual interpretation. Evaluation: correct models, calculation, units, assumptions, and interpretation.",
+      "assignment": "Use the stated models. Half-life: (1) 80 mg with half-life 6 h, find amount after 18 h; (2) 250 g with half-life 12 years, find time to reach 31.25 g. pH: calculate for [H⁺]=1×10⁻³, 2.5×10⁻⁵, and 6.3×10⁻⁸ M. Earthquake: use the simplified standardized amplitude model M=log₁₀(A/A₀) to compare events with A/A₀=10⁴ and 10⁶ and state the recorded-amplitude ratio. Continuous growth: (1) $2,000 at 4% for 7 years and (2) a population of 1,500 at 2.5% for 12 years using A=Pe^(rt). Submit: one numbered PDF or clear scan. Include: show reasoning that supports each conclusion; formula choice, parameter meanings, units, logarithmic steps, rounding, and a contextual interpretation. Evaluation: correct models, calculation, units, assumptions, and interpretation.",
       "estimatedHrs": 3.5
     },
     {
@@ -178,7 +178,7 @@
       "videoUrl": "https://youtu.be/RRSVhmQmFGg",
       "videoNote": "GIIS lesson video — Module 11: Probability.",
       "video2Url": "https://www.youtube.com/watch?v=OkmNXy7er84",
-      "video2Note": "Professor Leonard — Permutations, Combinations, and Probability",
+      "video2Note": "3Blue1Brown — The hardest problem on the hardest test; optional advanced probability enrichment",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "assignment": "Solve this provided set. Counting Principle: 4 shirts×3 pants; 2 appetizers×5 entrées×3 desserts; 3-letter codes from A–F with repetition; 4-digit PINs with no repeated digits. Permutations: 8P3, 10P4, 6!, arrange BOOK, and assign president/vice-president/treasurer from 15 students. Combinations: 8C3, 10C4, 12C2, choose 5 of 9 books, and choose a 4-person committee from 11 people. Probability: fair die {even}, {greater than 4}, and {even or greater than 4}; two coins {two heads}; a 52-card deck {heart}, {face card}, and {heart or face card}; without-replacement bag with 3 red and 2 blue {two red}. Complements: at least one head in three coin tosses and at least one six in two die rolls. Submit: one numbered PDF or clear scan. Include: sample spaces, whether order/repetition matter, formulas, simplified probabilities, and complement checks. Evaluation: correct model, computation, assumptions, and reasoning.",
@@ -194,7 +194,7 @@
       "videoUrl": "https://youtu.be/s3VF-RP5MEc",
       "videoNote": "GIIS lesson video — Module 12: Statistics: Data & Distributions.",
       "video2Url": "https://www.youtube.com/watch?v=MRqtXL2WX2M",
-      "video2Note": "Professor Leonard — Normal Distribution and Z-Scores",
+      "video2Note": "Jeremy Blitz-Jones — Standard Deviation - Explained and Visualized",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "assignment": "Treat all three datasets as populations: A={4,6,8,10,12}, B={72,85,90,68,95}, and C={10,10,12,13,15,18}. Compute mean, median, and population standard deviation for each. Draw a normal curve labeled μ=100 and σ=15. Calculate and interpret z-scores for x=70,85,100,115,130. State the empirical-rule percentages within 1σ, 2σ, and 3σ. Submit: one numbered PDF or clear scan. Include: show reasoning that supports each conclusion; formulas, arithmetic, units where applicable, curve labels, and a sentence for every z-score. Evaluation: correct statistics, transparent convention, accurate labels, and contextual interpretation.",
@@ -210,7 +210,7 @@
       "videoUrl": "https://youtu.be/JFjQ_Ck0t6U",
       "videoNote": "GIIS lesson video — Module 13: Matrices.",
       "video2Url": "https://www.youtube.com/watch?v=OI07C1HsOuc",
-      "video2Note": "Professor Leonard — Matrix Operations and Determinants",
+      "video2Note": "Mathispower4u — Evaluating Determinants of a 2x2 and 3x3 Matrix",
       "practiceUrl": "https://genesisideas.school/learn",
       "practiceNote": "GIIS Learn Portal — use the module lesson, assigned course materials, and teacher-reviewed practice inside the GIIS course path; no external practice platform is required.",
       "assignment": "For A=[[1,2],[3,4]], B=[[5,−1],[2,0]], C=[[2,1,0],[−1,3,2]], and D=[[1,2],[0,−1],[4,3]], compute A+B, A−B, AB, BA, CD, DC, 2A+B, and A². Find determinants of [[2,3],[1,4]], [[5,−2],[3,1]], [[0,7],[−1,2]], [[1,2,3],[0,1,4],[5,6,0]], [[2,0,1],[3,−1,2],[1,4,0]], and [[1,1,0],[2,3,1],[0,2,4]]. Use inverse matrices to solve 2x+y=7, x−y=2; 3x+2y=12, x+4y=10; and 2x−y=1, 5x+3y=19. Submit: one numbered worksheet PDF or clear scan. Include: show reasoning that supports each conclusion; dimension checks, row-by-column work, determinants, inverse matrices, and substitution verification. Evaluation: defined operations, accurate arithmetic, complete work, and verified solutions.",
@@ -718,7 +718,7 @@
       "examType": "final",
       "order": 20,
       "type": "short",
-      "question": "A student earns scores of 72, 85, 90, 68, and 95 on five tests. Calculate the mean and population standard deviation. Would a score of 60 be considered unusual? Explain using z-scores.",
+      "question": "A student earns scores of 72, 85, 90, 68, and 95 on five tests. Calculate the mean and population standard deviation. For this question, classify a value as unusual when |z| > 2. Would a score of 60 be considered unusual? Explain using z-scores.",
       "options": null,
       "answer": "A complete response should answer this prompt directly: Mean = (72+85+90+68+95)/5 = 82. Population σ ≈ √[(100+9+64+196+169)/5] = √[538/5] ≈ √107.6 ≈ 10.37. z for 60 = (60−82)/10.37 ≈ −2.12. Since |z| > 2, a score of 60 is considered unusual.",
       "explanation": "Using the five scores as the full population, a z-score beyond ±2 is generally considered unusual under the stated classroom convention.",
@@ -815,12 +815,12 @@
     {
       "moduleOrder": 2,
       "order": 2,
-      "question": "How many zeros (counting multiplicity) does a degree-4 polynomial have?",
+      "question": "How many complex zeros, counting multiplicity, does a degree-4 polynomial have?",
       "options": [
-        "At most 3",
+        "Exactly 0",
+        "Exactly 2",
         "Exactly 4",
-        "At most 4",
-        "At least 5"
+        "Exactly 5"
       ],
       "answer": "Exactly 4",
       "explanation": "The Fundamental Theorem of Algebra states a degree-n polynomial has exactly n zeros (counting multiplicity, including complex zeros).",
@@ -894,7 +894,7 @@
         "x² + 2x − 1"
       ],
       "answer": "x² + 4x + 3",
-      "explanation": "Coefficients: 1, 3, −1, −3. Divide by 1: bring 1 down. 1+3=4, 4·1=4; −1+4=3, 3·1=3; −3+3=0. Quotient: x² + 4x + 3.",
+      "explanation": "Coefficients: 1, 3, −1, −3. Use synthetic value 1, the zero of x−1; bring down the leading coefficient 1. Then 1+3=4, 4·1=4; −1+4=3, 3·1=3; −3+3=0. Quotient: x² + 4x + 3.",
       "points": 1
     },
     {
@@ -1302,7 +1302,7 @@
     {
       "moduleOrder": 8,
       "order": 3,
-      "question": "An earthquake measures 7.0 on the Richter scale. Another measures 5.0. The first is how many times more intense?",
+      "question": "In the simplified logarithmic magnitude model, an earthquake measures 7.0 and another measures 5.0. What is the ratio of their standardized recorded amplitudes?",
       "options": [
         "2 times",
         "10 times",
@@ -1310,7 +1310,7 @@
         "1000 times"
       ],
       "answer": "100 times",
-      "explanation": "The Richter scale is logarithmic: difference of 2 means 10² = 100 times more intense.",
+      "explanation": "A magnitude difference of 2 corresponds to a standardized recorded-amplitude ratio of 10² = 100. Local shaking intensity also depends on location and is not determined by this ratio alone.",
       "points": 1
     },
     {
@@ -1762,13 +1762,13 @@
       "order": 4,
       "question": "Which region is the solution to the system: y ≤ 2x + 1 and y ≥ −x + 3?",
       "options": [
-        "Above both lines",
-        "Below both lines",
-        "Between the two lines",
-        "To the right of both lines"
+        "On or above both lines",
+        "On or below both lines",
+        "On or below y=2x+1 and on or above y=−x+3, including both boundaries",
+        "On or above y=2x+1 and on or below y=−x+3, including both boundaries"
       ],
-      "answer": "Between the two lines",
-      "explanation": "The solution is where y is both ≤ 2x+1 (below the first line) and ≥ −x+3 (above the second line) — the region between them.",
+      "answer": "On or below y=2x+1 and on or above y=−x+3, including both boundaries",
+      "explanation": "The solution must satisfy y≤2x+1 and y≥−x+3 simultaneously, including both boundary lines. These conditions can both hold when x≥2/3.",
       "points": 1
     },
     {
