@@ -5,7 +5,7 @@
   "credits": 0.5,
   "department": "Psychology",
   "type": "Elective",
-  "description": "A foundational survey of core psychological concepts spanning brain science, cognition, development, personality, and mental health for beginning students.",
+  "description": "A foundational survey of psychology as a science, the nervous system, sensation and perception, consciousness, learning, memory, thinking and language, and intelligence for beginning students.",
   "isPublished": true,
   "modules": [
     {
@@ -13,14 +13,14 @@
       "title": "Introduction to Psychology",
       "titleZh": "心理学导论",
       "objectives": "Define psychology as a science, trace its historical roots, identify major theoretical perspectives, and describe career paths in the field.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction",
-      "readingNote": "OpenStax Psychology 2e — Chapter 1 introduction and scientific foundations of psychology.",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/1-2-history-of-psychology",
+      "readingNote": "Read OpenStax Psychology 2e §1.2 for Wundt (Leipzig laboratory, 1879), structuralism, functionalism, behaviorism, humanism, and the cognitive revolution. Also read §1.1 https://openstax.org/books/psychology-2e/pages/1-1-what-is-psychology for psychology as the scientific study of behavior and mental processes; §1.3 https://openstax.org/books/psychology-2e/pages/1-3-contemporary-psychology for current perspectives; and §1.4 https://openstax.org/books/psychology-2e/pages/1-4-careers-in-psychology for research, applied, and clinical career paths. Working distinction: biological accounts examine neural processes; psychodynamic accounts propose unconscious conflicts; behavioral accounts examine learned consequences; cognitive accounts examine attention and interpretation; humanistic accounts emphasize agency and growth. A perspective suggests a testable explanation, not a diagnosis.",
       "videoUrl": "https://youtu.be/-p2tFzlDHPA",
       "videoNote": "GIIS lesson video — Introduction to Psychology. Watch this lesson before completing the module assignment.",
       "video2Url": "https://www.youtube.com/watch?v=vo4pMVb0R6M",
       "video2Note": "Crash Course Psychology #1 — introductory overview of psychology and its major perspectives.",
-      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction",
-      "practiceNote": "OpenStax Psychology 2e — Chapter 1 introduction and scientific foundations of psychology. Use the reading and the self-contained assignment below; no paid or login-gated practice service is required.",
+      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/2-2-approaches-to-research",
+      "practiceNote": "Read §2.2 and the experimental-design discussion in §2.3 https://openstax.org/books/psychology-2e/pages/2-3-analyzing-findings. Worked model: randomly assign music or silence (independent variable), measure words recalled (dependent variable), and hold study time constant. Random assignment helps balance prior differences; random sampling concerns population representation. A controlled experiment can support causation; an association alone cannot. For Jordan, a behavioral hypothesis is that relief reinforces checking; a cognitive hypothesis is that an error is interpreted as failure. These are competing inferences, not established causes. Practice: name a controlled observation that could distinguish them. Then complete the supplied fictional assignment; no login, paid service, or personal health disclosure is required.",
       "assignment": "Use this fictional observation: During a difficult online practice set, Jordan checks a phone after every error; notifications occur unpredictably, and checking briefly reduces frustration. Submit: a 450–550-word comparison explaining the behavior from any two of these perspectives—biological, psychodynamic, behavioral, cognitive, or humanistic—and then state which explanation is better supported by the supplied facts. Include: each perspective's mechanism, at least two facts from the case for each analysis, one fact neither perspective can explain confidently, and a proposed observation that could distinguish the explanations. Do not diagnose Jordan or disclose personal mental-health information. Evaluation: The teacher checks accurate use of both perspectives, separation of observation from inference, use of the supplied evidence, and a justified conclusion.",
       "estimatedHrs": 2.5
     },
@@ -30,13 +30,13 @@
       "titleZh": "大脑与神经系统",
       "objectives": "Describe the structure and function of neurons, explain synaptic transmission, and identify the roles of major brain regions in behavior and mental processes.",
       "readingUrl": "https://openstax.org/books/psychology-2e/pages/3-2-cells-of-the-nervous-system",
-      "readingNote": "OpenStax Psychology 2e — Cells of the Nervous System; use the chapter navigation for the brain and spinal cord sections.",
+      "readingNote": "Read §3.2 for dendrites, cell body, axon, myelin, terminals, action potentials, neurotransmitter release, and reuptake. Also read §3.3 https://openstax.org/books/psychology-2e/pages/3-3-parts-of-the-nervous-system for central/peripheral and autonomic divisions, §3.4 https://openstax.org/books/psychology-2e/pages/3-4-the-brain-and-spinal-cord for brain regions, and §8.2 https://openstax.org/books/psychology-2e/pages/8-2-parts-of-the-brain-involved-with-memory for hippocampus and amygdala. A typical neuron rests near -70 mV; an action potential propagates along its axon, triggering neurotransmitter release across a synapse. Reuptake returns transmitter to the releasing cell. The hippocampus supports new episodic memories; the amygdala contributes to threat learning; frontal regions support planning; brainstem circuits support arousal and vital functions.",
       "videoUrl": "https://youtu.be/E0DvlBoTpyI",
       "videoNote": "GIIS lesson video — Brain & Nervous System. Watch this lesson before completing the module assignment.",
       "video2Url": "https://www.youtube.com/watch?v=qPix_X-9t7E",
       "video2Note": "Crash Course Anatomy & Physiology #8 — nervous-system structures and signaling.",
-      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/3-2-cells-of-the-nervous-system",
-      "practiceNote": "OpenStax Psychology 2e — Cells of the Nervous System; use the chapter navigation for the brain and spinal cord sections. Use the reading and the self-contained assignment below; no paid or login-gated practice service is required.",
+      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/3-3-parts-of-the-nervous-system",
+      "practiceNote": "Worked pathway: horn sound -> auditory receptors -> sensory pathways -> brainstem startle circuits -> somatic motor output to muscles. Parallel brain threat/arousal networks can recruit sympathetic autonomic output to raise heart rate; parasympathetic activity supports recovery. The spinal cord carries many body signals and reflex pathways, but the horn response is not simply a spinal withdrawal reflex. Practice: draw separate arrows for muscle startle and autonomic arousal, then explain why memory difficulty alone cannot locate a specific lesion. Then complete the supplied fictional assignment; no login, paid service, or personal health disclosure is required.",
       "assignment": "Use this fictional case: After a bicycle fall, Sam can speak and move normally but has difficulty forming new episodic memories; hearing a sudden horn still produces a rapid startle response and increased heart rate. Submit: a labeled two-part diagram and a 350–450-word explanation. Include: a neuron labeled dendrites, cell body, axon, myelin, terminals, and synapse; a brain/body map labeling hippocampus, amygdala, frontal lobe, brainstem, spinal cord, and sympathetic nervous system; arrows showing the likely pathway for the startle response; and a cautious explanation of which structures relate to the memory difficulty. Evaluation: The teacher checks anatomical accuracy, signal direction, correct structure-function links, and whether claims stay within the evidence rather than diagnosing the fictional person.",
       "estimatedHrs": 3
     },
@@ -46,13 +46,13 @@
       "titleZh": "感觉与知觉",
       "objectives": "Distinguish sensation from perception, apply Weber's Law and signal detection theory, and explain key Gestalt principles and top-down vs. bottom-up processing.",
       "readingUrl": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
-      "readingNote": "OpenStax Psychology 2e — Sensation versus Perception, including thresholds and interpretation.",
+      "readingNote": "Read §5.1 for sensation, perception, transduction, thresholds, top-down/bottom-up processing, and signal detection; add §5.3 https://openstax.org/books/psychology-2e/pages/5-3-vision for depth cues and §5.6 https://openstax.org/books/psychology-2e/pages/5-6-gestalt-principles-of-perception for Gestalt grouping. Closure completes missing contours; proximity groups nearby elements; similarity groups matching features; good continuation favors smooth paths. An absolute threshold is detection on 50% of trials under specified conditions. Weber's law approximates a constant proportional difference threshold within a sensory range. Signal detection separates sensitivity from the decision criterion; expectations and the costs of errors can shift that criterion.",
       "videoUrl": "https://youtu.be/1TDGOkMtPTw",
       "videoNote": "GIIS lesson video — Sensation & Perception. Watch this lesson before completing the module assignment.",
       "video2Url": "https://www.youtube.com/watch?v=unWnZvXJH2o",
       "video2Note": "Crash Course Psychology #5 — sensation, perception, and perceptual interpretation.",
-      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
-      "practiceNote": "OpenStax Psychology 2e — Sensation versus Perception, including thresholds and interpretation. Use the reading and the self-contained assignment below; no paid or login-gated practice service is required.",
+      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/5-6-gestalt-principles-of-perception",
+      "practiceNote": "Worked models: identical dots grouped as three close pairs with large gaps between pairs illustrate proximity; a broken outline perceived as a whole illustrates closure. A faint-tone observer who says yes more readily may have shifted criterion, not improved hearing. Practice: distinguish a hit, miss, false alarm, and correct rejection using signal-present and signal-absent trials; change one spacing or decision-cost condition and predict the result. Then complete the supplied fictional assignment; no login, paid service, or personal health disclosure is required.",
       "assignment": "Analyze these four supplied perception cases: (A) an incomplete circle is still seen as whole; (B) two equal lines appear different beside converging rails; (C) a detector must decide whether a faint tone occurred amid noise; (D) a person notices the difference between 100 g and 120 g but not between 100 g and 105 g. Submit: a four-row analysis table plus a 250–350-word synthesis. Include: the best-matching concept for each case (closure, depth cue/size constancy, signal detection, or difference threshold/Weber's law), the stimulus information, the interpretation or decision, and one prediction if a key condition changes. Evaluation: The teacher checks concept-case accuracy, clear separation of sensation from perception, testable predictions, and correct use of threshold language.",
       "estimatedHrs": 2.5
     },
@@ -62,13 +62,13 @@
       "titleZh": "意识状态",
       "objectives": "Define consciousness, describe the stages of sleep and their functions, and explain the effects of psychoactive drugs on brain and behavior.",
       "readingUrl": "https://openstax.org/books/psychology-2e/pages/4-2-sleep-and-why-we-sleep",
-      "readingNote": "OpenStax Psychology 2e — Sleep and Why We Sleep, including sleep stages and biological rhythms.",
+      "readingNote": "Read §4.2 for sleep functions, plus §4.1 https://openstax.org/books/psychology-2e/pages/4-1-what-is-consciousness for circadian rhythms, §4.3 https://openstax.org/books/psychology-2e/pages/4-3-stages-of-sleep for stages, §4.4 https://openstax.org/books/psychology-2e/pages/4-4-sleep-problems-and-disorders for sleep difficulties, and §4.5 https://openstax.org/books/psychology-2e/pages/4-5-substance-use-and-abuse for psychoactive drug effects. NREM N1 is light sleep, N2 includes spindles and K-complexes, and N3 has prominent slow delta activity. REM includes rapid eye movements, vivid dreaming, and reduced skeletal-muscle tone; both REM and NREM contribute to memory. Information-processing accounts emphasize memory organization; restoration accounts emphasize repair. Stimulants generally increase arousal, depressants reduce central nervous system activity, and hallucinogens alter perception. Agonists enhance or mimic transmitter effects; antagonists block receptor effects. These are descriptions, not instructions to use substances.",
       "videoUrl": "https://youtu.be/cMrR_ung3Us",
       "videoNote": "GIIS lesson video — States of Consciousness. Watch this lesson before completing the module assignment.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/4-2-sleep-and-why-we-sleep",
-      "practiceNote": "OpenStax Psychology 2e — Sleep and Why We Sleep, including sleep stages and biological rhythms. Use the reading and the self-contained assignment below; no paid or login-gated practice service is required.",
+      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/4-3-stages-of-sleep",
+      "practiceNote": "Worked distinction: memory consolidation is support for an information-processing account, whereas tissue restoration is a different proposed function. For narcolepsy, read the public MedlinePlus overview https://medlineplus.gov/ency/article/000802.htm : excessive daytime sleepiness and uncontrollable sleep episodes are central; REM regulation can be disrupted. Type 1 involves cataplexy and/or documented orexin deficiency; type 2 lacks cataplexy. REM intrusion alone is not a definition, and a brief diary cannot diagnose it. Practice: compute (6.0+7.5+5.5+8.0+6.5)/5, then explain why an alertness association does not prove sleep duration caused the difference. Then complete the supplied fictional assignment; no login, paid service, or personal health disclosure is required.",
       "assignment": "Use this fictional five-night sleep record: 6.0, 7.5, 5.5, 8.0, and 6.5 hours; reported alertness scores are 4, 7, 3, 8, and 5 out of 10. Submit: a one-page data brief. Include: mean sleep duration, a correctly labeled line or bar graph, the observed association between sleep and alertness, two possible confounding variables, and a 250–350-word explanation connecting the pattern to sleep debt, circadian rhythm, and memory consolidation. State why this five-night record cannot diagnose a sleep disorder or prove causation. Evaluation: The teacher checks calculations, graph accuracy, correct concepts, evidence limits, and non-diagnostic wording. No personal sleep or health disclosure is required.",
       "estimatedHrs": 2.5
     },
@@ -77,14 +77,14 @@
       "title": "Learning Theories",
       "titleZh": "学习理论",
       "objectives": "Explain classical and operant conditioning with real-life examples, compare reinforcement schedules and their effects, and describe observational learning.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-1-what-is-learning",
-      "readingNote": "OpenStax Psychology 2e — What Is Learning?, introducing classical, operant, and observational learning.",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/6-2-classical-conditioning",
+      "readingNote": "Read §6.2 for classical conditioning, extinction, generalization, and spontaneous recovery; §6.3 https://openstax.org/books/psychology-2e/pages/6-3-operant-conditioning for the law of effect, reinforcement, punishment, and schedules; and §6.4 https://openstax.org/books/psychology-2e/pages/6-4-observational-learning for attention, retention, reproduction, and motivation. Classical conditioning associates stimuli; operant conditioning links behavior with consequences. Positive means adding a stimulus and negative means removing one; reinforcement increases behavior, punishment decreases it. Ratio schedules depend on response counts, interval schedules on elapsed time; fixed is predictable, variable changes.",
       "videoUrl": "https://youtu.be/JAjUntxs_n4",
       "videoNote": "GIIS lesson video — Learning Theories. Watch this lesson before completing the module assignment.",
       "video2Url": "https://www.youtube.com/watch?v=jTH3ob1IRFo",
       "video2Note": "YouTube — B. F. Skinner demonstrates teaching machines and programmed learning; use as historical context, not as a complete survey of reinforcement schedules.",
-      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/6-1-what-is-learning",
-      "practiceNote": "OpenStax Psychology 2e — What Is Learning?, introducing classical, operant, and observational learning. Use the reading and the self-contained assignment below; no paid or login-gated practice service is required.",
+      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/6-3-operant-conditioning",
+      "practiceNote": "Worked schedule models: a reward after each five completed practice sets is fixed ratio; after an unpredictable number is variable ratio; the first response after each fixed week is fixed interval; the first response after varying delays is variable interval. Praising completed practice can reinforce it; removing an annoying reminder when practice begins can also reinforce it. Practice: classify each model and explain why an agreed reward contingent on completed practice differs from an improvised inducement to stop disruption. Model a missed day with supportive problem-solving rather than a penalty. Then complete the supplied fictional assignment; no login, paid service, or personal health disclosure is required.",
       "assignment": "Design an ethical learning plan for this fictional case: Casey wants to complete twenty minutes of vocabulary practice on four school days each week but currently averages one day. Submit: a two-week behavior plan and a 350–450-word rationale. Include: a clearly defined target behavior, baseline, immediate positive reinforcer that does not involve money, an initial reinforcement schedule, criteria for moving to a thinner schedule, a simple tracking table, and a response to one missed day that is not punishment. Explain why each step is operant conditioning and distinguish reinforcement from bribery and punishment. Evaluation: The teacher checks operational definitions, schedule accuracy, ethical safeguards, measurable data, and correct application of conditioning principles.",
       "estimatedHrs": 3
     },
@@ -94,13 +94,13 @@
       "titleZh": "记忆系统",
       "objectives": "Describe the three-stage model of memory, explain encoding, storage, and retrieval processes, and identify common reasons for forgetting.",
       "readingUrl": "https://openstax.org/books/psychology-2e/pages/8-1-how-memory-functions",
-      "readingNote": "OpenStax Psychology 2e — How Memory Functions: encoding, storage, and retrieval.",
+      "readingNote": "Read §8.1 for sensory, short-term/working, and long-term memory, encoding, storage, retrieval, chunking, and rehearsal; §8.3 https://openstax.org/books/psychology-2e/pages/8-3-problems-with-memory for encoding failure, retrieval problems, and interference; and §8.4 https://openstax.org/books/psychology-2e/pages/8-4-ways-to-enhance-memory for elaboration and retrieval practice. Working memory actively manipulates temporarily held information. Miller's historical 7 ± 2 estimate concerns span/chunking under particular tasks, not a universal working-memory limit. Primacy and recency describe better recall for early and late list items. Encoding specificity predicts better retrieval when useful encoding cues are reinstated.",
       "videoUrl": "https://youtu.be/MCAFpQzjgTE",
       "videoNote": "GIIS lesson video — Memory Systems. Watch this lesson before completing the module assignment.",
       "video2Url": "https://www.youtube.com/watch?v=bSycdIx-C48",
       "video2Note": "Crash Course Psychology #13 — encoding, storage, retrieval, and memory errors.",
-      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/8-1-how-memory-functions",
-      "practiceNote": "OpenStax Psychology 2e — How Memory Functions: encoding, storage, and retrieval. Use the reading and the self-contained assignment below; no paid or login-gated practice service is required.",
+      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/8-4-ways-to-enhance-memory",
+      "practiceNote": "Worked model: repeating a definition is maintenance rehearsal; explaining it through a familiar example is elaboration. Recalling without looking is retrieval practice. An old password interfering with a new one is proactive interference; a new password interfering with an old one is retroactive interference. Practice: count recalled items/20 × 100 for each supplied condition, distinguish cue benefit from proof of permanent storage, and design a brief spaced self-test. Then complete the supplied fictional assignment; no login, paid service, or personal health disclosure is required.",
       "assignment": "Use this supplied recall record for a 20-word list: immediate recall items 1,2,3,4,5,9,14,18,19,20; delayed recall without cues items 1,2,4,18,20; delayed recall after category cues items 1,2,4,5,9,14,18,19,20. Submit: a table, one graph, and a 350–450-word analysis. Include: recall percentages for each condition, evidence for primacy and recency, the effect of retrieval cues, one alternative explanation, and a study plan using elaborative encoding and retrieval practice. Evaluation: The teacher checks arithmetic, graph labels, accurate memory concepts, distinction between description and explanation, and a plan tied to the evidence.",
       "estimatedHrs": 2.5
     },
@@ -109,14 +109,14 @@
       "title": "Thinking & Language",
       "titleZh": "思维与语言",
       "objectives": "Describe cognitive processes involved in problem-solving and decision-making, explain common cognitive biases and heuristics, and describe the relationship between language and thought.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-1-what-is-cognition",
-      "readingNote": "OpenStax Psychology 2e — What Is Cognition?, including concepts, problem solving, and decision making.",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-3-problem-solving",
+      "readingNote": "Read §7.3 for algorithms, heuristics, functional fixedness, confirmation, availability, representativeness, and anchoring; §7.1 https://openstax.org/books/psychology-2e/pages/7-1-what-is-cognition for concepts; and §7.2 https://openstax.org/books/psychology-2e/pages/7-2-language for language and thought. Supplement: confirmation favors belief-consistent evidence; availability uses ease of recall; representativeness uses similarity to a prototype, sometimes ignoring base rates; anchoring gives undue weight to an initial value; framing changes judgments through different descriptions of equivalent outcomes. Algorithms specify a systematic solution procedure; heuristics are quicker shortcuts that can fail. Semantics concerns meaning; syntax concerns arrangement. Language can shape attention and categorization without determining every thought.",
       "videoUrl": "https://youtu.be/L7n6chvW59I",
       "videoNote": "GIIS lesson video — Thinking & Language. Watch this lesson before completing the module assignment.",
       "video2Url": "",
       "video2Note": "",
-      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/7-1-what-is-cognition",
-      "practiceNote": "OpenStax Psychology 2e — What Is Cognition?, including concepts, problem solving, and decision making. Use the reading and the self-contained assignment below; no paid or login-gated practice service is required.",
+      "practiceUrl": "https://openstax.org/books/psychology-2e/pages/7-3-problem-solving",
+      "practiceNote": "Worked model: describing the same club result as 90% success or 10% failure changes framing, not the underlying rate. Judging event risk from one vivid failure is availability; searching only cancellation-friendly posts is confirmation; comparing costs to the first $4,000 proposal is anchoring. Practice: use comparable-event data to test the anchor, actively seek disconfirming evidence, and distinguish resemblance from actual frequency when estimating probabilities. Then complete the supplied fictional assignment; no login, paid service, or personal health disclosure is required.",
       "assignment": "Use this fictional decision: A school club sees one dramatic news story about a failed outdoor event, ignores three years of local weather data, and keeps searching until it finds posts supporting cancellation. The first suggested budget was $4,000, so later members call $3,000 “cheap” even though comparable events cost $1,800. Submit: a 450–550-word decision memo. Include: identification and explanation of availability, confirmation, and anchoring effects; the exact case detail supporting each label; a debiasing step for each; and a revised evidence checklist the club should use. Evaluation: The teacher checks correct bias identification, evidence-to-claim links, feasible debiasing steps, and a decision process that does not assume the final choice in advance.",
       "estimatedHrs": 2.5
     },
@@ -125,14 +125,14 @@
       "title": "Intelligence",
       "titleZh": "智力",
       "objectives": "Define intelligence, compare major theories including Spearman's g, Gardner's multiple intelligences, and Sternberg's triarchic theory, and evaluate the role of heredity and environment in intelligence.",
-      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-5-measures-of-intelligence",
-      "readingNote": "OpenStax Psychology 2e — Measures of Intelligence, standardization, reliability, validity, and interpretation.",
+      "readingUrl": "https://openstax.org/books/psychology-2e/pages/7-4-what-are-intelligence-and-creativity",
+      "readingNote": "Read §7.4 for general intelligence, fluid/crystallized abilities, Gardner, and Sternberg; §7.5 https://openstax.org/books/psychology-2e/pages/7-5-measures-of-intelligence for reliability, validity, standardization, and the Flynn effect; and only the genetics/environment discussion in §7.6 https://openstax.org/books/psychology-2e/pages/7-6-the-source-of-intelligence (the introductory life history is not assigned). Spearman's g summarizes shared variation across cognitive tasks; Sternberg distinguishes analytical, creative, and practical abilities; Gardner proposes multiple domains such as linguistic, musical, spatial, and bodily-kinesthetic abilities. Gardner's independent-domain proposal has less psychometric support than g and is not evidence for matching teaching to fixed learning styles. Fluid reasoning often declines across later adulthood while accumulated crystallized knowledge can remain stable or grow; these are group trends with individual variation. Heritability describes variation within a studied population/environment, not immutability or a percentage of one person's intelligence.",
       "videoUrl": "https://youtu.be/MHfT9UPBzJU",
       "videoNote": "GIIS lesson video — Intelligence. Watch this lesson before completing the module assignment.",
       "video2Url": "",
       "video2Note": "",
       "practiceUrl": "https://openstax.org/books/psychology-2e/pages/7-5-measures-of-intelligence",
-      "practiceNote": "OpenStax Psychology 2e — Measures of Intelligence, standardization, reliability, validity, and interpretation. Use the reading and the self-contained assignment below; no paid or login-gated practice service is required.",
+      "practiceNote": "Worked comparison: Avery's novel reasoning fits fluid/analytical ability but says little about practical application; Blake's original adaptation fits creative/practical proposals; Chen's correlated test strengths are consistent with g. A musical skill could fit Gardner's musical domain without proving all domains independent. Repeated stable scores indicate reliability; measuring the intended construct supports validity. The Flynn effect describes historical cohort score gains, not inevitable gains everywhere. Practice: apply all three theories to each profile, name what evidence is missing, and explain how schooling and opportunity can affect measured performance without assigning a fixed label. Then complete the supplied fictional assignment; no login, paid service, or personal health disclosure is required.",
       "assignment": "Use these fictional profiles: Avery solves unfamiliar logic problems quickly but needs practice applying them in daily tasks; Blake designs original projects and adapts well to new settings but has average standardized scores; Chen performs strongly across vocabulary, spatial, and quantitative tests. Submit: a 500–650-word comparative brief applying Spearman's g, Sternberg's triarchic theory, and Gardner's multiple-intelligences proposal. Include: what each theory explains in each profile, one measurement or evidence limitation for each theory, the difference between reliability and validity, and a cautious recommendation for how a school should use multiple indicators. Evaluation: The teacher checks theory accuracy, use of all three profiles, measurement literacy, and avoidance of fixed or deterministic labels.",
       "estimatedHrs": 2.5
     }
@@ -174,7 +174,7 @@
         "Recall score",
         "Study condition: music or silence",
         "Students’ prior memory ability",
-        "Number of correct answers"
+        "The researcher’s prediction"
       ],
       "answer": "Study condition: music or silence",
       "explanation": "The researcher deliberately changes the study condition. Recall score is the dependent variable measured after that manipulation.",
@@ -267,7 +267,7 @@
     {
       "moduleOrder": 3,
       "order": 3,
-      "question": "Which Gestalt principle explains why we perceive a row of dots as a line?",
+      "question": "Identical dots have small gaps within pairs and much larger gaps between pairs. Which Gestalt principle best explains seeing separate pairs?",
       "options": [
         "Closure",
         "Figure-ground",
@@ -275,7 +275,7 @@
         "Proximity"
       ],
       "answer": "Proximity",
-      "explanation": "The Gestalt principle of proximity states that objects close together are perceived as a group or line.",
+      "explanation": "Proximity groups elements that are near one another. All dots look alike, so relative spacing, rather than feature similarity or contour completion, distinguishes the pairs.",
       "points": 1
     },
     {
@@ -295,7 +295,7 @@
     {
       "moduleOrder": 4,
       "order": 2,
-      "question": "Which theory proposes that we sleep to consolidate memories and restore neural connections?",
+      "question": "Which account of sleep emphasizes consolidating and organizing daily experiences into memories?",
       "options": [
         "Repair theory",
         "Evolutionary theory",
@@ -670,100 +670,100 @@
       "examType": "midterm",
       "order": 9,
       "type": "mc",
-      "question": "The Schachter-Singer two-factor theory of emotion proposes that emotion = physiological arousal +:",
+      "question": "At a typical chemical synapse, what follows the arrival of an action potential at the presynaptic terminal?",
       "options": [
-        "Facial expression",
-        "Cognitive label",
-        "Behavioral response",
-        "Hormonal signal"
+        "The receiving neuron releases its myelin into the gap",
+        "Neurotransmitter is released and can bind receptors on the receiving cell",
+        "Dendrites carry the action potential backward along the sending axon",
+        "The synaptic gap closes to fuse the two neurons"
       ],
-      "answer": "Cognitive label",
-      "explanation": "Two-factor theory holds that we experience emotion when we apply a cognitive label to physiological arousal.",
+      "answer": "Neurotransmitter is released and can bind receptors on the receiving cell",
+      "explanation": "M2 distinguishes electrical propagation along an axon from chemical signaling across a synapse; transmitter binding changes activity in the receiving cell.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 10,
       "type": "mc",
-      "question": "In Piaget's preoperational stage, children typically demonstrate:",
+      "question": "Before training, food elicits salivation and a tone does not. After tone–food pairings, the tone alone elicits salivation. Which labels are correct after training?",
       "options": [
-        "Abstract reasoning",
-        "Conservation skills",
-        "Egocentrism",
-        "Hypothetico-deductive reasoning"
+        "Tone: conditioned stimulus; salivation to tone: conditioned response",
+        "Tone: unconditioned stimulus; salivation to tone: unconditioned response",
+        "Food: conditioned stimulus; tone: conditioned response",
+        "Salivation to tone: conditioned stimulus; tone: unconditioned response"
       ],
-      "answer": "Egocentrism",
-      "explanation": "Preoperational children (2–7 years) are egocentric — they cannot easily take another person's perspective.",
+      "answer": "Tone: conditioned stimulus; salivation to tone: conditioned response",
+      "explanation": "M5: the initially neutral tone becomes a conditioned stimulus after association with food, and salivation to that tone is the conditioned response. Food remains an unconditioned stimulus; stimuli and responses are different parts of the sequence.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 11,
       "type": "mc",
-      "question": "Puberty in girls is typically initiated by the release of:",
+      "question": "Which pairing correctly distinguishes the central and peripheral nervous systems?",
       "options": [
-        "Testosterone from the adrenal glands",
-        "Estrogen from the ovaries and adrenal glands",
-        "Cortisol from the hypothalamus",
-        "Oxytocin from the pituitary"
+        "Central: brain and spinal cord; peripheral: nerves connecting them to the body",
+        "Central: all body nerves; peripheral: brain and spinal cord",
+        "Central: sympathetic nerves only; peripheral: parasympathetic nerves only",
+        "Central: voluntary motor nerves; peripheral: sensory cortex"
       ],
-      "answer": "Estrogen from the ovaries and adrenal glands",
-      "explanation": "Rising estrogen levels trigger the development of secondary sex characteristics and menarche in females.",
+      "answer": "Central: brain and spinal cord; peripheral: nerves connecting them to the body",
+      "explanation": "M2: the CNS contains the brain and spinal cord; the PNS connects it with sensory receptors, muscles, and organs. Sympathetic and parasympathetic divisions are parts of the autonomic PNS.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 12,
       "type": "mc",
-      "question": "Freud's defense mechanism of repression involves:",
+      "question": "Which explanation of studying most clearly uses the humanistic perspective introduced in M1?",
       "options": [
-        "Blocking threatening thoughts or memories from conscious awareness",
-        "Creating acceptable excuses after the fact",
-        "Imitating a rewarded model",
-        "Changing schemas for new information"
+        "Unconscious conflict determines the student’s choices",
+        "Neurotransmitter activity explains every study decision",
+        "Rewards alone maintain the study routine",
+        "The student chooses a meaningful goal and seeks personal growth"
       ],
-      "answer": "Blocking threatening thoughts or memories from conscious awareness",
-      "explanation": "In psychodynamic theory, repression keeps threatening thoughts or memories outside conscious awareness; it differs from rationalization or observational learning.",
+      "answer": "The student chooses a meaningful goal and seeks personal growth",
+      "explanation": "Humanistic approaches emphasize agency, meaning, and growth; the other accounts emphasize psychodynamic, biological, or behavioral mechanisms.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 13,
       "type": "mc",
-      "question": "Social facilitation refers to the tendency for performance to:",
+      "question": "A learner judges an event likely because one vivid example is easy to recall. Which shortcut is most directly involved?",
       "options": [
-        "Decrease in the presence of others",
-        "Improve on well-learned tasks in the presence of others",
-        "Be unaffected by others' presence",
-        "Improve on novel tasks with an audience"
+        "Representativeness heuristic",
+        "Availability heuristic",
+        "Anchoring",
+        "Functional fixedness"
       ],
-      "answer": "Improve on well-learned tasks in the presence of others",
-      "explanation": "Zajonc's social facilitation: others' presence improves performance on easy/well-practiced tasks but hurts performance on difficult ones.",
+      "answer": "Availability heuristic",
+      "explanation": "M7: availability uses ease of recall; representativeness uses resemblance to a typical case, anchoring uses an initial reference value, and functional fixedness limits imagined uses of objects.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 14,
       "type": "fill",
-      "question": "Which anxiety disorder is characterized by persistent, uncontrollable worry about multiple life domains?",
+      "question": "In M6, what is the term for interference when an old password makes it harder to remember a new password?",
       "options": null,
-      "answer": "Generalized anxiety disorder",
-      "explanation": "Generalized anxiety disorder is defined by persistent, difficult-to-control worry across multiple life domains rather than fear tied to one object or situation.",
+      "answer": "Proactive interference",
+      "explanation": "Earlier learning interfering with newer learning is proactive interference; the reverse direction is retroactive interference.",
       "points": 1
     },
     {
       "examType": "midterm",
       "order": 15,
       "type": "mc",
-      "question": "The biopsychosocial model of mental health holds that psychological disorders result from:",
+      "question": "Which conclusion about heritability is justified by M8?",
       "options": [
-        "Biological factors alone",
-        "Social factors alone",
-        "The interaction of biological, psychological, and social factors",
-        "Childhood trauma exclusively"
+        "A high heritability estimate means education cannot affect scores",
+        "A heritability estimate states how much of one person’s score is genetic",
+        "Heritability concerns variation in a studied population under particular environments",
+        "Heritability proves that differences between any two groups are genetic"
       ],
-      "answer": "The interaction of biological, psychological, and social factors",
-      "explanation": "The biopsychosocial model integrates genetics, thought patterns, and social environment to explain mental health and illness.",
+      "answer": "Heritability concerns variation in a studied population under particular environments",
+      "explanation": "Heritability is a population statistic conditioned on the range of genes and environments studied. It does not establish immutability or causes of between-group differences.",
       "points": 1
     },
     {
@@ -815,15 +815,15 @@
       "examType": "final",
       "order": 4,
       "type": "mc",
-      "question": "Narcolepsy is characterized by:",
+      "question": "Which symptom pattern is central to the M4 account of narcolepsy?",
       "options": [
-        "Inability to sleep",
-        "Sudden onset of REM sleep during waking hours",
-        "Stopping breathing during sleep",
-        "Sleepwalking during NREM sleep"
+        "Persistent difficulty initiating sleep",
+        "Excessive daytime sleepiness with uncontrollable sleep episodes",
+        "Repeated pauses in breathing during sleep",
+        "Walking while partly asleep during NREM sleep"
       ],
-      "answer": "Sudden onset of REM sleep during waking hours",
-      "explanation": "Narcolepsy involves sudden, uncontrollable sleep attacks and cataplexy due to dysregulation of REM sleep mechanisms.",
+      "answer": "Excessive daytime sleepiness with uncontrollable sleep episodes",
+      "explanation": "M4: narcolepsy involves excessive daytime sleepiness and sleep episodes, often with REM dysregulation. Cataplexy is associated with type 1; type 2 lacks cataplexy. REM intrusion alone does not define every case, and symptoms require clinical evaluation.",
       "points": 1
     },
     {
@@ -875,115 +875,115 @@
       "examType": "final",
       "order": 8,
       "type": "mc",
-      "question": "Crystallized intelligence tends to _______ with age, while fluid intelligence tends to _______.",
+      "question": "Across later adulthood, what broad pattern is often found for crystallized knowledge and fluid reasoning, with individual variation?",
       "options": [
-        "Decrease; increase",
-        "Increase; decrease",
-        "Remain stable; remain stable",
-        "Decrease; decrease"
+        "Both inevitably increase in every person",
+        "Crystallized knowledge may remain stable or grow while fluid reasoning often declines",
+        "Crystallized knowledge always disappears while fluid reasoning grows",
+        "Neither can be influenced by experience"
       ],
-      "answer": "Increase; decrease",
-      "explanation": "Crystallized intelligence (accumulated knowledge) grows with age; fluid intelligence (novel problem-solving) peaks in early adulthood and declines.",
+      "answer": "Crystallized knowledge may remain stable or grow while fluid reasoning often declines",
+      "explanation": "M8 distinguishes accumulated knowledge from novel reasoning. These are population tendencies, not fixed predictions for an individual.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 9,
       "type": "mc",
-      "question": "Which theory proposes that people compare themselves to others to evaluate their opinions and abilities?",
+      "question": "In an experiment comparing recall after music versus silence, which variable is the measured outcome?",
       "options": [
-        "Social comparison theory",
-        "Self-perception theory",
-        "Drive-reduction theory",
-        "Two-factor theory of emotion"
+        "The randomly assigned study condition",
+        "The recall score",
+        "The rule used to assign participants",
+        "The researcher’s predicted result"
       ],
-      "answer": "Social comparison theory",
-      "explanation": "Social comparison theory explains how people evaluate themselves by comparing with others.",
+      "answer": "The recall score",
+      "explanation": "M1: recall is the dependent variable; music versus silence is the manipulated independent variable. Assignment and predictions are design features, not measured recall outcomes.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 10,
       "type": "mc",
-      "question": "Erikson's stage for young adults centers on the conflict of:",
+      "question": "A reader uses sentence context to identify a smudged word. Which process best explains this?",
       "options": [
-        "Identity vs. role confusion",
-        "Intimacy vs. isolation",
-        "Generativity vs. stagnation",
-        "Integrity vs. despair"
+        "Top-down processing",
+        "Sensory transduction alone",
+        "Bottom-up processing without prior knowledge",
+        "Sensory adaptation"
       ],
-      "answer": "Intimacy vs. isolation",
-      "explanation": "In young adulthood, Erikson's sixth stage involves the challenge of forming close, committed relationships vs. remaining isolated.",
+      "answer": "Top-down processing",
+      "explanation": "M3: expectations and context guide interpretation in top-down processing; bottom-up processing begins with stimulus features, and transduction converts physical energy into neural signals.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 11,
       "type": "mc",
-      "question": "In Psychology Foundations final concepts, Locus of control refers to:",
+      "question": "A learner receives a reward after every five completed practice sets, regardless of time. Which schedule is this?",
       "options": [
-        "The brain region controlling voluntary movement",
-        "The belief about whether outcomes are controlled internally or externally",
-        "A personality type classification",
-        "The degree of emotional regulation"
+        "Fixed interval",
+        "Variable interval",
+        "Variable ratio",
+        "Fixed ratio"
       ],
-      "answer": "The belief about whether outcomes are controlled internally or externally",
-      "explanation": "Rotter's locus of control is the degree to which people believe they (internal) vs. external forces control life outcomes.",
+      "answer": "Fixed ratio",
+      "explanation": "M5: a fixed-ratio schedule requires a fixed number of responses. Interval schedules depend on time, and variable schedules change the requirement.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 12,
       "type": "mc",
-      "question": "Deindividuation in crowds leads to:",
+      "question": "A five-night record shows that longer sleep accompanies higher alertness. Which conclusion is supported?",
       "options": [
-        "Increased personal responsibility",
-        "Decreased self-awareness and increased impulsive behavior",
-        "Greater conformity to personal values",
-        "Reduced emotional arousal"
+        "Longer sleep was associated with higher alertness in this record",
+        "The record proves a sleep disorder caused low alertness",
+        "The record rules out stress and workload as confounds",
+        "Every student will show the same numerical relationship"
       ],
-      "answer": "Decreased self-awareness and increased impulsive behavior",
-      "explanation": "Deindividuation occurs when anonymity in a crowd reduces self-awareness, lowering restraint and increasing impulsive behavior.",
+      "answer": "Longer sleep was associated with higher alertness in this record",
+      "explanation": "M4 supports describing the observed association. With five observational records and no control of confounds, causation, diagnosis, and population-wide conclusions are not established.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 13,
       "type": "fill",
-      "question": "Bipolar I disorder is distinguished from bipolar II by the presence of:",
+      "question": "Which M6 memory process converts incoming information into a form that can be stored?",
       "options": null,
-      "answer": "Full manic episodes",
-      "explanation": "Bipolar I disorder requires at least one manic episode. Major depressive episodes may occur, but they are not required for the diagnosis.",
+      "answer": "Encoding",
+      "explanation": "Encoding prepares information for storage; storage maintains it and retrieval accesses it later.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 14,
       "type": "mc",
-      "question": "Dialectical Behavior Therapy (DBT) was originally developed to treat:",
+      "question": "Which pairing correctly distinguishes two components of language taught in M7?",
       "options": [
-        "Schizophrenia",
-        "Borderline personality disorder",
-        "Obsessive-compulsive disorder",
-        "ADHD"
+        "Semantics: word order; syntax: meaning",
+        "Semantics: loudness; syntax: pitch",
+        "Semantics: meaning; syntax: rules for arranging words",
+        "Semantics: recall; syntax: reinforcement"
       ],
-      "answer": "Borderline personality disorder",
-      "explanation": "Marsha Linehan developed DBT specifically for BPD, combining CBT with mindfulness and distress tolerance skills.",
+      "answer": "Semantics: meaning; syntax: rules for arranging words",
+      "explanation": "Semantics concerns meaning, whereas syntax concerns the arrangement of words. Vocal properties and learning processes are different concepts.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 15,
       "type": "mc",
-      "question": "The diathesis-stress model of psychological disorders proposes that disorders arise from:",
+      "question": "A test gives stable scores but fails to measure its claimed ability. Which evaluation is most appropriate?",
       "options": [
-        "Purely genetic causes",
-        "Purely environmental stressors",
-        "A predisposition combined with environmental stressors",
-        "Social stigma alone"
+        "It has strong validity because scores repeat",
+        "It is reliable but lacks evidence of validity",
+        "It must be valid because it has a numerical score",
+        "Its lack of validity proves scores cannot repeat"
       ],
-      "answer": "A predisposition combined with environmental stressors",
-      "explanation": "The diathesis-stress model holds that a genetic or biological vulnerability (diathesis) interacts with stressors to produce disorder.",
+      "answer": "It is reliable but lacks evidence of validity",
+      "explanation": "M8: reliability is consistency and validity concerns the intended interpretation or construct. Consistency alone cannot establish that a test measures what it claims.",
       "points": 1
     },
     {
@@ -1020,40 +1020,40 @@
       "examType": "final",
       "order": 18,
       "type": "mc",
-      "question": "The superego, in Freudian theory, represents:",
+      "question": "Which shift best describes the cognitive revolution discussed in M1?",
       "options": [
-        "Biological drives and impulses",
-        "The internalized moral standards and ideals of society",
-        "The rational, problem-solving mind",
-        "Conscious decision-making"
+        "Eliminating all experiments in favor of introspection",
+        "Returning scientific attention to mental processes such as memory and thinking",
+        "Restricting psychology to unconscious drives",
+        "Treating observable reinforcement as the only possible explanation"
       ],
-      "answer": "The internalized moral standards and ideals of society",
-      "explanation": "The superego is the moralistic component of personality containing the internalized rules and ideals learned from parents and society.",
+      "answer": "Returning scientific attention to mental processes such as memory and thinking",
+      "explanation": "The cognitive revolution made mental processes central to psychological research while retaining empirical methods, rather than limiting explanation to observable stimulus-response relations.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 19,
       "type": "mc",
-      "question": "Which term describes the tendency to attribute one's successes to internal factors and failures to external factors?",
+      "question": "Which event is reuptake, as taught in M2?",
       "options": [
-        "Fundamental attribution error",
-        "Self-serving bias",
-        "Actor-observer bias",
-        "Stereotype threat"
+        "A transmitter binds a postsynaptic receptor",
+        "A neuron forms new myelin",
+        "An axon fires an action potential",
+        "Released transmitter is taken back into the presynaptic cell"
       ],
-      "answer": "Self-serving bias",
-      "explanation": "Self-serving bias protects self-esteem by crediting internal factors for success and blaming external factors for failure.",
+      "answer": "Released transmitter is taken back into the presynaptic cell",
+      "explanation": "Reuptake removes transmitter from the synaptic space by transporting it back into the releasing cell; it differs from receptor binding and electrical propagation.",
       "points": 1
     },
     {
       "examType": "final",
       "order": 20,
       "type": "fill",
-      "question": "Which therapeutic approach emphasizes unconditional positive regard, empathy, and genuineness?",
+      "question": "What M6 memory process accesses stored information when you recall a definition without looking?",
       "options": null,
-      "answer": "Client-centered therapy",
-      "explanation": "Client-centered therapy, developed by Carl Rogers, emphasizes empathy, genuineness, and unconditional positive regard within a non-directive relationship.",
+      "answer": "Retrieval",
+      "explanation": "Retrieval accesses stored information. Recalling before checking notes is retrieval practice rather than mere rereading.",
       "points": 1
     }
   ],
