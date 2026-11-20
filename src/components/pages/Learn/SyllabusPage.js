@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { getStudentSession } from '../../../api/authStorage';
 import { getApiBase } from '../../../config/apiBase';
 import Nav from '../../main/Nav.js';
+import './learn-mobile.css';
 import { getAssignmentProfile } from './assignmentProfile';
 import expertLensHelpers from './syllabusExpertLens';
 
@@ -209,7 +210,7 @@ export default function SyllabusPage({ language }) {
                               {isEn ? profile.label.en : profile.label.zh}
                             </span>
                           </div>
-                          <p style={{ margin: 0, fontSize: '13px', color: '#444', lineHeight: 1.65 }}>{mod.assignment}</p>
+                          <p data-m="assignment-text" style={{ margin: 0, fontSize: '13px', color: '#444', lineHeight: 1.65 }}>{mod.assignment}</p>
                           <p style={{ margin: '6px 0 0', fontSize: '12px', color: '#777', lineHeight: 1.55 }}>
                             {isEn ? profile.evidence.en : profile.evidence.zh}
                           </p>

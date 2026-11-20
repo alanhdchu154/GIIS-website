@@ -1,3 +1,9 @@
+/* Preserve authored problem lists on both public and learner assignment views. */
+[data-m="assignment-text"] {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 /* Learn Portal — mobile responsive overrides.
    Imported once by LearnDashboard, CoursePage, ModulePage.
    Targets `data-m="..."` attributes so we don't have to rewrite inline styles. */

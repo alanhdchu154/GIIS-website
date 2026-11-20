@@ -410,7 +410,7 @@ export default function ModulePage({ language }) {
               <p style={{ margin: '0 0 8px', fontSize: '11px', fontWeight: 700, color: '#f57f17', textTransform: 'uppercase', letterSpacing: '1px' }}>
                 📝 {isEn ? 'Assignment' : '作业'}
               </p>
-              <p style={{ margin: 0, fontSize: '14px', color: '#333', lineHeight: 1.7 }}>{mod.assignment}</p>
+              <p data-m="assignment-text" style={{ margin: 0, fontSize: '14px', color: '#333', lineHeight: 1.7 }}>{mod.assignment}</p>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '10px', marginBottom: '14px' }}>
               {[
